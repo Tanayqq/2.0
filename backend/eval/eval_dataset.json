@@ -1,0 +1,82 @@
+[
+  {
+    "id": "q_lis_001",
+    "question": "What is the pediatric dosing limit for Lisinopril?",
+    "expected_answer_keywords": ["6 years"],
+    "required_source_types": ["openFDA"],
+    "required_document_ids": ["doc_001"],
+    "must_not_contain": ["infant", "under 6", "1 year"]
+  },
+  {
+    "id": "q_lis_002",
+    "question": "Can Lisinopril be used in pregnancy?",
+    "expected_answer_keywords": ["discontinue", "injury", "death", "fetus"],
+    "required_source_types": ["DailyMed"],
+    "required_document_ids": ["doc_003"],
+    "must_not_contain": ["safe"]
+  },
+  {
+    "id": "q_ator_001",
+    "question": "When is Atorvastatin contraindicated?",
+    "expected_answer_keywords": ["active liver disease", "hepatic transaminase"],
+    "required_source_types": [],
+    "required_document_ids": ["doc_005"],
+    "must_not_contain": []
+  },
+  {
+    "id": "q_met_001",
+    "question": "What is the black box warning for Metformin?",
+    "expected_answer_keywords": ["lactic acidosis"],
+    "required_source_types": [],
+    "required_document_ids": ["doc_007"],
+    "must_not_contain": []
+  },
+  {
+    "id": "q_amx_001",
+    "question": "Who should avoid taking Amoxicillin?",
+    "expected_answer_keywords": ["hypersensitivity", "anaphylaxis", "Stevens-Johnson"],
+    "required_source_types": [],
+    "required_document_ids": ["doc_009"],
+    "must_not_contain": []
+  },
+  {
+    "id": "q_ibu_001",
+    "question": "Is Ibuprofen used for dysmenorrhea?",
+    "expected_answer_keywords": ["primary dysmenorrhea"],
+    "required_source_types": [],
+    "required_document_ids": ["doc_010"],
+    "must_not_contain": []
+  },
+  {
+    "id": "q_unfound_001",
+    "question": "What is the recommended dosage for Adderall in adults?",
+    "expected_answer_keywords": ["Not found in available sources"],
+    "required_source_types": [],
+    "required_document_ids": [],
+    "must_not_contain": ["10mg", "20mg"]
+  },
+  {
+    "id": "q_unfound_002",
+    "question": "Is Metformin safe for patients with severe kidney disease?",
+    "expected_answer_keywords": ["Not found in available sources"],
+    "required_source_types": [],
+    "required_document_ids": [],
+    "must_not_contain": ["kidney", "renal"]
+  },
+  {
+    "id": "q_ator_002",
+    "question": "Does Atorvastatin increase HDL-C?",
+    "expected_answer_keywords": ["increase HDL-C"],
+    "required_source_types": [],
+    "required_document_ids": ["doc_004"],
+    "must_not_contain": []
+  },
+  {
+    "id": "q_lis_003",
+    "question": "What is Lisinopril indicated for?",
+    "expected_answer_keywords": ["hypertension", "blood pressure"],
+    "required_source_types": [],
+    "required_document_ids": ["doc_001"],
+    "must_not_contain": []
+  }
+]

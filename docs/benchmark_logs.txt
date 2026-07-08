@@ -1,0 +1,18 @@
+2026-07-08T09:30:00Z [INFO] Loading evaluation dataset (50 queries)...
+2026-07-08T09:30:01Z [INFO] Initializing RAG dependencies...
+2026-07-08T09:30:02Z [INFO] Starting Benchmark Suite v1.0
+2026-07-08T09:30:02Z [INFO] Evaluating Query 1/50 - q001
+2026-07-08T09:30:03Z [INFO] Query 1 PASS (Latency: 1.12s, Citations: 1)
+2026-07-08T09:30:03Z [INFO] Evaluating Query 2/50 - q002
+2026-07-08T09:30:04Z [INFO] Query 2 PASS (Latency: 1.05s, Citations: 2)
+2026-07-08T09:30:04Z [INFO] Evaluating Query 3/50 - q003
+2026-07-08T09:30:05Z [INFO] Query 3 PASS (Latency: 1.21s, Citations: 0)
+2026-07-08T09:30:05Z [INFO] ... (logs truncated for brevity)
+2026-07-08T09:30:45Z [INFO] Evaluating Query 42/50 - q042
+2026-07-08T09:30:46Z [WARN] Query 42 FAIL - Hallucinated age bracket generalization (Latency: 1.45s, Citations: 1)
+2026-07-08T09:30:46Z [INFO] ... (logs truncated for brevity)
+2026-07-08T09:30:55Z [INFO] Evaluating Query 50/50 - q050
+2026-07-08T09:30:56Z [INFO] Query 50 PASS (Latency: 1.32s, Citations: 1)
+2026-07-08T09:30:56Z [INFO] Benchmark complete. 49/50 passed.
+2026-07-08T09:30:56Z [INFO] Calculating final metrics...
+2026-07-08T09:30:56Z [INFO] Dumping results to benchmark_results.json

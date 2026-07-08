@@ -1,0 +1,72 @@
+[
+  {
+    "id": "doc_001",
+    "content": "Lisinopril is indicated for the treatment of hypertension in adult patients and pediatric patients 6 years of age and older to lower blood pressure. Lowering blood pressure reduces the risk of fatal and nonfatal cardiovascular events, primarily strokes and myocardial infarctions.",
+    "source": "openFDA - Lisinopril Label",
+    "category": "Indications and Usage",
+    "drug": "Lisinopril"
+  },
+  {
+    "id": "doc_002",
+    "content": "Lisinopril is contraindicated in patients with a history of angioedema related to previous treatment with an ACE inhibitor. It is also contraindicated in patients with hereditary or idiopathic angioedema.",
+    "source": "openFDA - Lisinopril Label",
+    "category": "Contraindications",
+    "drug": "Lisinopril"
+  },
+  {
+    "id": "doc_003",
+    "content": "When pregnancy is detected, discontinue lisinopril as soon as possible. Drugs that act directly on the renin-angiotensin system can cause injury and death to the developing fetus.",
+    "source": "DailyMed - Lisinopril Warning",
+    "category": "Boxed Warning",
+    "drug": "Lisinopril"
+  },
+  {
+    "id": "doc_004",
+    "content": "Atorvastatin is indicated as an adjunct to diet to reduce elevated total-C, LDL-C, apo B, and TG levels and to increase HDL-C in patients with primary hypercholesterolemia (heterozygous familial and nonfamilial) and mixed dyslipidemia.",
+    "source": "openFDA - Atorvastatin Label",
+    "category": "Indications and Usage",
+    "drug": "Atorvastatin"
+  },
+  {
+    "id": "doc_005",
+    "content": "Atorvastatin is contraindicated in patients with active liver disease, which may include unexplained persistent elevations in hepatic transaminase levels.",
+    "source": "DailyMed - Atorvastatin Contraindications",
+    "category": "Contraindications",
+    "drug": "Atorvastatin"
+  },
+  {
+    "id": "doc_006",
+    "content": "Metformin hydrochloride tablets are indicated as an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients 10 years of age and older with type 2 diabetes mellitus.",
+    "source": "openFDA - Metformin Label",
+    "category": "Indications and Usage",
+    "drug": "Metformin"
+  },
+  {
+    "id": "doc_007",
+    "content": "Postmarketing cases of metformin-associated lactic acidosis have resulted in death, hypothermia, hypotension, and resistant bradyarrhythmias. The onset of metformin-associated lactic acidosis is often subtle, accompanied only by nonspecific symptoms such as malaise, myalgias, respiratory distress, somnolence, and abdominal pain.",
+    "source": "openFDA - Metformin Label",
+    "category": "Boxed Warning",
+    "drug": "Metformin"
+  },
+  {
+    "id": "doc_008",
+    "content": "Amoxicillin is indicated in the treatment of infections due to susceptible (ONLY b-lactamase-negative) isolates of Streptococcus species, Streptococcus pneumoniae, Staphylococcus spp., or Haemophilus influenzae.",
+    "source": "DailyMed - Amoxicillin Label",
+    "category": "Indications and Usage",
+    "drug": "Amoxicillin"
+  },
+  {
+    "id": "doc_009",
+    "content": "Amoxicillin is contraindicated in patients who have experienced a severe hypersensitivity reaction (e.g., anaphylaxis or Stevens-Johnson syndrome) to amoxicillin or to other beta-lactam antibiotics (e.g., penicillins and cephalosporins).",
+    "source": "DailyMed - Amoxicillin Contraindications",
+    "category": "Contraindications",
+    "drug": "Amoxicillin"
+  },
+  {
+    "id": "doc_010",
+    "content": "Ibuprofen is indicated for the management of mild to moderate pain, and for the management of primary dysmenorrhea.",
+    "source": "openFDA - Ibuprofen Label",
+    "category": "Indications and Usage",
+    "drug": "Ibuprofen"
+  }
+]

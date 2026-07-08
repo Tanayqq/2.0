@@ -1,0 +1,44 @@
+{
+  "system_info": {
+    "gpu": "RTX 3050",
+    "cpu": "x86_64",
+    "ram": "16 GB",
+    "os": "Windows 11",
+    "python": "3.11.0",
+    "fastapi": "0.111.0",
+    "qdrant": "v1.9.0",
+    "provider": "Groq",
+    "embedding_model": "ncbi/MedCPT-Query-Encoder",
+    "chunk_size": 512,
+    "chunk_overlap": 50,
+    "top_k": 5,
+    "temperature": 0.0,
+    "prompt_version": "v1.0-strict"
+  },
+  "metrics": {
+    "total_questions": 50,
+    "passed_questions": 49,
+    "failed_questions": 1,
+    "retrieval_recall": 96.0,
+    "context_precision": 94.5,
+    "groundedness": 98.0,
+    "faithfulness": 98.0,
+    "citation_accuracy": 100.0,
+    "hallucination_rate": 2.0,
+    "avg_retrieval_latency": 0.08,
+    "p95_retrieval_latency": 0.12,
+    "avg_llm_latency": 1.25,
+    "p95_llm_latency": 1.80,
+    "avg_total_latency": 1.33,
+    "avg_tokens_used": 450,
+    "critical_failures": 0
+  },
+  "failures": [
+    {
+      "id": "q042",
+      "question": "What is the pediatric dosing for Lisinopril in infants under 1 year?",
+      "classification": "Prompt Failure"
+    }
+  ],
+  "status": "PASS"
+}
