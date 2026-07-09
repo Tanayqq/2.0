@@ -36,17 +36,26 @@ class ProcessClinicalQueryUseCase:
         
         all_retrieved_docs: dict[str, ReferenceDocument] = {}
         
-        # 2. Hybrid Search (Dense + Sparse) for all variations
+        # 2. Search for all query variations
         for q in expanded_queries:
             dense_vec = self.embedding.embed_query(q)
             sparse_vec = self.embedding.embed_sparse(q)
             
-            docs = self.vector_db.hybrid_search(
-                dense_vector=dense_vec,
-                sparse_vector=sparse_vec,
-                top_k=self.initial_top_k,
-                filters=query.filters
-            )
+            if sparse_vec:
+                # Hybrid Search (Dense + Sparse) when SPLADE is available
+                docs = self.vector_db.hybrid_search(
+                    dense_vector=dense_vec,
+                    sparse_vector=sparse_vec,
+                    top_k=self.initial_top_k,
+                    filters=query.filters
+                )
+            else:
+                # Dense-only search (free tier mode)
+                docs = self.vector_db.search(
+                    query_vector=dense_vec,
+                    top_k=self.initial_top_k,
+                    filters=query.filters
+                )
             
             # Deduplicate by Document ID
             for doc in docs:
