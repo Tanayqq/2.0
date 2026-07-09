@@ -16,6 +16,7 @@ def calculate_metrics(item, response, debug_retrieval):
         "groundedness": 0.0,
         "citation_accuracy": 0.0,
         "hallucination_rate": 0.0,
+        "strict_guardrail_compliant": 100.0,
         "latency_sec": response.metadata.get("total_latency_sec", 0.0)
     }
     
@@ -38,6 +39,14 @@ def calculate_metrics(item, response, debug_retrieval):
             if forbidden.lower() in ans_lower:
                 groundedness -= 50
                 
+    # Strict unanswerable guardrail regression check
+    is_unfound_query = any("Not found in available sources" in kw for kw in item.get("expected_answer_keywords", []))
+    if is_unfound_query:
+        ans_clean = response.answer.strip().rstrip('.')
+        if ans_clean != "Not found in available sources":
+            metrics["strict_guardrail_compliant"] = 0.0
+            groundedness = 0.0  # Fail groundedness since it violates strict unanswerable policy
+            
     metrics["groundedness"] = max(0.0, min(100.0, groundedness))
     metrics["hallucination_rate"] = 100.0 - metrics["groundedness"]
     
@@ -51,7 +60,8 @@ def calculate_metrics(item, response, debug_retrieval):
     elif not cited_ids:
         metrics["citation_accuracy"] = 0.0
     else:
-        valid_citations = sum(1 for cid in cited_ids if cid in valid_doc_ids)
+        # Check that cited index numbers are valid indices of the retrieved chunks list
+        valid_citations = sum(1 for cid in cited_ids if cid.isdigit() and 1 <= int(cid) <= len(valid_doc_ids))
         metrics["citation_accuracy"] = (valid_citations / len(cited_ids)) * 100
         
     return metrics
@@ -80,6 +90,7 @@ def summarize_strategy(results):
         "recall": sum(r["metrics"]["retrieval_recall"] for r in results) / len(results),
         "groundedness": sum(r["metrics"]["groundedness"] for r in results) / len(results),
         "citation": sum(r["metrics"]["citation_accuracy"] for r in results) / len(results),
+        "guardrail": sum(r["metrics"]["strict_guardrail_compliant"] for r in results) / len(results),
         "latency": sum(r["metrics"]["latency_sec"] for r in results) / len(results)
     }
 
@@ -87,13 +98,13 @@ def generate_ablation_report(strategy_results, report_path):
     md = f"# Phase 2A: Retrieval Excellence Ablation Study\nGenerated at: {datetime.datetime.now().isoformat()}\n\n"
     md += "This report compares the performance of independent retrieval strategies to quantify the measured improvements of Phase 2A.\n\n"
     
-    md += "| Strategy | Recall (%) | Precision / Groundedness (%) | Citation Accuracy (%) | Avg Latency (s) |\n"
-    md += "|----------|------------|------------------------------|-----------------------|-----------------|\n"
+    md += "| Strategy | Recall (%) | Precision / Groundedness (%) | Citation Accuracy (%) | Guardrail Compliance (%) | Avg Latency (s) |\n"
+    md += "|----------|------------|------------------------------|-----------------------|--------------------------|-----------------|\n"
     
     for name, results in strategy_results.items():
         summary = summarize_strategy(results)
         if summary:
-            md += f"| {name} | {summary['recall']:.1f} | {summary['groundedness']:.1f} | {summary['citation']:.1f} | {summary['latency']:.2f} |\n"
+            md += f"| {name} | {summary['recall']:.1f} | {summary['groundedness']:.1f} | {summary['citation']:.1f} | {summary['guardrail']:.1f} | {summary['latency']:.2f} |\n"
             
     with open(report_path, 'w', encoding='utf-8') as f:
         f.write(md)

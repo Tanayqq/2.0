@@ -72,9 +72,10 @@ class ProcessClinicalQueryUseCase:
         context_str = ""
         citations = []
         for i, doc in enumerate(reranked_docs, start=1):
-            context_str += f"[Document ID: {doc.id}]\nSource: {doc.source}\nContent: {doc.content}\n\n"
+            citation_id = str(i)
+            context_str += f"[Document ID: {citation_id}]\nSource: {doc.source}\nContent: {doc.content}\n\n"
             citations.append(Citation(
-                document_id=doc.id,
+                document_id=citation_id,
                 source=doc.source,
                 snippet=doc.content[:150] + "..."
             ))
@@ -90,9 +91,10 @@ Question: {question}
 
 Instructions:
 1. Answer the question using ONLY the provided context.
-2. Cite every fact with its corresponding [Document ID: X].
-3. Do not generalize or extrapolate beyond the provided text. If a specific population (e.g., age bracket) is asked and not explicitly found in the text, state exactly: "Not found in available sources."
-4. If the context is empty, state exactly: "Not found in available sources."
+2. Cite every fact with its corresponding [Document ID: X] where X is the number of the document.
+3. If the requested information is not explicitly present in the retrieved context, return exactly: "Not found in available sources."
+4. Do NOT provide any additional explanation, notes, disclaimers, or adjacent/related clinical information if the information is not found. Do NOT say things like "However, the context mentions..." or "Note: ...". Just return exactly "Not found in available sources." and nothing else.
+5. Do not generalize or extrapolate beyond the provided text.
         """
 
     def get_debug_retrieval(self, query: MedicalQuery):
@@ -132,10 +134,11 @@ Instructions:
         
         # Post-processing citation validation
         if "Not found in available sources" in answer_text:
+            answer_text = "Not found in available sources."
             citations = []
         else:
             cited_ids = re.findall(r'\[Document ID:\s*([^\]]+)\]', answer_text)
-            valid_ids = {doc.id for doc in documents}
+            valid_ids = {c.document_id for c in citations}
             
             citations = [c for c in citations if c.document_id in cited_ids and c.document_id in valid_ids]
             
