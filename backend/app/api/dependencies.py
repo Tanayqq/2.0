@@ -1,7 +1,7 @@
 from functools import lru_cache
 from app.core.config import settings
 from app.infrastructure.llm_providers import GroqProvider, MedGemmaProvider
-from app.infrastructure.embedding_models import MedCPTEmbeddingModel, MSMarcoCrossEncoder
+from app.infrastructure.embedding_models import FastEmbedModel, NoOpCrossEncoder
 from app.infrastructure.vector_db import QdrantAdapter
 from app.domain.interfaces import LLMProviderProtocol, VectorDatabaseProtocol, EmbeddingModelProtocol, CrossEncoderProtocol
 
@@ -17,7 +17,7 @@ def get_llm_provider() -> LLMProviderProtocol:
 
 @lru_cache()
 def get_embedding_model() -> EmbeddingModelProtocol:
-    return MedCPTEmbeddingModel(model_name=settings.EMBEDDING_MODEL_NAME)
+    return FastEmbedModel(model_name=settings.EMBEDDING_MODEL_NAME)
 
 @lru_cache()
 def get_vector_db() -> VectorDatabaseProtocol:
@@ -25,4 +25,5 @@ def get_vector_db() -> VectorDatabaseProtocol:
 
 @lru_cache()
 def get_cross_encoder() -> CrossEncoderProtocol:
-    return MSMarcoCrossEncoder()
+    return NoOpCrossEncoder()
+
