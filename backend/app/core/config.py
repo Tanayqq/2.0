@@ -16,7 +16,7 @@ class Settings(BaseSettings):
     QDRANT_API_KEY: str = ""
     
     # Embedding Configuration
-    EMBEDDING_MODEL_NAME: str = "ncbi/MedCPT-Query-Encoder"
+    EMBEDDING_MODEL_NAME: str = "sentence-transformers/all-MiniLM-L6-v2"
     
     model_config = SettingsConfigDict(env_file=".env")
 
