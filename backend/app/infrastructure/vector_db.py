@@ -33,14 +33,15 @@ class QdrantAdapter(VectorDatabaseProtocol):
     def search(self, query_vector: List[float], top_k: int = 5, filters: Optional[Dict[str, Any]] = None) -> List[ReferenceDocument]:
         qdrant_filter = self._build_filter(filters)
         
-        search_result = self.client.search(
+        search_result = self.client.query_points(
             collection_name=self.collection_name,
-            query_vector=("dense", query_vector),
+            query=query_vector,
+            using="dense",
             limit=top_k,
             query_filter=qdrant_filter
         )
         
-        return self._map_results(search_result)
+        return self._map_results(search_result.points)
 
     def hybrid_search(self, dense_vector: List[float], sparse_vector: Dict[int, float], top_k: int = 20, filters: Optional[Dict[str, Any]] = None) -> List[ReferenceDocument]:
         """
