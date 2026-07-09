@@ -18,6 +18,10 @@ class Settings(BaseSettings):
     # Embedding Configuration
     EMBEDDING_MODEL_NAME: str = "sentence-transformers/all-MiniLM-L6-v2"
     
-    model_config = SettingsConfigDict(env_file=".env")
+    # Network Configuration
+    FRONTEND_URL: str = "http://localhost:5173"
+    APP_VERSION: str = "1.0.0"
+    
+    model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
 settings = Settings()

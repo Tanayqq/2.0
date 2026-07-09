@@ -6,7 +6,7 @@ class GroqProvider(LLMProviderProtocol):
     Implementation of the LLMProviderProtocol using Groq API.
     Optimized for speed during development.
     """
-    def __init__(self, api_key: str, model_name: str = "llama3-8b-8192"):
+    def __init__(self, api_key: str, model_name: str = "llama-3.1-8b-instant"):
         self.client = Groq(api_key=api_key)
         self.model_name = model_name
 
