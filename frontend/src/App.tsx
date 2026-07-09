@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { queryMedicalAPI, AnswerResponse } from "./services/api";
+import { queryMedicalAPI, type AnswerResponse } from "./services/api";
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
