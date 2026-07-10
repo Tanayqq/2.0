@@ -1,0 +1,96 @@
+{
+  "error_reason": "Found section with missing title",
+  "failed_at": "2026-07-10T04:19:45.188232Z",
+  "document": {
+    "drug": "Prednisolone",
+    "generic_name": "Prednisolone",
+    "source": "DailyMed",
+    "country": "US",
+    "version": "2",
+    "effective_date": "2026-04-24",
+    "revision": "02fc6f0b-d053-49e1-82de-f272dd05d529",
+    "ingested_at": "2026-07-10T04:19:45.183665Z",
+    "sections": [
+      {
+        "title": "",
+        "content": "Prolonged use of corticosteroids may result in posterior subcapsular cataract formation and may increase intraocular pressure in susceptible individuals, resulting in glaucoma with damage to the optic nerve, defects in visual acuity and fields of vision. Prolonged use may also suppress the host immune response and thus increase the hazard of secondary ocular infections.\n\nIf this product is used for 10 days or longer, intraocular pressure should be routinely monitored even though it may be difficult in children and uncooperative patients. Steroids should be used with caution in the presence of glaucoma. Intraocular pressure should be checked frequently.\n\nVarious ocular diseases and long-term use of topical corticosteroids have been known to cause corneal and scleral thinning. Use of topical corticosteroids in the presence of thin corneal or scleral tissue may lead to perforation.\n\nAcute purulent infections of the eye may be masked or activity enhanced by the presence of corticosteroid medication.\n\nThe use of steroids after cataract surgery may delay healing and increase the incidence of bleb formation.\n\nUse of ocular steroids may prolong the course and may exacerbate the severity of many viral infections of the eye (including herpes simplex). Employment of a corticosteroid medication in the treatment of patients with a history of herpes simplex requires great caution; frequent slit lamp microscopy is recommended.\n\nPrednisolone acetate ophthalmic suspension 1% contains sodium bisulfite, a sulfite that may cause allergic-type reactions, including anaphylactic symptoms and life-threatening or less severe asthmatic episodes in certain susceptible people. The overall prevalence of sulfite sensitivity in the general population is unknown and probably low. Sulfite sensitivity is seen more frequently in asthmatic than in non-asthmatic people."
+      },
+      {
+        "title": "Indications",
+        "content": "Prednisolone acetate ophthalmic suspension 1% is indicated for the treatment of steroid-responsive inflammation of the palpebral and bulbar conjunctiva, cornea, and anterior segment of the globe."
+      },
+      {
+        "title": "Contraindications",
+        "content": "Prednisolone acetate ophthalmic suspension 1% is contraindicated in acute untreated purulent ocular infections, in most viral diseases of the cornea and conjunctiva including epithelial herpes simplex keratitis (dendritic keratitis), vaccinia, and varicella, and also in mycobacterial infection of the eye and fungal diseases of ocular structures.\n\nPrednisolone acetate ophthalmic suspension 1% is also contraindicated in individuals with known or suspected hypersensitivity to any of the ingredients of this preparation and to other corticosteroids."
+      },
+      {
+        "title": "Patient Counseling Information",
+        "content": "Advise patients that if eye inflammation or pain persists longer than 48 hours or becomes aggravated, they should consult a physician.\n\nAdvise patients that to prevent eye injury or contamination, care should be taken to avoid touching the bottle tip to eyelids or to any other surface. The use of this bottle by more than one person may spread infection. Keep bottle tightly closed when not in use. Keep out of the reach of children.\n\nAdvise patients that prednisolone acetate ophthalmic suspension 1% contains benzalkonium chloride, which may be absorbed by soft contact lenses. Contact lenses should be removed prior to application of prednisolone acetate ophthalmic suspension 1% and may be reinserted 15 minutes following its administration."
+      },
+      {
+        "title": "Pediatric Use",
+        "content": "No studies have been conducted in animals or in humans to evaluate the potential of these effects."
+      },
+      {
+        "title": "Pregnancy",
+        "content": "It is not known whether topical ophthalmic administration of corticosteroids could result in sufficient systemic absorption to produce detectable quantities in breast milk. Systemically administered corticosteroids appear in human milk and could suppress growth, interfere with endogenous corticosteroid production, or cause other untoward effects. Because of the potential for serious adverse reactions in nursing infants from prednisolone, a decision should be made whether to discontinue nursing or to discontinue the drug, taking into account the importance of the drug to the mother."
+      },
+      {
+        "title": "Lactation",
+        "content": "The safety and effectiveness in pediatric patients have been established. Use in pediatric patients is supported by evidence from adequate and well-controlled studies of prednisolone acetate ophthalmic suspension in adults with additional data in pediatric patients."
+      },
+      {
+        "title": "Geriatric Use",
+        "content": "No overall differences in safety or effectiveness have been observed between elderly and younger patients."
+      },
+      {
+        "title": "Adverse Reactions",
+        "content": "The following adverse reactions have been identified during use of prednisolone acetate ophthalmic suspension 1%. Because reactions are reported voluntarily from a population of uncertain size, it is not always possible to reliably estimate their frequency or establish a causal relationship to drug exposure.\n\nAdverse reactions include elevation of intraocular pressure (IOP) with possible development of glaucoma and infrequent optic nerve damage, posterior subcapsular cataract formation, and delayed wound healing.\n\nThe development of secondary ocular infection (bacterial, fungal, and viral) has occurred. Fungal and viral infections of the cornea are particularly prone to develop coincidentally with long-term applications of steroids. The possibility of fungal invasion should be considered in any persistent corneal ulceration where steroid treatment has been used (see\n\nPRECAUTIONS).\n\nOther adverse reactions reported with the use of prednisolone acetate ophthalmic suspension include: allergic reactions; dysgeusia; eye pain; foreign body sensation; headache; pruritus; rash; transient burning and stinging upon instillation and other minor symptoms of ocular irritation; urticaria; and visual disturbance (blurry vision).\n\nKeratitis, conjunctivitis, corneal ulcers, mydriasis, conjunctival hyperemia, loss of accommodation and ptosis have occasionally been reported following local use of corticosteroids. Corticosteroid-containing preparations have also been reported to cause acute anterior uveitis and perforation of the globe."
+      },
+      {
+        "title": "Precautions",
+        "content": "Overdosage will not ordinarily cause acute problems. If accidentally ingested, drink fluids to dilute."
+      },
+      {
+        "title": "Dosage",
+        "content": "Shake well before using. Instill one to two drops into the conjunctival sac two to four times daily. During the initial 24 to 48 hours, the dosing frequency may be increased if necessary. Care should be taken not to discontinue therapy prematurely.\n\nIf signs and symptoms fail to improve after 2 days, the patient should be re-evaluated (see\n\nPRECAUTIONS)."
+      },
+      {
+        "title": "Storage",
+        "content": "Store at up to 25°C (77°F). Protect from freezing. Store in an upright position.\n\nDistributed by:\n\nSportpharm LLC\n\n379 Van Ness Ave 1401,\n\nTorrance, CA 90501\n\nRelabeled by:\n\nEnovachem PHARMACEUTICALS\n\nTorrance, CA 90501"
+      },
+      {
+        "title": "Description",
+        "content": "DESCRIPTION Prednisolone acetate ophthalmic suspension, USP 1% is a sterile, topical anti-inflammatory agent for ophthalmic use. Its chemical name is 11ß,17, 21-Trihydroxypregna-1,4-diene-3, 20-dione 21-acetate and it has the following structure: Structural Formula: prednisolone acetate Each mL of Prednisolone acetate ophthalmic suspension 1% contains: Active : prednisolone acetate (microfine suspension) 1% Inactives : benzalkonium chloride as preservative; boric acid; edetate disodium; hypromellose; polysorbate 80; purified water; sodium bisulfite; sodium chloride; and sodium citrate. The pH during its shelf life ranges from 5.0 - 6.0. The following structure for Prednisolone acetate ophthalmic suspension, USP 1% is a sterile, topical anti-inflammatory agent for ophthalmic use. Its chemical name is 11ß,17, 21-Trihydroxypregna-1,4-"
+      },
+      {
+        "title": "Clinical Pharmacology",
+        "content": "CLINICAL PHARMACOLOGY Prednisolone acetate is a glucocorticoid that, on the basis of weight, has 3 to 5 times the anti-inflammatory potency of hydrocortisone. Glucocorticoids inhibit the edema, fibrin deposition, capillary dilation, and phagocytic migration of the acute inflammatory response, as well as capillary proliferation, deposition of collagen, and scar formation."
+      },
+      {
+        "title": "Warnings",
+        "content": "WARNINGS Prolonged use of corticosteroids may result in posterior subcapsular cataract formation and may increase intraocular pressure in susceptible individuals, resulting in glaucoma with damage to the optic nerve, defects in visual acuity and fields of vision. Prolonged use may also suppress the host immune response and thus increase the hazard of secondary ocular infections. If this product is used for 10 days or longer, intraocular pressure should be routinely monitored even though it may be difficult in children and uncooperative patients. Steroids should be used with caution in the presence of glaucoma. Intraocular pressure should be checked frequently. Various ocular diseases and long-term use of topical corticosteroids have been known to cause corneal and scleral thinning. Use of topical corticosteroids in the presence of thin corneal or scleral tissue may lead to perforation. Acute purulent infections of the eye may be masked or activity enhanced by the presence of corticosteroid medication. The use of steroids after cataract surgery may delay healing and increase the incidence of bleb formation. Use of ocular steroids may prolong the course and may exacerbate the severity of many viral infections of the eye (including herpes simplex). Employment of a corticosteroid medication in the treatment of patients with a history of herpes simplex requires great caution; frequent slit lamp microscopy is recommended. Prednisolone acetate ophthalmic suspension 1% contains sodium bisulfite, a sulfite that may cause allergic-type reactions, including anaphylactic symptoms and life-threatening or less severe asthmatic episodes in certain susceptible people. The overall prevalence of sulfite sensitivity in the general population is unknown and probably low. Sulfite sensitivity is seen more frequently in asthmatic than in non-asthmatic people."
+      },
+      {
+        "title": "General Precautions",
+        "content": "General The initial prescription and renewal of the medication order beyond 20 milliliters of prednisolone acetate ophthalmic suspension 1% should be made by a physician only after examination of the patient with the aid of magnification, such as slit lamp biomicroscopy, and, where appropriate, fluorescein staining. If signs and symptoms fail to improve after 2 days, the patient should be re-evaluated. As fungal infections of the cornea are particularly prone to develop coincidentally with long-term local corticosteroid applications, fungal invasion should be suspected in any persistent corneal ulceration where a corticosteroid has been used or is in use. Fungal cultures should be taken when appropriate."
+      },
+      {
+        "title": "Information For Patients",
+        "content": "Information for Patients Advise patients that if eye inflammation or pain persists longer than 48 hours or becomes aggravated, they should consult a physician. Advise patients that to prevent eye injury or contamination, care should be taken to avoid touching the bottle tip to eyelids or to any other surface. The use of this bottle by more than one person may spread infection. Keep bottle tightly closed when not in use. Keep out of the reach of children. Advise patients that prednisolone acetate ophthalmic suspension 1% contains benzalkonium chloride, which may be absorbed by soft contact lenses. Contact lenses should be removed prior to application of prednisolone acetate ophthalmic suspension 1% and may be reinserted 15 minutes following its administration."
+      },
+      {
+        "title": "Carcinogenesis And Mutagenesis And Impairment Of Fertility",
+        "content": "Carcinogenesis, Mutagenesis, Impairment of Fertility No studies have been conducted in animals or in humans to evaluate the potential of these effects."
+      },
+      {
+        "title": "Overdosage",
+        "content": "OVERDOSAGE Overdosage will not ordinarily cause acute problems. If accidentally ingested, drink fluids to dilute."
+      },
+      {
+        "title": "How Supplied",
+        "content": "HOW SUPPLIED Prednisolone acetate ophthalmic suspension, USP 1% is supplied sterile in opaque white LDPE plastic bottles with droppers with pink high impact polystyrene (HIPS) caps as follows: 5 mL in 10 mL bottle - NDC 85766-124-05 (relabeled from NDC 60758-119-05) Storage : Store at up to 25°C (77°F). Protect from freezing. Store in an upright position. Distributed by: Sportpharm LLC 379 Van Ness Ave 1401, Torrance, CA 90501 Relabeled by: Enovachem PHARMACEUTICALS Torrance, CA 90501"
+      }
+    ]
+  }
+}

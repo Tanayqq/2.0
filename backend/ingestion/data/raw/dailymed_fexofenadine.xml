@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="67f3284f-3041-44b7-9daf-ec9e87fd6701"/>
+   <code code="34390-5" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN OTC DRUG LABEL"/>
+   <title>Children's Allergy</title>
+   <effectiveTime value="20260625"/>
+   <setId root="84988f6d-85b1-45dd-89be-0333acc6b180"/>
+   <versionNumber value="4"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id extension="028473634" root="1.3.6.1.4.1.519.1"/>
+            <name>H2-Pharma, LLC</name>
+            <assignedEntity>
+               <assignedOrganization/>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section ID="DLDE">
+               <id root="8b129cc2-81c9-44dd-a0ac-ba17323f0901"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL PRODUCT DATA ELEMENTS SECTION"/>
+               <effectiveTime value="20260625"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="61269-527" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Childrens Allergy</name>
+                        <formCode code="C42994" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="SUSPENSION"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>fexofenadine hydrochloride</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator value="30" unit="mg"/>
+                              <denominator value="5" unit="mL"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="2S068B75ZU" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>FEXOFENADINE HYDROCHLORIDE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="E6582LOH6V" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>FEXOFENADINE</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="3QPI1U3FV8" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>BUTYLPARABEN</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="7FLD91C86K" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>EDETATE DISODIUM</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="TUF2IVW3M2" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>POLOXAMER 407</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="6DC9Q167V3" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>PROPYLENE GLYCOL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="Z8IX2SC1OH" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>PROPYLPARABEN</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="059QF0KO0R" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>WATER</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="22ADO53M6F" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SODIUM PHOSPHATE, DIBASIC, ANHYDROUS</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="KH7I04HPUU" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SODIUM PHOSPHATE, MONOBASIC, ANHYDROUS</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="C151H8M554" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SUCROSE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="15FIX9V2JP" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>TITANIUM DIOXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="TTV12P4NEE" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>XANTHAN GUM</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="VCQ006KQ1E" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>XYLITOL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="118" unit="mL"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="1" unit="1"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="61269-527-94" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="completed"/>
+                                       <effectiveTime>
+                                          <low value="20220718"/>
+                                          <high value="20270630"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="237" unit="mL"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="1" unit="1"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="61269-527-98" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="completed"/>
+                                       <effectiveTime>
+                                          <low value="20220718"/>
+                                          <high value="20250630"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="ANDA203330" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73584" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="completed"/>
+                           <effectiveTime>
+                              <low value="20220718"/>
+                              <high value="20270630"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLFLAVOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C73365" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BERRY" xsi:type="CE">
+                              <originalText/>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="9becaa69-f59b-4d39-8b8a-f6f9dd63b0fc"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold italics">Drug Facts</content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20260625"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="161f9c18-8729-4810-a0e9-6d06d12fefee"/>
+               <code code="55106-9" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - ACTIVE INGREDIENT SECTION"/>
+               <title>Active ingredient (in each 5 mL)</title>
+               <text>
+                  <paragraph>Fexofenadine HCl, USP 30 mg</paragraph>
+               </text>
+               <effectiveTime value="20260625"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="8380b9fa-ba9d-42aa-bfd9-903a26482fdd"/>
+               <code code="55105-1" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - PURPOSE SECTION"/>
+               <title>Purpose</title>
+               <text>
+                  <paragraph>Antihistamine</paragraph>
+               </text>
+               <effectiveTime value="20260625"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="f9dbebbd-1157-4ff7-a441-183a1352d3d2"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>Uses</title>
+               <text>
+                  <paragraph>temporarily relieves these symptoms due to hay fever or other upper respiratory allergies:</paragraph>
+                  <list listType="unordered" styleCode="Square">
+                     <item>runny nose</item>
+                     <item>itchy, watery eyes</item>
+                     <item>sneezing</item>
+                     <item>itching of the nose or throat</item>
+                  </list>
+               </text>
+               <effectiveTime value="20260625"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="27555612-17f7-4812-aaa2-cf4c89f4f37e"/>
+               <code code="34071-1" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS SECTION"/>
+               <title>Warnings</title>
+               <effectiveTime value="20260625"/>
+               <component>
+                  <section>
+                     <id root="c9308fc7-b016-4f4f-9bb0-a02345efd7a8"/>
+                     <code code="50570-1" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - DO NOT USE SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="bold">Do not use</content> if you have ever had an allergic reaction to this product or any of its ingredients.</paragraph>
+                     </text>
+                     <effectiveTime value="20260625"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="b61d37df-c2ab-45ca-99cc-6bbcf911c592"/>
+                     <code code="50569-3" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - ASK DOCTOR SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="bold">Ask a doctor before use if you have</content> kidney disease. Your doctor should determine if you need a different dose.</paragraph>
+                     </text>
+                     <effectiveTime value="20260625"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="b884e0a4-2fd5-4747-9014-d0dd07620c9b"/>
+                     <code code="50567-7" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - WHEN USING SECTION"/>
+                     <title>When using this product</title>
+                     <text>
+                        <list listType="unordered" styleCode="Square">
+                           <item>do not take more than directed</item>
+                           <item>do not take at the same time as aluminum or magnesium antacids</item>
+                           <item>do not take with fruit juices (see <linkHtml href="#DIRECTIONS">Directions</linkHtml>)</item>
+                        </list>
+                     </text>
+                     <effectiveTime value="20260625"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="6fd559f1-f279-4ef6-a1be-b3dbd164f28d"/>
+                     <code code="50566-9" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - STOP USE SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="bold">Stop use and ask a doctor if</content> an allergic reaction to this product occurs. Seek medical help right away.</paragraph>
+                     </text>
+                     <effectiveTime value="20260625"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="7ba8c8c5-6caa-48c9-a9f0-7f8f3ac0dfce"/>
+                     <code code="53414-9" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - PREGNANCY OR BREAST FEEDING SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="bold">If pregnant or breast-feeding,</content> ask a health professional before use.</paragraph>
+                     </text>
+                     <effectiveTime value="20260625"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="6a6bbe34-f77b-49dc-bc3c-5c4ed644b3d8"/>
+                     <code code="50565-1" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - KEEP OUT OF REACH OF CHILDREN SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="bold">Keep out of reach of children.</content> In case of overdose, get medical help or contact a Poison Control Center (1-800-222-1222) right away.</paragraph>
+                     </text>
+                     <effectiveTime value="20260625"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="DIRECTIONS">
+               <id root="58aabfc4-a93a-49a8-b2e2-d2392db367b3"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>Directions</title>
+               <text>
+                  <list listType="unordered" styleCode="Square">
+                     <item>shake well before using</item>
+                     <item>use only with enclosed dosing cup</item>
+                  </list>
+                  <table width="60%">
+                     <col width="45%" align="left" valign="top"/>
+                     <col width="55%" align="left" valign="top"/>
+                     <tfoot>
+                        <tr>
+                           <td colspan="2" align="left">Note: mL = milliliters</td>
+                        </tr>
+                     </tfoot>
+                     <tbody>
+                        <tr styleCode="Botrule">
+                           <td styleCode="Rrule">adults and children 12 years of age and over</td>
+                           <td>take 10 mL every 12 hours; do not take more than 20 mL in 24 hours</td>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td styleCode="Rrule">children 2 to under 12 years of age</td>
+                           <td>take 5 mL every 12 hours; do not take more than 10 mL in 24 hours</td>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td styleCode="Rrule">children under 2 years of age</td>
+                           <td>ask a doctor</td>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td styleCode="Rrule">adults 65 years of age and older</td>
+                           <td>ask a doctor</td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule">consumers with kidney disease</td>
+                           <td>ask a doctor</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </text>
+               <effectiveTime value="20260625"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="7bb6bf8f-3bf6-404b-93ad-7eddc3b4373e"/>
+               <code code="44425-7" codeSystem="2.16.840.1.113883.6.1" displayName="STORAGE AND HANDLING SECTION"/>
+               <title>Other information</title>
+               <text>
+                  <list listType="unordered" styleCode="Square">
+                     <item>
+                        <content styleCode="bold">each 5 mL contains:</content> sodium 18 mg</item>
+                     <item>store between 20° to 25°C (68° to 77°F)</item>
+                     <item>before using any medication, read all label directions. Keep carton, it contains important information.</item>
+                  </list>
+               </text>
+               <effectiveTime value="20260625"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="5b7b8be7-6272-4889-b269-ab18ba9ec554"/>
+               <code code="51727-6" codeSystem="2.16.840.1.113883.6.1" displayName="INACTIVE INGREDIENT SECTION"/>
+               <title>Inactive ingredients</title>
+               <text>
+                  <paragraph>artificial raspberry flavor, butylparaben, edetate disodium, poloxamer 407, propylene glycol, propylparaben, purified water, sodium phosphate dibasic, sodium phosphate monobasic, sucrose, titanium dioxide, xanthan gum, xylitol</paragraph>
+               </text>
+               <effectiveTime value="20260625"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="8cc21821-0fce-4dd5-ace9-dfa1fbbe5d46"/>
+               <code code="53413-1" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - QUESTIONS SECTION"/>
+               <title>Questions or comments?</title>
+               <text>
+                  <paragraph>Call <content styleCode="bold">1-877-753-3935</content> Monday-Friday 9AM-5PM EST</paragraph>
+               </text>
+               <effectiveTime value="20260625"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="421d8dcf-8abc-4b5f-b6e0-8bbca8714def"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <text>
+                  <paragraph>Distributed by: <content styleCode="bold">H2-Pharma, LLC</content>
+                     <br/> Montgomery, AL 36117</paragraph>
+               </text>
+               <effectiveTime value="20260625"/>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="fcc43b03-9e93-44d3-8877-0cfddd763435"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PRINCIPAL DISPLAY PANEL - 237 mL Bottle Carton</title>
+               <text>
+                  <paragraph>NDC 61269-527-98</paragraph>
+                  <paragraph>*Compare to the active ingredient<br/> in Children's Allegra® Allergy</paragraph>
+                  <paragraph>Children's<br/> Allergy</paragraph>
+                  <paragraph>Fexofenadine HCl<br/> Oral Suspension 30 mg/5 mL</paragraph>
+                  <paragraph>Antihistamine</paragraph>
+                  <paragraph>Indoor/Outdoor allergy relief<br/> Sneezing<br/> Runny nose<br/> Itchy, watery eyes<br/> Itchy nose or throat</paragraph>
+                  <paragraph>12 Hour Relief<br/> Ages 2 years and older<br/> Non-drowsy<br/> Dye-free<br/> Alcohol-free</paragraph>
+                  <paragraph>Use only with<br/> enclosed dosing cup.<br/> Wash and let air dry<br/> after each use.</paragraph>
+                  <paragraph>BERRY FLAVOR</paragraph>
+                  <paragraph>8 fl oz (237 mL)</paragraph>
+                  <paragraph>H<sup>2</sup> pharma</paragraph>
+                  <renderMultiMedia referencedObject="MM1"/>
+               </text>
+               <effectiveTime value="20260625"/>
+               <component>
+                  <observationMedia ID="MM1">
+                     <text>PRINCIPAL DISPLAY PANEL - 237 mL Bottle Carton</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="childrens-allergy-01.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

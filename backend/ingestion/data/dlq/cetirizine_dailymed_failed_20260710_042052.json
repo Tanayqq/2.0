@@ -1,0 +1,100 @@
+{
+  "error_reason": "Found section with missing title",
+  "failed_at": "2026-07-10T04:20:52.322544Z",
+  "document": {
+    "drug": "Cetirizine",
+    "generic_name": "Cetirizine",
+    "source": "DailyMed",
+    "country": "US",
+    "version": "6",
+    "effective_date": "2026-02-06",
+    "revision": "04b08c52-5390-4cdb-a9e7-fca81fffdc73",
+    "ingested_at": "2026-07-10T04:20:52.312436Z",
+    "sections": [
+      {
+        "title": "Indications",
+        "content": "Temporarily relieves these symptoms due to hay fever or other upper respiratory allergies:\n\n•runny nose,\n\n•sneezing,\n\n•itchy, watery eyes,\n\n•itching of the nose or throat"
+      },
+      {
+        "title": "Keep Out Of Reach Of Children.",
+        "content": "In case of overdose, get medical help or contact a Poison Control Center right away (1-800-222-1222)"
+      },
+      {
+        "title": "Dosage",
+        "content": "Cetirizine Hydrochloride Tablets, USP 5 mg\n\nadults and children 6 years and over\n\n1 tablet (5 mg) or 2 tablets (10) once daily depending upon severity of symptoms; do not take more than 2 tablets (10) in 24 hours.\n\nadults 65 years and over\n\n1 tablet (5 mg) once a day; do not take more than 1 tablet (5 mg) in 24 hours.\n\nchildren under 6 years of age\n\nask a doctor\n\nconsumers with liver or kidney disease\n\nask a doctor\n\nCetirizine Hydrochloride Tablets, USP 10 mg\n\nadults and children 6 years and over\n\none 10 mg tablet once daily; do not take more than one 10 mg tablet in 24 hours.\n\nA 5 mg product may be appropriate for less severe symptoms.\n\nadults 65 years and over\n\nask a doctor\n\nchildren under 6 years of age\n\nask a doctor\n\nconsumers with liver or kidney disease\n\nask a doctor"
+      },
+      {
+        "title": "",
+        "content": "•store between 20°C to 25°C (68°F to 77°F)\n\n•\ndo not use of imprinted foil inner seal on bottle is broken or missing.\n\n•FDA approved organic impurities test procedure differs from USP"
+      },
+      {
+        "title": "Package/Label Principal Display Panel",
+        "content": "Container label\n\nNDC 72657-129-35\n\n10 mg - 365 Tablets"
+      },
+      {
+        "title": "Principal Display Panel",
+        "content": "Carton label\n\nNDC 72657-129-35\n\n10 mg - 365 Tablets"
+      },
+      {
+        "title": "Spl Unclassified Section",
+        "content": "Drug Facts\nDistributed by: Taro Pharmaceuticals U.S.A., Inc. Hawthorne, NY 10532"
+      },
+      {
+        "title": "Active Ingredient",
+        "content": "Active ingredient (in each 5 mL) Cetirizine HCl 5 mg"
+      },
+      {
+        "title": "Purpose",
+        "content": "Purpose Antihistamine"
+      },
+      {
+        "title": "Warnings",
+        "content": "Warnings Do not use if you have ever had an allergic reaction to this product or any of its ingredients or to an antihistamine containing hydroxyzine. Ask a doctor before use if you have liver or kidney disease. Your doctor should determine if you need a different dose. Ask a doctor or pharmacist before use if you are taking tranquilizers or sedatives. When using this product drowsiness may occur avoid alcoholic drinks alcohol, sedatives, and tranquilizers may increase drowsiness be careful when driving a motor vehicle or operating machinery Stop use and ask a doctor if an allergic reaction to this product occurs. Seek medical help right away. If pregnant or breast-feeding if breast-feeding: not recommended if pregnant: ask a health professional before use. Keep out of reach of children. In case of overdose, get medical help or contact a Poison Control Center right away (1-800-222-1222)."
+      },
+      {
+        "title": "Do Not Use",
+        "content": "Do not use if you have ever had an allergic reaction to this product or any of its ingredients or to an antihistamine containing hydroxyzine."
+      },
+      {
+        "title": "Ask Doctor",
+        "content": "Ask a doctor before use if you have liver or kidney disease. Your doctor should determine if you need a different dose."
+      },
+      {
+        "title": "Ask Doctor Or Pharmacist",
+        "content": "Ask a doctor or pharmacist before use if you are taking tranquilizers or sedatives."
+      },
+      {
+        "title": "When Using",
+        "content": "When using this product drowsiness may occur avoid alcoholic drinks alcohol, sedatives, and tranquilizers may increase drowsiness be careful when driving a motor vehicle or operating machinery"
+      },
+      {
+        "title": "Stop Use",
+        "content": "Stop use and ask a doctor if an allergic reaction to this product occurs. Seek medical help right away."
+      },
+      {
+        "title": "Pregnancy",
+        "content": "If pregnant or breast-feeding if breast-feeding: not recommended if pregnant: ask a health professional before use."
+      },
+      {
+        "title": "Keep Out Of Reach Of Children",
+        "content": "Keep out of reach of children. In case of overdose, get medical help or contact a Poison Control Center right away (1-800-222-1222)."
+      },
+      {
+        "title": "Storage",
+        "content": "Other information do not use if carton is opened, or if imprinted safety seal is broken or missing see bottom panel for expiration date store between 20° to 25°C (68° to 77°F)"
+      },
+      {
+        "title": "Inactive Ingredient",
+        "content": "Inactive ingredients artificial grape flavor, glacial acetic acid, glycerin, methylparaben, natural and artificial banana flavor, propylene glycol, propylparaben, purified water, sodium acetate (anhydrous), sucralose"
+      },
+      {
+        "title": "Questions",
+        "content": "Questions? Call 1-866-923-4914"
+      },
+      {
+        "title": "How Supplied",
+        "content": "HOW SUPPLIED Product: 50090-1103 NDC: 50090-1103-0 120 mL in a BOTTLE / 1 in a CARTON"
+      }
+    ]
+  }
+}

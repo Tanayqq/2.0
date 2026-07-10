@@ -1,0 +1,88 @@
+{
+  "error_reason": "Found section with missing title",
+  "failed_at": "2026-07-10T04:22:04.989645Z",
+  "document": {
+    "drug": "Loperamide",
+    "generic_name": "Loperamide",
+    "source": "DailyMed",
+    "country": "US",
+    "version": "2",
+    "effective_date": "2026-06-26",
+    "revision": "eb93a17e-7daf-4a9e-94a1-442039a383bd",
+    "ingested_at": "2026-07-10T04:22:04.981575Z",
+    "sections": [
+      {
+        "title": "",
+        "content": "Allergy alert:Do not use if you have ever had a rash or other allergic reaction to loperamide hydrochloride\n\nHeart alert:Taking more than directed can cause serious heart problems or death"
+      },
+      {
+        "title": "Indications",
+        "content": "controls symptoms of diarrhea, including Travelers' Diarrhea"
+      },
+      {
+        "title": "Ask A Doctor Before Use If You Have",
+        "content": "fever\n\nmucus in the stool\n\na history of liver disease\n\na history of abnormal heart rhythm"
+      },
+      {
+        "title": "Stop Use And Ask A Doctor If",
+        "content": "symptoms get worse\n\ndiarrhea lasts for more than 2 days\n\nyou get abdominal swelling or bulging. These may be signs of a serious condition."
+      },
+      {
+        "title": "Dosage",
+        "content": "drink plenty of clear fluids to help prevent dehydration caused by diarrhea\n\nfind right dose on chart. If possible, use weight to dose; otherwise, use age.\n\nadults and children\n\n12 years and over\n\n2 caplets after the first loose stool; 1 caplet after each subsequent loose stool; but no more than 4 caplets in 24 hours\n\nchildren 9-11 years\n\n(60-95 lbs)\n\n1 caplet after the first loose stool; ½ caplet after each subsequent loose stool; but no more than 3 caplets in 24 hours\n\nchildren 6-8 years\n\n(48-59 lbs)\n\n1 caplet after the first loose stool; ½ caplet after each subsequent loose stool; but no more than 2 caplets in 24 hours\n\nchildren 2-5 years\n\n(34 to 47 lbs)\n\nask a doctor\n\nchildren under 2 years\n\n(up to 33 lbs)\n\ndo not use"
+      },
+      {
+        "title": "Storage",
+        "content": "store between 20° – 25°C (68° – 77°F)\n\nsee side panel for lot number and expiration date\n\nTAMPER EVIDENT: THIS PRODUCT IS PROTECTED WITH SEALED BLISTER UNITS. DO NOT USE IF ANY ARE TORN OR BROKEN."
+      },
+      {
+        "title": "Active Ingredient",
+        "content": "ACTIVE INGREDIENT(S) (in each tablet) Loperamide Hydrochloride USP 2 mg Simethicone USP 125 mg"
+      },
+      {
+        "title": "Purpose",
+        "content": "PURPOSES Anti-diarrheal Anti-gas"
+      },
+      {
+        "title": "Warnings",
+        "content": "WARNINGS Allergy alert: Do not use if you have ever had a rash or other allergic reaction to loperamide hydrochloride Heart alert: Taking more than directed can cause serious heart problems or death"
+      },
+      {
+        "title": "Do Not Use",
+        "content": "DO NOT USE • if you have bloody or black stool • if you have difficulty swallowing"
+      },
+      {
+        "title": "Ask Doctor",
+        "content": "ASK A DOCTOR BEFORE USE IF YOU HAVE • fever • mucus in the stool • a history of liver disease • a history of abnormal heart rhythm"
+      },
+      {
+        "title": "Ask Doctor Or Pharmacist",
+        "content": "ASK A DOCTOR OR PHARMACIST BEFORE USE IF you are taking a prescription drug. Loperamide may interact with certain prescription drugs."
+      },
+      {
+        "title": "When Using",
+        "content": "WHEN USING THIS PRODUCT tiredness, drowsiness or dizziness may occur. Be careful when driving or operating machinery."
+      },
+      {
+        "title": "Stop Use",
+        "content": "STOP USE AND ASK A DOCTOR IF • symptoms get worse • diarrhea lasts for more than 2 days • you get abdominal swelling or bulging. These may be signs of a serious condition. • you have difficulty swallowing the tablet"
+      },
+      {
+        "title": "Pregnancy",
+        "content": "If pregnant or breast-feeding, ask a health professional before use."
+      },
+      {
+        "title": "Keep Out Of Reach Of Children",
+        "content": "KEEP OUT OF REACH OF CHILDREN In case of overdose, get medical help or contact a Poison Control Center right away. (1-800-222-1222)"
+      },
+      {
+        "title": "Spl Unclassified Section",
+        "content": "OTHER INFORMATION • each tablet contains: calcium 640 mg, very low sodium and potassium 5.838 mg • store between 20 to 25°C (68 to 77°F). Protect from light. • do not use if carton is open or if blister unit is open or torn\nQUESTIONS OR COMMENTS call 1-888-588-1418 Manufactured for FSA Store Inc. 473 Blair Rd Suite 100 PMB 24308 Dallas, TX 75231 Customer Help Line: 1-888-588-1418"
+      },
+      {
+        "title": "Inactive Ingredient",
+        "content": "INACTIVE INGREDIENTS acesulfame potassium, croscarmellose sodium, dibasic calcium phosphate, microcrystalline cellulose, stearic acid and vanilla flavor"
+      }
+    ]
+  }
+}

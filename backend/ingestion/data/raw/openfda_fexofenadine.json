@@ -1,0 +1,96 @@
+{
+  "spl_product_data_elements": [
+    "Fexofenadine HCL Fexofenadine HCL FERRIC OXIDE YELLOW CROSCARMELLOSE SODIUM FERROSOFERRIC OXIDE FERRIC OXIDE RED LACTOSE MONOHYDRATE MICROCRYSTALLINE CELLULOSE FEXOFENADINE HYDROCHLORIDE FEXOFENADINE HYPROMELLOSE 2910 (15 MPA.S) SILICON DIOXIDE TITANIUM DIOXIDE MAGNESIUM STEARATE STARCH, CORN POLYETHYLENE GLYCOL 6000 (peach) G6"
+  ],
+  "active_ingredient": [
+    "Active ingredient (in each tablet) Fexofenadine HCl USP, 180 mg"
+  ],
+  "purpose": [
+    "Purpose Antihistamine"
+  ],
+  "indications_and_usage": [
+    "Uses reduces hives and relieves itching due to hives (urticaria). This product will not prevent hives or an allergic skin reaction from occurring."
+  ],
+  "warnings": [
+    "Severe Allergy Warning: Get emergency help immediately if you have hives along with any of the following symptoms:  trouble swallowing  dizziness or loss of consciousness  swelling of tongue  swelling in or around mouth  trouble speaking  wheezing or problems breathing  drooling These symptoms may be signs of anaphylactic shock. This condition can be life threatening if not treated by a health professional immediately. Symptoms of anaphylactic shock may occur when hives first appear or up to a few hours later",
+    "Not a Substitute for Epinephrine. If your doctor has prescribed an epinephrine injector for “anaphylaxis” or severe allergy symptoms that could occur with your hives, never use this product as a substitute for the epinephrine injector. If you have been prescribed an epinephrine injector, you should carry it with you at all times."
+  ],
+  "do_not_use": [
+    "Do not use  to prevent hives from any known cause such as:  foods  insect stings  medicines  latex or rubber gloves because this product will not stop hives from occurring. Avoiding the cause of your hives is the only way to prevent them. Hives can sometimes be serious. If you do not know the cause of your hives, see your doctor for a medical exam. Your doctor may be able to help you find a cause.  if you have ever had an allergic reaction to this product or any of its ingredients"
+  ],
+  "ask_doctor": [
+    "Ask a doctor before use if you have  kidney disease. Your doctor should determine if you need a different dose.  hives that are an unusual color, look bruised or blistered  hives that do not itch"
+  ],
+  "when_using": [
+    "When using this product  do not take more than directed  do not take at the same time as aluminum or magnesium antacids  do not take with fruit juices (see Directions)"
+  ],
+  "stop_use": [
+    "Stop use and ask a doctor if  an allergic reaction to this product occurs. Seek medical help right away.  symptoms do not improve after 3 days of treatment  the hives have lasted more than 6 weeks"
+  ],
+  "pregnancy_or_breast_feeding": [
+    "If pregnant or breast-feeding, ask a health professional before use."
+  ],
+  "keep_out_of_reach_of_children": [
+    "Keep out of reach of children In case of overdose, get medical help or contact a Poison Control Center right away."
+  ],
+  "dosage_and_administration": [
+    "Directions adults and children 12 years of age and over: take one 180 mg tablet with water every once a day; do not take more than 1 tablet in 24 hours children under 12 years of age: do not use adults 65 years of age and older: ask a doctor consumers with kidney disease: ask a doctor"
+  ],
+  "storage_and_handling": [
+    "Other information  safety sealed: do not use if foil printed with granules logo under bottle cap is opened or torn.  store between 20° and 25°C (68° and 77°F)  protect from excessive moisture"
+  ],
+  "inactive_ingredient": [
+    "Inactive ingredients colloidal silicon dioxide, croscarmellose sodium, hypromellose, iron oxide black, iron oxide red, iron oxide yellow, lactose monohydrate, macrogol, magnesium stearate, microcrystalline cellulose, pregelatinized starch, titanium dioxide."
+  ],
+  "package_label_principal_display_panel": [
+    "Principal display panel 30ct"
+  ],
+  "set_id": "00ef8467-30a0-7579-e063-6294a90a75af",
+  "id": "46540fb6-3247-8ddd-e063-6394a90ae0cb",
+  "effective_time": "20251219",
+  "version": "5",
+  "openfda": {
+    "application_number": [
+      "ANDA211075"
+    ],
+    "brand_name": [
+      "Fexofenadine HCL"
+    ],
+    "generic_name": [
+      "FEXOFENADINE HCL"
+    ],
+    "manufacturer_name": [
+      "CVS"
+    ],
+    "product_ndc": [
+      "51316-767"
+    ],
+    "product_type": [
+      "HUMAN OTC DRUG"
+    ],
+    "route": [
+      "ORAL"
+    ],
+    "substance_name": [
+      "FEXOFENADINE HYDROCHLORIDE"
+    ],
+    "rxcui": [
+      "997420"
+    ],
+    "spl_id": [
+      "46540fb6-3247-8ddd-e063-6394a90ae0cb"
+    ],
+    "spl_set_id": [
+      "00ef8467-30a0-7579-e063-6294a90a75af"
+    ],
+    "package_ndc": [
+      "51316-767-03"
+    ],
+    "is_original_packager": [
+      true
+    ],
+    "unii": [
+      "2S068B75ZU"
+    ]
+  }
+}

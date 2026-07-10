@@ -1,0 +1,2030 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="5579a783-2de9-3b30-e063-6394a90a3436"/>
+   <code code="34391-3" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN PRESCRIPTION DRUG LABEL"/>
+   <title>These highlights do not include all the information needed to use MESALAMINE EXTENDED-RELEASE CAPSULES safely and effectively. See full prescribing information for MESALAMINE EXTENDED-RELEASE CAPSULES.
+ <br/>
+      <br/>
+MESALAMINE extended-release capsules, for oral use
+ <br/>
+Initial U.S. Approval: 1987
+</title>
+   <effectiveTime value="20260630"/>
+   <setId root="47b5d1ee-b439-4ccb-9b01-c0875ccd748a"/>
+   <versionNumber value="2"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id root="1.3.6.1.4.1.519.1" extension="005387188"/>
+            <name>Sandoz Inc</name>
+            <assignedEntity>
+               <assignedOrganization>
+                  <id root="1.3.6.1.4.1.519.1" extension="118801101"/>
+                  <name>DifGen Pharmaceuticals LLC</name>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id root="1.3.6.1.4.1.519.1" extension="860119343"/>
+                        <name>Fourrts (India) Laboratories Private Limited.</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C43360" displayName="manufacture" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="0781-2791" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                     <performance>
+                        <actDefinition>
+                           <code code="C43360" displayName="manufacture" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="0781-2793" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+               </assignedOrganization>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="5579b019-a8ce-4ff5-e063-6394a90a8936"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL product data elements section"/>
+               <effectiveTime value="20260630"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="0781-2791" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Mesalamine</name>
+                        <formCode code="C42916" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CAPSULE, EXTENDED RELEASE"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Mesalamine</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="5Z17386USF" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>DIACETYLATED MONOGLYCERIDES</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="D5340Y2I9G" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CASTOR OIL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="RDH86HJV5Z" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>POVIDONE K90</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="7Z8S9VYZ4B" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>ETHYLCELLULOSE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="4ELV7Z65AP" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>STEARIC ACID</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="588X2YUY0A" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>METHYLENE CHLORIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="7SEV7J4R1U" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>TALC</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="EX438O2MRT" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>FERRIC OXIDE YELLOW</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="46N107B71O" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SHELLAC</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="H3R47K3TBD" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>FD&amp;C BLUE NO. 1</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="6DC9Q167V3" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>PROPYLENE GLYCOL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="2G86QN327L" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>GELATIN</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="15FIX9V2JP" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>TITANIUM DIOXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="XM0M87F357" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>FERROSOFERRIC OXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="WZH3C48M4T" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>POTASSIUM HYDROXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="5138Q19F1X" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>AMMONIA</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="C151H8M554" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SUCROSE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mg" value="250"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="4Q81I59GXC" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MESALAMINE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="4Q81I59GXC" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>MESALAMINE</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="240" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="0781-2791-64" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20260629"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="ANDA219997" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73584" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20260629"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48329" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="green" xsi:type="CE">
+                              <originalText>green opaque body</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48333" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="blue" xsi:type="CE">
+                              <originalText>blue opaque cap</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="ST">DG05</value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value value="1" xsi:type="INT"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48336" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CAPSULE" xsi:type="CE">
+                              <originalText/>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="21" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="0781-2793" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Mesalamine</name>
+                        <formCode code="C42916" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CAPSULE, EXTENDED RELEASE"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Mesalamine</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="5Z17386USF" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>DIACETYLATED MONOGLYCERIDES</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="D5340Y2I9G" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CASTOR OIL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="RDH86HJV5Z" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>POVIDONE K90</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="7Z8S9VYZ4B" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>ETHYLCELLULOSE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="R75537T0T4" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>HYPROMELLOSE 2910 (5 MPA.S)</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="4ELV7Z65AP" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>STEARIC ACID</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="588X2YUY0A" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>METHYLENE CHLORIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="7SEV7J4R1U" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>TALC</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="87Y6436BKR" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>HYPROMELLOSE PHTHALATE (24% PHTHALATE, 55 CST)</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="H3R47K3TBD" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>FD&amp;C BLUE NO. 1</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="2G86QN327L" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>GELATIN</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="15FIX9V2JP" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>TITANIUM DIOXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="46N107B71O" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SHELLAC</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="XM0M87F357" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>FERROSOFERRIC OXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="6DC9Q167V3" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>PROPYLENE GLYCOL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="WZH3C48M4T" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>POTASSIUM HYDROXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="5138Q19F1X" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>AMMONIA</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="C151H8M554" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SUCROSE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mg" value="500"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="4Q81I59GXC" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MESALAMINE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="4Q81I59GXC" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>MESALAMINE</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="120" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="0781-2793-72" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20260630"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="ANDA219997" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73584" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20260630"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48333" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="blue" xsi:type="CE">
+                              <originalText>blue opaque cap and blue opaque body</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="ST">DG09</value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value value="1" xsi:type="INT"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48336" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CAPSULE" xsi:type="CE">
+                              <originalText/>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="25" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="S1">
+               <id root="549de8b0-9f4b-71b1-e063-6394a90a77ae"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>1 INDICATIONS AND USAGE</title>
+               <text>
+                  <paragraph>Mesalamine extended-release capsules are indicated for the induction of remission and for the treatment of mildly to moderately active ulcerative colitis in adult patients.</paragraph>
+               </text>
+               <effectiveTime value="20260101"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Mesalamine is an aminosalicylate indicated for the induction of remission and for the treatment of mildly to moderately active ulcerative colitis in adult patients. (
+ 
+    <linkHtml href="#S1">1</linkHtml>)
+
+   </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="S2">
+               <id root="549de8b0-9f4c-71b1-e063-6394a90a77ae"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>2 DOSAGE AND ADMINISTRATION</title>
+               <text>
+                  <paragraph>Evaluate renal function prior to initiation of mesalamine extended-release capsules and periodically while on therapy
+ 
+  <content styleCode="italics">[see
+  
+   <linkHtml href="#S5.1">Warnings and Precautions (5.1)</linkHtml>]
+ 
+  </content>.
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Recommended Dosage</content>
+                  </paragraph>
+                  <paragraph>The recommended dosage for the induction of remission and the symptomatic treatment of mildly to moderately active ulcerative colitis in adults is 1 g (4 mesalamine extended-release 250 mg capsules or 2 mesalamine extended-release 500 mg capsules) administered orally four times daily.</paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Administration Instructions</content>
+                  </paragraph>
+                  <list listType="unordered" styleCode="Disc">
+                     <item>Swallow mesalamine extended-release capsules whole; do not crush or chew.</item>
+                     <item>Alternatively, the capsule(s) may be opened and the entire contents sprinkled onto applesauce or yogurt. Consume the entire mixture immediately.</item>
+                     <item>Drink an adequate amount of fluids during treatment
+  
+   <content styleCode="italics">[see
+   
+    <linkHtml href="#S5.7">Warnings and Precautions (5.7)</linkHtml>]
+  
+   </content>.
+ 
+  </item>
+                  </list>
+               </text>
+               <effectiveTime value="20250129"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered" styleCode="Disc">
+                           <item>Evaluate renal function prior to initiation of mesalamine extended-release capsules and periodically while on therapy. (
+  
+     <linkHtml href="#S2">2</linkHtml>,
+  
+     <linkHtml href="#S5.1">5.1</linkHtml>)
+ 
+    </item>
+                           <item>The recommended dosage is 1 g administered orally four times daily. (
+  
+     <linkHtml href="#S2">2</linkHtml>)
+ 
+    </item>
+                           <item>Swallow capsules whole; do not crush or chew. (
+  
+     <linkHtml href="#S2">2</linkHtml>)
+ 
+    </item>
+                           <item>Alternatively, the capsule(s) may be opened and the contents sprinkled onto applesauce or yogurt. (
+  
+     <linkHtml href="#S2">2</linkHtml>)
+ 
+    </item>
+                           <item>Drink an adequate amount of fluids. (
+  
+     <linkHtml href="#S2">2</linkHtml>,
+  
+     <linkHtml href="#S5.7">5.7</linkHtml>)
+ 
+    </item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="S3">
+               <id root="549de8b0-9f4d-71b1-e063-6394a90a77ae"/>
+               <code code="43678-2" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE FORMS &amp; STRENGTHS SECTION"/>
+               <title>3 DOSAGE FORMS AND STRENGTHS</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="underline">Extended-release capsules</content>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>250 mg as size “0” hard gelatin capsules with blue opaque cap and green opaque body, imprinted with “DG05” on body with black ink, filled with white to off-white-pale brown colored pellets.</item>
+                     <item>500 mg as size “00EL” hard gelatin capsules with blue opaque cap and blue opaque body, imprinted with “DG09” on body with black ink, filled with white to off-white-pale brown colored pellets.</item>
+                  </list>
+               </text>
+               <effectiveTime value="20250129"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Extended-release capsules: 250 mg and 500 mg. (
+ 
+    <linkHtml href="#S3">3</linkHtml>)
+
+   </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="S4">
+               <id root="549de8b0-9f4e-71b1-e063-6394a90a77ae"/>
+               <code code="34070-3" codeSystem="2.16.840.1.113883.6.1" displayName="CONTRAINDICATIONS SECTION"/>
+               <title>4 CONTRAINDICATIONS</title>
+               <text>
+                  <paragraph>Mesalamine is contraindicated in patients with known or suspected hypersensitivity to salicylates, aminosalicylates, or any ingredients of mesalamine extended-release capsules 
+ 
+  <content styleCode="italics">[see
+  
+   <linkHtml href="#S5.3">Warnings and Precautions (5.3)</linkHtml>]
+ 
+  </content>.
+
+ </paragraph>
+               </text>
+               <effectiveTime value="20250129"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Known or suspected hypersensitivity to salicylates or aminosalicylates or to any of the ingredients of mesalamine extended-release capsules. (
+ 
+    <linkHtml href="#S4">4</linkHtml>,
+ 
+    <linkHtml href="#S5.3">5.3</linkHtml>)
+
+   </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="S5">
+               <id root="549de8b0-9f4f-71b1-e063-6394a90a77ae"/>
+               <code code="43685-7" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS AND PRECAUTIONS SECTION"/>
+               <title>5 WARNINGS AND PRECAUTIONS</title>
+               <effectiveTime value="20250129"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered">
+                           <item>
+                              <content styleCode="underline">Renal Impairment</content>: Assess renal function at the beginning of treatment and periodically during treatment. Evaluate the risks and benefits of mesalamine in patients with known renal impairment or taking nephrotoxic drug. Discontinue mesalamine extended-release capsules if renal function deteriorates while on therapy. (
+  
+     <linkHtml href="#S5.1">5.1</linkHtml>,
+  
+     <linkHtml href="#S7.1">7.1</linkHtml>,
+  
+     <linkHtml href="#S8.6">8.6</linkHtml>)
+ 
+    </item>
+                           <item>
+                              <content styleCode="underline">Mesalamine-Induced Acute Intolerance Syndrome</content>: Discontinue treatment if acute intolerance syndrome (cramping, acute abdominal pain, bloody diarrhea, sometimes fever, headache and rash) is suspected. (
+  
+     <linkHtml href="#S5.2">5.2</linkHtml>)
+ 
+    </item>
+                           <item>
+                              <content styleCode="underline">Hypersensitivity Reactions, including myocarditis and pericarditis</content>: Discontinue mesalamine extended-release capsules if a hypersensitivity reaction is suspected. (
+  
+     <linkHtml href="#S5.3">5.3</linkHtml>)
+ 
+    </item>
+                           <item>
+                              <content styleCode="underline">Hepatic Failure</content>: Evaluate the risks and benefits of using mesalamine in patients with known liver impairment. (
+  
+     <linkHtml href="#S5.4">5.4</linkHtml>)
+ 
+    </item>
+                           <item>
+                              <content styleCode="underline">Severe Cutaneous Adverse Reactions</content>: Discontinue at the first signs or symptoms of severe cutaneous adverse reactions or other signs of hypersensitivity and consider further evaluation. (
+  
+     <linkHtml href="#S5.5">5.5</linkHtml>)
+ 
+    </item>
+                           <item>
+                              <content styleCode="underline">Photosensitivity</content>: Avoid sun exposure if pre-existing skin conditions. (
+  
+     <linkHtml href="#S5.6">5.6</linkHtml>)
+ 
+    </item>
+                           <item>
+                              <content styleCode="underline">Nephrolithiasis</content>: Cases of nephrolithiasis have been reported with the use of mesalamine. Mesalamine-containing stones are undetectable by standard radiography or computed tomography (CT). Ensure adequate hydration during treatment. (
+  
+     <linkHtml href="#S5.7">5.7</linkHtml>)
+ 
+    </item>
+                           <item>
+                              <content styleCode="underline">Interference with Laboratory Tests</content>: Mesalamine may lead to elevated urinary normetanephrine test results. (
+  
+     <linkHtml href="#S5.8">5.8</linkHtml>)
+ 
+    </item>
+                        </list>
+                        <paragraph/>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="S5.1">
+                     <id root="549de8b0-9f50-71b1-e063-6394a90a77ae"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.1 Renal Impairment</title>
+                     <text>
+                        <paragraph>Renal impairment, including minimal change disease, acute and chronic interstitial nephritis, and renal failure have been reported in patients given mesalamine extended-release capsules or other products that contain mesalamine or are converted to mesalamine.</paragraph>
+                        <paragraph>Evaluate the risks and benefits of using mesalamine in patients with known renal impairment or a history of renal disease or taking concomitant nephrotoxic drugs. Evaluate renal function in all patients prior to initiation and periodically while on therapy with mesalamine. Discontinue mesalamine extended-release capsules if renal function deteriorates while on therapy
+ 
+  <content styleCode="italics">[see
+  
+   <linkHtml href="#S7.1">Drug Interactions (7.1)</linkHtml>,
+  
+   <linkHtml href="#S8.6">Use in Specific Populations (8.6)</linkHtml>]
+ 
+  </content>.
+
+ </paragraph>
+                     </text>
+                     <effectiveTime value="20250129"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S5.2">
+                     <id root="549de8b0-9f51-71b1-e063-6394a90a77ae"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.2 Mesalamine-Induced Acute Intolerance Syndrome</title>
+                     <text>
+                        <paragraph>Mesalamine has been associated with an acute intolerance syndrome that may be difficult to distinguish from an exacerbation of ulcerative colitis. Symptoms include cramping, acute abdominal pain, bloody diarrhea, and sometimes fever, headache, and rash. Monitor patients for worsening of these symptoms while on treatment. If acute intolerance syndrome is suspected, promptly discontinue treatment with mesalamine extended-release capsules.</paragraph>
+                     </text>
+                     <effectiveTime value="20250129"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S5.3">
+                     <id root="549de8b0-9f52-71b1-e063-6394a90a77ae"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.3 Hypersensitivity Reactions</title>
+                     <text>
+                        <paragraph>Hypersensitivity reactions have been reported in patients taking sulfasalazine. Some patients may have a similar reaction to mesalamine or to other compounds that contain or are converted to mesalamine.</paragraph>
+                        <paragraph>As with sulfasalazine, mesalamine-induced hypersensitivity reactions may present as internal organ involvement, including myocarditis, pericarditis, nephritis, hepatitis, pneumonitis, and hematologic abnormalities. Evaluate patients immediately if signs or symptoms of a hypersensitivity reaction are present. Discontinue mesalamine extended-release capsules if an alternative etiology for the signs and symptoms cannot be established.</paragraph>
+                     </text>
+                     <effectiveTime value="20250129"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S5.4">
+                     <id root="549de8b0-9f53-71b1-e063-6394a90a77ae"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.4 Hepatic Failure</title>
+                     <text>
+                        <paragraph>There have been reports of hepatic failure in patients with pre-existing liver disease who have been administered other products containing mesalamine. Evaluate the risks and benefits of using mesalamine extended-release capsules in patients with known liver impairment.</paragraph>
+                     </text>
+                     <effectiveTime value="20250129"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S5.5">
+                     <id root="549de8b0-9f54-71b1-e063-6394a90a77ae"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.5 Severe Cutaneous Adverse Reactions</title>
+                     <text>
+                        <paragraph>Severe cutaneous adverse reactions, such as Stevens-Johnson syndrome (SJS) and toxic epidermal necrolysis (TEN), drug reaction with eosinophilia and systemic symptoms (DRESS), and acute generalized exanthematous pustulosis (AGEP) have been reported in with the use of mesalamine
+ 
+  <content styleCode="italics">[see
+  
+   <linkHtml href="#S6.2">Adverse Reactions (6.2)</linkHtml>]
+ 
+  </content>. Discontinue mesalamine extended-release capsules at the first signs or symptoms of severe cutaneous adverse reactions or other signs of hypersensitivity and consider further evaluation.
+
+ </paragraph>
+                     </text>
+                     <effectiveTime value="20250129"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S5.6">
+                     <id root="549de8b0-9f55-71b1-e063-6394a90a77ae"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.6 Photosensitivity</title>
+                     <text>
+                        <paragraph>Patients with pre-existing skin conditions such as atopic dermatitis and atopic eczema have reported more severe photosensitivity reactions. Advise patients to avoid sun exposure, wear protective clothing, and use a broad-spectrum sunscreen when outdoors.</paragraph>
+                     </text>
+                     <effectiveTime value="20250122"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S5.7">
+                     <id root="549de8b0-9f56-71b1-e063-6394a90a77ae"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.7 Nephrolithiasis</title>
+                     <text>
+                        <paragraph>Cases of nephrolithiasis have been reported with the use of mesalamine, including stones with 100% mesalamine content. Mesalamine-containing stones are radiotransparent and undetectable by standard radiography or computed tomography (CT). Ensure adequate hydration during treatment with mesalamine extended-release capsules.</paragraph>
+                     </text>
+                     <effectiveTime value="20250129"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S5.8">
+                     <id root="549de8b0-9f57-71b1-e063-6394a90a77ae"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.8 Interference with Laboratory Tests</title>
+                     <text>
+                        <paragraph>Use of mesalamine may lead to spuriously elevated test results when measuring urinary normetanephrine by liquid chromatography with electrochemical detection because of the similarity in the chromatograms of normetanephrine and mesalamine’s main metabolite, N-acetyl-5-aminosalicylic acid (N-Ac-5-ASA). Consider an alternative, selective assay for normetanephrine.</paragraph>
+                     </text>
+                     <effectiveTime value="20240730"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S6">
+               <id root="549de8b0-9f58-71b1-e063-6394a90a77ae"/>
+               <code code="34084-4" codeSystem="2.16.840.1.113883.6.1" displayName="ADVERSE REACTIONS SECTION"/>
+               <title>6 ADVERSE REACTIONS</title>
+               <text>
+                  <paragraph>The following clinically significant adverse reactions are described elsewhere in the labeling:</paragraph>
+                  <list listType="unordered">
+                     <item>Renal impairment
+  
+   <content styleCode="italics">[see
+   
+    <linkHtml href="#S5.1">Warnings and Precautions (5.1)</linkHtml>]
+  
+   </content>
+                     </item>
+                     <item>Mesalamine-induced acute intolerance syndrome
+  
+   <content styleCode="italics">[see
+   
+    <linkHtml href="#S5.2">Warnings and Precautions (5.2)</linkHtml>]
+  
+   </content>
+                     </item>
+                     <item>Hypersensitivity reactions
+  
+   <content styleCode="italics">[see
+   
+    <linkHtml href="#S5.3">Warnings and Precautions (5.3)</linkHtml>]
+  
+   </content>
+                     </item>
+                     <item>Hepatic failure
+  
+   <content styleCode="italics">[see
+   
+    <linkHtml href="#S5.4">Warnings and Precautions (5.4)</linkHtml>]
+  
+   </content>
+                     </item>
+                     <item>Severe cutaneous adverse reactions
+  
+   <content styleCode="italics">[see
+   
+    <linkHtml href="#S5.5">Warnings and Precautions (5.5)</linkHtml>]
+  
+   </content>
+                     </item>
+                     <item>Photosensitivity
+  
+   <content styleCode="italics">[see
+   
+    <linkHtml href="#S5.6">Warnings and Precautions (5.6)</linkHtml>]
+  
+   </content>
+                     </item>
+                     <item>Nephrolithiasis
+  
+   <content styleCode="italics">[see
+   
+    <linkHtml href="#S5.7">Warnings and Precautions (5.7)</linkHtml>]
+  
+   </content>
+                     </item>
+                  </list>
+               </text>
+               <effectiveTime value="20250129"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Most common adverse reactions are nausea and vomiting (1%). (
+ 
+    <linkHtml href="#S6.1">6.1</linkHtml>)
+
+   </paragraph>
+                        <paragraph>
+                           <content styleCode="bold">To report SUSPECTED ADVERSE REACTIONS, contact Sandoz Inc. at 1-800-525-8748 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch.</content>
+                        </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="S6.1">
+                     <id root="549de8b0-9f59-71b1-e063-6394a90a77ae"/>
+                     <code code="90374-0" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL TRIALS EXPERIENCE SECTION"/>
+                     <title>6.1 Clinical Trials Experience</title>
+                     <text>
+                        <paragraph>Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice.</paragraph>
+                        <paragraph>More than 2,100 patients were exposed to mesalamine in clinical trials of ulcerative colitis or another gastrointestinal condition. The most common adverse reactions (i.e., greater than or equal to 1%) were diarrhea (3%), headache (2%), nausea (2%), abdominal pain (2%), dyspepsia (2%), vomiting (2%), and rash (1%).</paragraph>
+                        <paragraph>The safety of mesalamine was evaluated in two randomized, double-blind, placebo-controlled, dose-response trials (UC-1 and UC-2) of 624 patients with mildly to moderately active ulcerative colitis for up to 8 weeks of treatment
+ 
+  <content styleCode="italics">[see
+  
+   <linkHtml href="#S14">Clinical Studies (14)</linkHtml>]
+ 
+  </content>. The most common adverse reaction was nausea and vomiting: 1% in the mesalamine group (N = 451) and 0% in the placebo group (N = 173). Withdrawal from therapy due to adverse reactions was 7% in the mesalamine group and 4% in the placebo group.
+
+ </paragraph>
+                        <paragraph>The following adverse reactions, presented by body system, were reported in less than 1% of patients in UC-1, UC-2, and clinical trials for another gastrointestinal condition.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Blood and lymphatic system disorders:</content>thrombocythemia, thrombocytopenia
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Cardiac Disorders:</content>palpitations, pericarditis, vasodilation
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Gastrointestinal Disorders:</content>abdominal distention, constipation, duodenal ulcer, dysphagia, eructation, esophageal ulcer, fecal incontinence, GI bleeding, mouth ulcer, pancreatitis, rectal bleeding, stool abnormalities (color or texture change)
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">General disorders and administration site conditions:</content>fever, malaise
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Infections and infestations:</content>oral moniliasis, conjunctivitis
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Investigations:</content>GGTP increase, increased alkaline phosphatase, LDH increase, SGOT increase, SGPT increase, lipase increase, amylase increase
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Metabolism and nutritional disorders:</content>anorexia, edema, thirst
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Musculoskeletal and connective tissue disorders:</content>arthralgia, leg cramps, myalgia
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Nervous System Disorders:</content>dizziness, insomnia, somnolence, paresthesia
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Psychiatric disorders:</content>depression, asthenia
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Renal and urinary disorders:</content>albuminuria, hematuria, urinary frequency
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Reproductive system and breast disorders:</content>amenorrhea, breast pain, hypomenorrhea, menorrhagia, metrorrhagia
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Respiratory, Thoracic and Mediastinal Disorders:</content>pulmonary infiltrates, one week after completion of an 8-week ulcerative colitis study, a 72-year-old male, with no previous history of pulmonary problems, developed dyspnea. The patient was subsequently diagnosed with interstitial pulmonary fibrosis without eosinophilia by one physician and bronchiolitis obliterans with organizing pneumonitis by a second physician.
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Skin and Subcutaneous Tissue Disorders:</content>acne, alopecia, dry skin, eczema, erythema nodosum, nail disorder, photosensitivity, pruritus, sweating, urticaria, ecchymosis, lichen planus
+
+ </paragraph>
+                     </text>
+                     <effectiveTime value="20250129"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S6.2">
+                     <id root="549de8b0-9f5a-71b1-e063-6394a90a77ae"/>
+                     <code code="90375-7" codeSystem="2.16.840.1.113883.6.1" displayName="POSTMARKETING EXPERIENCE SECTION"/>
+                     <title>6.2 Postmarketing Experience</title>
+                     <text>
+                        <paragraph>The following adverse reactions have been identified during post-approval use of mesalamine. Because these reactions are reported voluntarily from a population of uncertain size, it is not always possible to reliably estimate their frequency or establish a causal relationship to drug exposure.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Cardiac Disorders:</content>chest pain, fatal myocarditis, pericarditis, T-wave abnormalities
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Hematologic Disorders:</content>agranulocytosis, anemia, aplastic anemia, leukopenia, pancytopenia
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Hepatic Disorders:</content>cirrhosis, jaundice, including cholestatic jaundice; hepatotoxicity, hepatitis, and possible hepatocellular damage including liver necrosis and liver failure. Some of these cases were fatal. One case of Kawasaki-like syndrome which included hepatic function changes was also reported.
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Immune System Disorders:</content>anaphylactic reaction, angioedema, lupus-like syndrome, systemic lupus erythematosus
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Nervous System Disorders:</content>intracranial hypertension
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Renal and Urinary Disorders:</content>acute renal failure, chronic renal failure, interstitial nephritis, nephrogenic diabetes insipidus, nephrolithiasis, nephrotic syndrome
+ 
+  <content styleCode="italics">[see
+  
+   <linkHtml href="#S5.1">Warnings and Precautions (5.1</linkHtml>,
+  
+   <linkHtml href="#S5.7">5.7)</linkHtml>]
+ 
+  </content>
+                        </paragraph>
+                        <list listType="unordered" styleCode="Disc">
+                           <item>Urine discoloration occurring
+  
+   <content styleCode="italics">ex-vivo</content>caused by contact of mesalamine, including inactive metabolite, with surfaces or water treated with hypochlorite-containing bleach
+ 
+  </item>
+                        </list>
+                        <paragraph>
+                           <content styleCode="italics">Reproductive System and Breast Disorders:</content>reversible oligospermia
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Respiratory, Thoracic and Mediastinal Disorders:</content>hypersensitivity pneumonitis (including interstitial pneumonitis, allergic alveolitis, eosinophilic pneumonitis), interstitial lung disease, pleurisy/pleuritis, pneumonitis
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Skin and Subcutaneous Tissue Disorders:</content>AGEP, DRESS, SJS/TEN
+ 
+  <content styleCode="italics">[see
+  
+   <linkHtml href="#S5.5">Warnings and Precautions (5.5)</linkHtml>]
+ 
+  </content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20250129"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S7">
+               <id root="549de8b0-9f5b-71b1-e063-6394a90a77ae"/>
+               <code code="34073-7" codeSystem="2.16.840.1.113883.6.1" displayName="DRUG INTERACTIONS SECTION"/>
+               <title>7 DRUG INTERACTIONS</title>
+               <effectiveTime value="20250122"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered" styleCode="Disc">
+                           <item>
+                              <content styleCode="underline">Nephrotoxic Agents including Non-Steroidal Anti-inflammatory Drugs (NSAIDs)</content>: Increased risk of nephrotoxicity; monitor for changes in renal function and mesalamine-related adverse reactions. (
+  
+     <linkHtml href="#S7.1">7.1</linkHtml>)
+ 
+    </item>
+                           <item>
+                              <content styleCode="underline">Azathioprine or 6-Mercaptopurine</content>: Increased risk of blood dyscrasias; monitor complete blood cell counts and platelet counts. (
+  
+     <linkHtml href="#S7.2">7.2</linkHtml>)
+ 
+    </item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="S7.1">
+                     <id root="549de8b0-9f5c-71b1-e063-6394a90a77ae"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>7.1 Nephrotoxic Agents, Including Non-Steroidal Anti-Inflammatory Drugs</title>
+                     <effectiveTime value="20250122"/>
+                     <component>
+                        <section>
+                           <id root="549de8b0-9f5d-71b1-e063-6394a90a77ae"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>The concurrent use of mesalamine with known nephrotoxic agents, including non-steroidal anti-inflammatory drugs (NSAIDs), may increase the risk of nephrotoxicity. Monitor patients taking nephrotoxic drugs for changes in renal function and mesalamine-related adverse reactions
+ 
+  <content styleCode="italics">[see
+  
+   <linkHtml href="#S5.1">Warnings and Precautions (5.1)</linkHtml>]
+ 
+  </content>.
+
+ </paragraph>
+                           </text>
+                           <effectiveTime value="20250122"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S7.2">
+                     <id root="549de8b0-9f5e-71b1-e063-6394a90a77ae"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>7.2 Azathioprine or 6-Mercaptopurine</title>
+                     <text>
+                        <paragraph>The concurrent use of mesalamine with azathioprine or 6-mercaptopurine and/or any other drugs known to cause myelotoxicity may increase the risk for blood disorders, bone marrow failure, and associated complications. If concomitant use of mesalamine and azathioprine or 6-mercaptopurine cannot be avoided, monitor blood tests, including complete blood cell counts and platelet counts.</paragraph>
+                     </text>
+                     <effectiveTime value="20250122"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S7.3">
+                     <id root="549de8b0-9f5f-71b1-e063-6394a90a77ae"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>7.3 Interference with Urinary Normetanephrine Measurements</title>
+                     <text>
+                        <paragraph>Use of mesalamine may lead to spuriously elevated test results when measuring urinary normetanephrine by liquid chromatography with electrochemical detection
+ 
+  <content styleCode="italics">[see
+  
+   <linkHtml href="#S5.8">Warnings and Precautions (5.8)</linkHtml>]
+ 
+  </content>. Consider an alternative, selective assay for normetanephrine.
+
+ </paragraph>
+                     </text>
+                     <effectiveTime value="20250122"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S8">
+               <id root="549de8b0-9f60-71b1-e063-6394a90a77ae"/>
+               <code code="43684-0" codeSystem="2.16.840.1.113883.6.1" displayName="USE IN SPECIFIC POPULATIONS SECTION"/>
+               <title>8 USE IN SPECIFIC POPULATIONS</title>
+               <effectiveTime value="20250129"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Geriatric Patients</content>: Increased risk of blood dyscrasias; monitor complete blood cell counts and platelet counts. (
+ 
+    <linkHtml href="#S8.5">8.5</linkHtml>)
+
+   </paragraph>
+                        <br/>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="S8.1">
+                     <id root="549de8b0-9f61-71b1-e063-6394a90a77ae"/>
+                     <code code="42228-7" codeSystem="2.16.840.1.113883.6.1" displayName="PREGNANCY SECTION"/>
+                     <title>8.1 Pregnancy</title>
+                     <effectiveTime value="20250129"/>
+                     <component>
+                        <section>
+                           <id root="549de8b0-9f62-71b1-e063-6394a90a77ae"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Risk Summary</content>
+                              </paragraph>
+                              <paragraph>Published data from meta-analyses, cohort studies, and case series on the use of mesalamine during pregnancy have not reliably informed an association with mesalamine and major birth defects, miscarriage, or adverse maternal or fetal outcomes
+ 
+  <content styleCode="italics">(see
+  
+   <linkHtml href="#Data">Data</linkHtml>)
+ 
+  </content>. There are adverse effects on maternal and fetal outcomes associated with ulcerative colitis in pregnancy
+ 
+  <content styleCode="italics">(see
+  
+   <linkHtml href="#CC1">Clinical Considerations</linkHtml>)
+ 
+  </content>.
+
+ </paragraph>
+                              <paragraph>In animal reproduction studies, oral administration of mesalamine during organogenesis to pregnant rats at doses up to 1,000 mg/kg/day (approximately 2.4 times the maximum recommended human dose of 4 g/day, based on a body surface area comparison) and rabbits at doses of 800 mg/kg/day (approximately 3.9 times the maximum recommended human dose of 4 g/day, based on a body surface area comparison) revealed no evidence of adverse developmental effects
+ 
+  <content styleCode="italics">(see
+  
+   <linkHtml href="#Data">Data</linkHtml>)
+ 
+  </content>.
+
+ </paragraph>
+                              <paragraph>The background risk of major birth defects and miscarriage for the indicated populations is unknown. All pregnancies have a background risk of birth defect, loss, or other adverse outcomes. In the U.S. general population, the estimated background risk of major birth defects and miscarriages in clinically recognized pregnancies is 2% to 4% and 15% to 20%, respectively.</paragraph>
+                           </text>
+                           <effectiveTime value="20250129"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="CC1">
+                           <id root="549de8b0-9f63-71b1-e063-6394a90a77ae"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Clinical Considerations</content>
+                              </paragraph>
+                           </text>
+                           <effectiveTime value="20250129"/>
+                           <component>
+                              <section>
+                                 <id root="549de8b0-9f64-71b1-e063-6394a90a77ae"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <text>
+                                    <paragraph>
+                                       <content styleCode="italics">Disease-associated maternal and embryo/fetal risk</content>
+                                    </paragraph>
+                                    <paragraph>Published data suggest that increased disease activity is associated with the risk of developing adverse pregnancy outcomes in women with ulcerative colitis. Adverse pregnancy outcomes include preterm delivery (before 37 weeks of gestation), low birth weight (less than 2,500 g) infants, and small for gestational age at birth.</paragraph>
+                                 </text>
+                                 <effectiveTime value="20250129"/>
+                              </section>
+                           </component>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="Data">
+                           <id root="549de8b0-9f65-71b1-e063-6394a90a77ae"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Data</content>
+                              </paragraph>
+                           </text>
+                           <effectiveTime value="20250122"/>
+                           <component>
+                              <section>
+                                 <id root="549de8b0-9f66-71b1-e063-6394a90a77ae"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <text>
+                                    <paragraph>
+                                       <content styleCode="italics">Human Data</content>
+                                    </paragraph>
+                                    <paragraph>Published data from meta-analyses, cohort studies, and case series on the use of mesalamine during early pregnancy (first trimester) and throughout pregnancy have not reliably informed an association of mesalamine and major birth defects, miscarriage, or adverse maternal or fetal outcomes. There is no clear evidence that mesalamine exposure in early pregnancy is associated with an increased risk of major congenital malformations, including cardiac malformations. Published epidemiologic studies have important methodological limitations which hinder interpretation of the data, including inability to control for confounders, such as underlying maternal disease, maternal use of concomitant medications, and missing information on the dose and duration of use for mesalamine products.</paragraph>
+                                 </text>
+                                 <effectiveTime value="20240730"/>
+                              </section>
+                           </component>
+                           <component>
+                              <section>
+                                 <id root="549de8b0-9f67-71b1-e063-6394a90a77ae"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <text>
+                                    <paragraph>
+                                       <content styleCode="italics">Animal Data</content>
+                                    </paragraph>
+                                    <paragraph>Reproduction studies with mesalamine during organogenesis have been performed in pregnant rats at doses up to 1,000 mg/kg/day (approximately 2.4 times the maximum recommended human dose of 4 g/day, based on a body surface area comparison) and rabbits at doses up to 800 mg/kg/day (approximately 3.9 times the maximum recommended human dose of 4 g/day based on a body surface area comparison) and have revealed no evidence of harm to the fetus due to mesalamine.</paragraph>
+                                 </text>
+                                 <effectiveTime value="20250122"/>
+                              </section>
+                           </component>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S8.2">
+                     <id root="549de8b0-9f68-71b1-e063-6394a90a77ae"/>
+                     <code code="77290-5" codeSystem="2.16.840.1.113883.6.1" displayName="LACTATION SECTION"/>
+                     <title>8.2 Lactation</title>
+                     <effectiveTime value="20250129"/>
+                     <component>
+                        <section>
+                           <id root="549de8b0-9f69-71b1-e063-6394a90a77ae"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Risk Summary</content>
+                              </paragraph>
+                              <paragraph>Data from published literature report the presence of mesalamine and its metabolite, N-acetyl-5-aminosalicylic acid in human milk in small amounts with relative infant doses (RID) of 0.1% or less for mesalamine
+ 
+  <content styleCode="italics">(see
+  
+   <linkHtml href="#Data2">Data</linkHtml>)
+ 
+  </content>. There are case reports of diarrhea observed in breastfed infants exposed to mesalamine
+ 
+  <content styleCode="italics">(see
+  
+   <linkHtml href="#CC2">Clinical Considerations</linkHtml>)
+ 
+  </content>. There is no information on the effects of mesalamine on milk production. The lack of clinical data during lactation precludes a clear determination of the risk of mesalamine to an infant during lactation; therefore, the developmental and health benefits of breastfeeding should be considered along with the mother’s clinical need for mesalamine and any potential adverse effects on the breastfed child from mesalamine or from the underlying maternal condition.
+
+ </paragraph>
+                           </text>
+                           <effectiveTime value="20250129"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="CC2">
+                     <id root="549de8b0-9f6a-71b1-e063-6394a90a77ae"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Clinical Considerations</content>
+                        </paragraph>
+                        <paragraph>Advise the caregiver to monitor the breastfed infant for diarrhea.</paragraph>
+                     </text>
+                     <effectiveTime value="20250122"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="Data2">
+                     <id root="549de8b0-9f6b-71b1-e063-6394a90a77ae"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Data</content>
+                        </paragraph>
+                        <paragraph>In published lactation studies, maternal mesalamine doses from various oral and rectal formulations and products ranged from 500 mg to 4.8 g daily. The average concentration of mesalamine in milk ranged from non-detectable to 0.5 mg/L. The average concentration of N-acetyl-5-aminosalicylic acid in milk ranged from 0.2 mg/L to 9.3 mg/L. Based on these concentrations, estimated infant daily dosages for an exclusively breastfed infant are 0 mg/kg/day to 0.075 mg/kg/day of mesalamine (RID 0% to 0.1%) and 0.03 mg/kg/day to 1.4 mg/kg/day of N-acetyl-5-aminosalicylic acid.</paragraph>
+                     </text>
+                     <effectiveTime value="20250122"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S8.4">
+                     <id root="549de8b0-9f6c-71b1-e063-6394a90a77ae"/>
+                     <code code="34081-0" codeSystem="2.16.840.1.113883.6.1" displayName="PEDIATRIC USE SECTION"/>
+                     <title>8.4 Pediatric Use</title>
+                     <text>
+                        <paragraph>Safety and effectiveness in pediatric patients have not been established.</paragraph>
+                     </text>
+                     <effectiveTime value="20250122"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S8.5">
+                     <id root="549de8b0-9f6d-71b1-e063-6394a90a77ae"/>
+                     <code code="34082-8" codeSystem="2.16.840.1.113883.6.1" displayName="GERIATRIC USE SECTION"/>
+                     <title>8.5 Geriatric Use</title>
+                     <text>
+                        <paragraph>Clinical trials of mesalamine did not include sufficient numbers of patients aged 65 years and over to determine whether they respond differently from younger patients. Reports from uncontrolled clinical studies and postmarketing reporting systems suggested a higher incidence of blood dyscrasias (i.e., agranulocytosis, neutropenia, and pancytopenia) in patients receiving mesalamine-containing products such as mesalamine who were 65 years or older compared to younger adult patients, which may also be associated with ulcerative colitis, use of interacting drugs, or reduced renal function. Monitor complete blood cell counts and platelet counts in patients 65 years and over during treatment with mesalamine extended-release capsules.</paragraph>
+                        <paragraph>In general, consider the greater frequency of decreased hepatic, renal, or cardiac function, and of concurrent disease or other drug therapy in patients 65 years and over when prescribing mesalamine extended-release capsules.</paragraph>
+                     </text>
+                     <effectiveTime value="20250129"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S8.6">
+                     <id root="549de8b0-9f6e-71b1-e063-6394a90a77ae"/>
+                     <code code="88828-9" codeSystem="2.16.840.1.113883.6.1" displayName="RENAL IMPAIRMENT SUBSECTION"/>
+                     <title>8.6 Renal Impairment</title>
+                     <text>
+                        <paragraph>Mesalamine is known to be substantially excreted by the kidney, and the risk of toxic reactions may be greater in patients with impaired renal function. Evaluate renal function in all patients prior to initiation and periodically while on mesalamine therapy. Monitor patients with known renal impairment or history of renal disease or taking nephrotoxic drugs for decreased renal function and mesalamine-related adverse reactions. Discontinue mesalamine extended-release capsules if renal function deteriorates while on therapy
+ 
+  <content styleCode="italics">[see
+  
+   <linkHtml href="#S5.1">Warnings and Precautions (5.1)</linkHtml>,
+  
+   <linkHtml href="#S6.2">Adverse Reactions (6.2)</linkHtml>,
+  
+   <linkHtml href="#S7.1">Drug Interactions (7.1)</linkHtml>]
+ 
+  </content>.
+
+ </paragraph>
+                     </text>
+                     <effectiveTime value="20250129"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S10">
+               <id root="549de8b0-9f6f-71b1-e063-6394a90a77ae"/>
+               <code code="34088-5" codeSystem="2.16.840.1.113883.6.1" displayName="OVERDOSAGE SECTION"/>
+               <title>10 OVERDOSAGE</title>
+               <text>
+                  <paragraph>Mesalamine is an aminosalicylate, and symptoms of salicylate toxicity may be possible, such as: nausea, vomiting, abdominal pain, tachypnea, hyperpnea, tinnitus, and neurologic symptoms (headache, dizziness, confusion, seizures). Severe intoxication with salicylates may lead to electrolyte and blood pH imbalance and potentially to other organ (e.g., renal and liver) damage.</paragraph>
+                  <paragraph>There is no specific antidote for mesalamine overdose; however, conventional therapy for salicylate toxicity may be beneficial in the event of acute overdosage and may include gastrointestinal tract decontamination to prevent further absorption. Correct fluid and electrolyte imbalance by the administration of appropriate intravenous therapy and maintain adequate renal function.</paragraph>
+               </text>
+               <effectiveTime value="20250122"/>
+            </section>
+         </component>
+         <component>
+            <section ID="S11">
+               <id root="549de8b0-9f70-71b1-e063-6394a90a77ae"/>
+               <code code="34089-3" codeSystem="2.16.840.1.113883.6.1" displayName="DESCRIPTION SECTION"/>
+               <title>11 DESCRIPTION</title>
+               <text>
+                  <paragraph>Mesalamine for oral administration is an extended-release formulation of mesalamine, USP an aminosalicylate anti-inflammatory agent for gastrointestinal use.</paragraph>
+                  <paragraph>Mesalamine (also referred to as 5-aminosalicylic acid or 5-ASA) has the chemical name 5-amino-2-hydroxybenzoic acid. It has a molecular weight of 153.14 g/mol and the molecular formula is C
+ 
+  <sub>7</sub>H
+ 
+  <sub>7</sub>NO
+ 
+  <sub>3</sub>.
+
+ </paragraph>
+                  <paragraph>The structural formula is:</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="MM1"/>
+                  </paragraph>
+                  <paragraph>Each 250 mg mesalamine extended-release capsule, USP contains 250 mg of mesalamine, USP. It also contains the following inactive ingredients: castor oil, diacetylated monoglycerides, ethyl cellulose, hypromellose, hypromellose phthalate, methylene chloride, povidone K90, stearic acid, sugar (spheres), and talc. The capsule shell contains FD&amp;C Blue #1, gelatin, iron oxide yellow, and titanium dioxide. The capsules are printed with black ink composed of black iron oxide, potassium hydroxide, propylene glycol, shellac, and strong ammonia solution.</paragraph>
+                  <paragraph>Each 500 mg mesalamine extended-release capsule, USP contains 500 mg of mesalamine, USP. It also contains the following inactive ingredients: castor oil, diacetylated monoglycerides, ethyl cellulose, hypromellose, hypromellose phthalate, methylene chloride, povidone K90, stearic acid, sugar (spheres), and talc. The capsule shell contains FD&amp;C Blue #1, gelatin, and titanium dioxide. The capsules are printed with black ink composed of black iron oxide, potassium hydroxide, propylene glycol, shellac, and strong ammonia solution.</paragraph>
+                  <paragraph>FDA approved dissolution test specifications differ from USP.</paragraph>
+               </text>
+               <effectiveTime value="20250626"/>
+               <component>
+                  <observationMedia ID="MM1">
+                     <text>Chemical Structure</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="structure01.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S12">
+               <id root="549de8b0-9f71-71b1-e063-6394a90a77ae"/>
+               <code code="34090-1" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+               <title>12 CLINICAL PHARMACOLOGY</title>
+               <effectiveTime value="20250129"/>
+               <component>
+                  <section ID="S12.1">
+                     <id root="549de8b0-9f72-71b1-e063-6394a90a77ae"/>
+                     <code code="43679-0" codeSystem="2.16.840.1.113883.6.1" displayName="MECHANISM OF ACTION SECTION"/>
+                     <title>12.1 Mechanism of Action</title>
+                     <text>
+                        <paragraph>The mechanism of action of mesalamine is not fully understood, but it appears to be a topical anti-inflammatory effect on colonic epithelial cells. Mucosal production of arachidonic acid metabolites, both through the cyclooxygenase pathways (i.e., prostanoids) and through the lipoxygenase pathways (i.e., leukotrienes and hydroxyeicosatetraenoic acids), is increased in patients with ulcerative colitis, and it is possible that mesalamine diminishes inflammation by blocking cyclooxygenase and inhibiting prostaglandin production in the colon.</paragraph>
+                     </text>
+                     <effectiveTime value="20250129"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S12.2">
+                     <id root="549de8b0-9f73-71b1-e063-6394a90a77ae"/>
+                     <code code="43681-6" codeSystem="2.16.840.1.113883.6.1" displayName="PHARMACODYNAMICS SECTION"/>
+                     <title>12.2 Pharmacodynamics</title>
+                     <text>
+                        <paragraph>The exposure-response relationship and time course of pharmacodynamic response for the safety and effectiveness of mesalamine have not been fully characterized.</paragraph>
+                     </text>
+                     <effectiveTime value="20250129"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S12.3">
+                     <id root="549de8b0-9f74-71b1-e063-6394a90a77ae"/>
+                     <code code="43682-4" codeSystem="2.16.840.1.113883.6.1" displayName="PHARMACOKINETICS SECTION"/>
+                     <title>12.3 Pharmacokinetics</title>
+                     <effectiveTime value="20250129"/>
+                     <component>
+                        <section>
+                           <id root="549de8b0-9f75-71b1-e063-6394a90a77ae"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Absorption</content>
+                              </paragraph>
+                              <paragraph>Following oral administration 20% to 30% of the mesalamine in mesalamine extended-release capsules is absorbed based on urinary excretion data.</paragraph>
+                              <paragraph>Plasma mesalamine concentration peaked at approximately 1 mcg/mL 3 hours following a 1 g mesalamine extended-release capsules dose.</paragraph>
+                              <paragraph>Oral mesalamine pharmacokinetics were nonlinear when mesalamine extended-release capsules were dosed from 250 mg to 1 g four times daily, with steady-state mesalamine plasma concentrations increasing about nine times, from 0.14 mcg/mL to 1.21 mcg/mL.</paragraph>
+                              <paragraph>The major metabolite of mesalamine (5-aminosalicylic acid), N-acetyl-5-aminosalicylic acid, peaked at approximately 3 hours at 1.8 mcg/mL. N-acetyl-5-aminosalicylic acid pharmacokinetics were linear.</paragraph>
+                           </text>
+                           <effectiveTime value="20250129"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section>
+                           <id root="549de8b0-9f76-71b1-e063-6394a90a77ae"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Distribution</content>
+                              </paragraph>
+                              <paragraph>Mesalamine is approximately 43% bound to plasma proteins at the concentration of 2.5 mcg/mL.</paragraph>
+                           </text>
+                           <effectiveTime value="20240730"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section>
+                           <id root="549de8b0-9f77-71b1-e063-6394a90a77ae"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Elimination</content>
+                              </paragraph>
+                              <paragraph>
+                                 <content styleCode="italics">Metabolism</content>
+                              </paragraph>
+                              <paragraph>The greater than dose proportional increase in PK of mesalamine suggests saturable first pass metabolism. The major metabolite of mesalamine, N-acetyl-5-aminosalicylic acid, is formed due to action of N-acetyltransferase in the liver and intestinal mucosa. Pharmacological activities of N-acetyl-5-aminosalicylic acid are unknown, and other metabolites have not been identified.</paragraph>
+                           </text>
+                           <effectiveTime value="20250122"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section>
+                           <id root="549de8b0-9f78-71b1-e063-6394a90a77ae"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="italics">Excretion</content>
+                              </paragraph>
+                              <paragraph>Following oral administration, plasma mesalamine concentration declined in a biphasic manner after reaching peak concentration. The literature describes a mean terminal half-life of 42 minutes for mesalamine following intravenous administration. Because of the continuous release and absorption of mesalamine from mesalamine extended-release capsules throughout the gastrointestinal tract, the true elimination half-life cannot be determined after oral administration.</paragraph>
+                              <paragraph>N-acetyl-5-aminosalicylic acid was the primary compound excreted in the urine (19% to 30%) following mesalamine extended-release capsules dosing. About 130 mg free mesalamine was recovered in the feces following a single 1 g mesalamine extended-release capsules dose. Elimination of free mesalamine and salicylates in feces increased proportionately with mesalamine extended-release capsules dose.</paragraph>
+                           </text>
+                           <effectiveTime value="20250129"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S13">
+               <id root="549de8b0-9f79-71b1-e063-6394a90a77ae"/>
+               <code code="43680-8" codeSystem="2.16.840.1.113883.6.1" displayName="NONCLINICAL TOXICOLOGY SECTION"/>
+               <title>13 NONCLINICAL TOXICOLOGY</title>
+               <effectiveTime value="20250122"/>
+               <component>
+                  <section ID="S13.1">
+                     <id root="549de8b0-9f7a-71b1-e063-6394a90a77ae"/>
+                     <code code="34083-6" codeSystem="2.16.840.1.113883.6.1" displayName="CARCINOGENESIS &amp; MUTAGENESIS &amp; IMPAIRMENT OF FERTILITY SECTION"/>
+                     <title>13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Carcinogenesis</content>
+                        </paragraph>
+                        <paragraph>In a 104-week dietary carcinogenicity study of mesalamine, CD-1 mice were administered doses up to 2,500 mg/kg/day and it was not tumorigenic. The 2,500 mg/kg/day dose represents approximately 2.5 times the maximum recommended human dose on a body surface area basis. In a 104-week dietary carcinogenicity study in Wistar rats, mesalamine up to a dose of 800 mg/kg/day was not tumorigenic. This dose represents approximately 1.5 times the maximum recommended human dose on a body surface area basis.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Mutagenesis</content>
+                        </paragraph>
+                        <paragraph>No evidence of mutagenicity was observed in an
+ 
+  <content styleCode="italics">in vitro</content>Ames test and in an
+ 
+  <content styleCode="italics">in vivo</content>mouse micronucleus test.
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Impairment of Fertility</content>
+                        </paragraph>
+                        <paragraph>No effects on fertility or reproductive performance were observed in male or female rats at oral doses of mesalamine up to 400 mg/kg/day (0.8 times the maximum recommended human dose based on body surface area).</paragraph>
+                     </text>
+                     <effectiveTime value="20250122"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S14">
+               <id root="549de8b0-9f7b-71b1-e063-6394a90a77ae"/>
+               <code code="34092-7" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL STUDIES SECTION"/>
+               <title>14 CLINICAL STUDIES</title>
+               <text>
+                  <paragraph>In two randomized, double-blind, placebo-controlled, dose-response trials (UC-1 and UC-2) of 625 patients with active mild to moderate ulcerative colitis, mesalamine, at an oral dose of 1 g administered four times a day for up to 8 weeks, produced consistent improvement in prospectively identified primary efficacy parameters, Physical Global Assessment, Treatment Failure, and Sigmoidoscopic Index as shown in
+ 
+  <content styleCode="italics">
+                        <linkHtml href="#table2">Table 2</linkHtml>
+                     </content>.
+
+ </paragraph>
+                  <paragraph>A mesalamine dosage regimen of 1 g four times a day demonstrated consistent improvement in secondary efficacy parameters, namely the frequency of trips to the toilet, stool consistency, rectal bleeding, abdominal/rectal pain, and urgency. A mesalamine dosage regimen of 1 g four times a day also induced remission as assessed by endoscopic and symptomatic endpoints.</paragraph>
+                  <table width="100%">
+                     <caption> Table 2: Efficacy Parameters in Adults Patients with Mildly to Moderately Active Ulcerative Colitis in Placebo-Controlled, Dose-Response Trials (UC-1 and UC-2)</caption>
+                     <tbody>
+                        <tr>
+                           <td styleCode="Botrule Lrule Rrule Toprule">
+                              <content styleCode="bold">Parameter Evaluated</content>
+                           </td>
+                           <td colspan="3" align="center" styleCode="Botrule Lrule Rrule Toprule">
+                              <content styleCode="bold"> Clinical Trial UC-1 </content>
+                           </td>
+                           <td colspan="2" align="center" styleCode="Botrule Lrule Rrule Toprule">
+                              <content styleCode="bold"> Clinical Trial UC-2 </content>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" styleCode="Botrule Lrule Rrule Toprule"/>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule">
+                              <content styleCode="bold"> Placebo</content>
+                              <br/>
+                              <content styleCode="bold">N = 90</content>
+                           </td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule">
+                              <content styleCode="bold"> Mesalamine 1 g four times a day</content>
+                              <br/>
+                              <content styleCode="bold">N = 95</content>
+                           </td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule">
+                              <content styleCode="bold"> Placebo</content>
+                              <br/>
+                              <content styleCode="bold">N = 83</content>
+                           </td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule">
+                              <content styleCode="bold"> Mesalamine 1 g four times a day</content>
+                              <br/>
+                              <content styleCode="bold">N = 85</content>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" styleCode="Botrule Lrule Rrule Toprule"> Physician Global Assessment
+    
+     <footnote ID="L7ed2158f-fcc5-4b5b-b849-3a6c56b677ad">proportion of patients with complete or marked improvement.</footnote>
+                           </td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule"> 36%</td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule"> 59%
+    
+     <footnote ID="Lbc4770e0-75f9-44fd-92db-05cd234f5339">p&lt;0.05 vs placebo.</footnote>
+                           </td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule"> 31%</td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule"> 55%</td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" styleCode="Botrule Lrule Rrule Toprule"> Treatment Failure
+    
+     <footnote ID="Leaddb0ed-c218-48d7-911c-e3b92fc6efba">proportion of patients developing severe or fulminant UC requiring steroid therapy or hospitalization or worsening of the disease at 7 days of therapy, or lack of significant improvement by 14 days of therapy.</footnote>
+                           </td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule"> 22%</td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule"> 9%
+    
+     <sup>†</sup>
+                           </td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule"> 31%</td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule"> 9%
+    
+     <sup>†</sup>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" styleCode="Botrule Lrule Rrule Toprule"> Sigmoidoscopic Index
+    
+     <footnote ID="L4649c093-dad4-496b-97d4-09e8f0babf17">an objective measure of disease activity rated by a standard (15-point) scale that includes mucosal vascular pattern, erythema, friability, granularity/ulcerations, and mucopus: improvement over baseline.</footnote>
+                           </td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule"> -2.5</td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule">-5.0
+    
+     <sup>†</sup>
+                           </td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule"> -1.6</td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule"> -3.8
+    
+     <sup>†</sup>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" styleCode="Botrule Lrule Rrule Toprule"> Remission¶</td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule"> 12%</td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule"> 26%
+    
+     <sup>†</sup>
+                           </td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule"> 12%</td>
+                           <td align="center" styleCode="Botrule Lrule Rrule Toprule"> 27%
+    
+     <sup>†</sup>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20250129"/>
+            </section>
+         </component>
+         <component>
+            <section ID="S16">
+               <id root="549de8b0-9f7c-71b1-e063-6394a90a77ae"/>
+               <code code="34069-5" codeSystem="2.16.840.1.113883.6.1" displayName="HOW SUPPLIED SECTION"/>
+               <title>16 HOW SUPPLIED/STORAGE AND HANDLING</title>
+               <text>
+                  <paragraph>Mesalamine extended-release capsules, USP are supplied as shown in the table:</paragraph>
+                  <table width="75%">
+                     <col width="15%" align="left" valign="top"/>
+                     <col width="20%" align="left" valign="top"/>
+                     <col width="25%" align="left" valign="top"/>
+                     <col width="40%" align="left" valign="top"/>
+                     <thead>
+                        <tr styleCode="First Last">
+                           <th align="left" styleCode="Lrule Rrule">Strength</th>
+                           <th align="left" styleCode="Rrule">Description</th>
+                           <th align="left" styleCode="Rrule">Supplied As</th>
+                           <th align="left" styleCode="Rrule">NDC Number</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr styleCode="Botrule First">
+                           <td align="left" styleCode="Lrule Rrule">250 mg extended-release capsules</td>
+                           <td align="left" styleCode="Rrule">size “0” hard gelatin capsules with blue opaque cap and green opaque body, imprinted with “DG05” on body with black ink, filled with white to off-white-pale brown colored pellets.</td>
+                           <td align="left" styleCode="Rrule">bottles of 240 capsules</td>
+                           <td align="left" styleCode="Rrule">NDC 0781-2791-64</td>
+                        </tr>
+                        <tr styleCode="Botrule Last">
+                           <td align="left" styleCode="Lrule Rrule">500 mg extended-release capsules</td>
+                           <td align="left" styleCode="Rrule">size “00EL” hard gelatin capsules with blue opaque cap and blue opaque body, imprinted with “DG09” on body with black ink, filled with white to off-white-pale brown colored pellets.</td>
+                           <td align="left" styleCode="Rrule">bottles of 120 capsules</td>
+                           <td align="left" styleCode="Rrule">NDC 0781-2793-72</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20250129"/>
+               <component>
+                  <section>
+                     <id root="549de8b0-9f7d-71b1-e063-6394a90a77ae"/>
+                     <code code="44425-7" codeSystem="2.16.840.1.113883.6.1" displayName="STORAGE AND HANDLING SECTION"/>
+                     <text>
+                        <paragraph>Store at 20º to 25ºC (68º to 77ºF). [see USP Controlled Room Temperature].</paragraph>
+                     </text>
+                     <effectiveTime value="20260618"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S17">
+               <id root="549de8b0-9f7e-71b1-e063-6394a90a77ae"/>
+               <code code="34076-0" codeSystem="2.16.840.1.113883.6.1" displayName="INFORMATION FOR PATIENTS SECTION"/>
+               <title>17 PATIENT COUNSELING INFORMATION</title>
+               <effectiveTime value="20250129"/>
+               <component>
+                  <section>
+                     <id root="549de8b0-9f7f-71b1-e063-6394a90a77ae"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Renal Impairment</content>
+                        </paragraph>
+                        <paragraph>Inform patients that mesalamine extended-release capsules may decrease their renal function, especially if they have known renal impairment or are taking nephrotoxic drugs, and periodic monitoring of renal function will be performed while they are on therapy. Advise patients to complete all blood tests ordered by their healthcare provider
+ 
+  <content styleCode="italics">[see
+  
+   <linkHtml href="#S5.1">Warnings and Precautions (5.1)</linkHtml>]
+ 
+  </content>.
+
+ </paragraph>
+                     </text>
+                     <effectiveTime value="20250129"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="549de8b0-9f80-71b1-e063-6394a90a77ae"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Mesalamine-Induced Acute Intolerance Syndrome and Other Hypersensitivity Reactions</content>
+                        </paragraph>
+                        <paragraph>Instruct patients to stop taking mesalamine extended-release capsules and report to their healthcare provider if they experience new or worsening symptoms of acute intolerance syndrome (cramping, abdominal pain, bloody diarrhea, fever, headache, and rash) or other symptoms suggestive of mesalamine-induced hypersensitivity
+ 
+  <content styleCode="italics">[see
+  
+   <linkHtml href="#S5.2">Warnings and Precautions (5.2</linkHtml>,
+  
+   <linkHtml href="#S5.3">5.3)</linkHtml>]
+ 
+  </content>.
+
+ </paragraph>
+                     </text>
+                     <effectiveTime value="20250122"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="549de8b0-9f81-71b1-e063-6394a90a77ae"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Hepatic Failure</content>
+                        </paragraph>
+                        <paragraph>Advise patients with known liver disease to contact their healthcare provider if they experience signs or symptoms of worsening liver function
+ 
+  <content styleCode="italics">[see
+  
+   <linkHtml href="#S5.4">Warnings and Precautions (5.4)</linkHtml>]
+ 
+  </content>.
+
+ </paragraph>
+                     </text>
+                     <effectiveTime value="20240730"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="549de8b0-9f82-71b1-e063-6394a90a77ae"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Severe Cutaneous Adverse Reactions</content>
+                        </paragraph>
+                        <paragraph>Inform patients of the signs and symptoms of severe cutaneous adverse reactions. Instruct patients to stop taking mesalamine extended-release capsules and report to their healthcare provider at first appearance of a severe cutaneous adverse reaction or other sign of hypersensitivity
+ 
+  <content styleCode="italics">[see
+  
+   <linkHtml href="#S5.5">Warnings and Precautions (5.5)</linkHtml>]
+ 
+  </content>.
+
+ </paragraph>
+                     </text>
+                     <effectiveTime value="20250122"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="549de8b0-9f83-71b1-e063-6394a90a77ae"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Photosensitivity</content>
+                        </paragraph>
+                        <paragraph>Advise patients with pre-existing skin conditions to avoid sun exposure, wear protective clothing, and use a broad-spectrum sunscreen when outdoors
+ 
+  <content styleCode="italics">[see
+  
+   <linkHtml href="#S5.6">Warnings and Precautions (5.6)</linkHtml>]
+ 
+  </content>.
+
+ </paragraph>
+                     </text>
+                     <effectiveTime value="20240730"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="549de8b0-9f84-71b1-e063-6394a90a77ae"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Nephrolithiasis</content>
+                        </paragraph>
+                        <paragraph>Instruct patients to drink an adequate amount of fluids during treatment in order to minimize the risk of kidney stone formation and to contact their healthcare provider if they experience signs or symptoms of a kidney stone (e.g., severe side or back pain, blood in the urine)
+ 
+  <content styleCode="italics">[see
+  
+   <linkHtml href="#S5.7">Warnings and Precautions (5.7)</linkHtml>]
+ 
+  </content>.
+
+ </paragraph>
+                     </text>
+                     <effectiveTime value="20250129"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="549de8b0-9f85-71b1-e063-6394a90a77ae"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Blood Disorders</content>
+                        </paragraph>
+                        <paragraph>Inform elderly patients and those taking azathioprine or 6-mercaptopurine of the risk for blood disorders and the need for periodic monitoring of complete blood cell counts and platelet counts while on therapy. Advise patients to complete all blood tests ordered by their healthcare provider
+ 
+  <content styleCode="italics">[see
+  
+   <linkHtml href="#S7.2">Drug Interactions (7.2)</linkHtml>,
+  
+   <linkHtml href="#S8.5">Use in Specific Populations (8.5)</linkHtml>]
+ 
+  </content>.
+
+ </paragraph>
+                     </text>
+                     <effectiveTime value="20250129"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="549de8b0-9f86-71b1-e063-6394a90a77ae"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Administration</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Instruct patients:</content>
+                        </paragraph>
+                        <list listType="unordered" styleCode="Disc">
+                           <item>Swallow mesalamine extended-release capsules whole; do not crush or chew.</item>
+                           <item>Alternatively, the capsule(s) may be opened and the contents sprinkled onto applesauce or yogurt.</item>
+                           <item>Urine may become discolored reddish-brown while taking mesalamine extended-release capsules when it comes in contact with surfaces or water treated with hypochlorite-containing bleach. If discolored urine is observed, advise patients to observe their urine flow. Report to the healthcare provider only if urine is discolored on leaving the body, before contact with any surface or water (e.g., in the toilet).</item>
+                           <item>Drink an adequate amount of fluids
+  
+   <content styleCode="italics">[see
+   
+    <linkHtml href="#S2">Dosage and Administration (2)</linkHtml>,
+   
+    <linkHtml href="#S5.7">Warnings and Precautions (5.7)</linkHtml>]
+  
+   </content>.
+ 
+  </item>
+                        </list>
+                     </text>
+                     <effectiveTime value="20250129"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="549de8b0-9f87-71b1-e063-6394a90a77ae"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <text>
+                  <paragraph>Mfd. by Fourrts (India) Laboratories Private Limited 
+  <br/>  No. 23, Venkatamangalam, Kandigai, Chennai 600127, India for 
+  <br/>  Sandoz Inc., Princeton, NJ, 08540
+ </paragraph>
+                  <paragraph>P1399/00</paragraph>
+                  <paragraph>Mfg. Lic. No.: TN00003031</paragraph>
+               </text>
+               <effectiveTime value="20250626"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_36f0f8be-e57d-47cd-9b96-31a4b9224b5a">
+               <id root="549de8b0-9f88-71b1-e063-6394a90a77ae"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PRINCIPAL DISPLAY PANEL - 250 mg Capsule Bottle Label</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">NDC 0781-2791-64</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Mesalamine Extended-Release Capsules, USP</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">250 mg</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Rx only</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">240 CAPSULES</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">
+                        <renderMultiMedia referencedObject="MM2"/>
+                     </content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20260101"/>
+               <component>
+                  <observationMedia ID="MM2">
+                     <text>PRINCIPAL DISPLAY PANEL - 250 mg Capsule Bottle Label</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image01.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="Lff72b5b0-079e-4276-87e9-6a28af5d13ee">
+               <id root="549de8b0-9f89-71b1-e063-6394a90a77ae"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PRINCIPAL DISPLAY PANEL - 500 mg Capsule Bottle Label</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">NDC 0781-2793-72</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Mesalamine Extended-Release Capsules, USP</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">500 mg</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Rx only</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">120 CAPSULES</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">
+                        <renderMultiMedia referencedObject="Le930607a-5648-49a8-bab9-2c9b8c39f1be"/>
+                     </content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20260619"/>
+               <component>
+                  <observationMedia ID="Le930607a-5648-49a8-bab9-2c9b8c39f1be">
+                     <text>PRINCIPAL DISPLAY PANEL - 500 mg Capsule Bottle Label</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image02.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

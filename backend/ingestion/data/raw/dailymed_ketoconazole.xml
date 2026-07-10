@@ -1,0 +1,1429 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="560a21ed-7455-c980-e063-6394a90a6c7b"/>
+   <code code="34391-3" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN PRESCRIPTION DRUG LABEL"/>
+   <title>KETOCONAZOLE TABLETS USP, 200 mg
+ <br/>
+Rx only
+</title>
+   <effectiveTime value="20260707"/>
+   <setId root="f162e616-21b4-49b1-b437-15e21001a6f0"/>
+   <versionNumber value="11"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id root="1.3.6.1.4.1.519.1" extension="156893695"/>
+            <name>PD-Rx Pharmaceuticals, Inc.</name>
+            <assignedEntity>
+               <assignedOrganization>
+                  <id root="1.3.6.1.4.1.519.1" extension="156893695"/>
+                  <name>PD-Rx Pharmaceuticals, Inc.</name>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id root="1.3.6.1.4.1.519.1" extension="156893695"/>
+                        <name>PD-Rx Pharmaceuticals, Inc.</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C73606" displayName="repack" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="72789-052" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+               </assignedOrganization>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="560a30d8-15eb-e333-e063-6394a90afdcd"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL product data elements section"/>
+               <effectiveTime value="20260707"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="72789-052" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>KETOCONAZOLE</name>
+                        <formCode code="C42998" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TABLET"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>KETOCONAZOLE</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <asEquivalentEntity classCode="EQUIV">
+                           <code code="C64637" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <definingMaterialKind>
+                              <code code="64380-827" codeSystem="2.16.840.1.113883.6.69"/>
+                           </definingMaterialKind>
+                        </asEquivalentEntity>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="O8232NY3SJ" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>STARCH, CORN</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="EWQ57Q8I5X" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>LACTOSE MONOHYDRATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="70097M6I30" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MAGNESIUM STEARATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="OP1R32D61U" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CELLULOSE, MICROCRYSTALLINE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="U725QWY32X" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>POVIDONE K30</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="ETJ7Z6XBU4" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SILICON DIOXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mg" value="200"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="R9400W927I" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>KETOCONAZOLE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="R9400W927I" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>KETOCONAZOLE</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="30" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="72789-052-30" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43173" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE, PLASTIC"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20221208"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="ANDA210457" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73584" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20180626"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48325" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="white" xsi:type="CE">
+                              <originalText>WHITE</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48348" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ROUND" xsi:type="CE">
+                              <originalText/>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="10" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value value="2" xsi:type="INT"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="ST">S500</value>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="ID1">
+               <id root="560a21ed-7456-c980-e063-6394a90a6c7b"/>
+               <code code="34066-1" codeSystem="2.16.840.1.113883.6.1" displayName="BOXED WARNING SECTION"/>
+               <text>
+                  <paragraph ID="ID2">
+                     <content styleCode="bold">WARNING:</content>
+                  </paragraph>
+                  <paragraph>Because ketoconazole tablets have been associated with serious adverse reactions (see
+ 
+  <content styleCode="bold">WARNINGS</content>section), ketoconazole tablets are not indicated for treatment of onychomycosis, cutaneous dermatophyte infections, or Candida infections.
+
+ </paragraph>
+                  <paragraph> </paragraph>
+                  <paragraph>Ketoconazole tablets should be used only when other effective antifungal therapy is not available or tolerated and the potential benefits are considered to outweigh the potential risks.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Hepatotoxicity</content>
+                  </paragraph>
+                  <paragraph>Serious hepatotoxicity, including cases with a fatal outcome or requiring liver transplantation has occurred with the use of oral ketoconazole. Some patients had no obvious risk factors for liver disease. Patients receiving this drug should be informed by the physician of the risk and should be closely monitored. See
+ 
+  <content styleCode="bold">WARNINGS</content>section.
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="bold"> </content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">QT Prolongation and Drug Interactions Leading to QT Prolongation</content>
+                  </paragraph>
+                  <paragraph>Coadministration of the following drugs with ketoconazole is contraindicated: dofetilide, quinidine, pimozide, lurasidone, cisapride, methadone, disopyramide, dronedarone, ranolazine. Ketoconazole can cause elevated plasma concentrations of these drugs and may prolong QT intervals, sometimes resulting in life-threatening ventricular dysrhythmias such as torsades de pointes. See
+ 
+  <content styleCode="bold">CONTRAINDICATIONS, WARNINGS,</content>and
+ 
+  <content styleCode="bold">PRECAUTIONS: Drug Interactions</content>sections.
+
+ </paragraph>
+               </text>
+               <effectiveTime value="20230712"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID3">
+               <id root="560a21ed-7457-c980-e063-6394a90a6c7b"/>
+               <code code="34089-3" codeSystem="2.16.840.1.113883.6.1" displayName="DESCRIPTION SECTION"/>
+               <title>DESCRIPTION</title>
+               <text>
+                  <paragraph ID="ID4">Ketoconazole, USP is a synthetic broad-spectrum antifungal agent. Each tablet, for oral administration, contains 200 mg ketoconazole, USP base. In addition, each tablet contains the following inactive ingredients: colloidal silicon dioxide, corn starch, lactose monohydrate, magnesium stearate, microcrystalline cellulose, and povidone. Ketoconazole is (±)cis-1-Acetyl-4-[p-[[2-(2,4-dichlorophenyl)-2-(imidazol-1-ylmethyl)-1,3-dioxolan-4-yl]methoxy]phenyl]-piperazine and has the following structural formula:</paragraph>
+                  <renderMultiMedia referencedObject="MM1"/>
+                  <paragraph ID="ID62">C
+ 
+  <sub>26</sub>H
+ 
+  <sub>28</sub>Cl
+ 
+  <sub>2</sub>N
+ 
+  <sub>4</sub>O
+ 
+  <sub>4</sub>           M.W. 531.44
+
+ </paragraph>
+                  <paragraph>Ketoconazole, USP is a white or almost white powder that is soluble in acids.</paragraph>
+               </text>
+               <effectiveTime value="20251215"/>
+               <component>
+                  <observationMedia ID="MM1">
+                     <text>Structure</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="9781ff7c-39a7-4c61-a6ec-7f1947685c6b-01.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ID5">
+               <id root="560a21ed-7458-c980-e063-6394a90a6c7b"/>
+               <code code="34090-1" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+               <title>CLINICAL PHARMACOLOGY</title>
+               <text>
+                  <paragraph ID="ID6">
+                     <content styleCode="bold">Pharmacokinetics</content>
+                  </paragraph>
+                  <paragraph>Absorption</paragraph>
+                  <paragraph>Ketoconazole is a weak dibasic agent and thus requires acidity for dissolution and absorption.</paragraph>
+                  <paragraph>Mean peak plasma concentrations of approximately 3.5 mcg/mL are reached within 1 to 2 hours, following oral administration of a single 200 mg dose taken with a meal. Oral bioavailability is maximal when the tablets are taken with a meal.</paragraph>
+                  <paragraph>Absorption of ketoconazole tablets is reduced in subjects with reduced gastric acidity, such as subjects taking medications known as acid neutralizing medicines (e.g. aluminum hydroxide) and gastric acid secretion suppressors (e.g. H
+ 
+  <sub>2</sub>-receptor antagonists, proton pump inhibitors) or subjects with achlorhydria caused by certain diseases (see
+ 
+  <content styleCode="bold">PRECAUTIONS: Drug Interactions</content>). Absorption of ketoconazole under fasted conditions in these subjects is increased when ketoconazole tablets are administered with an acidic beverage (such as non-diet cola). After pretreatment with omeprazole, a proton pump inhibitor, the bioavailability of a single 200 mg dose of ketoconazole under fasted conditions was decreased to 17% of the bioavailability of ketoconazole administered alone. When ketoconazole was administered with non-diet cola after pretreatment with omeprazole, the bioavailability was 65% of that after administration of ketoconazole alone.
+
+ </paragraph>
+                  <paragraph>Distribution</paragraph>
+                  <paragraph>
+                     <content styleCode="italics">In vitro</content>, the plasma protein binding is about 99% mainly to the albumin fraction. Ketoconazole is widely distributed into tissues; however, only a negligible proportion reaches the cerebrospinal fluid.
+
+ </paragraph>
+                  <paragraph>Metabolism</paragraph>
+                  <paragraph>Following absorption from the gastrointestinal tract, ketoconazole tablets are converted into several inactive metabolites.
+ 
+  <content styleCode="italics">In vitro</content>studies have shown that CYP3A4 is the major enzyme involved in the metabolism of ketoconazole. The major identified metabolic pathways are oxidation and degradation of the imidazole and piperazine rings, by hepatic microsomal enzymes. In addition, oxidative O-dealkylation and aromatic hydroxylation does occur. Ketoconazole has not been demonstrated to induce its own metabolism.
+
+ </paragraph>
+                  <paragraph>Elimination</paragraph>
+                  <paragraph>Elimination from plasma is biphasic with a half-life of 2 hours during the first 10 hours and 8 hours thereafter.</paragraph>
+                  <paragraph>Approximately 13% of the dose is excreted in the urine, of which 2 to 4% is unchanged drug. The major route of excretion is through the bile into the intestinal tract with about 57% being excreted in the feces.</paragraph>
+                  <paragraph>Special Populations</paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Patients with Hepatic or Renal Impairment</content>
+                  </paragraph>
+                  <paragraph>In patients with hepatic or renal impairment, the overall pharmacokinetics of ketoconazole was not significantly different when compared with healthy subjects.</paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Pediatric Patients</content>
+                  </paragraph>
+                  <paragraph>Limited pharmacokinetic data are available on the use of ketoconazole tablets in the pediatric population.</paragraph>
+                  <paragraph>Measurable ketoconazole plasma concentrations have been observed in pre-term infants (single or daily doses of 3 to 10 mg/kg) and in pediatric patients 5 months of age and older (daily doses of 3 to 13 mg/kg) when the drug was administered as a suspension, tablet or crushed tablet. Limited data suggest that absorption may be greater when the drug is administered as a suspension compared to a crushed tablet. Conditions that raise gastric pH may lower or prevent absorption (see
+ 
+  <content styleCode="bold">PRECAUTIONS: Drug Interactions</content>). Maximum plasma concentrations occurred 1 to 2 hours after dosing and were in the same general range as those seen in adults who received a 200 to 400 mg dose.
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Electrocardiogram</content>
+                  </paragraph>
+                  <paragraph>Pre-clinical electrophysiological studies have shown that ketoconazole inhibits the rapidly activating component of the cardiac delayed rectifier potassium current, prolongs the action potential duration, and may prolong the QT
+ 
+  <sub>C</sub>interval. Data from some clinical PK/PD studies and drug interaction studies suggest that oral dosing with ketoconazole at 200 mg twice daily for 3 to 7 days can result in an increase of the QT
+ 
+  <sub>C</sub>interval: a mean maximum increase of about 6 to 12 msec was seen at ketoconazole peak plasma concentrations about 1 to 4 hours after ketoconazole administration.
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">MICROBIOLOGY</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Mechanism of Action</content>
+                  </paragraph>
+                  <paragraph>Ketoconazole blocks the synthesis of ergosterol, a key component of the fungal cell membrane, through the inhibition of cytochrome P-450 dependent enzyme lanosterol 14α-demethylase responsible for the conversion of lanosterol to ergosterol in the fungal cell membrane. This results in an accumulation of methylated sterol precursors and a depletion of ergosterol within the cell membrane thus weakening the structure and function of the fungal cell membrane.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Activity
+  
+   <content styleCode="italics">In Vitro &amp; In Vivo</content>
+                     </content>
+                  </paragraph>
+                  <paragraph>Ketoconazole tablets are active against clinical infections with
+ 
+  <content styleCode="italics">Blastomyces dermatitidis</content>,
+ 
+  <content styleCode="italics">Coccidioides immitis</content>,
+ 
+  <content styleCode="italics">Histoplasma capsulatum</content>,
+ 
+  <content styleCode="italics">Paracoccidioides brasiliensis</content>.
+
+ </paragraph>
+               </text>
+               <effectiveTime value="20180305"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID7">
+               <id root="560a21ed-7459-c980-e063-6394a90a6c7b"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>INDICATIONS &amp; USAGE</title>
+               <text>
+                  <paragraph ID="ID8">Ketoconazole tablets are not indicated for treatment of onychomycosis, cutaneous dermatophyte infections, or Candida infections.</paragraph>
+                  <paragraph>Ketoconazole tablets should be used only when other effective antifungal therapy is not available or tolerated and the potential benefits are considered to outweigh the potential risks.</paragraph>
+                  <paragraph>Ketoconazole tablets are indicated for the treatment of the following systemic fungal infections in patients who have failed or who are intolerant to other therapies: blastomycosis, coccidioidomycosis, histoplasmosis, chromomycosis, and paracoccidioidomycosis. Ketoconazole tablets should not be used for fungal meningitis because it penetrates poorly into the cerebrospinal fluid.</paragraph>
+               </text>
+               <effectiveTime value="20180305"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID9">
+               <id root="560a21ed-745a-c980-e063-6394a90a6c7b"/>
+               <code code="34070-3" codeSystem="2.16.840.1.113883.6.1" displayName="CONTRAINDICATIONS SECTION"/>
+               <title>CONTRAINDICATIONS</title>
+               <text>
+                  <paragraph ID="ID10">
+                     <content styleCode="bold">Drug Interactions</content>
+                  </paragraph>
+                  <paragraph>Coadministration of a number of CYP3A4 substrates such as dofetilide, quinidine cisapride and pimozide is contraindicated with ketoconazole tablets. Coadministration with ketoconazole can cause elevated plasma concentrations of these drugs and may increase or prolong both therapeutic and adverse effects to such an extent that a potentially serious adverse reaction may occur. For example, increased plasma concentrations of some of these drugs can lead to QT prolongation and sometimes resulting in life-threatening ventricular tachyarrhythmias including occurrences of torsade de pointes, a potentially fatal arrhythmia. Coadministration of ketoconazole tablets with lurasidone is contraindicated since it may result in an increase in lurasidone exposure and the potential for serious adverse reactions. (see
+ 
+  <content styleCode="bold">PRECAUTIONS: Drug Interactions</content>).
+
+ </paragraph>
+                  <paragraph>Additionally, the following other drugs are contraindicated with ketoconazole tablets: methadone, disopyramide, dronedarone, ergot alkaloids such as dihydroergotamine, ergometrine, ergotamine, methylergometrine, irinotecan, lurasidone, oral midazolam, alprazolam, triazolam, felodipine, nisoldipine, ranolazine, tolvaptan, eplerenone, lovastatin, simvastatin and colchicine (see
+ 
+  <content styleCode="bold">PRECAUTIONS: Drug Interactions</content>).
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Enhanced Sedation</content>
+                  </paragraph>
+                  <paragraph>Coadministration of ketoconazole tablets with oral midazolam, oral triazolam or alprazolam has resulted in elevated plasma concentrations of these drugs. This may potentiate and prolong hypnotic and sedative effects, especially with repeated dosing or chronic administration of these agents. Concomitant administration of ketoconazole tablets with oral triazolam, oral midazolam or alprazolam is contraindicated (see
+ 
+  <content styleCode="bold">PRECAUTIONS: Drug Interactions</content>).
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Myopathy</content>
+                  </paragraph>
+                  <paragraph>Coadministration of CYP3A4 metabolized HMG-CoA reductase inhibitors such as simvastatin, and lovastatin is contraindicated with ketoconazole tablets (see
+ 
+  <content styleCode="bold">PRECAUTIONS: Drug Interactions</content>).
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Ergotism</content>
+                  </paragraph>
+                  <paragraph>Concomitant administration of ergot alkaloids such as dihydroergotamine and ergotamine with ketoconazole tablets is contraindicated (see
+ 
+  <content styleCode="bold">PRECAUTIONS: Drug Interactions</content>).
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Liver Disease</content>
+                  </paragraph>
+                  <paragraph>The use of ketoconazole tablets are contraindicated in patients with acute or chronic liver disease.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Hypersensitivity</content>
+                  </paragraph>
+                  <paragraph>Ketoconazole tablets are contraindicated in patients who have shown hypersensitivity to the drug.</paragraph>
+               </text>
+               <effectiveTime value="20230515"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID11">
+               <id root="560a21ed-745b-c980-e063-6394a90a6c7b"/>
+               <code code="34071-1" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS SECTION"/>
+               <title>WARNINGS</title>
+               <text>
+                  <paragraph ID="ID12">Because of the serious adverse reactions that have been reported in association with ketoconazole, including fatal hepatotoxicity, ketoconazole tablets are not indicated for treatment of onychomycosis, cutaneous dermatophyte infections, or Candida infections.</paragraph>
+                  <paragraph>Ketoconazole tablets should be used only when other effective antifungal therapy is not available or tolerated and the potential benefits are considered to outweigh the potential risks.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Hepatotoxicity</content>
+                  </paragraph>
+                  <paragraph>Serious hepatotoxicity, including cases with a fatal outcome or requiring liver transplantation, has occurred with the use of oral ketoconazole. Some patients had no obvious risk factors for liver disease. Serious hepatotoxicity was reported both by patients receiving high doses for short treatment durations and by patients receiving low doses for long durations.</paragraph>
+                  <paragraph>The hepatic injury has usually, but not always, been reversible upon discontinuation of ketoconazole tablets treatment. Cases of hepatitis have been reported in children.</paragraph>
+                  <paragraph>At baseline, obtain laboratory tests (such as SGGT, alkaline phosphatase, ALT, AST, total bilirubin (TBL), Prothrombin Time (PT), International Normalization Ratio (INR), and testing for viral hepatitides). Patients should be advised against alcohol consumption while on treatment. If possible, use of other potentially hepatotoxic drugs should be avoided in patients receiving ketoconazole tablets.</paragraph>
+                  <paragraph>Prompt recognition of liver injury is essential. During the course of treatment, serum ALT should be monitored weekly for the duration of treatment. If ALT values increase to a level above the upper limit of normal or 30 percent above baseline, or if the patient develops symptoms, ketoconazole treatment should be interrupted and a full set of liver tests should be obtained. Liver tests should be repeated to ensure normalization of values. Hepatotoxicity has been reported with restarting oral ketoconazole (rechallenge). If it is decided to restart oral ketoconazole, monitor the patient frequently to detect any recurring liver injury from the drug.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">QT Prolongation and Drug Interactions Leading to QT Prolongation</content>
+                  </paragraph>
+                  <paragraph>Ketoconazole can prolong the QT interval. Coadministration of the following drugs with ketoconazole is contraindicated: dofetilide, quinidine, pimozide, lurasidone, cisapride, methadone, disopyramide, dronedarone, ranolazine. Ketoconazole can cause elevated plasma concentrations of these drugs which may prolong the QT interval, sometimes resulting in life-threatening ventricular dysrhythmias such as torsades de pointes.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Adrenal Insufficiency</content>
+                  </paragraph>
+                  <paragraph>Ketoconazole tablets decrease adrenal corticosteroid secretion at doses of 400 mg and higher. This effect is not shared with other azoles. The recommended dose of 200 mg to 400 mg daily should not be exceeded.</paragraph>
+                  <paragraph>Adrenal function should be monitored in patients with adrenal insufficiency or with borderline adrenal function and in patients under prolonged periods of stress (major surgery, intensive care, etc.).</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Adverse Reactions Associated with Unapproved Uses</content>
+                  </paragraph>
+                  <paragraph>Ketoconazole has been used in high doses for the treatment of advanced prostate cancer and for Cushing's syndrome when other treatment options have failed. The safety and effectiveness of ketoconazole have not been established in these settings and the use of ketoconazole for these indications is not approved by FDA.</paragraph>
+                  <paragraph>In a clinical trial involving 350 patients with metastatic prostatic cancer, eleven deaths were reported within two weeks of starting treatment with high doses of ketoconazole tablets (1200 mg/day). It is not possible to ascertain from the information available whether death was related to ketoconazole therapy or adrenal insufficiency in these patients with serious underlying disease.</paragraph>
+                  <paragraph>Hepatoxicity, including fatal cases and cases requiring liver transplantation, have been reported in patients who received ketoconazole for treatment of onychomycosis, cutaneous dermatophyte infections, or Candida infections.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Hypersensitivity</content>
+                  </paragraph>
+                  <paragraph>Anaphylaxis has been reported after the first dose. Several cases of hypersensitivity reactions including urticaria have also been reported.</paragraph>
+               </text>
+               <effectiveTime value="20230712"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID13">
+               <id root="560a21ed-745c-c980-e063-6394a90a6c7b"/>
+               <code code="42232-9" codeSystem="2.16.840.1.113883.6.1" displayName="PRECAUTIONS SECTION"/>
+               <title>PRECAUTIONS</title>
+               <effectiveTime value="20260204"/>
+               <component>
+                  <section ID="ID14">
+                     <id root="560a21ed-745d-c980-e063-6394a90a6c7b"/>
+                     <code code="34072-9" codeSystem="2.16.840.1.113883.6.1" displayName="GENERAL PRECAUTIONS SECTION"/>
+                     <title>
+                        <content styleCode="bold">General</content>
+                     </title>
+                     <text>
+                        <paragraph ID="ID15">Ketoconazole tablets have been demonstrated to lower serum testosterone. Once therapy with ketoconazole has been discontinued, serum testosterone levels return to baseline values. Testosterone levels are impaired with doses of 800 mg per day and abolished by 1600 mg per day. Clinical manifestations of decreased testosterone concentrations may include gynecomastia, impotence and oligospermia.</paragraph>
+                     </text>
+                     <effectiveTime value="20230712"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID16">
+                     <id root="560a21ed-745e-c980-e063-6394a90a6c7b"/>
+                     <code code="34076-0" codeSystem="2.16.840.1.113883.6.1" displayName="INFORMATION FOR PATIENTS SECTION"/>
+                     <title>
+                        <content styleCode="bold">Information for Patients</content>
+                     </title>
+                     <text>
+                        <paragraph ID="ID17">Patients should be instructed to report any signs and symptoms which may suggest liver dysfunction so that appropriate biochemical testing can be done. Such signs and symptoms may include unusual fatigue, anorexia, nausea and/or vomiting, abdominal pain, jaundice, dark urine or pale stools (see
+ 
+  <content styleCode="bold">WARNINGS</content>section).
+
+ </paragraph>
+                     </text>
+                     <effectiveTime value="20230712"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID18">
+                     <id root="560a21ed-745f-c980-e063-6394a90a6c7b"/>
+                     <code code="34073-7" codeSystem="2.16.840.1.113883.6.1" displayName="DRUG INTERACTIONS SECTION"/>
+                     <title>
+                        <content styleCode="bold">Drug Interactions</content>
+                     </title>
+                     <text>
+                        <paragraph ID="ID19">Ketoconazole is mainly metabolized through CYP3A4. Other substances that either share this metabolic pathway or modify CYP3A4 activity may influence the pharmacokinetics of ketoconazole. Similarly, ketoconazole may modify the pharmacokinetics of other substances that share this metabolic pathway. Ketoconazole is a potent CYP3A4 inhibitor and a P-glycoprotein inhibitor. When using concomitant medication, the corresponding label should be consulted for information on the route of metabolism and the possible need to adjust dosages.</paragraph>
+                        <paragraph>Interaction studies have only been performed in adults. The relevance of the results from these studies in pediatric patients is unknown.</paragraph>
+                        <paragraph>Drugs that may decrease ketoconazole plasma concentrations</paragraph>
+                        <paragraph>Drugs that reduce the gastric acidity (e.g., acid neutralizing medicines such as aluminum hydroxide, or acid secretion suppressors such as H
+ 
+  <sub>2</sub>-receptor antagonists and proton pump inhibitors) impair the absorption of ketoconazole from ketoconazole tablets. These drugs should be used with caution when coadministered with ketoconazole tablets:
+
+ </paragraph>
+                        <list listType="unordered" styleCode="Disc">
+                           <item>Ketoconazole tablets should be administered with an acidic beverage (such as non-diet cola) upon co-treatment with drugs reducing gastric acidity.</item>
+                           <item>Acid neutralizing medicines (e.g., aluminum hydroxide) should be administered at least 1 hour before or 2 hours after the intake of ketoconazole tablets.</item>
+                           <item>Upon coadministration, the antifungal activity should be monitored and the ketoconazole tablets dose increased as deemed necessary.</item>
+                        </list>
+                        <paragraph ID="ID21">Coadministration of ketoconazole tablets with potent enzyme inducers of CYP3A4 may decrease the bioavailability of ketoconazole to such an extent that efficacy may be reduced. Examples include:</paragraph>
+                        <list listType="unordered" styleCode="Disc">
+                           <item>Antibacterials: isoniazid, rifabutin (see also under 'Drugs that may have their plasma concentrations increased'), rifampicin.</item>
+                           <item>Anticonvulsants: carbamazepine (see also under 'Drugs that may have their plasma concentrations increased'), phenytoin.</item>
+                           <item>Antivirals: efavirenz, nevirapine.</item>
+                        </list>
+                        <paragraph ID="ID23">Therefore, administration of potent enzyme inducers of CYP3A4 with ketoconazole tablets is not recommended. The use of these drugs should be avoided from 2 weeks before and during treatment with ketoconazole tablets, unless the benefits outweigh the risk of potentially reduced ketoconazole efficacy. Upon coadministration, the antifungal activity should be monitored and the ketoconazole tablets dose increased as deemed necessary.</paragraph>
+                        <paragraph>Drugs that may increase ketoconazole plasma concentrations</paragraph>
+                        <paragraph>Potent inhibitors of CYP3A4 (e.g., antivirals such as ritonavir, ritonavir-boosted darunavir and ritonavir-boosted fosamprenavir) may increase the bioavailability of ketoconazole. These drugs should be used with caution when coadministered with ketoconazole tablets.</paragraph>
+                        <paragraph>Patients who must take ketoconazole tablets concomitantly with potent inhibitors of CYP3A4 should be monitored closely for signs or symptoms of increased or prolonged pharmacologic effects of ketoconazole, and the ketoconazole tablets dose should be decreased as deemed necessary. When appropriate, ketoconazole plasma concentrations should be measured.</paragraph>
+                        <paragraph>Drugs that may have their plasma concentrations increased by ketoconazole</paragraph>
+                        <paragraph>Ketoconazole can inhibit the metabolism of drugs metabolized by CYP3A4 and can inhibit the drug transport by P-glycoprotein, which may result in increased plasma concentrations of these drugs and/or their active metabolite(s) when they are administered with ketoconazole. These elevated plasma concentrations may increase or prolong both therapeutic and adverse effects of these drugs. CYP3A4- metabolized drugs known to prolong the QT interval may be contraindicated with ketoconazole tablets, since the combination may lead to ventricular tachyarrhythmias, including occurrences of torsade de pointes, a potentially fatal arrhythmia.</paragraph>
+                        <paragraph>Examples of drugs that may have their plasma concentrations increased by ketoconazole presented by drug class with advice regarding coadministration with ketoconazole tablets:</paragraph>
+                        <table ID="ID24" width="100%" styleCode="Noautorules">
+                           <col width="20%"/>
+                           <col width="20%"/>
+                           <col width="20%"/>
+                           <col width="20%"/>
+                           <col width="20%"/>
+                           <tbody>
+                              <tr>
+                                 <td align="center" styleCode="Lrule Toprule Botrule Rrule" valign="top">
+                                    <br/>
+                                    <content styleCode="bold">Drug Class</content>
+                                    <br/>
+                                 </td>
+                                 <td align="center" styleCode=" Toprule Botrule Rrule" valign="top">
+                                    <br/>
+                                    <content styleCode="bold">Contraindicated</content>
+                                    <br/>
+                                 </td>
+                                 <td align="center" styleCode=" Toprule Botrule Rrule" valign="top">
+                                    <content styleCode="bold">Not</content>
+                                    <br/>
+                                    <content styleCode="bold">Recommended</content>
+                                    <br/>
+                                 </td>
+                                 <td align="center" styleCode=" Toprule Botrule Rrule" valign="top">
+                                    <br/>
+                                    <content styleCode="bold">Use with Caution</content>
+                                    <br/>
+                                 </td>
+                                 <td align="center" styleCode=" Toprule Botrule Rrule" valign="top">
+                                    <br/>
+                                    <content styleCode="bold">Comments</content>
+                                    <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule Botrule Rrule" valign="top"/>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">
+                                    <content styleCode="italics">Under no circumstances should the drug be coadministered with ketoconazole tablets, and up to one week after discontinuation of treatment with ketoconazole.</content>
+                                    <br/>
+                                 </td>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">
+                                    <content styleCode="italics">The use of the drug should be avoided during and up to one week after discontinuation of treatment with ketoconazole tablets, unless the benefits outweigh the potentially increased risks of side effects. If coadministration cannot be avoided, clinical monitoring for signs or symptoms of increased or prolonged effects or side effects of the interacting drug is recommended, and its dosage should be reduced or interrupted as deemed necessary. When appropriate, plasma concentrations should be measured. The label of the coadministered drug should be consulted for information on dose adjustment and adverse effects.</content>
+                                    <br/>
+                                 </td>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">
+                                    <content styleCode="italics">Careful monitoring is recommended when the drug is coadministered with ketoconazole tablets. Upon coadministration, patients should be monitored closely for signs or symptoms of increased or prolonged effects or side effects of the interacting drug, and its dosage should be reduced as deemed necessary. When appropriate, plasma concentrations should be measured. The label of the coadministered drug should be consulted for information on dose adjustment and adverse effects</content>. 
+     <br/>    
+     <br/>
+                                 </td>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                              </tr>
+                              <tr>
+                                 <td align="left" styleCode="Lrule Botrule Rrule" valign="top">Alpha Blockers 
+     <br/>
+                                 </td>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">tamsulosin 
+     <br/>
+                                 </td>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                              </tr>
+                              <tr>
+                                 <td align="left" styleCode="Lrule Botrule Rrule" valign="top">Analgesics 
+     <br/>
+                                 </td>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">methadone 
+     <br/>
+                                 </td>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">alfentanil, 
+     <br/>  buprenorphine IV 
+     <br/>  and sublingual, 
+     <br/>  fentanyl, 
+     <br/>  oxycodone, 
+     <br/>  sufentanil 
+     <br/>
+                                 </td>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">Methadone: The potential increase in plasma concentrations of methadone when coadministered with ketoconazole tablets may increase the risk of serious cardiovascular events including QT prolongation and torsade de pointes, or respiratory or CNS depression [See
+    
+     <content styleCode="bold">CONTRAINDICATIONS</content>.] 
+     <br/>  Fentanyl: The potential increase in plasma concentrations of fentanyl when coadministered with ketoconazole tablets may increase the risk of potentially fatal respiratory depression. 
+     <br/>  Sufentanil: No human pharmacokinetic data of an interaction with ketoconazole are available.
+    
+     <content styleCode="italics">In vitro</content>data suggest that sufentanil is metabolized by CYP3A4 and so potentially increased sufentanil plasma concentrations would be expected when coadministered with ketoconazole tablets. 
+     <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="left" styleCode="Lrule Botrule Rrule" valign="top">Antiarrhythmics 
+     <br/>
+                                 </td>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">disopyramide, 
+     <br/>  dofetilide, 
+     <br/>  dronedarone, 
+     <br/>  quinidine 
+     <br/>
+                                 </td>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">digoxin 
+     <br/>
+                                 </td>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">Disopyramide, dofetilide, dronedarone, quinidine: The potential increase in plasma concentrations of these drugs when coadministered with ketoconazole may increase the risk of serious cardiovascular events including QT prolongation. 
+     <br/>  Digoxin: Rare cases of elevated plasma concentrations of digoxin have been reported.   It is not clear whether this was due to the combination of therapy. It is, therefore, advisable to monitor digoxin concentrations in patients receiving ketoconazole. 
+     <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="left" styleCode="Lrule Botrule Rrule" valign="top">Antibacterials 
+     <br/>
+                                 </td>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">rifabutin 
+     <br/>
+                                 </td>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">telithromycin 
+     <br/>
+                                 </td>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">Rifabutin: see also under Drugs that may decrease ketoconazole plasma concentrations. 
+     <br/>  Telithromycin: A multiple-dose interaction study with ketoconazole showed that C
+    
+     <sub>max</sub>of telithromycin was increased by 51% and AUC by 95%. 
+     <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="left" styleCode="Lrule Botrule Rrule" valign="top">Anticoagulants and 
+     <br/>   Antiplatelet Drugs 
+     <br/>
+                                 </td>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">rivaroxaban 
+     <br/>
+                                 </td>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">cilostazol, 
+     <br/>  coumarins, 
+     <br/>  dabigatran 
+     <br/>
+                                 </td>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">Cilostazol: Concomitant administration of single doses of cilostazol 100 mg and ketoconazole 400 mg approximately doubled cilostazol concentrations and altered (increase/decrease) the concentrations of the active metabolites of cilostazol. 
+     <br/>  Coumarins: Ketoconazole may enhance the anticoagulant effect of coumarin-like drugs, thus the anticoagulant effect should be carefully titrated and monitored. 
+     <br/>  Dabigatran: In patients with moderate renal impairment (CrCL 50 mL/min to ≤ 80 mL/min), consider reducing the dose of dabigatran to 75 mg twice daily when it is coadministered with ketoconazole. 
+     <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="left" styleCode="Lrule Botrule Rrule" valign="top">Anticonvulsants 
+     <br/>
+                                 </td>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">carbamazepine 
+     <br/>
+                                 </td>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">Carbamazepine:
+    
+     <content styleCode="italics">In vivo</content>studies have demonstrated an increase in plasma carbamazepine concentrations in subjects concomitantly receiving ketoconazole. In addition, the bioavailability of ketoconazole may be reduced by carbamazepine. 
+     <br/>    
+     <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="left" styleCode="Lrule Botrule Rrule" valign="top">Antidiabetics 
+     <br/>
+                                 </td>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">repaglinide, 
+     <br/>  saxagliptin 
+     <br/>
+                                 </td>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                              </tr>
+                              <tr>
+                                 <td align="left" styleCode="Lrule Botrule Rrule" valign="top">Antihelmintics and Antiprotozoals 
+     <br/>
+                                 </td>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">praziquantel 
+     <br/>
+                                 </td>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                              </tr>
+                              <tr>
+                                 <td align="left" styleCode="Lrule Botrule Rrule" valign="top">Antimigraine Drugs 
+     <br/>
+                                 </td>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">ergot alkaloids, 
+     <br/>   such as 
+     <br/>   dihydroergotamine, 
+     <br/>   ergometrine 
+     <br/>   (ergonovine), 
+     <br/>   ergotamine, 
+     <br/>   methylergometrine 
+     <br/>   (methylergonovine) 
+     <br/>
+                                 </td>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">eletriptan 
+     <br/>
+                                 </td>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">Ergot alkaloids: The potential increase in plasma concentrations of ergot alkaloids when coadministered with ketoconazole tablets may increase the risk of ergotism, i.e., a risk for vasospasm potentially leading to cerebral ischemia and/or ischemia of the extremities. 
+     <br/>    
+     <br/>  Eletriptan: Eletriptan should be used with caution with ketoconazole, and specifically, should not be used within at least 72 hours of treatment with ketoconazole 
+     <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="left" styleCode="Lrule Botrule Rrule" valign="top">Antineoplastics 
+     <br/>
+                                 </td>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">irinotecan 
+     <br/>
+                                 </td>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">dasatinib, 
+     <br/>  lapatinib, 
+     <br/>  nilotinib 
+     <br/>
+                                 </td>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">bortezomib, 
+     <br/>  busulphan, 
+     <br/>  docetaxel, 
+     <br/>  erlotinib, 
+     <br/>  imatinib, 
+     <br/>  ixabepilone, 
+     <br/>  paclitaxel, 
+     <br/>  trimetrexate, 
+     <br/>  vinca alkaloids 
+     <br/>
+                                 </td>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">Irinotecan: The potential increase in plasma concentrations of irinotecan when coadministered with ketoconazole tablets may increase the risk of potentially fatal adverse events. 
+     <br/>    
+     <br/>  Docetaxel: In the presence of ketoconazole, the clearance of docetaxel in cancer patients was shown to decrease by 50%. 
+     <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="left" styleCode="Lrule Botrule Rrule" valign="top">Antipsychotics, 
+     <br/>  Anxiolytics and 
+     <br/>  Hypnotics 
+     <br/>
+                                 </td>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">Lurasidone, 
+     <br/>  alprazolam, 
+     <br/>  oral midazolam, 
+     <br/>  pimozide, 
+     <br/>  triazolam 
+     <br/>
+                                 </td>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">aripiprazole, 
+     <br/>   buspirone, 
+     <br/>   haloperidol, 
+     <br/>   midazolam IV, 
+     <br/>   quetiapine, 
+     <br/>   ramelteon, 
+     <br/>   risperidone 
+     <br/>
+                                 </td>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">The increase in plasma concentrations of lurasidone when coadministered with ketoconazole tablets may increase the risk of serious side effects (See
+    
+     <content styleCode="bold">CONTRAINDICATIONS</content>). 
+     <br/>  Alprazolam, midazolam, triazolam: Coadministration of ketoconazole tablets with oral midazolam or triazolam, or alprazolam may cause several-fold increases in plasma concentrations of these drugs. This may potentiate and prolong hypnotic and sedative effects, especially with repeated dosing or chronic administration of these agents. 
+     <br/>    
+     <br/>  Pimozide: The potential increase in plasma concentrations of pimozide when coadministered with ketoconazole tablets may increase the risk of serious cardiovascular events including QT prolongation and torsade de pointes. 
+     <br/>    
+     <br/>  Aripiprazole: Coadministration of ketoconazole (200 mg/day for 14 days) with a 15 mg single dose of aripiprazole increased the AUC of aripiprazole and its active metabolite by 63% and 77%, respectively. The effect of a higher ketoconazole dose (400 mg/day) has not been studied. When ketoconazole is given concomitantly with aripiprazole, the aripiprazole dose should be reduced to one-half of the recommended dose. 
+     <br/>    
+     <br/>  Buspirone: Ketoconazole is expected to inhibit buspirone metabolism and increase plasma concentrations of buspirone. 
+     <br/>    
+     <br/>  If a patient has been titrated to a stable dosage on buspirone, a dose reduction of buspirone may be necessary to avoid 
+     <br/>   adverse events attributable to buspirone or diminished anxiolytic activity. 
+     <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="left" styleCode="Lrule Botrule Rrule" valign="top">Antivirals 
+     <br/>
+                                 </td>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">indinavir, 
+     <br/>  maraviroc, 
+     <br/>  saquinavir 
+     <br/>
+                                 </td>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                              </tr>
+                              <tr>
+                                 <td align="left" styleCode="Lrule Botrule Rrule" valign="top">Beta Blockers 
+     <br/>
+                                 </td>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">nadolol 
+     <br/>
+                                 </td>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                              </tr>
+                              <tr>
+                                 <td align="left" styleCode="Lrule Botrule Rrule" valign="top">Calcium Channel 
+     <br/>   Blockers 
+     <br/>
+                                 </td>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">felodipine, 
+     <br/>  nisoldipine 
+     <br/>
+                                 </td>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">other 
+     <br/>  dihydropyridines, 
+     <br/>  verapamil 
+     <br/>
+                                 </td>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">Calcium channel blockers can have a negative inotropic effect which may be additive to those of ketoconazole. The potential increase in plasma concentrations of calcium channel blockers when coadministered with ketoconazole tablets may increase the risk of edema and congestive heart failure. 
+     <br/>  Dihydropyridines: 
+     <br/>  Concomitant administration of ketoconazole tablets may  cause several-fold increases in plasma concentrations of  dihydropyridines 
+     <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="left" styleCode="Lrule Botrule Rrule" valign="top">Cardiovascular 
+     <br/>   Drugs, 
+     <br/>   Miscellaneous 
+     <br/>
+                                 </td>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">ranolazine 
+     <br/>
+                                 </td>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">aliskiren, 
+     <br/>  bosentan 
+     <br/>
+                                 </td>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">Ranolazine: The potential increase in plasma concentrations of ranolazine when coadministered with ketoconazole tablets may increase the risk of serious cardiovascular events including QT prolongation. 
+     <br/>    
+     <br/>  Bosentan: Coadministration of bosentan 125 mg twice daily and ketoconazole, increased the plasma concentrations of bosentan by approximately 2 fold in normal volunteers. No dose adjustment of bosentan is necessary, but patients should be monitored for increased pharmacologic effects and adverse reactions of bosentan. 
+     <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="left" styleCode="Lrule Botrule Rrule" valign="top">Diuretics 
+     <br/>
+                                 </td>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">eplerenone 
+     <br/>
+                                 </td>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">The potential increase in plasma concentrations of eplerenone when coadministered with ketoconazole tablets may increase the risk of hyperkalemia and hypotension. 
+     <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="left" styleCode="Lrule Botrule Rrule" valign="top">Gastrointestinal 
+     <br/>   Drugs 
+     <br/>
+                                 </td>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">cisapride 
+     <br/>
+                                 </td>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">aprepitant 
+     <br/>
+                                 </td>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">Cisapride: Oral ketoconazole potently inhibits the 
+     <br/>  metabolism of cisapride resulting in a mean eight-fold increase in AUC of cisapride, which can lead to serious cardiovascular events including QT prolongation. 
+     <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="left" styleCode="Lrule Botrule Rrule" valign="top">Immunosuppressants 
+     <br/>
+                                 </td>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">everolimus, 
+     <br/>   rapamycin (also 
+     <br/>   known as 
+     <br/>   sirolimus), 
+     <br/>   temsirolimus 
+     <br/>
+                                 </td>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">budesonide, 
+     <br/>   ciclesonide, 
+     <br/>   cyclosporine, 
+     <br/>   dexamethasone, 
+     <br/>   fluticasone, 
+     <br/>   methylprednisolone, 
+     <br/>   tacrolimus 
+     <br/>
+                                 </td>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">Rapamycin (sirolimus): 
+     <br/>   Ketoconazole tablets 200 mg daily for 10 days increased the C
+    
+     <sub>max</sub>and AUC of a single 5 mg dose of sirolimus by 4.3 fold and 10.9 fold, respectively in 23 healthy subjects. 
+     <br/>   Fluticasone: 
+     <br/>   Coadministration of fluticasone propionate and ketoconazole is not recommended unless the potential benefit to the patient outweighs the risk of systemic corticosteroid side effects. 
+     <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="left" styleCode="Lrule Botrule Rrule" valign="top">Lipid Regulating 
+     <br/>  Drugs 
+     <br/>
+                                 </td>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">lovastatin, 
+     <br/>  simvastatin 
+     <br/>
+                                 </td>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">atorvastatin 
+     <br/>
+                                 </td>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">The potential increase in plasma concentrations of atorvastatin, lovastatin and simvastatin when coadministered with ketoconazole tablets may increase the risk of skeletal muscle toxicity, including rhabdomyolysis. 
+     <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="left" styleCode="Lrule Botrule Rrule" valign="top">Respiratory Drugs 
+     <br/>
+                                 </td>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">salmeterol 
+     <br/>
+                                 </td>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                              </tr>
+                              <tr>
+                                 <td align="left" styleCode="Lrule Botrule Rrule" valign="top">Urological Drugs 
+     <br/>
+                                 </td>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                                 <td styleCode=" Botrule Rrule" valign="top"/>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top"> fesoterodine, 
+     <br/>   sildenafil, 
+     <br/>   solifenacin, 
+     <br/>   tadalafil, 
+     <br/>   tolterodine, 
+     <br/>   vardenafil 
+     <br/>
+                                 </td>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">Vardenafil: A single dose of 5 mg of vardenafil should not be exceeded when coadministered with  ketoconazole. 
+     <br/>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="left" styleCode="Lrule Botrule Rrule" valign="top">Other 
+     <br/>
+                                 </td>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">colchicine, in 
+     <br/>  subjects with renal 
+     <br/>  or hepatic impairment; 
+     <br/>  tolvaptan 
+     <br/>
+                                 </td>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">colchicine 
+     <br/>
+                                 </td>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">alcohol, 
+     <br/>  cinacalcet 
+     <br/>
+                                 </td>
+                                 <td align="left" styleCode=" Botrule Rrule" valign="top">Colchicine: The potential increase in plasma concentrations of colchicine when coadministered with ketoconazole tablets may increase the risk of potentially fatal adverse events 
+     <br/>    
+     <br/>  Tolvaptan: Ketoconazole 200 mg administered with tolvaptan increased tolvaptan exposure by 5 fold. Larger doses would be expected to produce larger increases in tolvaptan exposure. There is not adequate experience to define the dose adjustment that would be needed to allow safe use of tolvaptan with strong CYP3A inhibitors such as ketoconazole. 
+     <br/>    
+     <br/>  Alcohol: Exceptional cases have been reported of a disulfiram-like reaction to alcohol, characterized by flushing, rash, peripheral edema, nausea and headache. All symptoms completely resolved within a few hours. 
+     <br/>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </text>
+                     <effectiveTime value="20260204"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID25">
+                     <id root="560a21ed-7460-c980-e063-6394a90a6c7b"/>
+                     <title>Carcinogenesis, Mutagenesis, Impairment of Fertility</title>
+                     <text>
+                        <paragraph ID="ID26">Ketoconazole did not show any signs of mutagenic potential when evaluated using the dominant lethal mutation test or the
+ 
+  <content styleCode="italics">Ames Salmonella</content>microsomal activator assay. Ketoconazole was not carcinogenic in an 18 month, oral study in Swiss albino mice or a 24 month oral carcinogenicity study in Wistar rats at dose levels of 5, 20 and 80 mg/kg/day. The high dose in these studies was approximately 1x (mouse) or 2x (rat) the clinical dose in humans based on a mg/m
+ 
+  <sup>2</sup>comparison.
+
+ </paragraph>
+                     </text>
+                     <effectiveTime value="20180626"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID27">
+                     <id root="560a21ed-7461-c980-e063-6394a90a6c7b"/>
+                     <code code="42228-7" codeSystem="2.16.840.1.113883.6.1" displayName="PREGNANCY SECTION"/>
+                     <title>Pregnancy</title>
+                     <text>
+                        <paragraph ID="ID28">Teratogenic effects</paragraph>
+                        <paragraph>Ketoconazole has been shown to be teratogenic (syndactylia and oligodactylia) in the rat when given in the diet at 80 mg/kg/day (2 times the maximum recommended human dose, based on body surface area comparisons). However, these effects may be related to maternal toxicity, evidence of which also was seen at this and higher dose levels.</paragraph>
+                        <paragraph>There are no adequate and well controlled studies in pregnant women. Ketoconazole tablets should be used during pregnancy only if the potential benefit justifies the potential risk to the fetus.</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Nonteratogenic Effects</content>
+                        </paragraph>
+                        <paragraph>Ketoconazole has also been found to be embryotoxic in the rat when given in the diet at doses higher than 80 mg/kg during the first trimester of gestation.</paragraph>
+                        <paragraph>In addition, dystocia (difficult labor) was noted in rats administered oral ketoconazole during the third trimester of gestation. This occurred when ketoconazole was administered at doses higher than 10 mg/kg (about one fourth the maximum human dose, based on body surface area comparison).</paragraph>
+                     </text>
+                     <effectiveTime value="20230628"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID29">
+                     <id root="560a21ed-7462-c980-e063-6394a90a6c7b"/>
+                     <code code="34080-2" codeSystem="2.16.840.1.113883.6.1" displayName="NURSING MOTHERS SECTION"/>
+                     <title>Nursing Mothers</title>
+                     <text>
+                        <paragraph ID="ID30">Ketoconazole has been shown to be excreted in the milk. Mothers who are under treatment with ketoconazole tablets should not breast feed.</paragraph>
+                     </text>
+                     <effectiveTime value="20180626"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID31">
+                     <id root="560a21ed-7463-c980-e063-6394a90a6c7b"/>
+                     <code code="34081-0" codeSystem="2.16.840.1.113883.6.1" displayName="PEDIATRIC USE SECTION"/>
+                     <title>Pediatric Use</title>
+                     <text>
+                        <paragraph ID="ID32">Ketoconazole tablets have not been systematically studied in children of any age, and essentially no information is available on children under 2 years. Ketoconazole tablets should not be used in pediatric patients unless the potential benefit outweighs the risks.</paragraph>
+                     </text>
+                     <effectiveTime value="20180626"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ID33">
+               <id root="560a21ed-7464-c980-e063-6394a90a6c7b"/>
+               <code code="34084-4" codeSystem="2.16.840.1.113883.6.1" displayName="ADVERSE REACTIONS SECTION"/>
+               <title>ADVERSE REACTIONS</title>
+               <text>
+                  <paragraph ID="ID34">Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice.</paragraph>
+                  <paragraph>The following adverse reactions were reported in clinical trials:</paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Immune System Disorders:</content>anaphylactoid reaction
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Endocrine Disorders:</content>gynecomastia
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Metabolism and Nutrition Disorders:</content>alcohol intolerance, anorexia, hyperlipidemia, increased appetite
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Psychiatric Disorders:</content>insomnia, nervousness
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Nervous System Disorders:</content>headache, dizziness, paresthesia, somnolence
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Eye Disorders:</content>photophobia
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Vascular Disorders:</content>orthostatic hypotension
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Respiratory, Thoracic and Mediastinal Disorders:</content>epistaxis
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Gastrointestinal Disorders:</content>vomiting, diarrhea, nausea, constipation, abdominal pain, abdominal pain upper, dry mouth, dysgeusia, dyspepsia, flatulence, tongue discoloration
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Hepatobiliary Disorders:</content>hepatitis, jaundice, hepatic function abnormal
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Skin and Subcutaneous Tissues Disorders:</content>erythema multiforme, rash, dermatitis, erythema, urticaria, pruritus, alopecia, xeroderma
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Musculoskeletal and Connective Tissue Disorders:</content>myalgia
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Reproductive System and Breast Disorders:</content>menstrual disorder
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">General Disorders and Administration Site Conditions:</content>asthenia, fatigue, hot flush, malaise, edema peripheral, pyrexia, chills
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Investigations:</content>platelet count decreased.
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Postmarketing Experience</content>
+                  </paragraph>
+                  <paragraph>The following adverse reactions have been identified during postapproval use of ketoconazole tablets. Because these reactions are reported voluntarily from a population of uncertain size, it is not always possible to reliably estimate their frequency or establish a causal relationship to drug exposure.</paragraph>
+                  <paragraph>The following adverse reactions were reported during postmarketing experience:</paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Blood and Lymphatic System Disorders:</content>thrombocytopenia
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Immune System Disorders:</content>allergic conditions including anaphylactic shock, anaphylactic reaction, angioneurotic edema
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Endocrine Disorders:</content>adrenocortical insufficiency
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Nervous System Disorders:</content>reversible intracranial pressure increased (e.g., papilloedema, fontanelle bulging in infants)
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Hepatobiliary Disorders:</content>serious hepatotoxicity including hepatitis cholestatic, biopsy-confirmed hepatic necrosis, cirrhosis, hepatic failure including cases resulting in transplantation or death
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Skin and Subcutaneous Tissue Disorders:</content>acute generalized exanthematous pustulosis, photosensitivity
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Musculoskeletal and Connective Tissue Disorders:</content>arthralgia
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Reproductive System and Breast Disorders:</content>erectile dysfunction; with doses higher than the recommended therapeutic dose of 200 or 400 mg daily, azoospermia.
+
+ </paragraph>
+               </text>
+               <effectiveTime value="20180305"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID35">
+               <id root="560a21ed-7465-c980-e063-6394a90a6c7b"/>
+               <code code="34088-5" codeSystem="2.16.840.1.113883.6.1" displayName="OVERDOSAGE SECTION"/>
+               <title>OVERDOSAGE</title>
+               <text>
+                  <paragraph ID="ID36">In the event of acute accidental overdose, treatment consists of supportive and symptomatic measures. Within the first hour after ingestion, activated charcoal may be administered.</paragraph>
+               </text>
+               <effectiveTime value="20180305"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID37">
+               <id root="560a21ed-7466-c980-e063-6394a90a6c7b"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>DOSAGE AND ADMINISTRATION</title>
+               <text>
+                  <paragraph ID="ID38">There should be laboratory as well as clinical documentation of infection prior to starting ketoconazole therapy. The usual duration of therapy for systemic infection is 6 months. Treatment should be continued until active fungal infection has subsided.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Adults</content>
+                  </paragraph>
+                  <paragraph>The recommended starting dose of ketoconazole tablets is a single daily administration of 200 mg (one tablet). If clinical responsiveness is insufficient within the expected time, the dose of ketoconazole tablets may be increased to 400 mg (two tablets) once daily.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Children</content>
+                  </paragraph>
+                  <paragraph>In small numbers of children over 2 years of age, a single daily dose of 3.3 to 6.6 mg/kg has been used. Ketoconazole tablets have not been studied in children under 2 years of age.</paragraph>
+               </text>
+               <effectiveTime value="20260204"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID39">
+               <id root="560a2258-7aec-da94-e063-6394a90a8c96"/>
+               <code code="34069-5" codeSystem="2.16.840.1.113883.6.1" displayName="HOW SUPPLIED SECTION"/>
+               <title>HOW SUPPLIED</title>
+               <text>
+                  <paragraph>Each ketoconazole tablet USP contains ketoconazole, USP 200 mg.</paragraph>
+                  <paragraph>The tablets are white to off white, round shaped flat-beveled debossed with "S" and "500" on the scored side and plain on the other side.</paragraph>
+                  <paragraph>Available in:</paragraph>
+                  <paragraph>Bottles of 30 (NDC 72789-052-30)</paragraph>
+                  <paragraph/>
+                  <paragraph>Store at 20° to 25° C (68° to 77° F) [see USP Controlled Room Temperature].</paragraph>
+                  <paragraph>Protect from moisture.</paragraph>
+                  <paragraph>Keep this and all medications out of reach of children.</paragraph>
+               </text>
+               <effectiveTime value="20260204"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID41">
+               <id root="560a21ed-7468-c980-e063-6394a90a6c7b"/>
+               <code code="42231-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL MEDGUIDE SECTION"/>
+               <text>
+                  <paragraph ID="ID42">
+                     <content styleCode="bold">MEDICATION GUIDE</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">KETOCONAZOLE (KEE-toe-KON-a-zole) TABLETS USP</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">What is the most important information I should know about ketoconazole tablets?</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold"> </content>
+                  </paragraph>
+                  <paragraph>Ketoconazole tablets are not the only medicine available to treat fungal infections and should only be used when other medicines are not right for you. Talk to your healthcare provider to find out if ketoconazole tablets are right for you.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold"> </content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Ketoconazole tablets can cause serious side effects, including:</content>
+                  </paragraph>
+                  <list listType="unordered" styleCode="Disc">
+                     <item>
+                        <content styleCode="bold">liver problems (hepatotoxicity). Some people who were treated with ketoconazole the active ingredient in ketoconazole tablets, had serious liver problems that led to death or the need for a liver transplant</content>. Call your healthcare provider right away if you have any of the following symptoms:   
+ 
+  </item>
+                     <item>loss of appetite or start losing weight (anorexia)</item>
+                     <item>nausea or vomiting</item>
+                     <item>feel tired</item>
+                     <item>stomach pain or tenderness</item>
+                     <item>dark urine or light colored stools</item>
+                     <item>yellowing of your skin or the whites of your eyes</item>
+                     <item>fever or rash</item>
+                  </list>
+                  <list listType="unordered" styleCode="Disc">
+                     <item>
+                        <content styleCode="bold">changes in the electrical activity of your heart called QT prolongation. QT prolongation can cause irregular heart beats that can be life threatening.</content>This can happen when ketoconazole tablets are taken with certain medicines, such as dofetilide, quinidine, pimozide, lurasidone, cisapride, methadone, disopyramide, dronedarone, and ranolazine. Talk to your healthcare provider about other medicines you are taking before you start taking ketoconazole tablets. Tell your healthcare provider right away if you feel faint, lightheaded, dizzy, or feel your heart beating irregularly or fast. These may be symptoms related to QT prolongation.
+ 
+  </item>
+                  </list>
+                  <paragraph ID="ID45">
+                     <content styleCode="bold">What are ketoconazole tablets?</content>
+                  </paragraph>
+                  <list listType="unordered" styleCode="Disc">
+                     <item>Ketoconazole tablets are prescription medicine used to treat serious fungal infections including: blastomycosis, coccidioidomycosis, histoplasmosis, chromomycosis, and paracoccidioidomycosis.</item>
+                     <item>Ketoconazole tablets are not for people with fungal nail infections.</item>
+                     <item>Ketoconazole tablets have not been approved for the treatment of advanced prostate cancer or Cushing's syndrome. The safety and efficacy have not been established.</item>
+                     <item>Ketoconazole tablets should only be used in children if prescribed by the healthcare provider who has determined that the benefits outweigh the risks.</item>
+                  </list>
+                  <paragraph ID="ID47">
+                     <content styleCode="bold">Who should not take ketoconazole tablets?</content>
+                  </paragraph>
+                  <list listType="unordered" styleCode="Disc">
+                     <item>
+                        <content styleCode="bold">Do not take ketoconazole tablets if you:</content>
+                     </item>
+                     <item>have liver problems</item>
+                     <item>take lurasidone. Taking ketoconazole tablets with this medicine may increase the risk of serious side effects.</item>
+                     <item>take simvastatin, or lovastatin. Ketoconazole tablets when taken with these medicines may cause muscle problems.</item>
+                     <item>take eplerenone, dihydroergotamine, ergotamine, ergometrine (ergonovine), methylergometrine (methylergonovine) or nisoldipine.</item>
+                     <item>take triazolam, midazolam, or alprazolam. Taking ketoconazole tablets with these medicines may make you very drowsy and make your drowsiness last longer.</item>
+                     <item>are allergic to ketoconazole or any of the ingredients in ketoconazole tablets. See the end of this Medication Guide for a complete list of ingredients in ketoconazole tablets.</item>
+                  </list>
+                  <paragraph ID="ID49">
+                     <content styleCode="bold">Before you take ketoconazole tablets, tell your healthcare provider if you:</content>
+                  </paragraph>
+                  <list listType="unordered" styleCode="Disc">
+                     <item>have had an abnormal heart rhythm tracing (ECG) or anyone in your family have or have had a heart problem called "congenital long QT syndrome".</item>
+                     <item>have adrenal insufficiency.</item>
+                     <item>are pregnant or plan to become pregnant. It is not known if ketoconazole tablets will harm your unborn baby.</item>
+                     <item>are breastfeeding or plan to breastfeed. Ketoconazole can pass into your breast milk. You and your healthcare provider should decide if you will take ketoconazole tablets or breastfeed. You should
+  
+   <content styleCode="bold">NOT</content>do both.
+ 
+  </item>
+                  </list>
+                  <paragraph ID="ID51">Tell your healthcare provider about all the medicines you take, including prescription and over-the-counter medicines, vitamins, and herbal supplements.</paragraph>
+                  <paragraph>Using ketoconazole tablets with certain other medicines may affect each other. Using ketoconazole tablets with other medicines can cause serious side effects.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold"> </content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">How should I take ketoconazole tablets?</content>
+                  </paragraph>
+                  <list listType="unordered" styleCode="Disc">
+                     <item>Take ketoconazole tablets 1 time each day.</item>
+                     <item>Do not stop taking ketoconazole tablets without first talking to your healthcare provider.</item>
+                  </list>
+                  <paragraph ID="ID53">
+                     <content styleCode="bold">What should I avoid while taking ketoconazole tablets?</content>
+                  </paragraph>
+                  <list listType="unordered" styleCode="Disc">
+                     <item>Do not drink alcohol while taking ketoconazole tablets.</item>
+                  </list>
+                  <paragraph ID="ID55">
+                     <content styleCode="bold">What are the possible side effects of ketoconazole tablets?</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Ketoconazole tablets may cause serious side effects, including:</content>
+                  </paragraph>
+                  <list listType="unordered" styleCode="Disc">
+                     <item>
+                        <content styleCode="bold">See "What is the most important information I should know about ketoconazole tablets?"</content>
+                     </item>
+                     <item>
+                        <content styleCode="bold">adrenal insufficiency.</content>Adrenal insufficiency is a condition in which the adrenal glands do not make enough steroid hormones.  Ketoconazole tablets may cause adrenal insufficiency if you take a high dose. Your healthcare provider will follow you closely if you have adrenal insufficiency or if you are taking prednisone or other similar medicines for long periods of time. Call your healthcare provider right away if you have symptoms of adrenal insufficiency such as tiredness, weakness, dizziness, nausea, and vomiting.
+ 
+  </item>
+                     <item>
+                        <content styleCode="bold">serious allergic reactions.</content>Some people can have a serious allergic reaction to ketoconazole tablets. Stop taking ketoconazole tablets and go to the nearest hospital emergency room right away if you get a rash, itching, hives, fever, swelling of the lips or tongue, chest pain, or have trouble breathing. These could be signs of a serious allergic reaction.
+ 
+  </item>
+                     <item>
+                        <content styleCode="bold">muscle problems.</content>Taking certain medicines with ketoconazole tablets may cause muscle problems. See
+  
+   <content styleCode="bold">"Who should not take ketoconazole tablets?"</content>
+                     </item>
+                  </list>
+                  <paragraph ID="ID57">The most common side effects of ketoconazole tablets include nausea, headache, diarrhea, stomach pain, and abnormal liver function tests.</paragraph>
+                  <paragraph>These are not all the possible side effects of ketoconazole tablets. For more information, ask your healthcare provider or pharmacist.</paragraph>
+                  <paragraph>Call your doctor for medical advice about side effects. You may report side effects to FDA at 1-800- FDA-1088.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">How should I store ketoconazole tablets?</content>
+                  </paragraph>
+                  <list listType="unordered" styleCode="Disc">
+                     <item>Store ketoconazole tablets at room temperature between 68° and 77° F (20° and 25° C)</item>
+                     <item>Keep ketoconazole tablets dry.</item>
+                  </list>
+                  <paragraph ID="ID59">
+                     <content styleCode="bold">General information about the safe and effective use of ketoconazole tablets.</content>
+                  </paragraph>
+                  <paragraph>Medications are sometimes prescribed for purposes other than those listed in a Medication Guide. Do not use ketoconazole tablets for a condition for which they were not prescribed. Do not give ketoconazole tablets to other people, even if they have the same symptoms that you have. They may harm them.</paragraph>
+                  <paragraph>This Medication Guide summarizes the most important information about ketoconazole tablets.</paragraph>
+                  <paragraph>If you would like more information, talk to your healthcare provider. You can ask your pharmacist or healthcare provider for information about ketoconazole tablets that is written for health professionals.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold"> </content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">What are the ingredients in ketoconazole tablets, USP?</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Active ingredient:</content>ketoconazole, USP
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Inactive ingredients:</content>colloidal silicon dioxide, corn starch, lactose monohydrate, magnesium stearate, microcrystalline cellulose, and povidone.
+
+ </paragraph>
+                  <paragraph>This Medication Guide has been approved by the U.S. Food and Drug Administration.</paragraph>
+                  <paragraph>Manufactured by:</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Strides Pharma Science Limited</content>
+                  </paragraph>
+                  <paragraph>Puducherry - 605014, India.</paragraph>
+                  <paragraph>Distributed by:</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Strides Pharma Inc,</content>
+                  </paragraph>
+                  <paragraph>Bridgewater, NJ 08807</paragraph>
+                  <paragraph>Revised: 07/2025</paragraph>
+               </text>
+               <effectiveTime value="20260204"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID60">
+               <id root="560a21ed-7469-c980-e063-6394a90a6c7b"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PACKAGE LABEL.PRINCIPAL DISPLAY PANEL</title>
+               <text>
+                  <renderMultiMedia referencedObject="MM2"/>
+               </text>
+               <effectiveTime value="20251215"/>
+               <component>
+                  <observationMedia ID="MM2">
+                     <text>72789052 Label</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="72789052.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

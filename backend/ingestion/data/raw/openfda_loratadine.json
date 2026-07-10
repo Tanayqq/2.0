@@ -1,0 +1,101 @@
+{
+  "spl_product_data_elements": [
+    "loratadine loratadine LORATADINE LORATADINE CROSCARMELLOSE SODIUM CROSPOVIDONE (15 MPA.S AT 5%) HYPROMELLOSE, UNSPECIFIED MAGNESIUM STEARATE MANNITOL MICROCRYSTALLINE CELLULOSE SUCRALOSE L;L"
+  ],
+  "active_ingredient": [
+    "Active ingredient (in each tablet) Loratadine 10 mg"
+  ],
+  "purpose": [
+    "Purpose Antihistamine"
+  ],
+  "indications_and_usage": [
+    "Uses temporarily relieves these symptoms due to hay fever or other upper respiratory allergies: • runny nose • itchy, watery eyes • sneezing • itching of the nose or throat"
+  ],
+  "warnings": [
+    "Warnings Do not use if you have ever had an allergic reaction to this product or any of its ingredients. Ask a doctor before use if you have liver or kidney disease. Your doctor should determine if you need a different dose. When using this product do not take more than directed. Taking more than directed may cause drowsiness. Stop use and ask a doctor if an allergic reaction to this product occurs. Seek medical help right away. If pregnant or breast-feeding, ask a health professional before use."
+  ],
+  "do_not_use": [
+    "Do not use if you have ever had an allergic reaction to this product or any of its ingredients."
+  ],
+  "ask_doctor": [
+    "Ask a doctor before use if you have liver or kidney disease. Your doctor should determine if you need a different dose."
+  ],
+  "when_using": [
+    "When using this product do not take more than directed. Taking more than directed may cause drowsiness."
+  ],
+  "stop_use": [
+    "Stop use and ask a doctor if an allergic reaction to this product occurs. Seek medical help right away."
+  ],
+  "pregnancy_or_breast_feeding": [
+    "If pregnant or breast-feeding, ask a health professional before use."
+  ],
+  "keep_out_of_reach_of_children": [
+    "Keep out of reach of children. In case of overdose, get medical help or contact a Poison Control Center right away (1-800-222-1222)."
+  ],
+  "dosage_and_administration": [
+    "Directions • place 1 tablet on tongue; tablet disintegrates, with or without water adults and children 6 years and over 1 tablet daily; not more than 1 tablet in 24 hours children under 6 years of age ask a doctor consumers with liver or kidney disease ask a doctor"
+  ],
+  "dosage_and_administration_table": [
+    "<table width=\"100%\"><col width=\"39%\"/><col width=\"48%\"/><tbody><tr><td styleCode=\"Rrule Botrule Toprule \" valign=\"top\"><list listType=\"unordered\"><item><caption> </caption>adults and children 6 years and over</item></list></td><td styleCode=\"Botrule Lrule Toprule \" valign=\"top\"><list listType=\"unordered\"><item><caption> </caption>1 tablet daily; not more than 1 tablet in 24 hours</item></list></td></tr><tr><td styleCode=\"Rrule Botrule \" valign=\"top\"><list listType=\"unordered\"><item><caption> </caption>children under 6 years of age</item></list></td><td styleCode=\"Lrule Toprule Botrule \" valign=\"top\"><list listType=\"unordered\"><item><caption> </caption>ask a doctor</item></list></td></tr><tr><td styleCode=\"Rrule Botrule Toprule \" valign=\"top\"><list listType=\"unordered\"><item><caption> </caption>consumers with liver or kidney disease</item></list></td><td styleCode=\"Botrule Lrule Toprule \" valign=\"top\"><list listType=\"unordered\"><item><caption> </caption>ask a doctor</item></list></td></tr></tbody></table>"
+  ],
+  "other_safety_information": [
+    "Other information • do not use if printed blister unit is broken or torn • store between 20° to 25°C (68° to 77°F) • use tablet immediately after opening individual blister"
+  ],
+  "inactive_ingredient": [
+    "Inactive ingredients croscarmellose sodium, crospovidone, hypromellose, magnesium stearate, mannitol, microcrystalline cellulose, natural and artificial mint flavor, sucralose"
+  ],
+  "questions": [
+    "Questions or comments? 1-800-719-9260"
+  ],
+  "package_label_principal_display_panel": [
+    "Package/Label Principal Display Panel FREE FROM | GLUTEN FREE Compare to the active ingredient of Claritin ® RediTabs ® 24 HOUR FOR JUNIORS & UP AGES 6 YEARS & OLDER ORIGINAL PRESCRIPTION STRENGTH LORATADINE ORALLY DISINTEGRATING TABLETS, 10 mg ANTIHISTAMINE NON-DROWSY* INDOOR & OUTDOOR ALLERGIES 24 HOUR RELIEF OF Sneezing • Runny nose • Itchy, watery eyes Itchy throat or nose ACTUAL SIZE NO WATER NEEDED MELTS IN YOUR MOUTH *WHEN TAKEN AS DIRECTED. SEE DRUG FACTS PANEL. 30 TABLETS loratadine-image"
+  ],
+  "set_id": "004dd408-e3ff-4ba6-b859-beebe364f0e1",
+  "id": "754e27cd-8990-46b7-9325-16e1765c0807",
+  "effective_time": "20231109",
+  "version": "3",
+  "openfda": {
+    "application_number": [
+      "ANDA076011"
+    ],
+    "brand_name": [
+      "loratadine"
+    ],
+    "generic_name": [
+      "LORATADINE"
+    ],
+    "manufacturer_name": [
+      "Rite Aid Corporation"
+    ],
+    "product_ndc": [
+      "11822-0919"
+    ],
+    "product_type": [
+      "HUMAN OTC DRUG"
+    ],
+    "route": [
+      "ORAL"
+    ],
+    "substance_name": [
+      "LORATADINE"
+    ],
+    "rxcui": [
+      "311373"
+    ],
+    "spl_id": [
+      "754e27cd-8990-46b7-9325-16e1765c0807"
+    ],
+    "spl_set_id": [
+      "004dd408-e3ff-4ba6-b859-beebe364f0e1"
+    ],
+    "package_ndc": [
+      "11822-0919-0"
+    ],
+    "is_original_packager": [
+      true
+    ],
+    "unii": [
+      "7AJO3BO7QN"
+    ]
+  }
+}

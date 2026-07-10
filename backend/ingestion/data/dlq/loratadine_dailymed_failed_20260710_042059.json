@@ -1,0 +1,108 @@
+{
+  "error_reason": "Found section with missing title",
+  "failed_at": "2026-07-10T04:20:59.387827Z",
+  "document": {
+    "drug": "Loratadine",
+    "generic_name": "Loratadine",
+    "source": "DailyMed",
+    "country": "US",
+    "version": "4",
+    "effective_date": "2026-07-06",
+    "revision": "b963d83b-584f-c447-e053-2995a90ad973",
+    "ingested_at": "2026-07-10T04:20:59.383408Z",
+    "sections": [
+      {
+        "title": "",
+        "content": "artificial flavors, ascorbic acid, glycerin, maltitol, monobasic sodium phosphate monohydrate, phosphoric acid, propylene glycol, purified water, sodium benzoate, sodium metabisulfite, sorbitol, sucralose"
+      },
+      {
+        "title": "Indications",
+        "content": "temporarily relieves these symptoms due to hay fever or other upper respiratory allergies:\n\nrunny nose\n\nitchy, watery eyes\n\nsneezing\n\nitching of the nose or throat"
+      },
+      {
+        "title": "Ask A Doctor Before Use If You Have",
+        "content": "liver or kidney disease. Your doctor should determine if you need a different dose."
+      },
+      {
+        "title": "When Using This Product",
+        "content": "do not take more than directed. Taking more than directed may cause drowsiness."
+      },
+      {
+        "title": "Stop Use And Ask A Doctor If",
+        "content": "an allergic reaction to this product occurs. Seek medical help right away."
+      },
+      {
+        "title": "If Pregnant Or Breast-Feeding,",
+        "content": "ask a health professional before use."
+      },
+      {
+        "title": "Keep Out Of Reach Of Children.",
+        "content": "In case of overdose, get medical help or contact a Poison Control Center (1-800-222-1222) right away."
+      },
+      {
+        "title": "Dosage",
+        "content": "use only with enclosed dosing cup\n\nmL = milliliter\n\nadults and children 6 years and over\n\n10 mL daily; do not take more than 10 mL in 24 hours\n\nchildren 2 to under 6 years of age\n\n5 mL daily; do not take more than 5 mL in 24 hours\n\nchildren under 2 years of age\n\nask a doctor\n\nconsumers with liver or kidney disease\n\nask a doctor"
+      },
+      {
+        "title": "Storage",
+        "content": "each 5 mL contains: sodium 6 mg\n\ndo not use if carton is opened, or if cap safety seal is broken or missing.\n\nstore at 20° to 25°C (68° to 77°F)"
+      },
+      {
+        "title": "Package Label-Principal Display Panel - 5 Mg/5 Ml  (120 Ml Bottle)",
+        "content": "NDC 30142-062-24\n\nKroger®\n\nhealth\n\nAGES\n2\nYEARS &\nOLDER\n\nCHILDREN'S\nNON DROWSY*\nDye-Free Allergy Relief\n\nLoratadine\nOral Solution\n\nUSP,\n5 mg/5 mL /\nAntihistamine\n\nIndoor & Outdoor Allergies\n\nContains sodium metabisulfite, a sulfite that\nmay cause allergic-type reactions.\n*When taken as directed. See Drug Facts Panel.\n\n24 HOUR RELIEF\n\nFOR RELIEF OF:\n\nRUNNY NOSE\n\nSNEEZING\n\nITCHY, WATERY EYES\n\nITCHY THROAT\n\nOR NOSE\n\nGRAPE\nFLAVOR\n\n4 FL OZ\n(120 mL)"
+      },
+      {
+        "title": "Package Label-Principal Display Panel - 5 Mg/5 Ml (120 Ml Carton)",
+        "content": "NDC 30142-062-24\n\nKroger®\n\nhealth\n\nCOMPARE TO THE ACTIVE INGREDIENT\nIN CHILDREN'S CLARITIN® SYRUP 24-HOUR†\n\nCHILDREN'S\n\nNON DROWSY*\nDye-Free\nAllergy\nRelief\n\nAGES\n\n2\n\nYEARS &\n\nOLDER\n\nLoratadine\nOral Solution\n\nUSP,\n5 mg/5 mL\n\nAntihistamine\n\nIndoor & Outdoor Allergies\n\nContains sodium metabisulfite,\na sulfite that may cause\nallergic-type reactions.\n*When taken as directed.\nSee Drug Facts Panel.\n\nDOSING CUP\nINCLUDED\n\n24 HOUR RELIEF\n\nFOR RELIEF OF:\n\nRUNNY NOSE\n\nSNEEZING\n\nITCHY, WATERY EYES\n\nITCHY THROAT\n\nOR NOSE\n\nGRAPE\nFLAVOR\n\n4 FL OZ\n\n(120 mL)"
+      },
+      {
+        "title": "Active Ingredient",
+        "content": "Active ingredient (in each tablet) Loratadine 10 mg"
+      },
+      {
+        "title": "Purpose",
+        "content": "Purpose Antihistamine"
+      },
+      {
+        "title": "Warnings",
+        "content": "Warnings Do not use if you have ever had an allergic reaction to this product or any of its ingredients. Ask a doctor before use if you have liver or kidney disease. Your doctor should determine if you need a different dose. When using this product do not take more than directed. Taking more than directed may cause drowsiness. Stop use and ask a doctor if an allergic reaction to this product occurs. Seek medical help right away. If pregnant or breast-feeding, ask a health professional before use."
+      },
+      {
+        "title": "Do Not Use",
+        "content": "Do not use if you have ever had an allergic reaction to this product or any of its ingredients."
+      },
+      {
+        "title": "Ask Doctor",
+        "content": "Ask a doctor before use if you have liver or kidney disease. Your doctor should determine if you need a different dose."
+      },
+      {
+        "title": "When Using",
+        "content": "When using this product do not take more than directed. Taking more than directed may cause drowsiness."
+      },
+      {
+        "title": "Stop Use",
+        "content": "Stop use and ask a doctor if an allergic reaction to this product occurs. Seek medical help right away."
+      },
+      {
+        "title": "Pregnancy",
+        "content": "If pregnant or breast-feeding, ask a health professional before use."
+      },
+      {
+        "title": "Keep Out Of Reach Of Children",
+        "content": "Keep out of reach of children. In case of overdose, get medical help or contact a Poison Control Center right away (1-800-222-1222)."
+      },
+      {
+        "title": "Other Safety Information",
+        "content": "Other information • do not use if printed blister unit is broken or torn • store between 20° to 25°C (68° to 77°F) • use tablet immediately after opening individual blister"
+      },
+      {
+        "title": "Inactive Ingredient",
+        "content": "Inactive ingredients croscarmellose sodium, crospovidone, hypromellose, magnesium stearate, mannitol, microcrystalline cellulose, natural and artificial mint flavor, sucralose"
+      },
+      {
+        "title": "Questions",
+        "content": "Questions or comments? 1-800-719-9260"
+      }
+    ]
+  }
+}
