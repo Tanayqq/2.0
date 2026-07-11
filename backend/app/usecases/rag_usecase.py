@@ -434,7 +434,7 @@ All citations must be inline and directly attached to the statement they support
         logger.info("generating_answer_via_llm", provider=settings.ACTIVE_LLM_PROVIDER, prompt_version=self.prompt_version)
         start_llm = time.time()
         answer_text = self.llm.generate(prompt)
-        generation_time = time.time() - start_llm
+        llm_time = time.time() - start_llm
         
         # Post-processing citation validation (Tied to Chunks)
         if "Not found in available sources" in answer_text:
@@ -550,9 +550,9 @@ All citations must be inline and directly attached to the statement they support
             else:
                 # Check for uncited factual sentences
                 import re as regex
-                sentences = [s.strip() for s in regex.split(r'(?<=\\.)\\s', answer_text) if s.strip()]
+                sentences = [s.strip() for s in regex.split(r'(?<=\.)\s+', answer_text) if s.strip()]
                 for sentence in sentences:
-                    if sentence and not regex.search(r'\\\\[([0-9]+)\\\\]', sentence):
+                    if sentence and not regex.search(r'\[([0-9]+)\]', sentence):
                         logger.error("validation_failed", reason="uncited_sentence", sentence=sentence)
                         answer_text = "Unable to generate a fully grounded answer from the indexed corpus."
                         citations = []
