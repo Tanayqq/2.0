@@ -16,6 +16,7 @@ def get_usecase(
 ):
     return ProcessClinicalQueryUseCase(llm_provider=llm, vector_db=db, embedding_model=embed, cross_encoder=cross)
 
+import traceback
 from fastapi.responses import JSONResponse
 
 @router.post("/query", response_model=AnswerResponse)
@@ -24,7 +25,8 @@ def handle_query(query: MedicalQuery, usecase: ProcessClinicalQueryUseCase = Dep
         return usecase.execute(query)
     except Exception as e:
         logger.exception("Query failed", error=str(e))
-        return JSONResponse(status_code=500, content={"success": False, "error": "Internal Server Error"})
+        error_details = traceback.format_exc()
+        return JSONResponse(status_code=500, content={"success": False, "error": str(e), "traceback": error_details})
 
 @router.post("/debug/retrieval")
 def debug_retrieval(query: MedicalQuery, usecase: ProcessClinicalQueryUseCase = Depends(get_usecase)):
