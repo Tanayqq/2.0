@@ -33,7 +33,14 @@ export const queryMedicalAPI = async (question: string): Promise<AnswerResponse>
   });
 
   if (!response.ok) {
-    throw new Error(`API Error: ${response.statusText}`);
+    let errorMsg = response.statusText;
+    try {
+      const errorData = await response.json();
+      if (errorData.error) errorMsg = errorData.error;
+    } catch (e) {
+      // Ignore JSON parse errors if response is not JSON
+    }
+    throw new Error(`API Error: ${errorMsg}`);
   }
 
   return response.json();
