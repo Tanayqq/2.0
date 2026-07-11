@@ -177,6 +177,8 @@ def calculate_metrics(item, response, debug_retrieval, latency):
             
     # Citation accuracy
     cited_ids = [c.document_id for c in response.citations]
+    cited_uuids = [c.uuid for c in response.citations if getattr(c, 'uuid', None)]
+    
     # In Phase 1.7.1 we switched to UUIDs for document_id in frontend, but in eval_harness we check if it's in valid UUIDs.
     valid_uuids = {c["uuid"] for c in retrieved_chunks}
     
@@ -188,8 +190,8 @@ def calculate_metrics(item, response, debug_retrieval, latency):
             # We expected citations but got none
             metrics["citation_accuracy"] = 0.0
     else:
-        valid_citations = sum(1 for cid in cited_ids if cid in valid_uuids)
-        metrics["citation_accuracy"] = (valid_citations / len(cited_ids)) * 100
+        valid_citations = sum(1 for cid in cited_uuids if cid in valid_uuids)
+        metrics["citation_accuracy"] = (valid_citations / len(cited_uuids)) * 100 if cited_uuids else 0.0
         
     # Phase 1.7.2 Strict Checks
     # 1. Uncited Sentences / Validation failures
