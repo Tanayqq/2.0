@@ -34,7 +34,11 @@ class GroqProvider(LLMProviderProtocol):
                 msg = str(e)
                 match = re.search(r"try again in\s*([0-9.]+)", msg, re.IGNORECASE)
                 if match:
-                    wait_time = max(35.0, float(match.group(1)) + 1.0)
+                    wait_time = max(10.0, float(match.group(1)) + 1.0)
+                
+                # If wait time is too long for a web request, fail fast
+                if wait_time > 10.0:
+                    raise RuntimeError(f"Groq API rate limit reached. Please try again in {int(wait_time)} seconds.")
                 
                 print(f"\n[RateLimit] Groq API rate limit reached. Waiting for {wait_time:.2f} seconds before retrying (Attempt {retries+1}/{max_retries})...")
                 time.sleep(wait_time)
@@ -42,10 +46,7 @@ class GroqProvider(LLMProviderProtocol):
             except Exception as e:
                 msg = str(e)
                 if "rate limit" in msg.lower() or "429" in msg:
-                    wait_time = 40.0
-                    print(f"\n[RateLimit] Rate limit detected: {msg}. Waiting for {wait_time}s before retrying (Attempt {retries+1}/{max_retries})...")
-                    time.sleep(wait_time)
-                    retries += 1
+                    raise RuntimeError(f"Groq API rate limit reached: {msg}. Please try again later.")
                 else:
                     raise e
                     
