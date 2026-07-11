@@ -147,7 +147,7 @@ export default function App() {
           <h1 className="text-xl font-bold tracking-tight">MedRef Clinical Platform</h1>
         </div>
         <div className="text-sm text-slate-400">
-          <span className="font-semibold text-teal-400">Environment: </span> Development
+          <span className="font-semibold text-teal-400">Environment: </span> {import.meta.env.MODE === 'production' ? 'Production' : 'Development'}
         </div>
       </header>
 
