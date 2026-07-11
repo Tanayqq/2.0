@@ -381,7 +381,9 @@ All citations must be inline and directly attached to the statement they support
                 "total_retrieved": retrieval_stats["total_retrieved"],
                 "total_filtered": retrieval_stats["total_filtered"],
                 "threshold_applied": retrieval_stats["threshold_applied"],
-                "confidence": confidence
+                "confidence": confidence,
+                "raw_retrieved_log": retrieval_stats.get("raw_retrieved_log", []),
+                "rejection_log": retrieval_stats.get("rejection_log", [])
             }
         }
         
