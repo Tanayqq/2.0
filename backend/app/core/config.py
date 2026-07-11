@@ -25,7 +25,7 @@ class Settings(BaseSettings):
     SIMILARITY_THRESHOLD: float = 0.75
     
     # Network Configuration
-    FRONTEND_URL: str = "http://localhost:5173"
+    CORS_ORIGINS: str = "http://localhost:5173,https://medref-pearl.vercel.app"
     APP_VERSION: str = "1.0.0"
     
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")

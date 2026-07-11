@@ -177,23 +177,84 @@ def calculate_metrics(item, response, debug_retrieval, latency):
             
     # Citation accuracy
     cited_ids = [c.document_id for c in response.citations]
-    valid_ranks = {str(c["rank"]) for c in retrieved_chunks}
+    # In Phase 1.7.1 we switched to UUIDs for document_id in frontend, but in eval_harness we check if it's in valid UUIDs.
+    valid_uuids = {c["uuid"] for c in retrieved_chunks}
     
     if not cited_ids:
         # If response was not found, citations must be empty
-        if is_unfound_query or "Not found in available sources" in response.answer:
+        if is_unfound_query or "Not found in available sources" in response.answer or "Unable to generate" in response.answer:
             metrics["citation_accuracy"] = 100.0
         else:
             # We expected citations but got none
             metrics["citation_accuracy"] = 0.0
     else:
-        valid_citations = sum(1 for cid in cited_ids if cid in valid_ranks)
+        valid_citations = sum(1 for cid in cited_ids if cid in valid_uuids)
         metrics["citation_accuracy"] = (valid_citations / len(cited_ids)) * 100
         
-    # Check if this query passes (Groundedness >= 50%, Citation Accuracy >= 80%, Guardrail = 100%, and Latency <= 30.0s)
+    # Phase 1.7.2 Strict Checks
+    # 1. Uncited Sentences / Validation failures
+    if response.metadata.get("validation_error"):
+        metrics["citation_accuracy"] = 0.0
+        
+    # 2. Bibliography vs Inline consistency
+    import re
+    inline_refs = set(re.findall(r'\\\\[([0-9]+)\\\\]', response.answer))
+    bib_refs = set(cited_ids)
+    if inline_refs != bib_refs:
+        metrics["citation_accuracy"] = 0.0
+        
+    # 3. Drug Isolation / Metadata filtering
+    from app.usecases.drug_resolver import DrugNameResolver
+    resolved_drugs = DrugNameResolver.resolve(item["question"])
+    if resolved_drugs:
+        allowed_drugs = {d.lower() for d in resolved_drugs}
+        for chunk in retrieved_chunks:
+            chunk_drug = chunk.get("drug", "").lower()
+            if chunk_drug and chunk_drug not in allowed_drugs:
+                metrics["strict_guardrail_compliant"] = 0.0
+                break
+                
+    # 4. Strict Section Matching
+    section_keyword_map = {
+        "contraindication": "Contraindications",
+        "warning": "Warnings",
+        "boxed warning": "Warnings",
+        "black box": "Warnings",
+        "precaution": "Precautions",
+        "pregnancy": "Pregnancy",
+        "lactation": "Lactation",
+        "nursing": "Lactation",
+        "pediatric": "Pediatric Use",
+        "child": "Pediatric Use",
+        "geriatric": "Geriatric Use",
+        "elderly": "Geriatric Use",
+        "adverse": "Adverse Reactions",
+        "side effect": "Adverse Reactions",
+        "overdosage": "Overdosage",
+        "storage": "Storage",
+        "interaction": "Drug Interactions",
+        "counseling": "Patient Counseling Information",
+        "dosage": "Dosage",
+        "administration": "Dosage",
+        "indication": "Indications"
+    }
+    detected_sections = set()
+    for kw, canonical_sec in section_keyword_map.items():
+        if kw in item["question"].lower():
+            detected_sections.add(canonical_sec)
+            
+    if detected_sections:
+        for chunk in retrieved_chunks:
+            chunk_sec = chunk.get("section", "")
+            # If the chunk section doesn't match ANY of the requested sections, fail it.
+            if not any(req_sec.lower() in chunk_sec.lower() for req_sec in detected_sections):
+                metrics["strict_guardrail_compliant"] = 0.0
+                break
+                
+    # Check if this query passes (Groundedness >= 50%, Citation Accuracy >= 80%, Guardrail = 100%, and Latency <= 90.0s)
     passed = (
         metrics["groundedness"] >= 50.0 and
-        metrics["citation_accuracy"] >= 80.0 and
+        metrics["citation_accuracy"] >= 100.0 and
         metrics["strict_guardrail_compliant"] == 100.0 and
         latency <= 90.0
     )

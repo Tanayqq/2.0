@@ -74,10 +74,10 @@ class ProcessClinicalQueryUseCase:
                 "status": "unfound_drug_fast_path"
             }
             
-        if len(detected_drugs) > 1:
-            resolved_drug = [d[0].upper() + d[1:] for d in detected_drugs]
-        elif len(detected_drugs) == 1:
-            resolved_drug = detected_drugs[0][0].upper() + detected_drugs[0][1:]
+        if detected_drugs and len(detected_drugs) > 1:
+            resolved_drug = [d.capitalize() for d in detected_drugs]
+        elif detected_drugs:
+            resolved_drug = detected_drugs[0].capitalize()
         else:
             resolved_drug = None
         
@@ -159,7 +159,6 @@ class ProcessClinicalQueryUseCase:
                 
                 if detected_sections:
                     in_section = []
-                    out_section = []
                     for d in drug_docs:
                         db_sec = d.metadata.get("section", "").lower()
                         matched = False
@@ -173,9 +172,9 @@ class ProcessClinicalQueryUseCase:
                                 break
                         if matched:
                             in_section.append(d)
-                        else:
-                            out_section.append(d)
-                    drug_docs = in_section + out_section
+                    
+                    # STRICT METADATA FILTERING: Drop out_section chunks entirely
+                    drug_docs = in_section
                 
                 threshold = settings.SIMILARITY_THRESHOLD
                 drug_threshold_docs = [d for d in drug_docs if (d.score or 0.0) >= threshold]
@@ -229,7 +228,6 @@ class ProcessClinicalQueryUseCase:
                 
             if detected_sections:
                 in_section = []
-                out_section = []
                 for d in filtered_docs:
                     db_sec = d.metadata.get("section", "").lower()
                     matched = False
@@ -243,9 +241,9 @@ class ProcessClinicalQueryUseCase:
                             break
                     if matched:
                         in_section.append(d)
-                    else:
-                        out_section.append(d)
-                filtered_docs = in_section + out_section
+                
+                # STRICT METADATA FILTERING: Drop out_section chunks entirely
+                filtered_docs = in_section
                 
             threshold = settings.SIMILARITY_THRESHOLD
             threshold_filtered_docs = [d for d in filtered_docs if (d.score or 0.0) >= threshold]
@@ -328,14 +326,15 @@ Question: {question}
 Instructions:
 1. Answer the question using ONLY the provided context.
 2. Cite every fact with its corresponding [X] where X is the sequential Document ID number of the document (e.g. [1], [2]).
-3. Place citations IMMEDIATELY after every factual statement or sentence. For example: "Metformin decreases hepatic glucose production.[1]"
-4. CRITICAL: Never place citations on a separate line or separate paragraph. For example, do NOT do this:
+3. EVERY factual sentence MUST end with at least one citation.
+4. Place citations IMMEDIATELY after every factual statement or sentence. For example: "Metformin decreases hepatic glucose production.[1]"
+5. CRITICAL: Never place citations on a separate line or separate paragraph. For example, do NOT do this:
 Metformin decreases hepatic glucose production.
 [1]
 All citations must be inline and directly attached to the statement they support.
-5. If the requested information is not explicitly present in the retrieved context, return exactly: "Not found in available sources."
-6. Do NOT provide any additional explanation, notes, disclaimers, or adjacent/related clinical information if the information is not found. Do NOT say things like "However, the context mentions..." or "Note: ...". Just return exactly "Not found in available sources." and nothing else.
-7. Do not generalize or extrapolate beyond the provided text.
+6. If the requested information is not explicitly present in the retrieved context, return exactly: "Not found in available sources."
+7. Do NOT provide any additional explanation, notes, disclaimers, or adjacent/related clinical information if the information is not found. Do NOT say things like "However, the context mentions..." or "Note: ...". Just return exactly "Not found in available sources." and nothing else.
+8. Do not generalize or extrapolate beyond the provided text.
         """
 
     def get_debug_retrieval(self, query: MedicalQuery):
@@ -435,7 +434,7 @@ All citations must be inline and directly attached to the statement they support
         logger.info("generating_answer_via_llm", provider=settings.ACTIVE_LLM_PROVIDER, prompt_version=self.prompt_version)
         start_llm = time.time()
         answer_text = self.llm.generate(prompt)
-        llm_time = time.time() - start_llm
+        generation_time = time.time() - start_llm
         
         # Post-processing citation validation (Tied to Chunks)
         if "Not found in available sources" in answer_text:
@@ -541,7 +540,24 @@ All citations must be inline and directly attached to the statement they support
             prompt_version=self.prompt_version,
             retrieval_confidence=confidence
         )
-            
+        # Phase 1.7.2 Citation Validation
+        if "not found in available sources" not in answer_text.lower():
+            # Check if there are no citations at all
+            if not citations:
+                answer_text = "Unable to generate a fully grounded answer from the indexed corpus."
+                logger.error("validation_failed", reason="no_citations")
+                citations = []
+            else:
+                # Check for uncited factual sentences
+                import re as regex
+                sentences = [s.strip() for s in regex.split(r'(?<=\\.)\\s', answer_text) if s.strip()]
+                for sentence in sentences:
+                    if sentence and not regex.search(r'\\\\[([0-9]+)\\\\]', sentence):
+                        logger.error("validation_failed", reason="uncited_sentence", sentence=sentence)
+                        answer_text = "Unable to generate a fully grounded answer from the indexed corpus."
+                        citations = []
+                        break
+                        
         return AnswerResponse(
             answer=answer_text,
             citations=citations,

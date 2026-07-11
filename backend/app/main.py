@@ -21,17 +21,14 @@ logger = structlog.get_logger()
 app = FastAPI(title=settings.APP_NAME)
 
 # Secure CORS Configuration
-FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:5173")
-ALLOWED_ORIGINS = [
-    "http://localhost:5173", # Local Vite dev server
-    FRONTEND_URL             # Production Vercel domain
-]
+cors_origins = [origin.strip() for origin in settings.CORS_ORIGINS.split(",") if origin.strip()]
+logger.info("Allowed CORS Origins:\\n" + "\\n".join(cors_origins))
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=ALLOWED_ORIGINS,
+    allow_origins=cors_origins,
     allow_credentials=True,
-    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_methods=["*"],
     allow_headers=["*"],
 )
 

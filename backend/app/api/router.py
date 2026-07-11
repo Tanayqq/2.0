@@ -16,9 +16,15 @@ def get_usecase(
 ):
     return ProcessClinicalQueryUseCase(llm_provider=llm, vector_db=db, embedding_model=embed, cross_encoder=cross)
 
+from fastapi.responses import JSONResponse
+
 @router.post("/query", response_model=AnswerResponse)
 def handle_query(query: MedicalQuery, usecase: ProcessClinicalQueryUseCase = Depends(get_usecase)):
-    return usecase.execute(query)
+    try:
+        return usecase.execute(query)
+    except Exception as e:
+        logger.exception("Query failed", error=str(e))
+        return JSONResponse(status_code=500, content={"success": False, "error": "Internal Server Error"})
 
 @router.post("/debug/retrieval")
 def debug_retrieval(query: MedicalQuery, usecase: ProcessClinicalQueryUseCase = Depends(get_usecase)):
@@ -37,7 +43,7 @@ def debug_trace(query: MedicalQuery, usecase: ProcessClinicalQueryUseCase = Depe
 
 @router.get("/health")
 def health_check():
-    return {"status": "healthy", "service": "medref-api"}
+    return {"status": "ok"}
 
 @router.get("/version")
 def version_check():
