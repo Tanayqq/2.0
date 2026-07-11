@@ -113,6 +113,9 @@ class ProcessClinicalQueryUseCase:
                 detected_sections.append(canonical_sec)
         detected_sections = list(set(detected_sections))
         
+        rejection_log = []
+        raw_retrieved_log = []
+        
         # Determine Top-K retrieval depth
         has_sections = len(detected_sections) > 0
         top_k_to_request = settings.MULTI_SECTION_TOP_K if has_sections else settings.DEFAULT_TOP_K
@@ -152,6 +155,7 @@ class ProcessClinicalQueryUseCase:
                     total_retrieved += len(docs)
                     for doc in docs:
                         drug_retrieved[doc.id] = doc
+                        raw_retrieved_log.append(f"UUID: {doc.id}, Score: {round(doc.score or 0.0, 4)}, Drug: {doc.metadata.get('drug_name', doc.metadata.get('drug', ''))}, Section: {doc.metadata.get('section', '')}")
                 
                 # Sort and prioritize for this drug
                 drug_docs = list(drug_retrieved.values())
@@ -160,18 +164,20 @@ class ProcessClinicalQueryUseCase:
                 if detected_sections:
                     in_section = []
                     for d in drug_docs:
-                        db_sec = d.metadata.get("section", "").lower()
+                        db_sec = d.metadata.get("section", "")
                         matched = False
                         for ds in detected_sections:
                             kws = SECTION_KEYWORDS.get(ds, [ds.lower()])
                             for kw in kws:
-                                if kw in db_sec:
+                                if kw.lower() in db_sec.lower():
                                     matched = True
                                     break
                             if matched:
                                 break
                         if matched:
                             in_section.append(d)
+                        else:
+                            rejection_log.append(f"Rejected {d.id} (Score {round(d.score or 0.0, 4)}): Section mismatch. Chunk section='{db_sec}', Requested={detected_sections}")
                     
                     # STRICT METADATA FILTERING: Drop out_section chunks entirely
                     drug_docs = in_section
@@ -180,6 +186,10 @@ class ProcessClinicalQueryUseCase:
                 drug_threshold_docs = [d for d in drug_docs if (d.score or 0.0) >= threshold]
                 if not drug_threshold_docs and drug_docs:
                     drug_threshold_docs = [d for d in drug_docs if (d.score or 0.0) >= 0.35]
+                    
+                for d in drug_docs:
+                    if d not in drug_threshold_docs:
+                        rejection_log.append(f"Rejected {d.id} (Score {round(d.score or 0.0, 4)}): Below similarity threshold {threshold}")
                 
                 total_filtered += len(drug_threshold_docs)
                 # Keep top 3 for this drug to guarantee balance
@@ -213,6 +223,7 @@ class ProcessClinicalQueryUseCase:
                 total_retrieved += len(docs)
                 for doc in docs:
                     all_retrieved_docs[doc.id] = doc
+                    raw_retrieved_log.append(f"UUID: {doc.id}, Score: {round(doc.score or 0.0, 4)}, Drug: {doc.metadata.get('drug_name', doc.metadata.get('drug', ''))}, Section: {doc.metadata.get('section', '')}")
                     
             merged_docs = list(all_retrieved_docs.values())
             merged_docs.sort(key=lambda x: x.score or 0.0, reverse=True)
@@ -229,18 +240,21 @@ class ProcessClinicalQueryUseCase:
             if detected_sections:
                 in_section = []
                 for d in filtered_docs:
-                    db_sec = d.metadata.get("section", "").lower()
+                    db_sec = d.metadata.get("section", "")
                     matched = False
                     for ds in detected_sections:
                         kws = SECTION_KEYWORDS.get(ds, [ds.lower()])
                         for kw in kws:
-                            if kw in db_sec:
+                            # Use case-insensitive comparison
+                            if kw.lower() in db_sec.lower():
                                 matched = True
                                 break
                         if matched:
                             break
                     if matched:
                         in_section.append(d)
+                    else:
+                        rejection_log.append(f"Rejected {d.id} (Score {round(d.score or 0.0, 4)}): Section mismatch. Chunk section='{db_sec}', Requested={detected_sections}")
                 
                 # STRICT METADATA FILTERING: Drop out_section chunks entirely
                 filtered_docs = in_section
@@ -250,6 +264,10 @@ class ProcessClinicalQueryUseCase:
             if not threshold_filtered_docs and filtered_docs:
                 threshold_filtered_docs = [d for d in filtered_docs if (d.score or 0.0) >= 0.35]
                 
+            for d in filtered_docs:
+                if d not in threshold_filtered_docs:
+                    rejection_log.append(f"Rejected {d.id} (Score {round(d.score or 0.0, 4)}): Below similarity threshold {threshold}")
+                    
             total_filtered += len(threshold_filtered_docs)
             final_docs = threshold_filtered_docs[:settings.MAX_CONTEXT_CHUNKS]
             
@@ -311,7 +329,9 @@ class ProcessClinicalQueryUseCase:
             "avg_similarity": round(avg_similarity, 4),
             "retrieved_count": len(final_docs),
             "resolved_drug": resolved_drug,
-            "detected_sections": detected_sections
+            "detected_sections": detected_sections,
+            "raw_retrieved_log": raw_retrieved_log,
+            "rejection_log": rejection_log
         }
         
         return context_str, citations, final_docs, retrieve_time, confidence, retrieval_stats
