@@ -18,6 +18,12 @@ class Settings(BaseSettings):
     # Embedding Configuration
     EMBEDDING_MODEL_NAME: str = "sentence-transformers/all-MiniLM-L6-v2"
     
+    # Retrieval Configuration
+    DEFAULT_TOP_K: int = 5
+    MULTI_SECTION_TOP_K: int = 40
+    MAX_CONTEXT_CHUNKS: int = 5
+    SIMILARITY_THRESHOLD: float = 0.75
+    
     # Network Configuration
     FRONTEND_URL: str = "http://localhost:5173"
     APP_VERSION: str = "1.0.0"

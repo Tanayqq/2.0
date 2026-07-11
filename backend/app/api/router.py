@@ -30,6 +30,11 @@ def debug_prompt(query: MedicalQuery, usecase: ProcessClinicalQueryUseCase = Dep
     """Prompt Inspector Endpoint: View the exact prompt to be sent to the LLM."""
     return usecase.get_debug_prompt(query)
 
+@router.post("/debug/trace")
+def debug_trace(query: MedicalQuery, usecase: ProcessClinicalQueryUseCase = Depends(get_usecase)):
+    """Diagnostic Trace Endpoint: View complete end-to-end RAG trace."""
+    return usecase.get_debug_trace(query)
+
 @router.get("/health")
 def health_check():
     return {"status": "healthy", "service": "medref-api"}

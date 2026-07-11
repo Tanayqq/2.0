@@ -108,9 +108,22 @@ class MedicalUploader:
         
         logger.info("starting_qdrant_batch_upload", total_chunks=len(chunks), batch_size=batch_size)
         
+        required_keys = ["drug_name", "generic_name", "section", "source", "document_id", "chunk_index", "total_chunks", "version", "ingested_at"]
         points = []
         for chunk in chunks:
-            drug = chunk["drug"]
+            # Metadata Integrity Check
+            is_valid = True
+            for rk in required_keys:
+                if rk not in chunk or chunk[rk] is None or (isinstance(chunk[rk], str) and not chunk[rk].strip()):
+                    logger.error("metadata_integrity_validation_failed", missing_key=rk, chunk_id=chunk.get("content", "")[:30])
+                    is_valid = False
+                    break
+                    
+            if not is_valid:
+                failure_count += 1
+                continue
+                
+            drug = chunk["drug_name"]
             section = chunk["section"]
             chunk_idx = chunk["chunk_index"]
             version = chunk["version"]
@@ -119,18 +132,21 @@ class MedicalUploader:
             unique_string = f"{drug.lower()}_{section.lower()}_{chunk_idx}_{version}"
             point_id = str(uuid.uuid5(uuid.NAMESPACE_DNS, unique_string))
             
-            # Keep original UUID reference in payload
+            # Keep original UUID reference in payload using canonical keys
             payload = {
                 "content": chunk["content"],
                 "source": chunk["source"],
                 "category": "drug_label",
-                "drug": chunk["drug"],
+                "drug_name": chunk["drug_name"],
+                "drug": chunk["drug_name"],  # Maintain backward compatibility
                 "generic_name": chunk["generic_name"],
                 "section": chunk["section"],
-                "country": chunk["country"],
-                "version": chunk["version"],
+                "document_id": chunk["document_id"],
                 "effective_date": chunk.get("effective_date"),
                 "revision": chunk.get("revision"),
+                "chunk_index": chunk["chunk_index"],
+                "total_chunks": chunk["total_chunks"],
+                "version": chunk["version"],
                 "token_count": chunk["token_count"],
                 "embedding_model": chunk["embedding_model"],
                 "ingested_at": chunk["ingested_at"]

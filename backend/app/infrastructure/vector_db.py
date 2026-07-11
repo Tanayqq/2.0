@@ -10,9 +10,9 @@ class QdrantAdapter(VectorDatabaseProtocol):
     """
     def __init__(self, url: str = "http://localhost:6333", api_key: str = "", collection_name: str = "openfda_labels"):
         if api_key:
-            self.client = QdrantClient(url=url, api_key=api_key)
+            self.client = QdrantClient(url=url, api_key=api_key, timeout=60.0)
         else:
-            self.client = QdrantClient(url=url)
+            self.client = QdrantClient(url=url, timeout=60.0)
         self.collection_name = collection_name
 
     def _build_filter(self, filters: Optional[Dict[str, Any]]) -> Optional[Filter]:
@@ -22,9 +22,8 @@ class QdrantAdapter(VectorDatabaseProtocol):
         conditions = []
         for key, value in filters.items():
             if isinstance(value, list):
-                # Support OR logic if list is passed
-                for v in value:
-                    conditions.append(FieldCondition(key=key, match=MatchValue(value=v)))
+                # Use MatchAny for list/OR logic in Qdrant keyword payloads
+                conditions.append(FieldCondition(key=key, match=models.MatchAny(any=value)))
             else:
                 conditions.append(FieldCondition(key=key, match=MatchValue(value=value)))
                 

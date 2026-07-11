@@ -10,6 +10,11 @@ class Citation(BaseModel):
     document_id: str
     source: str
     snippet: str
+    uuid: Optional[str] = None
+    drug: Optional[str] = None
+    section: Optional[str] = None
+    similarity: Optional[float] = None
+    count: int = 1
 
 class ReferenceDocument(BaseModel):
     id: str

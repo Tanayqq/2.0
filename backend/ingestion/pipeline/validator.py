@@ -92,3 +92,77 @@ class MedicalValidator:
             logger.warning("sent_document_to_dlq", path=filepath, error=error_reason)
         except Exception as e:
             logger.error("failed_writing_to_dlq", path=filepath, error=str(e))
+
+    def validate_chunks(self, chunks: list) -> Tuple[list, dict]:
+        """
+        Validates all chunk dictionaries before they are embedded.
+        Checks for min/max tokens, empty content, duplicates, valid section names, and metadata completeness.
+        Returns:
+            Tuple of (valid_chunks: list, stats: dict)
+        """
+        valid_chunks = []
+        stats = {
+            "total_chunks_received": len(chunks),
+            "valid_chunks": 0,
+            "rejected_empty": 0,
+            "rejected_too_short": 0,
+            "rejected_too_long": 0,
+            "rejected_duplicate": 0,
+            "rejected_invalid_section": 0,
+            "rejected_invalid_metadata": 0
+        }
+        
+        seen_hashes = set()
+        required_keys = ["drug_name", "generic_name", "section", "source", "document_id", "chunk_index", "total_chunks", "version", "ingested_at"]
+        
+        for chunk in chunks:
+            # 1. Check empty chunk
+            content = chunk.get("content", "")
+            if not content or not content.strip():
+                stats["rejected_empty"] += 1
+                logger.warning("chunk_validation_failed_empty", drug=chunk.get("drug_name"))
+                continue
+                
+            # 2. Check token bounds
+            token_count = chunk.get("token_count", 0)
+            if token_count < ingestion_config.MIN_CHUNK_TOKENS:
+                stats["rejected_too_short"] += 1
+                logger.warning("chunk_validation_failed_too_short", drug=chunk.get("drug_name"), tokens=token_count, min=ingestion_config.MIN_CHUNK_TOKENS)
+                continue
+                
+            if token_count > ingestion_config.MAX_CHUNK_TOKENS:
+                stats["rejected_too_long"] += 1
+                logger.warning("chunk_validation_failed_too_long", drug=chunk.get("drug_name"), tokens=token_count, max=ingestion_config.MAX_CHUNK_TOKENS)
+                continue
+                
+            # 3. Check section name
+            section = chunk.get("section", "")
+            if not section or not section.strip():
+                stats["rejected_invalid_section"] += 1
+                logger.warning("chunk_validation_failed_no_section", drug=chunk.get("drug_name"))
+                continue
+                
+            # 4. Check metadata completeness
+            meta_valid = True
+            for k in required_keys:
+                if k not in chunk or chunk[k] is None or (isinstance(chunk[k], str) and not chunk[k].strip()):
+                    meta_valid = False
+                    logger.warning("chunk_validation_failed_metadata", missing_key=k, drug=chunk.get("drug_name"))
+                    break
+            if not meta_valid:
+                stats["rejected_invalid_metadata"] += 1
+                continue
+                
+            # 5. Check duplicates (content hash per drug & section)
+            import hashlib
+            content_hash = hashlib.md5(f"{chunk.get('drug_name', '')}_{chunk.get('section', '')}_{content.strip()}".encode("utf-8")).hexdigest()
+            if content_hash in seen_hashes:
+                stats["rejected_duplicate"] += 1
+                logger.warning("chunk_validation_failed_duplicate", drug=chunk.get("drug_name"), section=section)
+                continue
+                
+            seen_hashes.add(content_hash)
+            valid_chunks.append(chunk)
+            stats["valid_chunks"] += 1
+            
+        return valid_chunks, stats

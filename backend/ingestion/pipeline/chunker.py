@@ -20,10 +20,10 @@ class MedicalSectionChunker:
     Recursively splits oversized sections using paragraph/sentence boundaries with overlap.
     """
     def __init__(self):
-        self.target_size = ingestion_config.CHUNK_TARGET_SIZE
-        self.max_size = ingestion_config.CHUNK_MAX_SIZE
-        self.min_size = ingestion_config.CHUNK_MIN_SIZE
-        self.overlap = ingestion_config.CHUNK_OVERLAP
+        self.target_size = ingestion_config.TARGET_CHUNK_TOKENS
+        self.max_size = ingestion_config.MAX_CHUNK_TOKENS
+        self.min_size = ingestion_config.MIN_CHUNK_TOKENS
+        self.overlap = ingestion_config.OVERLAP
 
     def count_tokens(self, text: str) -> int:
         """
@@ -140,24 +140,30 @@ class MedicalSectionChunker:
         """
         logger.info("chunking_document", drug=doc.drug, sections_count=len(doc.sections))
         
-        chunks = []
+        temp_chunks = []
         for section in doc.sections:
             chunked_secs = self.chunk_section(section.title, section.content)
             for cs in chunked_secs:
-                chunks.append({
-                    "drug": doc.drug,
-                    "generic_name": doc.generic_name,
-                    "source": doc.source,
-                    "country": doc.country,
-                    "version": doc.version,
-                    "effective_date": doc.effective_date,
-                    "revision": doc.revision,
-                    "ingested_at": doc.ingested_at,
-                    "section": cs.section_title,
-                    "chunk_index": cs.chunk_index,
-                    "token_count": cs.token_count,
-                    "content": cs.content
-                })
+                temp_chunks.append(cs)
+                
+        total_chunks = len(temp_chunks)
+        chunks = []
+        for cs in temp_chunks:
+            chunks.append({
+                "drug_name": doc.drug,
+                "generic_name": doc.generic_name,
+                "section": cs.section_title,
+                "source": doc.source,
+                "document_id": doc.revision,  # Maps to document set_id
+                "effective_date": doc.effective_date,
+                "revision": doc.revision,
+                "chunk_index": cs.chunk_index,
+                "total_chunks": total_chunks,
+                "version": doc.version,
+                "ingested_at": doc.ingested_at,
+                "token_count": cs.token_count,
+                "content": cs.content
+            })
                 
         logger.info("chunking_completed", drug=doc.drug, chunks_count=len(chunks))
         return chunks

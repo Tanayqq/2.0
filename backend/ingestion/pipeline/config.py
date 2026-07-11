@@ -42,10 +42,10 @@ class IngestionSettings(BaseSettings):
     QDRANT_COLLECTION: str = "openfda_labels"
     
     # Chunker Configuration
-    CHUNK_TARGET_SIZE: int = 428  # Target chunk size in tokens
-    CHUNK_MAX_SIZE: int = 500
-    CHUNK_MIN_SIZE: int = 40
-    CHUNK_OVERLAP: int = 50
+    MIN_CHUNK_TOKENS: int = 30
+    MAX_CHUNK_TOKENS: int = 450
+    TARGET_CHUNK_TOKENS: int = 350
+    OVERLAP: int = 50
     
     # Retry & DLQ Policies
     MAX_RETRIES: int = 3

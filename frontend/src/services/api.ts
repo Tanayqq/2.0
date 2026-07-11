@@ -2,6 +2,11 @@ export interface Citation {
   document_id: string;
   source: string;
   snippet: string;
+  uuid?: string;
+  drug?: string;
+  section?: string;
+  similarity?: number;
+  count?: number;
 }
 
 export interface AnswerResponse {

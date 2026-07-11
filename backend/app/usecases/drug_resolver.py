@@ -1,0 +1,210 @@
+from typing import Optional, Dict
+
+class DrugNameResolver:
+    """
+    Resolves brand names and alternative phrasings to canonical generic names
+    for the 105 drugs supported by MedRef.
+    """
+    
+    BRAND_TO_GENERIC: Dict[str, str] = {
+        # Core Brand to Generic Mappings
+        "prinivil": "lisinopril",
+        "zestril": "lisinopril",
+        "lipitor": "atorvastatin",
+        "glucophage": "metformin",
+        "fortamet": "metformin",
+        "glumetza": "metformin",
+        "amoxil": "amoxicillin",
+        "advil": "ibuprofen",
+        "motrin": "ibuprofen",
+        "cozaar": "losartan",
+        "coumadin": "warfarin",
+        "jantoven": "warfarin",
+        "ventolin": "albuterol",
+        "proair": "albuterol",
+        "proventil": "albuterol",
+        "norvasc": "amlodipine",
+        "synthroid": "levothyroxine",
+        "levoxyl": "levothyroxine",
+        "unithroid": "levothyroxine",
+        "neurontin": "gabapentin",
+        "prilosec": "omeprazole",
+        "lopressor": "metoprolol",
+        "toprol": "metoprolol",
+        "microzide": "hydrochlorothiazide",
+        "zocor": "simvastatin",
+        "zoloft": "sertraline",
+        "singulair": "montelukast",
+        "lexapro": "escitalopram",
+        "tylenol": "acetaminophen",
+        "lasix": "furosemide",
+        "flonase": "fluticasone",
+        "flovent": "fluticasone",
+        "wellbutrin": "bupropion",
+        "zyban": "bupropion",
+        "cymbalta": "duloxetine",
+        "protonix": "pantoprazole",
+        "deltasone": "prednisone",
+        "crestor": "rosuvastatin",
+        "flomax": "tamsulosin",
+        "celexa": "citalopram",
+        "mobic": "meloxicam",
+        "zyloprim": "allopurinol",
+        "aloprim": "allopurinol",
+        "xanax": "alprazolam",
+        "klonopin": "clonazepam",
+        "valium": "diazepam",
+        "ativan": "lorazepam",
+        "ambien": "zolpidem",
+        "coreg": "carvedilol",
+        "aldactone": "spironolactone",
+        "vasotec": "enalapril",
+        "altace": "ramipril",
+        "diovan": "valsartan",
+        "tenormin": "atenolol",
+        "inderal": "propranolol",
+        "apresoline": "hydralazine",
+        "catapres": "clonidine",
+        "pravachol": "pravastatin",
+        "mevacor": "lovastatin",
+        "tricor": "fenofibrate",
+        "antara": "fenofibrate",
+        "lopid": "gemfibrozil",
+        "zetia": "ezetimibe",
+        "colcrys": "colchicine",
+        "mitigare": "colchicine",
+        "rheumatrex": "methotrexate",
+        "trexall": "methotrexate",
+        "plaquenil": "hydroxychloroquine",
+        "imuran": "azathioprine",
+        "neoral": "cyclosporine",
+        "sandimmune": "cyclosporine",
+        "gengraf": "cyclosporine",
+        "prograf": "tacrolimus",
+        "millipred": "prednisolone",
+        "orapred": "prednisolone",
+        "decadron": "dexamethasone",
+        "medrol": "methylprednisolone",
+        "pulmicort": "budesonide",
+        "rhinocort": "budesonide",
+        "foradil": "formoterol",
+        "serevent": "salmeterol",
+        "spiriva": "tiotropium",
+        "atrovent": "ipratropium",
+        "zyrtec": "cetirizine",
+        "claritin": "loratadine",
+        "allegra": "fexofenadine",
+        "benadryl": "diphenhydramine",
+        "vistaril": "hydroxyzine",
+        "atarax": "hydroxyzine",
+        "phenergan": "promethazine",
+        "zofran": "ondansetron",
+        "reglan": "metoclopramide",
+        "imodium": "loperamide",
+        "pepcid": "famotidine",
+        "tagamet": "cimetidine",
+        "nexium": "esomeprazole",
+        "prevacid": "lansoprazole",
+        "aciphex": "rabeprazole",
+        "cytotec": "misoprostol",
+        "azulfidine": "sulfasalazine",
+        "lialda": "mesalamine",
+        "asacol": "mesalamine",
+        "pentasa": "mesalamine",
+        "zithromax": "azithromycin",
+        "biaxin": "clarithromycin",
+        "erythrocin": "erythromycin",
+        "vibramycin": "doxycycline",
+        "doryx": "doxycycline",
+        "minocin": "minocycline",
+        "solodyn": "minocycline",
+        "sumycin": "tetracycline",
+        "keflex": "cephalexin",
+        "omnicef": "cefdinir",
+        "ceftin": "cefuroxime",
+        "cipro": "ciprofloxacin",
+        "levaquin": "levofloxacin",
+        "avelox": "moxifloxacin",
+        "flagyl": "metronidazole",
+        "cleocin": "clindamycin",
+        "zyvox": "linezolid",
+        "vancocin": "vancomycin",
+        "macrobid": "nitrofurantoin",
+        "macrodantin": "nitrofurantoin",
+        "primsol": "trimethoprim",
+        "diflucan": "fluconazole",
+        "nizoral": "ketoconazole",
+        "sporanox": "itraconazole",
+        "lamisil": "terbinafine",
+        "zovirax": "acyclovir",
+        "valtrex": "valacyclovir",
+        "tamiflu": "oseltamivir",
+        "semaglutide": "unfound",
+        "gepirone": "unfound",
+        "tirzepatide": "unfound",
+        "ozempic": "unfound",
+        "wegovy": "unfound",
+        "mounjaro": "unfound",
+        "jardiance": "unfound",
+        "farxiga": "unfound",
+        "bedaquiline": "unfound"
+    }
+
+    GENERIC_NAMES = {
+        "unfound", "lisinopril", "atorvastatin", "metformin", "amoxicillin", "ibuprofen",
+        "losartan", "warfarin", "albuterol", "amlodipine", "levothyroxine",
+        "gabapentin", "omeprazole", "metoprolol", "hydrochlorothiazide",
+        "simvastatin", "sertraline", "montelukast", "escitalopram",
+        "acetaminophen", "furosemide", "fluticasone", "bupropion",
+        "duloxetine", "pantoprazole", "prednisone", "rosuvastatin",
+        "tamsulosin", "citalopram", "meloxicam", "allopurinol",
+        "alprazolam", "clonazepam", "diazepam", "lorazepam", "zolpidem",
+        "carvedilol", "spironolactone", "enalapril", "ramipril",
+        "valsartan", "atenolol", "propranolol", "hydralazine", "clonidine",
+        "pravastatin", "lovastatin", "fenofibrate", "gemfibrozil",
+        "ezetimibe", "colchicine", "methotrexate", "hydroxychloroquine",
+        "azathioprine", "cyclosporine", "tacrolimus", "prednisolone",
+        "dexamethasone", "methylprednisolone", "budesonide", "formoterol",
+        "salmeterol", "tiotropium", "ipratropium", "cetirizine",
+        "loratadine", "fexofenadine", "diphenhydramine", "hydroxyzine",
+        "promethazine", "ondansetron", "metoclopramide", "loperamide",
+        "famotidine", "cimetidine", "esomeprazole", "lansoprazole",
+        "rabeprazole", "misoprostol", "sulfasalazine", "mesalamine",
+        "azithromycin", "clarithromycin", "erythromycin", "doxycycline",
+        "minocycline", "tetracycline", "cephalexin", "cefdinir",
+        "cefuroxime", "ciprofloxacin", "levofloxacin", "moxifloxacin",
+        "metronidazole", "clindamycin", "linezolid", "vancomycin",
+        "nitrofurantoin", "trimethoprim", "fluconazole", "ketoconazole",
+        "itraconazole", "terbinafine", "acyclovir", "valacyclovir",
+        "oseltamivir"
+    }
+
+    @staticmethod
+    def resolve(query_text: str) -> Optional[str]:
+        """
+        Scan the query text for drug brand names or generic names.
+        Returns the canonical lowercase generic name if found, otherwise None.
+        """
+        if not query_text:
+            return None
+            
+        words = [w.strip("?,.:;!\"'()[]{}").lower() for w in query_text.split()]
+        
+        # 1. Direct match check on individual words or bigrams
+        for word in words:
+            if word in DrugNameResolver.GENERIC_NAMES:
+                return word
+            if word in DrugNameResolver.BRAND_TO_GENERIC:
+                return DrugNameResolver.BRAND_TO_GENERIC[word]
+                
+        # 2. Check for multi-word generic match or substring match (e.g. "methylprednisolone")
+        query_lower = query_text.lower()
+        for generic in DrugNameResolver.GENERIC_NAMES:
+            if generic in query_lower:
+                return generic
+                
+        for brand, generic in DrugNameResolver.BRAND_TO_GENERIC.items():
+            if brand in query_lower:
+                return generic
+                
+        return None

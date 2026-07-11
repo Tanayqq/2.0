@@ -18,6 +18,7 @@ from .embedder import MedicalEmbedder
 from .uploader import MedicalUploader
 from .statistics import IngestionStatistics
 from .reports import ReportGenerator
+from .generate_reports import generate_reports
 from app.infrastructure.vector_db import QdrantAdapter
 
 logger = structlog.get_logger()
@@ -257,21 +258,33 @@ class IngestionOrchestrator:
         if not all_chunks:
             logger.warning("no_valid_chunks_created_skipping_embed_and_upload")
         else:
-            # 3. Generate batch embeddings
-            self.stats.embeddings_generated = len(all_chunks)
-            embedded_chunks = self.embedder.embed_chunks(all_chunks)
+            # Run chunk-level quality validation
+            valid_chunks, chunk_stats = self.validator.validate_chunks(all_chunks)
+            logger.info("chunk_validation_completed", stats=chunk_stats)
             
-            # 4. Upload batches to Qdrant Cloud
-            uploaded, failed = self.uploader.upload_chunks(embedded_chunks)
-            self.stats.upload_success = uploaded
-            self.stats.upload_failures = failed
-            
+            if not valid_chunks:
+                logger.warning("no_chunks_passed_validation_skipping_embed_and_upload")
+            else:
+                # 3. Generate batch embeddings
+                self.stats.embeddings_generated = len(valid_chunks)
+                embedded_chunks = self.embedder.embed_chunks(valid_chunks)
+                
+                # 4. Upload batches to Qdrant Cloud
+                uploaded, failed = self.uploader.upload_chunks(embedded_chunks)
+                self.stats.upload_success = uploaded
+                self.stats.upload_failures = failed
+                
         self.stats.stop()
         
         # 5. Generate metrics reports and manifest
         self.report_generator.generate_manifest()
         self.report_generator.generate_ingestion_report()
         self.report_generator.generate_corpus_report()
+        
+        try:
+            generate_reports()
+        except Exception as e:
+            logger.error("failed_generating_corpus_coverage_retrieval_reports", error=str(e))
         
         # 6. Execute final retrieval validation smoke tests
         smoke_test_results = self.run_smoke_tests()

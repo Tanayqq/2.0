@@ -9,12 +9,36 @@ import { Badge } from "@/components/ui/badge";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { Info, Activity, ShieldAlert, Loader2 } from "lucide-react";
 
-function CitationRenderer({ text, citations }: { text: string; citations: AnswerResponse["citations"] }) {
-  // Regex to match [Document ID: X]
-  const regex = /\[Document ID:\s*([^\]]+)\]/g;
+function CitationRenderer({ 
+  text, 
+  citations, 
+  cardIndex 
+}: { 
+  text: string; 
+  citations: AnswerResponse["citations"]; 
+  cardIndex: number;
+}) {
+  // Regex to match [X] where X is sequential number, or [Unsupported Citation Removed]
+  const regex = /\[([0-9]+)\]|\[Unsupported Citation Removed\]/g;
   const parts = [];
   let lastIndex = 0;
   
+  const handleCitationClick = (e: React.MouseEvent, docId: string) => {
+    e.preventDefault();
+    const citation = citations.find(c => c.document_id === docId);
+    if (citation && citation.uuid) {
+      const elementId = `citation-${cardIndex}-${citation.uuid}`;
+      const element = document.getElementById(elementId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "center" });
+        element.classList.add("ring-2", "ring-teal-400", "bg-teal-50", "transition-all", "duration-300");
+        setTimeout(() => {
+          element.classList.remove("ring-2", "ring-teal-400", "bg-teal-50");
+        }, 2000);
+      }
+    }
+  };
+
   let match;
   while ((match = regex.exec(text)) !== null) {
     // Push preceding text
@@ -22,29 +46,63 @@ function CitationRenderer({ text, citations }: { text: string; citations: Answer
       parts.push(<span key={lastIndex}>{text.substring(lastIndex, match.index)}</span>);
     }
     
-    const docId = match[1];
-    const citation = citations.find(c => c.document_id === docId);
-    
-    if (citation) {
+    const matchedText = match[0];
+    if (matchedText === "[Unsupported Citation Removed]") {
       parts.push(
-        <HoverCard key={match.index}>
-          <HoverCardTrigger asChild>
-            <span className="inline-flex cursor-pointer px-1 text-teal-600 font-bold hover:underline focus:ring-2 focus:ring-slate-400 focus:outline-none rounded">
-              [{docId}]
-            </span>
-          </HoverCardTrigger>
-          <HoverCardContent className="w-80 border-slate-200 shadow-lg">
-            <div className="space-y-2">
-              <h4 className="text-sm font-semibold text-slate-800">{citation.source}</h4>
-              <p className="text-sm text-slate-600 line-clamp-4">
-                "{citation.snippet}"
-              </p>
-            </div>
-          </HoverCardContent>
-        </HoverCard>
+        <span key={match.index} className="inline-flex px-1.5 py-0.5 text-xs text-red-500 font-bold bg-red-50 border border-red-200 rounded" title="A citation was removed because it was not grounded in the retrieved clinical sources.">
+          [Unsupported Citation Removed]
+        </span>
       );
     } else {
-      parts.push(<span key={match.index} className="text-slate-500 font-medium">[{docId}]</span>);
+      const docId = match[1];
+      const citation = citations.find(c => c.document_id === docId);
+      
+      if (citation) {
+        parts.push(
+          <HoverCard key={match.index} openDelay={200}>
+            <HoverCardTrigger asChild>
+              <sup className="align-super select-none">
+                <span 
+                  onClick={(e) => handleCitationClick(e, docId)}
+                  className="inline-flex items-center justify-center text-[9px] leading-none font-bold px-1.5 py-0.5 rounded-full bg-teal-50 text-teal-700 border border-teal-200 hover:bg-teal-100 hover:text-teal-800 transition-all cursor-pointer shadow-sm hover:shadow active:scale-95 ml-0.5"
+                >
+                  {docId}
+                </span>
+              </sup>
+            </HoverCardTrigger>
+            <HoverCardContent className="w-80 border-slate-200 shadow-xl bg-white p-4 rounded-xl z-50">
+              <div className="space-y-2.5 text-left">
+                <div className="flex items-center justify-between border-b pb-1.5 border-slate-100">
+                  <span className="text-xs font-bold uppercase tracking-wider text-teal-600">{citation.source.split(" – ")[0]}</span>
+                  {citation.similarity !== undefined && (
+                    <span className="text-[10px] font-semibold bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded">
+                      Match: {(citation.similarity * 100).toFixed(0)}%
+                    </span>
+                  )}
+                </div>
+                <div>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-0.5">Drug Context</span>
+                  <span className="text-sm font-bold text-slate-800">{citation.drug || "N/A"}</span>
+                </div>
+                <div>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-0.5">Section</span>
+                  <span className="text-xs font-medium text-slate-700 block bg-slate-50 p-1.5 rounded border border-slate-100 line-clamp-1">
+                    {citation.section || "N/A"}
+                  </span>
+                </div>
+                <div>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-0.5">Excerpt</span>
+                  <p className="text-xs text-slate-600 italic bg-slate-50 p-2 rounded border border-slate-100 leading-normal line-clamp-4">
+                    "{citation.snippet}"
+                  </p>
+                </div>
+              </div>
+            </HoverCardContent>
+          </HoverCard>
+        );
+      } else {
+        parts.push(<sup key={match.index} className="align-super text-slate-500 font-medium">[{docId}]</sup>);
+      }
     }
     
     lastIndex = match.index + match[0].length;
@@ -120,19 +178,33 @@ export default function App() {
                   </div>
                 </CardHeader>
                 <CardContent className="pt-6 text-slate-800 text-[15px]">
-                  <CitationRenderer text={item.a.answer} citations={item.a.citations} />
+                  <CitationRenderer text={item.a.answer} citations={item.a.citations} cardIndex={i} />
                 </CardContent>
                 <CardFooter className="flex flex-col items-start gap-4 border-t pt-4 bg-slate-50 rounded-b-xl">
                   <div className="w-full">
                     <h4 className="text-sm font-bold text-slate-700 mb-2">Sources Referenced:</h4>
                     {item.a.citations.length > 0 ? (
-                      <ul className="list-disc pl-5 text-sm text-slate-600 space-y-1">
+                      <div className="space-y-2 w-full">
                         {item.a.citations.map((c, j) => (
-                          <li key={j} className="text-teal-700 marker:text-teal-400">
-                            <span className="font-medium text-slate-800">[{c.document_id}]</span> {c.source}
-                          </li>
+                          <div 
+                            key={j} 
+                            id={`citation-${i}-${c.uuid}`}
+                            className="flex items-center text-sm text-slate-600 p-2 rounded-lg border border-slate-200 bg-white shadow-sm transition-all duration-300"
+                          >
+                            <span className="inline-flex items-center justify-center font-bold text-teal-700 bg-teal-50 border border-teal-200 rounded-full h-5 w-5 text-xs mr-3 shrink-0">
+                              {c.document_id}
+                            </span>
+                            <div className="flex-1 min-w-0">
+                              <p className="font-semibold text-slate-800 truncate">{c.source}</p>
+                            </div>
+                            {c.count && c.count > 1 && (
+                              <Badge variant="secondary" className="ml-2 bg-slate-100 text-slate-600 border border-slate-200 text-[10px] shrink-0">
+                                Referenced {c.count} times
+                              </Badge>
+                            )}
+                          </div>
                         ))}
-                      </ul>
+                      </div>
                     ) : (
                       <span className="text-sm text-slate-500 italic">No references retrieved for this query.</span>
                     )}

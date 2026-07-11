@@ -26,7 +26,7 @@ class LayeredQueryExpander:
     def __init__(self, llm_provider: LLMProviderProtocol):
         self.llm = llm_provider
 
-    def expand(self, query: str) -> List[str]:
+    def expand(self, query: str, skip_llm: bool = False) -> List[str]:
         expanded_queries = [query]
         q_lower = query.lower()
         
@@ -40,9 +40,18 @@ class LayeredQueryExpander:
                 found_ontology = True
                 logger.info("ontology_expansion_applied", original=abbreviation, expanded=expansion)
                 
-        if found_ontology:
-            # If we found a direct clinical mapping, skip LLM call to save latency
-            return expanded_queries
+        # Zero-latency medical synonym expansion for key attributes
+        if "refrigerat" in q_lower or "stor" in q_lower or "keep" in q_lower:
+            expanded_queries.append("storage temperature and handling")
+            expanded_queries.append("refrigeration requirements and shelf life")
+        if "side effect" in q_lower or "adverse" in q_lower:
+            expanded_queries.append("adverse reactions side effects")
+        if "interaction" in q_lower:
+            expanded_queries.append("drug interactions")
+            
+        if found_ontology or skip_llm:
+            # If we found a direct clinical mapping or were instructed to skip LLM, skip LLM call to save latency
+            return list(set(expanded_queries))
             
         # Layer 2: LLM Assisted Rewriting Fallback
         prompt = f"""
