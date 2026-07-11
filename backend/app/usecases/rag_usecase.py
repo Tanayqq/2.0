@@ -108,8 +108,9 @@ class ProcessClinicalQueryUseCase:
         
         q_lower = query.question.lower()
         detected_sections = []
+        import re
         for kw, canonical_sec in section_keyword_map.items():
-            if kw in q_lower:
+            if re.search(r'\b' + re.escape(kw) + r'\b', q_lower):
                 detected_sections.append(canonical_sec)
         detected_sections = list(set(detected_sections))
         
@@ -164,7 +165,7 @@ class ProcessClinicalQueryUseCase:
                 if detected_sections:
                     in_section = []
                     for d in drug_docs:
-                        db_sec = d.metadata.get("section", "")
+                        db_sec = d.metadata.get("section", d.metadata.get("category", ""))
                         matched = False
                         for ds in detected_sections:
                             kws = SECTION_KEYWORDS.get(ds, [ds.lower()])
@@ -240,7 +241,7 @@ class ProcessClinicalQueryUseCase:
             if detected_sections:
                 in_section = []
                 for d in filtered_docs:
-                    db_sec = d.metadata.get("section", "")
+                    db_sec = d.metadata.get("section", d.metadata.get("category", ""))
                     matched = False
                     for ds in detected_sections:
                         kws = SECTION_KEYWORDS.get(ds, [ds.lower()])
@@ -367,7 +368,7 @@ All citations must be inline and directly attached to the statement they support
                     "score": doc.score,
                     "content": doc.content,
                     "drug": doc.metadata.get("drug_name", doc.metadata.get("drug", "")),
-                    "section": doc.metadata.get("section", ""),
+                    "section": doc.metadata.get("section", doc.metadata.get("category", "")),
                     "source": doc.source,
                     "chunk_length": len(doc.content),
                     "embedding_dimension": len(self.embedding.embed_query(query.question)),

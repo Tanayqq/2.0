@@ -198,7 +198,7 @@ def calculate_metrics(item, response, debug_retrieval, latency):
         
     # 2. Bibliography vs Inline consistency
     import re
-    inline_refs = set(re.findall(r'\\\\[([0-9]+)\\\\]', response.answer))
+    inline_refs = set(re.findall(r'\[([0-9]+)\]', response.answer))
     bib_refs = set(cited_ids)
     if inline_refs != bib_refs:
         metrics["citation_accuracy"] = 0.0
@@ -240,12 +240,12 @@ def calculate_metrics(item, response, debug_retrieval, latency):
     }
     detected_sections = set()
     for kw, canonical_sec in section_keyword_map.items():
-        if kw in item["question"].lower():
+        if re.search(r'\b' + re.escape(kw) + r'\b', item["question"].lower()):
             detected_sections.add(canonical_sec)
             
     if detected_sections:
         for chunk in retrieved_chunks:
-            chunk_sec = chunk.get("section", "")
+            chunk_sec = chunk.get("section", chunk.get("category", ""))
             # If the chunk section doesn't match ANY of the requested sections, fail it.
             if not any(req_sec.lower() in chunk_sec.lower() for req_sec in detected_sections):
                 metrics["strict_guardrail_compliant"] = 0.0
