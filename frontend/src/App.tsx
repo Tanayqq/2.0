@@ -92,7 +92,7 @@ function CitationRenderer({
                 </div>
                 <div>
                   <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-0.5">Excerpt</span>
-                  <p className="text-xs text-slate-600 italic bg-slate-50 p-2 rounded border border-slate-100 leading-normal line-clamp-4">
+                  <p className="text-xs text-slate-600 italic bg-slate-50 p-2 rounded border border-slate-100 leading-normal max-h-40 overflow-y-auto shadow-inner">
                     "{citation.snippet}"
                   </p>
                 </div>
