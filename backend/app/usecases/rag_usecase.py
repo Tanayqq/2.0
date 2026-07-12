@@ -6,24 +6,30 @@ from app.domain.interfaces import LLMProviderProtocol, VectorDatabaseProtocol, E
 from app.usecases.query_expansion import LayeredQueryExpander
 from app.citation_map import CitationMap
 from app.core.config import settings
+from app.section_utils import normalize_section
 import structlog
 
 logger = structlog.get_logger()
 
 SECTION_KEYWORDS = {
-    "Contraindications": ["contraindication", "contraindicated"],
-    "Warnings": ["warning", "precaution", "boxed warning", "black box", "warnings"],
-    "Precautions": ["precaution", "warning", "precautions"],
-    "Pregnancy": ["pregnancy", "pregnant", "teratogenic", "fetus"],
-    "Lactation": ["lactation", "nursing", "breast milk", "human milk"],
-    "Pediatric Use": ["pediatric", "child", "children"],
-    "Geriatric Use": ["geriatric", "elderly", "older patients"],
-    "Adverse Reactions": ["adverse", "side effect", "clinical trials", "experience", "postmarketing", "reactions"],
-    "Overdosage": ["overdosage", "overdose"],
-    "Storage": ["storage", "handling", "supplied", "store", "keep"],
-    "Drug Interactions": ["interaction", "interactions", "concomitant"],
-    "Dosage": ["dosage", "administration", "dosing"]
+    "contraindications": ["contraindication", "contraindications", "contraindicated"],
+    "warnings": ["warning", "warnings", "boxed warning", "boxed warnings", "black box", "blackbox"],
+    "precautions": ["precaution", "precautions"],
+    "pregnancy": ["pregnancy", "pregnant", "teratogenic", "fetus", "fetal"],
+    "lactation": ["lactation", "nursing", "breast milk", "breastfeeding", "human milk"],
+    "pediatric use": ["pediatric", "pediatrics", "child", "children", "infant", "infants", "adolescent", "adolescents"],
+    "geriatric use": ["geriatric", "geriatrics", "elderly", "older patients", "aging"],
+    "adverse reactions": ["adverse", "adverse reaction", "adverse reactions", "side effect", "side effects"],
+    "overdosage": ["overdosage", "overdose", "overdoses"],
+    "storage": ["storage", "handling", "supplied", "store", "keep"],
+    "drug interactions": ["interaction", "interactions", "drug interaction", "drug interactions", "concomitant"],
+    "dosage": ["dosage", "dosages", "administration", "dosing", "dose", "doses"],
+    "indications": ["indication", "indications", "indicated", "use", "uses"],
+    "patient counseling information": ["counseling", "patient counseling"]
 }
+
+# normalize_section_title_helper is a backward-compatible alias for the shared utility
+normalize_section_title_helper = normalize_section
 
 class ProcessClinicalQueryUseCase:
     def __init__(
@@ -83,36 +89,14 @@ class ProcessClinicalQueryUseCase:
             resolved_drug = None
         
         # 2. Detect requested clinical sections
-        section_keyword_map = {
-            "contraindication": "Contraindications",
-            "warning": "Warnings",
-            "boxed warning": "Warnings",
-            "black box": "Warnings",
-            "precaution": "Precautions",
-            "pregnancy": "Pregnancy",
-            "lactation": "Lactation",
-            "nursing": "Lactation",
-            "pediatric": "Pediatric Use",
-            "child": "Pediatric Use",
-            "geriatric": "Geriatric Use",
-            "elderly": "Geriatric Use",
-            "adverse": "Adverse Reactions",
-            "side effect": "Adverse Reactions",
-            "overdosage": "Overdosage",
-            "storage": "Storage",
-            "interaction": "Drug Interactions",
-            "counseling": "Patient Counseling Information",
-            "dosage": "Dosage",
-            "administration": "Dosage",
-            "indication": "Indications"
-        }
-        
         q_lower = query.question.lower()
         detected_sections = []
         import re
-        for kw, canonical_sec in section_keyword_map.items():
-            if re.search(r'\b' + re.escape(kw) + r'\b', q_lower):
-                detected_sections.append(canonical_sec)
+        for canonical_sec, keywords in SECTION_KEYWORDS.items():
+            for kw in keywords:
+                if re.search(r'\b' + re.escape(kw) + r'\b', q_lower):
+                    detected_sections.append(canonical_sec)
+                    break
         detected_sections = list(set(detected_sections))
         
         rejection_log = []
@@ -166,20 +150,20 @@ class ProcessClinicalQueryUseCase:
                 if detected_sections:
                     in_section = []
                     for d in drug_docs:
-                        db_sec = d.metadata.get("section", d.metadata.get("category", ""))
-                        matched = False
-                        for ds in detected_sections:
-                            kws = SECTION_KEYWORDS.get(ds, [ds.lower()])
-                            for kw in kws:
-                                if kw.lower() in db_sec.lower():
-                                    matched = True
-                                    break
-                            if matched:
-                                break
-                        if matched:
+                        db_sec_raw = d.metadata.get("section", d.metadata.get("category", ""))
+                        db_sec = normalize_section_title_helper(db_sec_raw)
+                        if db_sec in detected_sections:
                             in_section.append(d)
                         else:
-                            rejection_log.append(f"Rejected {d.id} (Score {round(d.score or 0.0, 4)}): Section mismatch. Chunk section='{db_sec}', Requested={detected_sections}")
+                            rejection_log.append(f"Rejected {d.id} (Score {round(d.score or 0.0, 4)}): Section mismatch. Chunk section='{db_sec_raw}' (normalized: '{db_sec}'), Requested={detected_sections}")
+                    
+                    logger.info(
+                        "metadata_filter_sections_multidrug",
+                        drug=drug,
+                        before_filter=[d.metadata.get("section", d.metadata.get("category", "")) for d in drug_docs],
+                        after_filter=[d.metadata.get("section", d.metadata.get("category", "")) for d in in_section],
+                        requested=detected_sections
+                    )
                     
                     # STRICT METADATA FILTERING: Drop out_section chunks entirely
                     drug_docs = in_section
@@ -242,21 +226,19 @@ class ProcessClinicalQueryUseCase:
             if detected_sections:
                 in_section = []
                 for d in filtered_docs:
-                    db_sec = d.metadata.get("section", d.metadata.get("category", ""))
-                    matched = False
-                    for ds in detected_sections:
-                        kws = SECTION_KEYWORDS.get(ds, [ds.lower()])
-                        for kw in kws:
-                            # Use case-insensitive comparison
-                            if kw.lower() in db_sec.lower():
-                                matched = True
-                                break
-                        if matched:
-                            break
-                    if matched:
+                    db_sec_raw = d.metadata.get("section", d.metadata.get("category", ""))
+                    db_sec = normalize_section_title_helper(db_sec_raw)
+                    if db_sec in detected_sections:
                         in_section.append(d)
                     else:
-                        rejection_log.append(f"Rejected {d.id} (Score {round(d.score or 0.0, 4)}): Section mismatch. Chunk section='{db_sec}', Requested={detected_sections}")
+                        rejection_log.append(f"Rejected {d.id} (Score {round(d.score or 0.0, 4)}): Section mismatch. Chunk section='{db_sec_raw}' (normalized: '{db_sec}'), Requested={detected_sections}")
+                
+                logger.info(
+                    "metadata_filter_sections",
+                    before_filter=[d.metadata.get("section", d.metadata.get("category", "")) for d in filtered_docs],
+                    after_filter=[d.metadata.get("section", d.metadata.get("category", "")) for d in in_section],
+                    requested=detected_sections
+                )
                 
                 # STRICT METADATA FILTERING: Drop out_section chunks entirely
                 filtered_docs = in_section
@@ -393,7 +375,9 @@ Never invent citation numbers.
 Never omit citations.
 Never merge facts from different drugs.
 
-If information does not exist, return exactly:
+You are provided with retrieved chunks that belong to specific clinical sections. If the user requests only one section (for example "Contraindications"), you must answer exclusively from chunks whose metadata section equals that requested section. Ignore all other retrieved sections. Do not include warnings, precautions, patient package inserts, adverse reactions, or indications unless they were explicitly requested.
+
+If no chunk exists for the requested section, or if the information does not exist in the context, respond exactly:
 Not found in available sources.
 """
 

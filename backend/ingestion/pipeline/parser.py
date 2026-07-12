@@ -1,4 +1,6 @@
 import re
+import sys
+import os
 import structlog
 from typing import List
 from .interfaces.source_provider import NormalizedMedicalDocument, MedicalSection
@@ -6,33 +8,29 @@ from .config import ingestion_config
 
 logger = structlog.get_logger()
 
+# Import shared section normalizer from app package
+try:
+    sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
+    from app.section_utils import normalize_section
+except ImportError:
+    # Fallback: inline passthrough if app package not available during standalone runs
+    def normalize_section(title: str) -> str:  # type: ignore
+        return title.strip().lower() if title else ""
+
 class MedicalParser:
     """
     Parser to clean and standardize section titles and contents.
-    Ensures all clinical text sections are properly structured.
+    Normalizes all section titles to lowercase canonical keys (e.g. 'contraindications',
+    'warnings', 'adverse reactions') so that Qdrant metadata is consistent with
+    the SECTION_KEYWORDS filter used during retrieval.
+    Noise sections (patient package insert, highlights, etc.) are discarded.
     """
-    
-    # Map synonyms/variations to standard titles
-    SECTION_SYNONYMS = {
-        "indications and usage": "Indications",
-        "dosage and administration": "Dosage",
-        "warnings and precautions": "Warnings",
-        "warnings & precautions": "Warnings",
-        "boxed warning": "Warnings",
-        "precautions": "Precautions",
-        "drug interactions": "Drug Interactions",
-        "pregnancy": "Pregnancy",
-        "pregnancy and lactation": "Pregnancy",
-        "nursing mothers": "Lactation",
-        "lactation": "Lactation",
-        "pediatric use": "Pediatric Use",
-        "geriatric use": "Geriatric Use",
-        "adverse reactions": "Adverse Reactions",
-        "side effects": "Adverse Reactions",
-        "overdosage": "Overdosage",
-        "storage and handling": "Storage",
-        "patient counseling information": "Patient Counseling Information"
-    }
+
+    def normalize_section_title(self, title: str) -> str:
+        """
+        Normalize any section title into a lowercase canonical form using the shared utility.
+        """
+        return normalize_section(title)
 
     def clean_text(self, text: str) -> str:
         """
@@ -65,14 +63,18 @@ class MedicalParser:
             if not clean_title:
                 continue
                 
-            title_lower = clean_title.lower()
+            # Normalize to lowercase canonical key (e.g. "4 Contraindications" -> "contraindications")
+            standardized_title = normalize_section(clean_title)
             
-            # Standardize section title if it matches a known synonym
-            standardized_title = clean_title
-            for syn, std in self.SECTION_SYNONYMS.items():
-                if syn == title_lower or title_lower.startswith(syn):
-                    standardized_title = std
-                    break
+            # Discard noise sections that pollute retrieval results
+            if standardized_title == "_excluded" or not standardized_title:
+                logger.debug(
+                    "parser_discarding_noise_section",
+                    original=clean_title,
+                    normalized=standardized_title,
+                    drug=doc.drug
+                )
+                continue
                     
             clean_content = self.clean_text(section.content)
             
