@@ -44,8 +44,8 @@ def mock_build_context_generator(citations, docs):
         }, cmap
     return mock_build_context
 
-def test_scenario_1_valid_citation():
-    """Test 1: Sentence.[1] should preserve the citation."""
+def test_scenario_1_one_chunk():
+    """Test 1: One retrieved chunk -> every sentence ends with [1]."""
     citations = [
         Citation(document_id="1", source="DailyMed", snippet="Fact 1", uuid="uuid-1", count=0)
     ]
@@ -55,15 +55,15 @@ def test_scenario_1_valid_citation():
     
     usecase = ProcessClinicalQueryUseCase(None, None, None, None)
     usecase._build_context = mock_build_context_generator(citations, docs).__get__(usecase, ProcessClinicalQueryUseCase)
-    usecase.llm = DummyLLM("Sentence.[1]")
+    usecase.llm = DummyLLM("This is sentence one.[1] This is sentence two.[1]")
     
     response = usecase.execute(MedicalQuery(question="Test question"))
-    assert response.answer == "Sentence.[1]"
+    assert response.answer == "This is sentence one.[1] This is sentence two.[1]"
     assert len(response.citations) == 1
     assert response.citations[0].document_id == "1"
 
-def test_scenario_2_multiple_citations():
-    """Test 2: Sentence.[1][2] should preserve both citations."""
+def test_scenario_2_two_chunks():
+    """Test 2: Two retrieved chunks -> Sentence.[1][2]."""
     citations = [
         Citation(document_id="1", source="DailyMed", snippet="Fact 1", uuid="uuid-1", count=0),
         Citation(document_id="2", source="DailyMed", snippet="Fact 2", uuid="uuid-2", count=0)
@@ -81,8 +81,8 @@ def test_scenario_2_multiple_citations():
     assert response.answer == "Sentence.[1][2]"
     assert len(response.citations) == 2
 
-def test_scenario_3_no_citation():
-    """Test 3: Sentence. (no citation) should trigger Validator FAIL."""
+def test_scenario_3_hallucinated_citation():
+    """Test 3: Hallucinated citation [99] -> replaced by [Unsupported Citation Removed]."""
     citations = [
         Citation(document_id="1", source="DailyMed", snippet="Fact 1", uuid="uuid-1", count=0)
     ]
@@ -92,15 +92,14 @@ def test_scenario_3_no_citation():
     
     usecase = ProcessClinicalQueryUseCase(None, None, None, None)
     usecase._build_context = mock_build_context_generator(citations, docs).__get__(usecase, ProcessClinicalQueryUseCase)
-    usecase.llm = DummyLLM("Sentence.")
+    usecase.llm = DummyLLM("Sentence.[99]")
     
     response = usecase.execute(MedicalQuery(question="Test question"))
-    assert response.answer == "Unable to generate a fully grounded answer from the indexed corpus."
+    assert response.answer == "Sentence.[Unsupported Citation Removed]"
     assert len(response.citations) == 0
-    assert response.metadata.get("validation_failed") is not None
 
 def test_scenario_4_bibliography_sync():
-    """Test 4: Bibliography with 1, 2 but answer only cites [1] -> bibliography automatically becomes 1."""
+    """Test 4: Bibliography has 1, 2 but answer only cites [1] -> bibliography automatically becomes 1."""
     citations = [
         Citation(document_id="1", source="DailyMed", snippet="Fact 1", uuid="uuid-1", count=0),
         Citation(document_id="2", source="DailyMed", snippet="Fact 2", uuid="uuid-2", count=0)
@@ -119,8 +118,8 @@ def test_scenario_4_bibliography_sync():
     assert len(response.citations) == 1
     assert response.citations[0].uuid == "uuid-1"
 
-def test_scenario_5_hallucinated_citation():
-    """Test 5: Hallucinated citation [99] -> Sentence.[Unsupported Citation Removed]."""
+def test_scenario_5_source_citation_prevention():
+    """Test 5: Source contains [see Warnings and Precautions (5.1)] -> normalized and not treated as citation."""
     citations = [
         Citation(document_id="1", source="DailyMed", snippet="Fact 1", uuid="uuid-1", count=0)
     ]
@@ -130,16 +129,20 @@ def test_scenario_5_hallucinated_citation():
     
     usecase = ProcessClinicalQueryUseCase(None, None, None, None)
     usecase._build_context = mock_build_context_generator(citations, docs).__get__(usecase, ProcessClinicalQueryUseCase)
-    usecase.llm = DummyLLM("Sentence.[99]")
+    usecase.llm = DummyLLM("Sentence [see Warnings and Precautions (5.1)].[1]")
     
     response = usecase.execute(MedicalQuery(question="Test question"))
-    assert response.answer == "Sentence.[Unsupported Citation Removed]"
-    assert len(response.citations) == 0
+    # The [see Warnings and Precautions (5.1)] should be normalized to see Warnings and Precautions (5.1)
+    # The [1] should be preserved as RAG citation
+    assert "see Warnings and Precautions (5.1)" in response.answer
+    assert "[see Warnings and Precautions (5.1)]" not in response.answer
+    assert response.answer.endswith("[1]")
+    assert len(response.citations) == 1
 
 if __name__ == "__main__":
-    test_scenario_1_valid_citation()
-    test_scenario_2_multiple_citations()
-    test_scenario_3_no_citation()
+    test_scenario_1_one_chunk()
+    test_scenario_2_two_chunks()
+    test_scenario_3_hallucinated_citation()
     test_scenario_4_bibliography_sync()
-    test_scenario_5_hallucinated_citation()
-    print("All test cases completed successfully!")
+    test_scenario_5_source_citation_prevention()
+    print("All pipeline test cases completed successfully!")

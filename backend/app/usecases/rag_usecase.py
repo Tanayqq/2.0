@@ -4,6 +4,7 @@ import re
 from app.domain.models import MedicalQuery, AnswerResponse, Citation, ReferenceDocument
 from app.domain.interfaces import LLMProviderProtocol, VectorDatabaseProtocol, EmbeddingModelProtocol, CrossEncoderProtocol
 from app.usecases.query_expansion import LayeredQueryExpander
+from app.citation_map import CitationMap
 from app.core.config import settings
 import structlog
 
@@ -303,19 +304,42 @@ class ProcessClinicalQueryUseCase:
         final_docs = deduped_final_docs
 
         # 7. Assign sequential internal citation IDs
+        citation_map = CitationMap()
         context_str = ""
         citations = []
         for i, doc in enumerate(final_docs, start=1):
             citation_id = str(i)
-            # Sequential citations
-            context_str += f"[Document ID: {citation_id}]\nSource: {doc.source} - {doc.metadata.get('drug_name', doc.metadata.get('drug', ''))} - {doc.metadata.get('section', '')}\nContent: {doc.content}\n\n"
+            drug = doc.metadata.get('drug_name', doc.metadata.get('drug', ''))
+            section = doc.metadata.get('section', doc.metadata.get('category', ''))
+            
+            # Format document representation exactly as requested
+            context_str += f"========================\n"
+            context_str += f"DOCUMENT [{citation_id}]\n\n"
+            context_str += f"Drug:\n{drug}\n\n"
+            context_str += f"Section:\n{section}\n\n"
+            context_str += f"UUID:\n{doc.id}\n\n"
+            context_str += f"Text:\n{doc.content}\n"
+            context_str += f"========================\n\n"
+            
+            # Add to citation map
+            citation_map.add_entry(
+                uuid=doc.id,
+                citation_number=citation_id,
+                source=doc.source,
+                drug=drug,
+                section=section,
+                text=doc.content,
+                similarity=round(doc.score or 0.0, 4)
+            )
+            
+            # Add to citations (legacy list for bibliography)
             citations.append(Citation(
                 document_id=citation_id,
-                source=f"{doc.source} – {doc.metadata.get('drug_name', doc.metadata.get('drug', ''))} – {doc.metadata.get('section', '')}",
+                source=f"{doc.source} – {drug} – {section}",
                 snippet=doc.content,
                 uuid=doc.id,
-                drug=doc.metadata.get('drug_name', doc.metadata.get('drug', '')),
-                section=doc.metadata.get('section', ''),
+                drug=drug,
+                section=section,
                 similarity=round(doc.score or 0.0, 4),
                 count=0
             ))
@@ -335,7 +359,7 @@ class ProcessClinicalQueryUseCase:
             "rejection_log": rejection_log
         }
         
-        return context_str, citations, final_docs, retrieve_time, confidence, retrieval_stats
+        return context_str, citations, final_docs, retrieve_time, confidence, retrieval_stats, citation_map
 
     def _build_prompt(self, context_str: str, question: str) -> str:
         return f"""
@@ -345,21 +369,19 @@ Context:
 Question: {question}
 
 Instructions:
-1. Answer the question using ONLY the provided context.
-2. Cite every fact with its corresponding [X] where X is the sequential Document ID number of the document (e.g. [1], [2]).
-3. EVERY factual sentence MUST end with at least one citation.
-4. Place citations IMMEDIATELY after every factual statement or sentence. For example: "Metformin decreases hepatic glucose production.[1]"
-5. CRITICAL: Never place citations on a separate line or separate paragraph. For example, do NOT do this:
-Metformin decreases hepatic glucose production.
-[1]
-All citations must be inline and directly attached to the statement they support.
-6. If the requested information is not explicitly present in the retrieved context, return exactly: "Not found in available sources."
-7. Do NOT provide any additional explanation, notes, disclaimers, or adjacent/related clinical information if the information is not found. Do NOT say things like "However, the context mentions..." or "Note: ...". Just return exactly "Not found in available sources." and nothing else.
-8. Do not generalize or extrapolate beyond the provided text.
-        """
+1. You are answering ONLY from the numbered documents in the Context.
+2. Each document has a citation number (e.g. DOCUMENT [1] has citation number [1]).
+3. After every factual statement or sentence, append the citation number corresponding to the document that supports it.
+4. Example: "Metformin is contraindicated in severe renal impairment.[1]"
+5. If multiple documents support a statement, append all of them, e.g. "Sentence.[1][2]"
+6. Never write "[see Warnings]" or generic label references.
+7. Never invent citations. Only use the citation numbers that exist in the numbered documents.
+8. Never omit citations. Every factual sentence MUST contain at least one inline citation.
+9. If the requested information is not explicitly present in the numbered documents, return exactly: "Not found in available sources." and nothing else.
+"""
 
     def get_debug_retrieval(self, query: MedicalQuery):
-        _, _, documents, total_retrieval_time, confidence, retrieval_stats = self._build_context(query)
+        _, _, documents, total_retrieval_time, confidence, retrieval_stats, _ = self._build_context(query)
         return {
             "retrieval_time_sec": round(total_retrieval_time, 4),
             "retrieved_chunks": [
@@ -389,7 +411,7 @@ All citations must be inline and directly attached to the statement they support
         }
         
     def get_debug_prompt(self, query: MedicalQuery):
-        context_str, _, _, _, _, _ = self._build_context(query)
+        context_str, _, _, _, _, _, _ = self._build_context(query)
         prompt = self._build_prompt(context_str, query.question)
         return {
             "prompt_version": self.prompt_version,
@@ -397,12 +419,15 @@ All citations must be inline and directly attached to the statement they support
             "generated_prompt": prompt
         }
 
-    def _post_process_answer(self, answer_text: str, citations: List[Citation]) -> Tuple[str, List[Citation], Dict[str, str]]:
+    def _post_process_answer(self, answer_text: str, citations: List[Citation], citation_map: CitationMap) -> Tuple[str, List[Citation], Dict[str, str]]:
         if "not found in available sources" in answer_text.lower():
             return "Not found in available sources.", [], {}
             
+        # Remove brackets from FDA label cross-references like [see Warnings and Precautions (5.1)]
+        answer_text = re.sub(r'\[(see\s+[^\]]+)\]', r'\1', answer_text, flags=re.IGNORECASE)
+        
         pattern = r'\[(?:Document\s*ID:\s*|Doc\s*ID:\s*|Document\s*|Doc\s*)?([0-9]+)\]'
-        valid_ids = {c.document_id for c in citations}
+        valid_ids = set(citation_map.entries.keys())
         
         # Find and standardize or remove citations
         matches = list(re.finditer(pattern, answer_text, re.IGNORECASE))
@@ -486,11 +511,13 @@ All citations must be inline and directly attached to the statement they support
             
         return answer_text, citations, remapping
 
-    def _validate_citations(self, answer_text: str, citations: List[Citation]) -> Tuple[bool, str, str]:
+    def _validate_citations(self, answer_text: str, citations: List[Citation], citation_map: CitationMap) -> Tuple[bool, List[str], str]:
+        validation_errors = []
+        
         if "not found in available sources" in answer_text.lower():
-            return True, "", ""
+            return True, [], answer_text
         if "unable to generate a fully grounded answer" in answer_text.lower():
-            return True, "", ""
+            return True, [], answer_text
             
         import re as regex
         inline_refs = set(regex.findall(r'\[([0-9]+)\]', answer_text))
@@ -499,29 +526,46 @@ All citations must be inline and directly attached to the statement they support
         # 1. Every bibliography citation must appear inline
         for bib_id in bib_refs:
             if bib_id not in inline_refs:
-                return False, f"Bibliography ID {bib_id} not found in inline citations", ""
+                validation_errors.append(f"Bibliography ID {bib_id} not found in inline citations")
                 
         # 2. Every inline citation must exist in bibliography
         for inline_id in inline_refs:
             if inline_id not in bib_refs:
-                return False, f"Inline citation ID {inline_id} not found in bibliography", ""
+                validation_errors.append(f"Inline citation ID {inline_id} not found in bibliography/CitationMap")
                 
         # 3. Every sentence must end with at least one citation
         raw_sentences = regex.split(r'(?<=[.!?])\s+', answer_text.strip())
         sentences = [s.strip() for s in raw_sentences if s.strip()]
         
+        final_sentences = []
         for sentence in sentences:
             if not regex.search(r'[a-zA-Z]', sentence):
+                final_sentences.append(sentence)
                 continue
             
             cleaned_sentence = sentence.rstrip(".!? \t\n\r")
-            if not cleaned_sentence.endswith("]") or not regex.search(r'(?:\[[0-9]+\]|\[Unsupported Citation Removed\])$', cleaned_sentence):
-                return False, "Sentence does not end with a citation", sentence
+            ends_with_citation = cleaned_sentence.endswith("]") and regex.search(r'(?:\[[0-9]+\]|\[Unsupported Citation Removed\])$', cleaned_sentence)
+            
+            if not ends_with_citation:
+                validation_errors.append(f"Sentence missing citation: '{sentence}'")
                 
-        return True, "", ""
+                if settings.STRICT_CITATION_VALIDATION_ACTION == "remove":
+                    logger.warning("Uncited sentence removed.", sentence=sentence)
+                    continue
+                elif settings.STRICT_CITATION_VALIDATION_ACTION == "reject":
+                    return False, validation_errors, "Unable to generate a fully grounded answer from the indexed corpus."
+                    
+            final_sentences.append(sentence)
+            
+        final_answer = " ".join(final_sentences)
+        
+        if validation_errors and settings.STRICT_CITATION_VALIDATION_ACTION == "reject":
+            return False, validation_errors, "Unable to generate a fully grounded answer from the indexed corpus."
+            
+        return len(validation_errors) == 0, validation_errors, final_answer
 
     def get_debug_trace(self, query: MedicalQuery) -> Dict[str, Any]:
-        context_str, citations, documents, retrieval_time, confidence, retrieval_stats = self._build_context(query)
+        context_str, citations, documents, retrieval_time, confidence, retrieval_stats, citation_map = self._build_context(query)
         prompt = self._build_prompt(context_str, query.question)
         
         start_llm = time.time()
@@ -533,6 +577,7 @@ All citations must be inline and directly attached to the statement they support
             final_citations = []
             remapping = {}
             validation_failed_reason = None
+            validation_errors = []
         else:
             # A. Prompt Audit - Log complete prompt
             logger.info("complete_prompt", prompt=prompt)
@@ -543,44 +588,59 @@ All citations must be inline and directly attached to the statement they support
             print("========== RAW LLM OUTPUT ==========")
             print(raw_answer)
             print("===================================")
-            logger.info("raw_llm_output", raw_answer=raw_answer)
+            print("========== FINAL PROMPT ==========")
+            print(prompt)
+            print("===================================")
+            print("========== DOCUMENTS ==========")
+            print([d.id for d in documents])
+            print("===================================")
+            import json
+            print("========== CITATION MAP ==========")
+            print(json.dumps(citation_map.to_dict(), indent=2))
+            print("===================================")
+            
+            logger.info(
+                "raw_llm_output",
+                raw_answer=raw_answer,
+                final_prompt=prompt,
+                documents=[d.id for d in documents],
+                citation_map=citation_map.to_dict()
+            )
             
             # Post-process
             citations_copy = [c.model_copy() for c in citations]
-            post_processed_answer, final_citations, remapping = self._post_process_answer(raw_answer, citations_copy)
+            post_processed_answer, final_citations, remapping = self._post_process_answer(raw_answer, citations_copy, citation_map)
             
             # Validate
-            is_valid, error_reason, offending_sentence = self._validate_citations(post_processed_answer, final_citations)
+            is_valid, validation_errors, final_answer = self._validate_citations(post_processed_answer, final_citations, citation_map)
             if not is_valid:
-                logger.warning("Inline citation removed during processing.", reason=error_reason, sentence=offending_sentence)
-                print(f"WARNING: Inline citation removed during processing. Offending sentence: {offending_sentence} | Reason: {error_reason}")
-                final_answer = "Unable to generate a fully grounded answer from the indexed corpus."
+                logger.warning("Inline citation removed during processing.", errors=validation_errors)
+                validation_failed_reason = " | ".join(validation_errors)
                 final_citations = []
-                validation_failed_reason = error_reason
             else:
-                final_answer = post_processed_answer
                 validation_failed_reason = None
                 
         dim = len(self.embedding.embed_query(query.question))
         
         trace = {
+            "detected_drug": retrieval_stats.get("resolved_drug"),
+            "detected_sections": retrieval_stats.get("detected_sections"),
+            "retrieved_uuids": [doc.id for doc in documents],
+            "citation_map": citation_map.to_dict(),
+            "prompt": prompt,
+            "raw_context": context_str,
+            "raw_llm_output": raw_answer,
+            "processed_output": post_processed_answer,
+            "final_output": final_answer,
+            "bibliography": [c.model_dump() for c in final_citations],
+            "validation_errors": validation_errors,
             "query": query.question,
             "embedding_model": settings.EMBEDDING_MODEL_NAME,
             "vector_dimension": dim,
             "top_k_requested": settings.MULTI_SECTION_TOP_K if len(retrieval_stats["detected_sections"]) > 1 else settings.DEFAULT_TOP_K,
             "top_k_returned": len(documents),
             "similarity_threshold": retrieval_stats["threshold_applied"],
-            "retrieved_uuids": [doc.id for doc in documents],
             "retrieved_metadata": [doc.metadata for doc in documents],
-            
-            # Trace extensions
-            "prompt_sent": prompt,
-            "raw_llm_answer": raw_answer,
-            "post_processed_answer": post_processed_answer,
-            "final_answer_returned": final_answer,
-            "citation_map": remapping,
-            "bibliography": [c.model_dump() for c in final_citations],
-            
             "retrieval_confidence": confidence,
             "latency_breakdown": {
                 "retrieval_latency_sec": round(retrieval_time, 4),
@@ -597,7 +657,7 @@ All citations must be inline and directly attached to the statement they support
     def execute(self, query: MedicalQuery) -> AnswerResponse:
         logger.info("processing_query_start", question=query.question, filters=query.filters)
         
-        context_str, citations, documents, retrieval_time, confidence, retrieval_stats = self._build_context(query)
+        context_str, citations, documents, retrieval_time, confidence, retrieval_stats, citation_map = self._build_context(query)
         
         if not documents:
             logger.info("no_documents_found")
@@ -629,20 +689,35 @@ All citations must be inline and directly attached to the statement they support
         print("========== RAW LLM OUTPUT ==========")
         print(answer_text)
         print("===================================")
-        logger.info("raw_llm_output", raw_answer=answer_text)
+        print("========== FINAL PROMPT ==========")
+        print(prompt)
+        print("===================================")
+        print("========== DOCUMENTS ==========")
+        print([d.id for d in documents])
+        print("===================================")
+        import json
+        print("========== CITATION MAP ==========")
+        print(json.dumps(citation_map.to_dict(), indent=2))
+        print("===================================")
+        
+        logger.info(
+            "raw_llm_output",
+            raw_answer=answer_text,
+            final_prompt=prompt,
+            documents=[d.id for d in documents],
+            citation_map=citation_map.to_dict()
+        )
         
         # Post-process
-        answer_text, citations, remapping = self._post_process_answer(answer_text, citations)
+        answer_text, citations, remapping = self._post_process_answer(answer_text, citations, citation_map)
         
         # D. Citation Validator
-        is_valid, error_reason, offending_sentence = self._validate_citations(answer_text, citations)
+        is_valid, validation_errors, answer_text = self._validate_citations(answer_text, citations, citation_map)
         validation_failed_reason = None
         if not is_valid:
-            logger.warning("Inline citation removed during processing.", reason=error_reason, sentence=offending_sentence)
-            print(f"WARNING: Inline citation removed during processing. Offending sentence: {offending_sentence} | Reason: {error_reason}")
-            answer_text = "Unable to generate a fully grounded answer from the indexed corpus."
+            logger.warning("Inline citation removed during processing.", errors=validation_errors)
+            validation_failed_reason = " | ".join(validation_errors)
             citations = []
-            validation_failed_reason = error_reason
             
         logger.info(
             "query_completed",
@@ -673,4 +748,3 @@ All citations must be inline and directly attached to the statement they support
             citations=citations,
             metadata=metadata
         )
-

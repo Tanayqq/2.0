@@ -90,9 +90,21 @@ def mock_build_context(self, query):
         ReferenceDocument(id="uuid-2", content="Fact 2", source="DailyMed", metadata={}),
         ReferenceDocument(id="uuid-3", content="Fact 3", source="DailyMed", metadata={})
     ]
+    from app.citation_map import CitationMap
+    cmap = CitationMap()
+    for c in mock_citations:
+        cmap.add_entry(
+            uuid=c.uuid,
+            citation_number=c.document_id,
+            source=c.source,
+            drug=c.drug or "Metformin",
+            section=c.section or "Contraindications",
+            text=c.snippet,
+            similarity=c.similarity
+        )
     return "Context", mock_citations, mock_docs, 0.1, "High", {
         "detected_sections": []
-    }
+    }, cmap
     
 ProcessClinicalQueryUseCase._build_context = mock_build_context
 

@@ -24,6 +24,9 @@ class Settings(BaseSettings):
     MAX_CONTEXT_CHUNKS: int = 5
     SIMILARITY_THRESHOLD: float = 0.75
     
+    # Citation Configuration
+    STRICT_CITATION_VALIDATION_ACTION: str = "reject" # Options: reject, remove, none
+    
     # Network Configuration
     CORS_ORIGINS: str = "http://localhost:5173,https://medref-pearl.vercel.app"
     APP_VERSION: str = "1.0.0"
