@@ -18,6 +18,7 @@ function CitationRenderer({
   citations: AnswerResponse["citations"]; 
   cardIndex: number;
 }) {
+  console.log("Rendering answer:", text);
   // Regex to match [X] where X is sequential number, or [Unsupported Citation Removed]
   const regex = /\[([0-9]+)\]|\[Unsupported Citation Removed\]/g;
   const parts = [];
@@ -129,6 +130,7 @@ export default function App() {
     setError(null);
     try {
       const response = await queryMedicalAPI(query);
+      console.log("API response answer:", response.answer);
       setHistory(prev => [...prev, { q: query, a: response }]);
       setQuery("");
     } catch (err: any) {

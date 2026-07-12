@@ -397,21 +397,173 @@ All citations must be inline and directly attached to the statement they support
             "generated_prompt": prompt
         }
 
+    def _post_process_answer(self, answer_text: str, citations: List[Citation]) -> Tuple[str, List[Citation], Dict[str, str]]:
+        if "not found in available sources" in answer_text.lower():
+            return "Not found in available sources.", [], {}
+            
+        pattern = r'\[(?:Document\s*ID:\s*|Doc\s*ID:\s*|Document\s*|Doc\s*)?([0-9]+)\]'
+        valid_ids = {c.document_id for c in citations}
+        
+        # Find and standardize or remove citations
+        matches = list(re.finditer(pattern, answer_text, re.IGNORECASE))
+        new_answer = ""
+        last_idx = 0
+        
+        for match in matches:
+            start, end = match.span()
+            citation_num = match.group(1)
+            
+            if citation_num in valid_ids:
+                standard_citation = f"[{citation_num}]"
+            else:
+                standard_citation = "[Unsupported Citation Removed]"
+                
+            new_answer += answer_text[last_idx:start] + standard_citation
+            last_idx = end
+            
+        new_answer += answer_text[last_idx:]
+        answer_text = new_answer
+
+        # 1. Pull citations immediately adjacent to preceding characters (no whitespace before)
+        answer_text = re.sub(r'\s+(\[(?:[0-9]+|Unsupported Citation Removed)\])', r'\1', answer_text)
+
+        # 2. Merge adjacent bracket sequences and remove duplicates
+        def merge_brackets(match):
+            brackets = match.group(0)
+            nums = re.findall(r'\[([0-9]+)\]', brackets)
+            unsupported = "[Unsupported Citation Removed]" in brackets
+            seen = []
+            for n in nums:
+                if n not in seen:
+                    seen.append(n)
+            result = "".join(f"[{n}]" for n in seen)
+            if unsupported and not result:
+                result = "[Unsupported Citation Removed]"
+            return result
+
+        answer_text = re.sub(r'(?:\[[0-9]+\]|\[Unsupported Citation Removed\])+', merge_brackets, answer_text)
+
+        # 3. Handle fallback or filter/count bibliography entries
+        inline_cited_raw = re.findall(r'\[([0-9]+)\]', answer_text)
+        remapping = {}
+        if not inline_cited_raw:
+            citations = []
+        else:
+            # Vancouver renumbering based on first appearance order
+            cited_ids_in_order = []
+            for num in inline_cited_raw:
+                if num not in cited_ids_in_order:
+                    cited_ids_in_order.append(num)
+            
+            remapping = {old: str(new) for new, old in enumerate(cited_ids_in_order, start=1)}
+            
+            # Replace the brackets in the text with the new numbers
+            def replace_num(match):
+                num = match.group(1)
+                new_num = remapping.get(num)
+                if new_num:
+                    return f"[{new_num}]"
+                return match.group(0)
+                
+            answer_text = re.sub(r'\[([0-9]+)\]', replace_num, answer_text)
+            
+            # Count frequencies of new sequential numbers in post-processed text
+            counts = {}
+            for uid in inline_cited_raw:
+                new_uid = remapping[uid]
+                counts[new_uid] = counts.get(new_uid, 0) + 1
+            
+            # Sort and update bibliography list based on the new sequential mapping
+            final_citations = []
+            for old_id in cited_ids_in_order:
+                new_id = remapping[old_id]
+                c = next((cit for cit in citations if cit.document_id == old_id), None)
+                if c:
+                    c.document_id = new_id
+                    c.count = counts[new_id]
+                    final_citations.append(c)
+            citations = final_citations
+            
+        return answer_text, citations, remapping
+
+    def _validate_citations(self, answer_text: str, citations: List[Citation]) -> Tuple[bool, str, str]:
+        if "not found in available sources" in answer_text.lower():
+            return True, "", ""
+        if "unable to generate a fully grounded answer" in answer_text.lower():
+            return True, "", ""
+            
+        import re as regex
+        inline_refs = set(regex.findall(r'\[([0-9]+)\]', answer_text))
+        bib_refs = {c.document_id for c in citations}
+        
+        # 1. Every bibliography citation must appear inline
+        for bib_id in bib_refs:
+            if bib_id not in inline_refs:
+                return False, f"Bibliography ID {bib_id} not found in inline citations", ""
+                
+        # 2. Every inline citation must exist in bibliography
+        for inline_id in inline_refs:
+            if inline_id not in bib_refs:
+                return False, f"Inline citation ID {inline_id} not found in bibliography", ""
+                
+        # 3. Every sentence must end with at least one citation
+        raw_sentences = regex.split(r'(?<=[.!?])\s+', answer_text.strip())
+        sentences = [s.strip() for s in raw_sentences if s.strip()]
+        
+        for sentence in sentences:
+            if not regex.search(r'[a-zA-Z]', sentence):
+                continue
+            
+            cleaned_sentence = sentence.rstrip(".!? \t\n\r")
+            if not cleaned_sentence.endswith("]") or not regex.search(r'(?:\[[0-9]+\]|\[Unsupported Citation Removed\])$', cleaned_sentence):
+                return False, "Sentence does not end with a citation", sentence
+                
+        return True, "", ""
+
     def get_debug_trace(self, query: MedicalQuery) -> Dict[str, Any]:
         context_str, citations, documents, retrieval_time, confidence, retrieval_stats = self._build_context(query)
         prompt = self._build_prompt(context_str, query.question)
         
         start_llm = time.time()
         if not documents:
-            answer_text = "Not found in available sources."
+            raw_answer = "Not found in available sources."
             llm_time = 0.0
+            post_processed_answer = raw_answer
+            final_answer = raw_answer
+            final_citations = []
+            remapping = {}
+            validation_failed_reason = None
         else:
-            answer_text = self.llm.generate(prompt)
+            # A. Prompt Audit - Log complete prompt
+            logger.info("complete_prompt", prompt=prompt)
+            raw_answer = self.llm.generate(prompt)
             llm_time = time.time() - start_llm
             
+            # B. Raw LLM Output Logging
+            print("========== RAW LLM OUTPUT ==========")
+            print(raw_answer)
+            print("===================================")
+            logger.info("raw_llm_output", raw_answer=raw_answer)
+            
+            # Post-process
+            citations_copy = [c.model_copy() for c in citations]
+            post_processed_answer, final_citations, remapping = self._post_process_answer(raw_answer, citations_copy)
+            
+            # Validate
+            is_valid, error_reason, offending_sentence = self._validate_citations(post_processed_answer, final_citations)
+            if not is_valid:
+                logger.warning("Inline citation removed during processing.", reason=error_reason, sentence=offending_sentence)
+                print(f"WARNING: Inline citation removed during processing. Offending sentence: {offending_sentence} | Reason: {error_reason}")
+                final_answer = "Unable to generate a fully grounded answer from the indexed corpus."
+                final_citations = []
+                validation_failed_reason = error_reason
+            else:
+                final_answer = post_processed_answer
+                validation_failed_reason = None
+                
         dim = len(self.embedding.embed_query(query.question))
         
-        return {
+        trace = {
             "query": query.question,
             "embedding_model": settings.EMBEDDING_MODEL_NAME,
             "vector_dimension": dim,
@@ -420,9 +572,15 @@ All citations must be inline and directly attached to the statement they support
             "similarity_threshold": retrieval_stats["threshold_applied"],
             "retrieved_uuids": [doc.id for doc in documents],
             "retrieved_metadata": [doc.metadata for doc in documents],
+            
+            # Trace extensions
             "prompt_sent": prompt,
-            "answer": answer_text,
-            "bibliography": [c.model_dump() for c in citations],
+            "raw_llm_answer": raw_answer,
+            "post_processed_answer": post_processed_answer,
+            "final_answer_returned": final_answer,
+            "citation_map": remapping,
+            "bibliography": [c.model_dump() for c in final_citations],
+            
             "retrieval_confidence": confidence,
             "latency_breakdown": {
                 "retrieval_latency_sec": round(retrieval_time, 4),
@@ -430,6 +588,11 @@ All citations must be inline and directly attached to the statement they support
                 "total_latency_sec": round(retrieval_time + llm_time, 4)
             }
         }
+        if validation_failed_reason:
+            trace["validation_failed"] = validation_failed_reason
+            trace["validation_error"] = validation_failed_reason
+            
+        return trace
 
     def execute(self, query: MedicalQuery) -> AnswerResponse:
         logger.info("processing_query_start", question=query.question, filters=query.filters)
@@ -455,103 +618,31 @@ All citations must be inline and directly attached to the statement they support
         prompt = self._build_prompt(context_str, query.question)
         
         logger.info("generating_answer_via_llm", provider=settings.ACTIVE_LLM_PROVIDER, prompt_version=self.prompt_version)
+        # A. Prompt Audit - Log complete prompt
+        logger.info("complete_prompt", prompt=prompt)
+        
         start_llm = time.time()
         answer_text = self.llm.generate(prompt)
         llm_time = time.time() - start_llm
         
-        # Post-processing citation validation (Tied to Chunks)
-        if "Not found in available sources" in answer_text:
-            answer_text = "Not found in available sources."
+        # B. Raw LLM Output Logging
+        print("========== RAW LLM OUTPUT ==========")
+        print(answer_text)
+        print("===================================")
+        logger.info("raw_llm_output", raw_answer=answer_text)
+        
+        # Post-process
+        answer_text, citations, remapping = self._post_process_answer(answer_text, citations)
+        
+        # D. Citation Validator
+        is_valid, error_reason, offending_sentence = self._validate_citations(answer_text, citations)
+        validation_failed_reason = None
+        if not is_valid:
+            logger.warning("Inline citation removed during processing.", reason=error_reason, sentence=offending_sentence)
+            print(f"WARNING: Inline citation removed during processing. Offending sentence: {offending_sentence} | Reason: {error_reason}")
+            answer_text = "Unable to generate a fully grounded answer from the indexed corpus."
             citations = []
-        else:
-            # We match variations like [1], [Document 1], [Doc 1], [Document ID: 1], etc.
-            pattern = r'\[(?:Document\s*ID:\s*|Doc\s*ID:\s*|Document\s*|Doc\s*)?([0-9]+)\]'
-            
-            valid_ids = {c.document_id for c in citations}
-            
-            # Find and standardize or remove citations
-            matches = list(re.finditer(pattern, answer_text, re.IGNORECASE))
-            new_answer = ""
-            last_idx = 0
-            
-            for match in matches:
-                start, end = match.span()
-                citation_num = match.group(1)
-                
-                if citation_num in valid_ids:
-                    standard_citation = f"[{citation_num}]"
-                else:
-                    standard_citation = "[Unsupported Citation Removed]"
-                    
-                new_answer += answer_text[last_idx:start] + standard_citation
-                last_idx = end
-                
-            new_answer += answer_text[last_idx:]
-            answer_text = new_answer
-
-            # 1. Pull citations immediately adjacent to preceding characters (no whitespace before)
-            answer_text = re.sub(r'\s+(\[(?:[0-9]+|Unsupported Citation Removed)\])', r'\1', answer_text)
-
-            # 2. Merge adjacent bracket sequences and remove duplicates
-            def merge_brackets(match):
-                brackets = match.group(0)
-                nums = re.findall(r'\[([0-9]+)\]', brackets)
-                unsupported = "[Unsupported Citation Removed]" in brackets
-                seen = []
-                for n in nums:
-                    if n not in seen:
-                        seen.append(n)
-                result = "".join(f"[{n}]" for n in seen)
-                if unsupported and not result:
-                    result = "[Unsupported Citation Removed]"
-                return result
-
-            answer_text = re.sub(r'(?:\[[0-9]+\]|\[Unsupported Citation Removed\])+', merge_brackets, answer_text)
-
-            # 3. Handle fallback or filter/count bibliography entries
-            inline_cited_raw = re.findall(r'\[([0-9]+)\]', answer_text)
-            if not inline_cited_raw and citations:
-                # If no citations were parsed, append [1] as fallback directly adjacent
-                answer_text = answer_text.strip()
-                if not answer_text.endswith("]"):
-                    answer_text += "[1]"
-                citations = [citations[0]]
-                citations[0].count = 1
-            else:
-                # Vancouver renumbering based on first appearance order
-                cited_ids_in_order = []
-                for num in inline_cited_raw:
-                    if num not in cited_ids_in_order:
-                        cited_ids_in_order.append(num)
-                
-                remapping = {old: str(new) for new, old in enumerate(cited_ids_in_order, start=1)}
-                
-                # Replace the brackets in the text with the new numbers
-                def replace_num(match):
-                    num = match.group(1)
-                    new_num = remapping.get(num)
-                    if new_num:
-                        return f"[{new_num}]"
-                    return match.group(0)
-                    
-                answer_text = re.sub(r'\[([0-9]+)\]', replace_num, answer_text)
-                
-                # Count frequencies of new sequential numbers in post-processed text
-                counts = {}
-                for uid in inline_cited_raw:
-                    new_uid = remapping[uid]
-                    counts[new_uid] = counts.get(new_uid, 0) + 1
-                
-                # Sort and update bibliography list based on the new sequential mapping
-                final_citations = []
-                for old_id in cited_ids_in_order:
-                    new_id = remapping[old_id]
-                    c = next((cit for cit in citations if cit.document_id == old_id), None)
-                    if c:
-                        c.document_id = new_id
-                        c.count = counts[new_id]
-                        final_citations.append(c)
-                citations = final_citations
+            validation_failed_reason = error_reason
             
         logger.info(
             "query_completed",
@@ -563,35 +654,23 @@ All citations must be inline and directly attached to the statement they support
             prompt_version=self.prompt_version,
             retrieval_confidence=confidence
         )
-        # Phase 1.7.2 Citation Validation
-        if "not found in available sources" not in answer_text.lower():
-            # Check if there are no citations at all
-            if not citations:
-                answer_text = "Unable to generate a fully grounded answer from the indexed corpus."
-                logger.error("validation_failed", reason="no_citations")
-                citations = []
-            else:
-                # Check for uncited factual sentences
-                import re as regex
-                sentences = [s.strip() for s in regex.split(r'(?<=\.)\s+', answer_text) if s.strip()]
-                for sentence in sentences:
-                    if sentence and not regex.search(r'\[([0-9]+)\]', sentence):
-                        logger.error("validation_failed", reason="uncited_sentence", sentence=sentence)
-                        answer_text = "Unable to generate a fully grounded answer from the indexed corpus."
-                        citations = []
-                        break
+        
+        metadata = {
+            "retrieval_latency_sec": round(retrieval_time, 4),
+            "llm_latency_sec": round(llm_time, 4),
+            "total_latency_sec": round(retrieval_time + llm_time, 4),
+            "provider": settings.ACTIVE_LLM_PROVIDER,
+            "prompt_version": self.prompt_version,
+            "retrieval_confidence": confidence,
+            "retrieval_stats": retrieval_stats
+        }
+        if validation_failed_reason:
+            metadata["validation_failed"] = validation_failed_reason
+            metadata["validation_error"] = validation_failed_reason
                         
         return AnswerResponse(
             answer=answer_text,
             citations=citations,
-            metadata={
-                "retrieval_latency_sec": round(retrieval_time, 4),
-                "llm_latency_sec": round(llm_time, 4),
-                "total_latency_sec": round(retrieval_time + llm_time, 4),
-                "provider": settings.ACTIVE_LLM_PROVIDER,
-                "prompt_version": self.prompt_version,
-                "retrieval_confidence": confidence,
-                "retrieval_stats": retrieval_stats
-            }
+            metadata=metadata
         )
 

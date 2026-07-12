@@ -78,20 +78,23 @@ def test_citation_post_processing():
 
     print("\nAll unit tests passed successfully!")
 
+# Mock ProcessClinicalQueryUseCase's _build_context to return our fixed mock values
+def mock_build_context(self, query):
+    mock_citations = [
+        Citation(document_id="1", source="DailyMed", snippet="Fact 1", uuid="uuid-1", drug="Metformin", section="Mechanism", similarity=0.9, count=0),
+        Citation(document_id="2", source="DailyMed", snippet="Fact 2", uuid="uuid-2", drug="Metformin", section="Dosing", similarity=0.8, count=0),
+        Citation(document_id="3", source="DailyMed", snippet="Fact 3", uuid="uuid-3", drug="Metformin", section="Adverse", similarity=0.75, count=0)
+    ]
+    mock_docs = [
+        ReferenceDocument(id="uuid-1", content="Fact 1", source="DailyMed", metadata={}),
+        ReferenceDocument(id="uuid-2", content="Fact 2", source="DailyMed", metadata={}),
+        ReferenceDocument(id="uuid-3", content="Fact 3", source="DailyMed", metadata={})
+    ]
+    return "Context", mock_citations, mock_docs, 0.1, "High", {
+        "detected_sections": []
+    }
+    
+ProcessClinicalQueryUseCase._build_context = mock_build_context
+
 if __name__ == "__main__":
-    # Mock ProcessClinicalQueryUseCase's _build_context to return our fixed mock values
-    def mock_build_context(self, query):
-        mock_citations = [
-            Citation(document_id="1", source="DailyMed", snippet="Fact 1", uuid="uuid-1", drug="Metformin", section="Mechanism", similarity=0.9, count=0),
-            Citation(document_id="2", source="DailyMed", snippet="Fact 2", uuid="uuid-2", drug="Metformin", section="Dosing", similarity=0.8, count=0),
-            Citation(document_id="3", source="DailyMed", snippet="Fact 3", uuid="uuid-3", drug="Metformin", section="Adverse", similarity=0.75, count=0)
-        ]
-        mock_docs = [
-            ReferenceDocument(id="uuid-1", content="Fact 1", source="DailyMed", metadata={}),
-            ReferenceDocument(id="uuid-2", content="Fact 2", source="DailyMed", metadata={}),
-            ReferenceDocument(id="uuid-3", content="Fact 3", source="DailyMed", metadata={})
-        ]
-        return "Context", mock_citations, mock_docs, 0.1, "High", {}
-        
-    ProcessClinicalQueryUseCase._build_context = mock_build_context
     test_citation_post_processing()
