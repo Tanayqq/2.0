@@ -36,7 +36,7 @@ class ProcessClinicalQueryUseCase:
         self.vector_db = vector_db
         self.embedding = embedding_model
         self.cross_encoder = cross_encoder
-        self.expander = LayeredQueryExpander(llm_provider)
+        self.expander = LayeredQueryExpander()
         self.prompt_version = "v2.0-hybrid-reranked"
 
     def _build_context(self, query: MedicalQuery) -> Tuple[str, List[Citation], List[Any], float, str, Dict[str, Any]]:
