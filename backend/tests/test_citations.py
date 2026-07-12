@@ -80,16 +80,32 @@ def test_citation_post_processing():
 
 # Mock ProcessClinicalQueryUseCase's _build_context to return our fixed mock values
 def mock_build_context(self, query):
-    mock_citations = [
-        Citation(document_id="1", source="DailyMed", snippet="Fact 1", uuid="uuid-1", drug="Metformin", section="Mechanism", similarity=0.9, count=0),
-        Citation(document_id="2", source="DailyMed", snippet="Fact 2", uuid="uuid-2", drug="Metformin", section="Dosing", similarity=0.8, count=0),
-        Citation(document_id="3", source="DailyMed", snippet="Fact 3", uuid="uuid-3", drug="Metformin", section="Adverse", similarity=0.75, count=0)
-    ]
+    llm_ans = getattr(self.llm, "answer", "")
+    
+    if "Lisinopril is safe" in llm_ans:
+        mock_citations = [
+            Citation(document_id="1", source="DailyMed", snippet="Lisinopril is safe", uuid="uuid-1", drug="Metformin", section="Mechanism", similarity=0.9, count=0),
+            Citation(document_id="2", source="DailyMed", snippet="It causes cough", uuid="uuid-2", drug="Metformin", section="Dosing", similarity=0.8, count=0),
+            Citation(document_id="3", source="DailyMed", snippet="Fact 3", uuid="uuid-3", drug="Metformin", section="Adverse", similarity=0.75, count=0)
+        ]
+    elif "dosing is twice daily" in llm_ans:
+        mock_citations = [
+            Citation(document_id="1", source="DailyMed", snippet="Mechanism is complex", uuid="uuid-1", drug="Metformin", section="Mechanism", similarity=0.9, count=0),
+            Citation(document_id="2", source="DailyMed", snippet="Metformin dosing is twice daily", uuid="uuid-2", drug="Metformin", section="Dosing", similarity=0.8, count=0),
+            Citation(document_id="3", source="DailyMed", snippet="Fact 3", uuid="uuid-3", drug="Metformin", section="Adverse", similarity=0.75, count=0)
+        ]
+    else:
+        mock_citations = [
+            Citation(document_id="1", source="DailyMed", snippet="Metformin is useful And final", uuid="uuid-1", drug="Metformin", section="Mechanism", similarity=0.9, count=0),
+            Citation(document_id="2", source="DailyMed", snippet="Also it helps", uuid="uuid-2", drug="Metformin", section="Dosing", similarity=0.8, count=0),
+            Citation(document_id="3", source="DailyMed", snippet="And final", uuid="uuid-3", drug="Metformin", section="Adverse", similarity=0.75, count=0)
+        ]
+        
     mock_docs = [
-        ReferenceDocument(id="uuid-1", content="Fact 1", source="DailyMed", metadata={}),
-        ReferenceDocument(id="uuid-2", content="Fact 2", source="DailyMed", metadata={}),
-        ReferenceDocument(id="uuid-3", content="Fact 3", source="DailyMed", metadata={})
+        ReferenceDocument(id=c.uuid, content=c.snippet, source="DailyMed", metadata={})
+        for c in mock_citations
     ]
+    
     from app.citation_map import CitationMap
     cmap = CitationMap()
     for c in mock_citations:
@@ -98,7 +114,7 @@ def mock_build_context(self, query):
             citation_number=c.document_id,
             source=c.source,
             drug=c.drug or "Metformin",
-            section=c.section or "Contraindications",
+            section=c.section or "Mechanism",
             text=c.snippet,
             similarity=c.similarity
         )

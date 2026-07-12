@@ -47,10 +47,10 @@ def mock_build_context_generator(citations, docs):
 def test_scenario_1_valid_citation():
     """Test 1: Sentence.[1] should preserve the citation."""
     citations = [
-        Citation(document_id="1", source="DailyMed", snippet="Fact 1", uuid="uuid-1", count=0)
+        Citation(document_id="1", source="DailyMed", snippet="Sentence", uuid="uuid-1", count=0)
     ]
     docs = [
-        ReferenceDocument(id="uuid-1", content="Fact 1", source="DailyMed", metadata={})
+        ReferenceDocument(id="uuid-1", content="Sentence", source="DailyMed", metadata={})
     ]
     
     usecase = ProcessClinicalQueryUseCase(None, None, None, None)
@@ -65,12 +65,12 @@ def test_scenario_1_valid_citation():
 def test_scenario_2_multiple_citations():
     """Test 2: Sentence.[1][2] should preserve both citations."""
     citations = [
-        Citation(document_id="1", source="DailyMed", snippet="Fact 1", uuid="uuid-1", count=0),
-        Citation(document_id="2", source="DailyMed", snippet="Fact 2", uuid="uuid-2", count=0)
+        Citation(document_id="1", source="DailyMed", snippet="Sentence", uuid="uuid-1", count=0),
+        Citation(document_id="2", source="DailyMed", snippet="Sentence", uuid="uuid-2", count=0)
     ]
     docs = [
-        ReferenceDocument(id="uuid-1", content="Fact 1", source="DailyMed", metadata={}),
-        ReferenceDocument(id="uuid-2", content="Fact 2", source="DailyMed", metadata={})
+        ReferenceDocument(id="uuid-1", content="Sentence", source="DailyMed", metadata={}),
+        ReferenceDocument(id="uuid-2", content="Sentence", source="DailyMed", metadata={})
     ]
     
     usecase = ProcessClinicalQueryUseCase(None, None, None, None)
@@ -102,11 +102,11 @@ def test_scenario_3_no_citation():
 def test_scenario_4_bibliography_sync():
     """Test 4: Bibliography with 1, 2 but answer only cites [1] -> bibliography automatically becomes 1."""
     citations = [
-        Citation(document_id="1", source="DailyMed", snippet="Fact 1", uuid="uuid-1", count=0),
+        Citation(document_id="1", source="DailyMed", snippet="Sentence", uuid="uuid-1", count=0),
         Citation(document_id="2", source="DailyMed", snippet="Fact 2", uuid="uuid-2", count=0)
     ]
     docs = [
-        ReferenceDocument(id="uuid-1", content="Fact 1", source="DailyMed", metadata={}),
+        ReferenceDocument(id="uuid-1", content="Sentence", source="DailyMed", metadata={}),
         ReferenceDocument(id="uuid-2", content="Fact 2", source="DailyMed", metadata={})
     ]
     
