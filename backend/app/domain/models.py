@@ -15,6 +15,7 @@ class Citation(BaseModel):
     section: Optional[str] = None
     similarity: Optional[float] = None
     count: int = 1
+    citation_number: Optional[int] = None
 
 class ReferenceDocument(BaseModel):
     id: str

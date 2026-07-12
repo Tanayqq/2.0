@@ -7,6 +7,7 @@ export interface Citation {
   section?: string;
   similarity?: number;
   count?: number;
+  citation_number?: number;
 }
 
 export interface AnswerResponse {

@@ -596,6 +596,7 @@ Not found in available sources.
                 if c:
                     c_copy = c.model_copy()
                     c_copy.document_id = new_id
+                    c_copy.citation_number = int(new_id)
                     c_copy.count = counts[new_id]
                     final_citations.append(c_copy)
                     
