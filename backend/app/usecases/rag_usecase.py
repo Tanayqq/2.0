@@ -24,12 +24,26 @@ SECTION_KEYWORDS = {
     "storage": ["storage", "handling", "supplied", "store", "keep"],
     "drug interactions": ["interaction", "interactions", "drug interaction", "drug interactions", "concomitant"],
     "dosage": ["dosage", "dosages", "administration", "dosing", "dose", "doses"],
-    "indications": ["indication", "indications", "indicated", "use", "uses"],
+    # Note: 'use'/'uses' intentionally excluded — too broad, fires on nearly every query
+    "indications": ["indication", "indications", "indicated"],
     "patient counseling information": ["counseling", "patient counseling"]
 }
 
 # normalize_section_title_helper is a backward-compatible alias for the shared utility
 normalize_section_title_helper = normalize_section
+
+# ---------------------------------------------------------------------------
+# Helper: resolve section name from any metadata key variant
+# ---------------------------------------------------------------------------
+_SECTION_KEYS = ("section", "Section", "category", "Category", "clinical_section", "sectionTitle")
+
+def _resolve_raw_section(metadata: dict) -> str:
+    """Read the raw section value from a Qdrant payload, trying multiple key variants."""
+    for key in _SECTION_KEYS:
+        val = metadata.get(key)
+        if val and str(val).strip():
+            return str(val).strip()
+    return ""
 
 class ProcessClinicalQueryUseCase:
     def __init__(
@@ -99,6 +113,15 @@ class ProcessClinicalQueryUseCase:
                     break
         detected_sections = list(set(detected_sections))
         
+        logger.info(
+            "section_detection",
+            question=query.question,
+            detected_drug=resolved_drug,
+            detected_sections=detected_sections
+        )
+        if not detected_sections:
+            logger.warning("no_sections_detected", question=query.question)
+        
         rejection_log = []
         raw_retrieved_log = []
         
@@ -149,23 +172,55 @@ class ProcessClinicalQueryUseCase:
                 
                 if detected_sections:
                     in_section = []
+                    filter_trace = []
                     for d in drug_docs:
-                        db_sec_raw = d.metadata.get("section", d.metadata.get("category", ""))
-                        db_sec = normalize_section_title_helper(db_sec_raw)
-                        if db_sec in detected_sections:
+                        db_sec_raw = _resolve_raw_section(d.metadata)
+                        db_sec = normalize_section(db_sec_raw)
+                        decision = "PASS" if db_sec in detected_sections else "DROP"
+                        filter_trace.append({
+                            "uuid": d.id,
+                            "raw_section": db_sec_raw,
+                            "normalized_section": db_sec,
+                            "requested": detected_sections,
+                            "decision": decision,
+                            "score": round(d.score or 0.0, 4)
+                        })
+                        if decision == "PASS":
                             in_section.append(d)
                         else:
-                            rejection_log.append(f"Rejected {d.id} (Score {round(d.score or 0.0, 4)}): Section mismatch. Chunk section='{db_sec_raw}' (normalized: '{db_sec}'), Requested={detected_sections}")
+                            rejection_log.append(
+                                f"DROP {d.id} (score={round(d.score or 0.0, 4)}) "
+                                f"raw='{db_sec_raw}' normalized='{db_sec}' "
+                                f"requested={detected_sections}"
+                            )
                     
                     logger.info(
-                        "metadata_filter_sections_multidrug",
+                        "section_filter_multidrug",
                         drug=drug,
-                        before_filter=[d.metadata.get("section", d.metadata.get("category", "")) for d in drug_docs],
-                        after_filter=[d.metadata.get("section", d.metadata.get("category", "")) for d in in_section],
-                        requested=detected_sections
+                        retrieved=len(drug_docs),
+                        passed=len(in_section),
+                        dropped=len(drug_docs) - len(in_section),
+                        requested_sections=detected_sections,
+                        filter_trace=filter_trace
                     )
                     
-                    # STRICT METADATA FILTERING: Drop out_section chunks entirely
+                    # Diagnostic safe-mode: if filter wiped all results, retry without section filter
+                    if len(in_section) == 0 and len(drug_docs) > 0:
+                        logger.error(
+                            "SECTION_FILTER_FAILURE_DETECTED",
+                            drug=drug,
+                            requested_sections=detected_sections,
+                            raw_sections_in_db=[_resolve_raw_section(d.metadata) for d in drug_docs],
+                            normalized_sections_in_db=[normalize_section(_resolve_raw_section(d.metadata)) for d in drug_docs],
+                            action="using_unfiltered_results_for_diagnostics_only"
+                        )
+                        # Use unfiltered results so the answer is not empty — callers can detect this via rejection_log
+                        in_section = drug_docs
+                        rejection_log.append(
+                            f"SECTION_FILTER_FAILURE: all {len(drug_docs)} docs dropped for drug={drug} "
+                            f"sections={detected_sections}. Using unfiltered fallback."
+                        )
+                    
                     drug_docs = in_section
                 
                 threshold = settings.SIMILARITY_THRESHOLD
@@ -225,22 +280,52 @@ class ProcessClinicalQueryUseCase:
                 
             if detected_sections:
                 in_section = []
+                filter_trace = []
                 for d in filtered_docs:
-                    db_sec_raw = d.metadata.get("section", d.metadata.get("category", ""))
-                    db_sec = normalize_section_title_helper(db_sec_raw)
-                    if db_sec in detected_sections:
+                    db_sec_raw = _resolve_raw_section(d.metadata)
+                    db_sec = normalize_section(db_sec_raw)
+                    decision = "PASS" if db_sec in detected_sections else "DROP"
+                    filter_trace.append({
+                        "uuid": d.id,
+                        "raw_section": db_sec_raw,
+                        "normalized_section": db_sec,
+                        "requested": detected_sections,
+                        "decision": decision,
+                        "score": round(d.score or 0.0, 4)
+                    })
+                    if decision == "PASS":
                         in_section.append(d)
                     else:
-                        rejection_log.append(f"Rejected {d.id} (Score {round(d.score or 0.0, 4)}): Section mismatch. Chunk section='{db_sec_raw}' (normalized: '{db_sec}'), Requested={detected_sections}")
+                        rejection_log.append(
+                            f"DROP {d.id} (score={round(d.score or 0.0, 4)}) "
+                            f"raw='{db_sec_raw}' normalized='{db_sec}' "
+                            f"requested={detected_sections}"
+                        )
                 
                 logger.info(
-                    "metadata_filter_sections",
-                    before_filter=[d.metadata.get("section", d.metadata.get("category", "")) for d in filtered_docs],
-                    after_filter=[d.metadata.get("section", d.metadata.get("category", "")) for d in in_section],
-                    requested=detected_sections
+                    "section_filter",
+                    retrieved=len(filtered_docs),
+                    passed=len(in_section),
+                    dropped=len(filtered_docs) - len(in_section),
+                    requested_sections=detected_sections,
+                    filter_trace=filter_trace
                 )
                 
-                # STRICT METADATA FILTERING: Drop out_section chunks entirely
+                # Diagnostic safe-mode: if filter wiped all results, retry without section filter
+                if len(in_section) == 0 and len(filtered_docs) > 0:
+                    logger.error(
+                        "SECTION_FILTER_FAILURE_DETECTED",
+                        requested_sections=detected_sections,
+                        raw_sections_in_db=[_resolve_raw_section(d.metadata) for d in filtered_docs],
+                        normalized_sections_in_db=[normalize_section(_resolve_raw_section(d.metadata)) for d in filtered_docs],
+                        action="using_unfiltered_results_for_diagnostics_only"
+                    )
+                    in_section = filtered_docs
+                    rejection_log.append(
+                        f"SECTION_FILTER_FAILURE: all {len(filtered_docs)} docs dropped "
+                        f"sections={detected_sections}. Using unfiltered fallback."
+                    )
+                
                 filtered_docs = in_section
                 
             threshold = settings.SIMILARITY_THRESHOLD
@@ -382,24 +467,105 @@ Not found in available sources.
 """
 
     def get_debug_retrieval(self, query: MedicalQuery):
+        """Expanded debug endpoint: returns all raw pre-filter data + filter trace."""
+        # Run retrieval (which now includes instrumented filter_trace in rejection_log)
         _, _, documents, total_retrieval_time, confidence, retrieval_stats, _ = self._build_context(query)
+        
+        # Also do a raw unfiltered search so the caller can see what Qdrant returned before filtering
+        from app.usecases.drug_resolver import DrugNameResolver
+        q_lower = query.question.lower()
+        
+        # Drug resolution (duplicate minimal version for debug only)
+        detected_drugs_debug = []
+        for generic in DrugNameResolver.GENERIC_NAMES:
+            if generic in q_lower:
+                detected_drugs_debug.append(generic)
+        for brand, generic in DrugNameResolver.BRAND_TO_GENERIC.items():
+            if brand in q_lower:
+                detected_drugs_debug.append(generic)
+        detected_drugs_debug = list(set(detected_drugs_debug))
+        resolved_drug_debug = detected_drugs_debug[0].capitalize() if detected_drugs_debug else None
+        
+        # Section detection (same logic)
+        import re as _re
+        detected_sections_debug = []
+        for canonical_sec, keywords in SECTION_KEYWORDS.items():
+            for kw in keywords:
+                if _re.search(r'\b' + _re.escape(kw) + r'\b', q_lower):
+                    detected_sections_debug.append(canonical_sec)
+                    break
+        detected_sections_debug = list(set(detected_sections_debug))
+        
+        # Raw Qdrant search (no section filter)
+        dense_vec = self.embedding.embed_query(query.question)
+        sparse_vec = self.embedding.embed_sparse(query.question)
+        db_filters_raw = {}
+        if resolved_drug_debug:
+            db_filters_raw["drug"] = resolved_drug_debug
+        top_k = getattr(settings, "MULTI_SECTION_TOP_K", 30)
+        try:
+            if sparse_vec:
+                raw_docs = self.vector_db.hybrid_search(
+                    dense_vector=dense_vec,
+                    sparse_vector=sparse_vec,
+                    top_k=top_k,
+                    filters=db_filters_raw
+                )
+            else:
+                raw_docs = self.vector_db.search(
+                    query_vector=dense_vec,
+                    top_k=top_k,
+                    filters=db_filters_raw
+                )
+        except Exception as e:
+            raw_docs = []
+            logger.error("debug_raw_search_failed", error=str(e))
+        
+        # Build filter trace for every raw doc
+        filter_trace = []
+        for doc in raw_docs:
+            raw_sec = _resolve_raw_section(doc.metadata)
+            norm_sec = normalize_section(raw_sec)
+            passes = norm_sec in detected_sections_debug if detected_sections_debug else True
+            filter_trace.append({
+                "uuid": doc.id,
+                "drug_name": doc.metadata.get("drug_name", doc.metadata.get("drug", "")),
+                "generic_name": doc.metadata.get("generic_name", ""),
+                "raw_section": raw_sec,
+                "normalized_section": norm_sec,
+                "source": doc.metadata.get("source", ""),
+                "score": round(doc.score or 0.0, 4),
+                "passes_section_filter": passes,
+                "decision": "PASS" if passes else "DROP"
+            })
+        
+        passed_count = sum(1 for t in filter_trace if t["passes_section_filter"])
+        dropped_count = len(filter_trace) - passed_count
+        
         return {
-            "retrieval_time_sec": round(total_retrieval_time, 4),
-            "retrieved_chunks": [
+            "debug_summary": {
+                "detected_drug": resolved_drug_debug,
+                "detected_sections": detected_sections_debug,
+                "raw_retrieved_count": len(raw_docs),
+                "passed_filter_count": passed_count,
+                "dropped_filter_count": dropped_count,
+                "final_context_chunks": len(documents)
+            },
+            "filter_trace": filter_trace,
+            "final_chunks_after_filter": [
                 {
                     "uuid": doc.id,
                     "score": doc.score,
-                    "content": doc.content,
                     "drug": doc.metadata.get("drug_name", doc.metadata.get("drug", "")),
-                    "section": doc.metadata.get("section", doc.metadata.get("category", "")),
+                    "section": _resolve_raw_section(doc.metadata),
+                    "normalized_section": normalize_section(_resolve_raw_section(doc.metadata)),
                     "source": doc.source,
                     "chunk_length": len(doc.content),
-                    "embedding_dimension": len(self.embedding.embed_query(query.question)),
-                    "document_version": doc.metadata.get("version", "1.0.0"),
                     "rank": i + 1
                 }
                 for i, doc in enumerate(documents)
             ],
+            "retrieval_time_sec": round(total_retrieval_time, 4),
             "metrics": {
                 "retrieval_latency_sec": retrieval_stats["retrieval_latency_sec"],
                 "total_retrieved": retrieval_stats["total_retrieved"],
