@@ -74,18 +74,28 @@ def run_ingestion():
     print(f"  {len(vectors)} vectors generated.")
 
     points = []
+    from ingestion.pipeline.parser import MedicalParser
+    parser = MedicalParser()
     for item, vec in zip(corpus, vectors):
         # Qdrant requires UUID or integer IDs — derive a stable UUID from the doc id string
         point_id = str(uuid.uuid5(uuid.NAMESPACE_DNS, item.get("id", str(uuid.uuid4()))))
+        
+        # Normalize category/section to lowercase canonical form
+        normalized_item = item.copy()
+        if "category" in normalized_item:
+            normalized_item["category"] = parser.normalize_section_title(normalized_item["category"])
+        if "section" in normalized_item:
+            normalized_item["section"] = parser.normalize_section_title(normalized_item["section"])
+            
         points.append(PointStruct(
             id      = point_id,
             vector  = {"dense": vec.tolist()},
-            payload = item
+            payload = normalized_item
         ))
 
     print(f"Uploading {len(points)} points to Qdrant Cloud ...")
     client.upsert(collection_name=COLLECTION, points=points)
-    print("✅ Ingestion complete!")
+    print("Ingestion complete!")
 
 if __name__ == "__main__":
     run_ingestion()
