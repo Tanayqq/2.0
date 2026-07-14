@@ -3,13 +3,13 @@
   "pipeline_version": "1.6.0",
   "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
   "embedding_dimension": 384,
-  "timestamp": "2026-07-14T16:57:22.174121Z",
+  "timestamp": "2026-07-14T17:08:37.751277Z",
   "metadata": {
-    "total_drugs": 3,
-    "total_chunks": 208,
-    "total_sections": 134,
+    "total_drugs": 105,
+    "total_chunks": 5607,
+    "total_sections": 3845,
     "source_counts": {
-      "DailyMed": 208
+      "DailyMed": 5607
     }
   }
 }
