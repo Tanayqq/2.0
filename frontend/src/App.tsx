@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
-import { Info, Activity, ShieldAlert, Loader2 } from "lucide-react";
+import { Info, Activity, ShieldAlert, Loader2, ChevronDown, ChevronUp } from "lucide-react";
 import { InlineCitation } from "./components/InlineCitation";
 
 function CitationRenderer({ 
@@ -89,6 +89,85 @@ function CitationRenderer({
   }
   
   return <div className="leading-relaxed whitespace-pre-wrap">{parts}</div>;
+}
+
+function SourceCard({ 
+  c, 
+  cardIndex, 
+  num 
+}: { 
+  c: AnswerResponse["citations"][number]; 
+  cardIndex: number; 
+  num: number;
+}) {
+  const [expanded, setExpanded] = useState(false);
+
+  return (
+    <div 
+      id={`citation-card-${cardIndex}-${num}`}
+      className="flex flex-col text-sm text-slate-700 p-4 rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-300 gap-3"
+    >
+      <div className="flex items-start justify-between gap-3">
+        <div className="flex items-start gap-3 flex-1 min-w-0">
+          <span className="inline-flex items-center justify-center font-bold text-blue-700 bg-blue-50 border border-blue-200 rounded-lg h-7 w-7 text-xs mr-1 shrink-0">
+            [{num}]
+          </span>
+          <div className="space-y-1 flex-1 min-w-0">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="font-bold text-slate-800 text-sm">{c.source}</span>
+              {c.drug && (
+                <Badge variant="outline" className="text-slate-500 border-slate-200 bg-slate-50 text-[10px]">
+                  {c.drug}
+                </Badge>
+              )}
+              {c.section && (
+                <Badge variant="secondary" className="text-slate-500 bg-slate-100 text-[10px]">
+                  {c.section}
+                </Badge>
+              )}
+            </div>
+          </div>
+        </div>
+        
+        <div className="flex items-center gap-2 shrink-0">
+          {c.similarity !== undefined && (
+            <Badge variant="outline" className="text-blue-600 border-blue-200 bg-blue-50 text-[10px]">
+              Match: {(c.similarity * 100).toFixed(0)}%
+            </Badge>
+          )}
+          {c.count && c.count > 0 && (
+            <Badge className="bg-slate-100 text-slate-600 hover:bg-slate-200 text-[10px] border border-slate-200">
+              Referenced {c.count} time{c.count > 1 ? 's' : ''}
+            </Badge>
+          )}
+        </div>
+      </div>
+
+      {/* Snippet Area (Expandable on click) */}
+      <div 
+        onClick={() => setExpanded(!expanded)}
+        className="cursor-pointer hover:bg-slate-100/50 p-2.5 rounded-lg border border-slate-100 bg-slate-50 transition-colors duration-200 group relative"
+        title={expanded ? "Click to collapse" : "Click to expand"}
+      >
+        <p className={`text-xs text-slate-600 italic leading-relaxed transition-all duration-300 ${expanded ? "" : "line-clamp-2"}`}>
+          "{c.snippet}"
+        </p>
+        <div className="mt-1 flex items-center justify-end gap-1 text-[10px] text-slate-400 font-medium group-hover:text-blue-500 select-none">
+          {expanded ? (
+            <>
+              <span>Click to collapse</span>
+              <ChevronUp className="h-3 w-3" />
+            </>
+          ) : (
+            <>
+              <span>Click to expand</span>
+              <ChevronDown className="h-3 w-3" />
+            </>
+          )}
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default function App() {
@@ -179,47 +258,12 @@ export default function App() {
                             {activeCitations.map((c, j) => {
                               const num = c.citation_number ?? parseInt(c.document_id, 10);
                               return (
-                                <div 
+                                <SourceCard 
                                   key={j} 
-                                  id={`citation-card-${i}-${num}`}
-                                  className="flex flex-col md:flex-row md:items-center justify-between text-sm text-slate-700 p-4 rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-500 gap-3"
-                                >
-                                  <div className="flex items-start gap-3 flex-1 min-w-0">
-                                    <span className="inline-flex items-center justify-center font-bold text-blue-700 bg-blue-50 border border-blue-200 rounded-lg h-7 w-7 text-xs mr-1 shrink-0">
-                                      [{num}]
-                                    </span>
-                                    <div className="space-y-1 flex-1 min-w-0">
-                                      <div className="flex flex-wrap items-center gap-2">
-                                        <span className="font-bold text-slate-800 text-sm">{c.source}</span>
-                                        {c.drug && (
-                                          <Badge variant="outline" className="text-slate-500 border-slate-200 bg-slate-50 text-[10px]">
-                                            {c.drug}
-                                          </Badge>
-                                        )}
-                                        {c.section && (
-                                          <Badge variant="secondary" className="text-slate-500 bg-slate-100 text-[10px]">
-                                            {c.section}
-                                          </Badge>
-                                        )}
-                                      </div>
-                                      <p className="text-xs text-slate-600 italic line-clamp-2 mt-1 bg-slate-50 p-2 rounded border border-slate-100">
-                                        "{c.snippet}"
-                                      </p>
-                                    </div>
-                                  </div>
-                                  <div className="flex items-center gap-2 shrink-0 self-end md:self-center">
-                                    {c.similarity !== undefined && (
-                                      <Badge variant="outline" className="text-blue-600 border-blue-200 bg-blue-50 text-[10px]">
-                                        Match: {(c.similarity * 100).toFixed(0)}%
-                                      </Badge>
-                                    )}
-                                    {c.count && c.count > 0 && (
-                                      <Badge className="bg-slate-100 text-slate-600 hover:bg-slate-200 text-[10px] border border-slate-200">
-                                        Referenced {c.count} time{c.count > 1 ? 's' : ''}
-                                      </Badge>
-                                    )}
-                                  </div>
-                                </div>
+                                  c={c} 
+                                  cardIndex={i} 
+                                  num={num} 
+                                />
                               );
                             })}
                           </div>
