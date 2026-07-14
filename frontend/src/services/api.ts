@@ -18,6 +18,7 @@ export interface AnswerResponse {
     llm_latency_sec?: number;
     total_latency_sec?: number;
     provider?: string;
+    confidence?: string;
   };
 }
 
