@@ -45,6 +45,11 @@ def _resolve_raw_section(metadata: dict) -> str:
             return str(val).strip()
     return ""
 
+def safe_log_str(s: str) -> str:
+    if not isinstance(s, str):
+        return str(s)
+    return s.encode('ascii', errors='replace').decode('ascii')
+
 def _balance_by_section(docs: List[Any], requested_sections: List[str], max_total: int) -> List[Any]:
     """
     Diversify the retrieved chunks by ensuring at least the top chunk from each 
@@ -465,39 +470,55 @@ class ProcessClinicalQueryUseCase:
             per_drug_per_section=coverage_log
         )
         
-        # Build structured context string
+        # Build structured context string (with strict size limit to stay under Groq rate limits)
         context_str = ""
+        max_char_limit = 18000
+        
         for drug in drug_order:
-            context_str += f"{'='*60}\n"
-            context_str += f"DRUG: {drug}\n"
-            context_str += f"{'='*60}\n\n"
+            if len(context_str) >= max_char_limit:
+                break
+                
+            drug_str = ""
+            drug_str += f"{'='*60}\n"
+            drug_str += f"DRUG: {drug}\n"
+            drug_str += f"{'='*60}\n\n"
             
             sections_to_render = detected_sections if detected_sections else list(docs_by_drug_section.get(drug, {}).keys())
             
             for sec in sections_to_render:
-                context_str += f"--- Section: {sec} ---\n\n"
+                if len(context_str) + len(drug_str) >= max_char_limit:
+                    break
+                    
+                sec_str = ""
+                sec_str += f"--- Section: {sec} ---\n\n"
                 
                 sec_docs = docs_by_drug_section.get(drug, {}).get(sec, [])
                 
                 if not sec_docs:
-                    # Pre-LLM "Not found" — backend decides BEFORE the LLM
-                    context_str += "NO DOCUMENTS AVAILABLE FOR THIS SECTION.\n\n"
+                    sec_str += "NO DOCUMENTS AVAILABLE FOR THIS SECTION.\n\n"
+                    drug_str += sec_str
                     continue
                 
                 for doc in sec_docs:
+                    if len(context_str) + len(drug_str) + len(sec_str) >= max_char_limit:
+                        break
+                        
                     citation_counter += 1
                     citation_id = str(citation_counter)
                     section_raw = doc.metadata.get('section', doc.metadata.get('category', ''))
                     cleaned_content = clean_chunk_content(doc.content)
                     
-                    context_str += f"DOCUMENT {citation_id}\n"
-                    context_str += f"Citation Number: [{citation_id}]\n"
-                    context_str += f"Source: {doc.source}\n"
-                    context_str += f"Facts:\n"
+                    doc_str = ""
+                    doc_str += f"DOCUMENT {citation_id}\n"
+                    doc_str += f"Citation Number: [{citation_id}]\n"
+                    doc_str += f"Source: {doc.source}\n"
+                    doc_str += f"Facts:\n"
                     for line in cleaned_content.split('\n'):
                         if line.strip():
-                            context_str += f"{line}\n"
-                    context_str += f"\n"
+                            doc_str += f"{line}\n"
+                    doc_str += f"\n"
+                    
+                    sec_str += doc_str
                     
                     # Add to citation map
                     citation_map.add_entry(
@@ -521,8 +542,10 @@ class ProcessClinicalQueryUseCase:
                         similarity=round(doc.score or 0.0, 4),
                         count=0
                     ))
+                
+                drug_str += sec_str
             
-            context_str += "\n"
+            context_str += drug_str + "\n"
             
         retrieval_stats = {
             "rank_scores": [round(d.score or 0.0, 4) for d in final_docs],
@@ -789,6 +812,12 @@ CRITICAL RULES:
             if not regex.search(r'[a-zA-Z]', sentence):
                 final_sentences.append(sentence)
                 continue
+                
+            # Skip validation for structural elements and 'not found' placeholders
+            s_clean = sentence.strip().lower()
+            if "not found in available sources" in s_clean or s_clean.startswith('#') or (s_clean.startswith('**') and s_clean.endswith('**')):
+                final_sentences.append(sentence)
+                continue
             
             # Find all citation numbers and their spans in the sentence
             cit_pattern = r'\[([0-9]+)\]'
@@ -844,7 +873,7 @@ CRITICAL RULES:
                     has_unsupported = "[Unsupported Citation Removed]" in new_sentence
                     has_valid = regex.search(r'\[[0-9]+\]', new_sentence)
                     if has_unsupported and not has_valid:
-                        logger.warning("Ungrounded sentence removed during validation.", sentence=sentence)
+                        logger.warning("Ungrounded sentence removed during validation.", sentence=safe_log_str(sentence))
                         continue
                         
                 # Clean up any leftover "[Unsupported Citation Removed]" tags if action is "remove" or "reject"
@@ -881,7 +910,7 @@ CRITICAL RULES:
                     # Completely uncited and ungrounded
                     validation_errors.append(f"Sentence missing citation: '{clean_sentence_text}'")
                     if settings.STRICT_CITATION_VALIDATION_ACTION == "remove":
-                        logger.warning("Uncited/ungrounded sentence removed during validation.", sentence=sentence)
+                        logger.warning("Uncited/ungrounded sentence removed during validation.", sentence=safe_log_str(sentence))
                         continue
                     elif settings.STRICT_CITATION_VALIDATION_ACTION == "reject":
                         return "Unable to generate a fully grounded answer from the indexed corpus.", [], {}, validation_errors
@@ -963,7 +992,6 @@ CRITICAL RULES:
             validation_failed_reason = None
             validation_errors = []
         else:
-            logger.info("complete_prompt", prompt=prompt)
             raw_answer = self.llm.generate(prompt)
             llm_time = time.time() - start_llm
             
@@ -972,7 +1000,7 @@ CRITICAL RULES:
             logger.info(
                 "raw_llm_output",
                 raw_answer=raw_answer,
-                final_prompt=prompt,
+                final_prompt=prompt[:200] + "...",
                 documents=[d.id for d in documents],
                 citation_map=citation_map.to_dict()
             )
@@ -1024,11 +1052,30 @@ CRITICAL RULES:
     def _compute_citation_coverage(self, answer_text: str) -> float:
         """Compute the percentage of factual sentences that have at least one inline citation."""
         import re as _re
-        sentences = [s.strip() for s in _re.split(r'[.!?]\s+', answer_text.strip()) if s.strip()]
+        def mark_boundary(match):
+            return match.group(0).rstrip() + "<SENTENCE_BOUNDARY>"
+            
+        boundary_pattern = r'(?:\[[0-9]+\]|\[Unsupported Citation Removed\])\s+(?=[A-Z\n\r])|[.!?]\s+'
+        temp_marked = _re.sub(boundary_pattern, mark_boundary, answer_text.strip())
+        raw_sentences = temp_marked.split("<SENTENCE_BOUNDARY>")
+        sentences = [s.strip() for s in raw_sentences if s.strip()]
         if not sentences:
             return 1.0
-        # Filter to only sentences with alphabetic content (skip "Not found" etc.)
-        factual = [s for s in sentences if _re.search(r'[a-zA-Z]{3,}', s) and 'not found in available sources' not in s.lower()]
+            
+        factual = []
+        for s in sentences:
+            s_lower = s.lower()
+            # Skip structural elements and not-found placeholders
+            if "not found in available sources" in s_lower:
+                continue
+            if s.startswith('#'):
+                continue
+            if s.startswith('**') and s.endswith('**'):
+                continue
+            if not _re.search(r'[a-zA-Z]{3,}', s):
+                continue
+            factual.append(s)
+            
         if not factual:
             return 1.0
         cited = sum(1 for s in factual if _re.search(r'\[[0-9]+\]', s))
@@ -1058,8 +1105,6 @@ CRITICAL RULES:
         prompt = self._build_prompt(context_str, query.question)
         
         logger.info("generating_answer_via_llm", provider=settings.ACTIVE_LLM_PROVIDER, prompt_version=self.prompt_version)
-        logger.info("complete_prompt", prompt=prompt)
-        
         # --- LLM Generation with Retry ---
         max_attempts = 2
         final_answer_text = None
@@ -1077,10 +1122,9 @@ CRITICAL RULES:
             logger.info(
                 "raw_llm_output",
                 attempt=attempt,
-                raw_answer=answer_text,
-                final_prompt=prompt,
-                documents=[d.id for d in documents],
-                citation_map=citation_map.to_dict()
+                raw_answer=safe_log_str(answer_text),
+                final_prompt=(prompt[:200] + "...").encode('ascii', errors='replace').decode('ascii'),
+                documents=[d.id for d in documents]
             )
             
             # Check citation coverage BEFORE post-processing
@@ -1115,7 +1159,7 @@ CRITICAL RULES:
         
         validation_failed_reason = " | ".join(final_validation_errors) if final_validation_errors else None
         if validation_failed_reason:
-            logger.warning("Inline citation removed during processing.", errors=final_validation_errors)
+            logger.warning("Inline citation removed during processing.", errors=[safe_log_str(e) for e in final_validation_errors])
             
         logger.info(
             "query_completed",
