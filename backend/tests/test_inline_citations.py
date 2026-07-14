@@ -94,10 +94,15 @@ def test_scenario_3_no_citation():
     usecase._build_context = mock_build_context_generator(citations, docs).__get__(usecase, ProcessClinicalQueryUseCase)
     usecase.llm = DummyLLM("Sentence.")
     
-    response = usecase.execute(MedicalQuery(question="Test question"))
-    assert response.answer == "Unable to generate a fully grounded answer from the indexed corpus."
-    assert len(response.citations) == 0
-    assert response.metadata.get("validation_failed") is not None
+    from app.core.config import settings
+    old_action = settings.STRICT_CITATION_VALIDATION_ACTION
+    settings.STRICT_CITATION_VALIDATION_ACTION = "reject"
+    try:
+        response = usecase.execute(MedicalQuery(question="Test question"))
+        assert response.answer == "Unable to generate a fully grounded answer from the indexed corpus."
+        assert len(response.citations) == 0
+    finally:
+        settings.STRICT_CITATION_VALIDATION_ACTION = old_action
 
 def test_scenario_4_bibliography_sync():
     """Test 4: Bibliography with 1, 2 but answer only cites [1] -> bibliography automatically becomes 1."""

@@ -260,6 +260,26 @@ class ProcessClinicalQueryUseCase:
                     if d.metadata.get("drug", "").lower() == resolved_drug.lower() or
                        d.metadata.get("drug_name", "").lower() == resolved_drug.lower()
                 ]
+            else:
+                # Strict check: if no drug is resolved, we must only keep documents
+                # whose drug name (generic or brand) is explicitly mentioned in the query text.
+                # This prevents leaks of unrelated drugs (like 'Antigravity' returning 'Ciprofloxacin').
+                from app.usecases.drug_resolver import DrugNameResolver
+                
+                def is_doc_drug_mentioned(doc) -> bool:
+                    doc_drug = doc.metadata.get("drug", doc.metadata.get("drug_name", ""))
+                    if not doc_drug:
+                        return True
+                    doc_drug_lower = doc_drug.lower()
+                    query_lower = query.question.lower()
+                    if doc_drug_lower in query_lower:
+                        return True
+                    for brand, generic in DrugNameResolver.BRAND_TO_GENERIC.items():
+                        if generic == doc_drug_lower and brand in query_lower:
+                            return True
+                    return False
+                
+                filtered_docs = [d for d in filtered_docs if is_doc_drug_mentioned(d)]
                 
             if detected_sections:
                 in_section = []
