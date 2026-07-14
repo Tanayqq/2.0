@@ -278,7 +278,9 @@ class ProcessClinicalQueryUseCase:
                 
                 total_filtered += len(drug_threshold_docs)
                 # Keep top 3 for this drug to guarantee balance, diversified by section!
-                diversified_drug_docs = _balance_by_section(drug_threshold_docs, detected_sections, max_total=3)
+                # Dynamic chunk budget: 1 chunk per requested section (minimum), not a fixed number
+                per_drug_budget = max(len(detected_sections), 3)
+                diversified_drug_docs = _balance_by_section(drug_threshold_docs, detected_sections, max_total=per_drug_budget)
                 all_retrieved_docs_by_drug.extend(diversified_drug_docs)
             
             final_docs = all_retrieved_docs_by_drug
@@ -421,55 +423,106 @@ class ProcessClinicalQueryUseCase:
                 deduped_final_docs.append(doc)
         final_docs = deduped_final_docs
 
-        # 7. Assign sequential internal citation IDs
+        # 7. Assign sequential citation IDs and build STRUCTURED context (grouped by Drug → Section)
+        from app.preprocessor import clean_chunk_content
+        
         citation_map = CitationMap()
-        context_str = ""
         citations = []
-        for i, doc in enumerate(final_docs, start=1):
-            citation_id = str(i)
+        citation_counter = 0
+        
+        # Organize docs by (drug, normalized_section)
+        docs_by_drug_section: Dict[str, Dict[str, list]] = {}
+        for doc in final_docs:
             drug = doc.metadata.get('drug_name', doc.metadata.get('drug', ''))
-            section = doc.metadata.get('section', doc.metadata.get('category', ''))
+            raw_sec = _resolve_raw_section(doc.metadata)
+            norm_sec = normalize_section(raw_sec)
+            if drug not in docs_by_drug_section:
+                docs_by_drug_section[drug] = {}
+            if norm_sec not in docs_by_drug_section[drug]:
+                docs_by_drug_section[drug][norm_sec] = []
+            docs_by_drug_section[drug][norm_sec].append(doc)
+        
+        # Determine the list of drugs (preserve order from resolved_drug or from docs)
+        if resolved_drug and isinstance(resolved_drug, list):
+            drug_order = resolved_drug
+        elif resolved_drug:
+            drug_order = [resolved_drug]
+        else:
+            drug_order = list(docs_by_drug_section.keys())
+        
+        # Log per-drug per-section chunk counts
+        coverage_log = {}
+        for drug in drug_order:
+            coverage_log[drug] = {}
+            for sec in (detected_sections if detected_sections else ["_all"]):
+                count = len(docs_by_drug_section.get(drug, {}).get(sec, []))
+                coverage_log[drug][sec] = count
+        
+        logger.info(
+            "retrieval_coverage",
+            drugs=drug_order,
+            detected_sections=detected_sections,
+            per_drug_per_section=coverage_log
+        )
+        
+        # Build structured context string
+        context_str = ""
+        for drug in drug_order:
+            context_str += f"{'='*60}\n"
+            context_str += f"DRUG: {drug}\n"
+            context_str += f"{'='*60}\n\n"
             
-            # Normalize chunk content using preprocessor
-            from app.preprocessor import clean_chunk_content
-            cleaned_content = clean_chunk_content(doc.content)
+            sections_to_render = detected_sections if detected_sections else list(docs_by_drug_section.get(drug, {}).keys())
             
-            # Format document representation exactly as requested
-            context_str += f"=========================\n\n"
-            context_str += f"DOCUMENT {citation_id}\n\n"
-            context_str += f"Citation Number: [{citation_id}]\n\n"
-            context_str += f"UUID:\n{doc.id}\n\n"
-            context_str += f"Drug:\n{drug}\n\n"
-            context_str += f"Section:\n{section}\n\n"
-            context_str += f"Source:\n{doc.source}\n\n"
-            context_str += f"Facts\n"
-            for line in cleaned_content.split('\n'):
-                if line.strip():
-                    context_str += f"{line}\n"
-            context_str += f"\n=========================\n\n"
+            for sec in sections_to_render:
+                context_str += f"--- Section: {sec} ---\n\n"
+                
+                sec_docs = docs_by_drug_section.get(drug, {}).get(sec, [])
+                
+                if not sec_docs:
+                    # Pre-LLM "Not found" — backend decides BEFORE the LLM
+                    context_str += "NO DOCUMENTS AVAILABLE FOR THIS SECTION.\n\n"
+                    continue
+                
+                for doc in sec_docs:
+                    citation_counter += 1
+                    citation_id = str(citation_counter)
+                    section_raw = doc.metadata.get('section', doc.metadata.get('category', ''))
+                    cleaned_content = clean_chunk_content(doc.content)
+                    
+                    context_str += f"DOCUMENT {citation_id}\n"
+                    context_str += f"Citation Number: [{citation_id}]\n"
+                    context_str += f"Source: {doc.source}\n"
+                    context_str += f"Facts:\n"
+                    for line in cleaned_content.split('\n'):
+                        if line.strip():
+                            context_str += f"{line}\n"
+                    context_str += f"\n"
+                    
+                    # Add to citation map
+                    citation_map.add_entry(
+                        uuid=doc.id,
+                        citation_number=citation_id,
+                        source=doc.source,
+                        drug=drug,
+                        section=section_raw,
+                        text=cleaned_content,
+                        similarity=round(doc.score or 0.0, 4)
+                    )
+                    
+                    # Add to citations list
+                    citations.append(Citation(
+                        document_id=citation_id,
+                        source=f"{doc.source} – {drug} – {section_raw}",
+                        snippet=cleaned_content,
+                        uuid=doc.id,
+                        drug=drug,
+                        section=section_raw,
+                        similarity=round(doc.score or 0.0, 4),
+                        count=0
+                    ))
             
-            # Add to citation map (using cleaned content)
-            citation_map.add_entry(
-                uuid=doc.id,
-                citation_number=citation_id,
-                source=doc.source,
-                drug=drug,
-                section=section,
-                text=cleaned_content,
-                similarity=round(doc.score or 0.0, 4)
-            )
-            
-            # Add to citations (legacy list for bibliography)
-            citations.append(Citation(
-                document_id=citation_id,
-                source=f"{doc.source} – {drug} – {section}",
-                snippet=cleaned_content,
-                uuid=doc.id,
-                drug=drug,
-                section=section,
-                similarity=round(doc.score or 0.0, 4),
-                count=0
-            ))
+            context_str += "\n"
             
         retrieval_stats = {
             "rank_scores": [round(d.score or 0.0, 4) for d in final_docs],
@@ -483,7 +536,8 @@ class ProcessClinicalQueryUseCase:
             "resolved_drug": resolved_drug,
             "detected_sections": detected_sections,
             "raw_retrieved_log": raw_retrieved_log,
-            "rejection_log": rejection_log
+            "rejection_log": rejection_log,
+            "coverage": coverage_log
         }
         
         return context_str, citations, final_docs, retrieve_time, confidence, retrieval_stats, citation_map
@@ -495,26 +549,41 @@ Context:
 
 Question: {question}
 
-Instructions:
-You are a clinical summarization engine.
-You are NOT allowed to answer from memory.
-You may ONLY summarize the numbered DOCUMENTS.
-Each DOCUMENT already has its citation number.
-After EVERY factual sentence append its citation.
+You are a clinical evidence extraction engine. You extract facts ONLY from the DOCUMENTS above.
 
-Example:
-Metformin is contraindicated in severe renal impairment.[1]
-Metformin is contraindicated in hypersensitivity.[1]
+CRITICAL RULES:
 
-Never output "[see Warnings]" or FDA label references.
-Never invent citation numbers.
-Never omit citations.
-Never merge facts from different drugs.
+1. CITATIONS ARE MANDATORY.
+   After EVERY factual sentence, you MUST append the citation number in square brackets.
+   CORRECT: "Metformin is contraindicated in severe renal impairment.[1]"
+   CORRECT: "Warfarin may increase the risk of bleeding.[3]"
+   WRONG:   "Metformin is contraindicated in severe renal impairment."
+   WRONG:   "Warfarin may increase the risk of bleeding."
+   A sentence without a citation number is INVALID and will be removed.
 
-You are provided with retrieved chunks that belong to specific clinical sections. If the user requests only one section (for example "Contraindications"), you must answer exclusively from chunks whose metadata section equals that requested section. Ignore all other retrieved sections. Do not include warnings, precautions, patient package inserts, adverse reactions, or indications unless they were explicitly requested.
+2. VERBATIM EXTRACTION ONLY.
+   You may ONLY state facts that appear in the DOCUMENTS above.
+   Stay as close to the original wording as possible.
+   Do NOT paraphrase, generalize, or add information from your training data.
+   Do NOT invent drug interactions, contraindications, or warnings.
 
-If no chunk exists for the requested section, or if the information does not exist in the context, respond exactly:
-Not found in available sources.
+3. SECTION BOUNDARIES ARE ABSOLUTE.
+   The context is organized by Drug and Section.
+   - If a section says "NO DOCUMENTS AVAILABLE FOR THIS SECTION", you MUST respond with exactly:
+     Not found in available sources.
+   - NEVER use a "drug interactions" document to answer a "Contraindications" question.
+   - NEVER use a "warnings" document to answer a "Drug Interactions" question.
+   - Each section's answer must come ONLY from documents under that same section heading.
+
+4. NEVER MIX DRUGS.
+   Facts about Metformin must NEVER appear under Warfarin's section, and vice versa.
+
+5. NEVER generate from memory.
+   If no DOCUMENT exists for a requested fact, do NOT write it.
+   Prefer "Not found in available sources." over any invented statement.
+
+6. Do NOT output FDA cross-references like "[see Warnings and Precautions (5.1)]".
+   Do NOT invent citation numbers that don't exist in the DOCUMENTS.
 """
 
     def get_debug_retrieval(self, query: MedicalQuery):
@@ -952,6 +1021,19 @@ Not found in available sources.
             
         return trace
 
+    def _compute_citation_coverage(self, answer_text: str) -> float:
+        """Compute the percentage of factual sentences that have at least one inline citation."""
+        import re as _re
+        sentences = [s.strip() for s in _re.split(r'[.!?]\s+', answer_text.strip()) if s.strip()]
+        if not sentences:
+            return 1.0
+        # Filter to only sentences with alphabetic content (skip "Not found" etc.)
+        factual = [s for s in sentences if _re.search(r'[a-zA-Z]{3,}', s) and 'not found in available sources' not in s.lower()]
+        if not factual:
+            return 1.0
+        cited = sum(1 for s in factual if _re.search(r'\[[0-9]+\]', s))
+        return cited / len(factual)
+
     def execute(self, query: MedicalQuery) -> AnswerResponse:
         logger.info("processing_query_start", question=query.question, filters=query.filters)
         
@@ -978,34 +1060,68 @@ Not found in available sources.
         logger.info("generating_answer_via_llm", provider=settings.ACTIVE_LLM_PROVIDER, prompt_version=self.prompt_version)
         logger.info("complete_prompt", prompt=prompt)
         
-        start_llm = time.time()
-        answer_text = self.llm.generate(prompt)
-        llm_time = time.time() - start_llm
+        # --- LLM Generation with Retry ---
+        max_attempts = 2
+        final_answer_text = None
+        final_citations = None
+        final_remapping = None
+        final_validation_errors = None
+        total_llm_time = 0.0
         
-        # B. Raw LLM Output Logging (handled safely via structlog below)
+        for attempt in range(1, max_attempts + 1):
+            start_llm = time.time()
+            answer_text = self.llm.generate(prompt)
+            llm_time = time.time() - start_llm
+            total_llm_time += llm_time
+            
+            logger.info(
+                "raw_llm_output",
+                attempt=attempt,
+                raw_answer=answer_text,
+                final_prompt=prompt,
+                documents=[d.id for d in documents],
+                citation_map=citation_map.to_dict()
+            )
+            
+            # Check citation coverage BEFORE post-processing
+            coverage = self._compute_citation_coverage(answer_text)
+            logger.info("citation_coverage_check", attempt=attempt, coverage=round(coverage, 2))
+            
+            # Post-process & validate
+            citations_copy = [c.model_copy() for c in citations]
+            processed_answer, processed_citations, remapping, validation_errors = self._post_process_and_validate(
+                answer_text, citations_copy, citation_map
+            )
+            
+            if coverage >= 0.95 or attempt == max_attempts:
+                final_answer_text = processed_answer
+                final_citations = processed_citations
+                final_remapping = remapping
+                final_validation_errors = validation_errors
+                
+                if coverage < 0.95 and attempt == max_attempts:
+                    logger.warning(
+                        "citation_coverage_failed_after_retry",
+                        coverage=round(coverage, 2),
+                        attempts=max_attempts
+                    )
+                break
+            else:
+                logger.warning(
+                    "citation_coverage_below_threshold_retrying",
+                    coverage=round(coverage, 2),
+                    attempt=attempt
+                )
         
-        logger.info(
-            "raw_llm_output",
-            raw_answer=answer_text,
-            final_prompt=prompt,
-            documents=[d.id for d in documents],
-            citation_map=citation_map.to_dict()
-        )
-        
-        # Post-process & validate
-        answer_text, citations, remapping, validation_errors = self._post_process_and_validate(
-            answer_text, citations, citation_map
-        )
-        
-        validation_failed_reason = " | ".join(validation_errors) if validation_errors else None
+        validation_failed_reason = " | ".join(final_validation_errors) if final_validation_errors else None
         if validation_failed_reason:
-            logger.warning("Inline citation removed during processing.", errors=validation_errors)
+            logger.warning("Inline citation removed during processing.", errors=final_validation_errors)
             
         logger.info(
             "query_completed",
             retrieval_latency=round(retrieval_time, 4),
-            llm_latency=round(llm_time, 4),
-            total_latency=round(retrieval_time + llm_time, 4),
+            llm_latency=round(total_llm_time, 4),
+            total_latency=round(retrieval_time + total_llm_time, 4),
             retrieved_chunk_ids=[doc.id for doc in documents],
             provider=settings.ACTIVE_LLM_PROVIDER,
             prompt_version=self.prompt_version,
@@ -1014,8 +1130,8 @@ Not found in available sources.
         
         metadata = {
             "retrieval_latency_sec": round(retrieval_time, 4),
-            "llm_latency_sec": round(llm_time, 4),
-            "total_latency_sec": round(retrieval_time + llm_time, 4),
+            "llm_latency_sec": round(total_llm_time, 4),
+            "total_latency_sec": round(retrieval_time + total_llm_time, 4),
             "provider": settings.ACTIVE_LLM_PROVIDER,
             "prompt_version": self.prompt_version,
             "retrieval_confidence": confidence,
@@ -1026,8 +1142,8 @@ Not found in available sources.
             metadata["validation_error"] = validation_failed_reason
                         
         return AnswerResponse(
-            answer=answer_text,
-            citations=citations,
+            answer=final_answer_text,
+            citations=final_citations,
             metadata=metadata
         )
 
