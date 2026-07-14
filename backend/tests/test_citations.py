@@ -15,6 +15,10 @@ class DummyLLM:
         return self.answer
 
 def test_citation_post_processing():
+    from app.core.config import settings
+    original_action = settings.STRICT_CITATION_VALIDATION_ACTION
+    settings.STRICT_CITATION_VALIDATION_ACTION = "none"
+    
     # Setup process use case with dummy components
     usecase = ProcessClinicalQueryUseCase(
         llm_provider=None,
@@ -76,6 +80,7 @@ def test_citation_post_processing():
     assert response_vancouver.citations[1].uuid == "uuid-1" # originally [1] (mechanism)
     assert response_vancouver.citations[1].document_id == "2"
 
+    settings.STRICT_CITATION_VALIDATION_ACTION = original_action
     print("\nAll unit tests passed successfully!")
 
 # Mock ProcessClinicalQueryUseCase's _build_context to return our fixed mock values

@@ -687,7 +687,11 @@ Not found in available sources.
         answer_text = regex.sub(r'(?:\[[0-9]+\]|\[Unsupported Citation Removed\])+', merge_brackets, answer_text)
         
         # 5. Split answer into sentences for grounding & auto-citation injection
-        temp_marked = regex.sub(r'(\[[0-9]+\]|\[Unsupported Citation Removed\]|[.!?])\s+', r'\1<SENTENCE_BOUNDARY>', answer_text.strip())
+        def mark_boundary(match):
+            return match.group(0).rstrip() + "<SENTENCE_BOUNDARY>"
+            
+        boundary_pattern = r'(?:\[[0-9]+\]|\[Unsupported Citation Removed\])\s+(?=[A-Z\n\r])|[.!?]\s+'
+        temp_marked = regex.sub(boundary_pattern, mark_boundary, answer_text.strip())
         raw_sentences = temp_marked.split("<SENTENCE_BOUNDARY>")
         sentences = [s.strip() for s in raw_sentences if s.strip()]
         
@@ -705,47 +709,102 @@ Not found in available sources.
                 final_sentences.append(sentence)
                 continue
             
-            # Check if sentence already has any citation (either numeric or Unsupported Citation Removed)
-            has_citation = regex.search(r'\[(?:[0-9]+|Unsupported Citation Removed)\]', sentence)
+            # Find all citation numbers and their spans in the sentence
+            cit_pattern = r'\[([0-9]+)\]'
+            matches = list(regex.finditer(cit_pattern, sentence))
             
-            if has_citation:
-                final_sentences.append(sentence)
-                continue
-                
-            # No citation in the LLM output: run grounding matcher to auto-inject!
-            sentence_kws = get_keywords(sentence)
+            # Clean sentence text without citation brackets for keyword extraction
+            clean_sentence_text = regex.sub(r'\s*\[(?:[0-9]+|Unsupported Citation Removed)\]', '', sentence).strip()
+            sentence_kws = get_keywords(clean_sentence_text)
+            
             if not sentence_kws:
                 final_sentences.append(sentence)
                 continue
                 
-            best_matches = []
-            for cit_num, entry in citation_map.entries.items():
-                chunk_search_text = f"{entry.drug} {entry.section} {entry.text}"
-                chunk_kws = get_keywords(chunk_search_text)
-                if not chunk_kws:
-                    continue
+            if matches:
+                new_sentence = ""
+                last_idx = 0
                 
-                overlap = sentence_kws.intersection(chunk_kws)
-                overlap_ratio = len(overlap) / len(sentence_kws)
+                for match in matches:
+                    start, end = match.span()
+                    cit_num = match.group(1)
+                    
+                    entry = citation_map.entries.get(cit_num)
+                    if not entry:
+                        standard_citation = "[Unsupported Citation Removed]"
+                        validation_errors.append(f"Orphan citation [{cit_num}] for sentence: '{clean_sentence_text}'")
+                    else:
+                        chunk_search_text = f"{entry.drug} {entry.section} {entry.text}"
+                        chunk_kws = get_keywords(chunk_search_text)
+                        
+                        overlap_ratio = 0.0
+                        if sentence_kws and chunk_kws:
+                            overlap = sentence_kws.intersection(chunk_kws)
+                            overlap_ratio = len(overlap) / len(sentence_kws)
+                            
+                        # Enforce strict grounding threshold
+                        if settings.STRICT_CITATION_VALIDATION_ACTION == "none" or overlap_ratio >= 0.35:
+                            standard_citation = f"[{cit_num}]"
+                        else:
+                            standard_citation = "[Unsupported Citation Removed]"
+                            validation_errors.append(
+                                f"Hallucinated citation [{cit_num}] for sentence: '{clean_sentence_text}' "
+                                f"(overlap ratio {round(overlap_ratio, 2)} < 0.35)"
+                            )
+                    
+                    new_sentence += sentence[last_idx:start] + standard_citation
+                    last_idx = end
+                    
+                new_sentence += sentence[last_idx:]
                 
-                if overlap_ratio >= 0.35:
-                    best_matches.append((cit_num, overlap_ratio))
-            
-            if best_matches:
-                best_matches.sort(key=lambda x: x[1], reverse=True)
-                cit_nums = sorted(list({m[0] for m in best_matches}))
-                citation_str = "".join(f"[{n}]" for n in cit_nums)
-                cleaned_s = sentence.strip().rstrip('.')
-                final_sentences.append(f"{cleaned_s}.{citation_str}")
-            else:
-                # Completely uncited and ungrounded
-                validation_errors.append(f"Sentence missing citation: '{sentence}'")
+                # If STRICT_CITATION_VALIDATION_ACTION is "remove", and all citations in the sentence were invalid/removed,
+                # we drop the entire sentence!
                 if settings.STRICT_CITATION_VALIDATION_ACTION == "remove":
-                    logger.warning("Uncited/ungrounded sentence removed.", sentence=sentence)
-                    continue
-                elif settings.STRICT_CITATION_VALIDATION_ACTION == "reject":
-                    return "Unable to generate a fully grounded answer from the indexed corpus.", [], {}, validation_errors
-                final_sentences.append(sentence)
+                    has_unsupported = "[Unsupported Citation Removed]" in new_sentence
+                    has_valid = regex.search(r'\[[0-9]+\]', new_sentence)
+                    if has_unsupported and not has_valid:
+                        logger.warning("Ungrounded sentence removed during validation.", sentence=sentence)
+                        continue
+                        
+                # Clean up any leftover "[Unsupported Citation Removed]" tags if action is "remove" or "reject"
+                if settings.STRICT_CITATION_VALIDATION_ACTION in ("remove", "reject"):
+                    new_sentence = new_sentence.replace("[Unsupported Citation Removed]", "")
+                    new_sentence = regex.sub(r'\s+', ' ', new_sentence).strip()
+                    # Standardize trailing period
+                    if not new_sentence.endswith('.') and sentence.endswith('.'):
+                        new_sentence += '.'
+                    
+                final_sentences.append(new_sentence)
+            else:
+                # No citation in the LLM output: run grounding matcher to auto-inject!
+                best_matches = []
+                for cit_num, entry in citation_map.entries.items():
+                    chunk_search_text = f"{entry.drug} {entry.section} {entry.text}"
+                    chunk_kws = get_keywords(chunk_search_text)
+                    if not chunk_kws:
+                        continue
+                    
+                    overlap = sentence_kws.intersection(chunk_kws)
+                    overlap_ratio = len(overlap) / len(sentence_kws)
+                    
+                    if overlap_ratio >= 0.35:
+                        best_matches.append((cit_num, overlap_ratio))
+                
+                if best_matches:
+                    best_matches.sort(key=lambda x: x[1], reverse=True)
+                    cit_nums = sorted(list({m[0] for m in best_matches}))
+                    citation_str = "".join(f"[{n}]" for n in cit_nums)
+                    cleaned_s = clean_sentence_text.rstrip('.')
+                    final_sentences.append(f"{cleaned_s}.{citation_str}")
+                else:
+                    # Completely uncited and ungrounded
+                    validation_errors.append(f"Sentence missing citation: '{clean_sentence_text}'")
+                    if settings.STRICT_CITATION_VALIDATION_ACTION == "remove":
+                        logger.warning("Uncited/ungrounded sentence removed during validation.", sentence=sentence)
+                        continue
+                    elif settings.STRICT_CITATION_VALIDATION_ACTION == "reject":
+                        return "Unable to generate a fully grounded answer from the indexed corpus.", [], {}, validation_errors
+                    final_sentences.append(sentence)
                 
         # Reconstruct answer
         processed_answer = " ".join(final_sentences)
