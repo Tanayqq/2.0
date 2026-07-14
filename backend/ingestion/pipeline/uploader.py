@@ -108,6 +108,26 @@ class MedicalUploader:
         
         logger.info("starting_qdrant_batch_upload", total_chunks=len(chunks), batch_size=batch_size)
         
+        # Delete existing points for these drugs to prevent duplicates/orphans from previous versions
+        from qdrant_client.models import Filter, FieldCondition, MatchValue
+        unique_drugs = {chunk["drug_name"] for chunk in chunks if chunk.get("drug_name")}
+        for d_name in unique_drugs:
+            logger.info("clearing_existing_qdrant_points", drug=d_name)
+            try:
+                self.client.delete(
+                    collection_name=self.collection_name,
+                    filter=Filter(
+                        must=[
+                            FieldCondition(
+                                key="drug_name",
+                                match=MatchValue(value=d_name)
+                            )
+                        ]
+                    )
+                )
+            except Exception as e:
+                logger.warning("failed_to_clear_existing_points", drug=d_name, error=str(e))
+
         required_keys = ["drug_name", "generic_name", "section", "source", "document_id", "chunk_index", "total_chunks", "version", "ingested_at"]
         points = []
         for chunk in chunks:
@@ -126,10 +146,9 @@ class MedicalUploader:
             drug = chunk["drug_name"]
             section = chunk["section"]
             chunk_idx = chunk["chunk_index"]
-            version = chunk["version"]
             
-            # Generate stable deterministic UUID for idempotency
-            unique_string = f"{drug.lower()}_{section.lower()}_{chunk_idx}_{version}"
+            # Generate stable deterministic UUID for idempotency (independent of version)
+            unique_string = f"{drug.lower()}_{section.lower()}_{chunk_idx}"
             point_id = str(uuid.uuid5(uuid.NAMESPACE_DNS, unique_string))
             
             # Keep original UUID reference in payload using canonical keys

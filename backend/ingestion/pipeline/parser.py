@@ -34,19 +34,35 @@ class MedicalParser:
 
     def clean_text(self, text: str) -> str:
         """
-        Clean whitespace, remove duplicate empty lines, and clean up HTML tags if any.
+        Clean whitespace, remove duplicate empty lines, clean HTML tags, and resolve OCR/DailyMed artifacts.
         """
         if not text:
             return ""
         # Remove any HTML tags that might have leaked
         text = re.sub(r"<[^>]*>", "", text)
+        
         # Normalize carriage returns
         text = text.replace("\r\n", "\n").replace("\r", "\n")
-        # Strip trailing/leading spaces on each line
-        lines = [line.strip() for line in text.split("\n")]
-        text = "\n".join(lines)
-        # Collapse multiple empty lines to a max of two newlines
-        text = re.sub(r"\n{3,}", "\n\n", text)
+        
+        # Clean DailyMed/OCR unit artifacts (e.g., "1.73m •", "1.73m•", "1.73m *") to "1.73 m²"
+        # Handles various unicode bullets like • (\u2022), · (\u00b7)
+        text = re.sub(r'1\.73\s*m\s*[\u2022•·*·\s]*', '1.73 m² ', text)
+        
+        # Space out bullets at line/phrase starts (e.g. "•Severe" -> "• Severe")
+        text = re.sub(r'(^|\s)•(?=\S)', r'\1• ', text)
+        
+        # Resolve broken line wraps: Join single newlines with a space, preserving double newlines for paragraphs
+        paragraphs = text.split("\n\n")
+        cleaned_paragraphs = []
+        for p in paragraphs:
+            # For each paragraph, replace single newlines with spaces and collapse spaces
+            cleaned_p = re.sub(r'\s+', ' ', p.replace("\n", " ")).strip()
+            if cleaned_p:
+                cleaned_paragraphs.append(cleaned_p)
+        text = "\n\n".join(cleaned_paragraphs)
+        
+        # Collapse multiple spaces
+        text = re.sub(r'[ \t]+', ' ', text)
         return text.strip()
 
     def parse(self, doc: NormalizedMedicalDocument) -> NormalizedMedicalDocument:

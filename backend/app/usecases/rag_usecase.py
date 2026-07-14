@@ -45,6 +45,60 @@ def _resolve_raw_section(metadata: dict) -> str:
             return str(val).strip()
     return ""
 
+def _balance_by_section(docs: List[Any], requested_sections: List[str], max_total: int) -> List[Any]:
+    """
+    Diversify the retrieved chunks by ensuring at least the top chunk from each 
+    requested section is selected, preventing a single high-scoring section 
+    from dominating the context window.
+    """
+    if not requested_sections or not docs:
+        return docs[:max_total]
+        
+    by_section = {sec: [] for sec in requested_sections}
+    other_docs = []
+    
+    for d in docs:
+        db_sec_raw = _resolve_raw_section(d.metadata)
+        db_sec = normalize_section(db_sec_raw)
+        if db_sec in by_section:
+            by_section[db_sec].append(d)
+        else:
+            other_docs.append(d)
+            
+    # Sort each list by score descending
+    for sec in requested_sections:
+        by_section[sec].sort(key=lambda x: x.score or 0.0, reverse=True)
+    other_docs.sort(key=lambda x: x.score or 0.0, reverse=True)
+    
+    selected = []
+    added_uuids = set()
+    
+    # Step 1: Round-robin pick the top document from each requested section
+    for sec in requested_sections:
+        if by_section[sec]:
+            doc = by_section[sec].pop(0)
+            selected.append(doc)
+            added_uuids.add(doc.id)
+            if len(selected) >= max_total:
+                break
+                
+    # Step 2: Fill remaining slots with the highest-scoring leftover documents
+    if len(selected) < max_total:
+        remaining_pool = []
+        for sec in requested_sections:
+            remaining_pool.extend(by_section[sec])
+        remaining_pool.extend(other_docs)
+        remaining_pool.sort(key=lambda x: x.score or 0.0, reverse=True)
+        
+        for doc in remaining_pool:
+            if doc.id not in added_uuids:
+                selected.append(doc)
+                added_uuids.add(doc.id)
+                if len(selected) >= max_total:
+                    break
+                    
+    return selected
+
 class ProcessClinicalQueryUseCase:
     def __init__(
         self, 
@@ -216,8 +270,9 @@ class ProcessClinicalQueryUseCase:
                         rejection_log.append(f"Rejected {d.id} (Score {round(d.score or 0.0, 4)}): Below similarity threshold {threshold}")
                 
                 total_filtered += len(drug_threshold_docs)
-                # Keep top 3 for this drug to guarantee balance
-                all_retrieved_docs_by_drug.extend(drug_threshold_docs[:3])
+                # Keep top 3 for this drug to guarantee balance, diversified by section!
+                diversified_drug_docs = _balance_by_section(drug_threshold_docs, detected_sections, max_total=3)
+                all_retrieved_docs_by_drug.extend(diversified_drug_docs)
             
             final_docs = all_retrieved_docs_by_drug
         else:
@@ -326,7 +381,8 @@ class ProcessClinicalQueryUseCase:
                     rejection_log.append(f"Rejected {d.id} (Score {round(d.score or 0.0, 4)}): Below similarity threshold {threshold}")
                     
             total_filtered += len(threshold_filtered_docs)
-            final_docs = threshold_filtered_docs[:settings.MAX_CONTEXT_CHUNKS]
+            # Diversify by section to ensure all requested sections are represented!
+            final_docs = _balance_by_section(threshold_filtered_docs, detected_sections, max_total=settings.MAX_CONTEXT_CHUNKS)
             
         retrieve_time = time.time() - start_retrieve
         
