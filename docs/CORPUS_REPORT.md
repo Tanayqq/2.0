@@ -1,85 +1,85 @@
 # MedRef Corpus Report
-Generated at: 2026-07-14T17:08:37.773111Z
+Generated at: 2026-07-14T17:22:26.783304Z
 
 ## Overall Corpus Summary
 *   **Total Drugs:** 105
-*   **Total Sections:** 3845
-*   **Total Chunks:** 5607
-*   **Average Sections per Drug:** 36.6
-*   **Average Chunk Length:** 267.8 tokens
-*   **Median Chunk Length:** 282 tokens
+*   **Total Sections:** 3850
+*   **Total Chunks:** 6175
+*   **Average Sections per Drug:** 36.7
+*   **Average Chunk Length:** 281.1 tokens
+*   **Median Chunk Length:** 318 tokens
 
 ## Source Distribution
 | Source | Chunks Count | Percentage |
 |---|---|---|
-| DailyMed | 5607 | 100.0% |
+| DailyMed | 6175 | 100.0% |
 
 ## Country Distribution
 | Country | Chunks Count | Percentage |
 |---|---|---|
-| US | 5607 | 100.0% |
+| US | 6175 | 100.0% |
 
 ## Clinical Section Distribution
 | Section Title | Chunks Count |
 |---|---|
-| clinical_pharmacology | 404 |
-| clinical_studies | 270 |
-| pharmacokinetics | 261 |
-| warnings | 256 |
+| pharmacokinetics | 419 |
+| clinical_pharmacology | 407 |
+| clinical_studies | 298 |
+| patient_counseling | 266 |
+| adverse_reactions | 255 |
+| warnings | 251 |
+| pregnancy | 246 |
+| dosage_and_administration | 240 |
 | use_in_specific_populations | 232 |
-| dosage_and_administration | 229 |
-| adverse_reactions | 205 |
-| drug_interactions | 196 |
-| patient_counseling | 174 |
-| pregnancy | 174 |
+| drug_interactions | 218 |
 | spl_medguide | 144 |
 | indications | 131 |
-| precautions | 130 |
-| description | 105 |
-| storage | 104 |
-| pediatric_use | 104 |
-| lactation | 102 |
+| description | 131 |
+| pediatric_use | 117 |
+| precautions | 116 |
+| storage | 112 |
+| lactation | 111 |
+| pharmacodynamics | 108 |
 | carcinogenesis_and_mutagenesis_and_impairment_of_fertility | 90 |
 | overdosage | 88 |
-| pharmacodynamics | 83 |
-| geriatric_use | 82 |
+| geriatric_use | 86 |
 | nonclinical_toxicology | 78 |
 | contraindications | 75 |
 | spl_unclassified_section | 75 |
-| dosage_forms | 63 |
-| mechanism_of_action | 56 |
+| mechanism_of_action | 75 |
+| dosage_forms | 64 |
+| microbiology | 40 |
 | boxed_warning | 37 |
+| renal_impairment | 36 |
 | general_precautions | 35 |
-| renal_impairment | 32 |
 | hepatic_impairment | 32 |
-| microbiology | 31 |
+| asthma | 24 |
 | animal_pharmacology_and_or_toxicology | 22 |
-| asthma | 22 |
-| drug_abuse_and_dependence | 21 |
-| dose_adjustment | 19 |
+| dose_adjustment | 22 |
+| drug_abuse_and_dependence | 22 |
+| hypertension | 22 |
 | administration | 17 |
+| labor_and_delivery | 17 |
 | teratogenic_effects | 17 |
 | chronic_obstructive_pulmonary_disease | 17 |
-| labor_and_delivery | 16 |
-| hypertension | 16 |
 | general | 16 |
 | references | 15 |
 | laboratory_tests | 13 |
 | principal_display_panel | 13 |
 | animal_toxicology_andor_pharmacology | 12 |
+| abuse | 12 |
+| dependence | 10 |
 | development_of_drug_resistant_bacteria | 10 |
 | hypersensitivity_reactions | 10 |
 | spl_medguide_section | 10 |
 | hepatotoxicity | 9 |
-| abuse | 9 |
-| dependence | 9 |
 | carcinogenesis_mutagenesis_impairment_of_fertility | 9 |
 | serious_asthma_related_events_hospitalizations_intubations_death | 9 |
 | adults | 8 |
 | usage | 8 |
+| heart_failure | 8 |
 | fetal_toxicity | 8 |
 | lithium | 8 |
-| heart_failure | 7 |
 | do_not_use | 6 |
 | stop_use | 6 |
 | inactive_ingredient | 6 |
@@ -90,16 +90,17 @@ Generated at: 2026-07-14T17:08:37.773111Z
 | transferring_patients_from_systemic_corticosteroid_therapy | 6 |
 | ask_doctor | 6 |
 | suicidal_thoughts_and_behaviors_in_children_adolescents_and_young_adults | 6 |
+| community_acquired_pneumonia | 6 |
 | mycobacterial_infections | 6 |
 | hyperkalemia | 6 |
 | patient_medication_information | 6 |
 | stop_use_and_ask_a_doctor_if | 5 |
+| keep_out_of_reach_of_children | 5 |
 | inactive_ingredients | 5 |
 | packagelabel_principal_display_panel | 5 |
 | generalized_anxiety_disorder | 5 |
 | myopathy_and_rhabdomyolysis | 5 |
 | risks | 5 |
-| community_acquired_pneumonia | 5 |
 | post_marketing_experience | 5 |
 | recent_major_changes | 5 |
 | effect_of_sporanox | 5 |
@@ -122,13 +123,18 @@ Generated at: 2026-07-14T17:08:37.773111Z
 | serotonin_syndrome | 4 |
 | chronic_musculoskeletal_pain | 4 |
 | hypotension | 4 |
+| eradication_of_h_pylori_to_reduce_the_risk_of_duodenal_ulcer_recurrence | 4 |
+| nosocomial_pneumonia | 4 |
 | plague | 4 |
 | lactic_acidosis | 4 |
+| nephropathy_in_type_2_diabetic_patients | 4 |
 | females_and_males_of_reproductive_potential | 4 |
 | prevention_of_chemotherapy_induced_nausea_and_vomiting | 4 |
+| prophylaxis_of_influenza | 4 |
 | when_using_this_product | 3 |
 | nephrotoxicity | 3 |
 | myelosuppression | 3 |
+| controlled_substance | 3 |
 | immune_mediated_necrotizing_myopathy | 3 |
 | hepatic_dysfunction | 3 |
 | increases_in_hba1c_and_fasting_serum_glucose_levels | 3 |
@@ -156,22 +162,18 @@ Generated at: 2026-07-14T17:08:37.773111Z
 | hypoglycemia | 3 |
 | diuretics | 3 |
 | distribution | 3 |
-| eradication_of_h_pylori_to_reduce_the_risk_of_duodenal_ulcer_recurrence | 3 |
 | presence_of_gastric_malignancy | 3 |
 | bone_fracture | 3 |
 | cutaneous_and_systemic_lupus_erythematosus | 3 |
 | fundic_gland_polyps | 3 |
-| nosocomial_pneumonia | 3 |
+| community_acquired_pneumonia_7_to_14_day_treatment_regimen | 3 |
 | complicated_skin_and_skin_structure_infections | 3 |
 | central_nervous_system_effects | 3 |
 | clinical_trial_experience | 3 |
-| nephropathy_in_type_2_diabetic_patients | 3 |
 | metformin_hydrochloride_tablets | 3 |
 | serious_infections | 3 |
 | allergic_rhinitis_seasonal_and_perennial | 3 |
 | treatment_of_influenza | 3 |
-| prophylaxis_of_influenza | 3 |
-| keep_out_of_reach_of_children | 2 |
 | nonpotassium_sparing_diuretics | 2 |
 | monoamine_oxidase_inhibitors_and_tricyclic_antidepressants | 2 |
 | bronchospasm_associated_with_asthma | 2 |
@@ -196,6 +198,7 @@ Generated at: 2026-07-14T17:08:37.773111Z
 | monoamine_oxidase_inhibitors_tricyclic_antidepressants_qtc_prolonging_drugs | 2 |
 | activation_of_maniahypomania | 2 |
 | pharyngitistonsillitis | 2 |
+| acute_bacterial_maxillary_sinusitis | 2 |
 | uncomplicated_urinary_tract_infections | 2 |
 | early_lyme_disease | 2 |
 | animal_pharmacology | 2 |
@@ -236,8 +239,8 @@ Generated at: 2026-07-14T17:08:37.773111Z
 | erosive_esophagitis | 2 |
 | maintenance_of_healing_of_erosive_esophagitis | 2 |
 | pathological_hypersecretory_conditions_including_zollinger_ellison_syndrome | 2 |
-| community_acquired_pneumonia_7_to_14_day_treatment_regimen | 2 |
 | inhalational_anthrax_post_exposure | 2 |
+| acute_bacterial_sinusitis_5_day_and_10_to_14_day_treatment_regimens | 2 |
 | disabling_and_potentially_irreversible_serious_adverse_reactions_including_tendinitis_and_tendon_rupture_peripheral_neuropathy_and_central_nervous_system_effects | 2 |
 | tendinitis_and_tendon_rupture | 2 |
 | peripheral_neuropathy | 2 |
@@ -271,6 +274,7 @@ Generated at: 2026-07-14T17:08:37.773111Z
 | healing_of_erosive_or_ulcerative_gerd_in_adults | 2 |
 | healing_of_duodenal_ulcers_in_adults | 2 |
 | helicobacter_pylori_eradication_in_patients_with_peptic_ulcer_disease_or_symptomatic_non_ulcer_disease_in_adults | 2 |
+| heart_failure_post_myocardial_infarction | 2 |
 | reduction_in_risk_of_myocardial_infarction_stroke_and_death_from_cardiovascular_causes | 2 |
 | maintenance_treatment_of_chronic_obstructive_pulmonary_disease | 2 |
 | immediate_hypersensitivity_reactions | 2 |
@@ -335,6 +339,7 @@ Generated at: 2026-07-14T17:08:37.773111Z
 | use_in_sexually_transmitted_infections | 1 |
 | nelfinavir | 1 |
 | potential_drug_drug_interaction_with_macrolides | 1 |
+| mg_bottle_label | 1 |
 | general_instructions_for_use | 1 |
 | switching_a_patient_to_or_from_a_monoamine_oxidase_inhibitor_maoi_antidepressant | 1 |
 | use_of_bupropion_hydrochloride_tablets_with_reversible_maois_such_as_linezolid_or_methylene_blue | 1 |
@@ -350,7 +355,6 @@ Generated at: 2026-07-14T17:08:37.773111Z
 | drug_laboratory_test_interactions | 1 |
 | human_overdose_experience | 1 |
 | acute_bacterial_otitis_media | 1 |
-| acute_bacterial_maxillary_sinusitis | 1 |
 | acute_bacterial_exacerbations_of_chronic_bronchitis | 1 |
 | uncomplicated_gonorrhea | 1 |
 | early_lyme_disease_erythema_migrans | 1 |
@@ -385,7 +389,6 @@ Generated at: 2026-07-14T17:08:37.773111Z
 | renal_and_hepatic_impairment | 1 |
 | seizure_disorders | 1 |
 | panic_disorder | 1 |
-| controlled_substance | 1 |
 | fmf | 1 |
 | recommended_pediatric_dosage | 1 |
 | fatal_overdose | 1 |
@@ -559,7 +562,6 @@ Generated at: 2026-07-14T17:08:37.773111Z
 | complicated_urinary_tract_infections_5_day_treatment_regimen | 1 |
 | complicated_urinary_tract_infections_10_day_treatment_regimen | 1 |
 | acute_pyelonephritis_5_or_10_day_treatment_regimen | 1 |
-| acute_bacterial_sinusitis_5_day_and_10_to_14_day_treatment_regimens | 1 |
 | hydration_for_patients_receiving_levofloxacin_tablets | 1 |
 | prolongation_of_the_qt_interval | 1 |
 | musculoskeletal_disorders_in_pediatric_patients_and_arthropathic_effects_in_animals | 1 |
@@ -725,7 +727,6 @@ Generated at: 2026-07-14T17:08:37.773111Z
 | long_term_maintenance_of_healing_of_erosive_or_ulcerative_gerd_in_adults | 1 |
 | pathological_hypersecretory_conditions_including_zollinger_ellison_syndrome_in_adults | 1 |
 | reduction_in_the_risk_of_myocardial_infarction_stroke_and_death_from_cardiovascular_causes | 1 |
-| heart_failure_post_myocardial_infarction | 1 |
 | general_dosing_information | 1 |
 | hepatic_failure_and_impaired_liver_function | 1 |
 | neutropenia_and_agranulocytosis | 1 |
@@ -885,107 +886,107 @@ Generated at: 2026-07-14T17:08:37.773111Z
 | Drug | Total Sections | Chunks Created | Completeness Score | Status |
 |---|---|---|---|---|
 | Acetaminophen | 23 | 12 | 5/13 (38.5%) | ❌ Incomplete |
-| Acyclovir | 22 | 24 | 11/13 (84.6%) | ❌ Incomplete |
-| Albuterol | 43 | 55 | 11/13 (84.6%) | ❌ Incomplete |
-| Allopurinol | 46 | 54 | 12/13 (92.3%) | ❌ Incomplete |
-| Alprazolam | 49 | 69 | 12/13 (92.3%) | ❌ Incomplete |
-| Amlodipine | 37 | 49 | 10/13 (76.9%) | ❌ Incomplete |
-| Amoxicillin | 44 | 60 | 11/13 (84.6%) | ❌ Incomplete |
-| Atenolol | 22 | 30 | 11/13 (84.6%) | ❌ Incomplete |
-| Atorvastatin | 40 | 72 | 13/13 (100.0%) | ✅ Complete |
+| Acyclovir | 23 | 26 | 12/13 (92.3%) | ❌ Incomplete |
+| Albuterol | 43 | 62 | 11/13 (84.6%) | ❌ Incomplete |
+| Allopurinol | 46 | 59 | 12/13 (92.3%) | ❌ Incomplete |
+| Alprazolam | 49 | 77 | 12/13 (92.3%) | ❌ Incomplete |
+| Amlodipine | 37 | 55 | 10/13 (76.9%) | ❌ Incomplete |
+| Amoxicillin | 44 | 70 | 11/13 (84.6%) | ❌ Incomplete |
+| Atenolol | 22 | 31 | 11/13 (84.6%) | ❌ Incomplete |
+| Atorvastatin | 40 | 85 | 13/13 (100.0%) | ✅ Complete |
 | Azathioprine | 20 | 27 | 10/13 (76.9%) | ❌ Incomplete |
-| Azithromycin | 46 | 76 | 11/13 (84.6%) | ❌ Incomplete |
-| Budesonide | 59 | 77 | 13/13 (100.0%) | ✅ Complete |
-| Bupropion | 51 | 95 | 13/13 (100.0%) | ✅ Complete |
-| Carvedilol | 25 | 56 | 11/13 (84.6%) | ❌ Incomplete |
-| Cefdinir | 27 | 36 | 11/13 (84.6%) | ❌ Incomplete |
-| Cefuroxime | 44 | 49 | 11/13 (84.6%) | ❌ Incomplete |
-| Cephalexin | 42 | 39 | 12/13 (92.3%) | ❌ Incomplete |
-| Cetirizine | 18 | 7 | 5/13 (38.5%) | ❌ Incomplete |
+| Azithromycin | 46 | 86 | 11/13 (84.6%) | ❌ Incomplete |
+| Budesonide | 59 | 79 | 13/13 (100.0%) | ✅ Complete |
+| Bupropion | 51 | 111 | 13/13 (100.0%) | ✅ Complete |
+| Carvedilol | 25 | 61 | 11/13 (84.6%) | ❌ Incomplete |
+| Cefdinir | 28 | 38 | 12/13 (92.3%) | ❌ Incomplete |
+| Cefuroxime | 44 | 56 | 11/13 (84.6%) | ❌ Incomplete |
+| Cephalexin | 42 | 43 | 12/13 (92.3%) | ❌ Incomplete |
+| Cetirizine | 18 | 8 | 5/13 (38.5%) | ❌ Incomplete |
 | Cimetidine | 21 | 20 | 5/13 (38.5%) | ❌ Incomplete |
-| Ciprofloxacin | 18 | 17 | 11/13 (84.6%) | ❌ Incomplete |
-| Citalopram | 52 | 73 | 12/13 (92.3%) | ❌ Incomplete |
-| Clarithromycin | 59 | 105 | 11/13 (84.6%) | ❌ Incomplete |
+| Ciprofloxacin | 18 | 20 | 11/13 (84.6%) | ❌ Incomplete |
+| Citalopram | 52 | 84 | 12/13 (92.3%) | ❌ Incomplete |
+| Clarithromycin | 59 | 116 | 11/13 (84.6%) | ❌ Incomplete |
 | Clindamycin | 25 | 19 | 11/13 (84.6%) | ❌ Incomplete |
-| Clonazepam | 28 | 45 | 10/13 (76.9%) | ❌ Incomplete |
-| Clonidine | 22 | 19 | 10/13 (76.9%) | ❌ Incomplete |
-| Colchicine | 38 | 61 | 13/13 (100.0%) | ✅ Complete |
-| Cyclosporine | 23 | 49 | 10/13 (76.9%) | ❌ Incomplete |
+| Clonazepam | 28 | 46 | 10/13 (76.9%) | ❌ Incomplete |
+| Clonidine | 23 | 20 | 11/13 (84.6%) | ❌ Incomplete |
+| Colchicine | 38 | 74 | 13/13 (100.0%) | ✅ Complete |
+| Cyclosporine | 23 | 51 | 10/13 (76.9%) | ❌ Incomplete |
 | Dexamethasone | 61 | 52 | 11/13 (84.6%) | ❌ Incomplete |
 | Diazepam | 29 | 40 | 11/13 (84.6%) | ❌ Incomplete |
-| Diphenhydramine | 19 | 16 | 10/13 (76.9%) | ❌ Incomplete |
+| Diphenhydramine | 19 | 15 | 10/13 (76.9%) | ❌ Incomplete |
 | Doxycycline | 25 | 26 | 10/13 (76.9%) | ❌ Incomplete |
-| Duloxetine | 86 | 125 | 12/13 (92.3%) | ❌ Incomplete |
-| Enalapril | 37 | 51 | 10/13 (76.9%) | ❌ Incomplete |
+| Duloxetine | 86 | 139 | 12/13 (92.3%) | ❌ Incomplete |
+| Enalapril | 37 | 56 | 10/13 (76.9%) | ❌ Incomplete |
 | Erythromycin | 27 | 22 | 10/13 (76.9%) | ❌ Incomplete |
-| Escitalopram | 21 | 44 | 8/13 (61.5%) | ❌ Incomplete |
+| Escitalopram | 21 | 46 | 8/13 (61.5%) | ❌ Incomplete |
 | Esomeprazole | 37 | 77 | 10/13 (76.9%) | ❌ Incomplete |
-| Ezetimibe | 32 | 66 | 13/13 (100.0%) | ✅ Complete |
+| Ezetimibe | 32 | 81 | 13/13 (100.0%) | ✅ Complete |
 | Famotidine | 22 | 31 | 10/13 (76.9%) | ❌ Incomplete |
-| Fenofibrate | 47 | 60 | 11/13 (84.6%) | ❌ Incomplete |
+| Fenofibrate | 47 | 62 | 11/13 (84.6%) | ❌ Incomplete |
 | Fexofenadine | 18 | 12 | 5/13 (38.5%) | ❌ Incomplete |
 | Fluconazole | 20 | 57 | 11/13 (84.6%) | ❌ Incomplete |
-| Fluticasone | 15 | 19 | 3/13 (23.1%) | ❌ Incomplete |
-| Formoterol | 57 | 100 | 13/13 (100.0%) | ✅ Complete |
+| Fluticasone | 16 | 20 | 4/13 (30.8%) | ❌ Incomplete |
+| Formoterol | 57 | 112 | 13/13 (100.0%) | ✅ Complete |
 | Furosemide | 22 | 19 | 11/13 (84.6%) | ❌ Incomplete |
-| Gabapentin | 29 | 70 | 11/13 (84.6%) | ❌ Incomplete |
+| Gabapentin | 29 | 79 | 11/13 (84.6%) | ❌ Incomplete |
 | Gemfibrozil | 19 | 25 | 8/13 (61.5%) | ❌ Incomplete |
-| Hydralazine | 18 | 15 | 9/13 (69.2%) | ❌ Incomplete |
-| Hydrochlorothiazide | 46 | 64 | 11/13 (84.6%) | ❌ Incomplete |
-| Hydroxychloroquine | 54 | 53 | 11/13 (84.6%) | ❌ Incomplete |
+| Hydralazine | 18 | 16 | 9/13 (69.2%) | ❌ Incomplete |
+| Hydrochlorothiazide | 46 | 68 | 11/13 (84.6%) | ❌ Incomplete |
+| Hydroxychloroquine | 54 | 57 | 11/13 (84.6%) | ❌ Incomplete |
 | Hydroxyzine | 17 | 16 | 8/13 (61.5%) | ❌ Incomplete |
 | Ibuprofen | 44 | 46 | 11/13 (84.6%) | ❌ Incomplete |
-| Ipratropium | 23 | 39 | 10/13 (76.9%) | ❌ Incomplete |
-| Itraconazole | 67 | 72 | 13/13 (100.0%) | ✅ Complete |
-| Ketoconazole | 16 | 23 | 10/13 (76.9%) | ❌ Incomplete |
-| Lansoprazole | 58 | 125 | 12/13 (92.3%) | ❌ Incomplete |
-| Levofloxacin | 77 | 147 | 13/13 (100.0%) | ✅ Complete |
-| Levothyroxine | 25 | 48 | 11/13 (84.6%) | ❌ Incomplete |
-| Linezolid | 53 | 90 | 11/13 (84.6%) | ❌ Incomplete |
-| Lisinopril | 46 | 58 | 12/13 (92.3%) | ❌ Incomplete |
+| Ipratropium | 23 | 40 | 10/13 (76.9%) | ❌ Incomplete |
+| Itraconazole | 67 | 74 | 13/13 (100.0%) | ✅ Complete |
+| Ketoconazole | 16 | 24 | 10/13 (76.9%) | ❌ Incomplete |
+| Lansoprazole | 58 | 140 | 12/13 (92.3%) | ❌ Incomplete |
+| Levofloxacin | 77 | 168 | 13/13 (100.0%) | ✅ Complete |
+| Levothyroxine | 25 | 52 | 11/13 (84.6%) | ❌ Incomplete |
+| Linezolid | 53 | 102 | 11/13 (84.6%) | ❌ Incomplete |
+| Lisinopril | 46 | 67 | 12/13 (92.3%) | ❌ Incomplete |
 | Loperamide | 17 | 7 | 5/13 (38.5%) | ❌ Incomplete |
-| Loratadine | 21 | 7 | 5/13 (38.5%) | ❌ Incomplete |
-| Lorazepam | 23 | 36 | 10/13 (76.9%) | ❌ Incomplete |
-| Losartan | 42 | 69 | 13/13 (100.0%) | ✅ Complete |
+| Loratadine | 22 | 9 | 6/13 (46.2%) | ❌ Incomplete |
+| Lorazepam | 23 | 35 | 10/13 (76.9%) | ❌ Incomplete |
+| Losartan | 42 | 85 | 13/13 (100.0%) | ✅ Complete |
 | Lovastatin | 22 | 56 | 11/13 (84.6%) | ❌ Incomplete |
 | Meloxicam | 28 | 71 | 11/13 (84.6%) | ❌ Incomplete |
-| Mesalamine | 38 | 39 | 12/13 (92.3%) | ❌ Incomplete |
-| Metformin | 38 | 58 | 13/13 (100.0%) | ✅ Complete |
-| Methotrexate | 57 | 59 | 13/13 (100.0%) | ✅ Complete |
+| Mesalamine | 38 | 41 | 12/13 (92.3%) | ❌ Incomplete |
+| Metformin | 38 | 64 | 13/13 (100.0%) | ✅ Complete |
+| Methotrexate | 57 | 65 | 13/13 (100.0%) | ✅ Complete |
 | Methylprednisolone | 15 | 23 | 7/13 (53.8%) | ❌ Incomplete |
-| Metoclopramide | 41 | 53 | 13/13 (100.0%) | ✅ Complete |
-| Metoprolol | 45 | 56 | 13/13 (100.0%) | ✅ Complete |
-| Metronidazole | 37 | 43 | 13/13 (100.0%) | ✅ Complete |
+| Metoclopramide | 41 | 56 | 13/13 (100.0%) | ✅ Complete |
+| Metoprolol | 45 | 63 | 13/13 (100.0%) | ✅ Complete |
+| Metronidazole | 37 | 45 | 13/13 (100.0%) | ✅ Complete |
 | Minocycline | 26 | 31 | 11/13 (84.6%) | ❌ Incomplete |
-| Misoprostol | 41 | 63 | 12/13 (92.3%) | ❌ Incomplete |
-| Montelukast | 41 | 73 | 13/13 (100.0%) | ✅ Complete |
-| Moxifloxacin | 64 | 118 | 13/13 (100.0%) | ✅ Complete |
+| Misoprostol | 41 | 65 | 12/13 (92.3%) | ❌ Incomplete |
+| Montelukast | 41 | 85 | 13/13 (100.0%) | ✅ Complete |
+| Moxifloxacin | 64 | 139 | 13/13 (100.0%) | ✅ Complete |
 | Nitrofurantoin | 33 | 34 | 11/13 (84.6%) | ❌ Incomplete |
-| Omeprazole | 24 | 14 | 4/13 (30.8%) | ❌ Incomplete |
-| Ondansetron | 46 | 67 | 13/13 (100.0%) | ✅ Complete |
-| Oseltamivir | 44 | 82 | 13/13 (100.0%) | ✅ Complete |
-| Pantoprazole | 45 | 83 | 11/13 (84.6%) | ❌ Incomplete |
-| Pravastatin | 37 | 60 | 13/13 (100.0%) | ✅ Complete |
+| Omeprazole | 24 | 15 | 4/13 (30.8%) | ❌ Incomplete |
+| Ondansetron | 46 | 76 | 13/13 (100.0%) | ✅ Complete |
+| Oseltamivir | 44 | 97 | 13/13 (100.0%) | ✅ Complete |
+| Pantoprazole | 45 | 96 | 11/13 (84.6%) | ❌ Incomplete |
+| Pravastatin | 37 | 68 | 13/13 (100.0%) | ✅ Complete |
 | Prednisolone | 17 | 12 | 10/13 (76.9%) | ❌ Incomplete |
 | Prednisone | 14 | 21 | 7/13 (53.8%) | ❌ Incomplete |
 | Promethazine | 46 | 42 | 11/13 (84.6%) | ❌ Incomplete |
 | Propranolol | 23 | 41 | 10/13 (76.9%) | ❌ Incomplete |
-| Rabeprazole | 46 | 94 | 12/13 (92.3%) | ❌ Incomplete |
-| Ramipril | 58 | 66 | 12/13 (92.3%) | ❌ Incomplete |
-| Rosuvastatin | 42 | 76 | 13/13 (100.0%) | ✅ Complete |
-| Salmeterol | 57 | 164 | 13/13 (100.0%) | ✅ Complete |
-| Sertraline | 27 | 60 | 11/13 (84.6%) | ❌ Incomplete |
-| Simvastatin | 23 | 45 | 10/13 (76.9%) | ❌ Incomplete |
-| Spironolactone | 47 | 58 | 11/13 (84.6%) | ❌ Incomplete |
+| Rabeprazole | 46 | 108 | 12/13 (92.3%) | ❌ Incomplete |
+| Ramipril | 58 | 77 | 12/13 (92.3%) | ❌ Incomplete |
+| Rosuvastatin | 42 | 100 | 13/13 (100.0%) | ✅ Complete |
+| Salmeterol | 57 | 191 | 13/13 (100.0%) | ✅ Complete |
+| Sertraline | 27 | 68 | 11/13 (84.6%) | ❌ Incomplete |
+| Simvastatin | 23 | 54 | 10/13 (76.9%) | ❌ Incomplete |
+| Spironolactone | 47 | 61 | 11/13 (84.6%) | ❌ Incomplete |
 | Sulfasalazine | 36 | 34 | 10/13 (76.9%) | ❌ Incomplete |
-| Tacrolimus | 60 | 107 | 13/13 (100.0%) | ✅ Complete |
-| Tamsulosin | 24 | 53 | 11/13 (84.6%) | ❌ Incomplete |
+| Tacrolimus | 60 | 126 | 13/13 (100.0%) | ✅ Complete |
+| Tamsulosin | 24 | 66 | 11/13 (84.6%) | ❌ Incomplete |
 | Terbinafine | 25 | 33 | 11/13 (84.6%) | ❌ Incomplete |
-| Tetracycline | 57 | 53 | 13/13 (100.0%) | ✅ Complete |
-| Tiotropium | 41 | 58 | 13/13 (100.0%) | ✅ Complete |
-| Trimethoprim | 26 | 34 | 11/13 (84.6%) | ❌ Incomplete |
-| Valacyclovir | 58 | 90 | 13/13 (100.0%) | ✅ Complete |
-| Valsartan | 45 | 72 | 13/13 (100.0%) | ✅ Complete |
-| Vancomycin | 31 | 36 | 11/13 (84.6%) | ❌ Incomplete |
-| Warfarin | 56 | 78 | 13/13 (100.0%) | ✅ Complete |
-| Zolpidem | 50 | 75 | 12/13 (92.3%) | ❌ Incomplete |
+| Tetracycline | 57 | 55 | 13/13 (100.0%) | ✅ Complete |
+| Tiotropium | 41 | 61 | 13/13 (100.0%) | ✅ Complete |
+| Trimethoprim | 26 | 35 | 11/13 (84.6%) | ❌ Incomplete |
+| Valacyclovir | 58 | 95 | 13/13 (100.0%) | ✅ Complete |
+| Valsartan | 45 | 81 | 13/13 (100.0%) | ✅ Complete |
+| Vancomycin | 31 | 37 | 11/13 (84.6%) | ❌ Incomplete |
+| Warfarin | 56 | 85 | 13/13 (100.0%) | ✅ Complete |
+| Zolpidem | 50 | 89 | 12/13 (92.3%) | ❌ Incomplete |

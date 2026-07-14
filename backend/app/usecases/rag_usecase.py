@@ -261,6 +261,11 @@ class ProcessClinicalQueryUseCase:
             
         detected_sections = expand_sections(detected_sections)
         
+        # If no sections are detected (e.g. general drug query), default to all canonical sections
+        # to ensure we pull chunks for the complete clinical report categories
+        if not detected_sections:
+            detected_sections = list(SECTION_KEYWORDS.keys())
+        
         logger.info(
             "section_detection",
             question=query.question,

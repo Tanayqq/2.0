@@ -20,11 +20,34 @@ except ImportError:
 class MedicalParser:
     """
     Parser to clean and standardize section titles and contents.
-    Normalizes all section titles to lowercase canonical keys (e.g. 'contraindications',
-    'warnings', 'adverse reactions') so that Qdrant metadata is consistent with
-    the SECTION_KEYWORDS filter used during retrieval.
-    Noise sections (patient package insert, highlights, etc.) are discarded.
+    Normalizes all section titles to lowercase canonical keys.
+    Splits nested subsections (e.g. Renal Impairment, Hepatic Impairment) from parent sections.
     """
+
+    SUBSECTION_PATTERNS = [
+        # Renal Impairment
+        (re.compile(r'^(?:patients?\s+with\s+)?(?:acute\s+or\s+chronic\s+)?renal\s+(?:impairment|insufficiency|dysfunction|failure|function)\b', re.IGNORECASE), "renal_impairment"),
+        (re.compile(r'^adults?\s+with\s+impaired\s+renal\s+function\b', re.IGNORECASE), "renal_impairment"),
+        # Hepatic Impairment
+        (re.compile(r'^(?:patients?\s+with\s+)?(?:acute\s+or\s+chronic\s+)?hepatic\s+(?:impairment|insufficiency|dysfunction|failure|function)\b', re.IGNORECASE), "hepatic_impairment"),
+        # Geriatric Use
+        (re.compile(r'^(?:use\s+in\s+)?geriatric(?:s|\s+patients|\s+use)?\b', re.IGNORECASE), "geriatric_use"),
+        (re.compile(r'^(?:use\s+in\s+)?elderly\b', re.IGNORECASE), "geriatric_use"),
+        # Pediatric Use
+        (re.compile(r'^(?:use\s+in\s+)?pediatric(?:s|\s+patients|\s+use)?\b', re.IGNORECASE), "pediatric_use"),
+        (re.compile(r'^(?:use\s+in\s+)?children\b', re.IGNORECASE), "pediatric_use"),
+        # Pregnancy
+        (re.compile(r'^(?:use\s+in\s+)?pregnancy\b', re.IGNORECASE), "pregnancy"),
+        # Lactation
+        (re.compile(r'^(?:use\s+in\s+)?lactation\b', re.IGNORECASE), "lactation"),
+        (re.compile(r'^nursing\s+mothers\b', re.IGNORECASE), "lactation"),
+        # Patient Counseling
+        (re.compile(r'^patient\s+counseling\b', re.IGNORECASE), "patient_counseling"),
+        # Storage
+        (re.compile(r'^(?:how\s+supplied|storage\s+and\s+handling|storage)\b', re.IGNORECASE), "storage"),
+        # Drug Interactions
+        (re.compile(r'^drug\s+interactions\b', re.IGNORECASE), "drug_interactions"),
+    ]
 
     def normalize_section_title(self, title: str) -> str:
         """
@@ -34,7 +57,7 @@ class MedicalParser:
 
     def clean_text(self, text: str) -> str:
         """
-        Clean whitespace, remove duplicate empty lines, clean HTML tags, and resolve OCR/DailyMed artifacts.
+        Clean whitespace, remove duplicate empty lines, clean HTML tags, and resolve DailyMed artifacts.
         """
         if not text:
             return ""
@@ -44,18 +67,16 @@ class MedicalParser:
         # Normalize carriage returns
         text = text.replace("\r\n", "\n").replace("\r", "\n")
         
-        # Clean DailyMed/OCR unit artifacts (e.g., "1.73m •", "1.73m•", "1.73m *") to "1.73 m²"
-        # Handles various unicode bullets like • (\u2022), · (\u00b7)
+        # Clean DailyMed/OCR unit artifacts
         text = re.sub(r'1\.73\s*m\s*[\u2022•·*·\s]*', '1.73 m² ', text)
         
-        # Space out bullets at line/phrase starts (e.g. "•Severe" -> "• Severe")
+        # Space out bullets at line/phrase starts
         text = re.sub(r'(^|\s)•(?=\S)', r'\1• ', text)
         
-        # Resolve broken line wraps: Join single newlines with a space, preserving double newlines for paragraphs
+        # Resolve broken line wraps
         paragraphs = text.split("\n\n")
         cleaned_paragraphs = []
         for p in paragraphs:
-            # For each paragraph, replace single newlines with spaces and collapse spaces
             cleaned_p = re.sub(r'\s+', ' ', p.replace("\n", " ")).strip()
             if cleaned_p:
                 cleaned_paragraphs.append(cleaned_p)
@@ -65,51 +86,103 @@ class MedicalParser:
         text = re.sub(r'[ \t]+', ' ', text)
         return text.strip()
 
+    def _split_nested_sections(self, parent_title: str, content: str) -> List[MedicalSection]:
+        """
+        Scan content paragraph by paragraph and split out nested subsections.
+        """
+        if parent_title not in [
+            "dosage_and_administration",
+            "warnings_and_precautions",
+            "use_in_specific_populations",
+            "precautions",
+            "warnings"
+        ]:
+            return [MedicalSection(title=parent_title, content=content)]
+
+        paragraphs = content.split("\n\n")
+        sections = []
+        
+        current_title = parent_title
+        current_paras = []
+        
+        for para in paragraphs:
+            para_strip = para.strip()
+            if not para_strip:
+                continue
+                
+            # Check if this paragraph starts with any of our subsection patterns
+            matched_canonical = None
+            for pattern, canonical in self.SUBSECTION_PATTERNS:
+                if pattern.match(para_strip):
+                    matched_canonical = canonical
+                    break
+                    
+            if matched_canonical:
+                # Save the current accumulated section
+                if current_paras:
+                    sections.append(MedicalSection(
+                        title=current_title,
+                        content="\n\n".join(current_paras)
+                    ))
+                # Start new section
+                current_title = matched_canonical
+                current_paras = [para]
+            else:
+                current_paras.append(para)
+                
+        # Append the final accumulated section
+        if current_paras:
+            sections.append(MedicalSection(
+                title=current_title,
+                content="\n\n".join(current_paras)
+            ))
+            
+        return sections
+
     def parse(self, doc: NormalizedMedicalDocument) -> NormalizedMedicalDocument:
         """
-        Clean, standardize, and filter document sections.
+        Clean, standardize, split, and filter document sections.
         """
         logger.info("parsing_document", drug=doc.drug, source=doc.source)
         
-        parsed_sections: List[MedicalSection] = []
-        seen_titles = set()
+        raw_sections: List[MedicalSection] = []
         
+        # First pass: split nested sections
         for section in doc.sections:
             clean_title = section.title.strip()
             if not clean_title:
                 continue
                 
-            # Normalize to lowercase canonical key (e.g. "4 Contraindications" -> "contraindications")
             standardized_title = normalize_section(clean_title)
             
-            # Discard noise sections that pollute retrieval results
             if standardized_title == "_excluded" or not standardized_title:
-                logger.debug(
-                    "parser_discarding_noise_section",
-                    original=clean_title,
-                    normalized=standardized_title,
-                    drug=doc.drug
-                )
                 continue
-                    
-            clean_content = self.clean_text(section.content)
+                
+            split_secs = self._split_nested_sections(standardized_title, section.content)
+            raw_sections.extend(split_secs)
+
+        parsed_sections: List[MedicalSection] = []
+        seen_titles = set()
+        
+        # Second pass: clean text and deduplicate/merge contents
+        for r_sec in raw_sections:
+            clean_content = self.clean_text(r_sec.content)
             
-            # Discard empty or extremely short/junk sections (< 10 chars)
+            # Discard empty or extremely short sections
             if not clean_content or len(clean_content) < 10:
                 continue
                 
-            # Prevent duplicate standard sections (take the first one, or the one with longest content)
-            if standardized_title in seen_titles:
-                # Find existing section and merge/replace if longer
+            if r_sec.title in seen_titles:
                 for existing_sec in parsed_sections:
-                    if existing_sec.title == standardized_title:
-                        if len(clean_content) > len(existing_sec.content):
-                            existing_sec.content = clean_content
+                    if existing_sec.title == r_sec.title:
+                        # Merge if not already present
+                        if clean_content not in existing_sec.content:
+                            existing_sec.content += "\n\n" + clean_content
                         break
                 continue
                 
-            parsed_sections.append(MedicalSection(title=standardized_title, content=clean_content))
-            seen_titles.add(standardized_title)
+            parsed_sections.append(MedicalSection(title=r_sec.title, content=clean_content))
+            seen_titles.add(r_sec.title)
             
         doc.sections = parsed_sections
         return doc

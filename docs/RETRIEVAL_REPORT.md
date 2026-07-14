@@ -1,18 +1,18 @@
 # MedRef Retrieval Report
-Generated at: 2026-07-14T17:09:50.515121Z
+Generated at: 2026-07-14T17:23:11.054167Z
 
 ## Overall Corpus Statistics
 *   **Total Unique Drugs:** 105
-*   **Total Points/Chunks in Qdrant:** 11328
+*   **Total Points/Chunks in Qdrant:** 11916
 *   **Active Vector Dimensions:** 384
-*   **Average Chunk Size (Characters):** 1411.8
-*   **Total Duplicate Chunks Found:** 3383
+*   **Average Chunk Size (Characters):** 1447.9
+*   **Total Duplicate Chunks Found:** 2990
 *   **Missing Sections Count (Cumulative):** 1470
 
 ## Source Distribution
 | Source | Chunk Count | Percentage |
 | :--- | :---: | :---: |
-| DailyMed | 11318 | 99.9% |
+| DailyMed | 11906 | 99.9% |
 | DailyMed - Lisinopril Warning | 1 | 0.0% |
 | DailyMed - Atorvastatin Contraindications | 1 | 0.0% |
 | DailyMed - Amoxicillin Contraindications | 1 | 0.0% |
@@ -25,102 +25,102 @@ Generated at: 2026-07-14T17:09:50.515121Z
 ## Top 20 Drugs by Chunk Count
 | Drug Name | Sections Present | Chunk Count |
 | :--- | :---: | :---: |
-| Salmeterol | 100 | 333 |
-| Levofloxacin | 131 | 297 |
-| Lansoprazole | 103 | 254 |
-| Duloxetine | 133 | 249 |
-| Moxifloxacin | 107 | 238 |
-| Tacrolimus | 101 | 217 |
-| Clarithromycin | 86 | 213 |
-| Formoterol | 96 | 202 |
-| Rabeprazole | 79 | 193 |
-| Bupropion | 89 | 192 |
-| Valacyclovir | 94 | 186 |
-| Linezolid | 80 | 183 |
-| Pantoprazole | 76 | 168 |
-| Oseltamivir | 77 | 166 |
-| Rosuvastatin | 71 | 157 |
-| Warfarin | 89 | 156 |
-| Azithromycin | 68 | 155 |
-| Budesonide | 88 | 154 |
-| Esomeprazole | 52 | 153 |
-| Zolpidem | 86 | 153 |
+| Salmeterol | 100 | 360 |
+| Levofloxacin | 132 | 317 |
+| Lansoprazole | 103 | 269 |
+| Duloxetine | 134 | 263 |
+| Moxifloxacin | 108 | 259 |
+| Tacrolimus | 101 | 236 |
+| Clarithromycin | 87 | 223 |
+| Formoterol | 96 | 214 |
+| Bupropion | 89 | 208 |
+| Rabeprazole | 79 | 207 |
+| Linezolid | 81 | 195 |
+| Valacyclovir | 94 | 191 |
+| Oseltamivir | 78 | 181 |
+| Pantoprazole | 76 | 181 |
+| Rosuvastatin | 71 | 181 |
+| Zolpidem | 87 | 167 |
+| Azithromycin | 69 | 165 |
+| Warfarin | 89 | 163 |
+| Atorvastatin | 67 | 160 |
+| Citalopram | 83 | 159 |
 
 ## Section Distribution
 | Section Title | Total Chunks | Percentage |
 | :--- | :---: | :---: |
-| warnings | 517 | 4.6% |
-| pharmacokinetics | 508 | 4.5% |
-| clinical_pharmacology | 404 | 3.6% |
-| clinical pharmacology | 403 | 3.6% |
-| pregnancy | 344 | 3.0% |
-| clinical_studies | 269 | 2.4% |
-| clinical studies | 267 | 2.4% |
-| indications | 263 | 2.3% |
-| precautions | 258 | 2.3% |
-| use in specific populations | 232 | 2.0% |
-| use_in_specific_populations | 232 | 2.0% |
-| dosage | 227 | 2.0% |
-| dosage_and_administration | 226 | 2.0% |
-| description | 210 | 1.9% |
-| storage | 208 | 1.8% |
-| adverse_reactions | 205 | 1.8% |
-| lactation | 201 | 1.8% |
-| drug_interactions | 196 | 1.7% |
-| drug interactions | 193 | 1.7% |
-| overdosage | 176 | 1.6% |
-| patient_counseling | 174 | 1.5% |
-| pharmacodynamics | 162 | 1.4% |
+| pharmacokinetics | 665 | 5.6% |
+| warnings | 517 | 4.3% |
+| pregnancy | 416 | 3.5% |
+| clinical_pharmacology | 407 | 3.4% |
+| clinical pharmacology | 403 | 3.4% |
+| clinical_studies | 297 | 2.5% |
+| clinical studies | 267 | 2.2% |
+| patient_counseling | 265 | 2.2% |
+| indications | 263 | 2.2% |
+| precautions | 258 | 2.2% |
+| adverse_reactions | 255 | 2.1% |
+| dosage_and_administration | 243 | 2.0% |
+| description | 235 | 2.0% |
+| use in specific populations | 232 | 1.9% |
+| use_in_specific_populations | 232 | 1.9% |
+| dosage | 227 | 1.9% |
+| drug_interactions | 218 | 1.8% |
+| storage | 216 | 1.8% |
+| lactation | 210 | 1.8% |
+| drug interactions | 193 | 1.6% |
+| pharmacodynamics | 186 | 1.6% |
+| overdosage | 176 | 1.5% |
 | adverse reactions | 150 | 1.3% |
 | contraindications | 150 | 1.3% |
-| spl medguide | 144 | 1.3% |
-| spl_medguide | 144 | 1.3% |
+| spl medguide | 144 | 1.2% |
+| spl_medguide | 144 | 1.2% |
 | patient counseling information | 141 | 1.2% |
 | information for patients | 139 | 1.2% |
-| pediatric_use | 104 | 0.9% |
-| pediatric use | 98 | 0.9% |
+| pediatric_use | 117 | 1.0% |
+| pediatric use | 98 | 0.8% |
 | carcinogenesis and mutagenesis and impairment of fertility | 90 | 0.8% |
 | carcinogenesis_and_mutagenesis_and_impairment_of_fertility | 90 | 0.8% |
-| clinical trials experience | 88 | 0.8% |
+| clinical trials experience | 88 | 0.7% |
+| geriatric_use | 86 | 0.7% |
 | geriatric use | 82 | 0.7% |
-| geriatric_use | 82 | 0.7% |
 | nonclinical_toxicology | 78 | 0.7% |
 | nonclinical toxicology | 78 | 0.7% |
-| spl unclassified section | 75 | 0.7% |
-| spl_unclassified_section | 75 | 0.7% |
-| dosage_forms | 63 | 0.6% |
-| microbiology | 62 | 0.5% |
+| spl unclassified section | 75 | 0.6% |
+| spl_unclassified_section | 75 | 0.6% |
+| mechanism_of_action | 75 | 0.6% |
+| microbiology | 70 | 0.6% |
+| dosage_forms | 64 | 0.5% |
 | mechanism of action | 56 | 0.5% |
-| mechanism_of_action | 56 | 0.5% |
-| asthma | 44 | 0.4% |
+| asthma | 46 | 0.4% |
+| hypertension | 38 | 0.3% |
 | boxed_warning | 37 | 0.3% |
 | postmarketing experience | 37 | 0.3% |
+| renal_impairment | 36 | 0.3% |
 | general precautions | 35 | 0.3% |
 | general_precautions | 35 | 0.3% |
 | hepatic_impairment | 32 | 0.3% |
 | general | 32 | 0.3% |
-| hypertension | 32 | 0.3% |
-| renal_impairment | 32 | 0.3% |
 | hepatic impairment | 31 | 0.3% |
 | renal impairment | 31 | 0.3% |
 | references | 30 | 0.3% |
+| dose_adjustment | 22 | 0.2% |
 | animal pharmacology and or toxicology | 22 | 0.2% |
 | animal_pharmacology_and_or_toxicology | 22 | 0.2% |
-| drug_abuse_and_dependence | 21 | 0.2% |
+| drug_abuse_and_dependence | 22 | 0.2% |
+| abuse | 21 | 0.2% |
 | drug abuse and dependence | 21 | 0.2% |
-| dose_adjustment | 19 | 0.2% |
+| dependence | 19 | 0.2% |
 | administration | 19 | 0.2% |
 | hepatotoxicity | 18 | 0.2% |
-| dependence | 18 | 0.2% |
-| abuse | 18 | 0.2% |
-| labor and delivery | 17 | 0.2% |
-| teratogenic effects | 17 | 0.2% |
-| chronic obstructive pulmonary disease | 17 | 0.2% |
-| chronic_obstructive_pulmonary_disease | 17 | 0.2% |
-| teratogenic_effects | 17 | 0.2% |
+| labor and delivery | 17 | 0.1% |
+| labor_and_delivery | 17 | 0.1% |
+| teratogenic effects | 17 | 0.1% |
+| chronic obstructive pulmonary disease | 17 | 0.1% |
+| chronic_obstructive_pulmonary_disease | 17 | 0.1% |
+| teratogenic_effects | 17 | 0.1% |
 | usage | 16 | 0.1% |
 | lithium | 16 | 0.1% |
-| labor_and_delivery | 16 | 0.1% |
 | adults | 16 | 0.1% |
 | laboratory_tests | 13 | 0.1% |
 | principal_display_panel | 13 | 0.1% |
@@ -145,12 +145,12 @@ Generated at: 2026-07-14T17:09:50.515121Z
 | pharmacokinetics and drug metabolism | 9 | 0.1% |
 | carcinogenesis_mutagenesis_impairment_of_fertility | 9 | 0.1% |
 | plague | 8 | 0.1% |
+| heart_failure | 8 | 0.1% |
 | fetal_toxicity | 8 | 0.1% |
 | fetal toxicity | 8 | 0.1% |
 | hypotension | 8 | 0.1% |
 | digoxin | 8 | 0.1% |
 | heart failure | 7 | 0.1% |
-| heart_failure | 7 | 0.1% |
 | distribution | 6 | 0.1% |
 | qt_prolongation | 6 | 0.1% |
 | suicidal_thoughts_and_behaviors_in_children_adolescents_and_young_adults | 6 | 0.1% |
@@ -174,6 +174,7 @@ Generated at: 2026-07-14T17:09:50.515121Z
 | ask doctor | 6 | 0.1% |
 | warfarin | 6 | 0.1% |
 | severe cutaneous adverse reactions | 6 | 0.1% |
+| community_acquired_pneumonia | 6 | 0.1% |
 | transferring patients from systemic corticosteroid therapy | 6 | 0.1% |
 | hypoglycemia | 6 | 0.1% |
 | ask_doctor | 6 | 0.1% |
@@ -195,13 +196,13 @@ Generated at: 2026-07-14T17:09:50.515121Z
 | package/label principal display panel | 5 | 0.0% |
 | adult_heart_failure | 5 | 0.0% |
 | generalized anxiety disorder | 5 | 0.0% |
-| community_acquired_pneumonia | 5 | 0.0% |
 | post-marketing experience | 5 | 0.0% |
 | generalized_anxiety_disorder | 5 | 0.0% |
 | post_marketing_experience | 5 | 0.0% |
 | adult heart failure | 5 | 0.0% |
 | effect_of_sporanox | 5 | 0.0% |
 | recent_major_changes | 5 | 0.0% |
+| keep_out_of_reach_of_children | 5 | 0.0% |
 | dose
 modification for coadministration of interacting drugs | 5 | 0.0% |
 | pharmacodynamics and clinical effects | 5 | 0.0% |
@@ -217,9 +218,11 @@ modification for coadministration of interacting drugs | 5 | 0.0% |
 | hyponatremia | 4 | 0.0% |
 | gold | 4 | 0.0% |
 | reduction in bone mineral density | 4 | 0.0% |
+| nosocomial_pneumonia | 4 | 0.0% |
 | important administration instructions | 4 | 0.0% |
 | drug and or laboratory test interactions | 4 | 0.0% |
 | hypomagnesemia | 4 | 0.0% |
+| prophylaxis_of_influenza | 4 | 0.0% |
 | coexisting conditions | 4 | 0.0% |
 | chronic musculoskeletal pain | 4 | 0.0% |
 | limitations of use | 4 | 0.0% |
@@ -253,9 +256,11 @@ modification for coadministration of interacting drugs | 5 | 0.0% |
 | recommended_dosage_in_patients_with_renal_impairment | 4 | 0.0% |
 | serotonin_syndrome | 4 | 0.0% |
 | amebiasis | 4 | 0.0% |
+| nephropathy_in_type_2_diabetic_patients | 4 | 0.0% |
 | paradoxical_bronchospasm | 4 | 0.0% |
 | chronic_musculoskeletal_pain | 4 | 0.0% |
 | lactic acidosis | 4 | 0.0% |
+| eradication_of_h_pylori_to_reduce_the_risk_of_duodenal_ulcer_recurrence | 4 | 0.0% |
 | drug_and_or_laboratory_test_interactions | 4 | 0.0% |
 | clinical pharmacology: | 3 | 0.0% |
 | acute bacterial exacerbation of chronic bronchitis | 3 | 0.0% |
@@ -263,9 +268,7 @@ modification for coadministration of interacting drugs | 5 | 0.0% |
 | hypercorticism and adrenal suppression | 3 | 0.0% |
 | community acquired pneumonia | 3 | 0.0% |
 | hepatic dysfunction | 3 | 0.0% |
-| nosocomial_pneumonia | 3 | 0.0% |
 | increases_in_hba1c_and_fasting_serum_glucose_levels | 3 | 0.0% |
-| prophylaxis_of_influenza | 3 | 0.0% |
 | when using | 3 | 0.0% |
 | when using this product | 3 | 0.0% |
 | nosocomial pneumonia | 3 | 0.0% |
@@ -292,12 +295,14 @@ modification for coadministration of interacting drugs | 5 | 0.0% |
 | clinical trials experience in asthma | 3 | 0.0% |
 | acute_bacterial_exacerbation_of_chronic_bronchitis | 3 | 0.0% |
 | initial therapy | 3 | 0.0% |
+| controlled_substance | 3 | 0.0% |
 | fundic gland polyps | 3 | 0.0% |
 | impaired_renal_function | 3 | 0.0% |
 | allergic rhinitis (seasonal and perennial) | 3 | 0.0% |
 | angle-closure glaucoma | 3 | 0.0% |
 | when_using_this_product | 3 | 0.0% |
 | serious_skin_reactions | 3 | 0.0% |
+| community_acquired_pneumonia_7_to_14_day_treatment_regimen | 3 | 0.0% |
 | central nervous system effects | 3 | 0.0% |
 | presence_of_gastric_malignancy | 3 | 0.0% |
 | eradication of h. pylori to reduce the risk of duodenal ulcer recurrence | 3 | 0.0% |
@@ -315,7 +320,6 @@ modification for coadministration of interacting drugs | 5 | 0.0% |
 | ask a doctor before use if you have | 3 | 0.0% |
 | angle_closure_glaucoma | 3 | 0.0% |
 | hypokalemia and hyperglycemia | 3 | 0.0% |
-| nephropathy_in_type_2_diabetic_patients | 3 | 0.0% |
 | when_using | 3 | 0.0% |
 | clinical trial experience | 3 | 0.0% |
 | treatment_of_influenza | 3 | 0.0% |
@@ -329,7 +333,6 @@ modification for coadministration of interacting drugs | 5 | 0.0% |
 | serious skin reactions | 3 | 0.0% |
 | dual_blockade_of_the_renin_angiotensin_system_ras | 3 | 0.0% |
 | cutaneous_and_systemic_lupus_erythematosus | 3 | 0.0% |
-| eradication_of_h_pylori_to_reduce_the_risk_of_duodenal_ulcer_recurrence | 3 | 0.0% |
 | hepatic failure | 3 | 0.0% |
 | effect_on_growth | 3 | 0.0% |
 | uncomplicated skin and skin structure infections | 3 | 0.0% |
@@ -345,6 +348,7 @@ modification for coadministration of interacting drugs | 5 | 0.0% |
 | recommended dosage | 2 | 0.0% |
 | hypotension_in_volume_or_salt_depleted_patients | 2 | 0.0% |
 | recommended dosage for symptomatic, documented gastroesophageal reflux in adults who fail conventional therapy | 2 | 0.0% |
+| acute_bacterial_maxillary_sinusitis | 2 | 0.0% |
 | eradication of | 2 | 0.0% |
 | dependence and withdrawal reactions | 2 | 0.0% |
 | adrenergic_drugs | 2 | 0.0% |
@@ -518,7 +522,6 @@ modification in renal impairment | 2 | 0.0% |
 | aspirin | 2 | 0.0% |
 | cannabidiol | 2 | 0.0% |
 | neuroleptic_malignant_syndrome | 2 | 0.0% |
-| keep_out_of_reach_of_children | 2 | 0.0% |
 | myocardial_infarction | 2 | 0.0% |
 | immunizations | 2 | 0.0% |
 | convulsions | 2 | 0.0% |
@@ -531,6 +534,7 @@ modification in renal impairment | 2 | 0.0% |
 | anticoagulants | 2 | 0.0% |
 | hemorrhage | 2 | 0.0% |
 | gout_flares | 2 | 0.0% |
+| acute_bacterial_sinusitis_5_day_and_10_to_14_day_treatment_regimens | 2 | 0.0% |
 | avoid_excessive_use_of_breztri_aerosphere_and_avoid_use_with_other_long_acting_beta | 2 | 0.0% |
 | exercise-induced bronchoconstriction (eib) | 2 | 0.0% |
 | metformin | 2 | 0.0% |
@@ -546,7 +550,6 @@ modification in renal impairment | 2 | 0.0% |
 | acute_interstitial_nephritis | 2 | 0.0% |
 | immunosuppression | 2 | 0.0% |
 | mania | 2 | 0.0% |
-| community_acquired_pneumonia_7_to_14_day_treatment_regimen | 2 | 0.0% |
 | complicated urinary tract infections and acute pyelonephritis: 5-day treatment regimen | 2 | 0.0% |
 | pancreatitis | 2 | 0.0% |
 | acute_myocardial_infarction | 2 | 0.0% |
@@ -576,6 +579,7 @@ modification in renal impairment | 2 | 0.0% |
 | myocardial infarction | 2 | 0.0% |
 | vaccination | 2 | 0.0% |
 | adult patients | 2 | 0.0% |
+| heart_failure_post_myocardial_infarction | 2 | 0.0% |
 | busulfan | 2 | 0.0% |
 | nonpotassium_sparing_diuretics | 2 | 0.0% |
 | irbesartan_and_hydrochlorothiazide | 2 | 0.0% |
@@ -830,7 +834,6 @@ trials experience in gout | 1 | 0.0% |
 | recommended_pediatric_dosage_by_indication | 1 | 0.0% |
 | package label-principal display panel - 5 mg/5 ml (120 ml carton) | 1 | 0.0% |
 | urinary hesitation and retention | 1 | 0.0% |
-| controlled_substance | 1 | 0.0% |
 | recommended dosage for specific populations | 1 | 0.0% |
 | nephrotoxicity_due_to_tacrolimus_and_drug_interactions | 1 | 0.0% |
 | anaphylactoid_reactions_during_membrane_exposure | 1 | 0.0% |
@@ -1160,7 +1163,6 @@ modification in hepatic impairment | 1 | 0.0% |
 | therapeutic_drug_monitoring | 1 | 0.0% |
 | screen_for_bipolar_disorder_prior_to_starting_citalopram_tablets | 1 | 0.0% |
 | abnormal_thinking_and_behavioral_changes | 1 | 0.0% |
-| acute_bacterial_sinusitis_5_day_and_10_to_14_day_treatment_regimens | 1 | 0.0% |
 | initial_episode | 1 | 0.0% |
 | discontinuation_syndrome | 1 | 0.0% |
 | general dosing information | 1 | 0.0% |
@@ -1331,7 +1333,6 @@ arrhythmogenic drugs | 1 | 0.0% |
 | maintenance_of_healing_of_ee | 1 | 0.0% |
 | increased_risk_of_bleeding | 1 | 0.0% |
 | maternal toxicity | 1 | 0.0% |
-| heart_failure_post_myocardial_infarction | 1 | 0.0% |
 | cardiovascular_death | 1 | 0.0% |
 | angioedema and anaphylactoid reactions | 1 | 0.0% |
 | other_extrapyramidal_symptoms | 1 | 0.0% |
@@ -1464,7 +1465,6 @@ suicidality | 1 | 0.0% |
 | risk_reduction_of_nsaid_associated_gastric_ulcer | 1 | 0.0% |
 | kidney_function | 1 | 0.0% |
 | pharmacokinetics/metabolism | 1 | 0.0% |
-| acute_bacterial_maxillary_sinusitis | 1 | 0.0% |
 | digitalis_clonidine_and_calcium_channel_blockers | 1 | 0.0% |
 | packaging information | 1 | 0.0% |
 | prolongation_of_the_qt_interval | 1 | 0.0% |
@@ -1699,6 +1699,7 @@ deficiency | 1 | 0.0% |
 | recommended_dosing_schedule | 1 | 0.0% |
 | bone_marrow_depression | 1 | 0.0% |
 | mechanical_and_bioprosthetic_heart_valves | 1 | 0.0% |
+| mg_bottle_label | 1 | 0.0% |
 | seizure_potential | 1 | 0.0% |
 | all-cause mortality in patients with coronary artery disease 1 to 10 years after clarithromycin exposure | 1 | 0.0% |
 | dual_blockade_of_the_renin_angiotensin_aldosterone_system | 1 | 0.0% |

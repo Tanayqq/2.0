@@ -109,20 +109,22 @@ class MedicalUploader:
         logger.info("starting_qdrant_batch_upload", total_chunks=len(chunks), batch_size=batch_size)
         
         # Delete existing points for these drugs to prevent duplicates/orphans from previous versions
-        from qdrant_client.models import Filter, FieldCondition, MatchValue
+        from qdrant_client.models import Filter, FieldCondition, MatchValue, FilterSelector
         unique_drugs = {chunk["drug_name"] for chunk in chunks if chunk.get("drug_name")}
         for d_name in unique_drugs:
             logger.info("clearing_existing_qdrant_points", drug=d_name)
             try:
                 self.client.delete(
                     collection_name=self.collection_name,
-                    filter=Filter(
-                        must=[
-                            FieldCondition(
-                                key="drug_name",
-                                match=MatchValue(value=d_name)
-                            )
-                        ]
+                    points_selector=FilterSelector(
+                        filter=Filter(
+                            must=[
+                                FieldCondition(
+                                    key="drug_name",
+                                    match=MatchValue(value=d_name)
+                                )
+                            ]
+                        )
                     )
                 )
             except Exception as e:
