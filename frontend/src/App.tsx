@@ -20,11 +20,15 @@ function CitationRenderer({
 }) {
   console.log("Rendering answer:", text);
   
-  // Regex to match [X] where X is sequential number, or [Unsupported Citation Removed]
   const regex = /\[([0-9]+)\]|\[Unsupported Citation Removed\]/g;
-  const parts = [];
-  let lastIndex = 0;
-  
+
+  // Split text into individual sentences safely to render one fact per line
+  const sentences = text
+    .replace(/(\[[0-9]+\]|\[Unsupported Citation Removed\]|[.!?])\s+/g, '$1<SENTENCE_BOUNDARY>')
+    .split('<SENTENCE_BOUNDARY>')
+    .map(s => s.trim())
+    .filter(Boolean);
+
   const handleCitationClick = (e: React.MouseEvent, docId: string) => {
     e.preventDefault();
     const num = parseInt(docId, 10);
@@ -44,51 +48,78 @@ function CitationRenderer({
     }
   };
 
-  let match;
-  while ((match = regex.exec(text)) !== null) {
-    // Push preceding text
-    if (match.index > lastIndex) {
-      parts.push(<span key={lastIndex}>{text.substring(lastIndex, match.index)}</span>);
-    }
-    
-    const matchedText = match[0];
-    if (matchedText === "[Unsupported Citation Removed]") {
-      parts.push(
-        <span key={match.index} className="inline-flex px-1.5 py-0.5 text-xs text-red-500 font-bold bg-red-50 border border-red-200 rounded" title="A citation was removed because it was not grounded in the retrieved clinical sources.">
-          [Unsupported Citation Removed]
-        </span>
-      );
-    } else {
-      const docId = match[1];
-      const num = parseInt(docId, 10);
-      const citation = citations.find(c => (c.citation_number ?? parseInt(c.document_id, 10)) === num);
-      
-      if (citation) {
-        parts.push(
-          <InlineCitation 
-            key={match.index}
-            citation={citation}
-            onClick={(e) => handleCitationClick(e, docId)}
-          />
-        );
-      } else {
-        // Orphan citation -> Replace with [Unsupported Citation Removed]
-        parts.push(
-          <span key={match.index} className="inline-flex px-1.5 py-0.5 text-xs text-red-500 font-bold bg-red-50 border border-red-200 rounded" title="A citation was removed because it was not grounded in the retrieved clinical sources.">
-            [Unsupported Citation Removed]
-          </span>
-        );
-      }
-    }
-    
-    lastIndex = match.index + match[0].length;
-  }
-  
-  if (lastIndex < text.length) {
-    parts.push(<span key={lastIndex}>{text.substring(lastIndex)}</span>);
-  }
-  
-  return <div className="leading-relaxed whitespace-pre-wrap">{parts}</div>;
+  return (
+    <div className="space-y-2.5">
+      {sentences.map((sentence, idx) => {
+        const parts = [];
+        let lastIndex = 0;
+        let match;
+        
+        // Reset regex index for this sentence
+        regex.lastIndex = 0;
+        
+        while ((match = regex.exec(sentence)) !== null) {
+          if (match.index > lastIndex) {
+            parts.push(<span key={lastIndex}>{sentence.substring(lastIndex, match.index)}</span>);
+          }
+          
+          const matchedText = match[0];
+          if (matchedText === "[Unsupported Citation Removed]") {
+            parts.push(
+              <span key={match.index} className="inline-flex px-1.5 py-0.5 text-xs text-red-500 font-bold bg-red-50 border border-red-200 rounded" title="A citation was removed because it was not grounded in the retrieved clinical sources.">
+                [Unsupported Citation Removed]
+              </span>
+            );
+          } else {
+            const docId = match[1];
+            const num = parseInt(docId, 10);
+            const citation = citations.find(c => (c.citation_number ?? parseInt(c.document_id, 10)) === num);
+            
+            if (citation) {
+              parts.push(
+                <InlineCitation 
+                  key={match.index}
+                  citation={citation}
+                  onClick={(e) => handleCitationClick(e, docId)}
+                />
+              );
+            } else {
+              parts.push(
+                <span key={match.index} className="inline-flex px-1.5 py-0.5 text-xs text-red-500 font-bold bg-red-50 border border-red-200 rounded" title="A citation was removed because it was not grounded in the retrieved clinical sources.">
+                  [Unsupported Citation Removed]
+                </span>
+              );
+            }
+          }
+          
+          lastIndex = match.index + match[0].length;
+        }
+        
+        if (lastIndex < sentence.length) {
+          parts.push(<span key={lastIndex}>{sentence.substring(lastIndex)}</span>);
+        }
+        
+        // Determine if it is a list-like fact (e.g. starts with key drug names or contains citations)
+        const isIntro = sentence.toLowerCase().startsWith("based on") || sentence.toLowerCase().startsWith("here is") || sentence.endsWith(":");
+        const isFact = !isIntro && (sentence.includes("[") || /^(metformin|lisinopril|atorvastatin|warfarin|gabapentin|omeprazole|amoxicillin|albuterol|losartan|ibuprofen)/i.test(sentence));
+        
+        if (isFact) {
+          return (
+            <div key={idx} className="flex items-start gap-2.5 text-slate-700 hover:text-slate-900 transition-colors duration-150 pl-1">
+              <span className="text-blue-500 shrink-0 mt-2 select-none font-bold text-xs leading-none">•</span>
+              <span className="leading-relaxed text-[14.5px]">{parts}</span>
+            </div>
+          );
+        } else {
+          return (
+            <p key={idx} className="text-slate-800 font-medium leading-relaxed mb-1.5 text-[14.5px]">
+              {parts}
+            </p>
+          );
+        }
+      })}
+    </div>
+  );
 }
 
 function SourceCard({ 

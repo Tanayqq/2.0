@@ -25,16 +25,12 @@ export function InlineCitation({ citation, onClick }: InlineCitationProps) {
   const num = citation.citation_number ?? parseInt(citation.document_id, 10);
 
   return (
-    <HoverCard openDelay={200}>
-      <HoverCardTrigger asChild>
-        <sup className="align-super select-none">
-          <span
-            onClick={onClick}
-            className="inline-flex items-center justify-center text-[10px] font-semibold text-blue-600 hover:text-blue-800 bg-blue-50 hover:bg-blue-100 border border-blue-200 rounded px-1 py-0.5 ml-0.5 transition-all duration-200 cursor-pointer shadow-sm active:scale-95"
-          >
-            {num}
-          </span>
-        </sup>
+    <HoverCard openDelay={150}>
+      <HoverCardTrigger 
+        onClick={onClick}
+        className="inline-flex items-center justify-center text-[10px] font-bold text-blue-700 hover:text-blue-900 bg-blue-50 hover:bg-blue-100 border border-blue-200 rounded h-4 min-w-[16px] px-1 ml-0.5 cursor-pointer select-none align-baseline relative -top-1 transition-all duration-200"
+      >
+        [{num}]
       </HoverCardTrigger>
       <HoverCardContent className="w-80 border border-slate-200 shadow-xl bg-white p-4 rounded-xl z-50 text-left">
         <div className="space-y-3 font-sans">
