@@ -49,7 +49,7 @@ function CitationRenderer({
   };
 
   return (
-    <div className="space-y-2.5">
+    <div className="space-y-2.5 whitespace-pre-wrap">
       {sentences.map((sentence, idx) => {
         const parts = [];
         let lastIndex = 0;

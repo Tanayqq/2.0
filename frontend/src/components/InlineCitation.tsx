@@ -28,7 +28,7 @@ export function InlineCitation({ citation, onClick }: InlineCitationProps) {
     <HoverCard openDelay={150}>
       <HoverCardTrigger 
         onClick={onClick}
-        className="inline-flex items-center justify-center text-[10px] font-bold text-blue-700 hover:text-blue-900 bg-blue-50 hover:bg-blue-100 border border-blue-200 rounded h-4 min-w-[16px] px-1 ml-0.5 cursor-pointer select-none align-baseline relative -top-1 transition-all duration-200"
+        className="inline-flex items-center justify-center text-[10px] font-bold text-blue-700 hover:text-blue-900 bg-blue-50 hover:bg-blue-100 border border-blue-200 rounded h-4 min-w-[16px] px-1 ml-0.5 cursor-pointer align-baseline relative -top-1 transition-all duration-200"
       >
         [{num}]
       </HoverCardTrigger>
