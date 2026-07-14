@@ -204,23 +204,6 @@ class ProcessClinicalQueryUseCase:
                         filter_trace=filter_trace
                     )
                     
-                    # Diagnostic safe-mode: if filter wiped all results, retry without section filter
-                    if len(in_section) == 0 and len(drug_docs) > 0:
-                        logger.error(
-                            "SECTION_FILTER_FAILURE_DETECTED",
-                            drug=drug,
-                            requested_sections=detected_sections,
-                            raw_sections_in_db=[_resolve_raw_section(d.metadata) for d in drug_docs],
-                            normalized_sections_in_db=[normalize_section(_resolve_raw_section(d.metadata)) for d in drug_docs],
-                            action="using_unfiltered_results_for_diagnostics_only"
-                        )
-                        # Use unfiltered results so the answer is not empty — callers can detect this via rejection_log
-                        in_section = drug_docs
-                        rejection_log.append(
-                            f"SECTION_FILTER_FAILURE: all {len(drug_docs)} docs dropped for drug={drug} "
-                            f"sections={detected_sections}. Using unfiltered fallback."
-                        )
-                    
                     drug_docs = in_section
                 
                 threshold = settings.SIMILARITY_THRESHOLD
@@ -310,21 +293,6 @@ class ProcessClinicalQueryUseCase:
                     requested_sections=detected_sections,
                     filter_trace=filter_trace
                 )
-                
-                # Diagnostic safe-mode: if filter wiped all results, retry without section filter
-                if len(in_section) == 0 and len(filtered_docs) > 0:
-                    logger.error(
-                        "SECTION_FILTER_FAILURE_DETECTED",
-                        requested_sections=detected_sections,
-                        raw_sections_in_db=[_resolve_raw_section(d.metadata) for d in filtered_docs],
-                        normalized_sections_in_db=[normalize_section(_resolve_raw_section(d.metadata)) for d in filtered_docs],
-                        action="using_unfiltered_results_for_diagnostics_only"
-                    )
-                    in_section = filtered_docs
-                    rejection_log.append(
-                        f"SECTION_FILTER_FAILURE: all {len(filtered_docs)} docs dropped "
-                        f"sections={detected_sections}. Using unfiltered fallback."
-                    )
                 
                 filtered_docs = in_section
                 
