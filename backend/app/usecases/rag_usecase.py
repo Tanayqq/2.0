@@ -156,15 +156,22 @@ class ProcessClinicalQueryUseCase:
         else:
             resolved_drug = None
         
-        # 2. Detect requested clinical sections
+        # 2. Detect requested clinical sections (negation-aware to ignore "Do not include X")
         q_lower = query.question.lower()
         detected_sections = []
         import re
+        
+        def is_negated(text: str, keyword: str) -> bool:
+            # Match negation words before the keyword in the same sentence/phrase
+            negation_pattern = r'\b(do not|don\'t|never|excluding|except|omit|without|no|other than|except for|avoid)\b[^.!?]*?\b' + re.escape(keyword) + r'\b'
+            return bool(re.search(negation_pattern, text, re.IGNORECASE))
+            
         for canonical_sec, keywords in SECTION_KEYWORDS.items():
             for kw in keywords:
                 if re.search(r'\b' + re.escape(kw) + r'\b', q_lower):
-                    detected_sections.append(canonical_sec)
-                    break
+                    if not is_negated(q_lower, kw):
+                        detected_sections.append(canonical_sec)
+                        break
         detected_sections = list(set(detected_sections))
         
         logger.info(
@@ -530,14 +537,19 @@ Not found in available sources.
         detected_drugs_debug = list(set(detected_drugs_debug))
         resolved_drug_debug = detected_drugs_debug[0].capitalize() if detected_drugs_debug else None
         
-        # Section detection (same logic)
+        # Section detection (same logic, negation-aware)
         import re as _re
         detected_sections_debug = []
+        def is_negated_debug(text: str, keyword: str) -> bool:
+            negation_pattern = r'\b(do not|don\'t|never|excluding|except|omit|without|no|other than|except for|avoid)\b[^.!?]*?\b' + _re.escape(keyword) + r'\b'
+            return bool(_re.search(negation_pattern, text, _re.IGNORECASE))
+            
         for canonical_sec, keywords in SECTION_KEYWORDS.items():
             for kw in keywords:
                 if _re.search(r'\b' + _re.escape(kw) + r'\b', q_lower):
-                    detected_sections_debug.append(canonical_sec)
-                    break
+                    if not is_negated_debug(q_lower, kw):
+                        detected_sections_debug.append(canonical_sec)
+                        break
         detected_sections_debug = list(set(detected_sections_debug))
         
         # Raw Qdrant search (no section filter)
