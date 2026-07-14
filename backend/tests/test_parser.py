@@ -30,8 +30,8 @@ def test_medical_parser_standardizes_titles():
     # Assert standardizations (now lowercase canonical)
     assert len(parsed_doc.sections) == 3
     assert parsed_doc.sections[0].title == "indications"
-    assert parsed_doc.sections[1].title == "adverse reactions"
-    assert parsed_doc.sections[2].title == "unknown section title"
+    assert parsed_doc.sections[1].title == "adverse_reactions"
+    assert parsed_doc.sections[2].title == "unknown_section_title"
 
 def test_medical_parser_cleans_text_and_deduplicates():
     doc = NormalizedMedicalDocument(
@@ -89,6 +89,5 @@ def test_medical_parser_discards_noise_sections():
     assert "full prescribing information" not in titles
     # Clinical sections must be present as lowercase canonical
     assert "contraindications" in titles
-    assert "warnings" in titles
+    assert "warnings_and_precautions" in titles
     assert len(parsed_doc.sections) == 2
-

@@ -9,7 +9,7 @@ import os
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from app.section_utils import normalize_section
+from app.section_utils import normalize_section, get_clinical_category, get_patient_population
 
 
 class TestNormalizeSection:
@@ -41,34 +41,34 @@ class TestNormalizeSection:
         assert normalize_section("warnings") == "warnings"
 
     def test_warnings_and_precautions(self):
-        assert normalize_section("Warnings and Precautions") == "warnings"
+        assert normalize_section("Warnings and Precautions") == "warnings_and_precautions"
 
     def test_warnings_ampersand(self):
-        assert normalize_section("Warnings & Precautions") == "warnings"
+        assert normalize_section("Warnings & Precautions") == "warnings_and_precautions"
 
     def test_boxed_warning(self):
-        assert normalize_section("Boxed Warning") == "warnings"
+        assert normalize_section("Boxed Warning") == "boxed_warning"
 
     def test_black_box_warning(self):
-        assert normalize_section("Black Box Warning") == "warnings"
+        assert normalize_section("Black Box Warning") == "boxed_warning"
 
     def test_warnings_with_fda_number(self):
-        assert normalize_section("5 Warnings and Precautions") == "warnings"
+        assert normalize_section("5 Warnings and Precautions") == "warnings_and_precautions"
 
     # ------------------------------------------------------------------ #
     # Adverse Reactions                                                    #
     # ------------------------------------------------------------------ #
     def test_adverse_reactions_exact(self):
-        assert normalize_section("adverse reactions") == "adverse reactions"
+        assert normalize_section("adverse reactions") == "adverse_reactions"
 
     def test_adverse_reactions_title_case(self):
-        assert normalize_section("Adverse Reactions") == "adverse reactions"
+        assert normalize_section("Adverse Reactions") == "adverse_reactions"
 
     def test_side_effects(self):
-        assert normalize_section("Side Effects") == "adverse reactions"
+        assert normalize_section("Side Effects") == "adverse_reactions"
 
     def test_adverse_reactions_with_fda_number(self):
-        assert normalize_section("6 Adverse Reactions") == "adverse reactions"
+        assert normalize_section("6 Adverse Reactions") == "adverse_reactions"
 
     # ------------------------------------------------------------------ #
     # Noise / Excluded Sections                                            #
@@ -89,13 +89,13 @@ class TestNormalizeSection:
     # Other canonical sections                                             #
     # ------------------------------------------------------------------ #
     def test_dosage_and_administration(self):
-        assert normalize_section("Dosage and Administration") == "dosage"
+        assert normalize_section("Dosage and Administration") == "dosage_and_administration"
 
     def test_drug_interactions(self):
-        assert normalize_section("Drug Interactions") == "drug interactions"
+        assert normalize_section("Drug Interactions") == "drug_interactions"
 
     def test_drug_interactions_fda_number(self):
-        assert normalize_section("7 Drug Interactions") == "drug interactions"
+        assert normalize_section("7 Drug Interactions") == "drug_interactions"
 
     def test_pregnancy(self):
         assert normalize_section("Pregnancy") == "pregnancy"
@@ -110,10 +110,10 @@ class TestNormalizeSection:
         assert normalize_section("Nursing Mothers") == "lactation"
 
     def test_pediatric_use(self):
-        assert normalize_section("Pediatric Use") == "pediatric use"
+        assert normalize_section("Pediatric Use") == "pediatric_use"
 
     def test_geriatric_use(self):
-        assert normalize_section("Geriatric Use") == "geriatric use"
+        assert normalize_section("Geriatric Use") == "geriatric_use"
 
     def test_overdosage(self):
         assert normalize_section("Overdosage") == "overdosage"
@@ -122,10 +122,26 @@ class TestNormalizeSection:
         assert normalize_section("Storage and Handling") == "storage"
 
     def test_patient_counseling(self):
-        assert normalize_section("Patient Counseling Information") == "patient counseling information"
+        assert normalize_section("Patient Counseling Information") == "patient_counseling"
 
     def test_indications_and_usage(self):
         assert normalize_section("Indications and Usage") == "indications"
+
+    # ------------------------------------------------------------------ #
+    # Groupings                                                            #
+    # ------------------------------------------------------------------ #
+    def test_clinical_categories(self):
+        assert get_clinical_category("contraindications") == "Contraindications & Safety"
+        assert get_clinical_category("warnings_and_precautions") == "Contraindications & Safety"
+        assert get_clinical_category("drug_interactions") == "Co-Administration Risks"
+        assert get_clinical_category("pregnancy") == "Special Populations"
+        assert get_clinical_category("dosage_and_administration") == "Dosing & Administration"
+
+    def test_patient_populations(self):
+        assert get_patient_population("pregnancy") == "pregnancy"
+        assert get_patient_population("pediatric_use") == "pediatric"
+        assert get_patient_population("geriatric_use") == "geriatric"
+        assert get_patient_population("contraindications") == "general"
 
     # ------------------------------------------------------------------ #
     # Edge cases                                                           #
@@ -138,6 +154,4 @@ class TestNormalizeSection:
 
     def test_unknown_section_passthrough_lowercase(self):
         result = normalize_section("Clinical Pharmacology")
-        # Should passthrough as lowercased, not crash
-        assert isinstance(result, str)
-        assert result == result.lower()
+        assert result == "clinical_pharmacology"

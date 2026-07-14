@@ -44,6 +44,55 @@ class ReportGenerator:
         except Exception as e:
             logger.error("failed_writing_pipeline_manifest", path=filepath, error=str(e))
 
+    def get_text_quality_report(self) -> str:
+        """
+        Produces the exact textual Dataset Quality Report representation.
+        """
+        total_drugs = len(self.stats.drug_chunk_counts)
+        avg_sections = self.stats.get_average_sections_per_drug()
+        
+        # Calculate chunks per drug average
+        if total_drugs > 0:
+            avg_chunks = round(self.stats.chunks_created / total_drugs, 1)
+        else:
+            avg_chunks = 0.0
+            
+        total_chunks = self.stats.chunks_created
+        
+        # Completeness statistics
+        complete_count = 0
+        incomplete_count = 0
+        missing_counts = {}
+        
+        for drug, comp_data in self.stats.drug_completeness.items():
+            status_by_category, score, percentage = comp_data
+            if score == 13:
+                complete_count += 1
+            else:
+                incomplete_count += 1
+                
+            for category, present in status_by_category.items():
+                if not present:
+                    missing_counts[category] = missing_counts.get(category, 0) + 1
+                    
+        report_lines = [
+            "==================================================",
+            "MedRef Ingestion Report",
+            "==================================================",
+            f"Total Drugs                {total_drugs}",
+            f"Average Sections per Drug  {avg_sections}",
+            f"Average Chunks per Drug    {avg_chunks}",
+            f"Total Chunks               {total_chunks}",
+            f"Complete Drugs (100%)      {complete_count}",
+            f"Incomplete Drugs           {incomplete_count}"
+        ]
+        
+        for category, count in sorted(missing_counts.items(), key=lambda x: x[1], reverse=True):
+            report_lines.append(f"Missing {category:<18} {count}")
+            
+        report_lines.append("==================================================")
+        return "\n".join(report_lines)
+
     def generate_ingestion_report(self):
         """
         Generates docs/INGESTION_REPORT.md.
@@ -57,9 +106,16 @@ class ReportGenerator:
         chunk_metrics = self.stats.get_chunk_metrics()
         avg_sections = self.stats.get_average_sections_per_drug()
         
+        text_quality_report = self.get_text_quality_report()
+        
         md = f"""# MedRef Ingestion Report
 Generated at: {datetime.datetime.utcnow().isoformat()}Z
 Pipeline Version: {ingestion_config.PIPELINE_VERSION}
+
+## Ingestion Quality Dashboard
+```text
+{text_quality_report}
+```
 
 ## Execution Summary
 *   **Run Time:** {duration_str} ({round(duration, 2)} seconds)
@@ -143,14 +199,25 @@ Generated at: {datetime.datetime.utcnow().isoformat()}Z
             md += f"| {section} | {count} |\n"
             
         md += """
-## Drug Chunk Breakdown
-| Drug | Total Sections | Chunks Created |
-|---|---|---|
+## Drug Completeness & Chunk Breakdown
+| Drug | Total Sections | Chunks Created | Completeness Score | Status |
+|---|---|---|---|---|
 """
         for drug in sorted(self.stats.drug_chunk_counts.keys()):
             sections = self.stats.drug_sections_counts.get(drug, 0)
             chunks = self.stats.drug_chunk_counts.get(drug, 0)
-            md += f"| {drug} | {sections} | {chunks} |\n"
+            
+            # Retrieve completeness score details
+            comp_data = self.stats.drug_completeness.get(drug)
+            if comp_data:
+                _, score, pct = comp_data
+                status = "✅ Complete" if score == 13 else "❌ Incomplete"
+                score_str = f"{score}/13 ({pct}%)"
+            else:
+                score_str = "N/A"
+                status = "N/A"
+                
+            md += f"| {drug} | {sections} | {chunks} | {score_str} | {status} |\n"
 
         try:
             with open(filepath, "w", encoding="utf-8") as f:

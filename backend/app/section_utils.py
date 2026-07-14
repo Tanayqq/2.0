@@ -4,16 +4,7 @@ section_utils.py
 Shared utility for normalizing clinical section titles into lowercase canonical keys.
 Used by both the ingestion pipeline (parser, chunker) and the retrieval layer (rag_usecase).
 
-Canonical keys match the SECTION_KEYWORDS dict keys in rag_usecase.py.
-
-Design rules
-============
-1. The normalizer MUST be deterministic and side-effect free.
-2. Exact match is always tried first (fastest, most specific).
-3. Prefix match is tried second (handles "4 Contraindications").
-4. Substring match is intentionally NOT used — it causes false positives
-   e.g. "indication" substring-matching inside "contraindications".
-5. Fallback: strip numbering, lowercase, and return as-is so logs stay readable.
+Canonical keys match the 38 clinical sections.
 """
 import re
 
@@ -21,78 +12,213 @@ import re
 # Exhaustive map: raw/variant label → lowercase canonical key
 # ---------------------------------------------------------------------------
 SECTION_SYNONYMS: dict[str, str] = {
-    # Contraindications
-    "contraindications": "contraindications",
-    "contraindication": "contraindications",
-    "contraindicated": "contraindications",
-
+    # Mechanism of Action
+    "mechanism of action": "mechanism_of_action",
+    "mechanism": "mechanism_of_action",
+    "pharmacological action": "mechanism_of_action",
+    
     # Indications
     "indications and usage": "indications",
     "indications": "indications",
     "indication": "indications",
+    "indicated": "indications",
+    "approved uses": "indications",
 
-    # Dosage
-    "dosage and administration": "dosage",
-    "dosage": "dosage",
-    "dosages": "dosage",
-
-    # Warnings  (boxed warning folds into warnings)
-    "warnings and precautions": "warnings",
-    "warnings & precautions": "warnings",
-    "boxed warning": "warnings",
-    "boxed warnings": "warnings",
-    "black box warning": "warnings",
-    "black box": "warnings",
-    "warnings": "warnings",
-    "warning": "warnings",
-
-    # Precautions (distinct canonical key)
-    "precautions": "precautions",
-    "precaution": "precautions",
-
-    # Drug Interactions
-    "drug interactions": "drug interactions",
-    "drug interaction": "drug interactions",
-    "drug-drug interactions": "drug interactions",
-
-    # Pregnancy
-    "pregnancy": "pregnancy",
-    "use in pregnancy": "pregnancy",
-    "pregnancy and lactation": "pregnancy",
-
-    # Lactation
-    "lactation": "lactation",
-    "nursing mothers": "lactation",
-    "breast-feeding mothers": "lactation",
-    "use in lactation": "lactation",
-
-    # Pediatric Use
-    "pediatric use": "pediatric use",
-    "use in children": "pediatric use",
-
-    # Geriatric Use
-    "geriatric use": "geriatric use",
-    "use in elderly": "geriatric use",
-    "use in geriatric patients": "geriatric use",
-
+    # Clinical Pharmacology
+    "clinical pharmacology": "clinical_pharmacology",
+    "pharmacology": "clinical_pharmacology",
+    
+    # Pharmacokinetics
+    "pharmacokinetics": "pharmacokinetics",
+    "pharmacokinetic": "pharmacokinetics",
+    "pk": "pharmacokinetics",
+    "absorption distribution metabolism elimination": "pharmacokinetics",
+    
+    # Pharmacodynamics
+    "pharmacodynamics": "pharmacodynamics",
+    "pharmacodynamic": "pharmacodynamics",
+    
     # Adverse Reactions
-    "adverse reactions": "adverse reactions",
-    "adverse reaction": "adverse reactions",
-    "side effects": "adverse reactions",
-
+    "adverse reactions": "adverse_reactions",
+    "adverse reaction": "adverse_reactions",
+    "side effects": "adverse_reactions",
+    "side effect": "adverse_reactions",
+    "undesirable effects": "adverse_reactions",
+    "postmarketing experience": "adverse_reactions",
+    "clinical trials experience": "adverse_reactions",
+    "clinical studies experience": "adverse_reactions",
+    
     # Overdosage
     "overdosage": "overdosage",
     "overdose": "overdosage",
-
+    "acute toxicity": "overdosage",
+    
     # Storage
     "storage and handling": "storage",
     "storage": "storage",
     "how supplied": "storage",
     "how supplied/storage and handling": "storage",
-
+    "supply": "storage",
+    
     # Patient Counseling
-    "patient counseling information": "patient counseling information",
-    "patient information": "patient counseling information",
+    "patient counseling information": "patient_counseling",
+    "patient counseling": "patient_counseling",
+    "patient information": "patient_counseling",
+    "information for patients": "patient_counseling",
+    "counseling": "patient_counseling",
+
+    # Dosage & Administration
+    "dosage and administration": "dosage_and_administration",
+    "dosage": "dosage_and_administration",
+    "dosages": "dosage_and_administration",
+    "dosing": "dosage_and_administration",
+    
+    # Administration
+    "administration": "administration",
+    "instructions for use": "administration",
+    "method of administration": "administration",
+    "how to administer": "administration",
+    
+    # Dosage Forms
+    "dosage forms": "dosage_forms",
+    "dosage forms and strengths": "dosage_forms",
+    "dosage form": "dosage_forms",
+    
+    # Strengths
+    "strengths": "strengths",
+    "strength": "strengths",
+    
+    # Maximum Dose
+    "maximum dose": "maximum_dose",
+    "maximum dosage": "maximum_dose",
+    "max dose": "maximum_dose",
+    
+    # Loading Dose
+    "loading dose": "loading_dose",
+    "loading dosage": "loading_dose",
+    
+    # Maintenance Dose
+    "maintenance dose": "maintenance_dose",
+    "maintenance dosage": "maintenance_dose",
+    
+    # Renal Dose
+    "renal dose": "renal_dose",
+    "renal dosing": "renal_dose",
+    "dosage in renal impairment": "renal_dose",
+    
+    # Hepatic Dose
+    "hepatic dose": "hepatic_dose",
+    "hepatic dosing": "hepatic_dose",
+    "dosage in hepatic impairment": "hepatic_dose",
+    
+    # Dose Adjustment
+    "dose adjustment": "dose_adjustment",
+    "dosage adjustment": "dose_adjustment",
+    "dosage modifications": "dose_adjustment",
+    "dose modification": "dose_adjustment",
+    "adjustments": "dose_adjustment",
+
+    # Contraindications
+    "contraindications": "contraindications",
+    "contraindication": "contraindications",
+    "contraindicated": "contraindications",
+    
+    # Boxed Warning
+    "boxed warning": "boxed_warning",
+    "boxed warnings": "boxed_warning",
+    "black box warning": "boxed_warning",
+    "black box": "boxed_warning",
+    
+    # Warnings
+    "warnings": "warnings",
+    "warning": "warnings",
+    
+    # Warnings and Precautions
+    "warnings and precautions": "warnings_and_precautions",
+    "warnings & precautions": "warnings_and_precautions",
+    
+    # Precautions
+    "precautions": "precautions",
+    "precaution": "precautions",
+    
+    # Drug Interactions
+    "drug interactions": "drug_interactions",
+    "drug interaction": "drug_interactions",
+    "drug-drug interactions": "drug_interactions",
+    "interactions": "drug_interactions",
+    "interaction": "drug_interactions",
+    
+    # Alcohol Interactions
+    "alcohol interactions": "alcohol_interactions",
+    "alcohol interaction": "alcohol_interactions",
+    "interaction with alcohol": "alcohol_interactions",
+    
+    # Food Interactions
+    "food interactions": "food_interactions",
+    "food interaction": "food_interactions",
+    "interaction with food": "food_interactions",
+    
+    # CYP Interactions
+    "cyp interactions": "cyp_interactions",
+    "cyp interaction": "cyp_interactions",
+    "cytochrome p450": "cyp_interactions",
+    
+    # Laboratory Interactions
+    "laboratory interactions": "laboratory_interactions",
+    "laboratory interaction": "laboratory_interactions",
+    "drug and laboratory test interactions": "laboratory_interactions",
+    "drug & laboratory test interactions": "laboratory_interactions",
+    
+    # Monitoring
+    "monitoring": "monitoring",
+    "monitoring parameter": "monitoring",
+    "patient monitoring": "monitoring",
+    "therapeutic monitoring": "monitoring",
+    
+    # Pregnancy
+    "pregnancy": "pregnancy",
+    "use in pregnancy": "pregnancy",
+    "pregnancy and lactation": "pregnancy",
+    "pregnancy warning": "pregnancy",
+    
+    # Lactation
+    "lactation": "lactation",
+    "nursing mothers": "lactation",
+    "breast-feeding mothers": "lactation",
+    "breastfeeding": "lactation",
+    "use in lactation": "lactation",
+    
+    # Pediatric Use
+    "pediatric use": "pediatric_use",
+    "use in children": "pediatric_use",
+    "pediatric": "pediatric_use",
+    "children": "pediatric_use",
+    
+    # Geriatric Use
+    "geriatric use": "geriatric_use",
+    "use in elderly": "geriatric_use",
+    "use in geriatric patients": "geriatric_use",
+    "geriatric": "geriatric_use",
+    "elderly": "geriatric_use",
+    
+    # Renal Impairment
+    "renal impairment": "renal_impairment",
+    "patients with renal impairment": "renal_impairment",
+    "renal insufficiency": "renal_impairment",
+    
+    # Hepatic Impairment
+    "hepatic impairment": "hepatic_impairment",
+    "patients with hepatic impairment": "hepatic_impairment",
+    "hepatic insufficiency": "hepatic_impairment",
+    
+    # Dialysis
+    "dialysis": "dialysis",
+    "hemodialysis": "dialysis",
+    
+    # Pharmacogenomics
+    "pharmacogenomics": "pharmacogenomics",
+    "pharmacogenomic": "pharmacogenomics",
+    "genetics": "pharmacogenomics",
 
     # SPL patient package insert — EXPLICITLY excluded (maps to nothing useful)
     "spl patient package insert": "_excluded",
@@ -101,6 +227,62 @@ SECTION_SYNONYMS: dict[str, str] = {
     "full prescribing information": "_excluded",
     "full prescribing information: contents": "_excluded",
     "highlights of prescribing information": "_excluded",
+}
+
+# Dynamic Grouping mappings
+SECTION_CATEGORIES: dict[str, str] = {
+    "mechanism_of_action": "Clinical Overview",
+    "indications": "Clinical Overview",
+    "clinical_pharmacology": "Clinical Overview",
+    "pharmacokinetics": "Clinical Overview",
+    "pharmacodynamics": "Clinical Overview",
+    "adverse_reactions": "Clinical Overview",
+    "overdosage": "Clinical Overview",
+    "storage": "Clinical Overview",
+    "patient_counseling": "Clinical Overview",
+
+    "dosage_and_administration": "Dosing & Administration",
+    "administration": "Dosing & Administration",
+    "dosage_forms": "Dosing & Administration",
+    "strengths": "Dosing & Administration",
+    "maximum_dose": "Dosing & Administration",
+    "loading_dose": "Dosing & Administration",
+    "maintenance_dose": "Dosing & Administration",
+    "renal_dose": "Dosing & Administration",
+    "hepatic_dose": "Dosing & Administration",
+    "dose_adjustment": "Dosing & Administration",
+
+    "contraindications": "Contraindications & Safety",
+    "boxed_warning": "Contraindications & Safety",
+    "warnings": "Contraindications & Safety",
+    "warnings_and_precautions": "Contraindications & Safety",
+    "precautions": "Contraindications & Safety",
+
+    "drug_interactions": "Co-Administration Risks",
+    "alcohol_interactions": "Co-Administration Risks",
+    "food_interactions": "Co-Administration Risks",
+    "cyp_interactions": "Co-Administration Risks",
+    "laboratory_interactions": "Co-Administration Risks",
+    "monitoring": "Co-Administration Risks",
+
+    "pregnancy": "Special Populations",
+    "lactation": "Special Populations",
+    "pediatric_use": "Special Populations",
+    "geriatric_use": "Special Populations",
+    "renal_impairment": "Special Populations",
+    "hepatic_impairment": "Special Populations",
+    "dialysis": "Special Populations",
+    "pharmacogenomics": "Special Populations",
+}
+
+SECTION_POPULATIONS: dict[str, str] = {
+    "pregnancy": "pregnancy",
+    "lactation": "lactation",
+    "pediatric_use": "pediatric",
+    "geriatric_use": "geriatric",
+    "renal_impairment": "renal",
+    "hepatic_impairment": "hepatic",
+    "dialysis": "dialysis",
 }
 
 # Pre-built sorted list: longest key first, so prefix matching is greedy-safe
@@ -113,28 +295,6 @@ _LEADING_NUM_RE = re.compile(r'^\d+(?:\.\d+)?\s*[\.\-\:]?\s*')
 def normalize_section(title: str) -> str:
     """
     Convert any raw section title into a lowercase canonical key.
-
-    Algorithm
-    ---------
-    1. Strip whitespace.
-    2. Strip leading FDA section numbers (4, 4., 4.1, 12.3 …).
-    3. Lowercase.
-    4. Exact match against SECTION_SYNONYMS.
-    5. Prefix match (longest-key-first to avoid short-key false positives).
-    6. Passthrough (return lowercased stripped form).
-
-    NOTE: Substring match is intentionally absent to prevent false positives
-    such as "indication" matching inside "contraindications".
-
-    Examples
-    --------
-    "4 Contraindications"             → "contraindications"
-    "CONTRAINDICATIONS"               → "contraindications"
-    "Warnings and Precautions"        → "warnings"
-    "Boxed Warning"                   → "warnings"
-    "SPL Patient Package Insert"      → "_excluded"
-    "Adverse Reactions"               → "adverse reactions"
-    "Unknown section"                 → "unknown section"   (passthrough)
     """
     if not title or not title.strip():
         return ""
@@ -142,17 +302,41 @@ def normalize_section(title: str) -> str:
     # Step 1: strip leading FDA numbering
     cleaned = _LEADING_NUM_RE.sub("", title.strip()).strip()
 
-    # Step 2: lowercase
-    lower = cleaned.lower()
+    # Step 2: remove extra punctuation and spaces for comparison
+    # Replace & with and to handle "Warnings & Precautions" -> "Warnings and Precautions"
+    cleaned_comparison = cleaned.replace("&", "and")
+    cleaned_comparison = re.sub(r'[^\w\s-]', '', cleaned_comparison).strip()
+    cleaned_comparison = re.sub(r'\s+', ' ', cleaned_comparison)
 
-    # Step 3: exact match (O(1))
+    # Step 3: lowercase
+    lower = cleaned_comparison.lower()
+
+    # Step 4: exact match (O(1))
     if lower in SECTION_SYNONYMS:
         return SECTION_SYNONYMS[lower]
 
-    # Step 4: prefix match — longest key first to prevent short-key shadowing
+    # Step 5: prefix match — longest key first to prevent short-key shadowing
     for syn, canonical in _SORTED_SYNONYMS:
         if lower.startswith(syn):
             return canonical
 
-    # Step 5: passthrough — readable in logs
-    return lower
+    # Step 6: passthrough — readable in logs, but replace spaces with underscores for canonical style
+    # if it maps to any common category, we can normalize it
+    normalized_passthrough = re.sub(r'[\s-]+', '_', lower)
+    return normalized_passthrough
+
+
+def get_clinical_category(canonical_key: str) -> str:
+    """
+    Get the clinical category for a given canonical section key.
+    Defaults to 'Clinical Overview'.
+    """
+    return SECTION_CATEGORIES.get(canonical_key, "Clinical Overview")
+
+
+def get_patient_population(canonical_key: str) -> str:
+    """
+    Get the target patient population for a given canonical section key.
+    Defaults to 'general'.
+    """
+    return SECTION_POPULATIONS.get(canonical_key, "general")

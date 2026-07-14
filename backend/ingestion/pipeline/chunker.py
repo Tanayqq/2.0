@@ -1,8 +1,19 @@
 import re
+import sys
+import os
 import structlog
 from typing import List, Dict, Any
 from .interfaces.source_provider import NormalizedMedicalDocument
 from .config import ingestion_config
+
+try:
+    sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
+    from app.section_utils import get_clinical_category, get_patient_population
+except ImportError:
+    def get_clinical_category(sec: str) -> str:
+        return "Clinical Overview"
+    def get_patient_population(sec: str) -> str:
+        return "general"
 
 logger = structlog.get_logger()
 
@@ -134,6 +145,26 @@ class MedicalSectionChunker:
                 
         return chunked_sections
 
+    def _extract_structured_dosing(self, content: str, section: str) -> dict:
+        """
+        Parses structured dosing facts from text where available in dosage or strength sections.
+        """
+        dosing = {}
+        if section not in ["dosage_and_administration", "maximum_dose", "strengths"]:
+            return dosing
+        
+        # Search for maximum dose patterns
+        max_dose_match = re.search(r'(?:maximum|max|do not exceed)\s+(?:daily\s+)?(?:dose|dosage|amount)?\s*(?:of|is|to)?\s*(\d+(?:\s*(?:mg|g|mcg|ml|units))\b)', content, re.IGNORECASE)
+        if max_dose_match:
+            dosing["maximum_dose"] = max_dose_match.group(1).strip()
+            
+        # Search for strengths/concentrations
+        strength_matches = re.findall(r'\b(\d+(?:\s*(?:mg|g|mcg|ml))\b)', content, re.IGNORECASE)
+        if strength_matches:
+            dosing["strengths"] = list(dict.fromkeys(strength_matches))
+            
+        return dosing
+
     def chunk_document(self, doc: NormalizedMedicalDocument) -> List[Dict[str, Any]]:
         """
         Chunks all sections of a document and returns a list of chunk dicts ready for embedding.
@@ -148,7 +179,20 @@ class MedicalSectionChunker:
                 
         total_chunks = len(temp_chunks)
         chunks = []
+        
+        # Determine authority
+        source_lower = doc.source.lower()
+        if "openfda" in source_lower:
+            authority = "FDA"
+        elif "dailymed" in source_lower:
+            authority = "DailyMed"
+        else:
+            authority = doc.source
+
         for cs in temp_chunks:
+            # Extract structured dosing
+            structured_dosing = self._extract_structured_dosing(cs.content, cs.section_title)
+
             chunks.append({
                 "drug_name": doc.drug,
                 "generic_name": doc.generic_name,
@@ -162,7 +206,13 @@ class MedicalSectionChunker:
                 "version": doc.version,
                 "ingested_at": doc.ingested_at,
                 "token_count": cs.token_count,
-                "content": cs.content
+                "content": cs.content,
+                # New rich metadata keys
+                "clinical_category": get_clinical_category(cs.section_title),
+                "patient_population": get_patient_population(cs.section_title),
+                "authority": authority,
+                "document_type": "drug_label",
+                "structured_dosing": structured_dosing
             })
                 
         logger.info("chunking_completed", drug=doc.drug, chunks_count=len(chunks))

@@ -29,6 +29,7 @@ class IngestionStatistics:
         self.drug_sections_counts: Dict[str, int] = {}
         self.source_distribution: Dict[str, int] = {}
         self.country_distribution: Dict[str, int] = {}
+        self.drug_completeness: Dict[str, Any] = {}
 
     def start(self):
         self.start_time = time.time()
@@ -76,3 +77,6 @@ class IngestionStatistics:
         if not self.drug_sections_counts:
             return 0.0
         return round(statistics.mean(self.drug_sections_counts.values()), 1)
+
+    def record_drug_completeness(self, drug: str, status_by_category: Dict[str, bool], score: int, percentage: float):
+        self.drug_completeness[drug] = (status_by_category, score, percentage)

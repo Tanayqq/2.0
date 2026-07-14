@@ -166,3 +166,37 @@ class MedicalValidator:
             stats["valid_chunks"] += 1
             
         return valid_chunks, stats
+
+    COMPLETENESS_CATEGORIES = {
+        "Clinical Overview": ["mechanism_of_action", "clinical_pharmacology", "indications", "clinical_studies", "description"],
+        "Dosage": ["dosage_and_administration", "dosage_forms", "strengths", "maximum_dose", "loading_dose", "maintenance_dose", "renal_dose", "hepatic_dose", "dose_adjustment", "administration"],
+        "Contraindications": ["contraindications"],
+        "Warnings": ["warnings", "warnings_and_precautions", "boxed_warning", "precautions"],
+        "Drug Interactions": ["drug_interactions", "alcohol_interactions", "food_interactions", "cyp_interactions", "laboratory_interactions", "monitoring"],
+        "Pregnancy": ["pregnancy"],
+        "Lactation": ["lactation"],
+        "Pediatric": ["pediatric_use"],
+        "Geriatric": ["geriatric_use"],
+        "Renal": ["renal_impairment"],
+        "Hepatic": ["hepatic_impairment"],
+        "Storage": ["storage"],
+        "Patient Counseling": ["patient_counseling"]
+    }
+
+    def calculate_completeness_score(self, doc: NormalizedMedicalDocument) -> Tuple[Dict[str, bool], int, float]:
+        """
+        Calculate Drug Completeness Score.
+        Returns:
+            Tuple of (status_by_category: Dict[str, bool], score: int, percentage: float)
+        """
+        present_sections = {sec.title for sec in doc.sections}
+        
+        status_by_category = {}
+        for category, keys in self.COMPLETENESS_CATEGORIES.items():
+            # Check if any key is in the present sections
+            status_by_category[category] = any(k in present_sections for k in keys)
+            
+        score = sum(1 for val in status_by_category.values() if val)
+        percentage = round((score / 13) * 100, 1)
+        
+        return status_by_category, score, percentage

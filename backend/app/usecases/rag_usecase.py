@@ -12,21 +12,44 @@ import structlog
 logger = structlog.get_logger()
 
 SECTION_KEYWORDS = {
-    "contraindications": ["contraindication", "contraindications", "contraindicated"],
-    "warnings": ["warning", "warnings", "boxed warning", "boxed warnings", "black box", "blackbox"],
-    "precautions": ["precaution", "precautions"],
-    "pregnancy": ["pregnancy", "pregnant", "teratogenic", "fetus", "fetal"],
-    "lactation": ["lactation", "nursing", "breast milk", "breastfeeding", "human milk"],
-    "pediatric use": ["pediatric", "pediatrics", "child", "children", "infant", "infants", "adolescent", "adolescents"],
-    "geriatric use": ["geriatric", "geriatrics", "elderly", "older patients", "aging"],
-    "adverse reactions": ["adverse", "adverse reaction", "adverse reactions", "side effect", "side effects"],
-    "overdosage": ["overdosage", "overdose", "overdoses"],
+    "mechanism_of_action": ["mechanism of action", "mechanism", "pharmacological action"],
+    "indications": ["indication", "indications", "indicated", "approved uses"],
+    "clinical_pharmacology": ["clinical pharmacology", "pharmacology"],
+    "pharmacokinetics": ["pharmacokinetics", "pharmacokinetic", "pk", "absorption", "distribution", "metabolism", "elimination"],
+    "pharmacodynamics": ["pharmacodynamics", "pharmacodynamic"],
+    "adverse_reactions": ["adverse reactions", "adverse reaction", "side effects", "side effect", "undesirable effects", "postmarketing", "clinical trials experience", "clinical studies experience"],
+    "overdosage": ["overdosage", "overdose", "toxicity"],
     "storage": ["storage", "handling", "supplied", "store", "keep"],
-    "drug interactions": ["interaction", "interactions", "drug interaction", "drug interactions", "concomitant"],
-    "dosage": ["dosage", "dosages", "administration", "dosing", "dose", "doses"],
-    # Note: 'use'/'uses' intentionally excluded — too broad, fires on nearly every query
-    "indications": ["indication", "indications", "indicated"],
-    "patient counseling information": ["counseling", "patient counseling"]
+    "patient_counseling": ["counseling", "patient counseling", "patient information", "information for patients"],
+    "dosage_and_administration": ["dosage and administration", "dosage", "dosages", "dosing", "dose", "doses"],
+    "administration": ["administration", "instructions for use", "how to administer"],
+    "dosage_forms": ["dosage forms", "strengths", "dosage form"],
+    "strengths": ["strengths", "strength"],
+    "maximum_dose": ["maximum dose", "maximum dosage", "max dose"],
+    "loading_dose": ["loading dose", "loading dosage"],
+    "maintenance_dose": ["maintenance dose", "maintenance dosage"],
+    "renal_dose": ["renal dose", "renal dosing", "dosage in renal impairment"],
+    "hepatic_dose": ["hepatic dose", "hepatic dosing", "dosage in hepatic impairment"],
+    "dose_adjustment": ["dose adjustment", "dosage adjustment", "dosage modifications", "dose modification", "adjustments"],
+    "contraindications": ["contraindications", "contraindication", "contraindicated"],
+    "boxed_warning": ["boxed warning", "boxed warnings", "black box warning", "black box"],
+    "warnings": ["warnings", "warning"],
+    "warnings_and_precautions": ["warnings and precautions", "warnings & precautions"],
+    "precautions": ["precautions", "precaution"],
+    "drug_interactions": ["drug interactions", "drug interaction", "drug-drug interactions", "interactions", "interaction"],
+    "alcohol_interactions": ["alcohol interactions", "alcohol interaction", "interaction with alcohol"],
+    "food_interactions": ["food interactions", "food interaction", "interaction with food"],
+    "cyp_interactions": ["cyp interactions", "cyp interaction", "cytochrome p450"],
+    "laboratory_interactions": ["laboratory interactions", "laboratory interaction", "drug and laboratory test interactions"],
+    "monitoring": ["monitoring", "monitoring parameter", "patient monitoring", "therapeutic monitoring"],
+    "pregnancy": ["pregnancy", "use in pregnancy", "pregnancy warning", "pregnant", "teratogenic", "fetus", "fetal"],
+    "lactation": ["lactation", "nursing mothers", "breast-feeding mothers", "breastfeeding", "use in lactation", "nursing", "breast milk", "human milk"],
+    "pediatric_use": ["pediatric use", "use in children", "pediatric", "children", "child", "infant", "infants"],
+    "geriatric_use": ["geriatric use", "use in elderly", "use in geriatric patients", "geriatric", "elderly", "older patients"],
+    "renal_impairment": ["renal impairment", "patients with renal impairment", "renal insufficiency"],
+    "hepatic_impairment": ["hepatic impairment", "patients with hepatic impairment", "hepatic insufficiency"],
+    "dialysis": ["dialysis", "hemodialysis"],
+    "pharmacogenomics": ["pharmacogenomics", "pharmacogenomic", "genetics"]
 }
 
 # normalize_section_title_helper is a backward-compatible alias for the shared utility
@@ -44,6 +67,42 @@ def _resolve_raw_section(metadata: dict) -> str:
         if val and str(val).strip():
             return str(val).strip()
     return ""
+
+def _build_db_filters(query, drug, detected_sections) -> dict:
+    """
+    Construct Qdrant payload filters supporting drug_name, canonical_section, source, and document_type.
+    """
+    db_filters = {}
+    
+    # 1. Map drug name/drug
+    if drug:
+        db_filters["drug_name"] = drug
+        db_filters["drug"] = drug
+        
+    # 2. Map canonical_section/section
+    section_filter_val = None
+    if query.filters:
+        section_filter_val = query.filters.get("canonical_section") or query.filters.get("section")
+    if not section_filter_val and detected_sections:
+        section_filter_val = detected_sections
+        
+    if section_filter_val:
+        if not isinstance(section_filter_val, list):
+            section_filter_val = [section_filter_val]
+        # Include both canonical_section and section for compatibility
+        db_filters["canonical_section"] = section_filter_val
+        db_filters["section"] = section_filter_val
+
+    # 3. Map source
+    if query.filters and "source" in query.filters:
+        db_filters["source"] = query.filters["source"]
+        
+    # 4. Map document_type
+    if query.filters and "document_type" in query.filters:
+        db_filters["document_type"] = query.filters["document_type"]
+        db_filters["category"] = query.filters["document_type"]
+        
+    return db_filters
 
 def safe_log_str(s: str) -> str:
     if not isinstance(s, str):
@@ -178,6 +237,29 @@ class ProcessClinicalQueryUseCase:
                         detected_sections.append(canonical_sec)
                         break
         detected_sections = list(set(detected_sections))
+
+        # Expand detected sections to cover related canonical keys in their clinical categories
+        def expand_sections(detected: list[str]) -> list[str]:
+            expanded = set(detected)
+            groups = {
+                "warnings": ["warnings", "warnings_and_precautions", "boxed_warning", "precautions"],
+                "warnings_and_precautions": ["warnings", "warnings_and_precautions", "boxed_warning", "precautions"],
+                "precautions": ["warnings", "warnings_and_precautions", "boxed_warning", "precautions"],
+                "boxed_warning": ["warnings", "warnings_and_precautions", "boxed_warning", "precautions"],
+                "drug_interactions": ["drug_interactions", "alcohol_interactions", "food_interactions", "cyp_interactions", "laboratory_interactions", "monitoring"],
+                "dosage_and_administration": ["dosage_and_administration", "administration", "dosage_forms", "strengths", "maximum_dose", "loading_dose", "maintenance_dose", "renal_dose", "hepatic_dose", "dose_adjustment"],
+                "dosage": ["dosage_and_administration", "administration", "dosage_forms", "strengths", "maximum_dose", "loading_dose", "maintenance_dose", "renal_dose", "hepatic_dose", "dose_adjustment"],
+                "pregnancy": ["pregnancy", "lactation"],
+                "lactation": ["pregnancy", "lactation"],
+                "renal_impairment": ["renal_impairment", "renal_dose", "dialysis"],
+                "hepatic_impairment": ["hepatic_impairment", "hepatic_dose"]
+            }
+            for item in detected:
+                if item in groups:
+                    expanded.update(groups[item])
+            return list(expanded)
+            
+        detected_sections = expand_sections(detected_sections)
         
         logger.info(
             "section_detection",
@@ -211,8 +293,7 @@ class ProcessClinicalQueryUseCase:
                     dense_vec = self.embedding.embed_query(q)
                     sparse_vec = self.embedding.embed_sparse(q)
                     
-                    db_filters = dict(query.filters) if query.filters else {}
-                    db_filters["drug"] = drug
+                    db_filters = _build_db_filters(query, drug, detected_sections)
                     
                     if sparse_vec:
                         docs = self.vector_db.hybrid_search(
@@ -296,9 +377,7 @@ class ProcessClinicalQueryUseCase:
                 dense_vec = self.embedding.embed_query(q)
                 sparse_vec = self.embedding.embed_sparse(q)
                 
-                db_filters = dict(query.filters) if query.filters else {}
-                if resolved_drug:
-                    db_filters["drug"] = resolved_drug
+                db_filters = _build_db_filters(query, resolved_drug, detected_sections)
                 
                 if sparse_vec:
                     docs = self.vector_db.hybrid_search(
@@ -436,17 +515,21 @@ class ProcessClinicalQueryUseCase:
         citation_counter = 0
         uuid_to_citation_id = {}
         
-        # Organize docs by (drug, normalized_section)
-        docs_by_drug_section: Dict[str, Dict[str, list]] = {}
+        # Organize docs by (drug, clinical_category)
+        from app.section_utils import get_clinical_category
+        
+        docs_by_drug_category: Dict[str, Dict[str, list]] = {}
         for doc in final_docs:
             drug = doc.metadata.get('drug_name', doc.metadata.get('drug', ''))
             raw_sec = _resolve_raw_section(doc.metadata)
             norm_sec = normalize_section(raw_sec)
-            if drug not in docs_by_drug_section:
-                docs_by_drug_section[drug] = {}
-            if norm_sec not in docs_by_drug_section[drug]:
-                docs_by_drug_section[drug][norm_sec] = []
-            docs_by_drug_section[drug][norm_sec].append(doc)
+            clinical_cat = doc.metadata.get('clinical_category', get_clinical_category(norm_sec))
+            
+            if drug not in docs_by_drug_category:
+                docs_by_drug_category[drug] = {}
+            if clinical_cat not in docs_by_drug_category[drug]:
+                docs_by_drug_category[drug][clinical_cat] = []
+            docs_by_drug_category[drug][clinical_cat].append(doc)
         
         # Determine the list of drugs (preserve order from resolved_drug or from docs)
         if resolved_drug and isinstance(resolved_drug, list):
@@ -454,21 +537,23 @@ class ProcessClinicalQueryUseCase:
         elif resolved_drug:
             drug_order = [resolved_drug]
         else:
-            drug_order = list(docs_by_drug_section.keys())
+            drug_order = list(docs_by_drug_category.keys())
         
-        # Log per-drug per-section chunk counts
+        # Log per-drug per-category chunk counts
         coverage_log = {}
+        detected_categories = list(set(get_clinical_category(sec) for sec in (detected_sections if detected_sections else [])))
         for drug in drug_order:
             coverage_log[drug] = {}
-            for sec in (detected_sections if detected_sections else ["_all"]):
-                count = len(docs_by_drug_section.get(drug, {}).get(sec, []))
-                coverage_log[drug][sec] = count
+            for cat in (detected_categories if detected_categories else ["_all"]):
+                count = len(docs_by_drug_category.get(drug, {}).get(cat, []))
+                coverage_log[drug][cat] = count
         
         logger.info(
             "retrieval_coverage",
             drugs=drug_order,
             detected_sections=detected_sections,
-            per_drug_per_section=coverage_log
+            detected_categories=detected_categories,
+            per_drug_per_category=coverage_log
         )
         
         # Build structured context string (with strict size limit to stay under Groq rate limits)
@@ -484,24 +569,24 @@ class ProcessClinicalQueryUseCase:
             drug_str += f"DRUG: {drug}\n"
             drug_str += f"{'='*60}\n\n"
             
-            sections_to_render = detected_sections if detected_sections else list(docs_by_drug_section.get(drug, {}).keys())
+            categories_to_render = detected_categories if detected_categories else list(docs_by_drug_category.get(drug, {}).keys())
             
-            for sec in sections_to_render:
+            for cat in categories_to_render:
                 if len(context_str) + len(drug_str) >= max_char_limit:
                     break
                     
-                sec_str = ""
-                sec_str += f"--- Section: {sec} ---\n\n"
+                cat_str = ""
+                cat_str += f"--- Category: {cat} ---\n\n"
                 
-                sec_docs = docs_by_drug_section.get(drug, {}).get(sec, [])
+                cat_docs = docs_by_drug_category.get(drug, {}).get(cat, [])
                 
-                if not sec_docs:
-                    sec_str += "NO DOCUMENTS AVAILABLE FOR THIS SECTION.\n\n"
-                    drug_str += sec_str
+                if not cat_docs:
+                    cat_str += "NO DOCUMENTS AVAILABLE FOR THIS CATEGORY.\n\n"
+                    drug_str += cat_str
                     continue
                 
-                for doc in sec_docs:
-                    if len(context_str) + len(drug_str) + len(sec_str) >= max_char_limit:
+                for doc in cat_docs:
+                    if len(context_str) + len(drug_str) + len(cat_str) >= max_char_limit:
                         break
                         
                     # Re-use existing citation ID if chunk UUID has been cited before
@@ -521,13 +606,14 @@ class ProcessClinicalQueryUseCase:
                     doc_str += f"DOCUMENT {citation_id}\n"
                     doc_str += f"Citation Number: [{citation_id}]\n"
                     doc_str += f"Source: {doc.source}\n"
+                    doc_str += f"Section: {section_raw}\n"
                     doc_str += f"Facts:\n"
                     for line in cleaned_content.split('\n'):
                         if line.strip():
                             doc_str += f"{line}\n"
                     doc_str += f"\n"
                     
-                    sec_str += doc_str
+                    cat_str += doc_str
                     
                     if is_new_citation:
                         # Add to citation map
@@ -553,7 +639,7 @@ class ProcessClinicalQueryUseCase:
                             count=0
                         ))
                     
-                drug_str += sec_str
+                drug_str += cat_str
             
             context_str += drug_str + "\n"
             
@@ -601,12 +687,12 @@ CRITICAL RULES:
    Do NOT invent drug interactions, contraindications, or warnings.
 
 3. SECTION BOUNDARIES ARE ABSOLUTE.
-   The context is organized by Drug and Section.
-   - If a section says "NO DOCUMENTS AVAILABLE FOR THIS SECTION", you MUST respond with exactly:
+   The context is organized by Drug and Clinical Category / Section.
+   - If a category or section says "NO DOCUMENTS AVAILABLE", you MUST respond with exactly:
      Not found in available sources.
    - NEVER use a "drug interactions" document to answer a "Contraindications" question.
    - NEVER use a "warnings" document to answer a "Drug Interactions" question.
-   - Each section's answer must come ONLY from documents under that same section heading.
+   - Each section's answer must come ONLY from documents under that same category or section.
 
 4. NEVER MIX DRUGS.
    Facts about Metformin must NEVER appear under Warfarin's section, and vice versa.

@@ -1,19 +1,18 @@
 # MedRef Retrieval Report
-Generated at: 2026-07-10T09:04:24.003912Z
+Generated at: 2026-07-14T16:58:18.134113Z
 
 ## Overall Corpus Statistics
-*   **Total Unique Drugs:** 106
-*   **Total Points/Chunks in Qdrant:** 6178
+*   **Total Unique Drugs:** 105
+*   **Total Points/Chunks in Qdrant:** 5935
 *   **Active Vector Dimensions:** 384
-*   **Average Chunk Size (Characters):** 1527.9
-*   **Total Duplicate Chunks Found:** 187
-*   **Missing Sections Count (Cumulative):** 396
+*   **Average Chunk Size (Characters):** 1418.9
+*   **Total Duplicate Chunks Found:** 254
+*   **Missing Sections Count (Cumulative):** 1470
 
 ## Source Distribution
 | Source | Chunk Count | Percentage |
 | :--- | :---: | :---: |
-| DailyMed | 6125 | 99.1% |
-| openFDA | 43 | 0.7% |
+| DailyMed | 5925 | 99.8% |
 | DailyMed - Lisinopril Warning | 1 | 0.0% |
 | DailyMed - Atorvastatin Contraindications | 1 | 0.0% |
 | DailyMed - Amoxicillin Contraindications | 1 | 0.0% |
@@ -26,1241 +25,1020 @@ Generated at: 2026-07-10T09:04:24.003912Z
 ## Top 20 Drugs by Chunk Count
 | Drug Name | Sections Present | Chunk Count |
 | :--- | :---: | :---: |
-| Salmeterol | 72 | 176 |
-| Levofloxacin | 87 | 160 |
-| Moxifloxacin | 76 | 145 |
-| Duloxetine | 91 | 142 |
-| Lansoprazole | 70 | 135 |
-| Tacrolimus | 76 | 127 |
-| Clarithromycin | 62 | 116 |
-| Rabeprazole | 60 | 113 |
-| Formoterol | 64 | 109 |
-| Bupropion | 59 | 108 |
-| Rosuvastatin | 54 | 101 |
-| Pantoprazole | 56 | 100 |
-| Linezolid | 53 | 97 |
-| Oseltamivir | 54 | 95 |
-| Valacyclovir | 64 | 95 |
-| Azithromycin | 57 | 94 |
-| Zolpidem | 60 | 94 |
-| Warfarin | 61 | 91 |
-| Losartan | 55 | 90 |
-| Citalopram | 58 | 89 |
+| Salmeterol | 59 | 170 |
+| Warfarin | 89 | 156 |
+| Levofloxacin | 74 | 150 |
+| Atorvastatin | 67 | 147 |
+| Lansoprazole | 60 | 129 |
+| Duloxetine | 74 | 124 |
+| Moxifloxacin | 61 | 120 |
+| Metformin | 64 | 119 |
+| Tacrolimus | 60 | 110 |
+| Clarithromycin | 52 | 108 |
+| Formoterol | 55 | 102 |
+| Rabeprazole | 49 | 99 |
+| Bupropion | 52 | 98 |
+| Valacyclovir | 59 | 96 |
+| Linezolid | 51 | 93 |
+| Pantoprazole | 45 | 85 |
+| Oseltamivir | 45 | 84 |
+| Rosuvastatin | 42 | 81 |
+| Azithromycin | 44 | 79 |
+| Zolpidem | 50 | 79 |
 
 ## Section Distribution
 | Section Title | Total Chunks | Percentage |
 | :--- | :---: | :---: |
-| Clinical Pharmacology | 369 | 6.0% |
-| Clinical Studies | 243 | 3.9% |
-| Warnings | 240 | 3.9% |
-| Dosage | 210 | 3.4% |
-| Use In Specific Populations | 209 | 3.4% |
-| Pharmacokinetics | 199 | 3.2% |
-| 12.3 Pharmacokinetics | 180 | 2.9% |
-| Drug Interactions | 179 | 2.9% |
-| Adverse Reactions | 142 | 2.3% |
-| Information For Patients | 132 | 2.1% |
-| Spl Medguide | 128 | 2.1% |
-| Precautions | 127 | 2.1% |
-| Pregnancy | 127 | 2.1% |
-| Indications | 112 | 1.8% |
-| Description | 101 | 1.6% |
-| Patient Counseling Information | 101 | 1.6% |
-| 8.1 Pregnancy | 96 | 1.6% |
-| How Supplied | 95 | 1.5% |
-| Pediatric Use | 93 | 1.5% |
-| Carcinogenesis And Mutagenesis And Impairment Of Fertility | 89 | 1.4% |
-| Overdosage | 87 | 1.4% |
-| Lactation | 85 | 1.4% |
-| Spl Patient Package Insert | 83 | 1.3% |
-| Geriatric Use | 82 | 1.3% |
-| 6.1 Clinical Trials Experience | 73 | 1.2% |
-| Nonclinical Toxicology | 73 | 1.2% |
-| Spl Unclassified Section | 65 | 1.1% |
-| Contraindications | 65 | 1.1% |
-| Pharmacodynamics | 65 | 1.1% |
-| Medication Guide | 63 | 1.0% |
-| 11 Description | 56 | 0.9% |
-| Dosage Forms And Strengths | 54 | 0.9% |
-| Mechanism Of Action | 50 | 0.8% |
-| 12.2 Pharmacodynamics | 44 | 0.7% |
-| 16 How Supplied/Storage And Handling | 43 | 0.7% |
-| 12.1 Mechanism Of Action | 41 | 0.7% |
-| Patient Information | 39 | 0.6% |
-| 8.2 Lactation | 37 | 0.6% |
-| General Precautions | 36 | 0.6% |
-| 3 Dosage Forms And Strengths | 30 | 0.5% |
-| 6.2 Postmarketing Experience | 28 | 0.5% |
-| 14 Clinical Studies | 27 | 0.4% |
-| Animal Pharmacology And Or Toxicology | 22 | 0.4% |
-| Microbiology | 21 | 0.3% |
-| 8.6 Renal Impairment | 17 | 0.3% |
-| Drug Abuse And Dependence | 17 | 0.3% |
-| Labor And Delivery | 16 | 0.3% |
-| 12.4 Microbiology | 16 | 0.3% |
-| Teratogenic Effects | 16 | 0.3% |
-| References | 15 | 0.2% |
-| General | 15 | 0.2% |
-| 8.7 Hepatic Impairment | 14 | 0.2% |
-| Principal Display Panel | 13 | 0.2% |
-| Laboratory Tests | 12 | 0.2% |
-| 14.1 Asthma | 11 | 0.2% |
-| 13.2 Animal Toxicology And/Or Pharmacology | 10 | 0.2% |
+| clinical pharmacology | 403 | 6.8% |
+| warnings | 267 | 4.5% |
+| clinical studies | 267 | 4.5% |
+| pharmacokinetics | 260 | 4.4% |
+| use in specific populations | 232 | 3.9% |
+| dosage | 227 | 3.8% |
+| drug interactions | 193 | 3.3% |
+| pregnancy | 177 | 3.0% |
+| adverse reactions | 150 | 2.5% |
+| spl medguide | 144 | 2.4% |
+| patient counseling information | 141 | 2.4% |
+| information for patients | 139 | 2.3% |
+| indications | 135 | 2.3% |
+| precautions | 130 | 2.2% |
+| storage | 108 | 1.8% |
+| description | 108 | 1.8% |
+| lactation | 102 | 1.7% |
+| pediatric use | 98 | 1.7% |
+| overdosage | 91 | 1.5% |
+| carcinogenesis and mutagenesis and impairment of fertility | 90 | 1.5% |
+| clinical trials experience | 88 | 1.5% |
+| geriatric use | 82 | 1.4% |
+| pharmacodynamics | 81 | 1.4% |
+| nonclinical toxicology | 78 | 1.3% |
+| contraindications | 78 | 1.3% |
+| spl unclassified section | 75 | 1.3% |
+| mechanism of action | 56 | 0.9% |
+| postmarketing experience | 37 | 0.6% |
+| general precautions | 35 | 0.6% |
+| microbiology | 31 | 0.5% |
+| hepatic impairment | 31 | 0.5% |
+| renal impairment | 31 | 0.5% |
+| animal pharmacology and or toxicology | 22 | 0.4% |
+| asthma | 22 | 0.4% |
+| drug abuse and dependence | 21 | 0.4% |
+| labor and delivery | 17 | 0.3% |
+| teratogenic effects | 17 | 0.3% |
+| chronic obstructive pulmonary disease | 17 | 0.3% |
+| general | 16 | 0.3% |
+| hypertension | 16 | 0.3% |
+| clinical_pharmacology | 15 | 0.3% |
+| references | 15 | 0.3% |
+| use_in_specific_populations | 13 | 0.2% |
+| principal display panel | 13 | 0.2% |
+| laboratory tests | 13 | 0.2% |
+| animal toxicology and/or pharmacology | 12 | 0.2% |
+| instructions for use | 12 | 0.2% |
+| dosage_and_administration | 10 | 0.2% |
 | Unknown | 10 | 0.2% |
-| Instructions For Use | 10 | 0.2% |
-| 8.6 Hepatic Impairment | 9 | 0.1% |
-| Spl Medguide Section | 9 | 0.1% |
-| Storage | 8 | 0.1% |
-| 14.1 Chronic Obstructive Pulmonary Disease | 8 | 0.1% |
-| Abuse | 8 | 0.1% |
-| Pharmacokinetics And Drug Metabolism | 8 | 0.1% |
-| 14.2 Asthma | 8 | 0.1% |
-| Dependence | 7 | 0.1% |
-| 9.2 Abuse | 7 | 0.1% |
-| Spl Patient Package Insert Section | 6 | 0.1% |
-| 8.7 Renal Impairment | 6 | 0.1% |
-| 5.1 Serious Asthma-Related Events – Hospitalizations, Intubations, Death | 6 | 0.1% |
-| 14.1 Hypertension | 6 | 0.1% |
-| Stop Use | 6 | 0.1% |
-| 5.7 Transferring Patients From Systemic Corticosteroid Therapy | 6 | 0.1% |
-| 14.1 Adults | 5 | 0.1% |
-| 14.2 Pediatric Patients | 5 | 0.1% |
-| 1.1 Hypertension | 5 | 0.1% |
-| 13.1 Carcinogenesis, Mutagenesis, Impairment Of Fertility | 5 | 0.1% |
-| Do Not Use | 5 | 0.1% |
-| 2.4 Dose
-Modification For Coadministration Of Interacting Drugs | 5 | 0.1% |
-| 6.1 Clinical Studies Experience | 5 | 0.1% |
-| Patient Medication Information | 5 | 0.1% |
-| Package/Label Principal Display Panel | 5 | 0.1% |
-| 14.3 | 5 | 0.1% |
-| Ask Doctor | 5 | 0.1% |
-| Risks | 5 | 0.1% |
-| 14.2 Chronic Obstructive Pulmonary Disease | 5 | 0.1% |
-| 12.5 Pharmacogenomics | 5 | 0.1% |
-| 14.1 Mycobacterial Infections | 5 | 0.1% |
-| 14.1     Adult Heart Failure | 4 | 0.1% |
-| 6.2 Post-Marketing Experience | 4 | 0.1% |
-| Drug And Or Laboratory Test Interactions | 4 | 0.1% |
-| Carcinogenesis, Mutagenesis, Impairment Of Fertility | 4 | 0.1% |
-| 2.1 Hypertension | 4 | 0.1% |
-| 14.5 Chronic Musculoskeletal Pain | 4 | 0.1% |
-| Effect Of Sporanox | 4 | 0.1% |
-| 5.13 Reduction In Bone Mineral Density | 4 | 0.1% |
-| Pharmacodynamics And Clinical Effects | 4 | 0.1% |
-| 5.9 Drug Interactions With Strong Cytochrome P450 3A4 Inhibitors | 3 | 0.0% |
-| 5.18 Hypokalemia And Hyperglycemia | 3 | 0.0% |
-| 8.3 Females And Males Of Reproductive Potential | 3 | 0.0% |
-| 5.1 Myopathy And Rhabdomyolysis | 3 | 0.0% |
-| Hepatotoxicity | 3 | 0.0% |
-| 7.1 Drug Interactions That May Increase The Risk Of Myopathy And Rhabdomyolysis With Atorvastatin Calcium | 3 | 0.0% |
-| 5.5 Pneumonia | 3 | 0.0% |
-| 14.1 Prevention Of Chemotherapy-Induced Nausea And Vomiting | 3 | 0.0% |
-| Stop Use And Ask A Doctor If | 3 | 0.0% |
-| 14.3 Allergic Rhinitis (Seasonal And Perennial) | 3 | 0.0% |
-| 5.3 Serotonin Syndrome | 3 | 0.0% |
-| 5.17 Coexisting Conditions | 3 | 0.0% |
-| 5.8 Hypercorticism And Adrenal Suppression | 3 | 0.0% |
-| 5.1 Suicidal Thoughts And Behaviors In Children, Adolescents, And Young Adults | 3 | 0.0% |
-| 5.2 Immune-Mediated Necrotizing Myopathy | 3 | 0.0% |
-| 14.2 Hypertensive Patients With Left Ventricular Hypertrophy | 3 | 0.0% |
-| 8.1 Pregnancy | 3 | 0.0% |
-| 6.3 Postmarketing Experience | 3 | 0.0% |
-| 14.3 Nephropathy In Type 2 Diabetic Patients | 3 | 0.0% |
-| 5.14 Effect On Growth | 3 | 0.0% |
-| 5.1 Fetal Toxicity | 3 | 0.0% |
-| 6.1   Clinical Trials Experience | 3 | 0.0% |
-| 10.1 Signs And Symptoms | 3 | 0.0% |
-| 14.3 Community Acquired Pneumonia | 3 | 0.0% |
-| 17 Patient Counseling Information | 3 | 0.0% |
-| 7.1 Inhibitors Of Cytochrome P450 3A4 | 3 | 0.0% |
-| 5.1 Suicidal Thoughts And Behaviors In Children, Adolescents And Young Adults | 3 | 0.0% |
-| 12.4   Microbiology | 3 | 0.0% |
-| 8.5 Geriatric Use | 3 | 0.0% |
-| 16.1 How Supplied | 3 | 0.0% |
-| 7.2 Warfarin | 3 | 0.0% |
-| 5.2 Deterioration Of Disease And Acute Episodes | 3 | 0.0% |
-| 7.1 Drug Interactions That Increase The Risk Of Myopathy And Rhabdomyolysis With Rosuvastatin Tablets | 3 | 0.0% |
-| 14.2 Generalized Anxiety Disorder | 3 | 0.0% |
-| 5.1 Lactic Acidosis | 3 | 0.0% |
-| 14.2   Prophylaxis Of Influenza | 3 | 0.0% |
-| 6.5 Adverse Reactions Occurring At An Incidence Of 2% Or More Among Duloxetine-Treated Patients In Adult Placebo-Controlled Trials | 3 | 0.0% |
-| 14.1   Treatment Of Influenza | 3 | 0.0% |
-| 15 References | 2 | 0.0% |
-| Clinical Pharmacology: | 2 | 0.0% |
-| 7.6 Beta-Adrenergic Receptor Blocking Agents | 2 | 0.0% |
-| 8.4 Pediatric Use | 2 | 0.0% |
-| 8.7   Hepatic Impairment | 2 | 0.0% |
-| Drug/Laboratory Test Interactions | 2 | 0.0% |
-| Recent Major Changes | 2 | 0.0% |
-| 14.2 Community-Acquired Pneumonia: 7 To 14 Day Treatment Regimen | 2 | 0.0% |
-| 5.2 Qt-Prolongation And Torsade De Pointes | 2 | 0.0% |
-| 2.3   Recommended Dosage For Prophylaxis Of Influenza | 2 | 0.0% |
-| 2.3 Initial And Maintenance Dosing | 2 | 0.0% |
-| Cardiovascular Effects | 2 | 0.0% |
-| Distribution | 2 | 0.0% |
-| 14.1 Heart Failure | 2 | 0.0% |
-| 14.2 Metformin Hydrochloride Extended-Release Tablets | 2 | 0.0% |
-| Suicidal Behavior And Ideation: | 2 | 0.0% |
-| When Using | 2 | 0.0% |
-| Hepatic Impairment | 2 | 0.0% |
-| 7.4 Non-Potassium Sparing Diuretics | 2 | 0.0% |
-| 14.1 Major Depressive Disorder | 2 | 0.0% |
-| 5.3 Avoid Excessive Use Of Breztri Aerosphere And Avoid Use With Other Long-Acting Beta | 2 | 0.0% |
-| 2.4 Recommended Dosage In Patients With Renal Impairment | 2 | 0.0% |
-| 3 Dosage Forms And Strengths | 2 | 0.0% |
-| 6.11 Adverse Reactions Observed In Children And Adolescent Placebo-Controlled Clinical Trials | 2 | 0.0% |
-| 14.2 Exercise-Induced Bronchoconstriction (Eib) | 2 | 0.0% |
-| 8.6   Renal Impairment | 2 | 0.0% |
-| Reducing The Risk Of Gastric Ulcers Caused By Nonsteroidal Anti-Inflammatory Drugs (Nsaids) | 2 | 0.0% |
-| 5.2 Qt Prolongation | 2 | 0.0% |
-| 5.1 Presence Of Gastric Malignancy | 2 | 0.0% |
-| 2.1 Asthma | 2 | 0.0% |
-| 5.7 Cyanocobalamin (Vitamin B-12) Deficiency | 2 | 0.0% |
-| 2.5 Dose
-Modification In Renal Impairment | 2 | 0.0% |
-| 14.1 Erosive Esophagitis (Ee) Associated With Gastroesophageal Reflux Disease (Gerd) | 2 | 0.0% |
-| 14.1 Bronchospasm Associated With Asthma | 2 | 0.0% |
-| 14.1 Metformin Hydrochloride Tablets | 2 | 0.0% |
-| 5.1 Disabling And Potentially Irreversible Serious Adverse Reactions Including Tendinitis And Tendon Rupture, Peripheral Neuropathy, And Central Nervous System Effects | 2 | 0.0% |
-| Treatment Of Hypertriglyceridemia | 2 | 0.0% |
-| 2.1 Recommended Dosage For Symptomatic, Documented Gastroesophageal Reflux In Adults Who Fail Conventional Therapy | 2 | 0.0% |
-| 14.2 Reduction In Risk Of Myocardial Infarction, Stroke, And Death From Cardiovascular Causes | 2 | 0.0% |
-| 5.4 Oropharyngeal Candidiasis | 2 | 0.0% |
-| 14.9 Inhalational Anthrax (Post-Exposure) | 2 | 0.0% |
-| 14.3 Heart Failure | 2 | 0.0% |
-| 14.5 Complicated Skin And Skin Structure Infections | 2 | 0.0% |
-| 14.3 Myocardial Infarction | 2 | 0.0% |
-| 5.6 | 2 | 0.0% |
-| 5.4 Bone Fracture | 2 | 0.0% |
-| Absorption | 2 | 0.0% |
-| 14.1 Irbesartan Monotherapy | 2 | 0.0% |
-| Usage In Pregnancy | 2 | 0.0% |
-| Heart Failure | 2 | 0.0% |
-| 5.6 Immunosuppression And Risk Of Infections | 2 | 0.0% |
-| 6.1     Clinical Trials Experience | 2 | 0.0% |
-| 7.3 Antidiabetic Agents | 2 | 0.0% |
-| 5.6 Cutaneous And Systemic Lupus Erythematosus | 2 | 0.0% |
-| 14.8 Erosive Esophagitis | 2 | 0.0% |
-| 14.2 Early Lyme Disease | 2 | 0.0% |
-| Renal Impairment | 2 | 0.0% |
-| Keep Out Of Reach Of Children | 2 | 0.0% |
-| 2.2 Recommended Dosage For Acute And Recurrent Diabetic Gastroparesis In Adults | 2 | 0.0% |
-| 5.11 Hypersensitivity Reactions Including Anaphylaxis | 2 | 0.0% |
-| 2.2 Dosage Recommendations For Adult Kidney, Liver, Or Heart Transplant Patients – Capsules And Injection | 2 | 0.0% |
-| 12.2     Pharmacodynamics | 2 | 0.0% |
-| Gastrointestinal | 2 | 0.0% |
-| 7.5 Monoamine Oxidase Inhibitors, Tricyclic Antidepressants, Qtc Prolonging Drugs | 2 | 0.0% |
-| 14.3 Acute Myocardial Infarction | 2 | 0.0% |
-| 7.2 Adrenergic Drugs | 2 | 0.0% |
-| 5.9 Risk Of Aortic Aneurysm And Dissection | 2 | 0.0% |
-| 6.10 Other Adverse Reactions Observed During The Premarketing And Postmarketing Clinical Trial Evaluation Of Duloxetine In Adults | 2 | 0.0% |
-| 14.1 Eradication Of | 2 | 0.0% |
-| 3 Dosage Forms & Strengths | 2 | 0.0% |
-| 2.2 Recommended Dosage In Adult Patients | 2 | 0.0% |
-| 14.2 Eradication Of H. Pylori To Reduce The Risk Of Duodenal Ulcer Recurrence | 2 | 0.0% |
-| 14.10 Plague | 2 | 0.0% |
-| 6.3 Laboratory Abnormalities | 2 | 0.0% |
-| Inactive Ingredients | 2 | 0.0% |
-| Pediatric Patients | 2 | 0.0% |
-| 6.1 Clinical Trials Experience | 2 | 0.0% |
-| 5.5 Exacerbation Of Myasthenia Gravis | 2 | 0.0% |
-| 5.8 Hypersensitivity Reactions | 2 | 0.0% |
-| 5.12 Cardiovascular Effects | 2 | 0.0% |
-| 5.15 Glaucoma And Cataracts, Worsening Of Narrow-Angle Glaucoma | 2 | 0.0% |
-| 5.3 Hepatic Dysfunction | 2 | 0.0% |
-| 8.3 Nursing Mothers | 2 | 0.0% |
-| 1.3 Limitations Of Use | 2 | 0.0% |
-| 5.9 Interaction With Methotrexate | 2 | 0.0% |
-| 14.1 | 2 | 0.0% |
-| 2.3 Recommended Dosage For Gout | 2 | 0.0% |
-| 2.1 Dosage Of Levofloxacin Tablets In Adult Patients With Creatinine Clearance ≥ 50 Ml/Minute | 2 | 0.0% |
-| 7.1 Drugs Having Clinically Important Interactions With Alprazolam | 2 | 0.0% |
-| 2.1 Recommended Dosage | 2 | 0.0% |
-| 1.10 Usage | 2 | 0.0% |
-| 2.1 Adults | 2 | 0.0% |
-| 5.10 Paradoxical Bronchospasm | 2 | 0.0% |
-| 5.10 Hypoglycemia | 2 | 0.0% |
-| Pharmacokinetics And Metabolism | 2 | 0.0% |
-| 7.1 Drug Interactions Thatincrease The Risk Of Myopathy And Rhabdomyolysis With Pravastatin | 2 | 0.0% |
-| 12.3     Pharmacokinetics | 2 | 0.0% |
-| Geriatric Patients | 2 | 0.0% |
-| 6.1	Clinical Trials Experience In Chronic Obstructive Pulmonary Disease | 2 | 0.0% |
-| 7.2 Drugs Known To Have Clinically Important Drug Interactions With Allopurinol Tablets | 2 | 0.0% |
-| 6.2 Clinical Trials Experience In Chronic Obstructive Pulmonary Disease | 2 | 0.0% |
-| 7.1 Diuretics | 2 | 0.0% |
-| 5.3 Dependence And Withdrawal Reactions | 2 | 0.0% |
-| 2.2 Recommended Target Inr Ranges And Durations For Individual Indications | 2 | 0.0% |
-| 6.1 Clinical Trial Experience | 2 | 0.0% |
-| 14.1 Nosocomial Pneumonia | 2 | 0.0% |
-| 7.2 Effects Of Other Drugs On Tacrolimus | 2 | 0.0% |
-| 14.1 Diarrhea Associated With | 2 | 0.0% |
-| Amebiasis | 2 | 0.0% |
-| Fetal Toxicity | 2 | 0.0% |
-| Metabolism | 2 | 0.0% |
-| 6.1 Clinical Trials Experience In Asthma | 2 | 0.0% |
-| Effect Of Other Drugs On Sporanox | 2 | 0.0% |
-| 5.3 Nephrotoxicity | 2 | 0.0% |
-| 5.4 Serious Adverse Reactions Due To Concomitant Use With Other Drugs | 2 | 0.0% |
-| Inactive Ingredient | 2 | 0.0% |
-| 5.10 Fundic Gland Polyps | 2 | 0.0% |
-| 14.4 Healing Of Duodenal Ulcers In Adults | 2 | 0.0% |
-| 14.1 Controlled Clinical Trials | 2 | 0.0% |
-| Other Considerations | 2 | 0.0% |
-| 5.2 Hepatotoxicity | 2 | 0.0% |
-| 8.1     Pregnancy | 2 | 0.0% |
-| 5.1 Anaphylactoid And Possibly Related Reactions | 2 | 0.0% |
-| Postmarketing Experience | 2 | 0.0% |
-| 5.1 Anaphylactic Reactions | 2 | 0.0% |
-| Ask A Doctor Before Use If You Have | 2 | 0.0% |
-| 5.4 Central Nervous System Effects | 2 | 0.0% |
-| 14.7 Complicated Urinary Tract Infections And Acute Pyelonephritis: 5-Day Treatment Regimen | 2 | 0.0% |
-| 5.3 Peripheral Neuropathy | 2 | 0.0% |
-| 14.5 Helicobacter Pylori Eradication In Patients With Peptic Ulcer Disease Or Symptomatic Non-Ulcer Disease In Adults | 2 | 0.0% |
-| 6.2   Postmarketing Experience | 2 | 0.0% |
-| 5.5 Severe Cutaneous Adverse Reactions | 2 | 0.0% |
-| 5.1 Hypersensitivity Reactions | 2 | 0.0% |
-| 14.1 Healing Of Erosive Or Ulcerative Gerd In Adults | 2 | 0.0% |
-| 7.4 Dual Blockade Of The Renin-Angiotensin System (Ras) | 2 | 0.0% |
-| 5.6 Development Of Drug-Resistant Bacteria | 2 | 0.0% |
-| Teratogenic Effects: Pregnancy Category C | 2 | 0.0% |
-| Drug-Drug Interactions | 2 | 0.0% |
-| 2.1 Important Administration Instructions | 2 | 0.0% |
-| 5.16 Worsening Of Urinary Retention | 2 | 0.0% |
-| 7.5 Lithium | 2 | 0.0% |
-| 1.3 Complicated Skin And Skin Structure Infections | 2 | 0.0% |
-| 2.5 Dosing In Renal Impairment For Adults And Pediatric Patients Aged 3 Months And Older And Weight Greater Than 40 Kg | 1 | 0.0% |
-| 5.3 Not Interchangeable With Extended-Release Tacrolimus Products - Medication Errors | 1 | 0.0% |
-| 2.2 Dose Adjustment In Patients With Hepatic Impairment | 1 | 0.0% |
-| 7.1 Beta-Adrenergic Receptor Blocking Agents | 1 | 0.0% |
-| 7.2 Effects Of Metoclopramide On Other Drugs | 1 | 0.0% |
-| 7.8 Probenecid And Cimetidine | 1 | 0.0% |
-| 2.4 Monitoring To Achieve Optimal Anticoagulation | 1 | 0.0% |
-| 2.6 Dose
-Modification In Hepatic Impairment | 1 | 0.0% |
-| 7.11 Antacids And Kaolin | 1 | 0.0% |
-| 2.6 Dosage Adjustment In Patients With Renal Impairment | 1 | 0.0% |
-| 7.2 Cyp450 Interactions | 1 | 0.0% |
-| 2.3 Reduction Of Mortality In Acute Myocardial Infarction | 1 | 0.0% |
-| 8.8 Asian Patients | 1 | 0.0% |
-| 14.3 Community-Acquired Pneumonia: 5-Day Treatment Regimen | 1 | 0.0% |
-| Adverse Events Reported In Toenail Onychomycosis Clinical Trials | 1 | 0.0% |
-| 2.1 Dosage In Adult Patients | 1 | 0.0% |
-| 5.3	Paradoxical Bronchospasm | 1 | 0.0% |
-| 2.3 Recommended Dosage In Pediatric Patients | 1 | 0.0% |
-| 5.4 Severe Cutaneous Adverse Reactions | 1 | 0.0% |
-| 5.6 Potential Interactions Producing Elevation Of Blood Pressure | 1 | 0.0% |
-| 2.3 Dosage Adjustment In Adults With Renal Impairment | 1 | 0.0% |
-| 2.3 Dosage Adjustments In Adult And Pediatric Patients At Least 15 Years Of Age With Renal Impairment | 1 | 0.0% |
-| Suppressive Therapy: Suppression Of Recurrent Genital Herpes In Immunocompetent Adults | 1 | 0.0% |
-| 2.5 Dosage Recommendations In Patients With Hepatic Impairment | 1 | 0.0% |
-| 5.15 Pure Red Cell Aplasia | 1 | 0.0% |
-| 2.4 Recommended Dosage For Hyperuricemia Associated With Cancer Therapy | 1 | 0.0% |
-| Bone-Marrow Depression | 1 | 0.0% |
-| 5.1	Potential For Carcinogenicity | 1 | 0.0% |
-| Hepatitis B Virus Reactivation | 1 | 0.0% |
-| Incidence Greater Than 1% | 1 | 0.0% |
-| 2.2 Recommended Pediatric Dosage By Indication | 1 | 0.0% |
-| 5.9 Withdrawal Effects | 1 | 0.0% |
-| 5.7 Hypomagnesemia | 1 | 0.0% |
-| 2.5 Dosage Modification For Patients With Hepatic Impairment | 1 | 0.0% |
-| 1. Initial Therapy | 1 | 0.0% |
-| 1.15 Usage | 1 | 0.0% |
-| 5.5 Clostridioides Difficile- Associated Diarrhea | 1 | 0.0% |
-| 5.3 Renal Function Deterioration | 1 | 0.0% |
-| 8.8 Hepatic Impairment | 1 | 0.0% |
-| 2.2   Recommended Dosage For Neoplastic Diseases | 1 | 0.0% |
-| 13.2     Animal Toxicology And/Or Pharmacology | 1 | 0.0% |
-| 1.1   Treatment Of Influenza | 1 | 0.0% |
-| 2.1 Dosage In Adults | 1 | 0.0% |
-| 5.8 Hypomagnesemia | 1 | 0.0% |
-| Treatment In Life-Threatening Situations | 1 | 0.0% |
-| Anaphylactoid Reactions During Desensitization | 1 | 0.0% |
-| 2.6 Dosage  Modifications Due To Drug Interactions | 1 | 0.0% |
-| Cardiac Disease | 1 | 0.0% |
-| Tolerance | 1 | 0.0% |
-| 7.6 Cyclosporine | 1 | 0.0% |
-| 5.11 Arthropathic Effects In Animals | 1 | 0.0% |
-| 5.2 Mesalamine-Induced Acute Intolerance Syndrome | 1 | 0.0% |
-| 5.17 Cannabidiol Drug Interactions | 1 | 0.0% |
-| 5.4  Increases In Hba1C And Fasting Serum Glucose Levels | 1 | 0.0% |
-| 5.2 Hypotension In Volume Or Salt-Depleted Patients | 1 | 0.0% |
-| Ask Doctor Or Pharmacist | 1 | 0.0% |
-| 7.3 Beta-Adrenergic Receptor Blocking Agents | 1 | 0.0% |
-| 2.7     Dose Adjustment For Severe Renal Impairment | 1 | 0.0% |
-| 7.1 Metformin | 1 | 0.0% |
-| Effects On Gastric Acid Secretion | 1 | 0.0% |
-| 1.6 Acute Otitis Media | 1 | 0.0% |
-| 5.8   Renal Toxicity | 1 | 0.0% |
-| 14.10 Pathological Hypersecretory Conditions Including Zollinger-Ellison Syndrome | 1 | 0.0% |
-| 5.4 Development Of Drug-Resistant Bacteria | 1 | 0.0% |
-| 14.4 Gastric Ulcer | 1 | 0.0% |
-| Clinical Studies: | 1 | 0.0% |
-| 5.3   Myelosuppression | 1 | 0.0% |
-| 5.3	Maternal Toxicity | 1 | 0.0% |
-| 5.6 Fetal Toxicity | 1 | 0.0% |
-| 14.3 Treatment Of Symptomatic Gerd In Adults | 1 | 0.0% |
-| 2.5 Dosage Modifications Due To Drug Interactions | 1 | 0.0% |
-| 5.12 Qt Prolongation | 1 | 0.0% |
-| 7.3 Drug/Laboratory Test Interactions | 1 | 0.0% |
-| 5.5 Pheochromocytoma | 1 | 0.0% |
-| 14.7 Plague | 1 | 0.0% |
-| Serious Infections | 1 | 0.0% |
-| 14.4 Chickenpox | 1 | 0.0% |
-| 7.2 Monoamine Oxidase Inhibitors And Tricyclic Antidepressants | 1 | 0.0% |
-| Can Other Medicines Or Food Affect Promethazine? | 1 | 0.0% |
-| 5.1 Abrupt Cessation Of Therapy | 1 | 0.0% |
-| 5.2	Fetal Toxicity | 1 | 0.0% |
-| Onychomycosis Of The Toenail | 1 | 0.0% |
-| 1.4 Complicated Skin And Skin Structure Infections | 1 | 0.0% |
-| 5.1 Oral Use Only | 1 | 0.0% |
-| 6.4 Laboratory Values | 1 | 0.0% |
-| 2.2 Important Administration Instructions | 1 | 0.0% |
-| 5.3   Risk Of Bacterial Infections | 1 | 0.0% |
-| Cardiac Dysrhythmias | 1 | 0.0% |
-| 1.6 Limitations Of Use | 1 | 0.0% |
-| 5.12	Laboratory Test Interactions | 1 | 0.0% |
-| 5.13   Secondary Malignancies | 1 | 0.0% |
-| 5.10   Folic Acid Supplementation | 1 | 0.0% |
-| 5.6 Immunosuppression | 1 | 0.0% |
-| Pseudoaldosteronism | 1 | 0.0% |
-| 2.3 Dosage For Treatment Of Diabetic Peripheral Neuropathic Pain | 1 | 0.0% |
-| 17.2 Development Of Lymphoma And Other Malignancies | 1 | 0.0% |
-| 2.4 Dosage Recommendations In Geriatric Patients | 1 | 0.0% |
-| 5.3 Hypoglycemia With Concomitant Use With Insulin And Insulin Secretagogues | 1 | 0.0% |
-| 5.9 Risk In Patients With Impaired Respiratory Function | 1 | 0.0% |
-| Blastomycosis | 1 | 0.0% |
-| Use In Patients With Hepatic Impairment | 1 | 0.0% |
-| 2.3 Heart Failure | 1 | 0.0% |
-| 5.10 Anaphylactic Reaction | 1 | 0.0% |
-| 5.8 Angle-Closure Glaucoma | 1 | 0.0% |
-| 7.1 Potential For Other Drugs To Affect Bupropion Hydrochloride Tablets | 1 | 0.0% |
-| 5.1 Hypersensitivity | 1 | 0.0% |
-| Cardio-Renal | 1 | 0.0% |
-| 5.6 Qt Prolongation | 1 | 0.0% |
-| 5.15 Urinary Hesitation And Retention | 1 | 0.0% |
-| 1.4 Complicated Intra-Abdominal Infections | 1 | 0.0% |
-| 2.4 Recommended Dosage In Asian Patients | 1 | 0.0% |
-| 2.3 Switching Between Metformin Hydrochloride Immediate-Release Tablets And Metformin Hydrochloride Extended-Release Tablets | 1 | 0.0% |
-| 5.2 Interaction With Warfarin | 1 | 0.0% |
-| 5.1 Risks From Concomitant Use With Opioids | 1 | 0.0% |
-| 5.2 | 1 | 0.0% |
-| 2.4     Preparation Of Oral Suspension Using Tablets | 1 | 0.0% |
-| 7.1   Effects Of Other Drugs On Methotrexate | 1 | 0.0% |
-| 7.4 Dopaminergic Drugs (Levodopa And Amantadine) | 1 | 0.0% |
-| 7.2 Azathioprine Or 6-Mercaptopurine | 1 | 0.0% |
-| 14.7 Symptomatic Gastroesophageal Reflux Disease (Gerd) | 1 | 0.0% |
-| 8. Liver Function | 1 | 0.0% |
-| 2.1 Recommended Adult Dosage By Indication | 1 | 0.0% |
-| 5.13 Development Of Drug-Resistant Bacteria | 1 | 0.0% |
-| 7.17 Drugs Highly Bound To Plasma Protein | 1 | 0.0% |
-| Rheumatic Disorders | 1 | 0.0% |
-| 5.12 Cardiovascular And Central Nervous System Effects | 1 | 0.0% |
-| 2.2     Adult Heart Failure | 1 | 0.0% |
-| 2.2 Heart Failure | 1 | 0.0% |
-| 5.3 Electrolyte And Metabolic Abnormalities | 1 | 0.0% |
-| Patients With Hiv-1 Disease | 1 | 0.0% |
-| Interchangeability | 1 | 0.0% |
-| 6.3 Clinical Laboratory Test Findings | 1 | 0.0% |
-| 7.2 Non–Potassium-Sparing Diuretics | 1 | 0.0% |
-| Treatment | 1 | 0.0% |
-| 1.1 Nosocomial Pneumonia | 1 | 0.0% |
-| 5.4 Hepatotoxicity | 1 | 0.0% |
-| 5.2	Immediate Hypersensitivity Reactions | 1 | 0.0% |
-| 1.1	Eradication Of | 1 | 0.0% |
-| 5.8 Interference With Laboratory Tests | 1 | 0.0% |
-| 1.3 Nephropathy In Type 2 Diabetic Patients | 1 | 0.0% |
-| 4.2 Alcohol | 1 | 0.0% |
-| Animal Pharmacology And Animal Toxicology | 1 | 0.0% |
-| 5.9 Hyponatremia | 1 | 0.0% |
-| 1.3 Community-Acquired Pneumonia: 5-Day Treatment Regimen | 1 | 0.0% |
-| 1.6 Risk Reduction Of Nsaid-Associated Gastric Ulcer | 1 | 0.0% |
-| What Should I Tell My Healthcare Professional? | 1 | 0.0% |
-| 5.6 Limb Ischemia, Necrosis, And Gangrene In Patients With Hit And Hitts | 1 | 0.0% |
-| Causal Relationship Unknown | 1 | 0.0% |
-| Animal Pharmacology And Toxicology | 1 | 0.0% |
-| 7.1 Catecholamine Depleting Drugs | 1 | 0.0% |
-| 2.4 Dosage Modification For Patients With Renal Impairment | 1 | 0.0% |
-| 5.16   Infertility | 1 | 0.0% |
-| Renal Effects | 1 | 0.0% |
-| 5.3 Impaired Renal Function | 1 | 0.0% |
-| 5.3 Renal Impairment | 1 | 0.0% |
-| Allergic States | 1 | 0.0% |
-| 5.2 Potential For Systemic Absorption | 1 | 0.0% |
-| 14.2 Liver Transplantation | 1 | 0.0% |
-| 1.1     Adult Heart Failure | 1 | 0.0% |
-| Hypertension | 1 | 0.0% |
-| 2.2 Fmf | 1 | 0.0% |
-| Hematologic Changes | 1 | 0.0% |
-| 5.1 Paradoxical Bronchospasm | 1 | 0.0% |
-| 7.2 Insulin Or Other Antidiabetic Drugs | 1 | 0.0% |
-| 5.9 Rhabdomyolysis | 1 | 0.0% |
-| Package/Label Display Panel – Carton – 400 Mg | 1 | 0.0% |
-| 5.4   Gastrointestinal Toxicity | 1 | 0.0% |
-| Continued Therapy | 1 | 0.0% |
-| 2.4 Important Administration Information | 1 | 0.0% |
-| Storing Your Medicine | 1 | 0.0% |
-| 5.5 Masking Of Progressive Ileus And Gastric Distension | 1 | 0.0% |
-| 14.3 Diabetic Peripheral Neuropathic Pain | 1 | 0.0% |
-| 5.3 Bronchospastic Disease | 1 | 0.0% |
-| 5.15 Glaucoma And Cataracts | 1 | 0.0% |
-| 1.1 Short-Term Treatment Of Erosive Esophagitis Associated With Gastroesophageal Reflux Disease (Gerd) | 1 | 0.0% |
-| 7.2 Drug Interactions That Decrease The Efficacy Of Pravastatin | 1 | 0.0% |
-| 5.1 Cardiomyopathy And Ventricular
-Arrhythmias | 1 | 0.0% |
-| 5.1 Complex Sleep Behaviors | 1 | 0.0% |
-| 5.8 Hypomagnesemia And Mineral Metabolism | 1 | 0.0% |
-| 12.5 Pharmacogenomics | 1 | 0.0% |
-| 2.1 Important Dosage And Administration Information | 1 | 0.0% |
-| 5.6 Hematologic Toxicity | 1 | 0.0% |
-| 5.4     Impaired Renal Function | 1 | 0.0% |
-| Package Label-Principal Display Panel - 5 Mg/5 Ml (120 Ml Carton) | 1 | 0.0% |
-| 2.5 Recommended Dosage For Management Of Recurrent Calcium Oxalate Calculi In Hyperuricosuric Patients | 1 | 0.0% |
-| 5.2 Cns-Depressant Effects And Next-Day Impairment | 1 | 0.0% |
-| 2.3   Recommended Dosage For Rheumatoid Arthritis | 1 | 0.0% |
-| 1.8 Early Lyme Disease (Erythema Migrans) | 1 | 0.0% |
-| 5.5 Abnormal Bleeding | 1 | 0.0% |
-| 7.5 Use With Alcohol | 1 | 0.0% |
-| Suppressive Therapy | 1 | 0.0% |
-| 7.4 Non–Potassium-Sparing Diuretics | 1 | 0.0% |
-| 5.13	Development Of Drug Resistant Bacteria | 1 | 0.0% |
-| 10.1 Fluticasone Propionate | 1 | 0.0% |
-| 2.6 Dosing In Special Populations | 1 | 0.0% |
-| 5.11	Increased Drug Plasma Concentrations In Patients With Hepatic Impairment | 1 | 0.0% |
-| Sedation | 1 | 0.0% |
-| Cholelithiasis | 1 | 0.0% |
-| 5.8 Effects On The Ability To Drive And Operate Machinery | 1 | 0.0% |
-| Patients With Hepatic Impairment | 1 | 0.0% |
-| 5.3 Seizure | 1 | 0.0% |
-| 1.8 | 1 | 0.0% |
-| 5.13 Concomitant Use Of Pantoprazole Sodium With Methotrexate | 1 | 0.0% |
-| 2.3 Recommended Dosage In Pediatric Patients 8 Years Of Age And Older With Hefh | 1 | 0.0% |
-| 5.2 Acute Tubulointerstitial Nephritis | 1 | 0.0% |
-| Reduction Of Transmission | 1 | 0.0% |
-| Decreased Cardiac Contractility | 1 | 0.0% |
-| 5.3 Hypersensitivity Reactions | 1 | 0.0% |
-| 2.4 Patients With Renal Impairment | 1 | 0.0% |
-| Digoxin | 1 | 0.0% |
-| 7.7 Busulfan | 1 | 0.0% |
-| 5.9 Neuropsychiatric Reactions Including
-Suicidality | 1 | 0.0% |
-| 2.3 Administration Instructions For Ondansetron Orally Disintegrating Tablets | 1 | 0.0% |
-| 7.3 Drugs That Lower Seizure Threshold | 1 | 0.0% |
-| 1.14 Acute Bacterial Sinusitis: 5-Day And 10 To 14 Day Treatment Regimens | 1 | 0.0% |
-| 14.2	Asthma | 1 | 0.0% |
-| 7.1 Cns-Active Drugs | 1 | 0.0% |
-| 1.2 Hypertension | 1 | 0.0% |
-| 5.6 Patients With Depression | 1 | 0.0% |
-| Clinical Studies Experience | 1 | 0.0% |
-| 6.2 Clinical Trials Experience In Pediatric Subjects | 1 | 0.0% |
-| 5.2 Acute Renal Failure | 1 | 0.0% |
-| 5.10 Seizures | 1 | 0.0% |
-| 5.7 Angle-Closure Glaucoma | 1 | 0.0% |
-| Hematological Effects | 1 | 0.0% |
-| Fingernails Only | 1 | 0.0% |
-| Actions | 1 | 0.0% |
-| What Are The Risks? | 1 | 0.0% |
-| 7.8 Cimetidine | 1 | 0.0% |
-| 2.5 Discontinuation For Iodinated Contrast Imaging Procedures | 1 | 0.0% |
-| 8.2 Labor And Delivery | 1 | 0.0% |
-| 5.13 Blood Glucose Disturbances | 1 | 0.0% |
-| 7.1 Impact Of Other Drugs On Amlodipine | 1 | 0.0% |
-| 14.3 Postoperative Nausea And/Or Vomiting | 1 | 0.0% |
-| 5.10	Use In Patients With Blood Dyscrasias | 1 | 0.0% |
-| 14.3 Maintenance Of Healed Duodenal Ulcers | 1 | 0.0% |
-| 2.2 Screen For Bipolar Disorder Prior To Starting Citalopram Tablets | 1 | 0.0% |
-| Recurrent Episodes | 1 | 0.0% |
-| Dexamethasone Suppression Tests | 1 | 0.0% |
-| 5.4 Myocardial Ischemia | 1 | 0.0% |
-| 5.10 Clostridium Difficile-Associated Diarrhea | 1 | 0.0% |
-| Hypotension | 1 | 0.0% |
-| 1.8 Usage | 1 | 0.0% |
-| Congestive Heart Failure And Cardiac Effects | 1 | 0.0% |
-| 7.3 Tramadol | 1 | 0.0% |
-| 7.2 Cyp2D6 Inhibitors | 1 | 0.0% |
-| 2.4 Administration | 1 | 0.0% |
-| 5.11 Renal Toxicity | 1 | 0.0% |
-| 5.2 Hepatic Failure And Impaired Liver Function | 1 | 0.0% |
-| Anaerobic Bacterial Infections | 1 | 0.0% |
-| 5.7 Coexisting Conditions | 1 | 0.0% |
-| 5.5 Myelosuppression | 1 | 0.0% |
-| Dosage Adjustment In Patients With Heart Failure And Renal Impairment Or Hyponatremia | 1 | 0.0% |
-| 7.2 Drug Interactions That Decrease The Efficacy Of Rosuvastatin Tablets | 1 | 0.0% |
-| Cns Depression | 1 | 0.0% |
-| 7.3 Dual Inhibition Of Cyp1A2 And Cyp2D6 | 1 | 0.0% |
-| 5.5 Increased Risk Of Hemorrhagic Stroke In Patients On Atorvastatin Calcium Tablets 80 Mg With Recent Hemorrhagic Stroke | 1 | 0.0% |
-| 5.3 Calciphylaxis | 1 | 0.0% |
-| Hearing Loss | 1 | 0.0% |
-| 5.5 Do Not Exceed Recommended Dose | 1 | 0.0% |
-| 2.9 Use Of Duloxetine Delayed-Release Capsules With Other Maois Such As Linezolid Or Methylene Blue | 1 | 0.0% |
-| 2.1 Adults And Pediatric Patients At Least 15 Years Of Age | 1 | 0.0% |
-| Adverse Events In The Treatment Of Systemic Fungal Infections | 1 | 0.0% |
-| 2.1 Recommended Dosing Schedule | 1 | 0.0% |
-| 1.7 Inhalational Anthrax (Post-Exposure) | 1 | 0.0% |
-| 5.5   Hepatotoxicity | 1 | 0.0% |
-| 2.5 Use Of Bupropion Hydrochloride Tablets With Reversible Maois Such As Linezolid Or Methylene Blue | 1 | 0.0% |
-| Disease-Associated Maternal And/Or Embryo/Fetal Risk | 1 | 0.0% |
-| 7.3 Nonsteroidal Anti-Inflammatory Drugs (Nsaids) | 1 | 0.0% |
-| 7.2   Drugs Without Clinically Significant Drug Interaction With Oseltamivir Phosphate For Oral Suspension | 1 | 0.0% |
-| 1.4 Usage | 1 | 0.0% |
-| 1.1 Gout Flares | 1 | 0.0% |
-| Post-Marketing Experience | 1 | 0.0% |
-| 2.2 Add-On Therapy | 1 | 0.0% |
-| 4.3 Cockayne Syndrome | 1 | 0.0% |
-| Principal Display Panel - 237 Ml Bottle Carton | 1 | 0.0% |
-| 17.10 Drug Interactions | 1 | 0.0% |
-| Adult Rheumatoid Arthritis | 1 | 0.0% |
-| 5.1     Fetal Toxicity | 1 | 0.0% |
-| Interaction With Alcohol | 1 | 0.0% |
-| 14.2 Studies Pertinent To Safety Concerns For Sedative/Hypnotic Drugs | 1 | 0.0% |
-| 5.7 Nephrolithiasis | 1 | 0.0% |
-| 1.2	Usage | 1 | 0.0% |
-| Acute Generalized Exanthematous Pustulosis (Agep) | 1 | 0.0% |
-| 5.5 Hyperkalemia | 1 | 0.0% |
-| Preparation Of Suspension (For 200 Ml Of A 1.0 Mg/Ml Suspension) | 1 | 0.0% |
-| 7.3 Drugs That Increase Bleeding Risk | 1 | 0.0% |
-| Lithium | 1 | 0.0% |
-| 5.6 Fluid Retention | 1 | 0.0% |
-| 5.2 Peripheral And Optic Neuropathy | 1 | 0.0% |
-| 7.3 Non-Steroidal Anti-Inflammatory Agents Including Selective Cyclooxygenase-2 Inhibitors (Cox-2 Inhibitors) | 1 | 0.0% |
-| Gastrointestinal Effects - Risk Of Ulceration, Bleeding, And Perforation | 1 | 0.0% |
-| 14.2 Hypertension | 1 | 0.0% |
-| 1.2 Uncomplicated Skin And Skin Structure Infections | 1 | 0.0% |
-| 5.4 Hyperkalemia | 1 | 0.0% |
-| Anaphylactoid Reactions | 1 | 0.0% |
-| 7.3     Nonsteroidal Anti-Inflammatory Drugs (Nsaids) Including Selective Cyclooxygenase-2 Inhibitors (Cox-2 Inhibitors) | 1 | 0.0% |
-| 5.2 Retinal Toxicity | 1 | 0.0% |
-| 5.10 Sexual Dysfunction | 1 | 0.0% |
-| 2.4 Initial Therapy | 1 | 0.0% |
-| 7.1 Nonsteroidal Anti-Inflammatory Agents Including Selective Cyclooxygenase-2 Inhibitors (Cox-2 Inhibitors) | 1 | 0.0% |
-| Excretion | 1 | 0.0% |
-| 5.3 Use Of Anti-Inflammatory Agents | 1 | 0.0% |
-| 2.5 Dosage For Treatment Of Chronic Musculoskeletal Pain | 1 | 0.0% |
-| 5.7 Use In Pregnant Women With Mechanical Heart Valves | 1 | 0.0% |
-| 2.1 General Dosage And Administration Information | 1 | 0.0% |
-| 5.13 Photosensitivity/Phototoxicity | 1 | 0.0% |
-| 10.1 Human Overdose Experience | 1 | 0.0% |
-| 12.4 Pediatric Patients | 1 | 0.0% |
-| 2.6 Therapeutic Drug Monitoring | 1 | 0.0% |
-| 5.2 Abuse, Misuse, And Addiction | 1 | 0.0% |
-| Hemolytic Anemia | 1 | 0.0% |
-| Nausea And Vomiting | 1 | 0.0% |
-| 5.4 New Onset Diabetes After Transplant | 1 | 0.0% |
-| 2.2 Reduction In Risk Of Myocardial Infarction, Stroke, And Death From Cardiovascular Causes | 1 | 0.0% |
-| 5.8 Other Clinical Settings With Increased Risks | 1 | 0.0% |
-| Neutropenia/Agranulocytosis | 1 | 0.0% |
-| 8.6 Gender Difference In Pharmacokinetics | 1 | 0.0% |
-| 14.2 Otitis Media | 1 | 0.0% |
-| Dose | 1 | 0.0% |
-| 4.1 Disulfiram | 1 | 0.0% |
-| 14.9 Maintenance Of Healing Of Erosive Esophagitis | 1 | 0.0% |
-| 8.6 Race | 1 | 0.0% |
-| 1.3 Allergic Rhinitis | 1 | 0.0% |
-| 7.1	Concomitant Respiratory Medications | 1 | 0.0% |
-| 5.1	Not For Acute Use | 1 | 0.0% |
-| 14.2 Long-Term Maintenance Of Healing Of Erosive Or Ulcerative Gerd In Adults | 1 | 0.0% |
-| Neuroleptic Malignant Syndrome | 1 | 0.0% |
-| Stop Use And Ask A Doctor If: | 1 | 0.0% |
-| Proper Use Of An | 1 | 0.0% |
-| 5.2 Other Extrapyramidal Symptoms | 1 | 0.0% |
-| 7.2 Potential For Bupropion Hydrochloride Tablets To Affect Other Drugs | 1 | 0.0% |
-| 5.4 Local Effects Of Inhaled Corticosteroids | 1 | 0.0% |
-| 2.3 Dose Adjustment In Patients With Renal Impairment | 1 | 0.0% |
-| 2.1 Recommended Dosage For Bronchospasm (Acute Episodes Or Symptoms Associated With Bronchospasm) | 1 | 0.0% |
-| 2.2 Hypertensive Patients With Left Ventricular Hypertrophy | 1 | 0.0% |
-| 17.9 Thrombotic Microangiopathy | 1 | 0.0% |
-| 2.2 Dosage For Cefuroxime Axetil Tablets | 1 | 0.0% |
-| 5.1 Tardive Dyskinesia | 1 | 0.0% |
-| 7.1 Drugs Known To Affect The Occurrence Of Skin Rash And Hypersensitivity | 1 | 0.0% |
-| 1.2 Maintenance Of Healing Of Erosive Or Ulcerative Gerd In Adults | 1 | 0.0% |
-| 5.8 Hepatotoxicity | 1 | 0.0% |
-| 2.2 Adult Dosage | 1 | 0.0% |
-| 5.5 Eosinophilic Conditions | 1 | 0.0% |
-| What Is Promethazine? | 1 | 0.0% |
-| 5.8 Activation Of Mania/Hypomania | 1 | 0.0% |
-| 8.6 Use In Renal Impairment | 1 | 0.0% |
-| 2.4 Dosing For | 1 | 0.0% |
-| 8.7     Renal Impairment | 1 | 0.0% |
-| Anaphylactoid Reactions During Membrane Exposure | 1 | 0.0% |
-| Principal Display Panel - 1.25 Mcg Cartridge Carton | 1 | 0.0% |
-| Cockayne Syndrome | 1 | 0.0% |
-| 14.6 Risk Reduction Of Nsaid-Associated Gastric Ulcer | 1 | 0.0% |
-| 7.2 Drug Interactions That May Decrease Exposure To Atorvastatin Calcium | 1 | 0.0% |
-| 5.5 Increases In Hba1C And Fasting Serum Glucose Levels | 1 | 0.0% |
-| 1.7 Uncomplicated Gonorrhea | 1 | 0.0% |
-| 16     How Supplied/Storage And Handling | 1 | 0.0% |
-| 5.7 Discontinuation Of Treatment With Duloxetine Delayed-Release Capsules | 1 | 0.0% |
-| 5.3     Hypotension | 1 | 0.0% |
-| 5.13 Hyponatremia | 1 | 0.0% |
-| Hsv-Infected Patients | 1 | 0.0% |
-| Tuberculosis | 1 | 0.0% |
-| Ophthalmic | 1 | 0.0% |
-| Adults | 1 | 0.0% |
-| 5.6 Hepatic Failure | 1 | 0.0% |
-| 1.2 Pediatric Patients | 1 | 0.0% |
-| 6.1 Clinical Trial Data Sources | 1 | 0.0% |
-| 1.2 Eradication Of H. Pylori To Reduce The Risk Of Duodenal Ulcer Recurrence | 1 | 0.0% |
-| 5.3 Central Nervous System Effects | 1 | 0.0% |
-| 5.14 Development Of Drug Resistant Bacteria | 1 | 0.0% |
-| Aspergillosis | 1 | 0.0% |
-| 2.2 Special Populations | 1 | 0.0% |
-| 2.2 Dosage For Adults And For Pediatric Patients Aged 3 Months (12 Weeks) And Older | 1 | 0.0% |
-| 2.5 Important Administration Instructions | 1 | 0.0% |
-| 5.9 Cough | 1 | 0.0% |
-| 2.3 Allergic Rhinitis | 1 | 0.0% |
-| 7.1 Chelation Agents: Antacids, Sucralfate, Metal Cations, Multivitamins | 1 | 0.0% |
-| 5.5 Risks Associated With Use In Porphyria | 1 | 0.0% |
-| 1.2 Reduction In The Risk Of Myocardial Infarction, Stroke, And Death From Cardiovascular Causes | 1 | 0.0% |
-| 7.3 Digoxin | 1 | 0.0% |
-| 2.1 Important Dosage Information | 1 | 0.0% |
-| Musculoskeletal | 1 | 0.0% |
-| 17.1 Administration | 1 | 0.0% |
-| 14.1	Chronic Obstructive Pulmonary Disease | 1 | 0.0% |
-| 2.3 Discontinuation Or Dosage Reduction Of Alprazolam Tablets | 1 | 0.0% |
-| 6.1 Clinical Trials Experience In Adult Subjects | 1 | 0.0% |
-| 1.1 Healing Of Erosive Or Ulcerative Gerd In Adults | 1 | 0.0% |
-| 8.7 Use In Hepatic Impairment | 1 | 0.0% |
-| Use In Patients With Renal Impairment | 1 | 0.0% |
-| 5.12 Musculoskeletal Disorders In Pediatric Patients And Arthropathic Effects In Animals | 1 | 0.0% |
-| 1.2 Hypertensive Patients With Left Ventricular Hypertrophy | 1 | 0.0% |
-| Other Safety Information | 1 | 0.0% |
-| 2.1 General Considerations | 1 | 0.0% |
-| 12.1	Mechanism Of Action | 1 | 0.0% |
-| Pharmacogenomics | 1 | 0.0% |
-| Hepatic Effects | 1 | 0.0% |
-| 8.2     Lactation | 1 | 0.0% |
-| 7.1 General Information | 1 | 0.0% |
-| 7.3 Oral Contraceptives | 1 | 0.0% |
-| 2.7 Treatment During Dentistry And Surgery | 1 | 0.0% |
-| 1.8 Plague | 1 | 0.0% |
-| 5.3 Serious Skin Reactions | 1 | 0.0% |
-| 14.2 Radiation-Induced Nausea And Vomiting | 1 | 0.0% |
-| 10.2 Salmeterol | 1 | 0.0% |
-| Myopathy And Rhabdomyolysis | 1 | 0.0% |
-| 5.4	Worsening Of Narrow-Angle Glaucoma | 1 | 0.0% |
-| 1.3 Community-Acquired Pneumonia | 1 | 0.0% |
-| 5.2 Angioedema And Anaphylactoid Reactions | 1 | 0.0% |
-| 1.7 Treatment Of Symptomatic Gastroesophageal Reflux Disease (Gerd) | 1 | 0.0% |
-| Elderly | 1 | 0.0% |
-| 7.1 Inhibitors Of Cyp1A2 | 1 | 0.0% |
-| Severe Cutaneous Adverse Reactions | 1 | 0.0% |
-| 10.2 Management Of Overdose | 1 | 0.0% |
-| 6.2 Postmarketing Experience | 1 | 0.0% |
-| 5.9 Development Of Drug-Resistant Bacteria | 1 | 0.0% |
-| Gynecological | 1 | 0.0% |
-| 2.6 Dosage Modifications For Drug Interactions | 1 | 0.0% |
-| 7.6 Effects On Laboratory Tests | 1 | 0.0% |
-| Package/Label Display Panel – Carton – 200 Mg | 1 | 0.0% |
-| Initial Therapy | 1 | 0.0% |
-| 5.6 Psychosis And Other Neuropsychiatric Reactions | 1 | 0.0% |
-| 5.5 Hypotension | 1 | 0.0% |
-| 7.15 Alcohol | 1 | 0.0% |
-| 1.6 Uncomplicated Urinary Tract Infections | 1 | 0.0% |
-| 4.2 Monoamine Oxidase Inhibitors | 1 | 0.0% |
-| 5.1 Suicidal Thoughts And Behavior In Adolescents And Young Adults | 1 | 0.0% |
-| Human Data | 1 | 0.0% |
-| Histoplasmosis | 1 | 0.0% |
-| 7.9 Inducers Of Cyp450 Liver Enzymes | 1 | 0.0% |
-| Other Pharmacologic Effects | 1 | 0.0% |
-| 2.3 Heart Failure Post-Myocardial Infarction | 1 | 0.0% |
-| Immunocompromised Patients | 1 | 0.0% |
-| Animal Toxicology | 1 | 0.0% |
-| 6.3 Most Common Adult Adverse Reactions | 1 | 0.0% |
-| 5.12 Clinically Important Drug Interactions | 1 | 0.0% |
-| Description: | 1 | 0.0% |
-| 5.7 Embryo-Fetal Toxicity | 1 | 0.0% |
-| 1.3 Edema Associated With Hepatic Cirrhosis Or Nephrotic Syndrome | 1 | 0.0% |
-| 5.4 Seizure Potential | 1 | 0.0% |
-| 14.4 Effects In Documented Coronary Artery Disease | 1 | 0.0% |
-| 8.6 Renal And Hepatic Impairment | 1 | 0.0% |
-| 1.8 Treatment Of Erosive Esophagitis (Ee) | 1 | 0.0% |
-| 1.1	Maintenance Treatment Of Chronic Obstructive Pulmonary Disease | 1 | 0.0% |
-| 7. Hematologic Changes | 1 | 0.0% |
-| 14.1 Adult Patients | 1 | 0.0% |
-| 5.6 Use In Patients With Depression | 1 | 0.0% |
-| Endocrine | 1 | 0.0% |
-| 5.2 Clostridium Difficile-Associated Diarrhea | 1 | 0.0% |
-| Treatment Of Blastomycosis And Histoplasmosis | 1 | 0.0% |
-| 7.9 Drugs Metabolized By Cyp2D6 | 1 | 0.0% |
-| 5.2 Tendinitis And Tendon Rupture | 1 | 0.0% |
-| 5.4 Increases In Hba1C And Fasting Serum Glucose Levels | 1 | 0.0% |
-| 2.4 General Dosing Information | 1 | 0.0% |
-| Patients With Renal Impairment | 1 | 0.0% |
-| Warfarin-Type Anticoagulants | 1 | 0.0% |
-| 7.3 Digitalis, Clonidine, And Calcium Channel Blockers | 1 | 0.0% |
-| 5.1 Hyperkalemia | 1 | 0.0% |
-| 5.6 Neurotoxicity | 1 | 0.0% |
-| 5.9 Serious Skin Reactions | 1 | 0.0% |
-| Ulcerative Colitis | 1 | 0.0% |
-| 5.2 Liver Enzymes | 1 | 0.0% |
-| 1.1 Adult Patients | 1 | 0.0% |
-| 5.2 Acute Asthma | 1 | 0.0% |
-| 5.3 Hepatotoxicity | 1 | 0.0% |
-| 7.2 Alcohol | 1 | 0.0% |
-| For Use In Pertussis | 1 | 0.0% |
-| 14.1 Cold Sores (Herpes Labialis) | 1 | 0.0% |
-| 5.5 Development Of Drug-Resistant Bacteria | 1 | 0.0% |
-| 2.4 Switching A Patient To Or From A Monoamine Oxidase Inhibitor (Maoi) Antidepressant | 1 | 0.0% |
-| 2.2 Dosage In Hepatic Impairment | 1 | 0.0% |
-| 17.3 Increased Risk Of Infection | 1 | 0.0% |
-| 5.2 Gout Flares | 1 | 0.0% |
-| Package Label.Principal Display Panel | 1 | 0.0% |
-| 5.1 Renal Impairment | 1 | 0.0% |
-| 5.8	Photosensitivity | 1 | 0.0% |
-| Interaction Potential | 1 | 0.0% |
-| 7.4 Antibiotics And Antifungals | 1 | 0.0% |
-| 5.3 Patients With Hepatic Failure | 1 | 0.0% |
-| 2.3	Special Populations | 1 | 0.0% |
-| 14.2 Effects In Chronic Stable Angina | 1 | 0.0% |
-| 7.3 Non-Steroidal Anti-Inflammatory Drugs (Nsaids) Including Selective Cyclooxygenase-2 Inhibitors (Cox-2 Inhibitors) | 1 | 0.0% |
-| 1.2 Acute Bacterial Otitis Media | 1 | 0.0% |
-| Cross-Resistance | 1 | 0.0% |
-| 5.3 Drug Interactions | 1 | 0.0% |
-| 7.6 Antacids, Multivitamins, Or Dairy Products | 1 | 0.0% |
-| 2.4 Dose In Patients With Renal Impairment | 1 | 0.0% |
-| 2.1 Gout Flares | 1 | 0.0% |
-| 5.5 Activation Of Mania Or Hypomania | 1 | 0.0% |
-| Asymptomatic Left Ventricular Dysfunction | 1 | 0.0% |
-| 2.6 Recommended Dosage In Patients With Renal Impairment | 1 | 0.0% |
-| 7.5 Theophylline | 1 | 0.0% |
-| 5.4 Effects On Driving And Operating Machinery | 1 | 0.0% |
-| 14.5 Healing Of Nsaid-Associated Gastric Ulcer | 1 | 0.0% |
-| 5.9 Development Of Drug Resistant Bacteria | 1 | 0.0% |
-| 1.1 Acute Bacterial Exacerbation Of Chronic Bronchitis | 1 | 0.0% |
-| 7.1   Influenza Vaccines | 1 | 0.0% |
-| Animal Pharmacology | 1 | 0.0% |
-| 5.16 Eosinophilic Conditions And Churg-Strauss Syndrome | 1 | 0.0% |
-| Effect Of Dialysis | 1 | 0.0% |
-| 7.5 Cholestyramine And Colestipol Resins | 1 | 0.0% |
-| 1.2 Community-Acquired Pneumonia: 7 To 14 Day Treatment Regimen | 1 | 0.0% |
-| 7.3 Atorvastatin Calcium Effects On Other Drugs | 1 | 0.0% |
-| 14.4 Acute Bacterial Sinusitis: 5-Day And 10 To 14 Day Treatment Regimens | 1 | 0.0% |
-| 2.5 Renal Impairment | 1 | 0.0% |
-| 5.5	Severe Cutaneous Adverse Reactions | 1 | 0.0% |
-| 14.1 Duodenal Ulcer | 1 | 0.0% |
-| 1.2 Maintenance Of Healing Of Erosive Esophagitis | 1 | 0.0% |
-| Postmarketing Reports | 1 | 0.0% |
-| 5.8 Precipitation Of Hepatic Encephalopathy | 1 | 0.0% |
-| 5.6 Other Serious And Sometimes Fatal Adverse Reactions | 1 | 0.0% |
-| Anaphylactoid And Possibly Related Reactions | 1 | 0.0% |
-| Use In Pediatric Patients | 1 | 0.0% |
-| 5.4	Tooth Enamel Discoloration And Hypoplasia | 1 | 0.0% |
-| 1.3 Heart Failure Post-Myocardial Infarction | 1 | 0.0% |
-| 5.9	Darkening Of The Tongue And/Or Black Stool | 1 | 0.0% |
-| 1.5 Uncomplicated Skin And Skin-Structure Infections | 1 | 0.0% |
-| Neuropathy | 1 | 0.0% |
-| 5.5 Cardiovascular Death | 1 | 0.0% |
-| 5.7 Respiratory Depression | 1 | 0.0% |
-| 5.4 Mortality Imbalance In An Investigational Study In Patients With Catheter-Related Bloodstream Infections, Including Those With Catheter-Site Infections | 1 | 0.0% |
-| 5. Pregnancy | 1 | 0.0% |
-| 5.4 Serotonin Syndrome | 1 | 0.0% |
-| 5.6 Phenylketonuria | 1 | 0.0% |
-| Motion Sickness | 1 | 0.0% |
-| 6.7 Vital Sign Changes In Adults | 1 | 0.0% |
-| Neuro-Psychiatric | 1 | 0.0% |
-| 1.1 Malaria | 1 | 0.0% |
-| 2.3 Recommended Pediatric Dosage | 1 | 0.0% |
-| Pre- And Postoperative Use | 1 | 0.0% |
-| 2.2 Pediatric Patients (Over 1 Year Of Age) | 1 | 0.0% |
-| 5.1 Lymphoma And Other Malignancies | 1 | 0.0% |
-| 5.17 Increased Risk Of Adverse Reactions Due To Third-Space Accumulation | 1 | 0.0% |
-| 5.8 Interactions With Investigations For Neuroendocrine Tumors | 1 | 0.0% |
-| 7.1 Drugs Prolonging Qt Interval And Other
-Arrhythmogenic Drugs | 1 | 0.0% |
-| 2.8     Dose Adjustment For Hepatic Impairment | 1 | 0.0% |
-| 7.3 Cannabidiol | 1 | 0.0% |
-| 17.4 New Onset Diabetes After Transplant | 1 | 0.0% |
-| 5.3 Drug-Induced Enterocolitis Syndrome (Dies) | 1 | 0.0% |
-| 6.12 Postmarketing Spontaneous Reports | 1 | 0.0% |
-| 1.13 Acute Bacterial Exacerbation Of Chronic Bronchitis | 1 | 0.0% |
-| 5.6 Cyanocobalamin (Vitamin B12) Deficiency | 1 | 0.0% |
-| 5.2 Severe Cutaneous Adverse Reactions | 1 | 0.0% |
-| 17.6 Neurotoxicity | 1 | 0.0% |
-| 7.4 Drugs That Interfere With Hemostasis (E.G., Nsaids, Aspirin, And Warfarin) | 1 | 0.0% |
-| Treatment Of Hypercholesterolemia | 1 | 0.0% |
-| 2.3 Dosage For Rheumatoid Arthritis In
-Adults | 1 | 0.0% |
-| For Oral Administration | 1 | 0.0% |
-| Head And Neck Angioedema | 1 | 0.0% |
-| 7.3 Potential Drug-Drug Interaction With Macrolides | 1 | 0.0% |
-| 5.4 Severe Anaphylactic And Anaphylactoid Reactions | 1 | 0.0% |
-| Lower Seizure Threshold | 1 | 0.0% |
-| Dosage Adjustments | 1 | 0.0% |
-| 2.4 Pediatric Dosage | 1 | 0.0% |
-| Pancreatitis | 1 | 0.0% |
-| Central Nervous System | 1 | 0.0% |
-| 1.1   Neoplastic Diseases | 1 | 0.0% |
-| 5.7 Lactic Acidosis | 1 | 0.0% |
-| 5.6 Major Surgery | 1 | 0.0% |
-| Onychomycosis Of The Fingernail | 1 | 0.0% |
-| Paradoxical Reactions | 1 | 0.0% |
-| Serious Skin Reactions | 1 | 0.0% |
-| 5.5 Prolonged Prothrombin Time | 1 | 0.0% |
-| Hypersensitivity | 1 | 0.0% |
-| 5.6	Renal Impairment | 1 | 0.0% |
-| 2.1     General Considerations | 1 | 0.0% |
-| 5.4   Fructose Intolerance In Patients With Hereditary Fructose Intolerance | 1 | 0.0% |
-| 5.5 Nephrotoxicity Due To Tacrolimus And Drug Interactions | 1 | 0.0% |
-| 4.5 Lomitapide, Lovastatin, And Simvastatin | 1 | 0.0% |
-| 7.2 Impact Of Amlodipine On Other Drugs | 1 | 0.0% |
-| General Pharmacokinetic Characteristics | 1 | 0.0% |
-| 5.11 Immediate Hypersensitivity Reactions | 1 | 0.0% |
-| 2.2 Dosage For Treatment Of Generalized Anxiety Disorder | 1 | 0.0% |
-| Animal Data | 1 | 0.0% |
-| 7.2     Potassium-Sparing Diuretics | 1 | 0.0% |
-| Methotrexate | 1 | 0.0% |
-| 5.14 Use In Patients With Concomitant Illness | 1 | 0.0% |
-| 1.5 Healing Of Nsaid-Associated Gastric Ulcer | 1 | 0.0% |
-| 5.3 Clostridium Difficile-Associated Diarrhea | 1 | 0.0% |
-| Endocrine Disorders | 1 | 0.0% |
-| 2.2 Angina Pectoris | 1 | 0.0% |
-| 5.10 | 1 | 0.0% |
-| 7.1 Drugs That Reduce Gastric Acidity | 1 | 0.0% |
-| 5.9 Anaphylactic Reactions With Prograf Injection | 1 | 0.0% |
-| 5.4 Qt Prolongation | 1 | 0.0% |
-| 5.3 Neuroleptic Malignant Syndrome | 1 | 0.0% |
-| 5.9 Angle-Closure Glaucoma | 1 | 0.0% |
-| Vaccination | 1 | 0.0% |
-| 5.2 Hypotension In Volume - Or Salt-Depleted Patients | 1 | 0.0% |
-| 5.4 | 1 | 0.0% |
-| 5.6 Interference With Glucose Tests | 1 | 0.0% |
-| Warnings: | 1 | 0.0% |
-| 2.5 Dosage In Patients With Impaired Renal Function | 1 | 0.0% |
-| 5.5     Hyperkalemia | 1 | 0.0% |
-| 5.6 Photosensitivity | 1 | 0.0% |
-| 5.2 Serious Infections | 1 | 0.0% |
-| Principal Display Panel - 120 Capsule Blister Card Box | 1 | 0.0% |
-| 2.2 Children | 1 | 0.0% |
-| Clinical Laboratory Test Findings | 1 | 0.0% |
-| 5.1   Embryo-Fetal Toxicity | 1 | 0.0% |
-| 14.2 Heart Failure | 1 | 0.0% |
-| Cystic Fibrosis | 1 | 0.0% |
-| 5.8 Acute Angle-Closure Glaucoma, Acute Myopia, And Choroidal Effusion | 1 | 0.0% |
-| 5.3 Hepatic Dysfunction | 1 | 0.0% |
-| 1.5 Uncomplicated Skin And Skin Structure Infections | 1 | 0.0% |
-| 2.2 Recommended Prophylaxis For Gout Flares | 1 | 0.0% |
-| Pediatric Hypertensive Patients | 1 | 0.0% |
-| 5.7 Seizures | 1 | 0.0% |
-| Dosage Adjustment In Hypertensive Patients With Renal Impairment | 1 | 0.0% |
-| Hepatic Failure | 1 | 0.0% |
-| 7.5 Botanical (Herbal) Products And Foods | 1 | 0.0% |
-| Varicella Zoster And Measles Viral Infections | 1 | 0.0% |
-| 5.10 Paradoxical Bronchospasm And Upper Airway Symptoms | 1 | 0.0% |
-| 5.1 Severe Acute Hypersensitivity Reactions | 1 | 0.0% |
-| 5.8 Neonatal Sedation And Withdrawal Syndrome | 1 | 0.0% |
-| 5.5 Interaction With Drugs That Inhibit Metabolism Via Cytochrome P450 3A | 1 | 0.0% |
-| 5.4 Hypotension | 1 | 0.0% |
-| 7.2 Inhibitors Of Cyp2D6 | 1 | 0.0% |
-| 2.3     Pediatric Heart Failure | 1 | 0.0% |
-| 14.3 Effects In Vasospastic Angina | 1 | 0.0% |
-| 2.1 General Instructions For Use | 1 | 0.0% |
-| 8.2 Lactation | 1 | 0.0% |
-| 8.9 Hepatic Impairment | 1 | 0.0% |
-| 5.12 Blood Glucose Disturbances | 1 | 0.0% |
-| 2.3 Treatment Of Essential Hypertension | 1 | 0.0% |
-| 5.2 Deterioration Of Asthma | 1 | 0.0% |
-| 5.2     Angioedema | 1 | 0.0% |
-| 2.6     Dose Adjustment For Patients Not Taking An Ace Inhibitor Or Arb Or Previously Taking Low Doses Of These Agents | 1 | 0.0% |
-| Clinical Laboratory Tests | 1 | 0.0% |
-| Instructions For Overdosage | 1 | 0.0% |
-| 14.8 Complicated Urinary Tract Infections And Acute Pyelonephritis: 10-Day Treatment Regimen | 1 | 0.0% |
-| 8.8   Use In Patients With Chronic Conditions | 1 | 0.0% |
-| 5.2 Tendinitis And Tendon Rupture | 1 | 0.0% |
-| 2.4   Dosage In Patients With Renal Impairment | 1 | 0.0% |
-| 1.1 Prophylaxis Of Organ Rejection In Kidney, Liver, Or Heart Transplant | 1 | 0.0% |
-| 5.4 Hypertension | 1 | 0.0% |
-| 2.5 Recommended Dosage In Patients With Renal Impairment | 1 | 0.0% |
-| 5.4 Acute Kidney Injury | 1 | 0.0% |
-| 7.7 Drugs That Affect Gastric Acidity | 1 | 0.0% |
-| Seizure Disorders: | 1 | 0.0% |
-| 6.2 Adverse Reactions Reported As Reasons For Discontinuation Of Treatment In Adult Placebo-Controlled Trials | 1 | 0.0% |
-| Aspirin | 1 | 0.0% |
-| 17.13 Immunizations | 1 | 0.0% |
-| 5.7 Other Serious And Sometimes Fatal Adverse Reactions | 1 | 0.0% |
-| 5.8 Hypokalemia | 1 | 0.0% |
-| Metabolism/Excretion | 1 | 0.0% |
-| 2.3 Administration Information | 1 | 0.0% |
-| 5.2   Neuropsychiatric Events | 1 | 0.0% |
-| 2.5 Dosage Adjustment | 1 | 0.0% |
-| 2.2	Asthma | 1 | 0.0% |
-| Principal Display Panel - 2.5 Mcg Cartridge Carton | 1 | 0.0% |
-| Trichomoniasis: | 1 | 0.0% |
-| 2.2 Dosage In Panic Disorder | 1 | 0.0% |
-| 5.3 Acute Interstitial Nephritis | 1 | 0.0% |
-| 1.3   Limitations Of Use | 1 | 0.0% |
-| Psychotic Reaction With Disulfiram | 1 | 0.0% |
-| 4.4 Severe Renal Impairment | 1 | 0.0% |
-| 5.15 Development Of Drug Resistant Bacteria | 1 | 0.0% |
-| 5.14 Photosensitivity/Phototoxicity | 1 | 0.0% |
-| 5.3 Excessive Use Of Fluticasone Propionate And Salmeterol Inhalation Powder And Use With Other Long-Acting Beta | 1 | 0.0% |
-| 7.7 Drug-Laboratory Test Interactions | 1 | 0.0% |
-| Pharmacokinetics: | 1 | 0.0% |
-| 8.8 Nadh-Cytochrome B | 1 | 0.0% |
-| 1.4 Acute Bacterial Exacerbations Of Chronic Bronchitis | 1 | 0.0% |
-| Histoplasmosis In Hiv-Infected Patients | 1 | 0.0% |
-| 7.1 Antacids, Sucralfate, Multivitamins And Other Products Containing Multivalent Cations | 1 | 0.0% |
-| How Supplied: | 1 | 0.0% |
-| Venothromboembolic Disease | 1 | 0.0% |
-| 7.7 Digoxin | 1 | 0.0% |
-| Ophthalmological Effects | 1 | 0.0% |
-| 5.2 Hypotension And Worsening Renal Function | 1 | 0.0% |
-| 5.1   Serious Skin/Hypersensitivity Reactions | 1 | 0.0% |
-| 5.3 | 1 | 0.0% |
-| 5.7 Risk Of Allergic Reactions Due To Tartrazine | 1 | 0.0% |
-| 5.5	Worsening Of Urinary Retention | 1 | 0.0% |
-| 5.7 Dual Blockade Of The Renin-Angiotensin System | 1 | 0.0% |
-| 5.5 Hypertension | 1 | 0.0% |
-| 2.8 Conversion From Other Anticoagulants | 1 | 0.0% |
-| 7.4 Monoamine Oxidase Inhibitors And Tricyclic Antidepressants | 1 | 0.0% |
-| 7.3 Interference With Urinary Normetanephrine Measurements | 1 | 0.0% |
-| 5.2   Hypersensitivity Reactions | 1 | 0.0% |
-| 1.5 Helicobacter Pylori Eradication To Reduce The Risk Of Duodenal Ulcer Recurrence In Adults | 1 | 0.0% |
-| 1.3 Reduction Of Mortality In Acute Myocardial Infarction | 1 | 0.0% |
-| Elimination | 1 | 0.0% |
-| 7.2 Oral Anticoagulants | 1 | 0.0% |
-| 7.6 Non-Steroidal Anti-Inflammatory Agents Including Selective Cyclooxygenase-2 Inhibitors (Cox-2 Inhibitors) | 1 | 0.0% |
-| 2.3 Dosage In Pediatric Patients Aged Less Than 12 Weeks (3 Months) | 1 | 0.0% |
-| 14.2 Angina Pectoris | 1 | 0.0% |
-| 17.5 Nephrotoxicity | 1 | 0.0% |
-| 2.6 Directions For Mixing Oral Suspension | 1 | 0.0% |
-| 7.3 Rosuvastatin Tablets Effects On Other Drugs | 1 | 0.0% |
-| 7.1     Dual Blockade Of The Renin-Angiotensin-Aldosterone System | 1 | 0.0% |
-| 6.2     Postmarketing Experience | 1 | 0.0% |
-| 14.6 Chronic Bacterial Prostatitis | 1 | 0.0% |
-| 5.5 Severe Dermatologic Reactions | 1 | 0.0% |
-| Juvenile Rheumatoid Arthritis - Polyarticular Course | 1 | 0.0% |
-| Adverse Events Reported In Fingernail Onychomycosis Clinical Trials | 1 | 0.0% |
-| 5.5 Cutaneous And Systemic Lupus Erythematosus | 1 | 0.0% |
-| Do Not Use If You Have | 1 | 0.0% |
-| Cimetidine Plus Probenecid | 1 | 0.0% |
-| Drug & Or Laboratory Test Interactions | 1 | 0.0% |
-| 1.10 Complicated Urinary Tract Infections: 10-Day Treatment Regimen | 1 | 0.0% |
-| 5.2 Tissue Necrosis | 1 | 0.0% |
-| 5.2 Vitamin B | 1 | 0.0% |
-| 5.1 Myelosuppression | 1 | 0.0% |
-| Teratogenic Effects: Pregnancy Category C. | 1 | 0.0% |
-| Advanced Renal Disease | 1 | 0.0% |
-| 1.1 Treatment Of Asthma | 1 | 0.0% |
-| 7.1 Serotonergic Drugs | 1 | 0.0% |
-| 5.7	Development Of Potential For Microbial Overgrowth | 1 | 0.0% |
-| 5.1 Skin Rash And Hypersensitivity | 1 | 0.0% |
-| 7.1 Nelfinavir | 1 | 0.0% |
-| 1.7 Acute Bacterial Exacerbation Of Chronic Bronchitis | 1 | 0.0% |
-| 14.2 Long-Term Maintenance Of Healing Of Erosive Esophagitis | 1 | 0.0% |
-| 14.5 Studies In Patients With Heart Failure | 1 | 0.0% |
-| 5.8 Use In Sexually Transmitted Infections | 1 | 0.0% |
-| 1.7 Usage | 1 | 0.0% |
-| 7.2 Drugs Affecting Cytochrome P-450 Enzymes | 1 | 0.0% |
-| Pharmacokinetics/Metabolism | 1 | 0.0% |
-| 14.1 Effects In Hypertension | 1 | 0.0% |
-| Packaging Information | 1 | 0.0% |
-| 2.6   Dosage Modifications For Adverse Reactions | 1 | 0.0% |
-| 5.4 Proteinuria And Hematuria | 1 | 0.0% |
-| 2.8 Switching A Patient To Or From A Monoamine Oxidase Inhibitor (Maoi) Intended To Treat Psychiatric Disorders | 1 | 0.0% |
-| 1.7 Treatment And Prophylaxis Of Disseminated Mycobacterial Infections | 1 | 0.0% |
-| 7.3 Allopurinol | 1 | 0.0% |
-| 7.1 Mycophenolic Acid | 1 | 0.0% |
-| Clinical Trials | 1 | 0.0% |
-| 5.7 Impaired Renal Function | 1 | 0.0% |
-| 14.3 Herpes Zoster | 1 | 0.0% |
-| 1.4 Primary Hyperaldosteronism | 1 | 0.0% |
-| 2.1   Important Dosage And Safety Information | 1 | 0.0% |
-| Concomitant Oral Anticoagulants | 1 | 0.0% |
-| 7.10 Drugs Metabolized By Cyp2C9 | 1 | 0.0% |
-| 5.11 Prolongation Of The Qt Interval | 1 | 0.0% |
-| 2.3 Dosage Recommendations For Pediatric Kidney, Liver Or Heart Transplant Patients | 1 | 0.0% |
-| Clinical Pharmacology In Pediatric Patients | 1 | 0.0% |
-| 2.2 Administration Instructions | 1 | 0.0% |
-| Who Should Not Use Promethazine? | 1 | 0.0% |
-| 6.3 Combination Therapy With Amoxicillin And Clarithromycin | 1 | 0.0% |
-| 5.3 Orthostatic Hypotension, Falls And Syncope | 1 | 0.0% |
-| 5.11 Fundic Gland Polyps | 1 | 0.0% |
-| 14.3 Heart Transplantation | 1 | 0.0% |
-| 1.12 Uncomplicated Urinary Tract Infections | 1 | 0.0% |
-| 2.4 Treatment Of Edema | 1 | 0.0% |
-| 5.3 Infantile Hypertrophic Pyloric Stenosis (Ihps) | 1 | 0.0% |
-| 5.11 Interactions With Cyp3A4 Inhibitors And Inducers | 1 | 0.0% |
-| 6.9 Electrocardiogram Changes In Adults | 1 | 0.0% |
-| 5.7 Hyperprolactinemia | 1 | 0.0% |
-| 5.7 Phenylketonurics | 1 | 0.0% |
-| 14.3 Heart Failure Post-Myocardial Infarction | 1 | 0.0% |
-| 5.4 Gynecomastia | 1 | 0.0% |
-| Hepatic, Renal, And Hematologic Toxicity Or Other Conditions | 1 | 0.0% |
-| Warning | 1 | 0.0% |
-| 5.6 Discontinuation Syndrome | 1 | 0.0% |
-| 6.6 Effects On Male And Female Sexual Function In Adults | 1 | 0.0% |
-| 5.9 Endogenous Factors Affecting Inr | 1 | 0.0% |
-| Initial Episode | 1 | 0.0% |
-| 1.6 Acute Bacterial Sinusitis | 1 | 0.0% |
-| 14     Clinical Studies | 1 | 0.0% |
-| 5.1 Neuropsychiatric Events | 1 | 0.0% |
-| Potential Adverse Effects | 1 | 0.0% |
-| 5.9   Risk Of Fatal Adverse Reactions With Medication Error | 1 | 0.0% |
-| 5.6 Potential Effect On Driving And Use Of Machinery | 1 | 0.0% |
-| 2.2 Chronic Obstructive Pulmonary Disease | 1 | 0.0% |
-| 1.2 Coronary Artery Disease (Cad) | 1 | 0.0% |
-| 2.2 Pediatric Patients (Less Than 18 Years Of Age) | 1 | 0.0% |
-| Congestive Heart Failure | 1 | 0.0% |
-| 5.2 Use With Contact Lenses | 1 | 0.0% |
-| When Using This Product | 1 | 0.0% |
-| 9. Kidney Function | 1 | 0.0% |
-| 5.1 Hemorrhage | 1 | 0.0% |
-| 17.11 Pregnancy, Lactation And Infertility | 1 | 0.0% |
-| 5.4 Clostridium Difficile Associated Diarrhea | 1 | 0.0% |
-| 5.9 Tumorigenicity | 1 | 0.0% |
-| 1.3 Acute Bacterial Maxillary Sinusitis | 1 | 0.0% |
-| Hypersensitivity Reactions | 1 | 0.0% |
-| 1.1 Heart Failure | 1 | 0.0% |
-| 7.11 Drugs Metabolized By Cyp3A | 1 | 0.0% |
-| 7.6 Acetylsalicylic Acid | 1 | 0.0% |
-| 14.6 Pathological Hypersecretory Conditions, Including Zollinger-Ellison Syndrome In Adults | 1 | 0.0% |
-| 14.2 Acute Bacterial Exacerbation Of Chronic Bronchitis | 1 | 0.0% |
-| 2.2   Recommended Dosage For Treatment Of Influenza | 1 | 0.0% |
-| 14.2 Mechanical And Bioprosthetic Heart Valves | 1 | 0.0% |
-| 7.1 Disulfiram | 1 | 0.0% |
-| Fungal Infections | 1 | 0.0% |
-| 1.1 Pharyngitis/Tonsillitis | 1 | 0.0% |
-| 5.7   Dermatologic Reactions | 1 | 0.0% |
-| 5.5 Systemic Atheroemboli And Cholesterol Microemboli | 1 | 0.0% |
-| 5.7 Hypoglycemia | 1 | 0.0% |
-| 5.14 Immunizations | 1 | 0.0% |
-| 5.3 Direct Coombs’ Test Seroconversion | 1 | 0.0% |
-| 14.1 Acute Bacterial Sinusitis | 1 | 0.0% |
-| 7.4 Lithium | 1 | 0.0% |
-| Controlled Substance | 1 | 0.0% |
-| Immunosuppression And Increased Risk Of Infection | 1 | 0.0% |
-| 5.7 Hyperkalemia | 1 | 0.0% |
-| 5.2 Acute Interstitial Nephritis | 1 | 0.0% |
-| 4.2 Cisapride And Pimozide | 1 | 0.0% |
-| Absorption And Bioavailability | 1 | 0.0% |
-| 1.2     Pediatric Heart Failure | 1 | 0.0% |
-| 2.5 Switching Patients To Or From A Monoamine Oxidase Inhibitor Antidepressant | 1 | 0.0% |
-| 8.10 Severe Renal Impairment | 1 | 0.0% |
-| Adverse Events Reported From Other Clinical Trials | 1 | 0.0% |
-| 16.1 Moxifloxacin Tablets, Usp | 1 | 0.0% |
-| 2.2 Exercise-Induced Bronchoconstriction (Eib) | 1 | 0.0% |
-| 2.2 Dosage Of Levofloxacin Tablets In Pediatric Patients With Inhalational Anthrax Or Plague | 1 | 0.0% |
-| 5.4 Aspirin Sensitivity | 1 | 0.0% |
-| 2.1   Dosage And Administration Overview | 1 | 0.0% |
-| Keep Out Of Reach Of Children. | 1 | 0.0% |
-| Panic Disorder: | 1 | 0.0% |
-| 7.4 Digoxin | 1 | 0.0% |
-| 1.6 Usage | 1 | 0.0% |
-| 1.1 Community Acquired Pneumonia | 1 | 0.0% |
-| 5.15   Immunization And Risks Associated With Live Vaccines | 1 | 0.0% |
-| 7.1 Effects Of Other Drugs On Metoclopramide | 1 | 0.0% |
-| Dexamethasone Tablets, 0.75 Mg | 1 | 0.0% |
-| 5.5 Abnormal Thinking And Behavioral Changes | 1 | 0.0% |
-| Inactive Ingredients: | 1 | 0.0% |
-| 5.6 Severe Skin Reactions | 1 | 0.0% |
-| Package Label-Principal Display Panel - 5 Mg/5 Ml  (120 Ml Bottle) | 1 | 0.0% |
-| 14.1 Atrial Fibrillation | 1 | 0.0% |
-| 5.2 Heart Failure | 1 | 0.0% |
-| 5.3 Myopathy/Rhabdomyolysis | 1 | 0.0% |
-| 2.5   Recommended Dosage For Psoriasis | 1 | 0.0% |
-| 5.5 All-Cause Mortality In Patients With Coronary Artery Disease 1 To 10 Years After Clarithromycin Exposure | 1 | 0.0% |
-| 8.6 Dosing In Renal Impairment | 1 | 0.0% |
-| 7.2	Anticholinergics | 1 | 0.0% |
-| 5.1 Thrombotic Thrombocytopenic Purpura/Hemolytic Uremic Syndrome (Ttp/Hus) | 1 | 0.0% |
-| 2.3 Combination Dosing Regimens For | 1 | 0.0% |
-| 2.4 Dosage Modifications In Patients With Hepatic Impairment | 1 | 0.0% |
-| Diuretics | 1 | 0.0% |
-| 2.1 Dosage For Treatment Of Major Depressive Disorder | 1 | 0.0% |
-| 5.4 Bradycardia | 1 | 0.0% |
-| 14.6 Complicated Intra-Abdominal Infections | 1 | 0.0% |
-| 5.4 Neuromuscular Toxicity | 1 | 0.0% |
-| 5.4 Neutropenia And Agranulocytosis | 1 | 0.0% |
-| 5.4 Hepatic Failure | 1 | 0.0% |
-| 16.2 Tablets | 1 | 0.0% |
-| 6.1 Clinical
-Trials Experience In Gout | 1 | 0.0% |
-| 1.2 Maintenance Treatment Of Chronic Obstructive Pulmonary Disease | 1 | 0.0% |
-| 7.6 Mao Inhibitors | 1 | 0.0% |
-| 2.1 Recommended Testing Prior To Treatment Initiation | 1 | 0.0% |
-| 2.7 Dosage Adjustment Due To Drug Interactions | 1 | 0.0% |
-| Central And Peripheral Nervous System Effects | 1 | 0.0% |
-| 2.2 Treatment Of Heart Failure | 1 | 0.0% |
-| 2.5     Preparation And Administration Of Oral Pellets | 1 | 0.0% |
-| 8.8 Race Or Ethnicity | 1 | 0.0% |
-| 5.6   Pulmonary Toxicity | 1 | 0.0% |
-| Rx Only | 1 | 0.0% |
-| 2.7 Discontinuing Duloxetine Delayed-Release Capsules | 1 | 0.0% |
-| 7.1 Drugs And Supplements Increasing Serum Potassium | 1 | 0.0% |
-| 2.5  Preparation And Storage Of Constituted Oseltamivir Phosphate For Oral Suspension | 1 | 0.0% |
-| 5.11 Interference With Investigations For Neuroendocrine Tumors | 1 | 0.0% |
-| Animal Pharmacology: | 1 | 0.0% |
-| 2.5 Dosage And Administration Modifications Due To Drug Interactions | 1 | 0.0% |
-| 7.8 Drugs Metabolized By Cyp1A2 | 1 | 0.0% |
-| 8.2   Lactation | 1 | 0.0% |
-| 2.4 Drug Interaction With Chelation Agents: Antacids, Sucralfate, Metal Cations, Multivitamins | 1 | 0.0% |
-| 2.6 Hydration For Patients Receiving Levofloxacin Tablets | 1 | 0.0% |
-| 1.5 Plague | 1 | 0.0% |
-| 7.6 Lithium | 1 | 0.0% |
-| 14.1 Generalized Anxiety Disorder | 1 | 0.0% |
-| 7.5 Drugs That Prolong Qt | 1 | 0.0% |
-| 5.5 Bone Fracture | 1 | 0.0% |
-| 11.1 Moxifloxacin Tablets, Usp | 1 | 0.0% |
-| 5.8 Hypertension | 1 | 0.0% |
-| 5.5 Activation Of Mania/Hypomania | 1 | 0.0% |
-| Allergy | 1 | 0.0% |
-| 5.8 Skeletal Muscle Myopathy Or Neuropathy | 1 | 0.0% |
-| 14.2     Pediatric Heart Failure | 1 | 0.0% |
-| 14.2 Irbesartan And Hydrochlorothiazide | 1 | 0.0% |
-| 2.3 Recommended Dosage For Specific Populations | 1 | 0.0% |
-| 8.9 Cyp2D6 Poor Metabolizers | 1 | 0.0% |
-| 2.1 Dosage In Generalized Anxiety Disorder | 1 | 0.0% |
-| 5.1 Presence Of Gastric Malignancy | 1 | 0.0% |
-| 5.4 Worsening Of Psoriasis | 1 | 0.0% |
-| 10.2 Recommended Treatment | 1 | 0.0% |
-| 14.2 Exercise-Induced Bronchospasm | 1 | 0.0% |
-| 5.7 Hypersensitivity Reactions | 1 | 0.0% |
-| 2.4   Recommended Dosage For Polyarticular Juvenile Idiopathic Arthritis | 1 | 0.0% |
-| 2.4 Asthma And Allergic Rhinitis | 1 | 0.0% |
-| 2.5 Preparation Of Suspension (For 200 Ml Of A 2.5 Mg/Ml Suspension) | 1 | 0.0% |
-| 14.3 Pathological Hypersecretory Conditions Including Zollinger-Ellison Syndrome | 1 | 0.0% |
-| 7.12 Drugs Metabolized By Cyp2C19 | 1 | 0.0% |
-| 7.2 Drugs That Affect Drug Metabolism Via Cytochrome P450 | 1 | 0.0% |
-| 5.8 Hyperkalemia | 1 | 0.0% |
-| 10.2 Overdosage Management | 1 | 0.0% |
-| 5.1 Risks Associated With Combination Treatment With A Statin, Fenofibrate, Or Other Ldl-C Lowering Therapies | 1 | 0.0% |
-| 14.1 Acute Bacterial Maxillary Sinusitis | 1 | 0.0% |
-| 6.4 Adverse Reactions Occurring At An Incidence Of 5% Or More Among Duloxetine-Treated Patients In Adult Placebo-Controlled Trials | 1 | 0.0% |
-| 14.4 Uncomplicated Skin And Skin Structure Infections | 1 | 0.0% |
-| 2.2 Dosage For Malaria In Adult And
-Pediatric Patients | 1 | 0.0% |
-| 5.4 Ototoxicity | 1 | 0.0% |
-| 2.1 General Dosage And Administration | 1 | 0.0% |
-| 5.16 Thrombotic Microangiopathy (Including Hemolytic Uremic Syndrome And Thrombotic Thrombocytopenic Purpura) | 1 | 0.0% |
-| 2.5 Treatment Of Primary Hyperaldosteronism | 1 | 0.0% |
-| 2.2 Recommended Dosage For Metformin Hydrochloride Extended-Release Tablets In Adults And Pediatric Patients Aged 10 Years And Older With Type 2 Diabetes Mellitus | 1 | 0.0% |
-| Concomitant Hmg-Coa Reductase Inhibitors | 1 | 0.0% |
-| 5.3 Need To Evaluate For Comorbid Diagnoses | 1 | 0.0% |
-| Strongyloides Infestation | 1 | 0.0% |
-| 5.13 Myocardial Hypertrophy | 1 | 0.0% |
-| Qt Prolongation/Torsade De Pointes (Tdp) | 1 | 0.0% |
-| 5.11 Effect On Blood Pressure | 1 | 0.0% |
-| 2.1 Individualized Dosing | 1 | 0.0% |
-| 5.10 Not Recommended For Use With Sirolimus | 1 | 0.0% |
-| 5.11 Hyponatremia And/Or Syndrome Of Inappropriate Antidiuretic Hormone Secretion (Siadh) | 1 | 0.0% |
-| 10.2 Treatment | 1 | 0.0% |
-| In Cell Culture | 1 | 0.0% |
-| Pharmacodynamics: | 1 | 0.0% |
-| 2.6 Missed Dose | 1 | 0.0% |
-| Dysmenorrhea | 1 | 0.0% |
-| 5.4 Increased Risk Of Bleeding | 1 | 0.0% |
-| 8.9   Immunocompromised Patients | 1 | 0.0% |
-| 8.6     Hepatic Impairment | 1 | 0.0% |
-| 5.2 Neuropsychiatric Adverse Events And Suicide Risk In Smoking Cessation Treatment | 1 | 0.0% |
-| 6.8 Laboratory Changes In Adults | 1 | 0.0% |
-| Resistance | 1 | 0.0% |
-| 7.4 Anticoagulants | 1 | 0.0% |
-| Cardiovascular | 1 | 0.0% |
-| Do Not Use If You Have: | 1 | 0.0% |
-| 5.4 Cardiovascular Effects | 1 | 0.0% |
-| 5.11   Serious Infections | 1 | 0.0% |
-| 12.1     Mechanism Of Action | 1 | 0.0% |
-| 7.2 Dual Blockade Of The Renin-Angiotensin System (Ras) | 1 | 0.0% |
-| 14.2 Panic Disorders | 1 | 0.0% |
-| 5.12   Neurotoxicity | 1 | 0.0% |
-| Nonteratogenic Effects | 1 | 0.0% |
-| 2.5 Dosage Regimens For Mycobacterial Infections | 1 | 0.0% |
+| hypersensitivity reactions | 10 | 0.2% |
+| spl medguide section | 10 | 0.2% |
+| hepatotoxicity | 9 | 0.2% |
+| dependence | 9 | 0.2% |
+| serious asthma-related events – hospitalizations, intubations, death | 9 | 0.2% |
+| pediatric patients | 9 | 0.2% |
+| carcinogenesis, mutagenesis, impairment of fertility | 9 | 0.2% |
+| clinical_studies | 9 | 0.2% |
+| abuse | 9 | 0.2% |
+| pharmacokinetics and drug metabolism | 9 | 0.2% |
+| patient_counseling | 8 | 0.1% |
+| drug_interactions | 8 | 0.1% |
+| lithium | 8 | 0.1% |
+| adults | 8 | 0.1% |
+| usage | 8 | 0.1% |
+| fetal toxicity | 8 | 0.1% |
+| heart failure | 7 | 0.1% |
+| pharmacogenomics | 7 | 0.1% |
+| hyperkalemia | 6 | 0.1% |
+| adverse_reactions | 6 | 0.1% |
+| spl_medguide | 6 | 0.1% |
+| cardiovascular effects | 6 | 0.1% |
+| clinical studies experience | 6 | 0.1% |
+| qt prolongation | 6 | 0.1% |
+| do not use | 6 | 0.1% |
+| mycobacterial infections | 6 | 0.1% |
+| stop use | 6 | 0.1% |
+| inactive ingredient | 6 | 0.1% |
+| patient medication information | 6 | 0.1% |
+| ask doctor | 6 | 0.1% |
+| severe cutaneous adverse reactions | 6 | 0.1% |
+| transferring patients from systemic corticosteroid therapy | 6 | 0.1% |
+| development of drug-resistant bacteria | 6 | 0.1% |
+| clinical trials experience in chronic obstructive pulmonary disease | 5 | 0.1% |
+| recent major changes | 5 | 0.1% |
+| myopathy and rhabdomyolysis | 5 | 0.1% |
+| hypertensive patients with left ventricular hypertrophy | 5 | 0.1% |
+| effect of sporanox | 5 | 0.1% |
+| spl_unclassified_section | 5 | 0.1% |
+| package/label principal display panel | 5 | 0.1% |
+| generalized anxiety disorder | 5 | 0.1% |
+| risks | 5 | 0.1% |
+| post-marketing experience | 5 | 0.1% |
+| adult heart failure | 5 | 0.1% |
+| dose
+modification for coadministration of interacting drugs | 5 | 0.1% |
+| pharmacodynamics and clinical effects | 5 | 0.1% |
+| deterioration of disease and acute episodes | 4 | 0.1% |
+| plague | 4 | 0.1% |
+| inactive ingredients | 4 | 0.1% |
+| drug/laboratory test interactions | 4 | 0.1% |
+| reduction in bone mineral density | 4 | 0.1% |
+| important administration instructions | 4 | 0.1% |
+| drug and or laboratory test interactions | 4 | 0.1% |
+| coexisting conditions | 4 | 0.1% |
+| chronic musculoskeletal pain | 4 | 0.1% |
+| limitations of use | 4 | 0.1% |
+| stop use and ask a doctor if | 4 | 0.1% |
+| females and males of reproductive potential | 4 | 0.1% |
+| prevention of chemotherapy-induced nausea and vomiting | 4 | 0.1% |
+| serotonin syndrome | 4 | 0.1% |
+| recommended dosage in patients with renal impairment | 4 | 0.1% |
+| beta-adrenergic receptor blocking agents | 4 | 0.1% |
+| development of drug resistant bacteria | 4 | 0.1% |
+| digoxin | 4 | 0.1% |
+| paradoxical bronchospasm | 4 | 0.1% |
+| hypotension | 4 | 0.1% |
+| lactic acidosis | 4 | 0.1% |
+| clinical pharmacology: | 3 | 0.1% |
+| dosage_forms | 3 | 0.1% |
+| acute bacterial exacerbation of chronic bronchitis | 3 | 0.1% |
+| hypercorticism and adrenal suppression | 3 | 0.1% |
+| community acquired pneumonia | 3 | 0.1% |
+| hepatic dysfunction | 3 | 0.1% |
+| distribution | 3 | 0.1% |
+| when using | 3 | 0.1% |
+| when using this product | 3 | 0.1% |
+| nosocomial pneumonia | 3 | 0.1% |
+| worsening of urinary retention | 3 | 0.1% |
+| treatment of influenza | 3 | 0.1% |
+| geriatric_use | 3 | 0.1% |
+| serious infections | 3 | 0.1% |
+| metformin hydrochloride tablets | 3 | 0.1% |
+| bronchospasm associated with asthma | 3 | 0.1% |
+| pneumonia | 3 | 0.1% |
+| diuretics | 3 | 0.1% |
+| hypersensitivity | 3 | 0.1% |
+| metformin_hydrochloride_tablets | 3 | 0.1% |
+| clostridium difficile-associated diarrhea | 3 | 0.1% |
+| treatment | 3 | 0.1% |
+| complicated skin and skin structure infections | 3 | 0.1% |
+| lactic_acidosis | 3 | 0.1% |
+| nephropathy in type 2 diabetic patients | 3 | 0.1% |
+| prophylaxis of influenza | 3 | 0.1% |
+| clinical trials experience in asthma | 3 | 0.1% |
+| initial therapy | 3 | 0.1% |
+| fundic gland polyps | 3 | 0.1% |
+| allergic rhinitis (seasonal and perennial) | 3 | 0.1% |
+| angle-closure glaucoma | 3 | 0.1% |
+| renal_impairment | 3 | 0.1% |
+| central nervous system effects | 3 | 0.1% |
+| hypoglycemia | 3 | 0.1% |
+| eradication of h. pylori to reduce the risk of duodenal ulcer recurrence | 3 | 0.1% |
+| cutaneous and systemic lupus erythematosus | 3 | 0.1% |
+| mechanism_of_action | 3 | 0.1% |
+| effect on growth | 3 | 0.1% |
+| impaired renal function | 3 | 0.1% |
+| anaphylactoid and possibly related reactions | 3 | 0.1% |
+| signs and symptoms | 3 | 0.1% |
+| nephrotoxicity | 3 | 0.1% |
+| bone fracture | 3 | 0.1% |
+| immune-mediated necrotizing myopathy | 3 | 0.1% |
+| otitis media | 3 | 0.1% |
+| ask a doctor before use if you have | 3 | 0.1% |
+| hypokalemia and hyperglycemia | 3 | 0.1% |
+| clinical trial experience | 3 | 0.1% |
+| suicidal thoughts and behaviors in children, adolescents and young adults | 3 | 0.1% |
+| increases in hba1c and fasting serum glucose levels | 3 | 0.1% |
+| warfarin | 3 | 0.1% |
+| serious skin reactions | 3 | 0.1% |
+| hepatic_impairment | 3 | 0.1% |
+| hepatic failure | 3 | 0.1% |
+| uncomplicated skin and skin structure infections | 3 | 0.1% |
+| myelosuppression | 3 | 0.1% |
+| suicidal thoughts and behaviors in children, adolescents, and young adults | 3 | 0.1% |
+| dual blockade of the renin-angiotensin system (ras) | 3 | 0.1% |
+| inhibitors of cytochrome p450 3a4 | 3 | 0.1% |
+| general considerations | 2 | 0.0% |
+| myopathy_and_rhabdomyolysis | 2 | 0.0% |
+| xanthine derivatives, steroids, or diuretics | 2 | 0.0% |
+| major depressive disorder | 2 | 0.0% |
+| recommended dosage | 2 | 0.0% |
+| recommended dosage for symptomatic, documented gastroesophageal reflux in adults who fail conventional therapy | 2 | 0.0% |
+| boxed_warning | 2 | 0.0% |
+| eradication of | 2 | 0.0% |
+| dependence and withdrawal reactions | 2 | 0.0% |
+| hematologic changes | 2 | 0.0% |
+| uncomplicated urinary tract infections | 2 | 0.0% |
+| drugs having clinically important interactions with alprazolam | 2 | 0.0% |
+| renal toxicity | 2 | 0.0% |
+| gold | 2 | 0.0% |
+| calciphylaxis | 2 | 0.0% |
+| inhalational anthrax (post-exposure) | 2 | 0.0% |
+| initial_and_maintenance_dosing | 2 | 0.0% |
+| suicidal behavior and ideation: | 2 | 0.0% |
+| monoamine oxidase inhibitors and tricyclic antidepressants | 2 | 0.0% |
+| hyponatremia | 2 | 0.0% |
+| recommended_target_inr_ranges_and_durations_for_individual_indications | 2 | 0.0% |
+| nonclinical_toxicology | 2 | 0.0% |
+| initial and maintenance dosing | 2 | 0.0% |
+| activation of mania/hypomania | 2 | 0.0% |
+| reducing the risk of gastric ulcers caused by nonsteroidal anti-inflammatory drugs (nsaids) | 2 | 0.0% |
+| reduction in risk of myocardial infarction, stroke, and death from cardiovascular causes | 2 | 0.0% |
+| chickenpox | 2 | 0.0% |
+| healing of duodenal ulcers in adults | 2 | 0.0% |
+| non–potassium-sparing diuretics | 2 | 0.0% |
+| photosensitivity/phototoxicity | 2 | 0.0% |
+| neurotoxicity | 2 | 0.0% |
+| treatment of hypertriglyceridemia | 2 | 0.0% |
+| acute myocardial infarction | 2 | 0.0% |
+| monoamine oxidase inhibitors, tricyclic antidepressants, qtc prolonging drugs | 2 | 0.0% |
+| glaucoma and cataracts, worsening of narrow-angle glaucoma | 2 | 0.0% |
+| non-potassium sparing diuretics | 2 | 0.0% |
+| drugs known to have clinically important drug interactions with allopurinol tablets | 2 | 0.0% |
+| other serious and sometimes fatal adverse reactions | 2 | 0.0% |
+| maintenance treatment of chronic obstructive pulmonary disease | 2 | 0.0% |
+| presence of gastric malignancy | 2 | 0.0% |
+| gout flares | 2 | 0.0% |
+| immunocompromised patients | 2 | 0.0% |
+| immediate hypersensitivity reactions | 2 | 0.0% |
+| liver transplantation | 2 | 0.0% |
+| neuropsychiatric events | 2 | 0.0% |
+| diarrhea associated with | 2 | 0.0% |
+| antidiabetic agents | 2 | 0.0% |
+| absorption | 2 | 0.0% |
+| usage in pregnancy | 2 | 0.0% |
+| pathological hypersecretory conditions including zollinger-ellison syndrome | 2 | 0.0% |
+| acute interstitial nephritis | 2 | 0.0% |
+| alcohol | 2 | 0.0% |
+| maintenance of healing of erosive esophagitis | 2 | 0.0% |
+| erosive esophagitis | 2 | 0.0% |
+| cyanocobalamin (vitamin b-12) deficiency | 2 | 0.0% |
+| pharyngitis/tonsillitis | 2 | 0.0% |
+| avoid excessive use of breztri aerosphere and avoid use with other long-acting beta | 2 | 0.0% |
+| females_and_males_of_reproductive_potential | 2 | 0.0% |
+| keep out of reach of children | 2 | 0.0% |
+| controlled clinical trials | 2 | 0.0% |
+| cyclosporine | 2 | 0.0% |
+| irbesartan and hydrochlorothiazide | 2 | 0.0% |
+| photosensitivity | 2 | 0.0% |
+| erosive esophagitis (ee) associated with gastroesophageal reflux disease (gerd) | 2 | 0.0% |
+| carcinogenesis_and_mutagenesis_and_impairment_of_fertility | 2 | 0.0% |
+| gastrointestinal | 2 | 0.0% |
+| metformin_hydrochloride_extended_release_tablets | 2 | 0.0% |
+| healing of erosive or ulcerative gerd in adults | 2 | 0.0% |
+| seizures | 2 | 0.0% |
+| non-steroidal anti-inflammatory agents including selective cyclooxygenase-2 inhibitors (cox-2 inhibitors) | 2 | 0.0% |
+| adrenergic drugs | 2 | 0.0% |
+| recommended dosage for prophylaxis of influenza | 2 | 0.0% |
+| peripheral neuropathy | 2 | 0.0% |
+| interaction with methotrexate | 2 | 0.0% |
+| pediatric_use | 2 | 0.0% |
+| dose
+modification in renal impairment | 2 | 0.0% |
+| neuroleptic malignant syndrome | 2 | 0.0% |
+| severe renal impairment | 2 | 0.0% |
+| helicobacter pylori eradication in patients with peptic ulcer disease or symptomatic non-ulcer disease in adults | 2 | 0.0% |
+| long-term maintenance of healing of erosive esophagitis | 2 | 0.0% |
+| other adverse reactions observed during the premarketing and postmarketing clinical trial evaluation of duloxetine in adults | 2 | 0.0% |
+| cockayne syndrome | 2 | 0.0% |
+| administration | 2 | 0.0% |
+| exacerbation of myasthenia gravis | 2 | 0.0% |
+| effects of other drugs on tacrolimus | 2 | 0.0% |
+| risk of aortic aneurysm and dissection | 2 | 0.0% |
+| pharmacokinetics and metabolism | 2 | 0.0% |
+| recommended target inr ranges and durations for individual indications | 2 | 0.0% |
+| pediatric heart failure | 2 | 0.0% |
+| metformin hydrochloride extended-release tablets | 2 | 0.0% |
+| probenecid | 2 | 0.0% |
+| recommended dosage in adult patients | 2 | 0.0% |
+| hypomagnesemia | 2 | 0.0% |
+| serious adverse reactions due to concomitant use with other drugs | 2 | 0.0% |
+| geriatric patients | 2 | 0.0% |
+| diabetic peripheral neuropathic pain | 2 | 0.0% |
+| myocardial_infarction | 2 | 0.0% |
+| disabling and potentially irreversible serious adverse reactions including tendinitis and tendon rupture, peripheral neuropathy, and central nervous system effects | 2 | 0.0% |
+| blood glucose disturbances | 2 | 0.0% |
+| hemorrhage | 2 | 0.0% |
+| exercise-induced bronchoconstriction (eib) | 2 | 0.0% |
+| embryo-fetal toxicity | 2 | 0.0% |
+| clinical laboratory test findings | 2 | 0.0% |
+| for oral administration | 2 | 0.0% |
+| immunosuppression and risk of infections | 2 | 0.0% |
+| complicated urinary tract infections and acute pyelonephritis: 5-day treatment regimen | 2 | 0.0% |
+| amebiasis | 2 | 0.0% |
+| recommended dosage for acute and recurrent diabetic gastroparesis in adults | 2 | 0.0% |
+| metabolism | 2 | 0.0% |
+| special populations | 2 | 0.0% |
+| effect of other drugs on sporanox | 2 | 0.0% |
+| community-acquired pneumonia: 7 to 14 day treatment regimen | 2 | 0.0% |
+| cimetidine | 2 | 0.0% |
+| clinical trial data sources | 2 | 0.0% |
+| irbesartan monotherapy | 2 | 0.0% |
+| other considerations | 2 | 0.0% |
+| myocardial infarction | 2 | 0.0% |
+| adult patients | 2 | 0.0% |
+| oropharyngeal candidiasis | 2 | 0.0% |
+| early lyme disease | 2 | 0.0% |
+| community-acquired pneumonia | 2 | 0.0% |
+| respiratory depression | 2 | 0.0% |
+| tendinitis and tendon rupture | 2 | 0.0% |
+| hypersensitivity reactions including anaphylaxis | 2 | 0.0% |
+| recommended dosage for gout | 2 | 0.0% |
+| teratogenic effects: pregnancy category c | 2 | 0.0% |
+| laboratory abnormalities | 2 | 0.0% |
+| qt-prolongation and torsade de pointes | 2 | 0.0% |
+| anaphylactic reactions | 2 | 0.0% |
+| acute bacterial sinusitis: 5-day and 10 to 14 day treatment regimens | 1 | 0.0% |
+| recommended_dosage_for_metformin_hydrochloride_extended_release_tablets_in_adults_and_pediatric_patients_aged_10_years_and_older_with_type_2_diabetes_mellitus | 1 | 0.0% |
+| miscellaneous | 1 | 0.0% |
+| masking of progressive ileus and gastric distension | 1 | 0.0% |
+| non-steroidal anti-inflammatory drugs | 1 | 0.0% |
+| effect on blood pressure | 1 | 0.0% |
+| rosuvastatin tablets effects on other drugs | 1 | 0.0% |
+| preparation of suspension (for 200 ml of a 2.5 mg/ml suspension) | 1 | 0.0% |
+| cyanocobalamin (vitamin b12) deficiency | 1 | 0.0% |
+| use in patients with concomitant illness | 1 | 0.0% |
+| adverse events reported in toenail onychomycosis clinical trials | 1 | 0.0% |
+| vital sign changes in adults | 1 | 0.0% |
+| inhibitors of cyp450 liver enzymes | 1 | 0.0% |
+| dose adjustment for hepatic impairment | 1 | 0.0% |
+| drugs_that_increase_bleeding_risk | 1 | 0.0% |
+| eosinophilic conditions and churg-strauss syndrome | 1 | 0.0% |
+| thrombotic microangiopathy | 1 | 0.0% |
+| suppressive therapy: suppression of recurrent genital herpes in immunocompetent adults | 1 | 0.0% |
+| botanical_herbal_products_and_foods | 1 | 0.0% |
+| use of anti-inflammatory agents | 1 | 0.0% |
+| inducers of cyp450 liver enzymes | 1 | 0.0% |
+| hypokalemia | 1 | 0.0% |
+| bone-marrow depression | 1 | 0.0% |
+| hepatitis b virus reactivation | 1 | 0.0% |
+| incidence greater than 1% | 1 | 0.0% |
+| patients with hepatic failure | 1 | 0.0% |
+| limb ischemia, necrosis, and gangrene in patients with hit and hitts | 1 | 0.0% |
+| hypotension in volume - or salt-depleted patients | 1 | 0.0% |
+| peripheral and optic neuropathy | 1 | 0.0% |
+| treatment of erosive esophagitis (ee) | 1 | 0.0% |
+| recommended dosing schedule | 1 | 0.0% |
+| package label.principal display panel - carton label 6 mg/ml | 1 | 0.0% |
+| asthma and allergic rhinitis | 1 | 0.0% |
+| postmarketing spontaneous reports | 1 | 0.0% |
+| treatment in life-threatening situations | 1 | 0.0% |
+| anaphylactoid reactions during desensitization | 1 | 0.0% |
+| cardiac disease | 1 | 0.0% |
+| tolerance | 1 | 0.0% |
+| switching between metformin hydrochloride immediate-release tablets and metformin hydrochloride extended-release tablets | 1 | 0.0% |
+| increases_in_hba1c_and_fasting_serum_glucose_levels | 1 | 0.0% |
+| serum creatinine | 1 | 0.0% |
+| discontinuing treatment with citalopram tablets | 1 | 0.0% |
+| prolongation of the qt interval | 1 | 0.0% |
+| local effects of inhaled corticosteroids | 1 | 0.0% |
+| cardiomyopathy and ventricular
+arrhythmias | 1 | 0.0% |
+| ask doctor or pharmacist | 1 | 0.0% |
+| treatment of active benign gastric ulcer | 1 | 0.0% |
+| phenylketonuria | 1 | 0.0% |
+| development of potential for microbial overgrowth | 1 | 0.0% |
+| cns-depressant effects and next-day impairment | 1 | 0.0% |
+| effects on gastric acid secretion | 1 | 0.0% |
+| laboratory test interactions | 1 | 0.0% |
+| treatment of primary hyperaldosteronism | 1 | 0.0% |
+| clinical studies: | 1 | 0.0% |
+| recommended_dosage_in_adult_patients | 1 | 0.0% |
+| potential for other drugs to affect bupropion hydrochloride tablets | 1 | 0.0% |
+| fmf | 1 | 0.0% |
+| pulmonary toxicity | 1 | 0.0% |
+| antimicrobial activity | 1 | 0.0% |
+| acute tubulointerstitial nephritis | 1 | 0.0% |
+| monoamine oxidase inhibitors | 1 | 0.0% |
+| can other medicines or food affect promethazine? | 1 | 0.0% |
+| effects in documented coronary artery disease | 1 | 0.0% |
+| conversion from other anticoagulants | 1 | 0.0% |
+| dose in patients with renal impairment | 1 | 0.0% |
+| onychomycosis of the toenail | 1 | 0.0% |
+| susceptibility testing | 1 | 0.0% |
+| acute bacterial maxillary sinusitis | 1 | 0.0% |
+| inhibitors of cyp1a2 | 1 | 0.0% |
+| important administration information | 1 | 0.0% |
+| major surgery | 1 | 0.0% |
+| cardiac dysrhythmias | 1 | 0.0% |
+| risks associated with combination treatment with a statin, fenofibrate, or other ldl-c lowering therapies | 1 | 0.0% |
+| use in patients with chronic conditions | 1 | 0.0% |
+| heart failure post-myocardial infarction | 1 | 0.0% |
+| tumorigenicity | 1 | 0.0% |
+| pseudoaldosteronism | 1 | 0.0% |
+| systemic_atheroemboli_and_cholesterol_microemboli | 1 | 0.0% |
+| abnormal bleeding | 1 | 0.0% |
+| increased risk of adverse reactions due to third-space accumulation | 1 | 0.0% |
+| influenza vaccines | 1 | 0.0% |
+| blastomycosis | 1 | 0.0% |
+| use in patients with hepatic impairment | 1 | 0.0% |
+| other extrapyramidal symptoms | 1 | 0.0% |
+| cardio-renal | 1 | 0.0% |
+| switching_between_metformin_hydrochloride_immediate_release_tablets_and_metformin_hydrochloride_extended_release_tablets | 1 | 0.0% |
+| for treatment of legionnaires' disease | 1 | 0.0% |
+| chelation agents: antacids, sucralfate, metal cations, multivitamins | 1 | 0.0% |
+| lurasidone | 1 | 0.0% |
+| liver enzymes | 1 | 0.0% |
+| conversion_from_other_anticoagulants | 1 | 0.0% |
+| hepatic failure and impaired liver function | 1 | 0.0% |
+| mycophenolic acid | 1 | 0.0% |
+| rheumatic disorders | 1 | 0.0% |
+| risk of bacterial infections | 1 | 0.0% |
+| patients with hiv-1 disease | 1 | 0.0% |
+| anaphylactic reaction | 1 | 0.0% |
+| interchangeability | 1 | 0.0% |
+| use_in_pregnant_women_with_mechanical_heart_valves | 1 | 0.0% |
+| antibiotics_and_antifungals | 1 | 0.0% |
+| hypersensitivity reaction | 1 | 0.0% |
+| animal pharmacology and animal toxicology | 1 | 0.0% |
+| interactions with laboratory or diagnostic testing | 1 | 0.0% |
+| what should i tell my healthcare professional? | 1 | 0.0% |
+| catecholamine depleting drugs | 1 | 0.0% |
+| causal relationship unknown | 1 | 0.0% |
+| animal pharmacology and toxicology | 1 | 0.0% |
+| edema associated with hepatic cirrhosis or nephrotic syndrome | 1 | 0.0% |
+| renal effects | 1 | 0.0% |
+| electrolyte and metabolic abnormalities | 1 | 0.0% |
+| use with alcohol | 1 | 0.0% |
+| allergic states | 1 | 0.0% |
+| laboratory values | 1 | 0.0% |
+| increased risk of infection | 1 | 0.0% |
+| pediatric dosage | 1 | 0.0% |
+| potential for bupropion hydrochloride tablets to affect other drugs | 1 | 0.0% |
+| potential drug-drug interaction with macrolides | 1 | 0.0% |
+| laboratory changes in adults | 1 | 0.0% |
+| risk in patients with impaired respiratory function | 1 | 0.0% |
+| package/label display panel – carton – 400 mg | 1 | 0.0% |
+| limb_ischemia_necrosis_and_gangrene_in_patients_with_hit_and_hitts | 1 | 0.0% |
+| continued therapy | 1 | 0.0% |
+| storing your medicine | 1 | 0.0% |
+| rhabdomyolysis | 1 | 0.0% |
+| digitalis, clonidine, and calcium channel blockers | 1 | 0.0% |
+| clinical
+trials experience in gout | 1 | 0.0% |
+| abnormal thinking and behavioral changes | 1 | 0.0% |
+| recommended dosage in pediatric patients 10 years of age and older with hofh | 1 | 0.0% |
+| race | 1 | 0.0% |
+| non-steroidal anti-inflammatory drugs (nsaids) including selective cyclooxygenase-2 inhibitors (cox-2 inhibitors) | 1 | 0.0% |
+| dual inhibition of cyp1a2 and cyp2d6 | 1 | 0.0% |
+| management of overdose | 1 | 0.0% |
+| dual blockade of the renin-angiotensin system | 1 | 0.0% |
+| directions for mixing oral suspension | 1 | 0.0% |
+| package label-principal display panel - 5 mg/5 ml (120 ml carton) | 1 | 0.0% |
+| urinary hesitation and retention | 1 | 0.0% |
+| recommended dosage for specific populations | 1 | 0.0% |
+| important dosage and administration information | 1 | 0.0% |
+| anaphylactic reactions with prograf injection | 1 | 0.0% |
+| suppressive therapy | 1 | 0.0% |
+| systemic atheroemboli and cholesterol microemboli | 1 | 0.0% |
+| interference with urinary normetanephrine measurements | 1 | 0.0% |
+| concomitant corticosteroid use | 1 | 0.0% |
+| sedation | 1 | 0.0% |
+| anticholinergics | 1 | 0.0% |
+| use of duloxetine delayed-release capsules with other maois such as linezolid or methylene blue | 1 | 0.0% |
+| proteinuria and hematuria | 1 | 0.0% |
+| clostridium difficile associated diarrhea | 1 | 0.0% |
+| cholelithiasis | 1 | 0.0% |
+| patients with hepatic impairment | 1 | 0.0% |
+| reduction of transmission | 1 | 0.0% |
+| decreased cardiac contractility | 1 | 0.0% |
+| dosing in renal impairment for adults and pediatric patients aged 3 months and older and weight greater than 40 kg | 1 | 0.0% |
+| acute renal failure | 1 | 0.0% |
+| impact of amlodipine on other drugs | 1 | 0.0% |
+| combination therapy with amoxicillin and clarithromycin | 1 | 0.0% |
+| orthostatic hypotension, falls and syncope | 1 | 0.0% |
+| theophylline | 1 | 0.0% |
+| allopurinol | 1 | 0.0% |
+| dose
+modification in hepatic impairment | 1 | 0.0% |
+| endogenous factors affecting inr | 1 | 0.0% |
+| drugs that affect drug metabolism via cytochrome p450 | 1 | 0.0% |
+| hematological effects | 1 | 0.0% |
+| fingernails only | 1 | 0.0% |
+| disulfiram | 1 | 0.0% |
+| actions | 1 | 0.0% |
+| interaction with drugs that inhibit metabolism via cytochrome p450 3a | 1 | 0.0% |
+| what are the risks? | 1 | 0.0% |
+| radiation-induced nausea and vomiting | 1 | 0.0% |
+| individualized_dosing | 1 | 0.0% |
+| recurrent episodes | 1 | 0.0% |
+| dexamethasone suppression tests | 1 | 0.0% |
+| uncomplicated skin and skin-structure infections | 1 | 0.0% |
+| atorvastatin_calcium_effects_on_other_drugs | 1 | 0.0% |
+| duodenal ulcer | 1 | 0.0% |
+| use in patients with depression | 1 | 0.0% |
+| recommended pediatric dosage | 1 | 0.0% |
+| clinical trials experience in adult subjects | 1 | 0.0% |
+| congestive heart failure and cardiac effects | 1 | 0.0% |
+| discontinuation or dosage reduction of alprazolam tablets | 1 | 0.0% |
+| cough | 1 | 0.0% |
+| anaerobic bacterial infections | 1 | 0.0% |
+| mechanical and bioprosthetic heart valves | 1 | 0.0% |
+| seizure potential | 1 | 0.0% |
+| cns depression | 1 | 0.0% |
+| worsening of psoriasis | 1 | 0.0% |
+| use with cns depressants | 1 | 0.0% |
+| recommended_dosage_in_patients_with_renal_impairment | 1 | 0.0% |
+| tramadol | 1 | 0.0% |
+| not interchangeable with extended-release tacrolimus products - medication errors | 1 | 0.0% |
+| switching a patient to or from a monoamine oxidase inhibitor (maoi) intended to treat psychiatric disorders | 1 | 0.0% |
+| hearing loss | 1 | 0.0% |
+| use in hepatic impairment | 1 | 0.0% |
+| complicated urinary tract infections: 10-day treatment regimen | 1 | 0.0% |
+| not for acute use | 1 | 0.0% |
+| use in sexually transmitted infections | 1 | 0.0% |
+| recommended dosage for psoriasis | 1 | 0.0% |
+| signs_and_symptoms | 1 | 0.0% |
+| adverse events in the treatment of systemic fungal infections | 1 | 0.0% |
+| healing of nsaid-associated gastric ulcer | 1 | 0.0% |
+| disease-associated maternal and/or embryo/fetal risk | 1 | 0.0% |
+| infantile hypertrophic pyloric stenosis (ihps) | 1 | 0.0% |
+| recommended dosage in pediatric patients 8 years of age and older with hefh | 1 | 0.0% |
+| eosinophilic conditions | 1 | 0.0% |
+| drugs that reduce gastric acidity | 1 | 0.0% |
+| dose adjustment in patients with hepatic impairment | 1 | 0.0% |
+| risk reduction of nsaid-associated gastric ulcer | 1 | 0.0% |
+| general information | 1 | 0.0% |
+| principal display panel - 237 ml bottle carton | 1 | 0.0% |
+| adult rheumatoid arthritis | 1 | 0.0% |
+| use in pregnant women with mechanical heart valves | 1 | 0.0% |
+| fluticasone propionate | 1 | 0.0% |
+| interaction with alcohol | 1 | 0.0% |
+| treatment of symptomatic gastroesophageal reflux disease (gerd) | 1 | 0.0% |
+| acute generalized exanthematous pustulosis (agep) | 1 | 0.0% |
+| complicated urinary tract infections and acute pyelonephritis: 10-day treatment regimen | 1 | 0.0% |
+| preparation of suspension (for 200 ml of a 1.0 mg/ml suspension) | 1 | 0.0% |
+| hypoglycemia with concomitant use with insulin and insulin secretagogues | 1 | 0.0% |
+| risk of allergic reactions due to tartrazine | 1 | 0.0% |
+| recommended adult dosage by indication | 1 | 0.0% |
+| hyperprolactinemia | 1 | 0.0% |
+| gastrointestinal effects - risk of ulceration, bleeding, and perforation | 1 | 0.0% |
+| severe acute hypersensitivity reactions | 1 | 0.0% |
+| thrombotic thrombocytopenic purpura/hemolytic uremic syndrome (ttp/hus) | 1 | 0.0% |
+| mortality imbalance in an investigational study in patients with catheter-related bloodstream infections, including those with catheter-site infections | 1 | 0.0% |
+| neuropsychiatric adverse events and suicide risk in smoking cessation treatment | 1 | 0.0% |
+| electrocardiogram changes in adults | 1 | 0.0% |
+| mao inhibitors | 1 | 0.0% |
+| anaphylactoid reactions | 1 | 0.0% |
+| nonsteroidal anti-inflammatory agents including selective cyclooxygenase-2 inhibitors (cox-2 inhibitors) | 1 | 0.0% |
+| antacids, multivitamins, or dairy products | 1 | 0.0% |
+| nephrotoxicity due to tacrolimus and drug interactions | 1 | 0.0% |
+| acute asthma | 1 | 0.0% |
+| excretion | 1 | 0.0% |
+| skin rash in patients with mononucleosis | 1 | 0.0% |
+| cyp450_interactions | 1 | 0.0% |
+| tissue_necrosis | 1 | 0.0% |
+| hemolytic anemia | 1 | 0.0% |
+| nausea and vomiting | 1 | 0.0% |
+| drugs that lower the seizure threshold | 1 | 0.0% |
+| drugs highly bound to plasma protein | 1 | 0.0% |
+| pure red cell aplasia | 1 | 0.0% |
+| heart transplantation | 1 | 0.0% |
+| increased_risk_of_hemorrhagic_stroke_in_patients_on_atorvastatin_calcium_tablets_80_mg_with_recent_hemorrhagic_stroke | 1 | 0.0% |
+| clinical trials experience in pediatric subjects | 1 | 0.0% |
+| neutropenia/agranulocytosis | 1 | 0.0% |
+| missed dose | 1 | 0.0% |
+| nonsteroidal anti-inflammatory drugs (nsaids) including selective cyclooxygenase-2 inhibitors (cox-2 inhibitors) | 1 | 0.0% |
+| dose | 1 | 0.0% |
+| ace-inhibitors | 1 | 0.0% |
+| asian patients | 1 | 0.0% |
+| effects of metoclopramide on other drugs | 1 | 0.0% |
+| pheochromocytoma | 1 | 0.0% |
+| drugs metabolized by cyp2c9 | 1 | 0.0% |
+| allergic rhinitis | 1 | 0.0% |
+| abuse, misuse, and addiction | 1 | 0.0% |
+| therapeutic drug monitoring | 1 | 0.0% |
+| chronic bacterial prostatitis | 1 | 0.0% |
+| lymphoma and other malignancies | 1 | 0.0% |
+| recommended dosage in asian patients | 1 | 0.0% |
+| stop use and ask a doctor if: | 1 | 0.0% |
+| proper use of an | 1 | 0.0% |
+| dual blockade of the renin-angiotensin-aldosterone system | 1 | 0.0% |
+| effects on male and female sexual function in adults | 1 | 0.0% |
+| recommended dosage for bronchospasm (acute episodes or symptoms associated with bronchospasm) | 1 | 0.0% |
+| recommended dosage for metformin hydrochloride extended-release tablets in adults and pediatric patients aged 10 years and older with type 2 diabetes mellitus | 1 | 0.0% |
+| important_dosage_information | 1 | 0.0% |
+| abiraterone | 1 | 0.0% |
+| dose adjustment for patients not taking an ace inhibitor or arb or previously taking low doses of these agents | 1 | 0.0% |
+| risks associated with use in porphyria | 1 | 0.0% |
+| atrial_fibrillation | 1 | 0.0% |
+| antacids and kaolin | 1 | 0.0% |
+| herpes zoster | 1 | 0.0% |
+| general instructions for use | 1 | 0.0% |
+| pediatric patients (over 1 year of age) | 1 | 0.0% |
+| cold sores (herpes labialis) | 1 | 0.0% |
+| what is promethazine? | 1 | 0.0% |
+| folic acid supplementation | 1 | 0.0% |
+| anaphylactoid reactions during membrane exposure | 1 | 0.0% |
+| principal display panel - 1.25 mcg cartridge carton | 1 | 0.0% |
+| drugs that lower seizure threshold | 1 | 0.0% |
+| effects of other drugs on metoclopramide | 1 | 0.0% |
+| mesalamine-induced acute intolerance syndrome | 1 | 0.0% |
+| fatal overdose | 1 | 0.0% |
+| recommended dosage for hyperuricemia associated with cancer therapy | 1 | 0.0% |
+| recommended dosage for polyarticular juvenile idiopathic arthritis | 1 | 0.0% |
+| chemotherapy | 1 | 0.0% |
+| drugs affecting cytochrome p-450 enzymes | 1 | 0.0% |
+| glaucoma and cataracts | 1 | 0.0% |
+| hsv-infected patients | 1 | 0.0% |
+| exercise-induced bronchospasm | 1 | 0.0% |
+| tuberculosis | 1 | 0.0% |
+| ophthalmic | 1 | 0.0% |
+| missed_dose | 1 | 0.0% |
+| long-term maintenance of healing of erosive or ulcerative gerd in adults | 1 | 0.0% |
+| nadh-cytochrome b | 1 | 0.0% |
+| sexual dysfunction | 1 | 0.0% |
+| aspergillosis | 1 | 0.0% |
+| acute bacterial exacerbations of chronic bronchitis | 1 | 0.0% |
+| recommended dosage for rheumatoid arthritis | 1 | 0.0% |
+| panic disorders | 1 | 0.0% |
+| ask a doctor before use if you have: | 1 | 0.0% |
+| nelfinavir | 1 | 0.0% |
+| insulin or other antidiabetic drugs | 1 | 0.0% |
+| atorvastatin calcium effects on other drugs | 1 | 0.0% |
+| musculoskeletal | 1 | 0.0% |
+| use in patients with renal impairment | 1 | 0.0% |
+| other safety information | 1 | 0.0% |
+| potential for carcinogenicity | 1 | 0.0% |
+| vitamin b | 1 | 0.0% |
+| severe skin reactions | 1 | 0.0% |
+| dosing in renal impairment | 1 | 0.0% |
+| acute otitis media | 1 | 0.0% |
+| increased drug plasma concentrations in patients with hepatic impairment | 1 | 0.0% |
+| hepatic effects | 1 | 0.0% |
+| suicidal thoughts and behavior in adolescents and young adults | 1 | 0.0% |
+| immunization and risks associated with live vaccines | 1 | 0.0% |
+| infertility | 1 | 0.0% |
+| elderly | 1 | 0.0% |
+| rheumatoid arthritis | 1 | 0.0% |
+| general dosage and administration | 1 | 0.0% |
+| cannabidiol | 1 | 0.0% |
+| ototoxicity | 1 | 0.0% |
+| screen for bipolar disorder prior to starting citalopram tablets | 1 | 0.0% |
+| effects of other drugs on methotrexate | 1 | 0.0% |
+| discontinuation for iodinated contrast imaging procedures | 1 | 0.0% |
+| immunizations | 1 | 0.0% |
+| preparation of oral suspension using tablets | 1 | 0.0% |
+| presence of gastric malignancy | 1 | 0.0% |
+| gynecological | 1 | 0.0% |
+| treatment_during_dentistry_and_surgery | 1 | 0.0% |
+| administration information | 1 | 0.0% |
+| package/label display panel – carton – 200 mg | 1 | 0.0% |
+| primary hyperaldosteronism | 1 | 0.0% |
+| interactions with investigations for neuroendocrine tumors | 1 | 0.0% |
+| human data | 1 | 0.0% |
+| treatment of essential hypertension | 1 | 0.0% |
+| fluid retention | 1 | 0.0% |
+| potential interactions producing elevation of blood pressure | 1 | 0.0% |
+| histoplasmosis | 1 | 0.0% |
+| other pharmacologic effects | 1 | 0.0% |
+| recommended dosage for treatment of influenza | 1 | 0.0% |
+| animal toxicology | 1 | 0.0% |
+| description: | 1 | 0.0% |
+| phenylketonurics | 1 | 0.0% |
+| anticoagulants | 1 | 0.0% |
+| darkening of the tongue and/or black stool | 1 | 0.0% |
+| reduction of mortality in acute myocardial infarction | 1 | 0.0% |
+| endocrine | 1 | 0.0% |
+| treatment of blastomycosis and histoplasmosis | 1 | 0.0% |
+| general dosing information | 1 | 0.0% |
+| patients with renal impairment | 1 | 0.0% |
+| warfarin-type anticoagulants | 1 | 0.0% |
+| dosing for | 1 | 0.0% |
+| ulcerative colitis | 1 | 0.0% |
+| drugs without clinically significant drug interaction with oseltamivir phosphate for oral suspension | 1 | 0.0% |
+| tissue necrosis | 1 | 0.0% |
+| drugs and supplements increasing serum potassium | 1 | 0.0% |
+| for use in pertussis | 1 | 0.0% |
+| treatment of edema | 1 | 0.0% |
+| interference with urine screen for thc | 1 | 0.0% |
+| package label.principal display panel | 1 | 0.0% |
+| hyponatremia and/or syndrome of inappropriate antidiuretic hormone secretion (siadh) | 1 | 0.0% |
+| other information | 1 | 0.0% |
+| interaction potential | 1 | 0.0% |
+| drugs prolonging qt interval and other
+arrhythmogenic drugs | 1 | 0.0% |
+| interference with investigations for neuroendocrine tumors | 1 | 0.0% |
+| immunosuppression | 1 | 0.0% |
+| arthropathic effects in animals | 1 | 0.0% |
+| switching patients to or from a monoamine oxidase inhibitor antidepressant | 1 | 0.0% |
+| cross-resistance | 1 | 0.0% |
+| treatment during dentistry and surgery | 1 | 0.0% |
+| cns-active drugs | 1 | 0.0% |
+| recommended dosage for neoplastic diseases | 1 | 0.0% |
+| maintenance of healing of ee | 1 | 0.0% |
+| treatment of active duodenal ulcer | 1 | 0.0% |
+| asymptomatic left ventricular dysfunction | 1 | 0.0% |
+| most common adult adverse reactions | 1 | 0.0% |
+| gynecomastia | 1 | 0.0% |
+| hypoglycemia_with_concomitant_use_with_insulin_and_insulin_secretagogues | 1 | 0.0% |
+| add-on therapy | 1 | 0.0% |
+| animal pharmacology | 1 | 0.0% |
+| effect of dialysis | 1 | 0.0% |
+| myocardial hypertrophy | 1 | 0.0% |
+| discontinuation of treatment with duloxetine delayed-release capsules | 1 | 0.0% |
+| dermatologic reactions | 1 | 0.0% |
+| postmarketing reports | 1 | 0.0% |
+| acetylsalicylic acid | 1 | 0.0% |
+| drugs that interfere with hemostasis (e.g., nsaids, aspirin, and warfarin) | 1 | 0.0% |
+| genitourinary tract infections | 1 | 0.0% |
+| drugs metabolized by cyp3a | 1 | 0.0% |
+| individualized dosing | 1 | 0.0% |
+| use in pediatric patients | 1 | 0.0% |
+| combination dosing regimens for | 1 | 0.0% |
+| effects in hypertension | 1 | 0.0% |
+| neuropathy | 1 | 0.0% |
+| severe dermatologic reactions | 1 | 0.0% |
+| acute pyelonephritis: 5 or 10-day treatment regimen | 1 | 0.0% |
+| motion sickness | 1 | 0.0% |
+| development of lymphoma and other malignancies | 1 | 0.0% |
+| symptomatic gastroesophageal reflux disease (gerd) | 1 | 0.0% |
+| neuro-psychiatric | 1 | 0.0% |
+| abrupt cessation of therapy | 1 | 0.0% |
+| cannabidiol drug interactions | 1 | 0.0% |
+| recommended treatment | 1 | 0.0% |
+| increased risk of hemorrhagic stroke in patients on atorvastatin calcium tablets 80 mg with recent hemorrhagic stroke | 1 | 0.0% |
+| pre- and postoperative use | 1 | 0.0% |
+| acute maxillary sinusitis | 1 | 0.0% |
+| interference with laboratory tests | 1 | 0.0% |
+| mtor inhibitors or other drugs known to cause angioedema | 1 | 0.0% |
+| discontinuation syndrome | 1 | 0.0% |
+| recommended pediatric dosage by indication | 1 | 0.0% |
+| myopathy/rhabdomyolysis | 1 | 0.0% |
+| treatment of symptomatic gerd in adolescent patients 12 years of age and older | 1 | 0.0% |
+| acute angle-closure glaucoma, acute myopia, and choroidal effusion | 1 | 0.0% |
+| effects in chronic stable angina | 1 | 0.0% |
+| treatment of hypercholesterolemia | 1 | 0.0% |
+| hematologic disorders | 1 | 0.0% |
+| head and neck angioedema | 1 | 0.0% |
+| complicated intra-abdominal infections | 1 | 0.0% |
+| lower seizure threshold | 1 | 0.0% |
+| pancreatitis | 1 | 0.0% |
+| central nervous system | 1 | 0.0% |
+| use with contact lenses | 1 | 0.0% |
+| onychomycosis of the fingernail | 1 | 0.0% |
+| paradoxical reactions | 1 | 0.0% |
+| potassium-sparing diuretics | 1 | 0.0% |
+| lorazepam | 1 | 0.0% |
+| effects on the ability to drive and operate machinery | 1 | 0.0% |
+| nonsteroidal anti-inflammatory drugs (nsaids) | 1 | 0.0% |
+| general pharmacokinetic characteristics | 1 | 0.0% |
+| other agents affecting ras | 1 | 0.0% |
+| animal data | 1 | 0.0% |
+| methotrexate | 1 | 0.0% |
+| cisapride and pimozide | 1 | 0.0% |
+| lomitapide, lovastatin, and simvastatin | 1 | 0.0% |
+| withdrawal effects | 1 | 0.0% |
+| other_clinical_settings_with_increased_risks | 1 | 0.0% |
+| endocrine disorders | 1 | 0.0% |
+| potential for systemic absorption | 1 | 0.0% |
+| skin and skin structure infections | 1 | 0.0% |
+| general dosage and administration information | 1 | 0.0% |
+| malaria | 1 | 0.0% |
+| angina pectoris | 1 | 0.0% |
+| vaccination | 1 | 0.0% |
+| clinically important drug interactions | 1 | 0.0% |
+| azathioprine or 6-mercaptopurine | 1 | 0.0% |
+| hepatic_dysfunction | 1 | 0.0% |
+| maternal toxicity | 1 | 0.0% |
+| busulfan | 1 | 0.0% |
+| angioedema and anaphylactoid reactions | 1 | 0.0% |
+| general_information | 1 | 0.0% |
+| principal display panel - 120 capsule blister card box | 1 | 0.0% |
+| tooth enamel discoloration and hypoplasia | 1 | 0.0% |
+| cyp2d6 inhibitors | 1 | 0.0% |
+| cystic fibrosis | 1 | 0.0% |
+| pediatric hypertensive patients | 1 | 0.0% |
+| antibiotics and antifungals | 1 | 0.0% |
+| varicella zoster and measles viral infections | 1 | 0.0% |
+| drug-induced enterocolitis syndrome (dies) | 1 | 0.0% |
+| risks from concomitant use with opioids | 1 | 0.0% |
+| monitoring | 1 | 0.0% |
+| hypotension in volume or salt-depleted patients | 1 | 0.0% |
+| monitoring to achieve optimal anticoagulation | 1 | 0.0% |
+| drugs metabolized by cyp2d6 | 1 | 0.0% |
+| cholestyramine and colestipol resins | 1 | 0.0% |
+| direct coombs’ test seroconversion | 1 | 0.0% |
+| reduction in the risk of myocardial infarction, stroke, and death from cardiovascular causes | 1 | 0.0% |
+| nephrolithiasis | 1 | 0.0% |
+| administration instructions | 1 | 0.0% |
+| package label.principal display panel - bottle label 6 mg/ml | 1 | 0.0% |
+| clinical laboratory tests | 1 | 0.0% |
+| neoplastic diseases | 1 | 0.0% |
+| postoperative nausea and/or vomiting | 1 | 0.0% |
+| instructions for overdosage | 1 | 0.0% |
+| children | 1 | 0.0% |
+| hypomagnesemia and mineral metabolism | 1 | 0.0% |
+| treatment and prophylaxis of disseminated mycobacterial infections | 1 | 0.0% |
+| antacids | 1 | 0.0% |
+| concomitant use of pantoprazole sodium with methotrexate | 1 | 0.0% |
+| hydration for patients receiving levofloxacin tablets | 1 | 0.0% |
+| bradycardia | 1 | 0.0% |
+| complicated urinary tract infections: 5-day treatment regimen | 1 | 0.0% |
+| short-term treatment of erosive esophagitis associated with gastroesophageal reflux disease (gerd) | 1 | 0.0% |
+| seizure disorders: | 1 | 0.0% |
+| aspirin | 1 | 0.0% |
+| retinal toxicity | 1 | 0.0% |
+| acute bacterial sinusitis | 1 | 0.0% |
+| metabolism/excretion | 1 | 0.0% |
+| human overdose experience | 1 | 0.0% |
+| principal display panel - 2.5 mcg cartridge carton | 1 | 0.0% |
+| trichomoniasis: | 1 | 0.0% |
+| psychotic reaction with disulfiram | 1 | 0.0% |
+| prolonged prothrombin time | 1 | 0.0% |
+| concomitant respiratory medications | 1 | 0.0% |
+| interference with glucose tests | 1 | 0.0% |
+| discontinuation_for_iodinated_contrast_imaging_procedures | 1 | 0.0% |
+| neurological/psychiatric | 1 | 0.0% |
+| treatment of symptomatic gerd in adults | 1 | 0.0% |
+| pharmacokinetics: | 1 | 0.0% |
+| histoplasmosis in hiv-infected patients | 1 | 0.0% |
+| moxifloxacin tablets, usp | 1 | 0.0% |
+| venothromboembolic disease | 1 | 0.0% |
+| ophthalmological effects | 1 | 0.0% |
+| cardiovascular and central nervous system effects | 1 | 0.0% |
+| recommended prophylaxis for gout flares | 1 | 0.0% |
+| immune_mediated_necrotizing_myopathy | 1 | 0.0% |
+| elimination | 1 | 0.0% |
+| serotonergic drugs | 1 | 0.0% |
+| complex sleep behaviors | 1 | 0.0% |
+| nonsteroidal anti-inflammatory drugs | 1 | 0.0% |
+| metformin | 1 | 0.0% |
+| kidney function | 1 | 0.0% |
+| discontinuing duloxetine delayed-release capsules | 1 | 0.0% |
+| seizure | 1 | 0.0% |
+| pathological hypersecretory conditions, including zollinger-ellison syndrome in adults | 1 | 0.0% |
+| juvenile rheumatoid arthritis - polyarticular course | 1 | 0.0% |
+| neonatal sedation and withdrawal syndrome | 1 | 0.0% |
+| adverse events reported in fingernail onychomycosis clinical trials | 1 | 0.0% |
+| do not use if you have | 1 | 0.0% |
+| do not exceed recommended dose | 1 | 0.0% |
+| cyp450 interactions | 1 | 0.0% |
+| cimetidine plus probenecid | 1 | 0.0% |
+| drug & or laboratory test interactions | 1 | 0.0% |
+| liver function | 1 | 0.0% |
+| teratogenic effects: pregnancy category c. | 1 | 0.0% |
+| clostridioides difficile- associated diarrhea | 1 | 0.0% |
+| advanced renal disease | 1 | 0.0% |
+| adults and pediatric patients at least 15 years of age | 1 | 0.0% |
+| tumor lysis syndrome | 1 | 0.0% |
+| renal function deterioration | 1 | 0.0% |
+| botanical (herbal) products and foods | 1 | 0.0% |
+| convulsions | 1 | 0.0% |
+| susceptibility testing methods | 1 | 0.0% |
+| neuropsychiatric reactions including
+suicidality | 1 | 0.0% |
+| pharmacokinetics/metabolism | 1 | 0.0% |
+| packaging information | 1 | 0.0% |
+| hemolytic anemia associated with g6pd
+deficiency | 1 | 0.0% |
+| renal and hepatic impairment | 1 | 0.0% |
+| clinical trials | 1 | 0.0% |
+| prophylaxis of organ rejection in kidney, liver, or heart transplant | 1 | 0.0% |
+| use in renal impairment | 1 | 0.0% |
+| psychosis and other neuropsychiatric reactions | 1 | 0.0% |
+| oral contraceptives | 1 | 0.0% |
+| antacids, sucralfate, multivitamins and other products containing multivalent cations | 1 | 0.0% |
+| excessive use of fluticasone propionate and salmeterol inhalation powder and use with other long-acting beta | 1 | 0.0% |
+| concomitant oral anticoagulants | 1 | 0.0% |
+| treatment of heart failure | 1 | 0.0% |
+| studies in patients with heart failure | 1 | 0.0% |
+| dose_adjustment | 1 | 0.0% |
+| worsening of narrow-angle glaucoma | 1 | 0.0% |
+| clinical pharmacology in pediatric patients | 1 | 0.0% |
+| maintenance of healing of erosive or ulcerative gerd in adults | 1 | 0.0% |
+| who should not use promethazine? | 1 | 0.0% |
+| severe anaphylactic and anaphylactoid reactions | 1 | 0.0% |
+| paradoxical bronchospasm and upper airway symptoms | 1 | 0.0% |
+| effects in vasospastic angina | 1 | 0.0% |
+| gastrointestinal toxicity | 1 | 0.0% |
+| hepatic, renal, and hematologic toxicity or other conditions | 1 | 0.0% |
+| oral anticoagulants | 1 | 0.0% |
+| acute bacterial otitis media | 1 | 0.0% |
+| initial episode | 1 | 0.0% |
+| helicobacter pylori eradication to reduce the risk of duodenal ulcer recurrence in adults | 1 | 0.0% |
+| musculoskeletal disorders in pediatric patients and arthropathic effects in animals | 1 | 0.0% |
+| effects on driving and operating machinery | 1 | 0.0% |
+| potential adverse effects | 1 | 0.0% |
+| depression | 1 | 0.0% |
+| effects on laboratory tests | 1 | 0.0% |
+| dose adjustment in patients with renal impairment | 1 | 0.0% |
+| impact of other drugs on amlodipine | 1 | 0.0% |
+| congestive heart failure | 1 | 0.0% |
+| dermatologic | 1 | 0.0% |
+| early lyme disease (erythema migrans) | 1 | 0.0% |
+| gender difference in pharmacokinetics | 1 | 0.0% |
+| secondary malignancies | 1 | 0.0% |
+| cardiovascular death | 1 | 0.0% |
+| fungal infections | 1 | 0.0% |
+| dopaminergic drugs (levodopa and amantadine) | 1 | 0.0% |
+| recommended dosage in pediatric patients | 1 | 0.0% |
+| risk of fatal adverse reactions with medication error | 1 | 0.0% |
+| increased risk of bleeding | 1 | 0.0% |
+| skin rash and hypersensitivity | 1 | 0.0% |
+| treatment of asthma | 1 | 0.0% |
+| maintenance of healed duodenal ulcers | 1 | 0.0% |
+| precipitation of hepatic encephalopathy | 1 | 0.0% |
+| controlled substance | 1 | 0.0% |
+| use in patients with blood dyscrasias | 1 | 0.0% |
+| immunosuppression and increased risk of infection | 1 | 0.0% |
+| race or ethnicity | 1 | 0.0% |
+| preparation and storage of constituted oseltamivir phosphate for oral suspension | 1 | 0.0% |
+| kaposi’s sarcoma | 1 | 0.0% |
+| new onset diabetes after transplant | 1 | 0.0% |
+| studies pertinent to safety concerns for sedative/hypnotic drugs | 1 | 0.0% |
+| absorption and bioavailability | 1 | 0.0% |
+| adverse events reported from other clinical trials | 1 | 0.0% |
+| recommended dosage for management of recurrent calcium oxalate calculi in hyperuricosuric patients | 1 | 0.0% |
+| mania | 1 | 0.0% |
+| principal_display_panel | 1 | 0.0% |
+| important dosage information | 1 | 0.0% |
+| dose adjustment for severe renal impairment | 1 | 0.0% |
+| keep out of reach of children. | 1 | 0.0% |
+| drugs that prolong qt | 1 | 0.0% |
+| panic disorder: | 1 | 0.0% |
+| use of bupropion hydrochloride tablets with reversible maois such as linezolid or methylene blue | 1 | 0.0% |
+| deterioration of asthma | 1 | 0.0% |
+| cyp2d6 poor metabolizers | 1 | 0.0% |
+| drugs metabolized by cyp2c19 | 1 | 0.0% |
+| acute_kidney_injury | 1 | 0.0% |
+| dexamethasone tablets, 0.75 mg | 1 | 0.0% |
+| inactive ingredients: | 1 | 0.0% |
+| alfentanil and atracurium | 1 | 0.0% |
+| package label-principal display panel - 5 mg/5 ml  (120 ml bottle) | 1 | 0.0% |
+| myocardial ischemia | 1 | 0.0% |
+| bronchospastic disease | 1 | 0.0% |
+| community-acquired pneumonia: 5-day treatment regimen | 1 | 0.0% |
+| gastric ulcer | 1 | 0.0% |
+| drugs that increase bleeding risk | 1 | 0.0% |
+| tardive dyskinesia | 1 | 0.0% |
+| drugs known to affect the occurrence of skin rash and hypersensitivity | 1 | 0.0% |
+| agents increasing serum potassium | 1 | 0.0% |
+| pediatric patients (less than 18 years of age) | 1 | 0.0% |
+| oral use only | 1 | 0.0% |
+| other antibacterials | 1 | 0.0% |
+| activation of mania or hypomania | 1 | 0.0% |
+| aspirin sensitivity | 1 | 0.0% |
+| drugs metabolized by cyp1a2 | 1 | 0.0% |
+| angioedema | 1 | 0.0% |
+| preparation and administration of oral pellets | 1 | 0.0% |
+| drug-laboratory test interactions | 1 | 0.0% |
+| fructose intolerance in patients with hereditary fructose intolerance | 1 | 0.0% |
+| adult dosage | 1 | 0.0% |
+| central and peripheral nervous system effects | 1 | 0.0% |
+| drugs that affect gastric acidity | 1 | 0.0% |
+| bronchospasm | 1 | 0.0% |
+| acute kidney injury | 1 | 0.0% |
+| patients with depression | 1 | 0.0% |
+| rx only | 1 | 0.0% |
+| hematologic toxicity | 1 | 0.0% |
+| inhibitors of cyp2d6 | 1 | 0.0% |
+| animal pharmacology: | 1 | 0.0% |
+| skeletal muscle myopathy or neuropathy | 1 | 0.0% |
+| atrial fibrillation | 1 | 0.0% |
+| increased angina or myocardial infarction | 1 | 0.0% |
+| serious skin/hypersensitivity reactions | 1 | 0.0% |
+| allergy | 1 | 0.0% |
+| interaction with warfarin | 1 | 0.0% |
+| hypotension and worsening renal function | 1 | 0.0% |
+| other clinical settings with increased risks | 1 | 0.0% |
+| need to evaluate for comorbid diagnoses | 1 | 0.0% |
+| safe handling warning | 1 | 0.0% |
+| not recommended for use with sirolimus | 1 | 0.0% |
+| interactions with cyp3a4 inhibitors and inducers | 1 | 0.0% |
+| dosing in special populations | 1 | 0.0% |
+| switching a patient to or from a monoamine oxidase inhibitor (maoi) antidepressant | 1 | 0.0% |
+| probenecid and cimetidine | 1 | 0.0% |
+| recommended testing prior to treatment initiation | 1 | 0.0% |
+| neuromuscular toxicity | 1 | 0.0% |
+| potential effect on driving and use of machinery | 1 | 0.0% |
+| endogenous_factors_affecting_inr | 1 | 0.0% |
+| neutropenia and agranulocytosis | 1 | 0.0% |
+| concomitant hmg-coa reductase inhibitors | 1 | 0.0% |
+| strongyloides infestation | 1 | 0.0% |
+| qt prolongation/torsade de pointes (tdp) | 1 | 0.0% |
+| important dosage and safety information | 1 | 0.0% |
+| thrombotic microangiopathy (including hemolytic uremic syndrome and thrombotic thrombocytopenic purpura) | 1 | 0.0% |
+| in cell culture | 1 | 0.0% |
+| administration instructions for ondansetron orally disintegrating tablets | 1 | 0.0% |
+| pharmacodynamics: | 1 | 0.0% |
+| uncomplicated gonorrhea | 1 | 0.0% |
+| dysmenorrhea | 1 | 0.0% |
+| salmeterol | 1 | 0.0% |
+| mechanical_and_bioprosthetic_heart_valves | 1 | 0.0% |
+| resistance | 1 | 0.0% |
+| all-cause mortality in patients with coronary artery disease 1 to 10 years after clarithromycin exposure | 1 | 0.0% |
+| tablets | 1 | 0.0% |
+| coronary artery disease (cad) | 1 | 0.0% |
+| cardiovascular | 1 | 0.0% |
+| recommended_dosage_in_pediatric_patients_10_years_of_age_and_older_with_hofh | 1 | 0.0% |
+| vitamin_b | 1 | 0.0% |
+| do not use if you have: | 1 | 0.0% |
+| nonteratogenic effects | 1 | 0.0% |

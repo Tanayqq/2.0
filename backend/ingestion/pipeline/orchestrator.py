@@ -147,6 +147,10 @@ class IngestionOrchestrator:
         self.stats.docs_parsed += 1
         self.stats.record_drug_sections(parsed_doc.drug, len(parsed_doc.sections))
         
+        # Calculate and record completeness score
+        status_by_category, score, percentage = self.validator.calculate_completeness_score(parsed_doc)
+        self.stats.record_drug_completeness(parsed_doc.drug, status_by_category, score, percentage)
+        
         # 5. Semantic section-based chunking
         chunks = self.chunker.chunk_document(parsed_doc)
         for chunk in chunks:
@@ -280,6 +284,10 @@ class IngestionOrchestrator:
         self.report_generator.generate_manifest()
         self.report_generator.generate_ingestion_report()
         self.report_generator.generate_corpus_report()
+        
+        # Print the Dataset Quality Report to stdout
+        text_report = self.report_generator.get_text_quality_report()
+        print("\n" + text_report + "\n")
         
         try:
             generate_reports()

@@ -160,15 +160,26 @@ class MedicalUploader:
                 "drug": chunk["drug_name"],  # Maintain backward compatibility
                 "generic_name": chunk["generic_name"],
                 "section": chunk["section"],
+                "canonical_section": chunk["section"],  # New schema key
                 "document_id": chunk["document_id"],
                 "effective_date": chunk.get("effective_date"),
                 "revision": chunk.get("revision"),
                 "chunk_index": chunk["chunk_index"],
                 "total_chunks": chunk["total_chunks"],
                 "version": chunk["version"],
+                "ingestion_version": chunk["version"],  # New schema key
                 "token_count": chunk["token_count"],
                 "embedding_model": chunk["embedding_model"],
-                "ingested_at": chunk["ingested_at"]
+                "ingested_at": chunk["ingested_at"],
+                "last_updated": chunk["ingested_at"],  # New schema key
+                # New rich metadata keys
+                "clinical_category": chunk.get("clinical_category"),
+                "patient_population": chunk.get("patient_population"),
+                "authority": chunk.get("authority"),
+                "document_type": chunk.get("document_type", "drug_label"),
+                "structured_dosing": chunk.get("structured_dosing", {}),
+                "chunk_id": point_id,  # New schema key
+                "chunk_text": chunk["content"]  # New schema key
             }
             
             # Construct Qdrant point structure
