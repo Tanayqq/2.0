@@ -582,7 +582,7 @@ Not found in available sources.
     ) -> Tuple[str, List[Citation], Dict[str, str], List[str]]:
         import re as regex
         
-        if "not found in available sources" in answer_text.lower():
+        if answer_text.strip().strip(".!").lower() == "not found in available sources":
             return "Not found in available sources.", [], {}, []
             
         # 1. Clean brackets from FDA label cross-references like [see Warnings and Precautions (5.1)]
@@ -631,7 +631,8 @@ Not found in available sources.
         answer_text = regex.sub(r'(?:\[[0-9]+\]|\[Unsupported Citation Removed\])+', merge_brackets, answer_text)
         
         # 5. Split answer into sentences for grounding & auto-citation injection
-        raw_sentences = regex.split(r'(?<=[.!?])\s+', answer_text.strip())
+        temp_marked = regex.sub(r'(\[[0-9]+\]|\[Unsupported Citation Removed\]|[.!?])\s+', r'\1<SENTENCE_BOUNDARY>', answer_text.strip())
+        raw_sentences = temp_marked.split("<SENTENCE_BOUNDARY>")
         sentences = [s.strip() for s in raw_sentences if s.strip()]
         
         final_sentences = []
