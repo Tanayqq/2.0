@@ -770,19 +770,7 @@ Not found in available sources.
             raw_answer = self.llm.generate(prompt)
             llm_time = time.time() - start_llm
             
-            print("========== RAW LLM OUTPUT ==========")
-            print(raw_answer)
-            print("===================================")
-            print("========== FINAL PROMPT ==========")
-            print(prompt)
-            print("===================================")
-            print("========== DOCUMENTS ==========")
-            print([d.id for d in documents])
-            print("===================================")
-            import json
-            print("========== CITATION MAP ==========")
-            print(json.dumps(citation_map.to_dict(), indent=2))
-            print("===================================")
+            # Raw LLM Output Logging (handled safely via structlog below)
             
             logger.info(
                 "raw_llm_output",
@@ -866,20 +854,7 @@ Not found in available sources.
         answer_text = self.llm.generate(prompt)
         llm_time = time.time() - start_llm
         
-        # B. Raw LLM Output Logging
-        print("========== RAW LLM OUTPUT ==========")
-        print(answer_text)
-        print("===================================")
-        print("========== FINAL PROMPT ==========")
-        print(prompt)
-        print("===================================")
-        print("========== DOCUMENTS ==========")
-        print([d.id for d in documents])
-        print("===================================")
-        import json
-        print("========== CITATION MAP ==========")
-        print(json.dumps(citation_map.to_dict(), indent=2))
-        print("===================================")
+        # B. Raw LLM Output Logging (handled safely via structlog below)
         
         logger.info(
             "raw_llm_output",
