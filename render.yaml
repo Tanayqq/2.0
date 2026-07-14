@@ -2,18 +2,40 @@ services:
   - type: web
     name: medref-api
     env: python
+    # Auto-deploy every time a commit is pushed to the connected branch
+    autoDeploy: true
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn backend.app.main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.0
+
+      # LLM
       - key: ACTIVE_LLM_PROVIDER
-        value: Groq
+        value: groq
       - key: GROQ_API_KEY
         sync: false
+
+      # Vector DB
       - key: QDRANT_URL
         sync: false
       - key: QDRANT_API_KEY
         sync: false
+
+      # CORS
       - key: FRONTEND_URL
         sync: false
+
+      # Retrieval tuning — baked in so a missed deploy never regresses these
+      - key: SIMILARITY_THRESHOLD
+        value: "0.50"
+      - key: DEFAULT_TOP_K
+        value: "5"
+      - key: MULTI_SECTION_TOP_K
+        value: "40"
+      - key: MAX_CONTEXT_CHUNKS
+        value: "5"
+
+      # Citation validation — "remove" strips uncited sentences, never rejects whole answer
+      - key: STRICT_CITATION_VALIDATION_ACTION
+        value: "remove"

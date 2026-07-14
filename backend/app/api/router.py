@@ -51,4 +51,29 @@ def health_check():
 
 @router.get("/version")
 def version_check():
-    return {"version": os.getenv("APP_VERSION", "1.0.0-dev")}
+    """
+    Returns the deployed commit hash and active config values.
+    Use this to verify what code Render is actually running.
+    Check: GET /api/v1/version
+    """
+    import subprocess
+    from app.core.config import settings
+    try:
+        commit = subprocess.check_output(
+            ["git", "rev-parse", "--short", "HEAD"],
+            stderr=subprocess.DEVNULL
+        ).decode().strip()
+    except Exception:
+        commit = os.getenv("RENDER_GIT_COMMIT", os.getenv("GIT_COMMIT", "unknown"))
+    return {
+        "version": settings.APP_VERSION,
+        "git_commit": commit,
+        "active_config": {
+            "similarity_threshold": settings.SIMILARITY_THRESHOLD,
+            "strict_citation_validation_action": settings.STRICT_CITATION_VALIDATION_ACTION,
+            "default_top_k": settings.DEFAULT_TOP_K,
+            "multi_section_top_k": settings.MULTI_SECTION_TOP_K,
+            "max_context_chunks": settings.MAX_CONTEXT_CHUNKS,
+            "active_llm_provider": settings.ACTIVE_LLM_PROVIDER,
+        }
+    }
