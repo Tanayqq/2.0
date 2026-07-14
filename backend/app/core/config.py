@@ -22,13 +22,13 @@ class Settings(BaseSettings):
     DEFAULT_TOP_K: int = 5
     MULTI_SECTION_TOP_K: int = 40
     MAX_CONTEXT_CHUNKS: int = 5
-    SIMILARITY_THRESHOLD: float = 0.75
+    SIMILARITY_THRESHOLD: float = 0.50
     
     # Citation Configuration
-    STRICT_CITATION_VALIDATION_ACTION: str = "reject" # Options: reject, remove, none
+    STRICT_CITATION_VALIDATION_ACTION: str = "remove" # Options: reject, remove, none
     
     # Network Configuration
-    CORS_ORIGINS: str = "http://localhost:5173,https://medref-pearl.vercel.app"
+    CORS_ORIGINS: str = "http://localhost:5173,https://medref-pearl.vercel.app,https://medref.vercel.app,https://*.vercel.app"
     APP_VERSION: str = "1.0.0"
     
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")

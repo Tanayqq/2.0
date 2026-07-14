@@ -683,7 +683,7 @@ Not found in available sources.
                 overlap = sentence_kws.intersection(chunk_kws)
                 overlap_ratio = len(overlap) / len(sentence_kws)
                 
-                if overlap_ratio >= 0.55:
+                if overlap_ratio >= 0.35:
                     best_matches.append((cit_num, overlap_ratio))
             
             if best_matches:
@@ -704,6 +704,17 @@ Not found in available sources.
                 
         # Reconstruct answer
         processed_answer = " ".join(final_sentences)
+        
+        # Safety net: if "remove" mode stripped everything, fall back to original answer
+        if not processed_answer.strip() and answer_text.strip():
+            logger.warning(
+                "grounding_removed_all_sentences_fallback",
+                original_sentence_count=len(sentences),
+                validation_errors=validation_errors
+            )
+            # Return original (pre-validation) text with all citations stripped as-is
+            processed_answer = answer_text.strip()
+            validation_errors.append("FALLBACK: all sentences failed grounding check — returning original answer")
         
         if validation_errors and settings.STRICT_CITATION_VALIDATION_ACTION == "reject":
             return "Unable to generate a fully grounded answer from the indexed corpus.", [], {}, validation_errors
