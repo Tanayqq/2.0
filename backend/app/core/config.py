@@ -22,7 +22,7 @@ class Settings(BaseSettings):
     DEFAULT_TOP_K: int = 5
     MULTI_SECTION_TOP_K: int = 40
     MAX_CONTEXT_CHUNKS: int = 5
-    SIMILARITY_THRESHOLD: float = 0.50
+    SIMILARITY_THRESHOLD: float = 0.35
     
     # Citation Configuration
     STRICT_CITATION_VALIDATION_ACTION: str = "remove" # Options: reject, remove, none

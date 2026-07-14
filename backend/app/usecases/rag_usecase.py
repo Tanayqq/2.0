@@ -167,8 +167,8 @@ class ProcessClinicalQueryUseCase:
         import re
         
         def is_negated(text: str, keyword: str) -> bool:
-            # Match negation words before the keyword in the same sentence/phrase
-            negation_pattern = r'\b(do not|don\'t|never|excluding|except|omit|without|no|other than|except for|avoid)\b[^.!?]*?\b' + re.escape(keyword) + r'\b'
+            # Match negation words before the keyword in the same sentence/phrase (prevent matching across lines)
+            negation_pattern = r'\b(do not|don\'t|never|excluding|except|omit|without|no|other than|except for|avoid)\b[^.!?\n]*?\b' + re.escape(keyword) + r'\b'
             return bool(re.search(negation_pattern, text, re.IGNORECASE))
             
         for canonical_sec, keywords in SECTION_KEYWORDS.items():
@@ -434,6 +434,7 @@ class ProcessClinicalQueryUseCase:
         citation_map = CitationMap()
         citations = []
         citation_counter = 0
+        uuid_to_citation_id = {}
         
         # Organize docs by (drug, normalized_section)
         docs_by_drug_section: Dict[str, Dict[str, list]] = {}
@@ -503,8 +504,16 @@ class ProcessClinicalQueryUseCase:
                     if len(context_str) + len(drug_str) + len(sec_str) >= max_char_limit:
                         break
                         
-                    citation_counter += 1
-                    citation_id = str(citation_counter)
+                    # Re-use existing citation ID if chunk UUID has been cited before
+                    if doc.id in uuid_to_citation_id:
+                        citation_id = uuid_to_citation_id[doc.id]
+                        is_new_citation = False
+                    else:
+                        citation_counter += 1
+                        citation_id = str(citation_counter)
+                        uuid_to_citation_id[doc.id] = citation_id
+                        is_new_citation = True
+                        
                     section_raw = doc.metadata.get('section', doc.metadata.get('category', ''))
                     cleaned_content = clean_chunk_content(doc.content)
                     
@@ -520,29 +529,30 @@ class ProcessClinicalQueryUseCase:
                     
                     sec_str += doc_str
                     
-                    # Add to citation map
-                    citation_map.add_entry(
-                        uuid=doc.id,
-                        citation_number=citation_id,
-                        source=doc.source,
-                        drug=drug,
-                        section=section_raw,
-                        text=cleaned_content,
-                        similarity=round(doc.score or 0.0, 4)
-                    )
+                    if is_new_citation:
+                        # Add to citation map
+                        citation_map.add_entry(
+                            uuid=doc.id,
+                            citation_number=citation_id,
+                            source=doc.source,
+                            drug=drug,
+                            section=section_raw,
+                            text=cleaned_content,
+                            similarity=round(doc.score or 0.0, 4)
+                        )
+                        
+                        # Add to citations list
+                        citations.append(Citation(
+                            document_id=citation_id,
+                            source=f"{doc.source} – {drug} – {section_raw}",
+                            snippet=cleaned_content,
+                            uuid=doc.id,
+                            drug=drug,
+                            section=section_raw,
+                            similarity=round(doc.score or 0.0, 4),
+                            count=0
+                        ))
                     
-                    # Add to citations list
-                    citations.append(Citation(
-                        document_id=citation_id,
-                        source=f"{doc.source} – {drug} – {section_raw}",
-                        snippet=cleaned_content,
-                        uuid=doc.id,
-                        drug=drug,
-                        section=section_raw,
-                        similarity=round(doc.score or 0.0, 4),
-                        count=0
-                    ))
-                
                 drug_str += sec_str
             
             context_str += drug_str + "\n"
@@ -584,10 +594,10 @@ CRITICAL RULES:
    WRONG:   "Warfarin may increase the risk of bleeding."
    A sentence without a citation number is INVALID and will be removed.
 
-2. VERBATIM EXTRACTION ONLY.
-   You may ONLY state facts that appear in the DOCUMENTS above.
-   Stay as close to the original wording as possible.
-   Do NOT paraphrase, generalize, or add information from your training data.
+2. CONCISE SUMMARY ONLY.
+   You MUST summarize the retrieved clinical evidence concisely instead of dumping long verbatim FDA excerpts.
+   However, every single sentence you write MUST be strictly grounded in the facts from the DOCUMENTS above.
+   Do NOT paraphrase loosely or extrapolate beyond the provided documents.
    Do NOT invent drug interactions, contraindications, or warnings.
 
 3. SECTION BOUNDARIES ARE ABSOLUTE.
@@ -607,6 +617,10 @@ CRITICAL RULES:
 
 6. Do NOT output FDA cross-references like "[see Warnings and Precautions (5.1)]".
    Do NOT invent citation numbers that don't exist in the DOCUMENTS.
+
+7. ABSOLUTELY NO DEBUG/DOCUMENT LABEL ARTIFACTS.
+   Never include text like "DOCUMENT 1", "DOCUMENT 2", or "Source: ..." in your final answers.
+   Only output the clean, structured clinical report text with inline citations.
 """
 
     def get_debug_retrieval(self, query: MedicalQuery):
@@ -801,6 +815,33 @@ CRITICAL RULES:
             return result
 
         answer_text = regex.sub(r'(?:\[[0-9]+\]|\[Unsupported Citation Removed\])+', merge_brackets, answer_text)
+        
+        # Remove LLM-generated debug artifacts like "DOCUMENT 1", "DOCUMENT 2", or "[Warfarin - Drug Interactions - DOCUMENT 1]"
+        artifact_patterns = [
+            r'document\s+[0-9]+',
+            r'sources?\s+referenced',
+            r'bibliography',
+            r'\[[^\]]*(?:document|source|label|clinical|interactions|warnings|contraindications)[^\]]*\]'
+        ]
+        
+        lines = answer_text.split('\n')
+        cleaned_lines = []
+        for line in lines:
+            line_clean = line.strip()
+            # If line matches any artifact pattern entirely, skip it
+            if any(regex.match(f"^{pat}$", line_clean, regex.IGNORECASE) for pat in artifact_patterns):
+                continue
+            # If line is a standalone drug-citation artifact like "[Warfarin] 1." or "[Atorvastatin] 2.", skip it
+            strip_pattern = r'^\s*(?:\[?[0-9]+\]?[\s.-]*\[?(?:Metformin|Warfarin|Lisinopril|Atorvastatin)\]?|\[?(?:Metformin|Warfarin|Lisinopril|Atorvastatin)\]?[\s.-]*\[?[0-9]+\]?)\s*\.?\s*$'
+            if regex.match(strip_pattern, line_clean, regex.IGNORECASE):
+                continue
+            
+            # Also clean in-line document label artifacts (e.g., "Fact [DOCUMENT 1]" -> "Fact")
+            for pat in artifact_patterns:
+                line = regex.sub(pat, '', line, flags=regex.IGNORECASE)
+            
+            cleaned_lines.append(line)
+        answer_text = '\n'.join(cleaned_lines)
         
         # 5. Split answer into sentences for grounding & auto-citation injection, preserving whitespace and formatting
         boundary_pattern_re = regex.compile(r'[.!?](?:\[[0-9]+\]|\[Unsupported Citation Removed\])?(?=\s|$)')
