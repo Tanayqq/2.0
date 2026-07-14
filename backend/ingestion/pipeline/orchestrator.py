@@ -151,11 +151,11 @@ class IngestionOrchestrator:
         chunks = self.chunker.chunk_document(parsed_doc)
         for chunk in chunks:
             self.stats.record_chunk(
-                drug=chunk["drug"],
+                drug=chunk["drug_name"],
                 section=chunk["section"],
                 tokens=chunk["token_count"],
                 source=chunk["source"],
-                country=chunk["country"]
+                country=chunk.get("country", "US")
             )
             
         return chunks
