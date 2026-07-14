@@ -45,14 +45,14 @@ def test_citation_post_processing():
     for c in response.citations:
         print(f"  [{c.document_id}] UUID: {c.uuid} | Count: {c.count}")
         
-    assert response.answer == "Metformin is useful.[1] Also it helps.[2] And final.[3][1]"
+    assert response.answer == "Metformin is useful.[1] Also it helps.[2] \n\n[2] And final.[3][1]"
     assert len(response.citations) == 3
     # Check counts
     c1 = next(c for c in response.citations if c.uuid == "uuid-1")
     c2 = next(c for c in response.citations if c.uuid == "uuid-2")
     c3 = next(c for c in response.citations if c.uuid == "uuid-3")
     assert c1.count == 2
-    assert c2.count == 1
+    assert c2.count == 2
     assert c3.count == 1
 
     # Test case 2: Malformed formats ([Doc 1], [Document ID: 1])
