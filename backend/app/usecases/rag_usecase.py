@@ -617,10 +617,21 @@ class ProcessClinicalQueryUseCase:
         
         # Log per-drug per-category chunk counts
         coverage_log = {}
+        # Always include all 4 UI card categories when a drug is resolved so
+        # top-up docs (dosing, interactions, etc.) are always rendered in context
+        ALL_UI_CATEGORIES = [
+            "Clinical Overview",
+            "Dosing & Administration",
+            "Contraindications & Safety",
+            "Co-Administration Risks",
+        ]
         detected_categories = list(set(get_clinical_category(sec) for sec in (detected_sections if detected_sections else [])))
+        # For any single-drug query (or when categories are missing), force all 4 UI categories
+        if single_resolved or not detected_categories:
+            detected_categories = ALL_UI_CATEGORIES
         for drug in drug_order:
             coverage_log[drug] = {}
-            for cat in (detected_categories if detected_categories else ["_all"]):
+            for cat in detected_categories:
                 count = len(docs_by_drug_category.get(drug, {}).get(cat, []))
                 coverage_log[drug][cat] = count
         
@@ -645,7 +656,11 @@ class ProcessClinicalQueryUseCase:
             drug_str += f"DRUG: {drug}\n"
             drug_str += f"{'='*60}\n\n"
             
-            categories_to_render = detected_categories if detected_categories else list(docs_by_drug_category.get(drug, {}).keys())
+            # Always render all 4 UI categories; fall back to doc-present categories only if no drug resolved
+            if single_resolved or detected_categories:
+                categories_to_render = detected_categories
+            else:
+                categories_to_render = list(docs_by_drug_category.get(drug, {}).keys())
             
             for cat in categories_to_render:
                 if len(context_str) + len(drug_str) >= max_char_limit:
@@ -657,6 +672,9 @@ class ProcessClinicalQueryUseCase:
                 cat_docs = docs_by_drug_category.get(drug, {}).get(cat, [])
                 
                 if not cat_docs:
+                    # Tell the LLM this category has no evidence — it will write "Not found in available sources."
+                    cat_str += "NO DOCUMENTS AVAILABLE FOR THIS CATEGORY.\n\n"
+                    drug_str += cat_str
                     continue
                 
                 for doc in cat_docs:
