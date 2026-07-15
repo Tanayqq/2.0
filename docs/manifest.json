@@ -3,7 +3,7 @@
   "pipeline_version": "1.6.0",
   "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
   "embedding_dimension": 384,
-  "timestamp": "2026-07-14T17:22:26.768302Z",
+  "timestamp": "2026-07-15T05:01:37.075053Z",
   "metadata": {
     "total_drugs": 105,
     "total_chunks": 6175,

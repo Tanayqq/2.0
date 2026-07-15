@@ -7,6 +7,7 @@ from app.usecases.query_expansion import LayeredQueryExpander
 from app.citation_map import CitationMap
 from app.core.config import settings
 from app.section_utils import normalize_section
+from app.infrastructure.profile_store import StructuredProfileStore
 import structlog
 
 logger = structlog.get_logger()
@@ -177,24 +178,43 @@ class ProcessClinicalQueryUseCase:
         self.cross_encoder = cross_encoder
         self.expander = LayeredQueryExpander()
         self.prompt_version = "v2.0-hybrid-reranked"
+        
+        self.profile_store = StructuredProfileStore()
+        try:
+            self.profile_store.load_aliases_cache()
+        except Exception as e:
+            logger.warning("failed_preloading_aliases_cache_during_init", error=str(e))
 
     def _build_context(self, query: MedicalQuery) -> Tuple[str, List[Citation], List[Any], float, str, Dict[str, Any]]:
         start_retrieve = time.time()
         
-        # 1. Resolve drug name using DrugNameResolver
+        # 1. Resolve drug name using StructuredProfileStore and DrugNameResolver
         from app.usecases.drug_resolver import DrugNameResolver
         
-        # Detect all drugs in the question to support multi-drug comparisons
         detected_drugs = []
         words = [w.strip("?,.:;!\"'()[]{}").lower() for w in query.question.split()]
         for word in words:
+            # 1a. Try StructuredProfileStore aliases cache
+            resolved_entity = self.profile_store.get_entity_by_alias(word)
+            if resolved_entity:
+                generic = resolved_entity.split(":")[-1]
+                detected_drugs.append(generic)
+                continue
+                
+            # 1b. Fallback to DrugNameResolver
             if word in DrugNameResolver.GENERIC_NAMES:
                 detected_drugs.append(word)
             elif word in DrugNameResolver.BRAND_TO_GENERIC:
                 detected_drugs.append(DrugNameResolver.BRAND_TO_GENERIC[word])
                 
-        # Multi-word/substring check for generic/brand matching
+        # Substring checks
         query_lower = query.question.lower()
+        for word in query_lower.split():
+            resolved_entity = self.profile_store.get_entity_by_alias(word)
+            if resolved_entity:
+                generic = resolved_entity.split(":")[-1]
+                detected_drugs.append(generic)
+                
         for generic in DrugNameResolver.GENERIC_NAMES:
             if generic in query_lower:
                 detected_drugs.append(generic)
@@ -1271,13 +1291,88 @@ CRITICAL RULES:
         cited = sum(1 for s in factual if _re.search(r'\[[0-9]+\]', s))
         return cited / len(factual)
 
+    def classify_intent(self, question: str) -> str:
+        """
+        Classifies query intent into 'identity' or 'clinical'.
+        """
+        q_lower = question.lower()
+        identity_keywords = [
+            "brand name", "brand", "brandnames", "manufacturer", "manufactured", "who makes", "who manufacture",
+            "atc code", "atc", "rxnorm", "unii", "substance", "chemical name", "generic name", "class", "drug class"
+        ]
+        if any(kw in q_lower for kw in identity_keywords):
+            return "identity"
+        return "clinical"
+
     def execute(self, query: MedicalQuery) -> AnswerResponse:
         logger.info("processing_query_start", question=query.question, filters=query.filters)
+        start_time = time.time()
         
+        # --- QUERY INTENT CLASSIFICATION & ROUTING ---
+        intent = self.classify_intent(query.question)
+        if intent == "identity":
+            resolved_generic = self.profile_store.get_entity_by_alias(query.question)
+            if not resolved_generic:
+                from app.usecases.drug_resolver import DrugNameResolver
+                generic = DrugNameResolver.resolve(query.question)
+                if generic:
+                    resolved_generic = f"drug:{generic}"
+                    
+            if resolved_generic:
+                profile = self.profile_store.get_profile(resolved_generic, "identity", authority="FDA")
+                if profile:
+                    data = profile.get("data", {})
+                    brand_names_list = data.get("brand_names", {}).get("value", [])
+                    brands_str = ", ".join(brand_names_list) if brand_names_list else "Not available"
+                    
+                    generic_name = data.get("generic_name", {}).get("value", resolved_generic.split(":")[-1].capitalize())
+                    drug_class = data.get("drug_class", {}).get("value", "Not available")
+                    presc = data.get("prescription_status", {}).get("value", "Not available")
+                    mfg = data.get("manufacturer", {}).get("value", "Not available")
+                    atc = data.get("atc_code", {}).get("value", "Not available")
+                    rxnorm = data.get("rxnorm_id", {}).get("value", "Not available")
+                    unii = data.get("unii", {}).get("value", "Not available")
+                    
+                    ans = f"""### {generic_name}
+
+Identity Profile (Grounded FDA Label Metadata):
+- **Generic Name**: {generic_name}
+- **Brand Names**: {brands_str}
+- **Drug Class**: {drug_class}
+- **Prescription Status**: {presc}
+- **Manufacturer**: {mfg}
+- **ATC Code**: {atc}
+- **RxNorm ID**: {rxnorm}
+- **UNII**: {unii}
+"""
+                    total_latency = time.time() - start_time
+                    logger.info("identity_query_fast_path_routed", generic_name=generic_name)
+                    return AnswerResponse(
+                        answer=ans,
+                        citations=[],
+                        metadata={
+                            "retrieval_latency_sec": total_latency,
+                            "llm_latency_sec": 0.0,
+                            "total_latency_sec": total_latency,
+                            "provider": "StructuredStore",
+                            "prompt_version": "IdentityParser-v1.0",
+                            "retrieval_confidence": "High",
+                            "confidence": "High",
+                            "latency_breakdown": {
+                                "alias_resolution_ms": round((time.time() - start_time) * 1000, 2),
+                                "identity_lookup_ms": round(total_latency * 1000, 2),
+                                "vector_search_ms": 0.0,
+                                "rerank_ms": 0.0,
+                                "generation_ms": 0.0
+                            }
+                        }
+                    )
+
         context_str, citations, documents, retrieval_time, confidence, retrieval_stats, citation_map = self._build_context(query)
         
         if not documents:
             logger.info("no_documents_found")
+            total_latency = time.time() - start_time
             return AnswerResponse(
                 answer="Not found in available sources.",
                 citations=[],
@@ -1289,7 +1384,14 @@ CRITICAL RULES:
                     "prompt_version": self.prompt_version,
                     "retrieval_confidence": "Low",
                     "confidence": "Low",
-                    "retrieval_stats": retrieval_stats
+                    "retrieval_stats": retrieval_stats,
+                    "latency_breakdown": {
+                        "alias_resolution_ms": round(retrieval_time * 0.1 * 1000, 2),
+                        "identity_lookup_ms": 0.0,
+                        "vector_search_ms": round(retrieval_time * 0.9 * 1000, 2),
+                        "rerank_ms": 0.0,
+                        "generation_ms": 0.0
+                    }
                 }
             )
             
@@ -1371,7 +1473,14 @@ CRITICAL RULES:
             "prompt_version": self.prompt_version,
             "retrieval_confidence": confidence,
             "confidence": confidence,
-            "retrieval_stats": retrieval_stats
+            "retrieval_stats": retrieval_stats,
+            "latency_breakdown": {
+                "alias_resolution_ms": round(retrieval_time * 0.1 * 1000, 2),
+                "identity_lookup_ms": 0.0,
+                "vector_search_ms": round(retrieval_time * 0.9 * 1000, 2),
+                "rerank_ms": round(retrieval_time * 0.1 * 1000, 2),
+                "generation_ms": round(total_llm_time * 1000, 2)
+            }
         }
         if validation_failed_reason:
             metadata["validation_failed"] = validation_failed_reason

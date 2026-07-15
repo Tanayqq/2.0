@@ -1,5 +1,5 @@
 # MedRef Ingestion Report
-Generated at: 2026-07-14T17:22:26.778247Z
+Generated at: 2026-07-15T05:01:37.079521Z
 Pipeline Version: 1.6.0
 
 ## Ingestion Quality Dashboard
@@ -27,7 +27,7 @@ Missing Storage            2
 ```
 
 ## Execution Summary
-*   **Run Time:** 4m 00s (240.61 seconds)
+*   **Run Time:** 10m 46s (646.8 seconds)
 *   **Downloaded Drugs:** 105
 *   **Successfully Parsed:** 105
 *   **Validation Failures:** 0

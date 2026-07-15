@@ -20,6 +20,8 @@ from .statistics import IngestionStatistics
 from .reports import ReportGenerator
 from .generate_reports import generate_reports
 from app.infrastructure.vector_db import QdrantAdapter
+from app.infrastructure.profile_store import StructuredProfileStore
+from .profile_parser import DeterministicProfileParser
 
 logger = structlog.get_logger()
 
@@ -37,6 +39,8 @@ class IngestionOrchestrator:
         self.embedder = MedicalEmbedder()
         self.uploader = MedicalUploader()
         self.report_generator = ReportGenerator(self.stats)
+        self.profile_store = StructuredProfileStore()
+        self.profile_parser = DeterministicProfileParser()
         
         # Instantiate active source providers
         self.providers = {}
@@ -67,6 +71,7 @@ class IngestionOrchestrator:
             
         # Ensure collection exists before starting
         self.uploader.create_collection_if_not_exists(expected_dim)
+        self.profile_store.initialize_collections()
         
         logger.info("preflight_checks_passed_successfully")
         return True
@@ -111,6 +116,7 @@ class IngestionOrchestrator:
     def process_drug(self, drug_name: str) -> Optional[List[Dict[str, Any]]]:
         """
         Fetch, prioritize, parse, validate, and chunk a single drug's labels.
+        Also builds and uploads structured profiles with incremental updates.
         """
         self.stats.docs_downloaded += 1
         docs_by_source = {}
@@ -143,13 +149,64 @@ class IngestionOrchestrator:
             self.validator.send_to_dlq(parsed_doc, reason)
             self.stats.log_validation_failure(f"Validation failed for '{drug_name}': {reason}")
             return None
-            
+
+        # --- INCREMENTAL INGESTION CHECK ---
+        entity_id = f"drug:{parsed_doc.drug.lower().replace(' ', '_')}"
+        full_text = " ".join([sec.content for sec in parsed_doc.sections])
+        checksum = self.profile_parser.calculate_checksum(full_text)
+        
+        existing_checksum = self.profile_store.get_profile_checksum(entity_id, "clinical", "FDA")
+        if existing_checksum == checksum:
+            logger.info("incremental_ingestion_skip", drug=parsed_doc.drug, reason="checksum_matched")
+            return []  # Return empty chunks to skip embedding/upload for this drug
+
         self.stats.docs_parsed += 1
         self.stats.record_drug_sections(parsed_doc.drug, len(parsed_doc.sections))
         
         # Calculate and record completeness score
         status_by_category, score, percentage = self.validator.calculate_completeness_score(parsed_doc)
         self.stats.record_drug_completeness(parsed_doc.drug, status_by_category, score, percentage)
+        
+        # --- STRUCTURED PROFILE BUILD & UPLOAD ---
+        try:
+            logger.info("building_structured_profiles", drug=parsed_doc.drug)
+            identity_prof = self.profile_parser.build_identity_profile(parsed_doc)
+            clinical_prof = self.profile_parser.build_clinical_profile(parsed_doc)
+            
+            brand_names_list = identity_prof.brand_names.value or []
+            
+            # 1. Upsert entity registry
+            self.profile_store.upsert_registry_entry(
+                entity_id=entity_id,
+                generic_name=parsed_doc.generic_name,
+                preferred_authority="FDA",
+                version=1,
+                aliases=brand_names_list
+            )
+            # 2. Upsert identity & clinical profiles
+            self.profile_store.upsert_profile(
+                entity_id=entity_id,
+                profile_type="identity",
+                authority="FDA",
+                data=identity_prof.model_dump(),
+                checksum=checksum,
+                version=1
+            )
+            self.profile_store.upsert_profile(
+                entity_id=entity_id,
+                profile_type="clinical",
+                authority="FDA",
+                data=clinical_prof.model_dump(),
+                checksum=checksum,
+                version=1
+            )
+            # 3. Upsert brand aliases
+            for brand in brand_names_list:
+                self.profile_store.upsert_alias(brand, entity_id)
+                
+            logger.info("structured_profiles_uploaded_successfully", drug=parsed_doc.drug)
+        except Exception as e:
+            logger.error("failed_building_or_uploading_profiles", drug=parsed_doc.drug, error=str(e))
         
         # 5. Semantic section-based chunking
         chunks = self.chunker.chunk_document(parsed_doc)

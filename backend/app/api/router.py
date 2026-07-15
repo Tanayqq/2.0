@@ -49,6 +49,36 @@ def debug_trace(query: MedicalQuery, usecase: ProcessClinicalQueryUseCase = Depe
 def health_check():
     return {"status": "ok"}
 
+@router.get("/identity/{drug}")
+def get_identity_profile(drug: str, usecase: ProcessClinicalQueryUseCase = Depends(get_usecase)):
+    entity_id = usecase.profile_store.get_entity_by_alias(drug)
+    if not entity_id:
+        from app.usecases.drug_resolver import DrugNameResolver
+        generic = DrugNameResolver.resolve(drug)
+        if generic:
+            entity_id = f"drug:{generic}"
+            
+    if entity_id:
+        profile = usecase.profile_store.get_profile(entity_id, "identity", authority="FDA")
+        if profile:
+            return {"success": True, "profile": profile}
+    return JSONResponse(status_code=404, content={"success": False, "error": f"Identity profile not found for '{drug}'"})
+
+@router.get("/clinical/{drug}")
+def get_clinical_profile(drug: str, usecase: ProcessClinicalQueryUseCase = Depends(get_usecase)):
+    entity_id = usecase.profile_store.get_entity_by_alias(drug)
+    if not entity_id:
+        from app.usecases.drug_resolver import DrugNameResolver
+        generic = DrugNameResolver.resolve(drug)
+        if generic:
+            entity_id = f"drug:{generic}"
+            
+    if entity_id:
+        profile = usecase.profile_store.get_profile(entity_id, "clinical", authority="FDA")
+        if profile:
+            return {"success": True, "profile": profile}
+    return JSONResponse(status_code=404, content={"success": False, "error": f"Clinical profile not found for '{drug}'"})
+
 @router.get("/version")
 def version_check():
     """
