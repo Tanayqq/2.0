@@ -17,7 +17,7 @@ print("RUNNING LOCAL RAG QUERY")
 print("=" * 80)
 
 payload = {
-    "question": "Metformin",
+    "question": "Ozempic",
     "filters": {}
 }
 

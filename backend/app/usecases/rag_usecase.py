@@ -231,7 +231,7 @@ class ProcessClinicalQueryUseCase:
                 "total_filtered": 0,
                 "threshold_applied": 0.0,
                 "status": "unfound_drug_fast_path"
-            }
+            }, CitationMap()
             
         if detected_drugs and len(detected_drugs) > 1:
             resolved_drug = [d.capitalize() for d in detected_drugs]
