@@ -89,6 +89,18 @@ class MedicalUploader:
                         "dense": VectorParams(size=dimension, distance=Distance.COSINE)
                     }
                 )
+                # Create payload keyword indexes to support strict metadata filters
+                from qdrant_client.models import PayloadSchemaType
+                self.client.create_payload_index(
+                    collection_name=self.collection_name,
+                    field_name="drug_name",
+                    field_schema=PayloadSchemaType.KEYWORD
+                )
+                self.client.create_payload_index(
+                    collection_name=self.collection_name,
+                    field_name="canonical_section",
+                    field_schema=PayloadSchemaType.KEYWORD
+                )
                 logger.info("qdrant_collection_created_successfully", name=self.collection_name)
         except Exception as e:
             logger.error("failed_creating_collection", collection=self.collection_name, error=str(e))
