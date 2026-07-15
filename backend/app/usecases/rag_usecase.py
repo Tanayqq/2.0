@@ -479,8 +479,9 @@ class ProcessClinicalQueryUseCase:
                     rejection_log.append(f"Rejected {d.id} (Score {round(d.score or 0.0, 4)}): Below similarity threshold {threshold}")
                     
             total_filtered += len(threshold_filtered_docs)
-            # Diversify by section to ensure all requested sections are represented!
-            final_docs = _balance_by_section(threshold_filtered_docs, detected_sections, max_total=settings.MAX_CONTEXT_CHUNKS)
+            is_multi_section = len(detected_sections) > 5
+            max_chunks_budget = 15 if is_multi_section else settings.MAX_CONTEXT_CHUNKS
+            final_docs = _balance_by_section(threshold_filtered_docs, detected_sections, max_total=max_chunks_budget)
             
         retrieve_time = time.time() - start_retrieve
         
@@ -1287,6 +1288,7 @@ CRITICAL RULES:
                     "provider": settings.ACTIVE_LLM_PROVIDER,
                     "prompt_version": self.prompt_version,
                     "retrieval_confidence": "Low",
+                    "confidence": "Low",
                     "retrieval_stats": retrieval_stats
                 }
             )
@@ -1368,6 +1370,7 @@ CRITICAL RULES:
             "provider": settings.ACTIVE_LLM_PROVIDER,
             "prompt_version": self.prompt_version,
             "retrieval_confidence": confidence,
+            "confidence": confidence,
             "retrieval_stats": retrieval_stats
         }
         if validation_failed_reason:
