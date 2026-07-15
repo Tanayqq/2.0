@@ -810,6 +810,22 @@ export default function App() {
                   </div>
                 )}
 
+                {parsedDrugs.length === 0 && (
+                  <Card className="medref-card border-[#1e293b]/60 bg-[#090e17]/80">
+                    <CardContent className="p-8 text-center space-y-4">
+                      <div className="p-3 rounded-full border border-dashed border-slate-800 bg-slate-950/20 w-fit mx-auto">
+                        <ShieldAlert className="h-8 w-8 text-slate-500" />
+                      </div>
+                      <div className="space-y-1">
+                        <h3 className="text-sm font-bold text-slate-200">Reference Unresolved</h3>
+                        <p className="text-xs text-slate-400 max-w-md mx-auto leading-relaxed">
+                          {activeItem.a.answer || "Not found in available sources."}
+                        </p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                )}
+
                 {/* 3. Ingestion Track & Confidence */}
                 <div className="p-4 rounded-xl border border-[#1e293b]/60 bg-[#090e17] flex items-center justify-between gap-4 font-mono-dash text-[11px]">
                   <div className="flex items-center gap-4">
