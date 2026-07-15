@@ -672,9 +672,7 @@ class ProcessClinicalQueryUseCase:
                 cat_docs = docs_by_drug_category.get(drug, {}).get(cat, [])
                 
                 if not cat_docs:
-                    # Tell the LLM this category has no evidence — it will write "Not found in available sources."
-                    cat_str += "NO DOCUMENTS AVAILABLE FOR THIS CATEGORY.\n\n"
-                    drug_str += cat_str
+                    # No real chunks for this section — LLM will write "Not found in available sources."
                     continue
                 
                 for doc in cat_docs:
@@ -760,65 +758,60 @@ Context:
 
 Question: {question}
 
-You are a clinical evidence extraction engine. You extract facts ONLY from the DOCUMENTS above.
+You are a clinical evidence extraction engine. You extract facts ONLY from the DOCUMENTS provided above.
+You have ZERO medical knowledge of your own. Every word you write must come directly from the documents.
 
 CRITICAL RULES:
 
-1. CITATIONS ARE MANDATORY.
-   After EVERY factual sentence, you MUST append the citation number in square brackets.
+1. CITATIONS ARE MANDATORY ON EVERY SENTENCE.
+   After EVERY factual sentence, append the citation number in square brackets.
    CORRECT: "Metformin is contraindicated in severe renal impairment.[1]"
    CORRECT: "Warfarin may increase the risk of bleeding.[3]"
    WRONG:   "Metformin is contraindicated in severe renal impairment."
-   WRONG:   "Warfarin may increase the risk of bleeding."
-   A sentence without a citation number is INVALID and will be removed.
+   A sentence without a citation is INVALID and must not appear.
 
-2. CONCISE SUMMARY ONLY.
-   You MUST summarize the retrieved clinical evidence concisely instead of dumping long verbatim FDA excerpts.
-   However, every single sentence you write MUST be strictly grounded in the facts from the DOCUMENTS above.
-   Do NOT paraphrase loosely or extrapolate beyond the provided documents.
-   Do NOT invent drug interactions, contraindications, or warnings.
+2. DOCUMENTS ONLY — NO MEMORY, NO KNOWLEDGE.
+   If a section has NO documents provided, write EXACTLY:
+     Not found in available sources.
+   Do NOT write anything else. Do NOT use your training knowledge to fill in the section.
+   Do NOT invent dosing, drug interactions, contraindications, or warnings.
+   Do NOT extrapolate or paraphrase beyond what the documents say.
 
 3. SECTION BOUNDARIES ARE ABSOLUTE.
-   The context is organized by Drug and Clinical Category / Section.
-   - If a category or section says "NO DOCUMENTS AVAILABLE", you MUST respond with exactly:
-     Not found in available sources.
-   - NEVER use a "drug interactions" document to answer a "Contraindications" question.
-   - NEVER use a "warnings" document to answer a "Drug Interactions" question.
-   - Each section's answer must come ONLY from documents under that same category or section.
+   Each section must ONLY use documents listed under that same category.
+   - NEVER use a "drug interactions" document for a "Dosing" section.
+   - NEVER use a "warnings" document for a "Drug Interactions" section.
+   - NEVER cross-pollinate facts between sections.
 
 4. NEVER MIX DRUGS.
-   Facts about Metformin must NEVER appear under Warfarin's section, and vice versa.
+   Facts about one drug must NEVER appear under another drug's section.
 
-5. NEVER generate from memory.
-   If no DOCUMENT exists for a requested fact, do NOT write it.
-   Prefer "Not found in available sources." over any invented statement.
+5. DO NOT OUTPUT FDA CROSS-REFERENCES.
+   Do not write "[see Warnings and Precautions (5.1)]" or similar internal FDA references.
+   Do not invent citation numbers that don't exist in the documents above.
 
-6. Do NOT output FDA cross-references like "[see Warnings and Precautions (5.1)]".
-   Do NOT invent citation numbers that don't exist in the DOCUMENTS.
+6. NO DOCUMENT LABEL ARTIFACTS.
+   Never write "DOCUMENT 1", "DOCUMENT 2", or "Source: ..." in your output.
+   Only output clean clinical text with inline citation brackets.
 
-7. ABSOLUTELY NO DEBUG/DOCUMENT LABEL ARTIFACTS.
-   Never include text like "DOCUMENT 1", "DOCUMENT 2", or "Source: ..." in your final answers.
-   Only output the clean, structured clinical report text with inline citations.
-
-8. STRICT OUTPUT FORMAT:
-   You MUST format your response as a structured markdown report for EACH drug. Use the following exact headers for each drug and section, with no extra text outside this format:
+7. STRICT OUTPUT FORMAT — follow exactly for every drug:
 
    ### [Drug Name]
 
    #### Clinical Profile Overview
-   [Insert facts or "Not found in available sources."]
+   [Citation-grounded facts only, or: Not found in available sources.]
 
    #### Dosing & Administration
-   [Insert facts or "Not found in available sources."]
+   [Citation-grounded facts only, or: Not found in available sources.]
 
    #### Contraindications
-   [Insert facts or "Not found in available sources."]
+   [Citation-grounded facts only, or: Not found in available sources.]
 
    #### Warnings
-   [Insert facts or "Not found in available sources."]
+   [Citation-grounded facts only, or: Not found in available sources.]
 
    #### Co-Administration Risks
-   [Insert facts or "Not found in available sources."]
+   [Citation-grounded facts only, or: Not found in available sources.]
 """
 
     def get_debug_retrieval(self, query: MedicalQuery):
