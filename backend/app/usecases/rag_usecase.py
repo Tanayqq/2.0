@@ -508,9 +508,9 @@ class ProcessClinicalQueryUseCase:
         # 6. Calculate Confidence
         avg_similarity = sum(d.score or 0.0 for d in final_docs) / len(final_docs) if final_docs else 0.0
         
-        if avg_similarity >= 0.82:
+        if avg_similarity >= 0.45:
             confidence = "High"
-        elif avg_similarity >= 0.72:
+        elif avg_similarity >= 0.38:
             confidence = "Medium"
         else:
             confidence = "Low"
@@ -1450,6 +1450,44 @@ Identity Profile (Grounded FDA Label Metadata):
                     attempt=attempt
                 )
         
+        # Dynamically inject structured identity profile into the Clinical Profile Overview section
+        if final_answer_text and retrieval_stats.get("resolved_drug"):
+            resolved_generic = retrieval_stats.get("resolved_drug")
+            if isinstance(resolved_generic, list):
+                resolved_generic = resolved_generic[0]
+            profile = self.profile_store.get_profile(f"drug:{resolved_generic.lower()}", "identity", authority="FDA")
+            if profile:
+                data = profile.get("data", {})
+                brand_names_list = data.get("brand_names", {}).get("value", [])
+                brands_str = ", ".join(brand_names_list) if brand_names_list else "Not available"
+                
+                generic_name = data.get("generic_name", {}).get("value", resolved_generic.capitalize())
+                drug_class = data.get("drug_class", {}).get("value", "Not available")
+                presc = data.get("prescription_status", {}).get("value", "Not available")
+                mfg = data.get("manufacturer", {}).get("value", "Not available")
+                atc = data.get("atc_code", {}).get("value", "Not available")
+                rxnorm = data.get("rxnorm_id", {}).get("value", "Not available")
+                unii = data.get("unii", {}).get("value", "Not available")
+                
+                id_md = f"""Identity Profile (Grounded FDA Label Metadata):
+- **Generic Name**: {generic_name}
+- **Brand Names**: {brands_str}
+- **Drug Class**: {drug_class}
+- **Prescription Status**: {presc}
+- **Manufacturer**: {mfg}
+- **ATC Code**: {atc}
+- **RxNorm ID**: {rxnorm}
+- **UNII**: {unii}"""
+                
+                target_header = "#### Clinical Profile Overview"
+                if target_header in final_answer_text:
+                    parts = final_answer_text.split(target_header, 1)
+                    post_header = parts[1].strip()
+                    if post_header.startswith("Not found in available sources."):
+                        post_header = post_header.replace("Not found in available sources.", "", 1).strip()
+                    
+                    final_answer_text = f"{parts[0]}{target_header}\n\n{id_md}\n\n{post_header}"
+
         validation_failed_reason = " | ".join(final_validation_errors) if final_validation_errors else None
         if validation_failed_reason:
             logger.warning("Inline citation removed during processing.", errors=[safe_log_str(e) for e in final_validation_errors])
