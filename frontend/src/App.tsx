@@ -47,7 +47,10 @@ const DRUG_EQUIVALENTS: Record<string, string[]> = {
   ibuprofen: ["Advil", "Motrin", "Nurofen"],
   gaba: ["Neurontin", "Gralise"],
   gabapentin: ["Neurontin", "Gralise"],
-  omeprazole: ["Prilosec", "Omez", "Losec"]
+  omeprazole: ["Prilosec", "Omez", "Losec"],
+  levothyroxine: ["Synthroid", "Levoxyl", "Unithroid", "Euthyrox"],
+  furosemide: ["Lasix", "Diaqua-2", "Lo-Aqua"],
+  albuterol: ["Ventolin", "Proair", "Proventil"]
 };
 
 // ── SECTION PARSER HELPER ────────────────────────────────────────────────────
@@ -139,25 +142,52 @@ function CustomTextRenderer({
     }
   };
 
+  const renderBoldAndText = (textSegment: string, keyPrefix: string) => {
+    const boldRegex = /\*\*([^*]+)\*\*/g;
+    const elements = [];
+    let lastIdx = 0;
+    let boldMatch;
+    boldRegex.lastIndex = 0;
+    while ((boldMatch = boldRegex.exec(textSegment)) !== null) {
+      if (boldMatch.index > lastIdx) {
+        elements.push(<span key={`${keyPrefix}-text-${lastIdx}`}>{textSegment.substring(lastIdx, boldMatch.index)}</span>);
+      }
+      elements.push(<strong key={`${keyPrefix}-bold-${boldMatch.index}`} className="font-bold text-slate-100">{boldMatch[1]}</strong>);
+      lastIdx = boldMatch.index + boldMatch[0].length;
+    }
+    if (lastIdx < textSegment.length) {
+      elements.push(<span key={`${keyPrefix}-text-end`}>{textSegment.substring(lastIdx)}</span>);
+    }
+    return elements;
+  };
+
   return (
     <div className="space-y-2">
       {lines.map((line, lIdx) => {
-        const parts = [];
+        // Detect if line is bullet-like
+        const isBullet = line.trim().startsWith("-") || line.trim().startsWith("*");
+        // Strip bullet prefixes
+        let lineText = line;
+        if (isBullet) {
+          lineText = line.trim().replace(/^[-*]\s*/, "");
+        }
+
+        const parts: any[] = [];
         let lastIndex = 0;
         let match;
         
         // Reset regex index for this line
         regex.lastIndex = 0;
         
-        while ((match = regex.exec(line)) !== null) {
+        while ((match = regex.exec(lineText)) !== null) {
           if (match.index > lastIndex) {
-            parts.push(<span key={lastIndex}>{line.substring(lastIndex, match.index)}</span>);
+            parts.push(...renderBoldAndText(lineText.substring(lastIndex, match.index), `l${lIdx}-p1-${lastIndex}`));
           }
           
           const matchedText = match[0];
           if (matchedText === "[Unsupported Citation Removed]") {
             parts.push(
-              <span key={match.index} className="inline-flex px-1 text-[9px] text-red-500 font-bold bg-red-950/20 border border-red-900/40 rounded ml-0.5">
+              <span key={`l${lIdx}-unsupported-${match.index}`} className="inline-flex px-1 text-[9px] text-red-500 font-bold bg-red-950/20 border border-red-900/40 rounded ml-0.5">
                 [Ungrounded Removed]
               </span>
             );
@@ -165,7 +195,7 @@ function CustomTextRenderer({
             const docId = match[1];
             parts.push(
               <InlineCitation 
-                key={match.index}
+                key={`l${lIdx}-citation-${match.index}`}
                 citation={citations.find(c => (c.citation_number ?? parseInt(c.document_id, 10)) === parseInt(docId, 10)) || {
                   document_id: docId,
                   source: "Ingested Corpus",
@@ -178,19 +208,16 @@ function CustomTextRenderer({
           lastIndex = match.index + match[0].length;
         }
         
-        if (lastIndex < line.length) {
-          parts.push(<span key={lastIndex}>{line.substring(lastIndex)}</span>);
+        if (lastIndex < lineText.length) {
+          parts.push(...renderBoldAndText(lineText.substring(lastIndex), `l${lIdx}-p2-${lastIndex}`));
         }
-
-        // Detect if line is bullet-like
-        const isBullet = line.trim().startsWith("-") || line.trim().startsWith("*");
 
         return (
           <div key={lIdx} className="flex items-start gap-2 text-[13.5px] leading-relaxed text-slate-300">
             {isBullet ? (
               <span className="text-cyan-500 shrink-0 mt-2 select-none font-bold text-xs">•</span>
             ) : null}
-            <span>{isBullet ? parts : parts}</span>
+            <span>{parts}</span>
           </div>
         );
       })}
@@ -380,7 +407,13 @@ export default function App() {
   const drugCitations = activeCitations.filter(c => {
     const num = c.citation_number ?? parseInt(c.document_id, 10);
     const isCited = referencedNums.has(num);
-    const matchesDrug = !c.drug || !activeDrug || c.drug.toLowerCase() === activeDrug.name.toLowerCase();
+    const matchesDrug = !c.drug || !activeDrug || (() => {
+      const drugLower = (c.drug || "").toLowerCase();
+      const activeLower = activeDrug.name.toLowerCase();
+      return drugLower === activeLower ||
+        (drugLower ? DRUG_EQUIVALENTS[drugLower]?.some(eq => eq.toLowerCase() === activeLower) : false) ||
+        DRUG_EQUIVALENTS[activeLower]?.some(eq => eq.toLowerCase() === drugLower);
+    })();
     return isCited && matchesDrug;
   });
 
@@ -704,13 +737,17 @@ export default function App() {
                             Verbatim Match
                           </span>
                         </div>
-                        <div className="p-3.5 rounded-lg border border-slate-800/80 bg-[#070b12] text-xs font-mono-dash text-cyan-400 leading-normal max-h-48 overflow-y-auto shadow-inner">
-                          {activeDrug.sections.dosing.toLowerCase() === 'not found in available sources.' ? (
-                            <span className="text-slate-600 italic">Not found in available sources.</span>
-                          ) : (
-                            activeDrug.sections.dosing
-                          )}
-                        </div>
+                        {activeDrug.sections.dosing.toLowerCase() === 'not found in available sources.' ? (
+                          <div className="p-3.5 rounded-lg border border-slate-800/80 bg-[#070b12] text-xs text-slate-600 italic">
+                            Not found in available sources.
+                          </div>
+                        ) : (
+                          <CustomTextRenderer 
+                            text={activeDrug.sections.dosing} 
+                            citations={activeCitations} 
+                            cardIndex={activeHistoryIndex} 
+                          />
+                        )}
                       </CardContent>
                     </Card>
 
