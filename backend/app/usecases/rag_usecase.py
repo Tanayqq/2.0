@@ -279,8 +279,8 @@ class ProcessClinicalQueryUseCase:
         raw_retrieved_log = []
         
         # Determine Top-K retrieval depth
-        has_sections = len(detected_sections) > 0
-        top_k_to_request = settings.MULTI_SECTION_TOP_K if has_sections else settings.DEFAULT_TOP_K
+        is_default_all = len(detected_sections) > 30
+        top_k_to_request = 100 if is_default_all else (settings.MULTI_SECTION_TOP_K if len(detected_sections) > 0 else settings.DEFAULT_TOP_K)
         
         # 3. Query Expansion (Ontology -> LLM)
         expanded_queries = self.expander.expand(query.question, skip_llm=(resolved_drug is not None))
