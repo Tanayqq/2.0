@@ -607,8 +607,6 @@ class ProcessClinicalQueryUseCase:
                 cat_docs = docs_by_drug_category.get(drug, {}).get(cat, [])
                 
                 if not cat_docs:
-                    cat_str += "NO DOCUMENTS AVAILABLE FOR THIS CATEGORY.\n\n"
-                    drug_str += cat_str
                     continue
                 
                 for doc in cat_docs:
