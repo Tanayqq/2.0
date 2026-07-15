@@ -712,6 +712,26 @@ CRITICAL RULES:
 7. ABSOLUTELY NO DEBUG/DOCUMENT LABEL ARTIFACTS.
    Never include text like "DOCUMENT 1", "DOCUMENT 2", or "Source: ..." in your final answers.
    Only output the clean, structured clinical report text with inline citations.
+
+8. STRICT OUTPUT FORMAT:
+   You MUST format your response as a structured markdown report for EACH drug. Use the following exact headers for each drug and section, with no extra text outside this format:
+
+   ### [Drug Name]
+
+   #### Clinical Profile Overview
+   [Insert facts or "Not found in available sources."]
+
+   #### Dosing & Administration
+   [Insert facts or "Not found in available sources."]
+
+   #### Contraindications
+   [Insert facts or "Not found in available sources."]
+
+   #### Warnings
+   [Insert facts or "Not found in available sources."]
+
+   #### Co-Administration Risks
+   [Insert facts or "Not found in available sources."]
 """
 
     def get_debug_retrieval(self, query: MedicalQuery):
