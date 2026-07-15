@@ -20,7 +20,7 @@ SECTION_KEYWORDS = {
     "pharmacodynamics": ["pharmacodynamics", "pharmacodynamic"],
     "adverse_reactions": ["adverse reactions", "adverse reaction", "side effects", "side effect", "undesirable effects", "postmarketing", "clinical trials experience", "clinical studies experience"],
     "overdosage": ["overdosage", "overdose", "toxicity"],
-    "storage": ["storage", "handling", "supplied", "store", "keep"],
+    "storage": ["storage", "handling", "supplied", "store", "stored", "storing", "keep"],
     "patient_counseling": ["counseling", "patient counseling", "patient information", "information for patients"],
     "dosage_and_administration": ["dosage and administration", "dosage", "dosages", "dosing", "dose", "doses"],
     "administration": ["administration", "instructions for use", "how to administer"],
