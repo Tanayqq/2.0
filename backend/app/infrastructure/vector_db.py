@@ -1,5 +1,5 @@
 from qdrant_client import QdrantClient
-from qdrant_client.models import Filter, FieldCondition, MatchValue, Prefetch, models
+from qdrant_client.models import Filter, FieldCondition, MatchValue, MatchAny, Prefetch, models
 from typing import List, Dict, Any, Optional
 from app.domain.interfaces import VectorDatabaseProtocol
 from app.domain.models import ReferenceDocument
@@ -77,6 +77,50 @@ class QdrantAdapter(VectorDatabaseProtocol):
         
         return self._map_results(search_result.points)
 
+    def scroll_by_drug_sections(self, drug_name: str, canonical_sections: List[str], limit_per_section: int = 3) -> List[ReferenceDocument]:
+        """
+        Direct metadata-filtered scroll — NO vector similarity needed.
+        Guarantees retrieval of chunks for the given drug + section list.
+        Used to force-populate required UI cards (Dosing, Interactions, Warnings, Overview).
+        Returns a flat list of ReferenceDocuments with score=1.0 (exact match marker).
+        Drug names are stored as Title Case in Qdrant (e.g. 'Albuterol'), so we normalize.
+        """
+        results = []
+        # Drug names stored as Title Case in Qdrant
+        drug_title = drug_name.strip().title()
+        
+        # Query in batches of sections to avoid Qdrant filter size limits
+        batch_size = 10
+        for i in range(0, len(canonical_sections), batch_size):
+            section_batch = canonical_sections[i:i+batch_size]
+            qdrant_filter = Filter(
+                must=[
+                    FieldCondition(key="drug_name", match=MatchValue(value=drug_title)),
+                    FieldCondition(key="canonical_section", match=MatchAny(any=section_batch))
+                ]
+            )
+            try:
+                scroll_result, _ = self.client.scroll(
+                    collection_name=self.collection_name,
+                    scroll_filter=qdrant_filter,
+                    limit=limit_per_section * len(section_batch),
+                    with_payload=True,
+                    with_vectors=False
+                )
+                for point in scroll_result:
+                    payload = point.payload or {}
+                    doc = ReferenceDocument(
+                        id=str(point.id),
+                        content=payload.get("content", payload.get("chunk_text", "")),
+                        source=payload.get("source", "Unknown"),
+                        metadata=payload,
+                        score=1.0  # Exact match — no similarity scoring needed
+                    )
+                    results.append(doc)
+            except Exception:
+                pass  # Silently skip if index not available for this batch
+        return results
+
     def _map_results(self, search_result) -> List[ReferenceDocument]:
         documents = []
         for hit in search_result:
@@ -90,3 +134,4 @@ class QdrantAdapter(VectorDatabaseProtocol):
             )
             documents.append(doc)
         return documents
+

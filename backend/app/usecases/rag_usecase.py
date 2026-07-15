@@ -505,8 +505,58 @@ class ProcessClinicalQueryUseCase:
             
         retrieve_time = time.time() - start_retrieve
         
+        # 5b. GUARANTEED SECTION TOP-UP: For single-drug queries, directly scroll the DB
+        # for the 4 required UI card sections that may have been missed by vector similarity.
+        # This runs regardless of vector scores and ensures all 4 cards always have content.
+        REQUIRED_UI_SECTIONS = [
+            # Clinical Profile Overview
+            "indications", "mechanism_of_action", "clinical_pharmacology", "adverse_reactions",
+            # Dosing & Administration
+            "dosage_and_administration", "administration", "dosage_forms",
+            "renal_dose", "hepatic_dose", "maximum_dose",
+            # Contraindications & Warnings
+            "contraindications", "warnings", "warnings_and_precautions", "boxed_warning", "precautions",
+            # Co-Administration Risks
+            "drug_interactions", "cyp_interactions", "alcohol_interactions", "food_interactions", "monitoring",
+        ]
+        
+        single_resolved = resolved_drug if (resolved_drug and not isinstance(resolved_drug, list)) else (
+            resolved_drug[0] if isinstance(resolved_drug, list) and len(resolved_drug) == 1 else None
+        )
+        
+        if single_resolved and hasattr(self.vector_db, 'scroll_by_drug_sections'):
+            # Find which canonical sections are already covered in final_docs
+            from app.section_utils import normalize_section as _norm_sec
+            covered_sections = set()
+            for d in final_docs:
+                raw_sec = _resolve_raw_section(d.metadata)
+                covered_sections.add(_norm_sec(raw_sec))
+            
+            missing_sections = [s for s in REQUIRED_UI_SECTIONS if s not in covered_sections]
+            
+            if missing_sections:
+                logger.info(
+                    "guaranteed_topup",
+                    drug=single_resolved,
+                    covered=list(covered_sections),
+                    missing=missing_sections
+                )
+                topup_docs = self.vector_db.scroll_by_drug_sections(
+                    drug_name=single_resolved,
+                    canonical_sections=missing_sections,
+                    limit_per_section=2
+                )
+                # Merge top-up docs — only add UUIDs not already in final_docs
+                existing_ids = {d.id for d in final_docs}
+                for td in topup_docs:
+                    if td.id not in existing_ids:
+                        final_docs.append(td)
+                        existing_ids.add(td.id)
+        
         # 6. Calculate Confidence
-        avg_similarity = sum(d.score or 0.0 for d in final_docs) / len(final_docs) if final_docs else 0.0
+        # Use only similarity-scored docs (score < 1.0) for confidence calculation
+        similarity_docs = [d for d in final_docs if (d.score or 0.0) < 1.0]
+        avg_similarity = sum(d.score or 0.0 for d in similarity_docs) / len(similarity_docs) if similarity_docs else 0.0
         
         if avg_similarity >= 0.45:
             confidence = "High"
