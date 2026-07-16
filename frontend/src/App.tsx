@@ -707,6 +707,10 @@ export default function App() {
 
       {/* ── MAIN WORKSPACE ───────────────────────────────────────────────────── */}
       <main className="flex-1 flex flex-col min-w-0 bg-[#060b13] relative z-10">
+        {activeTab === "dashboard" ? (
+          <Dashboard />
+        ) : (
+        <>
         
         {/* Workspace Top Header Bar */}
         <header className="h-16 flex items-center justify-between px-6 border-b border-[#1e293b]/60 shrink-0">
@@ -853,6 +857,53 @@ export default function App() {
                 {activeDrug && (
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     
+                    {/* DRUG INFORMATION CARD */}
+                    {activeItem?.a.metadata?.identity_profile && (
+                      <div className="col-span-full mb-2 p-4 rounded-xl border border-slate-700 bg-[#0e1726]/80 flex flex-col gap-3">
+                        <div className="flex items-center gap-2 border-b border-slate-700 pb-2 mb-2">
+                          <Database className="h-4 w-4 text-cyan-400" />
+                          <h3 className="text-sm font-bold text-slate-200 uppercase tracking-wider font-mono-dash">Drug Information Card</h3>
+                        </div>
+                        
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                          <div className="flex flex-col">
+                            <span className="text-[10px] text-slate-500 font-bold uppercase font-mono-dash">Generic Name</span>
+                            <span className="text-sm text-emerald-400 font-bold">{activeItem.a.metadata.identity_profile.data?.generic_name?.value || "-"}</span>
+                          </div>
+                          
+                          <div className="flex flex-col">
+                            <span className="text-[10px] text-slate-500 font-bold uppercase font-mono-dash">Brand Names</span>
+                            <span className="text-xs text-slate-300">{activeItem.a.metadata.identity_profile.data?.brand_names?.value?.join(", ") || "-"}</span>
+                          </div>
+                          
+                          <div className="flex flex-col">
+                            <span className="text-[10px] text-slate-500 font-bold uppercase font-mono-dash">Drug Class</span>
+                            <span className="text-xs text-slate-300">{activeItem.a.metadata.identity_profile.data?.drug_class?.value?.[0] || "-"}</span>
+                          </div>
+
+                          <div className="flex flex-col">
+                            <span className="text-[10px] text-slate-500 font-bold uppercase font-mono-dash">Prescription</span>
+                            <span className="text-xs text-slate-300">{activeItem.a.metadata.identity_profile.data?.prescription_status?.value || "-"}</span>
+                          </div>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+                          <div className="flex flex-col">
+                            <span className="text-[10px] text-slate-500 font-bold uppercase font-mono-dash">Primary Indications</span>
+                            <span className="text-xs text-slate-300">{activeItem.a.metadata.identity_profile.data?.indications?.value?.join(", ") || "-"}</span>
+                          </div>
+                          
+                          <div className="flex flex-col">
+                            <span className="text-[10px] text-slate-500 font-bold uppercase font-mono-dash">Authority / Corpus Version</span>
+                            <div className="flex items-center gap-2 mt-1">
+                              <span className="px-1.5 py-0.5 rounded bg-emerald-950/40 border border-emerald-800 text-emerald-400 text-[9px] font-bold">🟢 DailyMed</span>
+                              <span className="text-xs text-slate-400 font-mono-dash">v3.2</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
                     {/* Card 1: Clinical Profile Overview */}
                     <Card className="medref-card medref-card-cyan border-cyan-500/10">
                       <CardContent className="p-5 space-y-3">
@@ -999,9 +1050,12 @@ export default function App() {
                       }
                     </div>
                   )}
-                </div>
+                  </div>
+                  
+                  {/* CLINICAL AUDIT COMPONENT */}
+                  <ClinicalAudit audit={activeItem?.a.metadata?.audit} />
 
-                {/* 4. Sources Referenced Card List */}
+                  {/* 4. Sources Referenced Card List */}
                 <div className="space-y-3">
                   <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest font-mono-dash flex items-center gap-2 pl-1">
                     <FileText className="h-4 w-4 text-cyan-500" /> Sources Referenced
@@ -1043,6 +1097,8 @@ export default function App() {
           </p>
         </footer>
 
+        </>
+        )}
       </main>
 
     </div>

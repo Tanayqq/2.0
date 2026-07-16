@@ -19,6 +19,8 @@ export interface AnswerResponse {
     total_latency_sec?: number;
     provider?: string;
     confidence?: string;
+    audit?: any;
+    identity_profile?: any;
   };
 }
 
