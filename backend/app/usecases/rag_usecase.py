@@ -1538,12 +1538,18 @@ Identity Profile (Grounded FDA Label Metadata):
 - **RxNorm ID**: {rxnorm}
 - **UNII**: {unii}"""
                 
-                target_header = "#### Clinical Profile Overview"
-                if target_header in final_answer_text:
+                import re
+                
+                # Match ### or #### Clinical Profile Overview
+                header_pattern = re.compile(r'(#{3,4}\s*Clinical Profile Overview)', re.IGNORECASE)
+                match = header_pattern.search(final_answer_text)
+                
+                if match:
+                    target_header = match.group(1)
                     parts = final_answer_text.split(target_header, 1)
-                    post_header = parts[1].strip()
+                    post_header = parts[1].lstrip()
                     if post_header.startswith("Not found in available sources."):
-                        post_header = post_header.replace("Not found in available sources.", "", 1).strip()
+                        post_header = post_header.replace("Not found in available sources.", "", 1).lstrip()
                     
                     final_answer_text = f"{parts[0]}{target_header}\n\n{id_md}\n\n{post_header}"
 

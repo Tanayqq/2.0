@@ -780,7 +780,7 @@ export default function App() {
                         </Badge>
                       </div>
                       <span className="text-[10px] text-slate-500 uppercase tracking-wider font-mono-dash block">
-                        Pipeline Standard Reference Profile: {formularyStandard === 'openFDA' ? 'openFDA Library' : 'CDSCO Indian Pharmacopoeia'}
+                        Pipeline Standard Reference Profile: {formularyStandard === 'openFDA' ? 'FDA / DailyMed Library' : 'CDSCO Indian Pharmacopoeia'}
                       </span>
                     </div>
 
