@@ -54,25 +54,37 @@ def get_dashboard(usecase: ProcessClinicalQueryUseCase = Depends(get_usecase)):
     # In the future, this should pull from a live metrics DB or the CORPUS_REPORT.md file.
     # For now, we query the registry for actual indexed drugs and mock the rest until the ingestion pipeline saves live metrics files persistently.
     try:
-        import sqlite3
-        conn = sqlite3.connect(usecase.profile_store.db_file)
-        cursor = conn.cursor()
-        cursor.execute("SELECT COUNT(*) FROM registry")
-        total_drugs = cursor.fetchone()[0]
-    except Exception:
+        total_drugs = usecase.profile_store.client.count(
+            collection_name=usecase.profile_store.registry_col,
+            exact=True
+        ).count
+        
+        total_chunks = usecase.vector_db.client.count(
+            collection_name=usecase.vector_db.collection_name,
+            exact=True
+        ).count
+        
+        complete = usecase.profile_store.client.count(
+            collection_name=usecase.profile_store.profiles_col,
+            exact=True
+        ).count
+    except Exception as e:
+        logger.error("failed_to_fetch_live_metrics", error=str(e))
         total_drugs = 29
+        total_chunks = 2277
+        complete = 22
 
     return {
         "total_drugs": total_drugs,
-        "total_chunks": 2277,
-        "complete": 22,
-        "incomplete": total_drugs - 22 if total_drugs > 22 else 7,
+        "total_chunks": total_chunks,
+        "complete": complete,
+        "incomplete": total_drugs - complete if total_drugs > complete else 0,
         "avg_sections": 41.1,
-        "avg_chunks": 78.5,
+        "avg_chunks": round(total_chunks / total_drugs, 1) if total_drugs > 0 else 0,
         "corpus_version": "v3.2",
         "authorities": {
-            "DailyMed": total_drugs - 2 if total_drugs > 2 else 27,
-            "openFDA": 2
+            "DailyMed": total_drugs - 2 if total_drugs > 2 else total_drugs,
+            "openFDA": 2 if total_drugs > 2 else 0
         }
     }
 
