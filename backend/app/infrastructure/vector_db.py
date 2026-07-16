@@ -86,16 +86,13 @@ class QdrantAdapter(VectorDatabaseProtocol):
         Drug names are stored as Title Case in Qdrant (e.g. 'Albuterol'), so we normalize.
         """
         results = []
-        # Drug names stored as Title Case in Qdrant
-        drug_title = drug_name.strip().title()
-        
         # Query in batches of sections to avoid Qdrant filter size limits
         batch_size = 10
         for i in range(0, len(canonical_sections), batch_size):
             section_batch = canonical_sections[i:i+batch_size]
             qdrant_filter = Filter(
                 must=[
-                    FieldCondition(key="drug_name", match=MatchValue(value=drug_title)),
+                    FieldCondition(key="generic_name", match=MatchValue(value=drug_name.strip().lower())),
                     FieldCondition(key="canonical_section", match=MatchAny(any=section_batch))
                 ]
             )

@@ -98,6 +98,11 @@ class MedicalUploader:
                 )
                 self.client.create_payload_index(
                     collection_name=self.collection_name,
+                    field_name="generic_name",
+                    field_schema=PayloadSchemaType.KEYWORD
+                )
+                self.client.create_payload_index(
+                    collection_name=self.collection_name,
                     field_name="canonical_section",
                     field_schema=PayloadSchemaType.KEYWORD
                 )
