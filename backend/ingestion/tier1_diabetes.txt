@@ -1,0 +1,37 @@
+# Tier 1 — Diabetes & Endocrinology (~35 new drugs)
+# Existing in DB (skipped): metformin, levothyroxine, prednisone, prednisolone, dexamethasone, methylprednisolone, hydroxychloroquine
+glimepiride
+glipizide
+gliclazide
+pioglitazone
+acarbose
+sitagliptin
+vildagliptin
+linagliptin
+empagliflozin
+dapagliflozin
+canagliflozin
+semaglutide
+liraglutide
+exenatide
+dulaglutide
+insulin glargine
+insulin lispro
+insulin aspart
+insulin detemir
+insulin degludec
+carbimazole
+methimazole
+propylthiouracil
+fludrocortisone
+glibenclamide
+repaglinide
+nateglinide
+saxagliptin
+alogliptin
+ertugliflozin
+tirzepatide
+orlistat
+bromocriptine
+gliquidone
+teneligliptin

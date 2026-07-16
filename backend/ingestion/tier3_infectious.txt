@@ -1,0 +1,74 @@
+# Tier 3 — Infectious Diseases (~65 new drugs)
+# Existing: amoxicillin, azithromycin, clarithromycin, erythromycin, doxycycline, minocycline, tetracycline,
+# cephalexin, cefdinir, cefuroxime, ciprofloxacin, levofloxacin, moxifloxacin, metronidazole, clindamycin,
+# linezolid, vancomycin, nitrofurantoin, trimethoprim, fluconazole, ketoconazole, itraconazole, terbinafine,
+# acyclovir, valacyclovir, oseltamivir, hydroxychloroquine
+amoxicillin-clavulanate
+ampicillin
+piperacillin-tazobactam
+ceftriaxone
+cefixime
+cefpodoxime
+cefepime
+ceftazidime
+meropenem
+imipenem
+ertapenem
+doripenem
+oxacillin
+cloxacillin
+dicloxacillin
+daptomycin
+tedizolid
+ceftaroline
+ceftolozane-tazobactam
+ceftazidime-avibactam
+gemifloxacin
+tigecycline
+colistin
+polymyxin B
+fosfomycin
+rifampicin
+rifabutin
+ethambutol
+isoniazid
+pyrazinamide
+streptomycin
+amikacin
+gentamicin
+tobramycin
+chloramphenicol
+cotrimoxazole
+sulfamethoxazole
+albendazole
+mebendazole
+ivermectin
+praziquantel
+artesunate
+artemether-lumefantrine
+chloroquine
+primaquine
+quinine
+mefloquine
+atovaquone
+proguanil
+voriconazole
+posaconazole
+caspofungin
+micafungin
+anidulafungin
+amphotericin B
+nystatin
+griseofulvin
+zanamivir
+baloxavir
+remdesivir
+favipiravir
+famciclovir
+ganciclovir
+valganciclovir
+foscarnet
+benzylpenicillin
+cefazolin
+cefotaxime
+aztreonam

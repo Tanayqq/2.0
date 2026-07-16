@@ -1,0 +1,25 @@
+# Tier 5 — Respiratory (~23 new drugs)
+# Existing: albuterol, fluticasone, budesonide, formoterol, salmeterol, tiotropium, ipratropium, montelukast
+salbutamol
+indacaterol
+olodaterol
+vilanterol
+umeclidinium
+glycopyrronium
+aclidinium
+roflumilast
+theophylline
+aminophylline
+zafirlukast
+zileuton
+omalizumab
+mepolizumab
+reslizumab
+benralizumab
+dupilumab
+tezepelumab
+acetylcysteine
+erdosteine
+ambroxol
+bromhexine
+carbocisteine

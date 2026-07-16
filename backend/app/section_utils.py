@@ -67,11 +67,26 @@ SECTION_SYNONYMS: dict[str, str] = {
     "information for patients": "patient_counseling",
     "counseling": "patient_counseling",
 
-    # Dosage & Administration
+    # Dosage & Administration — comprehensive synonym set
     "dosage and administration": "dosage_and_administration",
     "dosage": "dosage_and_administration",
     "dosages": "dosage_and_administration",
     "dosing": "dosage_and_administration",
+    "dose": "dosage_and_administration",
+    "posology": "dosage_and_administration",                     # EMA/European labels
+    "recommended dose": "dosage_and_administration",
+    "recommended dosage": "dosage_and_administration",
+    "dosing information": "dosage_and_administration",
+    "dosing instructions": "dosage_and_administration",
+    "doses and administration": "dosage_and_administration",
+    "dose and administration": "dosage_and_administration",
+    "how to take": "dosage_and_administration",
+    "how to use": "dosage_and_administration",
+    "dose regimen": "dosage_and_administration",
+    "dosage regimen": "dosage_and_administration",
+    "recommended dose and administration": "dosage_and_administration",
+    "dosage and use": "dosage_and_administration",
+    "dose and use": "dosage_and_administration",
     
     # Administration
     "administration": "administration",

@@ -1,4 +1,5 @@
 import time
+import datetime
 import structlog
 from typing import List, Dict, Any, Optional
 from .interfaces.embedding_provider import EmbeddingProvider
@@ -74,10 +75,12 @@ class MedicalEmbedder:
             
             embeddings.extend(batch_embeddings)
             
-        # Attach vectors back to the chunk dictionaries
+        # Attach vectors and versioning stamps back to the chunk dictionaries
+        embedded_at = datetime.datetime.utcnow().isoformat() + "Z"
         for chunk, vector in zip(chunks, embeddings):
             chunk["embedding"] = vector
             chunk["embedding_model"] = ingestion_config.EMBEDDING_MODEL_NAME
+            chunk["embedded_at"] = embedded_at   # Refinement #5: exact embedding timestamp
             
         duration = time.time() - start_time
         logger.info("embeddings_generated_successfully", duration_sec=round(duration, 4), count=len(chunks))

@@ -18,17 +18,22 @@ class MedicalValidator:
     def validate(self, doc: NormalizedMedicalDocument) -> Tuple[bool, str]:
         """
         Validate a NormalizedMedicalDocument.
+        
+        Philosophy: Only reject documents that are structurally corrupt or empty.
+        Missing clinical sections are VALID — many FDA/DailyMed labels are legitimately
+        sparse. Missing sections are logged in MISSING_SECTIONS.md for review.
+        
         Returns:
             Tuple of (is_valid: bool, error_reason: str)
         """
         if not doc:
             return False, "Document is None"
             
-        # 1. Verify drug name
+        # 1. Reject: no drug name (cannot index without identity)
         if not doc.drug or not doc.drug.strip():
             return False, "Missing or empty drug name"
             
-        # 2. Verify source and metadata
+        # 2. Reject: no source metadata (provenance required)
         if not doc.source or not doc.source.strip():
             return False, "Missing or empty data source metadata"
             
@@ -38,33 +43,38 @@ class MedicalValidator:
         if not doc.version or not doc.version.strip():
             return False, "Missing document version"
             
-        # 3. Verify sections exist
+        # 3. Reject: parser returned zero sections (total parse failure)
         if not doc.sections:
-            return False, "Document has no parsed text sections"
+            return False, "Parser returned zero sections — likely corrupt or unreachable label"
             
-        # 4. Check section data quality
+        # 4. Reject: section-level structural corruption only
         total_content_length = 0
         for section in doc.sections:
             if not section.title or not section.title.strip():
                 return False, "Found section with missing title"
-                
             if not section.content or not section.content.strip():
-                return False, f"Section '{section.title}' has empty content"
-                
+                # Skip empty sections silently instead of failing the whole drug
+                continue
             content_len = len(section.content.strip())
             total_content_length += content_len
-            
-            # Warn/Reject extremely small sections (e.g. less than 10 characters)
-            if content_len < 10:
-                return False, f"Section '{section.title}' is too short ({content_len} characters)"
-                
-            # Reject extremely oversized sections (e.g. more than 200,000 chars)
+            # Reject only grotesquely oversized sections (sign of corruption)
             if content_len > 250000:
-                return False, f"Section '{section.title}' is too large ({content_len} characters)"
+                return False, f"Section '{section.title}' is too large ({content_len} chars) — likely corruption"
 
-        # 5. Verify total document size
-        if total_content_length < 50:
-            return False, f"Total document content is too short ({total_content_length} characters)"
+        # 5. Reject: total document so small it's clearly a fetch failure
+        if total_content_length < 100:
+            return False, f"Total content {total_content_length} chars — likely truncated or failed fetch"
+
+        # 6. WARN (do not reject): low completeness score
+        # Missing sections are logged in MISSING_SECTIONS.md — not a reason to reject
+        _, _, percentage = self.calculate_completeness_score(doc)
+        if percentage < 50.0:
+            logger.warning(
+                "low_completeness_score_accepted",
+                drug=doc.drug,
+                completeness_pct=percentage,
+                note="Sparse but valid label — indexed with available sections"
+            )
 
         return True, ""
 

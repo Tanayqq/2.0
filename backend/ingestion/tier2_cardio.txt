@@ -1,0 +1,68 @@
+# Tier 2 — Cardiovascular (~65 new drugs)
+# Existing in DB (skipped): lisinopril, losartan, warfarin, amlodipine, metoprolol, hydrochlorothiazide,
+# atorvastatin, simvastatin, rosuvastatin, carvedilol, spironolactone, enalapril, ramipril, valsartan,
+# atenolol, propranolol, hydralazine, clonidine, pravastatin, lovastatin, fenofibrate, gemfibrozil, ezetimibe, furosemide
+bisoprolol
+nebivolol
+telmisartan
+irbesartan
+olmesartan
+candesartan
+azilsartan
+nifedipine
+felodipine
+diltiazem
+verapamil
+nimodipine
+lacidipine
+lercanidipine
+isosorbide mononitrate
+isosorbide dinitrate
+nitroglycerin
+ivabradine
+ranolazine
+sacubitril
+eplerenone
+torasemide
+indapamide
+chlorthalidone
+metolazone
+apixaban
+rivaroxaban
+dabigatran
+edoxaban
+clopidogrel
+prasugrel
+ticagrelor
+dipyridamole
+cilostazol
+enoxaparin
+fondaparinux
+alteplase
+streptokinase
+digoxin
+amiodarone
+dronedarone
+flecainide
+propafenone
+sotalol
+milrinone
+nitroprusside
+minoxidil
+moxonidine
+doxazosin
+prazosin
+evolocumab
+alirocumab
+inclisiran
+bempedoic acid
+icosapent ethyl
+trimetazidine
+bosentan
+ambrisentan
+macitentan
+sildenafil
+tadalafil
+sacubitril-valsartan
+levosimendan
+phentolamine

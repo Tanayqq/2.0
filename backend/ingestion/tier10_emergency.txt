@@ -1,0 +1,27 @@
+# Tier 10 — Emergency & ICU (~25 new drugs)
+# Existing: furosemide, dexamethasone, methylprednisolone
+epinephrine
+norepinephrine
+dopamine
+dobutamine
+vasopressin
+phenylephrine
+atropine
+naloxone
+magnesium sulfate
+calcium gluconate
+mannitol
+adenosine
+amiodarone
+lidocaine
+procainamide
+protamine
+phytonadione
+tranexamic acid
+dexmedetomidine
+rocuronium
+succinylcholine
+neostigmine
+sugammadex
+labetalol
+nitroprusside

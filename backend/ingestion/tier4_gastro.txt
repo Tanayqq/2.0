@@ -1,0 +1,31 @@
+# Tier 4 — Gastroenterology (~28 new drugs)
+# Existing: omeprazole, pantoprazole, rabeprazole, esomeprazole, lansoprazole, famotidine, cimetidine,
+# ondansetron, metoclopramide, loperamide, misoprostol, sulfasalazine, mesalamine, azathioprine
+sucralfate
+bismuth subsalicylate
+domperidone
+mosapride
+itopride
+trimebutine
+hyoscine
+dicyclomine
+mebeverine
+linaclotide
+lubiprostone
+prucalopride
+lactulose
+polyethylene glycol
+bisacodyl
+senna
+docusate
+psyllium
+cholestyramine
+colestipol
+colesevelam
+ursodeoxycholic acid
+obeticholic acid
+mercaptopurine
+simethicone
+pancrelipase
+rifaximin
+eluxadoline

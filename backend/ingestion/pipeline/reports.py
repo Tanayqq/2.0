@@ -271,3 +271,79 @@ This report records the retrieval smoke test results following ingestion.
             logger.info("smoke_test_report_generated", path=filepath)
         except Exception as e:
             logger.error("failed_writing_smoke_test_report", path=filepath, error=str(e))
+
+    def generate_corpus_manifest(self):
+        """
+        Generates CORPUS_MANIFEST.json — the canonical machine-readable summary
+        of the entire ingested corpus. Exposed via /api/status on the backend.
+        Saved both to docs/ (latest) and to a date-stamped history dir.
+        """
+        now = datetime.datetime.utcnow()
+        date_str = now.strftime("%Y-%m-%d")
+        
+        # Date-stamped history directory (Refinement #5: ingestion history)
+        history_dir = os.path.join(self.docs_dir, "reports", date_str)
+        os.makedirs(history_dir, exist_ok=True)
+        
+        # Build per-section coverage from completeness stats
+        section_coverage = {}
+        if self.stats.drug_completeness:
+            all_drugs = len(self.stats.drug_completeness)
+            # Aggregate across all 13 completeness categories
+            category_present = {}
+            for drug, data in self.stats.drug_completeness.items():
+                for cat, is_present in data.get("status_by_category", {}).items():
+                    if cat not in category_present:
+                        category_present[cat] = 0
+                    if is_present:
+                        category_present[cat] += 1
+            for cat, count in category_present.items():
+                pct = round((count / all_drugs) * 100, 1) if all_drugs > 0 else 0.0
+                section_coverage[cat] = pct
+
+        manifest = {
+            "pipeline_version": ingestion_config.PIPELINE_VERSION,
+            "parser_version": "2.1.0",
+            "embedding_model": ingestion_config.EMBEDDING_MODEL_NAME,
+            "embedding_dimension": ingestion_config.EMBEDDING_DIMENSION,
+            "vector_db": "Qdrant",
+            "collection": ingestion_config.QDRANT_COLLECTION,
+            "authorities": list(self.stats.source_distribution.keys()) if hasattr(self.stats, "source_distribution") else ["DailyMed", "openFDA"],
+            "created_at": now.isoformat() + "Z",
+            "drugs": len(self.stats.drug_chunk_counts),
+            "chunks": self.stats.chunks_created,
+            "sections_extracted": self.stats.sections_extracted,
+            "validation_failures": len(self.stats.validation_failures),
+            "upload_success": self.stats.upload_success,
+            "upload_failures": self.stats.upload_failures,
+            "coverage": section_coverage,
+            "avg_completeness_pct": round(
+                sum(d.get("percentage", 0) for d in self.stats.drug_completeness.values()) /
+                max(len(self.stats.drug_completeness), 1), 1
+            ) if self.stats.drug_completeness else 0.0,
+        }
+
+        # Write to docs/CORPUS_MANIFEST.json (latest, overwrite)
+        latest_path = os.path.join(self.docs_dir, "CORPUS_MANIFEST.json")
+        # Write to date-stamped history dir
+        history_path = os.path.join(history_dir, "CORPUS_MANIFEST.json")
+        
+        for path in [latest_path, history_path]:
+            try:
+                with open(path, "w", encoding="utf-8") as f:
+                    json.dump(manifest, f, indent=2, ensure_ascii=False)
+                logger.info("corpus_manifest_generated", path=path)
+            except Exception as e:
+                logger.error("failed_writing_corpus_manifest", path=path, error=str(e))
+        
+        # Also write date-stamped INGESTION_REPORT.md copy to history dir
+        try:
+            src = os.path.join(self.docs_dir, "INGESTION_REPORT.md")
+            dst = os.path.join(history_dir, "INGESTION_REPORT.md")
+            if os.path.exists(src):
+                import shutil
+                shutil.copy2(src, dst)
+                logger.info("ingestion_report_archived", path=dst)
+        except Exception as e:
+            logger.error("failed_archiving_ingestion_report", error=str(e))
+

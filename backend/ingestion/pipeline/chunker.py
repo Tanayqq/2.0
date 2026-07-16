@@ -168,7 +168,11 @@ class MedicalSectionChunker:
     def chunk_document(self, doc: NormalizedMedicalDocument) -> List[Dict[str, Any]]:
         """
         Chunks all sections of a document and returns a list of chunk dicts ready for embedding.
+        Each chunk carries: chunk_hash (SHA256 for integrity), ingestion versioning,
+        source traceability fields, and authority chain metadata.
         """
+        import hashlib
+        import datetime
         logger.info("chunking_document", drug=doc.drug, sections_count=len(doc.sections))
         
         temp_chunks = []
@@ -180,40 +184,69 @@ class MedicalSectionChunker:
         total_chunks = len(temp_chunks)
         chunks = []
         
-        # Determine authority
-        source_lower = doc.source.lower()
-        if "openfda" in source_lower:
-            authority = "FDA"
-        elif "dailymed" in source_lower:
-            authority = "DailyMed"
+        # Authority resolution — use doc.authority if populated by provider, else infer
+        if doc.authority:
+            authority = doc.authority
         else:
-            authority = doc.source
+            source_lower = doc.source.lower()
+            if "openfda" in source_lower:
+                authority = "FDA"
+            elif "dailymed" in source_lower:
+                authority = "DailyMed"
+            else:
+                authority = doc.source
 
         for cs in temp_chunks:
+            # SHA256 hash of content for integrity verification and deduplication
+            chunk_hash = hashlib.sha256(cs.content.encode("utf-8")).hexdigest()
+            
             # Extract structured dosing
             structured_dosing = self._extract_structured_dosing(cs.content, cs.section_title)
 
             chunks.append({
+                # Core identity
                 "drug_name": doc.drug,
                 "generic_name": doc.generic_name,
                 "section": cs.section_title,
-                "source": doc.source,
-                "document_id": doc.revision,  # Maps to document set_id
-                "effective_date": doc.effective_date,
-                "revision": doc.revision,
+                "canonical_section": cs.section_title,
+                "content": cs.content,
                 "chunk_index": cs.chunk_index,
                 "total_chunks": total_chunks,
-                "version": doc.version,
-                "ingested_at": doc.ingested_at,
                 "token_count": cs.token_count,
-                "content": cs.content,
-                # New rich metadata keys
+                
+                # Source traceability (Refinement #9)
+                "source": doc.source,
+                "source_url": doc.source_url,
+                "document_id": doc.revision,
+                "label_version": doc.version,
+                "retrieved_on": doc.retrieved_on,
+                
+                # Authority chain (Refinement #2)
+                "authority": authority,
+                "authority_version": doc.authority_version or doc.effective_date,
+                
+                # Version history (Refinement #2)
+                "drug_revision": doc.drug_revision or doc.revision,
+                "effective_date": doc.effective_date,
+                "revision": doc.revision,
+                
+                # Ingestion versioning (Refinement #5)
+                "pipeline_version": ingestion_config.PIPELINE_VERSION,
+                "parser_version": "2.1.0",
+                "embedding_model": ingestion_config.EMBEDDING_MODEL_NAME,
+                "ingested_at": doc.ingested_at,
+                "embedded_at": None,           # Filled by embedder after embedding
+                
+                # Integrity & deduplication (Refinement #1)
+                "chunk_hash": chunk_hash,
+                
+                # Clinical classification
                 "clinical_category": get_clinical_category(cs.section_title),
                 "patient_population": get_patient_population(cs.section_title),
-                "authority": authority,
                 "document_type": "drug_label",
-                "structured_dosing": structured_dosing
+                "structured_dosing": structured_dosing,
             })
                 
         logger.info("chunking_completed", drug=doc.drug, chunks_count=len(chunks))
         return chunks
+

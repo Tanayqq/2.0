@@ -1,0 +1,34 @@
+# Tier 7 — Pain & Inflammation (~32 new drugs)
+# Existing: ibuprofen, meloxicam, colchicine, methotrexate, acetaminophen
+naproxen
+ketorolac
+celecoxib
+etoricoxib
+piroxicam
+indomethacin
+sulindac
+aceclofenac
+nimesulide
+flurbiprofen
+ketoprofen
+mefenamic acid
+diclofenac
+tramadol
+morphine
+oxycodone
+fentanyl
+buprenorphine
+nalbuphine
+tapentadol
+hydromorphone
+methadone
+naloxone
+naltrexone
+febuxostat
+benzbromarone
+probenecid
+leflunomide
+tofacitinib
+baricitinib
+upadacitinib
+abatacept

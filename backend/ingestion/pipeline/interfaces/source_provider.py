@@ -9,12 +9,18 @@ class NormalizedMedicalDocument(BaseModel):
     drug: str
     generic_name: str
     source: str
+    source_url: Optional[str] = None           # Deep link to originating FDA/DailyMed label
+    authority: Optional[str] = None            # "FDA", "DailyMed", "EMA", "CDSCO"
+    authority_version: Optional[str] = None    # Label effective date e.g. "2024-03-15"
+    drug_revision: Optional[str] = None        # e.g. revision/set_id for version history
     country: str
     version: str
     effective_date: Optional[str] = None
     revision: Optional[str] = None
     ingested_at: str
+    retrieved_on: Optional[str] = None         # ISO timestamp of the API fetch
     sections: List[MedicalSection]
+    synonyms: List[str] = []                   # Drug spelling variants e.g. amoxycillin→amoxicillin
 
 class MedicalSourceProvider(Protocol):
     """

@@ -1,0 +1,18 @@
+# Tier 9 — Dermatology (~16 new drugs)
+# Existing: ketoconazole, itraconazole, terbinafine, fluconazole
+hydrocortisone
+betamethasone
+clobetasol
+triamcinolone
+fluocinolone
+desonide
+miconazole
+econazole
+sertaconazole
+ciclopirox
+amorolfine
+benzoyl peroxide
+adapalene
+tretinoin
+isotretinoin
+acitretin
