@@ -873,12 +873,12 @@ export default function App() {
                           
                           <div className="flex flex-col">
                             <span className="text-[10px] text-slate-500 font-bold uppercase font-mono-dash">Brand Names</span>
-                            <span className="text-xs text-slate-300">{activeItem.a.metadata.identity_profile.data?.brand_names?.value?.join(", ") || "-"}</span>
+                            <span className="text-xs text-slate-300">{Array.isArray(activeItem.a.metadata.identity_profile.data?.brand_names?.value) ? activeItem.a.metadata.identity_profile.data.brand_names.value.join(", ") : activeItem.a.metadata.identity_profile.data?.brand_names?.value || "-"}</span>
                           </div>
                           
                           <div className="flex flex-col">
                             <span className="text-[10px] text-slate-500 font-bold uppercase font-mono-dash">Drug Class</span>
-                            <span className="text-xs text-slate-300">{activeItem.a.metadata.identity_profile.data?.drug_class?.value?.[0] || "-"}</span>
+                            <span className="text-xs text-slate-300">{Array.isArray(activeItem.a.metadata.identity_profile.data?.drug_class?.value) ? activeItem.a.metadata.identity_profile.data.drug_class.value[0] : activeItem.a.metadata.identity_profile.data?.drug_class?.value || "-"}</span>
                           </div>
 
                           <div className="flex flex-col">
@@ -890,7 +890,7 @@ export default function App() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
                           <div className="flex flex-col">
                             <span className="text-[10px] text-slate-500 font-bold uppercase font-mono-dash">Primary Indications</span>
-                            <span className="text-xs text-slate-300">{activeItem.a.metadata.identity_profile.data?.indications?.value?.join(", ") || "-"}</span>
+                            <span className="text-xs text-slate-300">{Array.isArray(activeItem.a.metadata.identity_profile.data?.indications?.value) ? activeItem.a.metadata.identity_profile.data.indications.value.join(", ") : activeItem.a.metadata.identity_profile.data?.indications?.value || "-"}</span>
                           </div>
                           
                           <div className="flex flex-col">
