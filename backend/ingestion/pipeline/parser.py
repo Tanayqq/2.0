@@ -26,28 +26,28 @@ class MedicalParser:
 
     SUBSECTION_PATTERNS = [
         # Renal Impairment
-        (re.compile(r'^(?:[•*·\-\s\d.]+)?(?:patients?\s+with\s+)?(?:acute\s+or\s+chronic\s+)?renal\s+(?:impairment|insufficiency|dysfunction|failure|function)\b', re.IGNORECASE), "renal_impairment"),
-        (re.compile(r'^(?:[•*·\-\s\d.]+)?adults?\s+with\s+impaired\s+renal\s+function\b', re.IGNORECASE), "renal_impairment"),
+        (re.compile(r'(?:^|\.\s+|\n+)(?:[•*·\-\s\d.]+)?(?:patients?\s+with\s+)?(?:acute\s+or\s+chronic\s+)?(renal\s+(?:impairment|insufficiency|dysfunction|failure|function))\b', re.IGNORECASE), "renal_impairment"),
+        (re.compile(r'(?:^|\.\s+|\n+)(?:[•*·\-\s\d.]+)?(adults?\s+with\s+impaired\s+renal\s+function)\b', re.IGNORECASE), "renal_impairment"),
         # Hepatic Impairment
-        (re.compile(r'^(?:[•*·\-\s\d.]+)?(?:patients?\s+with\s+)?(?:acute\s+or\s+chronic\s+)?hepatic\s+(?:impairment|insufficiency|dysfunction|failure|function)\b', re.IGNORECASE), "hepatic_impairment"),
+        (re.compile(r'(?:^|\.\s+|\n+)(?:[•*·\-\s\d.]+)?(?:patients?\s+with\s+)?(?:acute\s+or\s+chronic\s+)?(hepatic\s+(?:impairment|insufficiency|dysfunction|failure|function))\b', re.IGNORECASE), "hepatic_impairment"),
         # Geriatric Use
-        (re.compile(r'^(?:[•*·\-\s\d.]+)?(?:use\s+in\s+)?geriatric(?:s|\s+patients|\s+use)?\b', re.IGNORECASE), "geriatric_use"),
-        (re.compile(r'^(?:[•*·\-\s\d.]+)?(?:use\s+in\s+)?elderly\b', re.IGNORECASE), "geriatric_use"),
+        (re.compile(r'(?:^|\.\s+|\n+)(?:[•*·\-\s\d.]+)?(?:use\s+in\s+)?(geriatric(?:s|\s+patients|\s+use)?)\b', re.IGNORECASE), "geriatric_use"),
+        (re.compile(r'(?:^|\.\s+|\n+)(?:[•*·\-\s\d.]+)?(?:use\s+in\s+)?(elderly)\b', re.IGNORECASE), "geriatric_use"),
         # Pediatric Use
-        (re.compile(r'^(?:[•*·\-\s\d.]+)?(?:use\s+in\s+)?pediatric(?:s|\s+patients|\s+use)?\b', re.IGNORECASE), "pediatric_use"),
-        (re.compile(r'^(?:[•*·\-\s\d.]+)?(?:use\s+in\s+)?children\b', re.IGNORECASE), "pediatric_use"),
+        (re.compile(r'(?:^|\.\s+|\n+)(?:[•*·\-\s\d.]+)?(?:use\s+in\s+)?(pediatric(?:s|\s+patients|\s+use)?)\b', re.IGNORECASE), "pediatric_use"),
+        (re.compile(r'(?:^|\.\s+|\n+)(?:[•*·\-\s\d.]+)?(?:use\s+in\s+)?(children)\b', re.IGNORECASE), "pediatric_use"),
         # Pregnancy
-        (re.compile(r'^(?:[•*·\-\s\d.]+)?(?:use\s+in\s+)?pregnancy\b', re.IGNORECASE), "pregnancy"),
-        (re.compile(r'^(?:[•*·\-\s\d.]+)?females\s+and\s+males\s+of\s+reproductive\s+potential\b', re.IGNORECASE), "pregnancy"),
+        (re.compile(r'(?:^|\.\s+|\n+)(?:[•*·\-\s\d.]+)?(?:use\s+in\s+)?(pregnancy)\b', re.IGNORECASE), "pregnancy"),
+        (re.compile(r'(?:^|\.\s+|\n+)(?:[•*·\-\s\d.]+)?(females\s+and\s+males\s+of\s+reproductive\s+potential)\b', re.IGNORECASE), "pregnancy"),
         # Lactation
-        (re.compile(r'^(?:[•*·\-\s\d.]+)?(?:use\s+in\s+)?lactation\b', re.IGNORECASE), "lactation"),
-        (re.compile(r'^(?:[•*·\-\s\d.]+)?nursing\s+mothers\b', re.IGNORECASE), "lactation"),
+        (re.compile(r'(?:^|\.\s+|\n+)(?:[•*·\-\s\d.]+)?(?:use\s+in\s+)?(lactation)\b', re.IGNORECASE), "lactation"),
+        (re.compile(r'(?:^|\.\s+|\n+)(?:[•*·\-\s\d.]+)?(nursing\s+mothers)\b', re.IGNORECASE), "lactation"),
         # Patient Counseling
-        (re.compile(r'^(?:[•*·\-\s\d.]+)?patient\s+counseling\b', re.IGNORECASE), "patient_counseling"),
+        (re.compile(r'(?:^|\.\s+|\n+)(?:[•*·\-\s\d.]+)?(patient\s+counseling)\b', re.IGNORECASE), "patient_counseling"),
         # Storage
-        (re.compile(r'^(?:[•*·\-\s\d.]+)?(?:how\s+supplied|storage\s+and\s+handling|storage)\b', re.IGNORECASE), "storage"),
+        (re.compile(r'(?:^|\.\s+|\n+)(?:[•*·\-\s\d.]+)?(how\s+supplied|storage\s+and\s+handling|storage)\b', re.IGNORECASE), "storage"),
         # Drug Interactions
-        (re.compile(r'^(?:[•*·\-\s\d.]+)?drug\s+interactions\b', re.IGNORECASE), "drug_interactions"),
+        (re.compile(r'(?:^|\.\s+|\n+)(?:[•*·\-\s\d.]+)?(drug\s+interactions)\b', re.IGNORECASE), "drug_interactions"),
     ]
 
     def normalize_section_title(self, title: str) -> str:
@@ -102,44 +102,34 @@ class MedicalParser:
         ]:
             return [MedicalSection(title=parent_title, content=content)]
 
-        paragraphs = content.split("\n\n")
+        matches = []
+        for pattern, canonical in self.SUBSECTION_PATTERNS:
+            for m in pattern.finditer(content):
+                # Ensure we only split out the FIRST occurrence of a subsection to avoid splintering the text
+                if not any(x[1] == canonical for x in matches):
+                    matches.append((m.start(1), canonical))
+
+        if not matches:
+            return [MedicalSection(title=parent_title, content=content)]
+
+        matches.sort(key=lambda x: x[0])
         sections = []
-        
-        current_title = parent_title
-        current_paras = []
-        
-        for para in paragraphs:
-            para_strip = para.strip()
-            if not para_strip:
-                continue
-                
-            # Check if this paragraph starts with any of our subsection patterns
-            matched_canonical = None
-            for pattern, canonical in self.SUBSECTION_PATTERNS:
-                if pattern.match(para_strip):
-                    matched_canonical = canonical
-                    break
-                    
-            if matched_canonical:
-                # Save the current accumulated section
-                if current_paras:
-                    sections.append(MedicalSection(
-                        title=current_title,
-                        content="\n\n".join(current_paras)
-                    ))
-                # Start new section
-                current_title = matched_canonical
-                current_paras = [para]
-            else:
-                current_paras.append(para)
-                
-        # Append the final accumulated section
-        if current_paras:
-            sections.append(MedicalSection(
-                title=current_title,
-                content="\n\n".join(current_paras)
-            ))
-            
+        last_idx = 0
+        last_title = parent_title
+
+        for start_idx, can in matches:
+            sec_content = content[last_idx:start_idx].strip()
+            if sec_content:
+                # Strip trailing punctuation (like periods or bullets) that belonged to the start of the next section
+                sec_content = re.sub(r'[\.\s\-\*•\d]+$', '', sec_content).strip()
+                sections.append(MedicalSection(title=last_title, content=sec_content))
+            last_idx = start_idx
+            last_title = can
+
+        if last_idx < len(content):
+            sec_content = content[last_idx:].strip()
+            sections.append(MedicalSection(title=last_title, content=sec_content))
+
         return sections
 
     def parse(self, doc: NormalizedMedicalDocument) -> NormalizedMedicalDocument:
