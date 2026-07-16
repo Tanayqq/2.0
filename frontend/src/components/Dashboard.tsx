@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Activity, Database, CheckCircle, AlertCircle, Clock, Server, Info } from 'lucide-react';
+import { Activity, Database, CheckCircle, AlertCircle, Server, Info } from 'lucide-react';
 
 interface DashboardMetrics {
   total_drugs: number;

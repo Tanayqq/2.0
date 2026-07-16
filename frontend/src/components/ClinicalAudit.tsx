@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, Database, Clock, Server, FileText, CheckCircle2, Search, Workflow, Play } from 'lucide-react';
+import { useState } from 'react';
+import { ChevronDown, ChevronUp, Database, FileText, Workflow } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
 interface ClinicalAuditProps {

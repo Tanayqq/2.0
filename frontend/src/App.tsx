@@ -18,8 +18,10 @@ import {
   Trash2,
   History,
   BookOpen,
-  AlertTriangle
-, Database, BarChart, Server, LayoutDashboard, MessageSquare, TestTube2, Workflow, Clock } from "lucide-react";
+  AlertTriangle,
+  LayoutDashboard,
+  MessageSquare
+} from "lucide-react";
 import { InlineCitation } from "./components/InlineCitation";
 import { Dashboard } from "./components/Dashboard";
 import { ClinicalAudit } from "./components/ClinicalAudit";
