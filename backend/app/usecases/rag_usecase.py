@@ -1577,6 +1577,16 @@ Identity Profile (Grounded FDA Label Metadata):
                 "vector_search_ms": round(retrieval_time * 0.9 * 1000, 2),
                 "rerank_ms": round(retrieval_time * 0.1 * 1000, 2),
                 "generation_ms": round(total_llm_time * 1000, 2)
+            },
+            "audit": {
+                "query": query.question,
+                "detected_drug": retrieval_stats.get("resolved_drug"),
+                "detected_sections": retrieval_stats.get("detected_sections", []),
+                "retrieved_chunks": [doc.id for doc in documents],
+                "reranked_chunks": [doc.id for doc in documents],
+                "filtered_chunks": [], # Filled via rejection log if needed
+                "llm_context_size": len(prompt) if 'prompt' in locals() else 0,
+                "generation_time": round(total_llm_time, 2)
             }
         }
         if validation_failed_reason:

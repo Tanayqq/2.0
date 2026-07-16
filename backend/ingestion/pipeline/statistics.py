@@ -27,6 +27,7 @@ class IngestionStatistics:
         self.section_distribution: Dict[str, int] = {}
         self.drug_chunk_counts: Dict[str, int] = {}
         self.drug_sections_counts: Dict[str, int] = {}
+        self.drug_sources: Dict[str, str] = {}
         self.source_distribution: Dict[str, int] = {}
         self.country_distribution: Dict[str, int] = {}
         self.drug_completeness: Dict[str, Any] = {}
@@ -54,6 +55,7 @@ class IngestionStatistics:
         self.drug_chunk_counts[drug] = self.drug_chunk_counts.get(drug, 0) + 1
         self.source_distribution[source] = self.source_distribution.get(source, 0) + 1
         self.country_distribution[country] = self.country_distribution.get(country, 0) + 1
+        self.drug_sources[drug] = source
 
     def record_drug_sections(self, drug: str, sections_count: int):
         self.drug_sections_counts[drug] = sections_count

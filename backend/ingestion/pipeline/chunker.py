@@ -232,13 +232,16 @@ class MedicalSectionChunker:
                 
                 # Ingestion versioning (Refinement #5)
                 "pipeline_version": ingestion_config.PIPELINE_VERSION,
+                "corpus_version": ingestion_config.CORPUS_VERSION,
                 "parser_version": "2.1.0",
                 "embedding_model": ingestion_config.EMBEDDING_MODEL_NAME,
                 "ingested_at": doc.ingested_at,
                 "embedded_at": None,           # Filled by embedder after embedding
                 
-                # Integrity & deduplication (Refinement #1)
+                # Integrity & provenance
                 "chunk_hash": chunk_hash,
+                "paragraph_index": cs.chunk_index,
+                "xml_section": None,  # For strict provenance mapping later
                 
                 # Clinical classification
                 "clinical_category": get_clinical_category(cs.section_title),

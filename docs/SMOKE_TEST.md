@@ -1,104 +1,1254 @@
 # MedRef Ingestion Smoke Test Results
-Generated at: 2026-07-15T05:02:45.069091Z
+Generated at: 2026-07-16T16:18:02.105905Z
 Embedding Model: sentence-transformers/all-MiniLM-L6-v2
 
 This report records the retrieval smoke test results following ingestion.
 
 ## Smoke Test Summary
-| Query | Chunks Retrieved | Top Score | Latency (ms) | Status |
-|---|---|---|---|---|
-| `Contraindications of Metformin` | 5 | 0.6966 | 1671ms | ✅ PASS |
-| `Side effects of Atorvastatin` | 5 | 0.7719 | 371ms | ✅ PASS |
-| `Lisinopril warnings` | 5 | 0.6187 | 424ms | ✅ PASS |
-| `Warfarin interactions` | 5 | 0.6576 | 418ms | ✅ PASS |
-| `Amoxicillin dosage` | 5 | 0.6850 | 601ms | ✅ PASS |
-| `Ibuprofen pregnancy` | 5 | 0.6998 | 354ms | ✅ PASS |
-| `Losartan contraindications` | 5 | 0.7291 | 344ms | ✅ PASS |
+| Query | Test Type | Latency (ms) | Status |
+|---|---|---|---|
+**Total Tests:** 208 | **Passed:** 183 | **Failed:** 25
+
+| `Contraindications of Glimepiride` | per_drug_section | 974ms | ✅ PASS |
+| `Dosage and administration of Glimepiride` | per_drug_section | 2053ms | ✅ PASS |
+| `Drug interactions with Glimepiride` | per_drug_section | 316ms | ✅ PASS |
+| `Pregnancy safety of Glimepiride` | per_drug_section | 325ms | ✅ PASS |
+| `Renal dose adjustment for Glimepiride` | per_drug_section | 319ms | ✅ PASS |
+| `Pediatric use of Glimepiride` | per_drug_section | 314ms | ✅ PASS |
+| `Mechanism of action of Glimepiride` | per_drug_section | 1107ms | ✅ PASS |
+| `Indications for Glimepiride` | per_drug_section | 332ms | ✅ PASS |
+| `Storage conditions for Glimepiride` | per_drug_section | 320ms | ✅ PASS |
+| `Patient counseling for Glimepiride` | per_drug_section | 643ms | ✅ PASS |
+| `Contraindications of Glipizide` | per_drug_section | 315ms | ✅ PASS |
+| `Dosage and administration of Glipizide` | per_drug_section | 326ms | ✅ PASS |
+| `Drug interactions with Glipizide` | per_drug_section | 558ms | ✅ PASS |
+| `Pregnancy safety of Glipizide` | per_drug_section | 315ms | ✅ PASS |
+| `Renal dose adjustment for Glipizide` | per_drug_section | 400ms | ✅ PASS |
+| `Pediatric use of Glipizide` | per_drug_section | 1074ms | ✅ PASS |
+| `Mechanism of action of Glipizide` | per_drug_section | 530ms | ✅ PASS |
+| `Indications for Glipizide` | per_drug_section | 316ms | ✅ PASS |
+| `Storage conditions for Glipizide` | per_drug_section | 276ms | ✅ PASS |
+| `Patient counseling for Glipizide` | per_drug_section | 366ms | ✅ PASS |
+| `Contraindications of Gliclazide` | per_drug_section | 276ms | ❌ FAIL |
+| `Dosage and administration of Gliclazide` | per_drug_section | 362ms | ❌ FAIL |
+| `Drug interactions with Gliclazide` | per_drug_section | 327ms | ❌ FAIL |
+| `Pregnancy safety of Gliclazide` | per_drug_section | 300ms | ❌ FAIL |
+| `Renal dose adjustment for Gliclazide` | per_drug_section | 334ms | ❌ FAIL |
+| `Pediatric use of Gliclazide` | per_drug_section | 318ms | ❌ FAIL |
+| `Mechanism of action of Gliclazide` | per_drug_section | 1899ms | ❌ FAIL |
+| `Indications for Gliclazide` | per_drug_section | 747ms | ❌ FAIL |
+| `Storage conditions for Gliclazide` | per_drug_section | 636ms | ❌ FAIL |
+| `Patient counseling for Gliclazide` | per_drug_section | 641ms | ❌ FAIL |
+| `Contraindications of Pioglitazone` | per_drug_section | 325ms | ✅ PASS |
+| `Dosage and administration of Pioglitazone` | per_drug_section | 279ms | ✅ PASS |
+| `Drug interactions with Pioglitazone` | per_drug_section | 294ms | ✅ PASS |
+| `Pregnancy safety of Pioglitazone` | per_drug_section | 376ms | ✅ PASS |
+| `Renal dose adjustment for Pioglitazone` | per_drug_section | 322ms | ✅ PASS |
+| `Pediatric use of Pioglitazone` | per_drug_section | 318ms | ✅ PASS |
+| `Mechanism of action of Pioglitazone` | per_drug_section | 297ms | ✅ PASS |
+| `Indications for Pioglitazone` | per_drug_section | 342ms | ✅ PASS |
+| `Storage conditions for Pioglitazone` | per_drug_section | 303ms | ✅ PASS |
+| `Patient counseling for Pioglitazone` | per_drug_section | 655ms | ✅ PASS |
+| `Contraindications of Acarbose` | per_drug_section | 326ms | ✅ PASS |
+| `Dosage and administration of Acarbose` | per_drug_section | 312ms | ✅ PASS |
+| `Drug interactions with Acarbose` | per_drug_section | 321ms | ✅ PASS |
+| `Pregnancy safety of Acarbose` | per_drug_section | 320ms | ✅ PASS |
+| `Renal dose adjustment for Acarbose` | per_drug_section | 319ms | ✅ PASS |
+| `Pediatric use of Acarbose` | per_drug_section | 328ms | ✅ PASS |
+| `Mechanism of action of Acarbose` | per_drug_section | 631ms | ✅ PASS |
+| `Indications for Acarbose` | per_drug_section | 326ms | ✅ PASS |
+| `Storage conditions for Acarbose` | per_drug_section | 293ms | ✅ PASS |
+| `Patient counseling for Acarbose` | per_drug_section | 312ms | ✅ PASS |
+| `Contraindications of Sitagliptin` | per_drug_section | 348ms | ✅ PASS |
+| `Dosage and administration of Sitagliptin` | per_drug_section | 278ms | ✅ PASS |
+| `Drug interactions with Sitagliptin` | per_drug_section | 299ms | ✅ PASS |
+| `Pregnancy safety of Sitagliptin` | per_drug_section | 300ms | ✅ PASS |
+| `Renal dose adjustment for Sitagliptin` | per_drug_section | 398ms | ✅ PASS |
+| `Pediatric use of Sitagliptin` | per_drug_section | 330ms | ✅ PASS |
+| `Mechanism of action of Sitagliptin` | per_drug_section | 313ms | ✅ PASS |
+| `Indications for Sitagliptin` | per_drug_section | 317ms | ✅ PASS |
+| `Storage conditions for Sitagliptin` | per_drug_section | 1442ms | ✅ PASS |
+| `Patient counseling for Sitagliptin` | per_drug_section | 325ms | ✅ PASS |
+| `Contraindications of Vildagliptin` | per_drug_section | 317ms | ❌ FAIL |
+| `Dosage and administration of Vildagliptin` | per_drug_section | 354ms | ❌ FAIL |
+| `Drug interactions with Vildagliptin` | per_drug_section | 442ms | ❌ FAIL |
+| `Pregnancy safety of Vildagliptin` | per_drug_section | 323ms | ❌ FAIL |
+| `Renal dose adjustment for Vildagliptin` | per_drug_section | 314ms | ❌ FAIL |
+| `Pediatric use of Vildagliptin` | per_drug_section | 319ms | ❌ FAIL |
+| `Mechanism of action of Vildagliptin` | per_drug_section | 320ms | ❌ FAIL |
+| `Indications for Vildagliptin` | per_drug_section | 326ms | ❌ FAIL |
+| `Storage conditions for Vildagliptin` | per_drug_section | 1214ms | ❌ FAIL |
+| `Patient counseling for Vildagliptin` | per_drug_section | 385ms | ❌ FAIL |
+| `Contraindications of Linagliptin` | per_drug_section | 321ms | ✅ PASS |
+| `Dosage and administration of Linagliptin` | per_drug_section | 313ms | ✅ PASS |
+| `Drug interactions with Linagliptin` | per_drug_section | 318ms | ✅ PASS |
+| `Pregnancy safety of Linagliptin` | per_drug_section | 320ms | ❌ FAIL |
+| `Renal dose adjustment for Linagliptin` | per_drug_section | 320ms | ❌ FAIL |
+| `Pediatric use of Linagliptin` | per_drug_section | 325ms | ✅ PASS |
+| `Mechanism of action of Linagliptin` | per_drug_section | 313ms | ✅ PASS |
+| `Indications for Linagliptin` | per_drug_section | 320ms | ✅ PASS |
+| `Storage conditions for Linagliptin` | per_drug_section | 323ms | ✅ PASS |
+| `Patient counseling for Linagliptin` | per_drug_section | 281ms | ✅ PASS |
+| `Contraindications of Empagliflozin` | per_drug_section | 289ms | ✅ PASS |
+| `Dosage and administration of Empagliflozin` | per_drug_section | 385ms | ✅ PASS |
+| `Drug interactions with Empagliflozin` | per_drug_section | 319ms | ✅ PASS |
+| `Pregnancy safety of Empagliflozin` | per_drug_section | 320ms | ✅ PASS |
+| `Renal dose adjustment for Empagliflozin` | per_drug_section | 319ms | ✅ PASS |
+| `Pediatric use of Empagliflozin` | per_drug_section | 321ms | ✅ PASS |
+| `Mechanism of action of Empagliflozin` | per_drug_section | 323ms | ✅ PASS |
+| `Indications for Empagliflozin` | per_drug_section | 315ms | ✅ PASS |
+| `Storage conditions for Empagliflozin` | per_drug_section | 320ms | ✅ PASS |
+| `Patient counseling for Empagliflozin` | per_drug_section | 321ms | ✅ PASS |
+| `Contraindications of Dapagliflozin` | per_drug_section | 322ms | ✅ PASS |
+| `Dosage and administration of Dapagliflozin` | per_drug_section | 315ms | ✅ PASS |
+| `Drug interactions with Dapagliflozin` | per_drug_section | 301ms | ✅ PASS |
+| `Pregnancy safety of Dapagliflozin` | per_drug_section | 291ms | ✅ PASS |
+| `Renal dose adjustment for Dapagliflozin` | per_drug_section | 291ms | ✅ PASS |
+| `Pediatric use of Dapagliflozin` | per_drug_section | 398ms | ✅ PASS |
+| `Mechanism of action of Dapagliflozin` | per_drug_section | 801ms | ✅ PASS |
+| `Indications for Dapagliflozin` | per_drug_section | 324ms | ✅ PASS |
+| `Storage conditions for Dapagliflozin` | per_drug_section | 309ms | ✅ PASS |
+| `Patient counseling for Dapagliflozin` | per_drug_section | 323ms | ✅ PASS |
+| `Contraindications of Canagliflozin` | per_drug_section | 321ms | ✅ PASS |
+| `Dosage and administration of Canagliflozin` | per_drug_section | 327ms | ✅ PASS |
+| `Drug interactions with Canagliflozin` | per_drug_section | 311ms | ✅ PASS |
+| `Pregnancy safety of Canagliflozin` | per_drug_section | 320ms | ❌ FAIL |
+| `Renal dose adjustment for Canagliflozin` | per_drug_section | 319ms | ✅ PASS |
+| `Pediatric use of Canagliflozin` | per_drug_section | 326ms | ✅ PASS |
+| `Mechanism of action of Canagliflozin` | per_drug_section | 315ms | ✅ PASS |
+| `Indications for Canagliflozin` | per_drug_section | 316ms | ✅ PASS |
+| `Storage conditions for Canagliflozin` | per_drug_section | 329ms | ✅ PASS |
+| `Patient counseling for Canagliflozin` | per_drug_section | 319ms | ✅ PASS |
+| `Contraindications of Semaglutide` | per_drug_section | 315ms | ✅ PASS |
+| `Dosage and administration of Semaglutide` | per_drug_section | 318ms | ✅ PASS |
+| `Drug interactions with Semaglutide` | per_drug_section | 1759ms | ✅ PASS |
+| `Pregnancy safety of Semaglutide` | per_drug_section | 639ms | ✅ PASS |
+| `Renal dose adjustment for Semaglutide` | per_drug_section | 641ms | ✅ PASS |
+| `Pediatric use of Semaglutide` | per_drug_section | 636ms | ✅ PASS |
+| `Mechanism of action of Semaglutide` | per_drug_section | 641ms | ✅ PASS |
+| `Indications for Semaglutide` | per_drug_section | 321ms | ✅ PASS |
+| `Storage conditions for Semaglutide` | per_drug_section | 324ms | ✅ PASS |
+| `Patient counseling for Semaglutide` | per_drug_section | 282ms | ✅ PASS |
+| `Contraindications of Liraglutide` | per_drug_section | 2111ms | ✅ PASS |
+| `Dosage and administration of Liraglutide` | per_drug_section | 298ms | ✅ PASS |
+| `Drug interactions with Liraglutide` | per_drug_section | 286ms | ✅ PASS |
+| `Pregnancy safety of Liraglutide` | per_drug_section | 277ms | ✅ PASS |
+| `Renal dose adjustment for Liraglutide` | per_drug_section | 368ms | ✅ PASS |
+| `Pediatric use of Liraglutide` | per_drug_section | 369ms | ✅ PASS |
+| `Mechanism of action of Liraglutide` | per_drug_section | 292ms | ✅ PASS |
+| `Indications for Liraglutide` | per_drug_section | 285ms | ✅ PASS |
+| `Storage conditions for Liraglutide` | per_drug_section | 379ms | ✅ PASS |
+| `Patient counseling for Liraglutide` | per_drug_section | 330ms | ✅ PASS |
+| `Contraindications of Exenatide` | per_drug_section | 309ms | ✅ PASS |
+| `Dosage and administration of Exenatide` | per_drug_section | 325ms | ✅ PASS |
+| `Drug interactions with Exenatide` | per_drug_section | 314ms | ✅ PASS |
+| `Pregnancy safety of Exenatide` | per_drug_section | 320ms | ✅ PASS |
+| `Renal dose adjustment for Exenatide` | per_drug_section | 296ms | ✅ PASS |
+| `Pediatric use of Exenatide` | per_drug_section | 344ms | ✅ PASS |
+| `Mechanism of action of Exenatide` | per_drug_section | 321ms | ✅ PASS |
+| `Indications for Exenatide` | per_drug_section | 316ms | ✅ PASS |
+| `Storage conditions for Exenatide` | per_drug_section | 321ms | ✅ PASS |
+| `Patient counseling for Exenatide` | per_drug_section | 332ms | ✅ PASS |
+| `Contraindications of Dulaglutide` | per_drug_section | 308ms | ✅ PASS |
+| `Dosage and administration of Dulaglutide` | per_drug_section | 326ms | ✅ PASS |
+| `Drug interactions with Dulaglutide` | per_drug_section | 958ms | ✅ PASS |
+| `Pregnancy safety of Dulaglutide` | per_drug_section | 636ms | ❌ FAIL |
+| `Renal dose adjustment for Dulaglutide` | per_drug_section | 318ms | ✅ PASS |
+| `Pediatric use of Dulaglutide` | per_drug_section | 317ms | ✅ PASS |
+| `Mechanism of action of Dulaglutide` | per_drug_section | 322ms | ✅ PASS |
+| `Indications for Dulaglutide` | per_drug_section | 280ms | ✅ PASS |
+| `Storage conditions for Dulaglutide` | per_drug_section | 299ms | ✅ PASS |
+| `Patient counseling for Dulaglutide` | per_drug_section | 282ms | ✅ PASS |
+| `Contraindications of Insulin glargine` | per_drug_section | 431ms | ✅ PASS |
+| `Dosage and administration of Insulin glargine` | per_drug_section | 316ms | ✅ PASS |
+| `Drug interactions with Insulin glargine` | per_drug_section | 307ms | ✅ PASS |
+| `Pregnancy safety of Insulin glargine` | per_drug_section | 323ms | ✅ PASS |
+| `Renal dose adjustment for Insulin glargine` | per_drug_section | 320ms | ✅ PASS |
+| `Pediatric use of Insulin glargine` | per_drug_section | 322ms | ✅ PASS |
+| `Mechanism of action of Insulin glargine` | per_drug_section | 325ms | ✅ PASS |
+| `Indications for Insulin glargine` | per_drug_section | 312ms | ✅ PASS |
+| `Storage conditions for Insulin glargine` | per_drug_section | 324ms | ✅ PASS |
+| `Patient counseling for Insulin glargine` | per_drug_section | 319ms | ✅ PASS |
+| `Contraindications of Insulin lispro` | per_drug_section | 314ms | ✅ PASS |
+| `Dosage and administration of Insulin lispro` | per_drug_section | 321ms | ✅ PASS |
+| `Drug interactions with Insulin lispro` | per_drug_section | 270ms | ✅ PASS |
+| `Pregnancy safety of Insulin lispro` | per_drug_section | 285ms | ✅ PASS |
+| `Renal dose adjustment for Insulin lispro` | per_drug_section | 301ms | ✅ PASS |
+| `Pediatric use of Insulin lispro` | per_drug_section | 424ms | ✅ PASS |
+| `Mechanism of action of Insulin lispro` | per_drug_section | 314ms | ✅ PASS |
+| `Indications for Insulin lispro` | per_drug_section | 301ms | ✅ PASS |
+| `Storage conditions for Insulin lispro` | per_drug_section | 332ms | ✅ PASS |
+| `Patient counseling for Insulin lispro` | per_drug_section | 325ms | ✅ PASS |
+| `Contraindications of Insulin aspart` | per_drug_section | 321ms | ✅ PASS |
+| `Dosage and administration of Insulin aspart` | per_drug_section | 318ms | ✅ PASS |
+| `Drug interactions with Insulin aspart` | per_drug_section | 320ms | ✅ PASS |
+| `Pregnancy safety of Insulin aspart` | per_drug_section | 279ms | ✅ PASS |
+| `Renal dose adjustment for Insulin aspart` | per_drug_section | 283ms | ✅ PASS |
+| `Pediatric use of Insulin aspart` | per_drug_section | 395ms | ✅ PASS |
+| `Mechanism of action of Insulin aspart` | per_drug_section | 321ms | ✅ PASS |
+| `Indications for Insulin aspart` | per_drug_section | 325ms | ✅ PASS |
+| `Storage conditions for Insulin aspart` | per_drug_section | 314ms | ✅ PASS |
+| `Patient counseling for Insulin aspart` | per_drug_section | 322ms | ✅ PASS |
+| `Contraindications of Insulin detemir` | per_drug_section | 317ms | ✅ PASS |
+| `Dosage and administration of Insulin detemir` | per_drug_section | 321ms | ✅ PASS |
+| `Drug interactions with Insulin detemir` | per_drug_section | 319ms | ✅ PASS |
+| `Pregnancy safety of Insulin detemir` | per_drug_section | 323ms | ✅ PASS |
+| `Renal dose adjustment for Insulin detemir` | per_drug_section | 316ms | ✅ PASS |
+| `Pediatric use of Insulin detemir` | per_drug_section | 323ms | ✅ PASS |
+| `Mechanism of action of Insulin detemir` | per_drug_section | 317ms | ✅ PASS |
+| `Indications for Insulin detemir` | per_drug_section | 280ms | ✅ PASS |
+| `Storage conditions for Insulin detemir` | per_drug_section | 368ms | ✅ PASS |
+| `Patient counseling for Insulin detemir` | per_drug_section | 284ms | ✅ PASS |
+| `Contraindications of Insulin degludec` | per_drug_section | 348ms | ✅ PASS |
+| `Dosage and administration of Insulin degludec` | per_drug_section | 323ms | ✅ PASS |
+| `Drug interactions with Insulin degludec` | per_drug_section | 315ms | ✅ PASS |
+| `Pregnancy safety of Insulin degludec` | per_drug_section | 270ms | ✅ PASS |
+| `Renal dose adjustment for Insulin degludec` | per_drug_section | 279ms | ✅ PASS |
+| `Pediatric use of Insulin degludec` | per_drug_section | 1050ms | ✅ PASS |
+| `Mechanism of action of Insulin degludec` | per_drug_section | 321ms | ✅ PASS |
+| `Indications for Insulin degludec` | per_drug_section | 288ms | ✅ PASS |
+| `Storage conditions for Insulin degludec` | per_drug_section | 350ms | ✅ PASS |
+| `Patient counseling for Insulin degludec` | per_drug_section | 313ms | ✅ PASS |
+| `Mechanism of action of Coca-Cola` | adversarial_impossible_query | N/A | ✅ PASS |
+| `Contraindications of Superman` | adversarial_wrong_drug | N/A | ✅ PASS |
+| `Novamox dosage` | adversarial_brand_resolution | N/A | ❌ FAIL |
+| `Metoformin contraindications` | adversarial_typo_tolerance | N/A | ✅ PASS |
+| `Metformin Warfarin Lisinopril indications` | adversarial_multi_drug_separation | N/A | ✅ PASS |
+| `Metformin dosage` | adversarial_mixed_query | N/A | ✅ PASS |
+| `Warfarin interactions` | adversarial_mixed_query | N/A | ✅ PASS |
+| `Atorvastatin pregnancy` | adversarial_mixed_query | N/A | ✅ PASS |
 
 ---
 
 ## Detailed Query Logs
-### Query: "Contraindications of Metformin" (Status: ✅ PASS)
-*   **Latency:** 1671ms
+### Query: "Contraindications of Glimepiride" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 974ms
 *   **Chunks Retrieved:** 5
 
-| Rank | Chunk ID | Similarity Score | Source | Content Snippet |
-|---|---|---|---|---|
-| 1 | `aeb9cec5-44dd-55c5-af63-1369d103d571` | 0.6966 | DailyMed | The following adverse reactions are also discussed elsewhere in the labeling: Lactic Acidosis [see B... |
-| 2 | `1b0103f7-6ff5-5847-ac13-5b7472afcb5b` | 0.6605 | DailyMed | Metformin hydrochloride extended-release tablets, USP are contraindicated in patients with: Severe R... |
-| 3 | `8a7bb77e-4d41-5b17-b1ab-31769216a566` | 0.6487 | DailyMed | In the event of an overdose with metformin hydrochloride extended-release tablets, consider contacti... |
-| 4 | `414eb597-41c0-5f51-8b58-08a3a5c1463e` | 0.6461 | DailyMed | Metformin is an antihyperglycemic agent which improves glucose tolerance in patients with type 2 dia... |
-| 5 | `7512ac5b-3d8c-5c96-8e4e-419e1fd69809` | 0.6410 | DailyMed | Absorption The absolute bioavailability of a Metformin Hydrochloride Tablets 500 mg given under fast... |
-
-### Query: "Side effects of Atorvastatin" (Status: ✅ PASS)
-*   **Latency:** 371ms
+### Query: "Dosage and administration of Glimepiride" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 2053ms
 *   **Chunks Retrieved:** 5
 
-| Rank | Chunk ID | Similarity Score | Source | Content Snippet |
-|---|---|---|---|---|
-| 1 | `9aa75455-85f4-56c1-86a3-1b22e084209a` | 0.7719 | DailyMed | Increase in blood sugar level.Your blood sugar level may increase while you are taking atorvastatin ... |
-| 2 | `324ba367-fe87-5cef-a02e-291bd8dbaf5e` | 0.6843 | DailyMed | The following adverse reactions have been identified during post-approval use of atorvastatin calciu... |
-| 3 | `3a05f30e-2f5c-5f3b-9656-02303f305c22` | 0.6763 | DailyMed | What should I avoid while taking atorvastatin calcium tablets? Avoid drinking more than 1.2 liters o... |
-| 4 | `a495c5ba-cfd4-57d6-9541-4c76db907888` | 0.6499 | DailyMed | Increases in serum transaminases have been reported with use of atorvastatin calcium tablets [see Ad... |
-| 5 | `b727214e-991f-5ac1-aee8-c7c41736bd6e` | 0.6364 | DailyMed | Atorvastatin, as well as some of its metabolites, are pharmacologically active in humans. The liver ... |
-
-### Query: "Lisinopril warnings" (Status: ✅ PASS)
-*   **Latency:** 424ms
+### Query: "Drug interactions with Glimepiride" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 316ms
 *   **Chunks Retrieved:** 5
 
-| Rank | Chunk ID | Similarity Score | Source | Content Snippet |
-|---|---|---|---|---|
-| 1 | `c2dece87-18d7-587d-a672-960e7034bca6` | 0.6187 | DailyMed | The following adverse reactions have been identified during post-approval use of lisinopril that are... |
-| 2 | `c151365e-c53c-5bc5-9cfe-c652dd772a6a` | 0.6046 | DailyMed | Other adverse reactions that have been reported with the individual components are listed below: Lis... |
-| 3 | `1a0b961b-2588-5878-8eb6-74a4e2251998` | 0.6046 | DailyMed | Other adverse reactions that have been reported with the individual components are listed below: Lis... |
-| 4 | `002a74f1-2cb5-5963-8e82-03c647f4d436` | 0.5875 | DailyMed | ADVERSE REACTIONS Lisinopril and hydrochlorothiazide tablets have been evaluated for safety in 930 p... |
-| 5 | `31724e97-314b-5f71-b22a-34615402d176` | 0.5875 | DailyMed | ADVERSE REACTIONS Lisinopril and hydrochlorothiazide tablets have been evaluated for safety in 930 p... |
-
-### Query: "Warfarin interactions" (Status: ✅ PASS)
-*   **Latency:** 418ms
+### Query: "Pregnancy safety of Glimepiride" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 325ms
 *   **Chunks Retrieved:** 5
 
-| Rank | Chunk ID | Similarity Score | Source | Content Snippet |
-|---|---|---|---|---|
-| 1 | `a5e678f7-680a-5065-846d-236ab7764d80` | 0.6576 | DailyMed | Drugs may interact with warfarin sodium through pharmacodynamic or pharmacokinetic mechanisms. Pharm... |
-| 2 | `300ada36-55bd-5d74-b8e4-10f06a16a58b` | 0.6257 | DailyMed | 7 DRUG INTERACTIONS Concomitant use of drugs that increase bleeding risk, antibiotics, antifungals, ... |
-| 3 | `0166e3f7-059a-513d-af3c-668187fca017` | 0.6238 | DailyMed | Warfarin sodium is a racemic mixture of the R- and S-enantiomers of warfarin. The S-enantiomer exhib... |
-| 4 | `9e505528-3560-56aa-b500-e5ad54f2f3e9` | 0.6225 | DailyMed | Closely monitor INR when starting or stopping any antibiotic or antifungal in patients taking warfar... |
-| 5 | `55b14f68-cbdd-5049-97f2-b31eded7579b` | 0.6194 | DailyMed | Warfarin No significant effect of moxifloxacin (400 mg once daily for eight days) on the pharmacokin... |
-
-### Query: "Amoxicillin dosage" (Status: ✅ PASS)
-*   **Latency:** 601ms
+### Query: "Renal dose adjustment for Glimepiride" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 319ms
 *   **Chunks Retrieved:** 5
 
-| Rank | Chunk ID | Similarity Score | Source | Content Snippet |
-|---|---|---|---|---|
-| 1 | `48e18c58-3d8a-5777-83e2-6f9850a6682a` | 0.6850 | DailyMed | 2.2 Adult Patients See dosing regimens of Amoxicillin and Clavulanate Potassium (based on the amoxic... |
-| 2 | `da5a84e6-9749-500f-b954-44007bb9d1fd` | 0.6778 | DailyMed | Peak concentrations occurred approximately 1.5 hours after the dose. b Amoxicillin and clavulanate p... |
-| 3 | `d9253b27-4890-54ab-9fea-d13614f9f158` | 0.6673 | DailyMed | Peak concentrations occurred approximately 1 hour after the dose. b Amoxicillin and clavulanate pota... |
-| 4 | `50a2d831-c436-59db-a750-c922fcc4b5ec` | 0.6624 | DailyMed | Amoxicillin: Tablets: 500 mg, 875 mg. Each tablet contains 500 mg or 875 mg amoxicillin as the trihy... |
-| 5 | `f19079ec-5512-5268-823c-385257b372c9` | 0.6580 | DailyMed | Distribution: Amoxicillin diffuses readily into most body tissues and fluids, with the exception of ... |
+### Query: "Pediatric use of Glimepiride" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 314ms
+*   **Chunks Retrieved:** 5
 
-### Query: "Ibuprofen pregnancy" (Status: ✅ PASS)
+### Query: "Mechanism of action of Glimepiride" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 1107ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Indications for Glimepiride" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 332ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Storage conditions for Glimepiride" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 320ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Patient counseling for Glimepiride" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 643ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Contraindications of Glipizide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 315ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Dosage and administration of Glipizide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 326ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Drug interactions with Glipizide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 558ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pregnancy safety of Glipizide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 315ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Renal dose adjustment for Glipizide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 400ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pediatric use of Glipizide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 1074ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Mechanism of action of Glipizide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 530ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Indications for Glipizide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 316ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Storage conditions for Glipizide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 276ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Patient counseling for Glipizide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 366ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Contraindications of Gliclazide" (Status: ❌ FAIL)
+*   **Test Type:** per_drug_section
+*   **Latency:** 276ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Dosage and administration of Gliclazide" (Status: ❌ FAIL)
+*   **Test Type:** per_drug_section
+*   **Latency:** 362ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Drug interactions with Gliclazide" (Status: ❌ FAIL)
+*   **Test Type:** per_drug_section
+*   **Latency:** 327ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pregnancy safety of Gliclazide" (Status: ❌ FAIL)
+*   **Test Type:** per_drug_section
+*   **Latency:** 300ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Renal dose adjustment for Gliclazide" (Status: ❌ FAIL)
+*   **Test Type:** per_drug_section
+*   **Latency:** 334ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pediatric use of Gliclazide" (Status: ❌ FAIL)
+*   **Test Type:** per_drug_section
+*   **Latency:** 318ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Mechanism of action of Gliclazide" (Status: ❌ FAIL)
+*   **Test Type:** per_drug_section
+*   **Latency:** 1899ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Indications for Gliclazide" (Status: ❌ FAIL)
+*   **Test Type:** per_drug_section
+*   **Latency:** 747ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Storage conditions for Gliclazide" (Status: ❌ FAIL)
+*   **Test Type:** per_drug_section
+*   **Latency:** 636ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Patient counseling for Gliclazide" (Status: ❌ FAIL)
+*   **Test Type:** per_drug_section
+*   **Latency:** 641ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Contraindications of Pioglitazone" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 325ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Dosage and administration of Pioglitazone" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 279ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Drug interactions with Pioglitazone" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 294ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pregnancy safety of Pioglitazone" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 376ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Renal dose adjustment for Pioglitazone" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 322ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pediatric use of Pioglitazone" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 318ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Mechanism of action of Pioglitazone" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 297ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Indications for Pioglitazone" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 342ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Storage conditions for Pioglitazone" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 303ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Patient counseling for Pioglitazone" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 655ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Contraindications of Acarbose" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 326ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Dosage and administration of Acarbose" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 312ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Drug interactions with Acarbose" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 321ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pregnancy safety of Acarbose" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 320ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Renal dose adjustment for Acarbose" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 319ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pediatric use of Acarbose" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 328ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Mechanism of action of Acarbose" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 631ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Indications for Acarbose" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 326ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Storage conditions for Acarbose" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 293ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Patient counseling for Acarbose" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 312ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Contraindications of Sitagliptin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 348ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Dosage and administration of Sitagliptin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 278ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Drug interactions with Sitagliptin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 299ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pregnancy safety of Sitagliptin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 300ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Renal dose adjustment for Sitagliptin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 398ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pediatric use of Sitagliptin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 330ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Mechanism of action of Sitagliptin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 313ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Indications for Sitagliptin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 317ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Storage conditions for Sitagliptin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 1442ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Patient counseling for Sitagliptin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 325ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Contraindications of Vildagliptin" (Status: ❌ FAIL)
+*   **Test Type:** per_drug_section
+*   **Latency:** 317ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Dosage and administration of Vildagliptin" (Status: ❌ FAIL)
+*   **Test Type:** per_drug_section
 *   **Latency:** 354ms
 *   **Chunks Retrieved:** 5
 
-| Rank | Chunk ID | Similarity Score | Source | Content Snippet |
-|---|---|---|---|---|
-| 1 | `98da2297-a02a-5843-b772-ea738b5217f5` | 0.6998 | DailyMed | Avoid use of NSAIDs in women at about 30 weeks gestation and later in pregnancy, because NSAIDs, inc... |
-| 2 | `34dfedb3-ba55-559d-8c6f-18bd52b4a74e` | 0.6781 | DailyMed | Risk Summary Use of NSAIDs, including ibuprofen tablets, can cause premature closure of the fetal du... |
-| 3 | `117d3924-d47d-5f31-aaea-df653a39782b` | 0.6758 | DailyMed | Premature Closure of Fetal Ductus Arteriosus:  Avoid use of NSAIDs, including ibuprofen tablets, in ... |
-| 4 | `856c1703-3d3d-54ad-ab04-4243c153a28c` | 0.6530 | DailyMed | In rat studies with NSAIDs, as with other drugs known to inhibit prostaglandin synthesis, an increas... |
-| 5 | `7294a333-f58e-5f26-9254-6d0c778fa24f` | 0.6005 | DailyMed | Controlled studies have demonstrated that ibuprofen tablets are a more effective analgesic than prop... |
+### Query: "Drug interactions with Vildagliptin" (Status: ❌ FAIL)
+*   **Test Type:** per_drug_section
+*   **Latency:** 442ms
+*   **Chunks Retrieved:** 5
 
-### Query: "Losartan contraindications" (Status: ✅ PASS)
+### Query: "Pregnancy safety of Vildagliptin" (Status: ❌ FAIL)
+*   **Test Type:** per_drug_section
+*   **Latency:** 323ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Renal dose adjustment for Vildagliptin" (Status: ❌ FAIL)
+*   **Test Type:** per_drug_section
+*   **Latency:** 314ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pediatric use of Vildagliptin" (Status: ❌ FAIL)
+*   **Test Type:** per_drug_section
+*   **Latency:** 319ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Mechanism of action of Vildagliptin" (Status: ❌ FAIL)
+*   **Test Type:** per_drug_section
+*   **Latency:** 320ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Indications for Vildagliptin" (Status: ❌ FAIL)
+*   **Test Type:** per_drug_section
+*   **Latency:** 326ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Storage conditions for Vildagliptin" (Status: ❌ FAIL)
+*   **Test Type:** per_drug_section
+*   **Latency:** 1214ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Patient counseling for Vildagliptin" (Status: ❌ FAIL)
+*   **Test Type:** per_drug_section
+*   **Latency:** 385ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Contraindications of Linagliptin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 321ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Dosage and administration of Linagliptin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 313ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Drug interactions with Linagliptin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 318ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pregnancy safety of Linagliptin" (Status: ❌ FAIL)
+*   **Test Type:** per_drug_section
+*   **Latency:** 320ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Renal dose adjustment for Linagliptin" (Status: ❌ FAIL)
+*   **Test Type:** per_drug_section
+*   **Latency:** 320ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pediatric use of Linagliptin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 325ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Mechanism of action of Linagliptin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 313ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Indications for Linagliptin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 320ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Storage conditions for Linagliptin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 323ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Patient counseling for Linagliptin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 281ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Contraindications of Empagliflozin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 289ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Dosage and administration of Empagliflozin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 385ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Drug interactions with Empagliflozin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 319ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pregnancy safety of Empagliflozin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 320ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Renal dose adjustment for Empagliflozin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 319ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pediatric use of Empagliflozin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 321ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Mechanism of action of Empagliflozin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 323ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Indications for Empagliflozin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 315ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Storage conditions for Empagliflozin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 320ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Patient counseling for Empagliflozin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 321ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Contraindications of Dapagliflozin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 322ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Dosage and administration of Dapagliflozin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 315ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Drug interactions with Dapagliflozin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 301ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pregnancy safety of Dapagliflozin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 291ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Renal dose adjustment for Dapagliflozin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 291ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pediatric use of Dapagliflozin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 398ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Mechanism of action of Dapagliflozin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 801ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Indications for Dapagliflozin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 324ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Storage conditions for Dapagliflozin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 309ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Patient counseling for Dapagliflozin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 323ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Contraindications of Canagliflozin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 321ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Dosage and administration of Canagliflozin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 327ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Drug interactions with Canagliflozin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 311ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pregnancy safety of Canagliflozin" (Status: ❌ FAIL)
+*   **Test Type:** per_drug_section
+*   **Latency:** 320ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Renal dose adjustment for Canagliflozin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 319ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pediatric use of Canagliflozin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 326ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Mechanism of action of Canagliflozin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 315ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Indications for Canagliflozin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 316ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Storage conditions for Canagliflozin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 329ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Patient counseling for Canagliflozin" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 319ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Contraindications of Semaglutide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 315ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Dosage and administration of Semaglutide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 318ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Drug interactions with Semaglutide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 1759ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pregnancy safety of Semaglutide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 639ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Renal dose adjustment for Semaglutide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 641ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pediatric use of Semaglutide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 636ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Mechanism of action of Semaglutide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 641ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Indications for Semaglutide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 321ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Storage conditions for Semaglutide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 324ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Patient counseling for Semaglutide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 282ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Contraindications of Liraglutide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 2111ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Dosage and administration of Liraglutide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 298ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Drug interactions with Liraglutide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 286ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pregnancy safety of Liraglutide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 277ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Renal dose adjustment for Liraglutide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 368ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pediatric use of Liraglutide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 369ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Mechanism of action of Liraglutide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 292ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Indications for Liraglutide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 285ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Storage conditions for Liraglutide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 379ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Patient counseling for Liraglutide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 330ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Contraindications of Exenatide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 309ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Dosage and administration of Exenatide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 325ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Drug interactions with Exenatide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 314ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pregnancy safety of Exenatide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 320ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Renal dose adjustment for Exenatide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 296ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pediatric use of Exenatide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
 *   **Latency:** 344ms
 *   **Chunks Retrieved:** 5
 
-| Rank | Chunk ID | Similarity Score | Source | Content Snippet |
-|---|---|---|---|---|
-| 1 | `2a97b3d5-1781-5733-b690-aad888d30200` | 0.7291 | DailyMed | Losartan potassium tablets are contraindicated: • In patients who are hypersensitive to any componen... |
-| 2 | `da1eaaa2-fd00-5bb3-9c88-e6f5f6a95bd4` | 0.6674 | DailyMed | The adverse events, regardless of drug relationship, reported with an incidence of ≥4% of patients t... |
-| 3 | `e0ae4c94-2903-5034-ac1b-636f080997ea` | 0.6266 | DailyMed | The 4 studies of losartan monotherapy included a total of 1075 patients randomized to several doses ... |
-| 4 | `a6658dda-9c57-5e63-bd8c-8e76047143d3` | 0.6115 | DailyMed | 12.2 Pharmacodynamics Losartan inhibits the pressor effect of angiotensin II (as well as angiotensin... |
-| 5 | `79df0317-0a89-5839-a11d-1dcf1dbaa830` | 0.5963 | DailyMed | Because clinical trials are conducted under widely varying conditions, adverse reaction rates observ... |
+### Query: "Mechanism of action of Exenatide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 321ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Indications for Exenatide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 316ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Storage conditions for Exenatide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 321ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Patient counseling for Exenatide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 332ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Contraindications of Dulaglutide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 308ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Dosage and administration of Dulaglutide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 326ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Drug interactions with Dulaglutide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 958ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pregnancy safety of Dulaglutide" (Status: ❌ FAIL)
+*   **Test Type:** per_drug_section
+*   **Latency:** 636ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Renal dose adjustment for Dulaglutide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 318ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pediatric use of Dulaglutide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 317ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Mechanism of action of Dulaglutide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 322ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Indications for Dulaglutide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 280ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Storage conditions for Dulaglutide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 299ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Patient counseling for Dulaglutide" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 282ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Contraindications of Insulin glargine" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 431ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Dosage and administration of Insulin glargine" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 316ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Drug interactions with Insulin glargine" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 307ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pregnancy safety of Insulin glargine" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 323ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Renal dose adjustment for Insulin glargine" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 320ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pediatric use of Insulin glargine" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 322ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Mechanism of action of Insulin glargine" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 325ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Indications for Insulin glargine" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 312ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Storage conditions for Insulin glargine" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 324ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Patient counseling for Insulin glargine" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 319ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Contraindications of Insulin lispro" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 314ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Dosage and administration of Insulin lispro" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 321ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Drug interactions with Insulin lispro" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 270ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pregnancy safety of Insulin lispro" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 285ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Renal dose adjustment for Insulin lispro" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 301ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pediatric use of Insulin lispro" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 424ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Mechanism of action of Insulin lispro" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 314ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Indications for Insulin lispro" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 301ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Storage conditions for Insulin lispro" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 332ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Patient counseling for Insulin lispro" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 325ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Contraindications of Insulin aspart" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 321ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Dosage and administration of Insulin aspart" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 318ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Drug interactions with Insulin aspart" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 320ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pregnancy safety of Insulin aspart" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 279ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Renal dose adjustment for Insulin aspart" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 283ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pediatric use of Insulin aspart" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 395ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Mechanism of action of Insulin aspart" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 321ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Indications for Insulin aspart" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 325ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Storage conditions for Insulin aspart" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 314ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Patient counseling for Insulin aspart" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 322ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Contraindications of Insulin detemir" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 317ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Dosage and administration of Insulin detemir" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 321ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Drug interactions with Insulin detemir" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 319ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pregnancy safety of Insulin detemir" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 323ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Renal dose adjustment for Insulin detemir" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 316ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pediatric use of Insulin detemir" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 323ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Mechanism of action of Insulin detemir" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 317ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Indications for Insulin detemir" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 280ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Storage conditions for Insulin detemir" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 368ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Patient counseling for Insulin detemir" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 284ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Contraindications of Insulin degludec" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 348ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Dosage and administration of Insulin degludec" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 323ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Drug interactions with Insulin degludec" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 315ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pregnancy safety of Insulin degludec" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 270ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Renal dose adjustment for Insulin degludec" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 279ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Pediatric use of Insulin degludec" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 1050ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Mechanism of action of Insulin degludec" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 321ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Indications for Insulin degludec" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 288ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Storage conditions for Insulin degludec" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 350ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Patient counseling for Insulin degludec" (Status: ✅ PASS)
+*   **Test Type:** per_drug_section
+*   **Latency:** 313ms
+*   **Chunks Retrieved:** 5
+
+### Query: "Mechanism of action of Coca-Cola" (Status: ✅ PASS)
+*   **Test Type:** adversarial_impossible_query
+*   **Expected:** No high-confidence match
+*   **Top Score:** 0.3289
+
+### Query: "Contraindications of Superman" (Status: ✅ PASS)
+*   **Test Type:** adversarial_wrong_drug
+*   **Expected:** No high-confidence match
+*   **Top Score:** 0.4793
+
+### Query: "Novamox dosage" (Status: ❌ FAIL)
+*   **Test Type:** adversarial_brand_resolution
+*   **Expected:** Amoxicillin content in results
+
+### Query: "Metoformin contraindications" (Status: ✅ PASS)
+*   **Test Type:** adversarial_typo_tolerance
+*   **Expected:** Metformin content in results
+
+### Query: "Metformin Warfarin Lisinopril indications" (Status: ✅ PASS)
+*   **Test Type:** adversarial_multi_drug_separation
+*   **Expected:** Multiple separate drug chunks returned
+
+### Query: "Metformin dosage" (Status: ✅ PASS)
+*   **Test Type:** adversarial_mixed_query
+
+### Query: "Warfarin interactions" (Status: ✅ PASS)
+*   **Test Type:** adversarial_mixed_query
+
+### Query: "Atorvastatin pregnancy" (Status: ✅ PASS)
+*   **Test Type:** adversarial_mixed_query
 

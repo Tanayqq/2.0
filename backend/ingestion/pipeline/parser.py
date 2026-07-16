@@ -26,10 +26,10 @@ class MedicalParser:
 
     SUBSECTION_PATTERNS = [
         # Renal Impairment
-        (re.compile(r'(?:^|\.\s+|\n+)(?:[•*·\-\s\d.]+)?(?:patients?\s+with\s+)?(?:acute\s+or\s+chronic\s+)?(renal\s+(?:impairment|insufficiency|dysfunction|failure|function))\b', re.IGNORECASE), "renal_impairment"),
-        (re.compile(r'(?:^|\.\s+|\n+)(?:[•*·\-\s\d.]+)?(adults?\s+with\s+impaired\s+renal\s+function)\b', re.IGNORECASE), "renal_impairment"),
+        (re.compile(r'(?:^|\.\s+|\n+)(?:[•*·\-\s\d.]+)?(?:effect\s+of\s+)?(?:patients?\s+with\s+)?(?:acute\s+or\s+chronic\s+)?(renal\s+(?:impairment|insufficiency|dysfunction|failure|function))\b', re.IGNORECASE), "renal_impairment"),
+        (re.compile(r'(?:^|\.\s+|\n+)(?:[•*·\-\s\d.]+)?(?:effect\s+of\s+)?(adults?\s+with\s+impaired\s+renal\s+function)\b', re.IGNORECASE), "renal_impairment"),
         # Hepatic Impairment
-        (re.compile(r'(?:^|\.\s+|\n+)(?:[•*·\-\s\d.]+)?(?:patients?\s+with\s+)?(?:acute\s+or\s+chronic\s+)?(hepatic\s+(?:impairment|insufficiency|dysfunction|failure|function))\b', re.IGNORECASE), "hepatic_impairment"),
+        (re.compile(r'(?:^|\.\s+|\n+)(?:[•*·\-\s\d.]+)?(?:effect\s+of\s+)?(?:patients?\s+with\s+)?(?:acute\s+or\s+chronic\s+)?(hepatic\s+(?:impairment|insufficiency|dysfunction|failure|function))\b', re.IGNORECASE), "hepatic_impairment"),
         # Geriatric Use
         (re.compile(r'(?:^|\.\s+|\n+)(?:[•*·\-\s\d.]+)?(?:use\s+in\s+)?(geriatric(?:s|\s+patients|\s+use)?)\b', re.IGNORECASE), "geriatric_use"),
         (re.compile(r'(?:^|\.\s+|\n+)(?:[•*·\-\s\d.]+)?(?:use\s+in\s+)?(elderly)\b', re.IGNORECASE), "geriatric_use"),
@@ -98,7 +98,8 @@ class MedicalParser:
             "precautions",
             "warnings",
             "clinical_pharmacology",
-            "adverse_reactions"
+            "adverse_reactions",
+            "pharmacokinetics"
         ]:
             return [MedicalSection(title=parent_title, content=content)]
 

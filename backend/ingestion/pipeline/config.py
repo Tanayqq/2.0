@@ -53,6 +53,7 @@ class IngestionSettings(BaseSettings):
     
     # Versioning
     PIPELINE_VERSION: str = "1.6.0"
+    CORPUS_VERSION: str = "v3.1"
     
     model_config = SettingsConfigDict(
         env_file=".env",

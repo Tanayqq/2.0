@@ -31,8 +31,10 @@ class IngestionOrchestrator:
     prioritization, parsing, validation, chunking, embedding, uploading,
     statistics collection, reporting, and retrieval smoke tests.
     """
-    def __init__(self):
+    def __init__(self, force_reingest: bool = False, incremental: bool = False):
         self.stats = IngestionStatistics()
+        self.force_reingest = force_reingest
+        self.incremental = incremental
         self.parser = MedicalParser()
         self.validator = MedicalValidator()
         self.chunker = MedicalSectionChunker()
@@ -76,11 +78,10 @@ class IngestionOrchestrator:
         logger.info("preflight_checks_passed_successfully")
         return True
 
-    def merge_sources(self, docs_by_source: Dict[str, Any], drug_name: str) -> Optional[Any]:
+    def select_primary_source(self, docs_by_source: Dict[str, Any], drug_name: str) -> Optional[Any]:
         """
-        Resolve source conflicts using the configured priority system.
-        Keeps sections from the highest priority source, appending unique sections
-        from lower priority sources to ensure maximum clinical coverage.
+        Select the highest priority source according to configuration.
+        Strictly preserves provenance by completely ignoring lower priority sources.
         """
         if not docs_by_source:
             return None
@@ -95,22 +96,7 @@ class IngestionOrchestrator:
         primary_source = sorted_sources[0]
         primary_doc = docs_by_source[primary_source]
         
-        if len(sorted_sources) == 1:
-            return primary_doc
-            
-        # Merge sections from lower priority sources
-        primary_section_titles = {sec.title.lower() for sec in primary_doc.sections}
-        
-        for other_source in sorted_sources[1:]:
-            other_doc = docs_by_source[other_source]
-            for sec in other_doc.sections:
-                if sec.title.lower() not in primary_section_titles:
-                    # Append unique clinical section
-                    primary_doc.sections.append(sec)
-                    primary_section_titles.add(sec.title.lower())
-                    logger.info("merged_unique_section_from_lower_priority_source", 
-                                drug=drug_name, section=sec.title, source=other_source)
-                    
+        logger.info("selected_primary_source", drug=drug_name, source=primary_source)
         return primary_doc
 
     def process_drug(self, drug_name: str) -> Optional[List[Dict[str, Any]]]:
@@ -134,13 +120,13 @@ class IngestionOrchestrator:
             self.stats.log_validation_failure(f"Drug '{drug_name}' could not be fetched from any active source.")
             return None
             
-        # 2. Conflict resolution via merge
-        merged_doc = self.merge_sources(docs_by_source, drug_name)
-        if not merged_doc:
+        # 2. Source selection (Strict Provenance)
+        primary_doc = self.select_primary_source(docs_by_source, drug_name)
+        if not primary_doc:
             return None
             
         # 3. Clean and parse sections
-        parsed_doc = self.parser.parse(merged_doc)
+        parsed_doc = self.parser.parse(primary_doc)
         
         # 4. Ingestion validation
         is_valid, reason = self.validator.validate(parsed_doc)
@@ -156,7 +142,7 @@ class IngestionOrchestrator:
         checksum = self.profile_parser.calculate_checksum(full_text)
         
         existing_checksum = self.profile_store.get_profile_checksum(entity_id, "clinical", "FDA")
-        if existing_checksum == checksum:
+        if not self.force_reingest and existing_checksum == checksum:
             logger.info("incremental_ingestion_skip", drug=parsed_doc.drug, reason="checksum_matched")
             return []  # Return empty chunks to skip embedding/upload for this drug
 
@@ -418,14 +404,49 @@ class IngestionOrchestrator:
             if not valid_chunks:
                 logger.warning("no_chunks_passed_validation_skipping_embed_and_upload")
             else:
-                # 3. Generate batch embeddings
-                self.stats.embeddings_generated = len(valid_chunks)
-                embedded_chunks = self.embedder.embed_chunks(valid_chunks)
-                
-                # 4. Upload batches to Qdrant Cloud
-                uploaded, failed = self.uploader.upload_chunks(embedded_chunks)
-                self.stats.upload_success = uploaded
-                self.stats.upload_failures = failed
+                chunks_to_embed = valid_chunks
+                chunks_to_delete = []
+
+                if self.incremental and not self.force_reingest:
+                    unique_drugs = {chunk["drug_name"] for chunk in valid_chunks if chunk.get("drug_name")}
+                    existing_hashes = {}
+                    for d_name in unique_drugs:
+                        existing_hashes.update(self.uploader.get_existing_chunk_hashes(d_name))
+
+                    existing_hash_set = set(existing_hashes.values())
+                    new_chunks = []
+                    new_hash_set = set()
+                    
+                    for chunk in valid_chunks:
+                        c_hash = chunk.get("chunk_hash")
+                        if c_hash:
+                            new_hash_set.add(c_hash)
+                        if c_hash not in existing_hash_set:
+                            new_chunks.append(chunk)
+
+                    for point_id, old_hash in existing_hashes.items():
+                        if old_hash not in new_hash_set:
+                            chunks_to_delete.append(point_id)
+
+                    chunks_to_embed = new_chunks
+                    logger.info("chunk_level_incremental_diffing_completed", 
+                                total_chunks=len(valid_chunks), 
+                                unchanged_chunks=len(valid_chunks) - len(new_chunks),
+                                new_or_changed_chunks=len(new_chunks),
+                                obsolete_chunks_to_delete=len(chunks_to_delete))
+
+                if chunks_to_delete:
+                    self.uploader.delete_points_by_id(chunks_to_delete)
+
+                if chunks_to_embed:
+                    # 3. Generate batch embeddings
+                    self.stats.embeddings_generated = len(chunks_to_embed)
+                    embedded_chunks = self.embedder.embed_chunks(chunks_to_embed)
+                    
+                    # 4. Upload batches to Qdrant Cloud
+                    uploaded, failed = self.uploader.upload_chunks(embedded_chunks)
+                    self.stats.upload_success = uploaded
+                    self.stats.upload_failures = failed
                 
         self.stats.stop()
         
@@ -469,6 +490,17 @@ def main():
         type=str, 
         help="Path to file containing list of drugs (one drug per line)"
     )
+    parser.add_argument(
+        "--force", 
+        action="store_true", 
+        help="Force re-ingestion by bypassing incremental checksum checks"
+    )
+    
+    parser.add_argument(
+        "--incremental", 
+        action="store_true", 
+        help="Use chunk-level hashing to only embed and upload changed chunks"
+    )
     
     args = parser.parse_args()
     
@@ -484,10 +516,10 @@ def main():
             sys.exit(1)
             
     if not drug_list:
-        # Default fallback list for smoke testing and MVP validation
-        drug_list = ["lisinopril", "atorvastatin", "metformin", "amoxicillin", "ibuprofen", "losartan", "warfarin"]
+        logger.error("no_drugs_specified", reason="Must provide --drugs or --file")
+        sys.exit(1)
         
-    orchestrator = IngestionOrchestrator()
+    orchestrator = IngestionOrchestrator(force_reingest=args.force, incremental=args.incremental)
     orchestrator.ingest_drugs(drug_list)
 
 if __name__ == "__main__":

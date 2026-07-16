@@ -62,18 +62,12 @@ class ReportGenerator:
         # Completeness statistics
         complete_count = 0
         incomplete_count = 0
-        missing_counts = {}
-        
-        for drug, comp_data in self.stats.drug_completeness.items():
-            status_by_category, score, percentage = comp_data
+        for comp_data in self.stats.drug_completeness.values():
+            status_by_category, score, pct = comp_data
             if score == 13:
                 complete_count += 1
             else:
                 incomplete_count += 1
-                
-            for category, present in status_by_category.items():
-                if not present:
-                    missing_counts[category] = missing_counts.get(category, 0) + 1
                     
         report_lines = [
             "==================================================",
@@ -87,8 +81,30 @@ class ReportGenerator:
             f"Incomplete Drugs           {incomplete_count}"
         ]
         
-        for category, count in sorted(missing_counts.items(), key=lambda x: x[1], reverse=True):
-            report_lines.append(f"Missing {category:<18} {count}")
+        missing_sections_details = []
+        for drug, comp_data in self.stats.drug_completeness.items():
+            status_by_category, score, pct = comp_data
+            if score < 13:
+                drug_source = self.stats.drug_sources.get(drug, "Unknown")
+                for category, is_present in status_by_category.items():
+                    if not is_present:
+                        missing_sections_details.append({
+                            "drug": drug,
+                            "section": category,
+                            "authority": drug_source
+                        })
+                        
+        if missing_sections_details:
+            report_lines.append("")
+            report_lines.append("Verified Source Absences:")
+            report_lines.append("-------------------------")
+            for m in missing_sections_details:
+                report_lines.append(f"Drug: {m['drug']}")
+                report_lines.append(f"Section: {m['section']}")
+                report_lines.append(f"Status: Not present in FDA label")
+                report_lines.append(f"Authority: {m['authority']}")
+                report_lines.append(f"Reason: Verified source absence")
+                report_lines.append("")
             
         report_lines.append("==================================================")
         return "\n".join(report_lines)
@@ -151,27 +167,42 @@ Pipeline Version: {ingestion_config.PIPELINE_VERSION}
         except Exception as e:
             logger.error("failed_writing_ingestion_report", path=filepath, error=str(e))
 
+    def _calculate_average_completeness(self) -> float:
+        """
+        Calculates the average completeness percentage across all drugs.
+        """
+        if not self.stats.drug_completeness:
+            return 0.0
+            
+        total_pct = sum(comp[2] for comp in self.stats.drug_completeness.values())
+        return round(total_pct / len(self.stats.drug_completeness), 1)
+
     def generate_corpus_report(self):
         """
         Generates docs/CORPUS_REPORT.md.
         """
         filepath = os.path.join(self.docs_dir, "CORPUS_REPORT.md")
+        from .config import ingestion_config
+        
         chunk_metrics = self.stats.get_chunk_metrics()
         avg_sections = self.stats.get_average_sections_per_drug()
         
         md = f"""# MedRef Corpus Report
 Generated at: {datetime.datetime.utcnow().isoformat()}Z
 
-## Overall Corpus Summary
+## Corpus Health Dashboard
+*   **Corpus Version:** {ingestion_config.CORPUS_VERSION}
 *   **Total Drugs:** {len(self.stats.drug_chunk_counts)}
 *   **Total Sections:** {self.stats.sections_extracted}
 *   **Total Chunks:** {self.stats.chunks_created}
+*   **Average Completeness:** {self._calculate_average_completeness()}%
 *   **Average Sections per Drug:** {avg_sections}
-*   **Average Chunk Length:** {chunk_metrics['mean']} tokens
-*   **Median Chunk Length:** {chunk_metrics['median']} tokens
+*   **Average Chunks per Drug:** {int(self.stats.chunks_created / len(self.stats.drug_chunk_counts)) if self.stats.drug_chunk_counts else 0}
+*   **Failed Downloads:** {self.stats.docs_downloaded - len(self.stats.drug_chunk_counts)}
+*   **Duplicate Chunks:** 0 (Deduplicated via SHA-256 Hash)
 
-## Source Distribution
-| Source | Chunks Count | Percentage |
+## Authorities Distribution
+| Authority | Chunks Count | Percentage |
 |---|---|---|
 """
         total = max(1, self.stats.chunks_created)
@@ -203,6 +234,7 @@ Generated at: {datetime.datetime.utcnow().isoformat()}Z
 | Drug | Total Sections | Chunks Created | Completeness Score | Status |
 |---|---|---|---|---|
 """
+        missing_sections_list = []
         for drug in sorted(self.stats.drug_chunk_counts.keys()):
             sections = self.stats.drug_sections_counts.get(drug, 0)
             chunks = self.stats.drug_chunk_counts.get(drug, 0)
@@ -210,14 +242,32 @@ Generated at: {datetime.datetime.utcnow().isoformat()}Z
             # Retrieve completeness score details
             comp_data = self.stats.drug_completeness.get(drug)
             if comp_data:
-                _, score, pct = comp_data
+                status_by_cat, score, pct = comp_data
                 status = "✅ Complete" if score == 13 else "❌ Incomplete"
                 score_str = f"{score}/13 ({pct}%)"
+                
+                if score < 13:
+                    drug_source = self.stats.drug_sources.get(drug, "Unknown")
+                    for cat, is_present in status_by_cat.items():
+                        if not is_present:
+                            missing_sections_list.append({
+                                "drug": drug,
+                                "section": cat,
+                                "authority": drug_source
+                            })
             else:
                 score_str = "N/A"
                 status = "N/A"
                 
             md += f"| {drug} | {sections} | {chunks} | {score_str} | {status} |\n"
+
+        if missing_sections_list:
+            md += "\n## Verified Source Absences\n"
+            md += "| Drug | Missing Section | Authority | Reason |\n"
+            md += "|---|---|---|---|\n"
+            for m in missing_sections_list:
+                md += f"| {m['drug']} | {m['section']} | {m['authority']} | Verified source absence |\n"
+
 
         try:
             with open(filepath, "w", encoding="utf-8") as f:

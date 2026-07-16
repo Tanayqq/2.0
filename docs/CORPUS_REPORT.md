@@ -1,63 +1,58 @@
 # MedRef Corpus Report
-Generated at: 2026-07-16T08:45:22.441487Z
+Generated at: 2026-07-16T16:14:09.892870Z
 
-## Overall Corpus Summary
+## Corpus Health Dashboard
+*   **Corpus Version:** v3.1
 *   **Total Drugs:** 29
-*   **Total Sections:** 1185
-*   **Total Chunks:** 2274
-*   **Average Sections per Drug:** 40.9
-*   **Average Chunk Length:** 302.1 tokens
-*   **Median Chunk Length:** 365.0 tokens
+*   **Total Sections:** 911
+*   **Total Chunks:** 1237
+*   **Average Completeness:** 88.1%
+*   **Average Sections per Drug:** 31.4
+*   **Average Chunks per Drug:** 42
+*   **Failed Downloads:** 6
+*   **Duplicate Chunks:** 0 (Deduplicated via SHA-256 Hash)
 
-## Source Distribution
-| Source | Chunks Count | Percentage |
+## Authorities Distribution
+| Authority | Chunks Count | Percentage |
 |---|---|---|
-| DailyMed | 2274 | 100.0% |
+| DailyMed | 1237 | 100.0% |
 
 ## Country Distribution
 | Country | Chunks Count | Percentage |
 |---|---|---|
-| US | 2274 | 100.0% |
+| US | 1237 | 100.0% |
 
 ## Clinical Section Distribution
 | Section Title | Chunks Count |
 |---|---|
-| clinical_studies | 171 |
-| pharmacokinetics | 141 |
-| clinical_pharmacology | 131 |
-| patient_counseling | 123 |
-| spl_medguide | 96 |
-| use_in_specific_populations | 90 |
-| adverse_reactions | 89 |
-| administration | 82 |
-| pregnancy | 76 |
-| warnings | 75 |
-| dosage_and_administration | 67 |
-| description | 42 |
-| pharmacodynamics | 39 |
-| storage | 39 |
+| patient_counseling | 82 |
+| adverse_reactions | 77 |
 | drug_interactions | 36 |
-| nonclinical_toxicology | 33 |
-| pediatric_use | 31 |
+| pediatric_use | 33 |
+| pregnancy | 32 |
 | precautions | 30 |
-| lactation | 29 |
+| storage | 30 |
 | geriatric_use | 29 |
-| overdosage | 29 |
-| carcinogenesis_and_mutagenesis_and_impairment_of_fertility | 29 |
-| mechanism_of_action | 27 |
-| dosage_forms | 25 |
-| contraindications | 23 |
+| lactation | 28 |
+| description | 27 |
+| pharmacokinetics | 26 |
+| administration | 26 |
 | indications | 22 |
+| contraindications | 22 |
+| renal_impairment | 22 |
+| hepatic_impairment | 22 |
+| pharmacodynamics | 21 |
+| dosage_and_administration | 21 |
+| dosage_forms | 20 |
 | weight_reduction_and_long_term_maintenance_studies_in_adults_with_obesity_or_overweight | 20 |
 | clinical_trial_experience | 20 |
-| hepatic_impairment | 18 |
+| mechanism_of_action | 19 |
+| warnings | 18 |
 | hypersensitivity_reactions | 17 |
-| renal_impairment | 17 |
-| spl_unclassified_section | 17 |
-| boxed_warning | 16 |
 | hypoglycemia | 14 |
 | glycemic_control_in_adults_with_type_2_diabetes_mellitus | 11 |
 | diabetic_ketoacidosis_in_patients_with_type_1_diabetes_mellitus_and_other_ketoacidosis | 10 |
+| clinical_pharmacology | 9 |
 | glycemic_control_trials_in_patients_with_type_2_diabetes_mellitus | 8 |
 | monotherapy | 7 |
 | immunogenicity | 7 |
@@ -69,15 +64,14 @@ Generated at: 2026-07-16T08:45:22.441487Z
 | general | 6 |
 | patient_medication_guide | 6 |
 | multi_dose_kwikpen_instructions_for_use | 6 |
-| general_precautions | 5 |
 | animal_toxicology_andor_pharmacology | 5 |
 | pancreatitis | 5 |
 | severe_and_disabling_arthralgia | 5 |
 | bullous_pemphigoid | 5 |
+| clinical_studies | 5 |
 | temporary_interruption_for_surgery | 5 |
 | recommendations_regarding_missed_dose | 5 |
 | volume_depletion | 5 |
-| recent_major_changes | 5 |
 | acute_pancreatitis | 5 |
 | acute_gallbladder_disease | 5 |
 | hyperglycemia_or_hypoglycemia_with_changes_in_insulin_regimen | 5 |
@@ -85,7 +79,6 @@ Generated at: 2026-07-16T08:45:22.441487Z
 | hypokalemia | 5 |
 | multiple_dose_vial_instructions_for_use | 5 |
 | principal_display_panel | 4 |
-| animal_pharmacology_and_or_toxicology | 4 |
 | clinical_trials | 4 |
 | heart_failure | 4 |
 | hypoglycemia_with_concomitant_use_with_insulin_or_insulin_secretagogues | 4 |
@@ -106,7 +99,6 @@ Generated at: 2026-07-16T08:45:22.441487Z
 | single_dose_pen_instructions_for_use | 4 |
 | single_dose_vial_instructions_for_use | 4 |
 | recommended_dosing | 3 |
-| laboratory_tests | 3 |
 | discontinuation_for_iodinated_contrast_imaging_procedures | 3 |
 | lactic_acidosis | 3 |
 | vitamin_b | 3 |
@@ -133,7 +125,6 @@ Generated at: 2026-07-16T08:45:22.441487Z
 | strong_cyp2c8_inhibitors | 2 |
 | cyp2c8_inducers | 2 |
 | topiramate | 2 |
-| labor_and_delivery | 2 |
 | acute_renal_failure | 2 |
 | hypoglycemia_with_concomitant_use_with_insulin_and_insulin_secretagogues | 2 |
 | empagliflozin_and_linagliptin_add_on_combination_therapy_with_metformin_for_glycemic_control | 2 |
@@ -158,6 +149,7 @@ Generated at: 2026-07-16T08:45:22.441487Z
 | clinical_studies_in_adult_and_pediatric_patients_with_type_1_diabetes_with_subcutaneous_injections | 2 |
 | starting_dose_in_insulin_naïve_patients | 2 |
 | type_1_diabetes_pediatric_patients_1_year_of_age_and_older | 2 |
+| laboratory_tests | 2 |
 | dose_adjustment | 2 |
 | combination_trials | 2 |
 | saxagliptin | 2 |
@@ -218,7 +210,6 @@ Generated at: 2026-07-16T08:45:22.441487Z
 | switching_to_langlara_from_other_insulin_therapies | 1 |
 | never_share_a_langlara_prefilled_pen_or_needle_between_patients | 1 |
 | principal_display_panel_3_ml_pen_carton | 1 |
-| risks | 1 |
 | never_share_a_humalog_mix5050_kwikpen_or_syringe_between_patients | 1 |
 | important_preparation_and_administration_instructions | 1 |
 | instructions_for_mixing_insulin_aspart_with_other_insulins | 1 |
@@ -249,8 +240,7 @@ Generated at: 2026-07-16T08:45:22.441487Z
 | vasculitis | 1 |
 | hypothyroidism | 1 |
 | reference | 1 |
-| references | 1 |
-| drug_and_or_laboratory_test_interactions | 1 |
+| general_precautions | 1 |
 | patients_with_severe_renal_impairment | 1 |
 | serious_cardiovascular_adverse_reactions_with_concomitant_use_with_nph_insulin | 1 |
 | monotherapy_trials | 1 |
@@ -301,39 +291,85 @@ Generated at: 2026-07-16T08:45:22.441487Z
 | when_using_this_product | 1 |
 | stop_use_and_ask_a_doctor_if | 1 |
 | additional_information | 1 |
-| teratogenic_effects | 1 |
-| drug_abuse_and_dependence | 1 |
-| abuse | 1 |
 
 ## Drug Completeness & Chunk Breakdown
 | Drug | Total Sections | Chunks Created | Completeness Score | Status |
 |---|---|---|---|---|
-| Acarbose | 21 | 32 | 12/13 (92.3%) | ❌ Incomplete |
-| Alogliptin | 43 | 73 | 11/13 (84.6%) | ❌ Incomplete |
-| Bromocriptine | 23 | 40 | 11/13 (84.6%) | ❌ Incomplete |
-| Canagliflozin | 46 | 82 | 13/13 (100.0%) | ✅ Complete |
-| Dapagliflozin | 37 | 88 | 13/13 (100.0%) | ✅ Complete |
-| Dulaglutide | 55 | 109 | 13/13 (100.0%) | ✅ Complete |
-| Empagliflozin | 48 | 106 | 13/13 (100.0%) | ✅ Complete |
-| Ertugliflozin | 46 | 123 | 13/13 (100.0%) | ✅ Complete |
-| Exenatide | 44 | 85 | 13/13 (100.0%) | ✅ Complete |
-| Fludrocortisone | 22 | 21 | 11/13 (84.6%) | ❌ Incomplete |
-| Glimepiride | 37 | 64 | 12/13 (92.3%) | ❌ Incomplete |
-| Glipizide | 29 | 35 | 12/13 (92.3%) | ❌ Incomplete |
-| Insulin aspart | 50 | 93 | 13/13 (100.0%) | ✅ Complete |
-| Insulin degludec | 47 | 110 | 13/13 (100.0%) | ✅ Complete |
-| Insulin detemir | 44 | 92 | 13/13 (100.0%) | ✅ Complete |
-| Insulin glargine | 44 | 64 | 13/13 (100.0%) | ✅ Complete |
-| Insulin lispro | 39 | 86 | 13/13 (100.0%) | ✅ Complete |
-| Linagliptin | 51 | 86 | 13/13 (100.0%) | ✅ Complete |
-| Liraglutide | 42 | 111 | 13/13 (100.0%) | ✅ Complete |
-| Methimazole | 19 | 20 | 10/13 (76.9%) | ❌ Incomplete |
-| Nateglinide | 28 | 41 | 13/13 (100.0%) | ✅ Complete |
-| Orlistat | 36 | 46 | 11/13 (84.6%) | ❌ Incomplete |
-| Pioglitazone | 45 | 92 | 11/13 (84.6%) | ❌ Incomplete |
-| Propylthiouracil | 27 | 28 | 11/13 (84.6%) | ❌ Incomplete |
-| Repaglinide | 34 | 52 | 13/13 (100.0%) | ✅ Complete |
-| Saxagliptin | 60 | 113 | 13/13 (100.0%) | ✅ Complete |
-| Semaglutide | 63 | 166 | 11/13 (84.6%) | ❌ Incomplete |
-| Sitagliptin | 38 | 68 | 12/13 (92.3%) | ❌ Incomplete |
-| Tirzepatide | 67 | 148 | 13/13 (100.0%) | ✅ Complete |
+| Acarbose | 16 | 23 | 11/13 (84.6%) | ❌ Incomplete |
+| Alogliptin | 28 | 23 | 7/13 (53.8%) | ❌ Incomplete |
+| Bromocriptine | 19 | 33 | 13/13 (100.0%) | ✅ Complete |
+| Canagliflozin | 34 | 37 | 11/13 (84.6%) | ❌ Incomplete |
+| Dapagliflozin | 29 | 49 | 13/13 (100.0%) | ✅ Complete |
+| Dulaglutide | 41 | 60 | 11/13 (84.6%) | ❌ Incomplete |
+| Empagliflozin | 35 | 38 | 12/13 (92.3%) | ❌ Incomplete |
+| Ertugliflozin | 35 | 62 | 13/13 (100.0%) | ✅ Complete |
+| Exenatide | 36 | 51 | 13/13 (100.0%) | ✅ Complete |
+| Fludrocortisone | 19 | 15 | 11/13 (84.6%) | ❌ Incomplete |
+| Glimepiride | 29 | 36 | 13/13 (100.0%) | ✅ Complete |
+| Glipizide | 24 | 27 | 13/13 (100.0%) | ✅ Complete |
+| Insulin aspart | 43 | 69 | 13/13 (100.0%) | ✅ Complete |
+| Insulin degludec | 40 | 64 | 13/13 (100.0%) | ✅ Complete |
+| Insulin detemir | 37 | 62 | 13/13 (100.0%) | ✅ Complete |
+| Insulin glargine | 33 | 35 | 12/13 (92.3%) | ❌ Incomplete |
+| Insulin lispro | 28 | 36 | 12/13 (92.3%) | ❌ Incomplete |
+| Linagliptin | 38 | 39 | 11/13 (84.6%) | ❌ Incomplete |
+| Liraglutide | 33 | 57 | 13/13 (100.0%) | ✅ Complete |
+| Methimazole | 17 | 17 | 10/13 (76.9%) | ❌ Incomplete |
+| Nateglinide | 22 | 23 | 13/13 (100.0%) | ✅ Complete |
+| Orlistat | 11 | 6 | 3/13 (23.1%) | ❌ Incomplete |
+| Pioglitazone | 35 | 57 | 12/13 (92.3%) | ❌ Incomplete |
+| Propylthiouracil | 23 | 21 | 11/13 (84.6%) | ❌ Incomplete |
+| Repaglinide | 26 | 30 | 13/13 (100.0%) | ✅ Complete |
+| Saxagliptin | 47 | 55 | 11/13 (84.6%) | ❌ Incomplete |
+| Semaglutide | 53 | 117 | 11/13 (84.6%) | ❌ Incomplete |
+| Sitagliptin | 25 | 21 | 9/13 (69.2%) | ❌ Incomplete |
+| Tirzepatide | 55 | 74 | 11/13 (84.6%) | ❌ Incomplete |
+
+## Verified Source Absences
+| Drug | Missing Section | Authority | Reason |
+|---|---|---|---|
+| Acarbose | Hepatic | DailyMed | Verified source absence |
+| Acarbose | Patient Counseling | DailyMed | Verified source absence |
+| Alogliptin | Drug Interactions | DailyMed | Verified source absence |
+| Alogliptin | Pregnancy | DailyMed | Verified source absence |
+| Alogliptin | Pediatric | DailyMed | Verified source absence |
+| Alogliptin | Geriatric | DailyMed | Verified source absence |
+| Alogliptin | Renal | DailyMed | Verified source absence |
+| Alogliptin | Hepatic | DailyMed | Verified source absence |
+| Canagliflozin | Pregnancy | DailyMed | Verified source absence |
+| Canagliflozin | Pediatric | DailyMed | Verified source absence |
+| Dulaglutide | Drug Interactions | DailyMed | Verified source absence |
+| Dulaglutide | Pregnancy | DailyMed | Verified source absence |
+| Empagliflozin | Pregnancy | DailyMed | Verified source absence |
+| Fludrocortisone | Renal | DailyMed | Verified source absence |
+| Fludrocortisone | Hepatic | DailyMed | Verified source absence |
+| Insulin glargine | Pregnancy | DailyMed | Verified source absence |
+| Insulin lispro | Pregnancy | DailyMed | Verified source absence |
+| Linagliptin | Pregnancy | DailyMed | Verified source absence |
+| Linagliptin | Pediatric | DailyMed | Verified source absence |
+| Methimazole | Geriatric | DailyMed | Verified source absence |
+| Methimazole | Renal | DailyMed | Verified source absence |
+| Methimazole | Hepatic | DailyMed | Verified source absence |
+| Orlistat | Contraindications | DailyMed | Verified source absence |
+| Orlistat | Warnings | DailyMed | Verified source absence |
+| Orlistat | Drug Interactions | DailyMed | Verified source absence |
+| Orlistat | Pregnancy | DailyMed | Verified source absence |
+| Orlistat | Lactation | DailyMed | Verified source absence |
+| Orlistat | Pediatric | DailyMed | Verified source absence |
+| Orlistat | Geriatric | DailyMed | Verified source absence |
+| Orlistat | Renal | DailyMed | Verified source absence |
+| Orlistat | Hepatic | DailyMed | Verified source absence |
+| Orlistat | Patient Counseling | DailyMed | Verified source absence |
+| Pioglitazone | Drug Interactions | DailyMed | Verified source absence |
+| Propylthiouracil | Renal | DailyMed | Verified source absence |
+| Propylthiouracil | Hepatic | DailyMed | Verified source absence |
+| Saxagliptin | Pregnancy | DailyMed | Verified source absence |
+| Saxagliptin | Pediatric | DailyMed | Verified source absence |
+| Semaglutide | Renal | DailyMed | Verified source absence |
+| Semaglutide | Hepatic | DailyMed | Verified source absence |
+| Sitagliptin | Pregnancy | DailyMed | Verified source absence |
+| Sitagliptin | Pediatric | DailyMed | Verified source absence |
+| Sitagliptin | Geriatric | DailyMed | Verified source absence |
+| Sitagliptin | Renal | DailyMed | Verified source absence |
+| Tirzepatide | Drug Interactions | DailyMed | Verified source absence |
+| Tirzepatide | Pregnancy | DailyMed | Verified source absence |
