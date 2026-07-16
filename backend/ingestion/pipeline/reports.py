@@ -324,7 +324,7 @@ This report records the retrieval smoke test results following ingestion.
             "drugs": len(self.stats.drug_chunk_counts),
             "chunks": self.stats.chunks_created,
             "sections_extracted": self.stats.sections_extracted,
-            "validation_failures": len(self.stats.validation_failures),
+            "validation_failures": self.stats.validation_failures,
             "upload_success": self.stats.upload_success,
             "upload_failures": self.stats.upload_failures,
             "coverage": section_coverage,

@@ -303,8 +303,8 @@ SECTION_POPULATIONS: dict[str, str] = {
 # Pre-built sorted list: longest key first, so prefix matching is greedy-safe
 _SORTED_SYNONYMS = sorted(SECTION_SYNONYMS.items(), key=lambda kv: -len(kv[0]))
 
-# Regex to strip leading FDA numbering: "4 Contra", "4. Contra", "4.1 Contra", "12.3 Contra"
-_LEADING_NUM_RE = re.compile(r'^\d+(?:\.\d+)?\s*[\.\-\:]?\s*')
+# Regex to strip leading FDA numbering: "4 Contra", "4. Contra", "4.1 Contra", "12.3 Contra", "8.6.1 Renal"
+_LEADING_NUM_RE = re.compile(r'^\d+(?:\.\d+)*\s*[\.\-\:]?\s*')
 
 
 def normalize_section(title: str) -> str:
