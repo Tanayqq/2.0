@@ -1588,13 +1588,28 @@ Identity Profile (Grounded FDA Label Metadata):
                 "query": query.question,
                 "detected_drug": retrieval_stats.get("resolved_drug"),
                 "detected_sections": retrieval_stats.get("detected_sections", []),
-                "retrieved_chunks": [doc.id for doc in documents],
-                "reranked_chunks": [doc.id for doc in documents],
-                "filtered_chunks": [], # Filled via rejection log if needed
+                "retrieved_chunks_details": [
+                    {
+                        "id": doc.id,
+                        "authority": doc.metadata.get("authority", "DailyMed"),
+                        "drug": doc.metadata.get("drug_name"),
+                        "section": doc.metadata.get("section"),
+                        "vector_score": round(doc.score, 4) if doc.score else 0.0,
+                        "corpus_version": doc.metadata.get("corpus_version", "v3.2"),
+                        "text_snippet": doc.content[:150] + "..."
+                    } for doc in documents
+                ],
                 "llm_context_size": len(prompt) if 'prompt' in locals() else 0,
                 "generation_time": round(total_llm_time, 2)
             }
         }
+        
+        # Inject Identity Profile directly into response metadata if it's a single drug
+        if single_resolved:
+            entity_id = f"drug:{single_resolved}"
+            identity_prof = self.profile_store.get_profile(entity_id, "identity", authority="FDA")
+            if identity_prof:
+                metadata["identity_profile"] = identity_prof
         if validation_failed_reason:
             metadata["validation_failed"] = validation_failed_reason
             metadata["validation_error"] = validation_failed_reason

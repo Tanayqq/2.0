@@ -19,8 +19,10 @@ import {
   History,
   BookOpen,
   AlertTriangle
-} from "lucide-react";
+, Database, BarChart, Server, LayoutDashboard, MessageSquare, TestTube2, Workflow, Clock } from "lucide-react";
 import { InlineCitation } from "./components/InlineCitation";
+import { Dashboard } from "./components/Dashboard";
+import { ClinicalAudit } from "./components/ClinicalAudit";
 import "./App.css";
 
 // ── TYPES & INTERFACES ───────────────────────────────────────────────────────
@@ -422,6 +424,7 @@ export default function App() {
   const [query, setQuery] = useState("");
   const [history, setHistory] = useState<{q: string, a: AnswerResponse, status: string}[]>([]);
   const [activeHistoryIndex, setActiveHistoryIndex] = useState<number>(-1);
+  const [activeTab, setActiveTab] = useState<"chat" | "dashboard">("chat");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   
@@ -550,6 +553,31 @@ export default function App() {
             </div>
             <span className="text-[9px] font-mono-dash text-slate-500 uppercase tracking-wider">Biomedical Retrieval Architecture</span>
           </div>
+        </div>
+
+        
+        {/* Navigation Tabs */}
+        <div className="flex flex-col gap-1 px-4 mt-4">
+          <button
+            onClick={() => setActiveTab("chat")}
+            className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-bold font-mono-dash transition-colors duration-200 ${
+              activeTab === "chat" 
+                ? "bg-cyan-950/40 text-cyan-400 border border-cyan-800/50" 
+                : "text-slate-500 hover:text-slate-300 hover:bg-[#1e293b]/50 border border-transparent"
+            }`}
+          >
+            <MessageSquare className="h-4 w-4" /> CLINICAL ENGINE
+          </button>
+          <button
+            onClick={() => setActiveTab("dashboard")}
+            className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-bold font-mono-dash transition-colors duration-200 ${
+              activeTab === "dashboard" 
+                ? "bg-emerald-950/40 text-emerald-400 border border-emerald-800/50" 
+                : "text-slate-500 hover:text-slate-300 hover:bg-[#1e293b]/50 border border-transparent"
+            }`}
+          >
+            <LayoutDashboard className="h-4 w-4" /> CORPUS DASHBOARD
+          </button>
         </div>
 
         {/* Audit Cache Trail Section */}
