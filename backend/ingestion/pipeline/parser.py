@@ -26,27 +26,28 @@ class MedicalParser:
 
     SUBSECTION_PATTERNS = [
         # Renal Impairment
-        (re.compile(r'^(?:patients?\s+with\s+)?(?:acute\s+or\s+chronic\s+)?renal\s+(?:impairment|insufficiency|dysfunction|failure|function)\b', re.IGNORECASE), "renal_impairment"),
-        (re.compile(r'^adults?\s+with\s+impaired\s+renal\s+function\b', re.IGNORECASE), "renal_impairment"),
+        (re.compile(r'^(?:[\d.]+\s+)?(?:patients?\s+with\s+)?(?:acute\s+or\s+chronic\s+)?renal\s+(?:impairment|insufficiency|dysfunction|failure|function)\b', re.IGNORECASE), "renal_impairment"),
+        (re.compile(r'^(?:[\d.]+\s+)?adults?\s+with\s+impaired\s+renal\s+function\b', re.IGNORECASE), "renal_impairment"),
         # Hepatic Impairment
-        (re.compile(r'^(?:patients?\s+with\s+)?(?:acute\s+or\s+chronic\s+)?hepatic\s+(?:impairment|insufficiency|dysfunction|failure|function)\b', re.IGNORECASE), "hepatic_impairment"),
+        (re.compile(r'^(?:[\d.]+\s+)?(?:patients?\s+with\s+)?(?:acute\s+or\s+chronic\s+)?hepatic\s+(?:impairment|insufficiency|dysfunction|failure|function)\b', re.IGNORECASE), "hepatic_impairment"),
         # Geriatric Use
-        (re.compile(r'^(?:use\s+in\s+)?geriatric(?:s|\s+patients|\s+use)?\b', re.IGNORECASE), "geriatric_use"),
-        (re.compile(r'^(?:use\s+in\s+)?elderly\b', re.IGNORECASE), "geriatric_use"),
+        (re.compile(r'^(?:[\d.]+\s+)?(?:use\s+in\s+)?geriatric(?:s|\s+patients|\s+use)?\b', re.IGNORECASE), "geriatric_use"),
+        (re.compile(r'^(?:[\d.]+\s+)?(?:use\s+in\s+)?elderly\b', re.IGNORECASE), "geriatric_use"),
         # Pediatric Use
-        (re.compile(r'^(?:use\s+in\s+)?pediatric(?:s|\s+patients|\s+use)?\b', re.IGNORECASE), "pediatric_use"),
-        (re.compile(r'^(?:use\s+in\s+)?children\b', re.IGNORECASE), "pediatric_use"),
+        (re.compile(r'^(?:[\d.]+\s+)?(?:use\s+in\s+)?pediatric(?:s|\s+patients|\s+use)?\b', re.IGNORECASE), "pediatric_use"),
+        (re.compile(r'^(?:[\d.]+\s+)?(?:use\s+in\s+)?children\b', re.IGNORECASE), "pediatric_use"),
         # Pregnancy
-        (re.compile(r'^(?:use\s+in\s+)?pregnancy\b', re.IGNORECASE), "pregnancy"),
+        (re.compile(r'^(?:[\d.]+\s+)?(?:use\s+in\s+)?pregnancy\b', re.IGNORECASE), "pregnancy"),
+        (re.compile(r'^(?:[\d.]+\s+)?females\s+and\s+males\s+of\s+reproductive\s+potential\b', re.IGNORECASE), "pregnancy"),
         # Lactation
-        (re.compile(r'^(?:use\s+in\s+)?lactation\b', re.IGNORECASE), "lactation"),
-        (re.compile(r'^nursing\s+mothers\b', re.IGNORECASE), "lactation"),
+        (re.compile(r'^(?:[\d.]+\s+)?(?:use\s+in\s+)?lactation\b', re.IGNORECASE), "lactation"),
+        (re.compile(r'^(?:[\d.]+\s+)?nursing\s+mothers\b', re.IGNORECASE), "lactation"),
         # Patient Counseling
-        (re.compile(r'^patient\s+counseling\b', re.IGNORECASE), "patient_counseling"),
+        (re.compile(r'^(?:[\d.]+\s+)?patient\s+counseling\b', re.IGNORECASE), "patient_counseling"),
         # Storage
-        (re.compile(r'^(?:how\s+supplied|storage\s+and\s+handling|storage)\b', re.IGNORECASE), "storage"),
+        (re.compile(r'^(?:[\d.]+\s+)?(?:how\s+supplied|storage\s+and\s+handling|storage)\b', re.IGNORECASE), "storage"),
         # Drug Interactions
-        (re.compile(r'^drug\s+interactions\b', re.IGNORECASE), "drug_interactions"),
+        (re.compile(r'^(?:[\d.]+\s+)?drug\s+interactions\b', re.IGNORECASE), "drug_interactions"),
     ]
 
     def normalize_section_title(self, title: str) -> str:
@@ -95,7 +96,9 @@ class MedicalParser:
             "warnings_and_precautions",
             "use_in_specific_populations",
             "precautions",
-            "warnings"
+            "warnings",
+            "clinical_pharmacology",
+            "adverse_reactions"
         ]:
             return [MedicalSection(title=parent_title, content=content)]
 

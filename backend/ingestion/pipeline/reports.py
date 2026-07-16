@@ -229,6 +229,7 @@ Generated at: {datetime.datetime.utcnow().isoformat()}Z
     def generate_smoke_test_report(self, results: List[Dict[str, Any]]):
         """
         Generates docs/SMOKE_TEST.md from search execution results.
+        Supports both standard per-drug queries and adversarial tests.
         """
         filepath = os.path.join(self.docs_dir, "SMOKE_TEST.md")
         
@@ -239,30 +240,39 @@ Embedding Model: {ingestion_config.EMBEDDING_MODEL_NAME}
 This report records the retrieval smoke test results following ingestion.
 
 ## Smoke Test Summary
-| Query | Chunks Retrieved | Top Score | Latency (ms) | Status |
-|---|---|---|---|---|
+| Query | Test Type | Latency (ms) | Status |
+|---|---|---|---|
 """
+        passed_count = sum(1 for r in results if r.get("pass", False))
+        md += f"**Total Tests:** {len(results)} | **Passed:** {passed_count} | **Failed:** {len(results) - passed_count}\n\n"
+
         for r in results:
-            status_emoji = "✅ PASS" if r["pass"] else "❌ FAIL"
-            top_score = r["retrieved_chunks"][0]["score"] if r["retrieved_chunks"] else 0.0
-            md += f"| `{r['query']}` | {len(r['retrieved_chunks'])} | {top_score:.4f} | {int(r['latency_sec'] * 1000)}ms | {status_emoji} |\n"
+            status_emoji = "✅ PASS" if r.get("pass", False) else "❌ FAIL"
+            latency = r.get('latency_sec', 0)
+            latency_str = f"{int(latency * 1000)}ms" if latency else "N/A"
+            test_type = r.get('test_type', 'unknown')
+            md += f"| `{r.get('query', 'N/A')}` | {test_type} | {latency_str} | {status_emoji} |\n"
             
         md += "\n---\n\n## Detailed Query Logs\n"
         
         for r in results:
-            status_emoji = "✅ PASS" if r["pass"] else "❌ FAIL"
-            md += f"### Query: \"{r['query']}\" (Status: {status_emoji})\n"
-            md += f"*   **Latency:** {int(r['latency_sec'] * 1000)}ms\n"
-            md += f"*   **Chunks Retrieved:** {len(r['retrieved_chunks'])}\n\n"
+            status_emoji = "✅ PASS" if r.get("pass", False) else "❌ FAIL"
+            md += f"### Query: \"{r.get('query', 'N/A')}\" (Status: {status_emoji})\n"
+            md += f"*   **Test Type:** {r.get('test_type', 'unknown')}\n"
             
-            if r["retrieved_chunks"]:
-                md += "| Rank | Chunk ID | Similarity Score | Source | Content Snippet |\n"
-                md += "|---|---|---|---|---|\n"
-                for rank, chunk in enumerate(r["retrieved_chunks"], 1):
-                    snippet = chunk["content"][:100].replace("\n", " ") + "..."
-                    md += f"| {rank} | `{chunk['id']}` | {chunk['score']:.4f} | {chunk['source']} | {snippet} |\n"
-            else:
-                md += "*No documents retrieved for this query.*\n"
+            latency = r.get('latency_sec')
+            if latency is not None:
+                md += f"*   **Latency:** {int(latency * 1000)}ms\n"
+            
+            if 'expected' in r:
+                md += f"*   **Expected:** {r['expected']}\n"
+            if 'top_score' in r:
+                md += f"*   **Top Score:** {r['top_score']:.4f}\n"
+            if 'error' in r:
+                md += f"*   **Error:** {r['error']}\n"
+            if 'hits' in r:
+                md += f"*   **Chunks Retrieved:** {r['hits']}\n"
+                
             md += "\n"
 
         try:
@@ -292,7 +302,8 @@ This report records the retrieval smoke test results following ingestion.
             # Aggregate across all 13 completeness categories
             category_present = {}
             for drug, data in self.stats.drug_completeness.items():
-                for cat, is_present in data.get("status_by_category", {}).items():
+                status_dict = data[0] if isinstance(data, tuple) else data.get("status_by_category", {})
+                for cat, is_present in status_dict.items():
                     if cat not in category_present:
                         category_present[cat] = 0
                     if is_present:
@@ -318,7 +329,7 @@ This report records the retrieval smoke test results following ingestion.
             "upload_failures": self.stats.upload_failures,
             "coverage": section_coverage,
             "avg_completeness_pct": round(
-                sum(d.get("percentage", 0) for d in self.stats.drug_completeness.values()) /
+                sum((d[2] if isinstance(d, tuple) else d.get("percentage", 0)) for d in self.stats.drug_completeness.values()) /
                 max(len(self.stats.drug_completeness), 1), 1
             ) if self.stats.drug_completeness else 0.0,
         }

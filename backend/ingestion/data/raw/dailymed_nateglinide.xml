@@ -1,0 +1,2247 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="4e11dea8-92ab-762e-9808-fad73bf42330"/>
+   <code code="34391-3" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN PRESCRIPTION DRUG LABEL"/>
+   <title>
+      <content styleCode="bold">These highlights do not include all the information needed to use NATEGLINIDE TABLETS safely and effectively. See full prescribing information for NATEGLINIDE TABLETS.</content>
+      <content styleCode="bold"> </content>
+      <content styleCode="bold">
+         <br/>NATEGLINIDE  tablets, for oral use</content>
+      <br/>
+      <content styleCode="bold">Initial U.S. Approval: 2000</content>
+   </title>
+   <effectiveTime value="20211127"/>
+   <setId root="f7b28951-76d2-cabd-64a1-b74aa225c6e9"/>
+   <versionNumber value="11"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id extension="650562841" root="1.3.6.1.4.1.519.1"/>
+            <name>Dr. Reddy's Laboratories Limited</name>
+            <assignedEntity>
+               <assignedOrganization>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id extension="918608162" root="1.3.6.1.4.1.519.1"/>
+                        <name>Dr. Reddy's Laboratories Limited - FTO III</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C25391" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="analysis"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="55111-328" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                     <performance>
+                        <actDefinition>
+                           <code code="C43360" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="manufacture"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="55111-328" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                     <performance>
+                        <actDefinition>
+                           <code code="C25391" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="analysis"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="55111-329" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                     <performance>
+                        <actDefinition>
+                           <code code="C43360" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="manufacture"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="55111-329" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+               </assignedOrganization>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="da3d077d-e334-48a3-92a4-b9680b2e068e"/>
+               <code code="48780-1" displayName="SPL PRODUCT DATA ELEMENTS SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <effectiveTime value="20190128"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code codeSystem="2.16.840.1.113883.6.69" code="55111-328"/>
+                        <name>Nateglinide</name>
+                        <formCode code="C42998" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TABLET"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Nateglinide</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mg" value="60"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="41X3PWK4O2" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>nateglinide</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="41X3PWK4O2" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>nateglinide</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="R12CBM0EIZ" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>carnauba wax</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="D9C330MD8B" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>copovidone</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="M28OL1HH48" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>croscarmellose sodium</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="3OWL53L36A" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>mannitol</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="ETJ7Z6XBU4" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>silicon dioxide</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="368GB5141J" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>sodium lauryl sulfate</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="7CV7WJK4UI" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>sodium stearyl fumarate</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="O8232NY3SJ" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>starch, corn</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="7SEV7J4R1U" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>talc</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="1" value="30"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code codeSystem="2.16.840.1.113883.6.69" code="55111-328-30"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" displayName="Type 0: Not a Combination Product" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20090909"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="1" value="90"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code codeSystem="2.16.840.1.113883.6.69" code="55111-328-90"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" displayName="Type 0: Not a Combination Product" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20090909"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="1" value="100"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code codeSystem="2.16.840.1.113883.6.69" code="55111-328-01"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" displayName="Type 0: Not a Combination Product" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20090909"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="1" value="500"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code codeSystem="2.16.840.1.113883.6.69" code="55111-328-05"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" displayName="Type 0: Not a Combination Product" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20090909"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="1" value="10"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code codeSystem="2.16.840.1.113883.6.69" code="55111-328-79"/>
+                              <formCode code="C43168" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BLISTER PACK"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator unit="1" value="10"/>
+                                    <denominator unit="1" value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code codeSystem="2.16.840.1.113883.6.69" code="55111-328-78"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20090909"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" displayName="Type 0: Not a Combination Product" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20090909"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <approval>
+                           <id extension="ANDA077461" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73584" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code codeSystem="1.0.3166.1.2.3" code="USA"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48325" displayName="WHITE" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CE">
+                              <originalText>white to off white</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48348" displayName="ROUND" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CE">
+                              <originalText>biconvex</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="ST">RDY;328</value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="9" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value value="1" xsi:type="INT"/>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code codeSystem="2.16.840.1.113883.6.69" code="55111-329"/>
+                        <name>Nateglinide</name>
+                        <formCode code="C42998" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TABLET"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Nateglinide</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mg" value="120"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="41X3PWK4O2" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>nateglinide</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="41X3PWK4O2" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>nateglinide</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="R12CBM0EIZ" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>carnauba wax</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="D9C330MD8B" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>copovidone</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="M28OL1HH48" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>croscarmellose sodium</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="3OWL53L36A" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>mannitol</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="ETJ7Z6XBU4" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>silicon dioxide</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="368GB5141J" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>sodium lauryl sulfate</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="7CV7WJK4UI" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>sodium stearyl fumarate</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="O8232NY3SJ" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>starch, corn</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="7SEV7J4R1U" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>talc</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="1" value="30"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code codeSystem="2.16.840.1.113883.6.69" code="55111-329-30"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" displayName="Type 0: Not a Combination Product" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20090909"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="1" value="90"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code codeSystem="2.16.840.1.113883.6.69" code="55111-329-90"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" displayName="Type 0: Not a Combination Product" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="completed"/>
+                                 <effectiveTime>
+                                    <low value="20090909"/>
+                                    <high value="20260630"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="1" value="100"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code codeSystem="2.16.840.1.113883.6.69" code="55111-329-01"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" displayName="Type 0: Not a Combination Product" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20090909"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="1" value="500"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code codeSystem="2.16.840.1.113883.6.69" code="55111-329-05"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" displayName="Type 0: Not a Combination Product" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20090909"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="1" value="10"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code codeSystem="2.16.840.1.113883.6.69" code="55111-329-79"/>
+                              <formCode code="C43168" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BLISTER PACK"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator unit="1" value="10"/>
+                                    <denominator unit="1" value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code codeSystem="2.16.840.1.113883.6.69" code="55111-329-78"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20090909"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" displayName="Type 0: Not a Combination Product" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20090909"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <approval>
+                           <id extension="ANDA077461" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73584" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code codeSystem="1.0.3166.1.2.3" code="USA"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48325" displayName="WHITE" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CE">
+                              <originalText>white to off white</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value value="1" xsi:type="INT"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48348" displayName="ROUND" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CE">
+                              <originalText>biconvex</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="ST">RDY;329</value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="12" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+               <component>
+                  <section>
+                     <id root="4de10e6c-6be8-9771-ed81-bbeb67e7fefa"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <effectiveTime value="20170529"/>
+                     <component>
+                        <observationMedia ID="MM25909302162">
+                           <text>structure</text>
+                           <value xsi:type="ED" mediaType="image/jpeg">
+                              <reference value="structure.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                     <component>
+                        <observationMedia ID="MM410319955484">
+                           <text>container1</text>
+                           <value xsi:type="ED" mediaType="image/jpeg">
+                              <reference value="container1.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                     <component>
+                        <observationMedia ID="MM27467884293">
+                           <text>container2</text>
+                           <value xsi:type="ED" mediaType="image/jpeg">
+                              <reference value="container2.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                     <component>
+                        <observationMedia ID="MM860386780613">
+                           <text>carton1</text>
+                           <value xsi:type="ED" mediaType="image/jpeg">
+                              <reference value="carton1.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                     <component>
+                        <observationMedia ID="MM719456151739">
+                           <text>carton2</text>
+                           <value xsi:type="ED" mediaType="image/jpeg">
+                              <reference value="carton2.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="INDICATIONS_AND_USAGE">
+               <id root="4e3d8c70-7dbb-aeff-d0d0-eccc39320042"/>
+               <code code="34067-9" displayName="INDICATIONS &amp; USAGE SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>1 INDICATIONS AND USAGE</title>
+               <text>
+                  <paragraph>Nateglinide tablets are indicated as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus.    </paragraph>
+                  <paragraph>
+                     <content styleCode="underline"> Limitations of Use</content>:  Nateglinide tablets should not be used in patients with type 1 diabetes mellitus or for the treatment of diabetic ketoacidosis.</paragraph>
+               </text>
+               <effectiveTime value="20190128"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Nateglinide is a glinide indicated as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus. <linkHtml href="#INDICATIONS_AND_USAGE">(1) </linkHtml>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Limitations of Use</content>: Not for treating type 1 diabetes mellitus or diabetes ketoacidosis <linkHtml href="#INDICATIONS_AND_USAGE">(1)</linkHtml>
+                        </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="DOSAGE_AND_ADMINISTRATION">
+               <id root="1e578038-43d5-c238-87fe-af674b44912e"/>
+               <code code="34068-7" displayName="DOSAGE &amp; ADMINISTRATION SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>2 DOSAGE AND ADMINISTRATION</title>
+               <text>
+                  <paragraph>The recommended dose of nateglinide tablets is 120 mg orally three times daily before meals.   </paragraph>
+                  <paragraph> The recommended dose of nateglinide tablets is 60 mg orally three times daily before meals in patients who are near glycemic goal when treatment is initiated.   </paragraph>
+                  <paragraph>Instruct patients to take nateglinide tablets 1 to 30 minutes before meals.   </paragraph>
+                  <paragraph> In patients who skip meals, instruct patients to skip the scheduled dose of nateglinide tablets to reduce the risk of hypoglycemia [see Warnings and Precautions <linkHtml href="#_bb96f2fb-2dab-98d6-7ef0-5cab2efe73fe">(5.1</linkHtml>)].</paragraph>
+               </text>
+               <effectiveTime value="20190128"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list>
+                           <item>Recommended dose is 120 mg three times daily</item>
+                           <item>
+                              <paragraph>In patients who are near glycemic goal when treatment is initiated, 60 mg three times daily may be administered. (<linkHtml href="#DOSAGE_AND_ADMINISTRATION">2)</linkHtml>
+                              </paragraph>
+                           </item>
+                           <item>
+                              <paragraph>Administer 1 to 30 minutes before meals <linkHtml href="#DOSAGE_AND_ADMINISTRATION">(2)</linkHtml>
+                              </paragraph>
+                           </item>
+                           <item>
+                              <paragraph>If a meal is skipped, skip the scheduled dose to reduce the risk of hypoglycemia. (<linkHtml href="#DOSAGE_AND_ADMINISTRATION">2</linkHtml>, <linkHtml href="#_bb96f2fb-2dab-98d6-7ef0-5cab2efe73fe">5.1</linkHtml>)</paragraph>
+                           </item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="DOSAGE_FORMS_AND_STRENGTHS">
+               <id root="4eb8581b-fd72-a0d6-3252-32316e657404"/>
+               <code code="43678-2" displayName="DOSAGE FORMS &amp; STRENGTHS SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>3 DOSAGE FORMS AND STRENGTHS</title>
+               <text>
+                  <list>
+                     <item>60 mg tablets: white to off-white, round, biconvex tablets embossed with ‘RDY’ on one side and ‘328’ on other side.</item>
+                     <item>120 mg tablets: white to off-white, round, biconvex tablets embossed with ‘RDY’ on one side and ‘329’ on other side. </item>
+                  </list>
+               </text>
+               <effectiveTime value="20190128"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Tablets: 60 mg and 120 mg <linkHtml href="#DOSAGE_FORMS_AND_STRENGTHS">(3)</linkHtml>
+                        </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="CONTRAINDICATIONS">
+               <id root="eb440a92-8cd1-7372-796d-01f702c7e838"/>
+               <code code="34070-3" displayName="CONTRAINDICATIONS SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>4 CONTRAINDICATIONS</title>
+               <text>
+                  <paragraph>Nateglinide is contraindicated in patients with a history of hypersensitivity to nateglinide tablets or its inactive ingredients.</paragraph>
+               </text>
+               <effectiveTime value="20190128"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list>
+                           <item>History of hypersensitivity to nateglinide inactive ingredients <linkHtml href="#CONTRAINDICATIONS">(4)</linkHtml>
+                           </item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="WARNINGS_AND_PRECAUTIONS">
+               <id root="9717574a-3dfa-4cc9-28cf-2d7a28b8bb46"/>
+               <code code="43685-7" displayName="WARNINGS AND PRECAUTIONS SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>5 WARNINGS AND PRECAUTIONS</title>
+               <text>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20190128"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list>
+                           <item>
+                              <content styleCode="underline">Hypoglycemia</content>: Nateglinide may cause hypoglycemia. Administer before meals to reduce the risk of hypoglycemia. Skip the scheduled dose of nateglinide if a meal is skipped to reduce the risk of hypoglycemia. (<linkHtml href="#_bb96f2fb-2dab-98d6-7ef0-5cab2efe73fe">5.1)</linkHtml>
+                           </item>
+                           <item>
+                              <linkHtml href="#_bb96f2fb-2dab-98d6-7ef0-5cab2efe73fe"/>
+                              <content styleCode="underline">Macrovascular Outcomes:</content> There have been no clinical studies establishing conclusive evidence of macrovascular risk reduction with nateglinide. (<linkHtml href="#_7400780e-d9eb-0d17-a197-f1d8044264b6">5.2)</linkHtml>
+                           </item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="_ac509740-26d9-c66a-f688-61ab64b05941">
+                     <id root="76b1de2e-c958-2f07-e411-110b8f7b32b9"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>
+                        <content> 5.1 Hypoglycemia </content>
+                     </title>
+                     <text>
+                        <paragraph>All glinides, including nateglinide, can cause hypoglycemia [see Adverse Reactions <linkHtml href="#_834d1d0e-8128-2df5-dd65-a3b45ae54dc1">(6.1</linkHtml>
+                           <content styleCode="bold">)</content>]. Severe hypoglycemia can cause seizures, may be life-threatening, or cause death. Hypoglycemia can impair concentration ability and reaction time; this may place an individual and others at risk in situations where these abilities are important (e.g., driving or operating other machinery).   </paragraph>
+                        <paragraph> Hypoglycemia can happen suddenly and symptoms may differ in each individual and change over time in the same individual. Symptomatic awareness of hypoglycemia may be less pronounced in patients with longstanding diabetes, in patients with diabetic neuropathy (nerve disease), in patients using medications that block the sympathetic nervous system (e.g., beta-blockers) [see Drug Interactions <linkHtml href="#DRUG_INTERACTIONS">(7)</linkHtml>], or in patients who experience recurrent hypoglycemia.  </paragraph>
+                        <paragraph>Factors which may increase the risk of hypoglycemia include changes in meal pattern (e.g., macronutrient content), changes in level of physical activity, changes to coadministered medication [see Drug Interactions <linkHtml href="#DRUG_INTERACTIONS">(7)</linkHtml>
+                           <content styleCode="bold">],</content> and concomitant use with other antidiabetic agents. Patients with renal or hepatic impairment may be at higher risk of hypoglycemia [see Use in Specific Populations (<linkHtml href="#_2312e251-182b-d25e-ea7e-3d087d78d027">8.6,</linkHtml>
+                           <linkHtml href="#_081133b2-9973-cbcc-d449-cac7f1f19eda">8.7</linkHtml>), Clinical Pharmacology <linkHtml href="#PHARMACOKINETICS">(12.3</linkHtml>)].   </paragraph>
+                        <paragraph>Patients should take nateglinide before meals and be instructed to skip the dose of nateglinide if a meal is skipped [see Dosage and Administration <linkHtml href="#DOSAGE_AND_ADMINISTRATION">(2)</linkHtml>]. Patients and caregivers must be educated to recognize and manage hypoglycemia. Self-monitoring of blood glucose plays an essential role in the prevention and management of hypoglycemia. In patients at higher risk for hypoglycemia and patients who have reduced symptomatic awareness of hypoglycemia, increased frequency of blood glucose monitoring is recommended.</paragraph>
+                     </text>
+                     <effectiveTime value="20190128"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_43d2fb93-234a-b128-6cc8-232db22a3839">
+                     <id root="7ea82dba-ca65-8aa3-1b3e-1e58012206ce"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>
+                        <content> 5.2 Macrovascular Outcomes </content>
+                     </title>
+                     <text>
+                        <paragraph>There have been no clinical studies establishing conclusive evidence of macrovascular risk reduction with nateglinide.   </paragraph>
+                     </text>
+                     <effectiveTime value="20190128"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ADVERSE_REACTIONS">
+               <id root="bbaccb77-9032-e6e1-50c7-010701941443"/>
+               <code code="34084-4" displayName="ADVERSE REACTIONS SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>6 ADVERSE REACTIONS</title>
+               <text>
+                  <paragraph>The following serious adverse reaction is also described elsewhere in the labeling: </paragraph>
+                  <list>
+                     <item>Hypoglycemia [see Warnings and Precautions <linkHtml href="#_ac509740-26d9-c66a-f688-61ab64b05941">(5.1)</linkHtml>]</item>
+                  </list>
+               </text>
+               <effectiveTime value="20190128"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list>
+                           <item>Common adverse reactions associated with nateglinide (3% or greater incidence) were upper respiratory tract infection, back pain, flu symptoms, dizziness, arthropathy, diarrhea. <linkHtml href="#_834d1d0e-8128-2df5-dd65-a3b45ae54dc1">(6.1)</linkHtml>
+                           </item>
+                        </list>
+                        <paragraph>
+                           <content styleCode="bold">To report SUSPECTED ADVERSE REACTIONS, contact Dr. Reddy’s Laboratories Inc., at 1-888-375-3784 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. </content>
+                        </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="_c8d7d087-81df-8b2d-a3c3-8af4e635f158">
+                     <id root="bb7429e8-ed68-a808-fb56-ee1ee7c43353"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>
+                        <content> 6.1 Clinical Trials Experience </content>
+                     </title>
+                     <text>
+                        <paragraph>Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice.   </paragraph>
+                        <paragraph>In clinical trials, approximately 2,600 patients with type 2 diabetes mellitus were treated with nateglinide. Of these, approximately 1,335 patients were treated for 6 months or longer and approximately 190 patients for one year or longer. Table 1 shows the most common adverse reactions associated with nateglinide.   <content styleCode="bold"/>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Table 1: Adverse Reactions other than Hypoglycemia (%) occurring </content>
+                           <content styleCode="bold">Greater than or equal to</content>
+                           <content styleCode="bold"> </content>
+                           <content styleCode="bold">2% in Nateglinide-Treated Patients from Pool of 12 to 64 week Placebo Controlled Trials</content>  </paragraph>
+                        <table>
+                           <tbody>
+                              <tr>
+                                 <td>   </td>
+                                 <td>
+                                    <content styleCode="bold">Placebo </content>
+                                    <br/> N=458 </td>
+                                 <td>
+                                    <content styleCode="bold">Nateglinide</content>
+                                    <content styleCode="bold"/>
+                                    <br/> N=1441 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Preferred Term</content>   </td>
+                                 <td>   </td>
+                                 <td>   </td>
+                              </tr>
+                              <tr>
+                                 <td> Upper Respiratory Infection </td>
+                                 <td> 8.1 </td>
+                                 <td> 10.5 </td>
+                              </tr>
+                              <tr>
+                                 <td> Back Pain </td>
+                                 <td> 3.7 </td>
+                                 <td> 4 </td>
+                              </tr>
+                              <tr>
+                                 <td> Flu Symptoms </td>
+                                 <td> 2.6 </td>
+                                 <td> 3.6 </td>
+                              </tr>
+                              <tr>
+                                 <td> Dizziness </td>
+                                 <td> 2.2 </td>
+                                 <td> 3.6 </td>
+                              </tr>
+                              <tr>
+                                 <td> Arthropathy </td>
+                                 <td> 2.2 </td>
+                                 <td> 3.3 </td>
+                              </tr>
+                              <tr>
+                                 <td> Diarrhea </td>
+                                 <td> 3.1 </td>
+                                 <td> 3.2 </td>
+                              </tr>
+                              <tr>
+                                 <td> Accidental Trauma </td>
+                                 <td> 1.7 </td>
+                                 <td> 2.9 </td>
+                              </tr>
+                              <tr>
+                                 <td> Bronchitis </td>
+                                 <td> 2.6 </td>
+                                 <td> 2.7 </td>
+                              </tr>
+                              <tr>
+                                 <td> Coughing </td>
+                                 <td> 2.2 </td>
+                                 <td> 2.4 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>
+                           <content styleCode="underline">Hypoglycemia </content>
+                        </paragraph>
+                        <paragraph>Episodes of severe hypoglycemia (plasma glucose less than 36 mg/dL) were reported in two patients treated with nateglinide. Non-severe hypoglycemia occurred in 2.4 % of nateglinide treated patients and 0.4 % of placebo treated patients [see Warnings and Precautions (<linkHtml href="#_ac509740-26d9-c66a-f688-61ab64b05941">5.1)</linkHtml>].   </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Weight Gain </content>
+                        </paragraph>
+                        <paragraph>Patients treated with nateglinide had statistically significant mean increases in weight compared to placebo. In clinical trials, the mean weight increases with nateglinide 60 mg (3 times daily) and nateglinide 120 mg (3 times daily) compared to placebo were 1 kg and 1.6 kg respectively.   </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Laboratory Test</content>
+                        </paragraph>
+                        <paragraph> Increases in Uric Acid: There were increases in mean uric acid levels for patients treated with nateglinide alone, nateglinide in combination with metformin, metformin alone, and glyburide alone. The respective differences from placebo were 0.29 mg/dL, 0.45 mg/dL, 0.28 mg/dL, and 0.19 mg/dL.</paragraph>
+                     </text>
+                     <effectiveTime value="20190128"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_09111a35-00d0-c2c1-c373-83d83310a80a">
+                     <id root="e84b322f-4ada-71a6-3ccc-a978ef9c2018"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title> 6.2 Postmarketing Experience </title>
+                     <text>
+                        <paragraph>The following adverse reactions have been identified during post-approval use of nateglinide. Because these reactions are reported voluntarily from a population of uncertain size, it is not always possible to reliably estimate their frequency or establish a causal relationship to drug exposure. </paragraph>
+                        <list>
+                           <item>Hypersensitivity Reactions: Rash, itching, and urticaria</item>
+                           <item>Hepatobiliary Disorders: Jaundice, cholestatic hepatitis, and elevated liver enzymes </item>
+                        </list>
+                     </text>
+                     <effectiveTime value="20190128"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="DRUG_INTERACTIONS">
+               <id root="430388f5-0e15-ebd0-2fe4-08e309a65791"/>
+               <code code="34073-7" displayName="DRUG INTERACTIONS SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>7 DRUG INTERACTIONS</title>
+               <text>
+                  <paragraph>Table 2 includes a list of drugs with clinically important drug interactions when concomitantly administered or withdrawn with nateglinide and instructions for managing or preventing them.   </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Table 2: Clinically Significant Drug Interactions with Nateglinide</content>
+                  </paragraph>
+                  <table>
+                     <tbody>
+                        <tr>
+                           <td>
+                              <content styleCode="bold">Drugs That May Increase the Blood-Glucose-Lowering Effect of </content>
+                              <content styleCode="bold">Nateglinide and Susceptibility to Hypoglycemia</content>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <content styleCode="bold"> </content> Drugs: </td>
+                           <td> Nonsteroidal anti-inflammatory drugs (NSAIDs), salicylates, monoamine oxidase inhibitors, non-selective beta-adrenergic-blocking agents, anabolic hormones (e.g. methandrostenolone), guanethidine, gymnema sylvestre, glucomannan, thioctic acid, and inhibitors of CYP2C9 (e.g. amiodarone, fluconazole, voriconazole, sulfinpyrazone), or in patients known to be poor metabolizers of CYP2C9 substrates, alcohol. </td>
+                        </tr>
+                        <tr>
+                           <td> Intervention: </td>
+                           <td> Dose reductions and increased frequency of glucose monitoring may be required when nateglinide <content styleCode="bold"> </content>is coadministered with these drugs. </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <content styleCode="bold">Drugs and Herbals That May Reduce the Blood-Glucose-Lowering Effect of </content>
+                              <content styleCode="bold">Nateglinide and Increase Susceptibility to Hyperglycemia</content>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <content styleCode="bold"> </content> Drugs: </td>
+                           <td> Thiazides, corticosteroids, thyroid products, sympathomimetics, somatropin, somatostatin analogues (e.g. lanreotide, octreotide), and CYP inducers (e.g. rifampin, phenytoin and St John’s Wort). </td>
+                        </tr>
+                        <tr>
+                           <td> Intervention: </td>
+                           <td> Dose increases and increased frequency of glucose monitoring may be required when nateglinide is coadministered with these drugs. </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <content styleCode="bold">Drugs That May Blunt Signs and Symptoms of Hypoglycemia</content>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td> Drugs: </td>
+                           <td> beta-blockers, clonidine, guanethidine, and reserpine </td>
+                        </tr>
+                        <tr>
+                           <td> Intervention: </td>
+                           <td> Increased frequency of glucose monitoring may be required when nateglinide is coadministered with these drugs. </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20190128"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list>
+                           <item>
+                              <content styleCode="underline">Drugs That May Increase the Potential for Hypoglycemia:</content>
+                              <content styleCode="bold"> </content>Nateglinide dose reductions and increased frequency of glucose monitoring may be required when co-administered <linkHtml href="#DRUG_INTERACTIONS">(7</linkHtml>)</item>
+                           <item>
+                              <content styleCode="underline">Drugs That May Increase the Potential for Hyperglycemia:</content>
+                              <content styleCode="bold"> </content>Nateglinide dose increases and increased frequency of glucose monitoring may be required when co-administered <linkHtml href="#DRUG_INTERACTIONS">(7)</linkHtml>
+                           </item>
+                           <item>
+                              <content styleCode="underline">Drugs That May Blunt Signs and Symptoms of Hypoglycemia:</content>
+                              <content styleCode="bold"> </content>Increased frequency of glucose monitoring may be required when co-administered <linkHtml href="#DRUG_INTERACTIONS">(7)</linkHtml>
+                           </item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="USE_IN_SPECIFIC_POPULATIONS">
+               <id root="4ca86e68-8ec1-cc12-4f2b-6f44a00e0815"/>
+               <code code="43684-0" displayName="USE IN SPECIFIC POPULATIONS SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>8 USE IN SPECIFIC POPULATIONS</title>
+               <text>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20211127"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list>
+                           <item>
+                              <content styleCode="underline">Lactation:</content> Nateglinide is not recommended when breastfeeding (<linkHtml href="#NURSING_MOTHERS">8.2</linkHtml>)</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="PREGNANCY">
+                     <id root="1dc7afaa-ceea-d235-34cd-86489fdb2b41"/>
+                     <code code="42228-7" displayName="PREGNANCY SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>8.1 Pregnancy</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Risk Summary</content>
+                        </paragraph>
+                        <paragraph>The available data from published literature and the applicant’s pharmacovigilance with use of nateglinide in pregnant women are insufficient to identify a drug-associated risk of major birth defects, miscarriage or other adverse maternal or fetal outcomes. There are risks to the mother and fetus associated with poorly controlled diabetes in pregnancy <content styleCode="italics">(see Clinical Considerations)</content>. Nateglinide should be used during pregnancy only if the potential benefit justifies the potential risk to the fetus. In animal reproduction studies, there was no teratogenicity in rats and rabbits administered oral nateglinide during organogenesis at approximately 27 and 8 times the maximum recommended human dose (MRHD), respectively, based on body surface area (BSA). </paragraph>
+                        <paragraph>The estimated background risk of major birth defects is 6% to 10% in women with pre-gestational diabetes with a HbA1c &gt; 7 and has been reported to be as high as 20% to 25% in women with a HbA1c &gt; 10. The estimated background risk of miscarriage for the indicated population is unknown. In the U.S. general population, the estimated background risk of major birth defects and miscarriage in clinically recognized pregnancies is 2% to 4% and 15% to 20%, respectively. </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Clinical Considerations</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Disease-Associated Maternal and/or Embryo/Fetal Risk</content>
+                        </paragraph>
+                        <paragraph>Poorly controlled diabetes in pregnancy increases the maternal risk for diabetic ketoacidosis, pre-eclampsia, spontaneous abortions, preterm delivery, and delivery complications. Poorly controlled diabetes increases the fetal risk for major birth defects, stillbirth, and macrosomia related morbidity. </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Data</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Animal data</content>
+                        </paragraph>
+                        <paragraph>In embryofetal development studies, nateglinide administered orally during the period of organogenesis was not teratogenic in rats at doses up to 1,000 mg/kg (corresponding to 27 times the MRHD of 120 mg three times per day, based on BSA). In rabbits, embryonic development was adversely affected at 500 mg/kg/day and the incidence of gallbladder agenesis or small gallbladder was increased at a dose of 300 and 500 mg/kg (corresponding to 16 and 27 times the MRHD). No such effects were observed at 150 mg/kg/day (corresponding to 8 times the MRHD). In a pre-and postnatal development study in rats, nateglinide administered by oral gavage at doses of 100, 300, and 1000 mg/kg/day from gestation day 17 to lactation day 21 resulted in lower body weight in offspring of rats administered nateglinide at 1,000 mg/kg/day (corresponding to 27 times the MHRD).  </paragraph>
+                     </text>
+                     <effectiveTime value="20211127"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="NURSING_MOTHERS">
+                     <id root="73c26bcf-65ab-ad16-d137-2e300e3da253"/>
+                     <code code="34080-2" displayName="NURSING MOTHERS SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title> 8.2 Lactation </title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Risk summary</content>
+                        </paragraph>
+                        <paragraph>There are no data on the presence of nateglinide in human milk, the effects on the breastfeeding infant, or the effects on milk production. The drug is present in animal milk. When a drug is present in animal milk, it is likely that the drug will be present in human milk (see Data). Because the potential for hypoglycemia in breast-fed infants, advise women that use of nateglinide is not recommended while breastfeeding. </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Data </content>
+                        </paragraph>
+                        <paragraph>In rat reproduction studies, nateglinide and its metabolite are excreted in the milk following oral dose (300 mg/kg). The overall milk: plasma (M/P) concentration ratio of the total radioactivity was approximately 1.4 based on AUC0-48 values. The M/P ratio of unchanged nateglinide was approximately 2.2. </paragraph>
+                     </text>
+                     <effectiveTime value="20211127"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="PEDIATRIC_USE">
+                     <id root="696b4e59-8604-fcfc-0754-7f85bc193e4b"/>
+                     <code code="34081-0" displayName="PEDIATRIC USE SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>8.4 Pediatric Use</title>
+                     <text>
+                        <paragraph>The safety and effectiveness of nateglinide have not been established in pediatric patients.</paragraph>
+                     </text>
+                     <effectiveTime value="20190128"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="GERIATRIC_USE">
+                     <id root="9b57ded9-9bf2-baad-99da-01bc533c5003"/>
+                     <code code="34082-8" displayName="GERIATRIC USE SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>8.5 Geriatric Use</title>
+                     <text>
+                        <paragraph>436 patients 65 years and older, and 80 patients 75 years and older were exposed to nateglinide in clinical studies. No differences were observed in safety or efficacy of nateglinide between patients age 65 and over, and those under age 65. However, greater sensitivity of some older individuals to nateglinide therapy cannot be ruled out.</paragraph>
+                     </text>
+                     <effectiveTime value="20190128"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_2312e251-182b-d25e-ea7e-3d087d78d027">
+                     <id root="88710f70-991e-6d8e-4d97-82f9c4f4f2a7"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title> 8.6 Renal Impairment </title>
+                     <text>
+                        <paragraph>No dosage adjustment is recommended in patients with mild to severe renal impairment [see <content styleCode="bold">Clinical Pharmacology (</content>
+                           <linkHtml href="#PHARMACOKINETICS">12.3</linkHtml>
+                           <content styleCode="bold">)</content>].  </paragraph>
+                     </text>
+                     <effectiveTime value="20190128"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_081133b2-9973-cbcc-d449-cac7f1f19eda">
+                     <id root="078b5b9f-fae0-0f8c-910f-cec20daeab86"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title> 8.7 Hepatic Impairment </title>
+                     <text>
+                        <paragraph>No dose adjustment is recommended for patients with mild hepatic impairment. Use of nateglinide in patients with moderate-to-severe hepatic impairment has not been studied and therefore, should be used with caution in these patients [see <content styleCode="bold">Clinical Pharmacology (</content>
+                           <linkHtml href="#PHARMACOKINETICS">12.3</linkHtml>
+                           <content styleCode="bold">)</content>].</paragraph>
+                     </text>
+                     <effectiveTime value="20190128"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="OVERDOSAGE">
+               <id root="0925b15e-7f19-cefb-36ff-c7f388948b95"/>
+               <code code="34088-5" displayName="OVERDOSAGE SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>10 OVERDOSAGE</title>
+               <text>
+                  <paragraph>There have been no instances of overdose with nateglinide in clinical trials. However, an overdose may result in an exaggerated glucose-lowering effect with the development of hypoglycemic symptoms. Hypoglycemic symptoms without loss of consciousness or neurological findings should be treated with oral glucose and adjustments in dosage and/or meal patterns. Severe hypoglycemic reactions with coma, seizure, or other neurological symptoms should be treated with intravenous glucose. As nateglinide is highly protein bound, dialysis is not an efficient means of removing it from the blood. </paragraph>
+               </text>
+               <effectiveTime value="20190128"/>
+            </section>
+         </component>
+         <component>
+            <section ID="DESCRIPTION">
+               <id root="ec409b65-3660-32e8-adb4-108400467106"/>
+               <code code="34089-3" displayName="DESCRIPTION SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>11 DESCRIPTION</title>
+               <text>
+                  <paragraph>Nateglinide is an oral blood glucose-lowering drug of the glinide class. Nateglinide, (-)-N-[(trans-4-isopropylcyclohexane)carbonyl]-D-phenylalanine, is structurally unrelated to the oral sulfonylurea insulin secretagogues.   </paragraph>
+                  <paragraph> The structural formula is as shown:</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="MM25909302162"/>
+                  </paragraph>
+                  <paragraph>Nateglinide is an off-white to white powder with a molecular weight of 317.43 g/mol. It is freely soluble in methanol, ethanol, and chloroform, soluble in ether, sparingly soluble in acetonitrile and octanol, and practically insoluble in water. Nateglinide biconvex tablets contain 60 mg, or 120 mg, of nateglinide for oral administration.   </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Inactive Ingredients</content>: carnauba wax, copovidone, croscarmellose sodium, mannitol, silicon dioxide, sodium lauryl sulfate, sodium stearyl fumarate, corn starch and talc.</paragraph>
+               </text>
+               <effectiveTime value="20211127"/>
+            </section>
+         </component>
+         <component>
+            <section ID="CLINICAL_PHARMACOLOGY">
+               <id root="914bb1d7-0087-c3e2-f470-c81993c3e476"/>
+               <code code="34090-1" displayName="CLINICAL PHARMACOLOGY SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>12 CLINICAL PHARMACOLOGY</title>
+               <text>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20190128"/>
+               <component>
+                  <section ID="MECHANISM_OF_ACTION">
+                     <id root="2075c8b3-8668-8cde-8e61-b9cafba22443"/>
+                     <code code="43679-0" displayName="MECHANISM OF ACTION SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>12.1 Mechanism of Action</title>
+                     <text>
+                        <paragraph>Nateglinide lowers blood glucose levels by stimulating insulin secretion from the pancreas. This action is dependent upon functioning beta-cells in the pancreatic islets. Nateglinide interacts with the ATP-sensitive potassium (K+<sub>ATP</sub>) channel on pancreatic beta-cells. The subsequent depolarization of the beta cell opens the calcium channel, producing calcium influx and insulin secretion. The extent of insulin release is glucose dependent and diminishes at low glucose levels. Nateglinide is highly tissue selective with low affinity for heart and skeletal muscle.  <content styleCode="bold"> </content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20190128"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="PHARMACODYNAMICS">
+                     <id root="7c88a734-84b3-0165-a8e9-4db2944536f8"/>
+                     <code code="43681-6" displayName="PHARMACODYNAMICS SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>12.2 Pharmacodynamics</title>
+                     <text>
+                        <paragraph>Nateglinide stimulates pancreatic insulin secretion within 20 minutes of oral administration. When nateglinide is dosed before meals, the peak rise in plasma insulin occurs approximately 1 hour after dosing and falls to baseline by 4 hours after dosing.</paragraph>
+                     </text>
+                     <effectiveTime value="20190128"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="PHARMACOKINETICS">
+                     <id root="b07f8312-9762-5ce1-3720-58d008e5ee57"/>
+                     <code code="43682-4" displayName="PHARMACOKINETICS SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>12.3 Pharmacokinetics</title>
+                     <text>
+                        <paragraph>In patients with Type 2 diabetes, multiple dose administration of nateglinide over the dosage range of 60 mg to 240 mg shows linear pharmacokinetics for both area under the curve (AUC) and C<sub>max</sub>. In patients with Type 2 diabetes, there is no apparent accumulation of nateglinide upon multiple dosing of up to 240 mg three times daily for 7 days. </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Absorption </content>
+                        </paragraph>
+                        <paragraph>Absolute bioavailability of nateglinide is approximately 73%. Plasma profiles are characterized by multiple plasma concentration peaks when nateglinide is administered under fasting conditions. </paragraph>
+                        <paragraph>This effect is diminished when nateglinide is taken prior to a meal. Following oral administration immediately prior to a meal, the mean peak plasma nateglinide concentrations (C<sub>max</sub> ) generally occur within 1 hour (T<sub>max</sub> ) after dosing. T<sub>max</sub> is independent of dose.   </paragraph>
+                        <paragraph> The pharmacokinetics of nateglinide are not affected by the composition of a meal (high protein, fat, or carbohydrate). However, peak plasma levels are significantly reduced when nateglinide is administered 10 minutes prior to a liquid meal as compared to solid meal. When given with or after meals, the extent of nateglinide absorption (AUC) remains unaffected. However, there is a delay in the rate of absorption characterized by a decrease in C<sub>max</sub> and a delay in time to peak plasma concentration (T<sub>max</sub> ).   </paragraph>
+                        <paragraph> Nateglinide did not have any effect on gastric emptying in healthy subjects as assessed by acetaminophen testing.   </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Distribution </content>
+                        </paragraph>
+                        <paragraph> Following intravenous (IV) administration of nateglinide, the steady-state volume of distribution of nateglinide is estimated to be approximately 10 L in healthy subjects. Nateglinide is extensively bound (98%) to serum proteins, primarily serum albumin, and to a lesser extent α1 acid glycoprotein. The extent of serum protein binding is independent of drug concentration over the test range of 0.1 to 10 mcg/mL.   </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Elimination </content>
+                        </paragraph>
+                        <paragraph> In healthy volunteers and patients with type 2 diabetes mellitus, nateglinide plasma concentrations declined with an average elimination half-life of approximately 1.5 hours.   </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Metabolism </content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">In vitro</content> drug metabolism studies indicate that nateglinide is predominantly metabolized by the cytochrome P450 isozyme CYP2C9 (70%) and to a lesser extent CYP3A4 (30%).   </paragraph>
+                        <paragraph> The major routes of metabolism are hydroxylation followed by glucuronide conjugation. The major metabolites are less potent antidiabetic agents than nateglinide. The isoprene minor metabolite possesses potency similar to that of the parent compound nateglinide.  </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Excretion </content>
+                        </paragraph>
+                        <paragraph> Nateglinide and its metabolites are rapidly and completely eliminated following oral administration. Eighty-three percent of the 14<sup>C</sup> -nateglinide was excreted in the urine with an additional 10% eliminated in the feces. Approximately 16% of the 14<sup>C</sup> -nateglinide was excreted in the urine as parent compound.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Specific Populations </content>
+                        </paragraph>
+                        <paragraph>Renal Impairment No pharmacokinetic data are available in subjects with mild renal impairment (CrCl 60 to 89 mL/min). Compared to healthy matched subjects, patients with type 2 diabetes mellitus and moderate and severe renal impairment (CrCl 15 to 50 mL/min) not on dialysis displayed similar apparent clearance, AUC, and C<sub>max</sub>. Patients with type 2 diabetes and renal failure on dialysis exhibited reduced overall drug exposure (C<sub>max</sub> decreased by 49%; not statistically significant). However, hemodialysis patients also experienced reductions in plasma protein binding compared to the matched healthy volunteers.</paragraph>
+                        <paragraph>In a cohort of 8 patients with type 2 diabetes and end-stage renal disease (ESRD) (eGFR &lt; 15 mL/min/1.73m<sup>2</sup>) M1 metabolite accumulation up to 1.2 ng/mL occurred with a dosage of 90 mg once daily for 1 to 3 months. In another cohort of 8 patients with type 2 diabetes on hemodialysis, M1 concentration decreased after a single session of hemodialysis. Although the hypoglycemic activity of the M1 metabolite is approximately 5 times lower than nateglinide, metabolite accumulation may increase the hypoglycemic effect of the administered dose. </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Hepatic Impairment </content>
+                        </paragraph>
+                        <paragraph>In patients with mild hepatic impairment, the mean increase in C<sub>max</sub> and AUC of nateglinide were 37% and 30 % respectively, as compared to healthy matched control subjects. There is no data on pharmacokinetics of nateglinide in patients with moderate-to-severe hepatic impairment.   </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Gender </content>
+                        </paragraph>
+                        <paragraph> No clinically significant differences in nateglinide pharmacokinetics were observed between men and women.   </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Race </content>
+                        </paragraph>
+                        <paragraph> Results of a population pharmacokinetic analysis including subjects of Caucasian, Black, and other ethnic origins suggest that race has little influence on the pharmacokinetics of nateglinide.   </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Age </content>
+                        </paragraph>
+                        <paragraph>Age does not influence the pharmacokinetic properties of nateglinide.  </paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Drug Interactions:</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="bold italics">In vitro </content>
+                           <content styleCode="bold">assessment of drug interactions</content>
+                        </paragraph>
+                        <paragraph> Nateglinide is a potential inhibitor of the CYP2C9 isoenzyme in vivo as indicated by its ability to inhibit the in vitro metabolism of tolbutamide. Inhibition of CYP3A4 metabolic reactions was not detected in in vitro experiments.   </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">In vitro</content> displacement studies with highly protein-bound drugs such as furosemide, propranolol, captopril, nicardipine, pravastatin, glyburide, warfarin, phenytoin, acetylsalicylic acid, tolbutamide, and metformin showed no influence on the extent of nateglinide protein binding. Similarly, nateglinide had no influence on the serum protein binding of propranolol, glyburide, nicardipine, warfarin, phenytoin, acetylsalicylic acid, and tolbutamide in vitro. However, prudent evaluation of individual cases is warranted in the clinical setting.   </paragraph>
+                        <paragraph>
+                           <content styleCode="bold italics">In vivo</content>
+                           <content styleCode="bold"/>
+                           <content styleCode="bold">assessment of drug interactions</content> The effect of coadministered drugs on the pharmacokinetics of nateglinide and the effect of nateglinide on pharmacokinetics of coadministered drugs are shown in Tables 3 and 4. No clinically relevant change in pharmacokinetic parameters of either agent was reported when nateglinide was coadministered with glyburide, metformin, digoxin, warfarin, and diclofenac.</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Table 3: Effect of Coadministered Drugs on Pharmacokinetics of Nateglinide</content>
+                        </paragraph>
+                        <table>
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Coadministered drug</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Dosing regimen of coadministered drug</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Dosing regimen of nateglinide</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Change in Cmax</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Change in AUC</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td> Glyburide </td>
+                                 <td> 10 mg once daily for 3 weeks </td>
+                                 <td> 120 mg three times a day, single dose </td>
+                                 <td> 8.78% ↓ </td>
+                                 <td> 3.53 % ↓ </td>
+                              </tr>
+                              <tr>
+                                 <td> Metformin </td>
+                                 <td> 500 mg three times a day for 3 weeks </td>
+                                 <td> 120 mg three times a day, single dose </td>
+                                 <td> AM: 7.14% ↑ PM: 11.4% ↓ </td>
+                                 <td> AM: 1.51% ↑ PM: 5.97% ↑ </td>
+                              </tr>
+                              <tr>
+                                 <td> Digoxin </td>
+                                 <td> 1 mg, single dose </td>
+                                 <td> 120 mg three times a day, single dose </td>
+                                 <td> AM: 2.17% ↓ PM: 3.19% ↑ </td>
+                                 <td> AM: 7.62% ↑ PM: 2.22% ↑ </td>
+                              </tr>
+                              <tr>
+                                 <td> Warfarin </td>
+                                 <td> 30 mg, single dose </td>
+                                 <td> 120 mg three times a day for 4 days </td>
+                                 <td> 2.65% ↑ </td>
+                                 <td> 3.72% ↓ </td>
+                              </tr>
+                              <tr>
+                                 <td> Diclofenac </td>
+                                 <td> 75 mg, single dose </td>
+                                 <td> 120 mg twice daily, single dose       dose   </td>
+                                 <td> AM: 13.23% ↓ *PM: 3.76% ↑   </td>
+                                 <td> AM: 2.2% ↓ *PM: 7.5% ↑ </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>AM: after morning dose; PM: after evening dose; * after second dose; ↑: increase in the parameter; ↓: decrease in the parameter </paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Table 4: Effect of Nateglinide on Pharmacokinetics of Coadministered Drugs</content>
+                        </paragraph>
+                        <table>
+                           <tbody>
+                              <tr>
+                                 <td>   </td>
+                                 <td>   </td>
+                                 <td>   </td>
+                                 <td>   </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Coadministered drug</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Dosing regimen of coadministered drug</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Dosing regimen of nateglinide</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Change in</content>
+                                    <content styleCode="bold">C<sub>max</sub>
+                                    </content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Change in</content>
+                                    <content styleCode="bold">AUC</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td> Glyburide </td>
+                                 <td> 10 mg once daily for 3 weeks </td>
+                                 <td> 120 mg three times a day, single dose </td>
+                                 <td> 3.18% ↓ </td>
+                                 <td> 7.34% ↓ </td>
+                              </tr>
+                              <tr>
+                                 <td> Metformin </td>
+                                 <td> 500 mg three times a day for 3 weeks </td>
+                                 <td> 120 mg three times a day, single dose </td>
+                                 <td> AM: 10.7% ↑ PM: 0.40% ↑ </td>
+                                 <td> AM:13.3% ↑ PM: 2.27% ↓ </td>
+                              </tr>
+                              <tr>
+                                 <td> Digoxin </td>
+                                 <td> 1 mg, single dose </td>
+                                 <td> 120 mg three times a day, single dose </td>
+                                 <td> 5.41% ↓ </td>
+                                 <td> 6.58 % ↑ </td>
+                              </tr>
+                              <tr>
+                                 <td> Warfarin </td>
+                                 <td> 30 mg, single dose </td>
+                                 <td> 120 mg three times a day for 4 days </td>
+                                 <td> R-warfarin: 1.03% ↓ S-warfarin: 0.85% ↓ </td>
+                                 <td> R-warfarin: 0.74% ↑ S-warfarin: 7.23% ↑ </td>
+                              </tr>
+                              <tr>
+                                 <td> Diclofenac </td>
+                                 <td> 75 mg, single dose </td>
+                                 <td> 120 mg twice daily, single dose </td>
+                                 <td> 2.19% ↑ </td>
+                                 <td> 7.97% ↑ </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>AM: after morning dose; PM: after evening dose; SD: single dose; ↑: increase in the parameter; ↓: decrease in the parameter</paragraph>
+                     </text>
+                     <effectiveTime value="20190128"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="NONCLINICAL_TOXICOLOGY">
+               <id root="dee0a70e-f4e2-5d7d-0f67-85332041ff16"/>
+               <code code="43680-8" displayName="NONCLINICAL TOXICOLOGY SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>13 NONCLINICAL TOXICOLOGY</title>
+               <text>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20211127"/>
+               <component>
+                  <section ID="CARCINOGENESIS_AND_MUTAGENESIS_AND_IMPAIRMENT_OF_FERTILITY">
+                     <id root="75ded381-cdfe-4cfb-3c5a-1d9937fbfcd0"/>
+                     <code code="34083-6" displayName="CARCINOGENESIS &amp; MUTAGENESIS &amp; IMPAIRMENT OF FERTILITY SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Carcinogenicity</content>: Nateglinide did not increase tumors in two year carcinogenicity studies conducted in mice and rats. Oral doses of nateglinide up to 900 mg/kg in rats and 400 mg/kg in mice were tested, which produced exposures in rats approximately 30 to 40 times and in mice 10 to 30 times the human therapeutic exposure of nateglinide at a dose of 120 mg three times daily, based on AUC.   </paragraph>
+                        <paragraph>
+                           <content styleCode="underline"> Mutagenesis:</content> Nateglinide was not genotoxic in the in vitro Ames test, mouse lymphoma assay, chromosome aberration assay or in the in vivo mouse micronucleus test.   </paragraph>
+                        <paragraph>
+                           <content styleCode="italics underline"/>
+                           <content styleCode="underline">Impairment of Fertility</content>: Fertility was unaffected by administration of nateglinide to rats at doses up to 600 mg/kg (corresponding to 16 times the MRHD of 120 mg three times per day, based on BSA).).  </paragraph>
+                     </text>
+                     <effectiveTime value="20211127"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="CLINICAL_STUDIES">
+               <id root="6fb5cd91-b6dc-e591-9b64-796ceba0083a"/>
+               <code code="34092-7" displayName="CLINICAL STUDIES SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>14 CLINICAL STUDIES</title>
+               <text>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20190128"/>
+               <component>
+                  <section ID="_45de2e9a-ecfc-f9f4-78aa-82fd384254db">
+                     <id root="5cc5675c-7811-1a65-4c68-ace9763ead6f"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>
+                        <content> 14.1 Monotherapy </content>
+                     </title>
+                     <text>
+                        <paragraph>In a 24-week, double-blind, placebo-controlled study, patients with type 2 diabetes were randomized to receive either nateglinide (60 mg or 120 mg three times daily before meals) or placebo. Patients previously treated with antidiabetic medications were required to discontinue that medication for at least 2 months before randomization.   </paragraph>
+                        <paragraph> At Week 24, treatment with nateglinide before meals resulted in statistically significant reductions in mean HbA<sub>1C</sub> and mean fasting plasma glucose (FPG) compared to placebo (see Table 5). The reductions in HbA<sub>1C</sub> and FPG were similar for patient’s naïve to, and those previously exposed to, antidiabetic medications.</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Table 5: Endpoint Results for a 24-Week, Fixed Dose Study of Nateglinide Monotherapy</content>
+                        </paragraph>
+                        <table border="1" cellpadding="3">
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold"> </content>
+                                    <content styleCode="bold"> </content>
+                                    <content styleCode="bold"> </content>
+                                    <content styleCode="bold"> </content>
+                                    <content styleCode="bold"> </content>
+                                    <content styleCode="bold">HbA<sub>1C</sub> (%)</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Placebo</content>    <content styleCode="italics">N=168 </content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Nateglinide </content>
+                                    <content styleCode="bold">60 mg</content>
+                                    <content styleCode="bold">three times</content>
+                                    <content styleCode="bold">daily</content>
+                                    <content styleCode="bold">before meals</content>
+                                    <content styleCode="italics"> N=167 </content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Nateglinide 120 mg</content>
+                                    <content styleCode="bold">three times</content>
+                                    <content styleCode="bold">daily</content>
+                                    <content styleCode="bold">before meals</content>    <content styleCode="italics">N=168</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td> Baseline (mean) </td>
+                                 <td> 8 </td>
+                                 <td> 7.9 </td>
+                                 <td> 8.1 </td>
+                              </tr>
+                              <tr>
+                                 <td> Change from baseline (mean) </td>
+                                 <td> +0.2 </td>
+                                 <td> -0.3 </td>
+                                 <td> -0.5 </td>
+                              </tr>
+                              <tr>
+                                 <td> Difference from placebo (mean) </td>
+                                 <td>   </td>
+                                 <td> -0.5 <sup>a</sup>
+                                 </td>
+                                 <td> -0.7 <sup>a</sup>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">FPG (mg/dL)</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="italics">N=172 </content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="italics">N=171 </content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="italics">N=169 </content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td> Baseline (mean) </td>
+                                 <td> 167.9 </td>
+                                 <td> 161 </td>
+                                 <td> 166.5 </td>
+                              </tr>
+                              <tr>
+                                 <td> Change from baseline (mean) </td>
+                                 <td> +9.1 </td>
+                                 <td> +0.4   </td>
+                                 <td> -4.5   </td>
+                              </tr>
+                              <tr>
+                                 <td> Difference from placebo (mean) </td>
+                                 <td>   </td>
+                                 <td> -8.7<sup>a</sup>
+                                 </td>
+                                 <td> -13.6<sup>a</sup>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>
+                           <sup>a</sup> p-value ≤ 0.004</paragraph>
+                     </text>
+                     <effectiveTime value="20190128"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_7ee5e0e8-4387-39db-b77e-45123dde0d8f">
+                     <id root="705c857a-4bf2-eb80-352e-52bb2d8a7592"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>
+                        <content> 14.2 Monotherapy Compared to Glyburide </content>
+                     </title>
+                     <text>
+                        <paragraph>In a 24-week, double-blind, active-controlled trial, patients with type 2 diabetes who had been on a sulfonylurea for 3 or more months and who had a baseline HbA<sub>1C</sub> greater than or equal to 6.5% were randomized to receive nateglinide (60 mg or 120 mg three times daily before meals) or glyburide 10 mg once daily. Patients randomized to nateglinide had statistically significant increases in mean HbA<sub>1C</sub> and mean FPG at endpoint compared to patients randomized to glyburide.</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Table 6: Endpoint Results for a 24-week Study of Nateglinide Monotherapy Compared to Glyburide</content>
+                        </paragraph>
+                        <table border="1" cellpadding="3">
+                           <tbody>
+                              <tr>
+                                 <td>   </td>
+                                 <td>
+                                    <content styleCode="bold">Glyburide 10 mg Once daily</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Nateglinide 60 mg three times daily</content>
+                                    <content styleCode="bold">before meals</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Nateglinide </content>
+                                    <content styleCode="bold">120 mg three times daily</content>
+                                    <content styleCode="bold">before meals</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">HbA<sub>1C</sub> (%)</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="italics"> N=183 </content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="italics"> N=178</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="italics"> N=179</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td> Baseline (mean) </td>
+                                 <td> 7.8 </td>
+                                 <td> 8 </td>
+                                 <td> 7.9 </td>
+                              </tr>
+                              <tr>
+                                 <td> Change from baseline (mean) </td>
+                                 <td> 0.3 </td>
+                                 <td> 1.3 </td>
+                                 <td> 1.1 </td>
+                              </tr>
+                              <tr>
+                                 <td> Difference from glyburide </td>
+                                 <td>   </td>
+                                 <td> 1<sup>a</sup>
+                                 </td>
+                                 <td> 0.9<sup>a</sup>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">FPG (mmol/L)</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="italics">N=184 </content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="italics">N=182 </content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="italics">N=180 </content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td> Baseline (mean) </td>
+                                 <td> 9.44 </td>
+                                 <td> 9.67 </td>
+                                 <td> 9.61 </td>
+                              </tr>
+                              <tr>
+                                 <td> Change from baseline (mean) </td>
+                                 <td> 0.19 </td>
+                                 <td> 3.06 </td>
+                                 <td> 2.84 </td>
+                              </tr>
+                              <tr>
+                                 <td> Difference from glyburide </td>
+                                 <td>   </td>
+                                 <td> 2.87<sup>a </sup>
+                                 </td>
+                                 <td> 2.66<sup>a</sup>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>
+                           <sup>a</sup> p-value &lt;0.001<sup/>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20190128"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_2c4a931d-a81c-1514-e8a4-309fb82c4c93">
+                     <id root="a615d16d-211b-d496-2669-5f9fb23de9cb"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>
+                        <content> 14.3 Monotherapy and In Combination With Metformin </content>
+                     </title>
+                     <text>
+                        <paragraph>In a 24-week, double-blind, active- and placebo-controlled study, patients with type 2 diabetes were randomized to receive either nateglinide alone (120 mg three times daily before meals), metformin alone (500 mg three times daily), a combination of nateglinide 120 mg (three times daily before meals) and metformin (500 mg three times daily), or placebo. Fifty-seven percent of patients were previously untreated with oral antidiabetic therapy. Patients previously treated with antidiabetic medications were required to discontinue medication for at least 2 months before randomization.   </paragraph>
+                        <paragraph> At Week 24, statistically significant reductions in mean HbA<sub>1c</sub> and FPG were observed with metformin monotherapy compared to nateglinide monotherapy, and the combination of nateglinide and metformin compared to either nateglinide or metformin monotherapy (see Table 7).   </paragraph>
+                        <paragraph> Compared to placebo, nateglinide monotherapy was associated with a statistically significant increase in mean body weight, while no significant change in body weight was observed with metformin monotherapy or combination of nateglinide and metformin therapy (see Table 7). Among the subset of patients previously treated with other antidiabetic agents, primarily glyburide, HbA<sub>1C</sub> in the nateglinide monotherapy group increased slightly from baseline, whereas HbA<sub>1C</sub> was reduced in the metformin monotherapy group (see Table 7).</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Table 7: Endpoint Results for a 24-Week study of Nateglinide Monotherapy and Combination with Metformin </content>
+                        </paragraph>
+                        <table border="1" cellpadding="3">
+                           <tbody>
+                              <tr>
+                                 <td>   </td>
+                                 <td>
+                                    <content styleCode="bold">Placebo</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Nateglinide </content>
+                                    <content styleCode="bold">120 mg</content>
+                                    <content styleCode="bold">three times</content>
+                                    <content styleCode="bold">daily before</content>
+                                    <content styleCode="bold">meals</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Metformin</content>
+                                    <content styleCode="bold">500 mg</content>
+                                    <content styleCode="bold">three times</content>
+                                    <content styleCode="bold">daily</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Nateglinide 120 mg</content>
+                                    <content styleCode="bold">before</content>
+                                    <content styleCode="bold">meals plus</content>
+                                    <content styleCode="bold">Metformin*</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">HbA<sub>1C</sub> (%)</content>
+                                    <content styleCode="bold">All</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="italics">N=160 </content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="italics">N=171 </content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="italics"> N=172 </content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="italics"> N=162</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td> Baseline (mean) </td>
+                                 <td> 8.3 </td>
+                                 <td> 8.3 </td>
+                                 <td> 8.4 </td>
+                                 <td> 8.4 </td>
+                              </tr>
+                              <tr>
+                                 <td> Change from baseline (mean) </td>
+                                 <td> +0.4 </td>
+                                 <td> -0.4<sup>bc</sup>   </td>
+                                 <td> -0.8<sup>c</sup>   </td>
+                                 <td> -1.5   </td>
+                              </tr>
+                              <tr>
+                                 <td> Difference from placebo </td>
+                                 <td>   </td>
+                                 <td>- 0.8<sup>a</sup>
+                                 </td>
+                                 <td> -1.2<sup>a</sup>
+                                 </td>
+                                 <td> -1.9<sup>a</sup>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Naїve</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="italics">N=98 </content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="italics"> N=99 </content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="italics"> N=98</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="italics"> N=81</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td> Baseline (mean) </td>
+                                 <td> 8.2 </td>
+                                 <td> 8.1 </td>
+                                 <td> 8.3 </td>
+                                 <td> 8.2 </td>
+                              </tr>
+                              <tr>
+                                 <td> Change from baseline (mean) </td>
+                                 <td> +0.3 </td>
+                                 <td> -0.7<sup>c</sup>   </td>
+                                 <td> -0.8<sup>c</sup>   </td>
+                                 <td> -1.6   </td>
+                              </tr>
+                              <tr>
+                                 <td> Difference from placebo </td>
+                                 <td>   </td>
+                                 <td> -1<sup>a</sup>
+                                 </td>
+                                 <td> -1.1<sup>a</sup>
+                                 </td>
+                                 <td> -1.9<sup>a</sup>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Non-Naїve</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="italics">N=62 </content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="italics">N=72 </content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="italics">N=74 </content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="italics">N=81 </content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td> Baseline (mean) </td>
+                                 <td> 8.3 </td>
+                                 <td> 8.5 </td>
+                                 <td> 8.7 </td>
+                                 <td> 8.7 </td>
+                              </tr>
+                              <tr>
+                                 <td> Change from baseline (mean) Difference from placebo </td>
+                                 <td> +0.6 </td>
+                                 <td> +0.004 <sup>bc</sup>
+                                    <br/>-0.6<sup>a</sup>
+                                 </td>
+                                 <td> -0.8 <sup>c</sup>
+                                    <br/>-1.4<sup>a</sup>
+                                 </td>
+                                 <td> -1.4 <br/>-2<sup>a</sup>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">FPG (mg/dL) </content>
+                                    <content styleCode="bold">All</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="italics">N=166 </content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="italics">N=173 </content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="italics">N=174 </content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="italics">N=167 </content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td> Baseline (mean) </td>
+                                 <td> 1940</td>
+                                 <td> 196.5 </td>
+                                 <td> 196 </td>
+                                 <td> 197.7 </td>
+                              </tr>
+                              <tr>
+                                 <td> Change from baseline (mean) Difference from placebo </td>
+                                 <td> +8 </td>
+                                 <td> -13.1<sup>bc</sup>
+                                    <br/>-21.1<sup>a</sup>
+                                 </td>
+                                 <td> -30<sup>c</sup>
+                                    <br/>-38<sup>a</sup>
+                                 </td>
+                                 <td> -44.9 <br/>-52.9<sup>a</sup>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>
+                           <sup>a</sup> p-value ≤ 0.05 vs. placebo </paragraph>
+                        <paragraph>
+                           <sup>b</sup>
+                           <sup> </sup>p-value ≤ 0.03 vs. metformin </paragraph>
+                        <paragraph>
+                           <sup>c</sup>
+                           <sup> </sup>p-value ≤ 0.05 vs. combination </paragraph>
+                        <paragraph>
+                           <sup>*</sup> Metformin was administered three times daily</paragraph>
+                        <paragraph>In another 24-week, double-blind, placebo-controlled trial, patients with type 2 diabetes with HbA<sub>1C</sub> greater than or equal to 6.8% after treatment with metformin (greater than or equal to 1500 mg daily for at least 1 month) were first entered into a four week run-in period of metformin monotherapy (2000 mg daily) and then randomized to receive either nateglinide (60 mg or 120 mg three times daily before meals) or placebo as add-on to metformin. At the end of treatment, nateglinide 60 mg and 120 mg three times daily resulted in a statistically significantly greater reductions in HbA<sub>1C</sub> compared to placebo when added to metformin (-0.4% and -0.6% for nateglinide 60 mg and nateglinide 120 mg plus metformin, respectively).   </paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Table 8: Endpoint Results for a 24-week Study of Nateglinide Monotherapy as Add-on to Metformin </content>
+                        </paragraph>
+                        <table border="1" cellpadding="3">
+                           <tbody>
+                              <tr>
+                                 <td>   </td>
+                                 <td>
+                                    <content styleCode="bold">Placebo</content>
+                                    <content styleCode="bold">+</content>
+                                    <content styleCode="bold">metformin</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Nateglinide</content>
+                                    <content styleCode="bold"> 60 mg</content>
+                                    <content styleCode="bold">+</content>
+                                    <content styleCode="bold">metformin</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Nateglinide</content>
+                                    <content styleCode="bold"> 120 mg</content>
+                                    <content styleCode="bold">+ </content>
+                                    <content styleCode="bold">metformin</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">HbA<sub>1C</sub> (%)</content>
+                                 </td>
+                                 <td> N=150 </td>
+                                 <td> N=152 </td>
+                                 <td> N=154 </td>
+                              </tr>
+                              <tr>
+                                 <td> Baseline (mean) </td>
+                                 <td> 8.2 </td>
+                                 <td> 8 </td>
+                                 <td> 8.2 </td>
+                              </tr>
+                              <tr>
+                                 <td> Change from baseline (mean)   </td>
+                                 <td> 0.01 </td>
+                                 <td> -0.4   </td>
+                                 <td> -0.6   </td>
+                              </tr>
+                              <tr>
+                                 <td> Difference from metformin </td>
+                                 <td>   </td>
+                                 <td> -0.4<sup>a</sup>
+                                 </td>
+                                 <td> -0.6<sup>b</sup>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>
+                           <sup>a</sup> p-value 0.003 vs. metformin </paragraph>
+                        <paragraph>
+                           <sup>b</sup> p-value &lt; 0.001 vs. metformin </paragraph>
+                        <paragraph>All nateglinide/placebo taken three times daily before meals; all metformin 1000 mg twice daily. <content styleCode="bold"> </content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20190128"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_c838544a-edae-4e31-357e-1c029fb3e3c9">
+                     <id root="f2321856-937d-8a54-ff68-8d09712e7ef5"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>14.4 Add-On Combination Therapy With Rosiglitazone </title>
+                     <text>
+                        <paragraph>A 24-week, double blind, multicenter, placebo-controlled trial was performed in patients with type 2 diabetes not adequately controlled on rosiglitazone 8 mg daily. The addition of nateglinide (120 mg three times per day with meals) was associated with statistically significantly greater reductions in HbA<sub>1C</sub> compared to placebo as add-on to rosiglitazone. The mean change in weight from baseline was +3 kg for patients treated with nateglinide compared to +1 kg for patients treated with placebo when added to rosiglitazone.</paragraph>
+                        <paragraph>   <content styleCode="bold">Table 9: Endpoint Results for a 24-week Study of the Effect of Adding Nateglinide or Placebo to Rosiglitazone</content>
+                           <content styleCode="bold"/>
+                        </paragraph>
+                        <table border="1" cellpadding="3">
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold"> </content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Placebo +</content>
+                                    <content styleCode="bold">rosiglitazone</content>
+                                    <content styleCode="bold">8 mg</content>
+                                    <content styleCode="bold">once daily</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Nateglinide</content>
+                                    <content styleCode="bold"> 120 mg</content>
+                                    <content styleCode="bold">before meals +</content>
+                                    <content styleCode="bold">rosiglitazone</content>
+                                    <content styleCode="bold">8 mg</content>
+                                    <content styleCode="bold">once daily</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">HbA<sub>1C</sub> (%)</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="italics">N=191 </content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="italics">N=194 </content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td> Baseline (mean) </td>
+                                 <td> 8.4 </td>
+                                 <td> 8.3 </td>
+                              </tr>
+                              <tr>
+                                 <td> Change from baseline (mean) </td>
+                                 <td> 0.03 </td>
+                                 <td> -0.7   </td>
+                              </tr>
+                              <tr>
+                                 <td> Difference from rosiglitazone (mean) </td>
+                                 <td>   </td>
+                                 <td> -0.7<sup>a</sup>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>
+                           <sup>a</sup> p-value ≤ 0.0001</paragraph>
+                     </text>
+                     <effectiveTime value="20190128"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_018eefa9-8938-4e3b-cdad-89e7540128d8">
+                     <id root="8d69b3c4-078a-502d-3651-a6eca62acd12"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title> 14.5 Add-On Combination Therapy With Glyburide </title>
+                     <text>
+                        <paragraph>In a 12-week study of patients with type 2 diabetes inadequately controlled on glyburide 10 mg once daily, the addition of nateglinide (60 mg or 120 mg three times daily before meals) did not produce any additional benefit. <content styleCode="bold"> </content>
+                           <content styleCode="bold"/>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Table 10: Endpoint Results for a 12-week Study of the Effect of Adding Nateglinide or Placebo to Glyburide </content>
+                        </paragraph>
+                        <table border="1" cellpadding="3">
+                           <tbody>
+                              <tr>
+                                 <td>   </td>
+                                 <td>
+                                    <content styleCode="bold">Placebo +</content>
+                                    <content styleCode="bold">glyburide</content>
+                                    <content styleCode="bold">10 mg once daily</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Nateglinide 60 mg</content>
+                                    <content styleCode="bold">before meals + glyburide</content>
+                                    <content styleCode="bold">10 mg once daily</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Nateglinide 120 mg</content>
+                                    <content styleCode="bold">before meals + glyburide 10 mg</content>
+                                    <content styleCode="bold">once daily</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">HbA<sub>1C</sub> (%)</content>
+                                 </td>
+                                 <td> N=58 </td>
+                                 <td> N=55 </td>
+                                 <td> N=54 </td>
+                              </tr>
+                              <tr>
+                                 <td> Baseline (mean) </td>
+                                 <td> 8.7 </td>
+                                 <td> 8.7 </td>
+                                 <td> 8.7 </td>
+                              </tr>
+                              <tr>
+                                 <td> Change from baseline (mean) </td>
+                                 <td> 0.3 </td>
+                                 <td> 0.2 </td>
+                                 <td> -0.02 </td>
+                              </tr>
+                              <tr>
+                                 <td> Difference from glyburide (mean) </td>
+                                 <td>   </td>
+                                 <td> -0.1<sup>a</sup>
+                                 </td>
+                                 <td> -0.3<sup>b</sup>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>Placebo or nateglinide given 10 minutes prior to breakfast, lunch, and dinner; glyburide given with the breakfast dose of nateglinide or placebo.   </paragraph>
+                        <paragraph>
+                           <sup>a</sup> p-value 0.6959 <sup/>
+                        </paragraph>
+                        <paragraph>
+                           <sup>b</sup> p-value 0.1246</paragraph>
+                     </text>
+                     <effectiveTime value="20190128"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="HOW_SUPPLIED">
+               <id root="0c776e7c-00f4-8d0d-e425-2fbface0748a"/>
+               <code code="34069-5" displayName="HOW SUPPLIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>16 HOW SUPPLIED/STORAGE AND HANDLING</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">How Supplied</content>
+                  </paragraph>
+                  <paragraph>Nateglinide tablets USP are available as 60 mg white to off-white, round, biconvex tablets embossed with ‘RDY’ on one side and ‘328’ on other side and they are supplied in bottles of 30, 90, 100, 500 and unit dose package of 100 (10 x 10).   </paragraph>
+                  <paragraph> Bottles of 30 NDC 55111-328-30 </paragraph>
+                  <paragraph> Bottles of 90 NDC 55111-328-90 </paragraph>
+                  <paragraph> Bottles of 100 NDC 55111-328-01 </paragraph>
+                  <paragraph>Bottles of 500 NDC 55111-328-05 </paragraph>
+                  <paragraph>Unit dose package of 100 (10 x 10) NDC 55111-328-78   </paragraph>
+                  <paragraph> Nateglinide tablets USP are available as 120 mg white to off-white, round, biconvex tablets embossed with ‘RDY’ on one side and ‘329’ on other side and they are supplied in bottles of 30, 90, 100, 500 and unit dose package of 100 (10 x 10).   </paragraph>
+                  <paragraph> Bottles of 30 NDC 55111-329-30 </paragraph>
+                  <paragraph>Bottles of 90 NDC 55111-329-90 </paragraph>
+                  <paragraph> Bottles of 100 NDC 55111-329-01 </paragraph>
+                  <paragraph> Bottles of 500 NDC 55111-329-05 </paragraph>
+                  <paragraph>Unit dose package of 100 (10 x 10) NDC 55111-329-78</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Storage and Handling</content>
+                  </paragraph>
+                  <paragraph> Store at 20° to 25°C (68°-77°F); excursions permitted to 15° to 30°C (59°-86°F) [See USP Controlled Room Temperature].   </paragraph>
+                  <paragraph> Dispense in a tight container, USP.</paragraph>
+               </text>
+               <effectiveTime value="20190128"/>
+            </section>
+         </component>
+         <component>
+            <section ID="INFORMATION_FOR_PATIENTS">
+               <id root="1d995e70-d4a0-37f8-41b6-5858018b2f07"/>
+               <code code="34076-0" displayName="INFORMATION FOR PATIENTS SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>17 PATIENT COUNSELING INFORMATION</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Administration</content>
+                  </paragraph>
+                  <paragraph> Instruct patients to take nateglinide 1 to 30 minutes before meals. Instruct patients that skip meals to skip their dose of nateglinide [see <content styleCode="bold">Dosage and Administration (<linkHtml href="#DOSAGE_AND_ADMINISTRATION">2)</linkHtml>
+                     </content>].   </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Hypoglycemia</content>
+                  </paragraph>
+                  <paragraph> Inform patients that nateglinide can cause hypoglycemia and instruct patients and their caregivers on self-management procedures including glucose monitoring and management of hypoglycemia. Inform patients that their ability to concentrate and react may be impaired as a result of hypoglycemia. In patients at higher risk for hypoglycemia and patients who have reduced symptomatic awareness of hypoglycemia, increased frequency of blood glucose monitoring is recommended [see <content styleCode="bold">Warnings and Precautions (<linkHtml href="#_bb96f2fb-2dab-98d6-7ef0-5cab2efe73fe">5.1</linkHtml>)</content>].   </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Lactation </content>
+                  </paragraph>
+                  <paragraph>Advise patients that use of nateglinide is not recommended while breastfeeding [see <content styleCode="bold">Use in Specific Populations (<linkHtml href="#NURSING_MOTHERS">8.2</linkHtml>)</content>]. </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Drug Interactions</content>
+                  </paragraph>
+                  <paragraph> Discuss potential drug interactions with patients and inform them of potential drug-drug interactions with nateglinide.   </paragraph>
+                  <paragraph>Rx only   </paragraph>
+                  <paragraph> Manufactured by: </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Dr. Reddy’s Laboratories Limited</content>
+                  </paragraph>
+                  <paragraph> Bachupally – 500 090 INDIA   </paragraph>
+                  <paragraph> Revised: 1121</paragraph>
+               </text>
+               <effectiveTime value="20211127"/>
+            </section>
+         </component>
+         <component>
+            <section ID="_9815a22c-0edf-821c-f4f3-669bc67451c9">
+               <id root="da975168-bd48-745b-241b-2aae219a309e"/>
+               <code code="51945-4" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>PACKAGE LABEL PRINCIPAL DISPLAY PANEL SECTION</title>
+               <text>
+                  <paragraph>Nateglinide Tablets USP, 60 mg - Container Label</paragraph>
+                  <paragraph/>
+                  <paragraph>Unvarnished Area consists of: 2D Bar code, Lot Number, Expiry Date and Serial Number.</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="MM410319955484"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20190128"/>
+            </section>
+         </component>
+         <component>
+            <section ID="_5e562a71-6433-aa49-93d7-0af3d552659c">
+               <id root="f17564ac-ecef-be4a-c62f-66dfbf4e3dde"/>
+               <code code="51945-4" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL" codeSystem="2.16.840.1.113883.6.1"/>
+               <title/>
+               <text>
+                  <paragraph>Nateglinide Tablets USP, 60 mg - Carton Label</paragraph>
+                  <paragraph/>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="MM860386780613"/>
+                  </paragraph>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20190128"/>
+            </section>
+         </component>
+         <component>
+            <section ID="_5ce34710-d1cb-2464-1249-755f5f480040">
+               <id root="d0ee037c-c698-06b9-6a3a-8c4954e32497"/>
+               <code code="51945-4" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL" codeSystem="2.16.840.1.113883.6.1"/>
+               <title/>
+               <text>
+                  <paragraph> Nateglinide Tablets USP, 120 mg - Container Label</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="MM27467884293"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20190128"/>
+            </section>
+         </component>
+         <component>
+            <section ID="_cc818c40-3d0d-3d8b-0603-87d13ef042b8">
+               <id root="85bc35af-e494-2c63-e7d8-304dc152330d"/>
+               <code code="51945-4" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL" codeSystem="2.16.840.1.113883.6.1"/>
+               <title/>
+               <text>
+                  <paragraph> Nateglinide Tablets USP, 120 mg - Carton Label</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="MM719456151739"/>
+                  </paragraph>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20190128"/>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

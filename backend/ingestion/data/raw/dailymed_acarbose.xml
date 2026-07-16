@@ -1,0 +1,1844 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="55069653-499d-2f2b-e063-6294a90a1ce9"/>
+   <code code="34391-3" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN PRESCRIPTION DRUG LABEL"/>
+   <title>
+      <content styleCode="bold">Acarbose Tablets, USP</content>
+   </title>
+   <effectiveTime value="20260624"/>
+   <setId root="722ce9eb-8f7b-4651-a287-d53dd7ab3707"/>
+   <versionNumber value="29"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id root="1.3.6.1.4.1.519.1" extension="156893695"/>
+            <name>PD-Rx Pharmaceuticals, Inc.</name>
+            <assignedEntity>
+               <assignedOrganization>
+                  <id root="1.3.6.1.4.1.519.1" extension="156893695"/>
+                  <name>PD-Rx Pharmaceuticals, Inc.</name>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id root="1.3.6.1.4.1.519.1" extension="156893695"/>
+                        <name>PD-Rx Pharmaceuticals, Inc.</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C73606" displayName="repack" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="72789-132" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                     <performance>
+                        <actDefinition>
+                           <code code="C73606" displayName="repack" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="72789-131" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                     <performance>
+                        <actDefinition>
+                           <code code="C73606" displayName="repack" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="72789-133" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+               </assignedOrganization>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="5506f5ac-c02c-b546-e063-6294a90a45b8"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL product data elements section"/>
+               <effectiveTime value="20260624"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="72789-132" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Acarbose</name>
+                        <formCode code="C42998" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TABLET"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Acarbose</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <asEquivalentEntity classCode="EQUIV">
+                           <code code="C64637" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <definingMaterialKind>
+                              <code code="0054-0141" codeSystem="2.16.840.1.113883.6.69"/>
+                           </definingMaterialKind>
+                        </asEquivalentEntity>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="O8232NY3SJ" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>STARCH, CORN</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="ETJ7Z6XBU4" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SILICON DIOXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="70097M6I30" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MAGNESIUM STEARATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="OP1R32D61U" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MICROCRYSTALLINE CELLULOSE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mg" value="50"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="T58MSI464G" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>ACARBOSE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="T58MSI464G" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>ACARBOSE</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="30" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="72789-132-30" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43173" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE, PLASTIC"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20230707"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="60" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="72789-132-60" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43173" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE, PLASTIC"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20201021"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="90" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="72789-132-90" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43173" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE, PLASTIC"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20220916"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="100" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="72789-132-01" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43173" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE, PLASTIC"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20260624"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="ANDA078470" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73584" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20080507"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48325" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="white" xsi:type="CE">
+                              <originalText/>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="7" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48348" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ROUND" xsi:type="CE">
+                              <originalText/>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value value="1" xsi:type="INT"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="ST">54;737</value>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="72789-131" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Acarbose</name>
+                        <formCode code="C42998" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TABLET"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Acarbose</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <asEquivalentEntity classCode="EQUIV">
+                           <code code="C64637" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <definingMaterialKind>
+                              <code code="0054-0140" codeSystem="2.16.840.1.113883.6.69"/>
+                           </definingMaterialKind>
+                        </asEquivalentEntity>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="ETJ7Z6XBU4" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SILICON DIOXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="O8232NY3SJ" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>STARCH, CORN</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="70097M6I30" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MAGNESIUM STEARATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="OP1R32D61U" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MICROCRYSTALLINE CELLULOSE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mg" value="25"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="T58MSI464G" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>ACARBOSE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="T58MSI464G" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>ACARBOSE</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="30" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="72789-131-30" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43173" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE, PLASTIC"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20230707"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="60" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="72789-131-60" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43173" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE, PLASTIC"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20201021"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="90" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="72789-131-90" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43173" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE, PLASTIC"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20220916"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="100" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="72789-131-01" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43173" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE, PLASTIC"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20260624"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="ANDA078470" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73584" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20080507"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48325" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="white" xsi:type="CE">
+                              <originalText/>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="6" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48348" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ROUND" xsi:type="CE">
+                              <originalText/>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value value="1" xsi:type="INT"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="ST">54;311</value>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="72789-133" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Acarbose</name>
+                        <formCode code="C42998" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TABLET"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Acarbose</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <asEquivalentEntity classCode="EQUIV">
+                           <code code="C64637" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <definingMaterialKind>
+                              <code code="0054-0142" codeSystem="2.16.840.1.113883.6.69"/>
+                           </definingMaterialKind>
+                        </asEquivalentEntity>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="ETJ7Z6XBU4" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SILICON DIOXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="O8232NY3SJ" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>STARCH, CORN</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="70097M6I30" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MAGNESIUM STEARATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="OP1R32D61U" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MICROCRYSTALLINE CELLULOSE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mg" value="100"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="T58MSI464G" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>ACARBOSE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="T58MSI464G" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>ACARBOSE</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="30" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="72789-133-30" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43173" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE, PLASTIC"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20230707"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="60" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="72789-133-60" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43173" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE, PLASTIC"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20201021"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="90" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="72789-133-90" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43173" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE, PLASTIC"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20220916"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="100" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="72789-133-01" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43173" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE, PLASTIC"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20260624"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="ANDA078470" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73584" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20080507"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48325" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="white" xsi:type="CE">
+                              <originalText/>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="9" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48348" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ROUND" xsi:type="CE">
+                              <originalText/>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value value="1" xsi:type="INT"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="ST">54;251</value>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_6fc09809-82c4-43a3-9e3b-dc534de52abd">
+               <id root="20c2796b-585f-ef6a-e063-6294a90ac934"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <title>Rx only</title>
+               <effectiveTime value="20230228"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_16bbd82f-1b8f-45ad-aae1-5af0d3f03e62">
+               <id root="20c2796b-5860-ef6a-e063-6294a90ac934"/>
+               <code code="34089-3" codeSystem="2.16.840.1.113883.6.1" displayName="DESCRIPTION SECTION"/>
+               <title>DESCRIPTION</title>
+               <text>
+                  <paragraph>Acarbose Tablets, USP are an oral alpha-glucosidase inhibitor for use in the management of type 2 diabetes mellitus. Acarbose is an oligosaccharide which is obtained from fermentation processes of a microorganism,
+ 
+  <content styleCode="italics">Actinoplanes utahensis</content>, and is chemically known as
+ 
+  <content styleCode="italics">O</content>-4,6-dideoxy-4-[[(1S,4R,5S,6S)-4,5,6-trihydroxy-3-(hydroxymethyl)-2-cyclohexen-1-yl]amino]-α-D-glucopyranosyl-(1→4)-
+ 
+  <content styleCode="italics">O</content>-α-D-glucopyranosyl-(1→4)-D-glucose. It is a white to off-white powder with a molecular weight of 645.60. Acarbose is soluble in water and has a pK
+ 
+  <sub>a</sub>of 5.1. Its molecular formula is C
+ 
+  <sub>25</sub>H
+ 
+  <sub>43</sub>NO
+ 
+  <sub>18</sub> and its chemical structure is as follows:
+
+ </paragraph>
+                  <renderMultiMedia ID="id290872520" referencedObject="ID_271edceb-bc4d-4c9e-9ee3-d5c5869ced3b"/>
+                  <paragraph>Acarbose Tablets, USP are available for oral administration containing 25 mg, 50 mg or 100 mg acarbose, USP. Each tablet contains the following inactive ingredients: colloidal silicon dioxide, magnesium stearate, microcrystalline cellulose and corn starch.</paragraph>
+               </text>
+               <effectiveTime value="20230228"/>
+               <component>
+                  <observationMedia ID="ID_271edceb-bc4d-4c9e-9ee3-d5c5869ced3b">
+                     <text>acarbose-chemical-structure.jpg</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-01.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_c2039192-20a9-4c78-bfb3-fa5a0a3405f4">
+               <id root="20c2796b-5861-ef6a-e063-6294a90ac934"/>
+               <code code="34090-1" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+               <title>CLINICAL PHARMACOLOGY</title>
+               <text>
+                  <paragraph>Acarbose is a complex oligosaccharide that delays the digestion of ingested carbohydrates, thereby resulting in a smaller rise in blood glucose concentration following meals. As a consequence of plasma glucose reduction, acarbose reduces levels of glycosylated hemoglobin in patients with type 2 diabetes mellitus. Systemic non-enzymatic protein glycosylation, as reflected by levels of glycosylated hemoglobin, is a function of average blood glucose concentration over time.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Mechanism of Action</content>
+                  </paragraph>
+                  <paragraph>In contrast to sulfonylureas, acarbose does not enhance insulin secretion. The antihyperglycemic action of acarbose results from a competitive, reversible inhibition of pancreatic alpha-amylase and membrane-bound intestinal alpha-glucoside hydrolase enzymes. Pancreatic alpha-amylase hydrolyzes complex starches to oligosaccharides in the lumen of the small intestine, while the membrane-bound intestinal alpha-glucosidases hydrolyze oligosaccharides, trisaccharides, and disaccharides to glucose and other monosaccharides in the brush border of the small intestine. In diabetic patients, this enzyme inhibition results in a delayed glucose absorption and a lowering of postprandial hyperglycemia.</paragraph>
+                  <paragraph>Because its mechanism of action is different, the effect of acarbose to enhance glycemic control is additive to that of sulfonylureas, insulin or metformin when used in combination. In addition, acarbose diminishes the insulinotropic and weight-increasing effects of sulfonylureas.</paragraph>
+                  <paragraph>Acarbose has no inhibitory activity against lactase and consequently would not be expected to induce lactose intolerance.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Pharmacokinetics</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Absorption</content>
+                  </paragraph>
+                  <paragraph>In a study of 6 healthy men, less than 2% of an oral dose of acarbose was absorbed as active drug, while approximately 35% of total radioactivity from a
+ 
+  <sup>14</sup>C-labeled oral dose was absorbed. An average of 51% of an oral dose was excreted in the feces as unabsorbed drug-related radioactivity within 96 hours of ingestion. Because acarbose acts locally within the gastrointestinal tract, this low systemic bioavailability of parent compound is therapeutically desired. Following oral dosing of healthy volunteers with
+ 
+  <sup>14</sup>C-labeled acarbose, peak plasma concentrations of radioactivity were attained 14 to 24 hours after dosing, while peak plasma concentrations of active drug were attained at approximately 1 hour. The delayed absorption of acarbose-related radioactivity reflects the absorption of metabolites that may be formed by either intestinal bacteria or intestinal enzymatic hydrolysis.
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Metabolism</content>
+                  </paragraph>
+                  <paragraph>Acarbose is metabolized exclusively within the gastrointestinal tract, principally by intestinal bacteria, but also by digestive enzymes. A fraction of these metabolites (approximately 34% of the dose) was absorbed and subsequently excreted in the urine. At least 13 metabolites have been separated chromatographically from urine specimens. The major metabolites have been identified as 4-methylpyrogallol derivatives (that is, sulfate, methyl, and glucuronide conjugates). One metabolite (formed by cleavage of a glucose molecule from acarbose) also has alpha-glucosidase inhibitory activity. This metabolite, together with the parent compound, recovered from the urine, accounts for less than 2% of the total administered dose.</paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Excretion</content>
+                  </paragraph>
+                  <paragraph>The fraction of acarbose that is absorbed as intact drug is almost completely excreted by the kidneys. When acarbose was given
+ 
+  <content styleCode="italics">intravenously,</content>89% of the dose was recovered in the urine as active drug within 48 hours. In contrast, less than 2% of an
+ 
+  <content styleCode="italics">oral dose</content>was recovered in the urine as active (that is, parent compound and active metabolite) drug. This is consistent with the low bioavailability of the parent drug. The plasma elimination half-life of acarbose activity is approximately 2 hours in healthy volunteers. Consequently, drug accumulation does not occur with three times a day (t.i.d.) oral dosing.
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Special Populations</content>
+                  </paragraph>
+                  <paragraph>The mean steady-state area under the curve (AUC) and maximum concentrations of acarbose were approximately 1.5 times higher in elderly compared to young volunteers; however, these differences were not statistically significant. Patients with severe renal impairment (Clcr &lt; 25 mL/min/1.73 m
+ 
+  <sup>2</sup>) attained about 5 times higher peak plasma concentrations of acarbose and 6 times larger AUCs than volunteers with normal renal function. No studies of acarbose pharmacokinetic parameters according to race have been performed. In U.S. controlled clinical studies of acarbose in patients with type 2 diabetes mellitus, reductions in glycosylated hemoglobin levels were similar in Caucasians (n=478) and African-Americans (n=167), with a trend toward a better response in Latinos (n=132).
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Drug-Drug Interactions</content>
+                  </paragraph>
+                  <paragraph>Studies in healthy volunteers have shown that acarbose has no effect on either the pharmacokinetics or pharmacodynamics of nifedipine, propranolol, or ranitidine. Acarbose did not interfere with the absorption or disposition of the sulfonylurea glyburide in diabetic patients. Acarbose may affect digoxin bioavailability and may require dose adjustment of digoxin by 16% (90% confidence interval: 8 to 23%), decrease mean C
+ 
+  <sub>max</sub>of digoxin by 26% (90% confidence interval: 16 to 34%) and decreases mean trough concentrations of digoxin by 9% (90% confidence limit: 19% decrease to 2% increase). (See
+ 
+  <linkHtml href="#_Refi4i_precautions_id_10c5645f-26bd-4f3">PRECAUTIONS,</linkHtml>
+                     <linkHtml href="#_Refi4i_section_id_e73e4abf-f01f-4ac4-8f">Drug Interactions</linkHtml>).
+
+ </paragraph>
+                  <paragraph>The amount of metformin absorbed while taking acarbose was bioequivalent to the amount absorbed when taking placebo, as indicated by the plasma AUC values. However, the peak plasma level of metformin was reduced by approximately 20% when taking acarbose due to a slight delay in the absorption of metformin. There is little if any clinically significant interaction between acarbose and metformin.</paragraph>
+               </text>
+               <effectiveTime value="20230228"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_d820030c-b0c2-4547-92b5-1453f6054c70">
+               <id root="20c2796b-5862-ef6a-e063-6294a90ac934"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <title>CLINICAL TRIALS</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Clinical Experience from Dose Finding Studies in Type 2 Diabetes Mellitus Patients on Dietary Treatment Only</content>
+                  </paragraph>
+                  <paragraph>Results from six controlled, fixed-dose, monotherapy studies of acarbose in the treatment of type 2 diabetes mellitus, involving 769 acarbose-treated patients, were combined and a weighted average of the difference from placebo in the mean change from baseline in glycosylated hemoglobin (HbA1c) was calculated for each dose level as presented below:</paragraph>
+                  <table width="100%">
+                     <caption>Table 1: Mean Placebo-Subtracted Change in HbA1c in Fixed-Dose Monotherapy Studies</caption>
+                     <col width="20%"/>
+                     <col width="6%"/>
+                     <col width="23%"/>
+                     <col width="10%"/>
+                     <tbody>
+                        <tr>
+                           <td align="center" styleCode="Rrule Botrule Toprule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">Dose of Acarbose*</content>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule Toprule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">N</content>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule Toprule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">Change in HbA1c %</content>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Botrule Toprule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">p-Value</content>
+                              </paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>25 mg t.i.d.</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>110</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>-0.44</paragraph>
+                           </td>
+                           <td align="center" styleCode="Botrule " valign="top">
+                              <paragraph>0.0307</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>50 mg t.i.d.</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>131</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>-0.77</paragraph>
+                           </td>
+                           <td align="center" styleCode="Botrule " valign="top">
+                              <paragraph>0.0001</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>100 mg t.i.d.</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>244</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>-0.74</paragraph>
+                           </td>
+                           <td align="center" styleCode="Botrule " valign="top">
+                              <paragraph>0.0001</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>200 mg t.i.d.
+     
+      <sup>**</sup>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>231</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>-0.86</paragraph>
+                           </td>
+                           <td align="center" styleCode="Botrule " valign="top">
+                              <paragraph>0.0001</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>300 mg t.i.d.
+     
+      <sup>**</sup>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>53</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>-1.00</paragraph>
+                           </td>
+                           <td align="center" styleCode="Botrule " valign="top">
+                              <paragraph>0.0001</paragraph>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>* Acarbose was statistically significantly different from placebo at all doses. Although there were no statistically significant differences among the mean results for doses ranging from 50 to 300 mg t.i.d., some patients may derive benefit by increasing the dosage from 50 to 100 mg t.i.d.</paragraph>
+                  <paragraph>** Although studies utilized a maximum dose of 200 or 300 mg t.i.d., the maximum recommended dose for patients &lt; 60 kg is 50 mg t.i.d.; the maximum recommended dose for patients &gt; 60 kg is 100 mg t.i.d.</paragraph>
+                  <paragraph>Results from these six fixed-dose, monotherapy studies were also combined to derive a weighted average of the difference from placebo in mean change from baseline for one-hour postprandial plasma glucose levels as shown in the following figure:</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Figure 1</content>
+                  </paragraph>
+                  <renderMultiMedia ID="id954759000" referencedObject="ID_15228cac-1ddc-45c0-838e-42b3155192ba"/>
+                  <paragraph>*Acarbose was statistically significantly different from placebo at all doses with respect to effect on one‑hour postprandial plasma glucose.</paragraph>
+                  <paragraph>** The 300 mg t.i.d. acarbose regimen was superior to lower doses, but there were no statistically significant differences from 50 to 200 mg t.i.d.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Clinical Experience in Type 2 Diabetes Mellitus Patients on Monotherapy, or in Combination with Sulfonylureas, Metformin or Insulin</content>
+                  </paragraph>
+                  <paragraph>Acarbose was studied as monotherapy and as combination therapy to sulfonylurea, metformin, or insulin treatment. The treatment effects on HbA1c levels and one-hour postprandial glucose levels are summarized for four placebo-controlled, double-blind, randomized studies conducted in the United States in Tables 2 and 3, respectively. The placebo-subtracted treatment differences, which are summarized below, were statistically significant for both variables in all of these studies.</paragraph>
+                  <paragraph>Study 1 (n=109) involved patients on background treatment with diet only. The mean effect of the addition of acarbose to diet therapy was a change in HbA1c of -0.78%, and an improvement of one-hour postprandial glucose of -74.4 mg/dL.</paragraph>
+                  <paragraph>In Study 2 (n=137), the mean effect of the addition of acarbose to maximum sulfonylurea therapy was a change in HbA1c of -0.54%, and an improvement of one-hour postprandial glucose of -33.5 mg/dL.</paragraph>
+                  <paragraph>In Study 3 (n=147), the mean effect of the addition of acarbose to maximum metformin therapy was a change in HbA1c of -0.65%, and an improvement of one-hour postprandial glucose of -34.3 mg/dL.</paragraph>
+                  <paragraph>Study 4 (n=145) demonstrated that acarbose added to patients on background treatment with insulin resulted in a mean change in HbA1c of -0.69%, and an improvement of one-hour postprandial glucose of -36.0 mg/dL.</paragraph>
+                  <paragraph>A one year study of acarbose as monotherapy or in combination with sulfonylurea, metformin or insulin treatment was conducted in Canada in which 316 patients were included in the primary efficacy analysis (Figure 2). In the diet, sulfonylurea and metformin groups, the mean decrease in HbA1c produced by the addition of acarbose was statistically significant at six months, and this effect was persistent at one year. In the acarbose-treated patients on insulin, there was a statistically significant reduction in HbA1c at six months, and a trend for a reduction at one year.</paragraph>
+                  <table width="100%">
+                     <caption>Table 2: Effect of Acarbose on HbA1c</caption>
+                     <col width="8%"/>
+                     <col width="31%"/>
+                     <col width="12%"/>
+                     <col width="21%"/>
+                     <col width="14%"/>
+                     <col width="12%"/>
+                     <tbody>
+                        <tr>
+                           <td styleCode="Rrule Botrule Toprule " valign="top"/>
+                           <td styleCode="Rrule Botrule Toprule " valign="top"/>
+                           <td align="center" colspan="3" styleCode="Rrule Botrule Toprule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">HbA1c (%)
+      
+       <sup>a</sup>
+                                 </content>
+                              </paragraph>
+                           </td>
+                           <td styleCode="Botrule Toprule " valign="top"/>
+                        </tr>
+                        <tr>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">Study</content>
+                              </paragraph>
+                           </td>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">Treatment</content>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">Mean Baseline</content>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">Mean Change 
+       <br/>  From Baseline
+      
+       <sup>b</sup>
+                                 </content>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">Treatment Difference</content>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Botrule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">p-Value</content>
+                              </paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td align="center" rowspan="2" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>1</paragraph>
+                           </td>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>Placebo Plus Diet</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>8.67</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>+0.33</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>----</paragraph>
+                           </td>
+                           <td align="center" styleCode="Botrule " valign="top">
+                              <paragraph>----</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>Acarbose 100 mg t.i.d. Plus Diet</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>8.69</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>-0.45</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>-0.78</paragraph>
+                           </td>
+                           <td align="center" styleCode="Botrule " valign="top">
+                              <paragraph>0.0001</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td align="center" rowspan="2" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>2</paragraph>
+                           </td>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>Placebo Plus SFU
+     
+      <sup>c</sup>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>9.56</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>+0.24</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>----</paragraph>
+                           </td>
+                           <td align="center" styleCode="Botrule " valign="top">
+                              <paragraph>----</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>Acarbose 50 to 300
+     
+      <sup>d</sup>mg t.i.d. Plus SFU
+     
+      <sup>c</sup>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>9.64</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>-0.30</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>-0.54</paragraph>
+                           </td>
+                           <td align="center" styleCode="Botrule " valign="top">
+                              <paragraph>0.0096</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td align="center" rowspan="2" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>3</paragraph>
+                           </td>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>Placebo Plus Metformin
+     
+      <sup>e</sup>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>8.17</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>+0.08
+     
+      <sup>g</sup>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>----</paragraph>
+                           </td>
+                           <td align="center" styleCode="Botrule " valign="top">
+                              <paragraph>----</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>Acarbose 50 to 100 mg t.i.d. Plus Metformin
+     
+      <sup>e</sup>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>8.46</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>-0.57
+     
+      <sup>g</sup>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>-0.65</paragraph>
+                           </td>
+                           <td align="center" styleCode="Botrule " valign="top">
+                              <paragraph>0.0001</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td align="center" rowspan="2" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>4</paragraph>
+                           </td>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>Placebo Plus Insulin
+     
+      <sup>f</sup>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>8.69</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>+0.11</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>----</paragraph>
+                           </td>
+                           <td align="center" styleCode="Botrule " valign="top">
+                              <paragraph>----</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>Acarbose 50 to 100 mg t.i.d. Plus Insulin
+     
+      <sup>f</sup>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>8.77</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>-0.58</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>-0.69</paragraph>
+                           </td>
+                           <td align="center" styleCode="Botrule " valign="top">
+                              <paragraph>0.0001</paragraph>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>
+                     <sup>a</sup>HbA1c Normal Range: 4 to 6%
+
+ </paragraph>
+                  <paragraph>
+                     <sup>b</sup>After four months treatment in Study 1, and six months in Studies 2, 3, and 4
+
+ </paragraph>
+                  <paragraph>
+                     <sup>c</sup>SFU, sulfonylurea, maximum dose
+
+ </paragraph>
+                  <paragraph>
+                     <sup>d</sup>Although studies utilized a maximum dose of up to 300 mg t.i.d., the maximum recommended dose for patients ≤ 60 kg is 
+  <br/>  50 mg t.i.d.; the maximum recommended dose for patients &gt; 60 kg is 100 mg t.i.d.
+
+ </paragraph>
+                  <paragraph>
+                     <sup>e</sup>Metformin dosed at 2000 mg/day or 2500 mg/day
+
+ </paragraph>
+                  <paragraph>
+                     <sup>f</sup>Mean dose of insulin 61 U/day
+
+ </paragraph>
+                  <paragraph>
+                     <sup>g</sup>Results are adjusted to a common baseline of 8.33%
+
+ </paragraph>
+                  <table width="100%">
+                     <caption>Table 3: Effect of Acarbose on Postprandial Glucose</caption>
+                     <col width="8%"/>
+                     <col width="30%"/>
+                     <col width="12%"/>
+                     <col width="18%"/>
+                     <col width="13%"/>
+                     <col width="12%"/>
+                     <tbody>
+                        <tr>
+                           <td styleCode="Rrule Botrule Toprule " valign="top"/>
+                           <td styleCode="Rrule Botrule Toprule " valign="top"/>
+                           <td align="center" colspan="3" styleCode="Rrule Botrule Toprule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">One-Hour Postprandial Glucose (mg/dL)</content>
+                              </paragraph>
+                           </td>
+                           <td styleCode="Botrule Toprule " valign="top"/>
+                        </tr>
+                        <tr>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">Study</content>
+                              </paragraph>
+                           </td>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">Treatment</content>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">Mean Baseline</content>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">Mean Change From Baseline
+      
+       <sup>a</sup>
+                                 </content>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">Treatment Difference</content>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Botrule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">p-Value</content>
+                              </paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td align="center" rowspan="2" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>1</paragraph>
+                           </td>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>Placebo Plus Diet</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>297.1</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>+31.8</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>----</paragraph>
+                           </td>
+                           <td align="center" styleCode="Botrule " valign="top">
+                              <paragraph>----</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>Acarbose 100 mg t.i.d. 
+      <br/>  Plus Diet
+     </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>299.1</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>-42.6</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>-74.4</paragraph>
+                           </td>
+                           <td align="center" styleCode="Botrule " valign="top">
+                              <paragraph>0.0001</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td align="center" rowspan="2" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>2</paragraph>
+                           </td>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>Placebo Plus SFU
+     
+      <sup>b</sup>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>308.6</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>+6.2</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>----</paragraph>
+                           </td>
+                           <td align="center" styleCode="Botrule " valign="top">
+                              <paragraph>----</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>Acarbose 50 to 300
+     
+      <sup>c</sup>mg t.i.d. Plus SFU
+     
+      <sup>b</sup>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>311.1</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>-27.3</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>-33.5</paragraph>
+                           </td>
+                           <td align="center" styleCode="Botrule " valign="top">
+                              <paragraph>0.0017</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td align="center" rowspan="2" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>3</paragraph>
+                           </td>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>Placebo Plus Metformin
+     
+      <sup>d</sup>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>263.9</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>+3.3
+     
+      <sup>f</sup>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>----</paragraph>
+                           </td>
+                           <td align="center" styleCode="Botrule " valign="top">
+                              <paragraph>----</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>Acarbose 50 to 100 mg t.i.d. Plus Metformin
+     
+      <sup>d</sup>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>283.0</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>-31.0
+     
+      <sup>f</sup>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>-34.3</paragraph>
+                           </td>
+                           <td align="center" styleCode="Botrule " valign="top">
+                              <paragraph>0.0001</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td align="center" rowspan="2" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>4</paragraph>
+                           </td>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>Placebo Plus Insulin
+     
+      <sup>e</sup>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>279.2</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>+8.0</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>----</paragraph>
+                           </td>
+                           <td align="center" styleCode="Botrule " valign="top">
+                              <paragraph>----</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>Acarbose 50 to 100 mg t.i.d. Plus Insulin
+     
+      <sup>e</sup>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>277.8</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>-28</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule " valign="top">
+                              <paragraph>-36.0</paragraph>
+                           </td>
+                           <td align="center" styleCode="Botrule " valign="top">
+                              <paragraph>0.0178</paragraph>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>
+                     <sup>a</sup>After four months treatment in Study 1, and six months in Studies 2, 3, and 4
+
+ </paragraph>
+                  <paragraph>
+                     <sup>b</sup>SFU, sulfonylurea, maximum dose
+
+ </paragraph>
+                  <paragraph>
+                     <sup>c</sup>Although studies utilized a maximum dose of up to 300 mg t.i.d., the maximum recommended dose for patients ≤60 kg is 50 mg t.i.d.; the maximum recommended dose for patients &gt;60 kg is 100 mg t.i.d.
+
+ </paragraph>
+                  <paragraph>
+                     <sup>d</sup>Metformin dosed at 2000 mg/day or 2500 mg/day
+
+ </paragraph>
+                  <paragraph>
+                     <sup>e</sup>Mean dose of insulin 61 U/day
+
+ </paragraph>
+                  <paragraph>
+                     <sup>f</sup>Results are adjusted to a common baseline of 273 mg/dL
+
+ </paragraph>
+                  <renderMultiMedia ID="id-655214400" referencedObject="ID_1219b410-51db-46af-8785-c2e7fe8db617"/>
+                  <paragraph>
+                     <content styleCode="bold">Figure 2</content>: Effects of acarbose (■) and placebo (●) on mean change in HbA1c levels from baseline throughout a one-year study in patients with type 2 diabetes mellitus when used in combination with: (A) diet alone; (B) sulfonylurea; (C) metformin; or (D) insulin. Treatment differences at 6 and 12 months were tested: *p&lt;0.01; # p=0.077.
+
+ </paragraph>
+               </text>
+               <effectiveTime value="20230228"/>
+               <component>
+                  <observationMedia ID="ID_15228cac-1ddc-45c0-838e-42b3155192ba">
+                     <text>dose of acarbose </text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-02.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="ID_1219b410-51db-46af-8785-c2e7fe8db617">
+                     <text>figure 2</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-03.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_480893f8-1a12-4cf8-8097-c2554aad1d6a">
+               <id root="20c2796b-5863-ef6a-e063-6294a90ac934"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>INDICATIONS AND USAGE</title>
+               <text>
+                  <paragraph>Acarbose Tablets are indicated as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus.</paragraph>
+               </text>
+               <effectiveTime value="20121001"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_3c9728b4-b2e2-491d-a7e0-1607d4d5646a">
+               <id root="20c2796b-5864-ef6a-e063-6294a90ac934"/>
+               <code code="34070-3" codeSystem="2.16.840.1.113883.6.1" displayName="CONTRAINDICATIONS SECTION"/>
+               <title>CONTRAINDICATIONS</title>
+               <text>
+                  <paragraph>Acarbose Tablets are contraindicated in patients with known hypersensitivity to the drug. Acarbose Tablets are contraindicated in patients with diabetic ketoacidosis or cirrhosis. Acarbose Tablets are also contraindicated in patients with inflammatory bowel disease, colonic ulceration, partial intestinal obstruction or in patients predisposed to intestinal obstruction. In addition, Acarbose Tablets are contraindicated in patients who have chronic intestinal diseases associated with marked disorders of digestion or absorption and in patients who have conditions that may deteriorate as a result of increased gas formation in the intestine.</paragraph>
+               </text>
+               <effectiveTime value="20210601"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_3ef72f64-e392-4e60-a844-dc3a5e8bcb84">
+               <id root="20c2796b-5865-ef6a-e063-6294a90ac934"/>
+               <code code="42232-9" codeSystem="2.16.840.1.113883.6.1" displayName="PRECAUTIONS SECTION"/>
+               <title>PRECAUTIONS</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">General</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Macrovascular Outcomes</content>
+                  </paragraph>
+                  <paragraph>There have been no clinical studies establishing conclusive evidence of macrovascular risk reduction with acarbose or any other anti-diabetic drug.</paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Hypoglycemia</content>
+                  </paragraph>
+                  <paragraph>Because of its mechanism of action, acarbose when administered alone should not cause hypoglycemia in the fasted or postprandial state. Sulfonylurea agents or insulin may cause hypoglycemia. Because acarbose given in combination with a sulfonylurea or insulin will cause a further lowering of blood glucose, it may increase the potential for hypoglycemia. Hypoglycemia does not occur in patients receiving metformin alone under usual circumstances of use, and no increased incidence of hypoglycemia was observed in patients when acarbose was added to metformin therapy. Oral glucose (dextrose), whose absorption is not inhibited by acarbose, should be used instead of sucrose (cane sugar) in the treatment of mild to moderate hypoglycemia. Sucrose, whose hydrolysis to glucose and fructose is inhibited by acarbose, is unsuitable for the rapid correction of hypoglycemia. Severe hypoglycemia may require the use of either intravenous glucose infusion or glucagon injection.</paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Elevated Serum Transaminase Levels</content>
+                  </paragraph>
+                  <paragraph>In long-term studies (up to 12 months, and including acarbose doses up to 300 mg t.i.d.) conducted in the United States, treatment-emergent elevations of serum transaminases (AST and/or ALT) above the upper limit of normal (ULN), greater than 1.8 times the ULN, and greater than 3 times the ULN occurred in 14%, 6%, and 3%, respectively, of acarbose-treated patients as compared to 7%, 2%, and 1%, respectively, of placebo-treated patients. Although these differences between treatments were statistically significant, these elevations were asymptomatic, reversible, more common in females, and, in general, were not associated with other evidence of liver dysfunction. In addition, these serum transaminase elevations appeared to be dose related. In US studies including acarbose doses up to the maximum approved dose of 100 mg t.i.d., treatment-emergent elevations of AST and/or ALT at any level of severity were similar between acarbose-treated patients and placebo-treated patients (p ≥ 0.496).</paragraph>
+                  <paragraph>In approximately 3 million patient-years of international post-marketing experience with acarbose, 62 cases of serum transaminase elevations &gt; 500 IU/L (29 of which were associated with jaundice) have been reported. Forty-one of these 62 patients received treatment with 100 mg t.i.d. or greater and 33 of 45 patients for whom weight was reported weighed &lt; 60 kg. In the 59 cases where follow-up was recorded, hepatic abnormalities improved or resolved upon discontinuation of acarbose in 55 and were unchanged in two. Cases of fulminant hepatitis with fatal outcome have been reported; the relationship to acarbose is unclear.</paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Loss of Control of Blood Glucose</content>
+                  </paragraph>
+                  <paragraph>When diabetic patients are exposed to stress such as fever, trauma, infection, or surgery, a temporary loss of control of blood glucose may occur. At such times, temporary insulin therapy may be necessary.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Information for Patients</content>
+                  </paragraph>
+                  <paragraph>Patients should be told to take acarbose orally three times a day at the start (with the first bite) of each main meal. It is important that patients continue to adhere to dietary instructions, a regular exercise program, and regular testing of urine and/or blood glucose.</paragraph>
+                  <paragraph>Acarbose itself does not cause hypoglycemia even when administered to patients in the fasted state. Sulfonylurea drugs and insulin, however, can lower blood sugar levels enough to cause symptoms or sometimes life-threatening hypoglycemia. Because acarbose given in combination with a sulfonylurea or insulin will cause a further lowering of blood sugar, it may increase the hypoglycemic potential of these agents. Hypoglycemia does not occur in patients receiving metformin alone under usual circumstances of use, and no increased incidence of hypoglycemia was observed in patients when acarbose was added to metformin therapy. The risk of hypoglycemia, its symptoms and treatment, and conditions that predispose to its development should be well understood by patients and responsible family members. Because acarbose prevents the breakdown of table sugar, patients should have a readily available source of glucose (dextrose, D-glucose) to treat symptoms of low blood sugar when taking acarbose in combination with a sulfonylurea or insulin.</paragraph>
+                  <paragraph>If side effects occur with acarbose, they usually develop during the first few weeks of therapy. They are most commonly mild-to-moderate gastrointestinal effects, such as flatulence, diarrhea, or abdominal discomfort, and generally diminish in frequency and intensity with time.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Laboratory Tests</content>
+                  </paragraph>
+                  <paragraph>Therapeutic response to acarbose should be monitored by periodic blood glucose tests. Measurement of glycosylated hemoglobin levels is recommended for the monitoring of long-term glycemic control.</paragraph>
+                  <paragraph>Acarbose, particularly at doses in excess of 50 mg t.i.d., may give rise to elevations of serum transaminases and, in rare instances, hyperbilirubinemia. It is recommended that serum transaminase levels be checked every 3 months during the first year of treatment with acarbose and periodically thereafter. If elevated transaminases are observed, a reduction in dosage or withdrawal of therapy may be indicated, particularly if the elevations persist.</paragraph>
+                  <paragraph>Monitoring glycemic control with 1,5-AG assay is not recommended as measurements of 1,5-AG are unreliable in assessing glycemic control in patients taking acarbose. Use alternative methods to monitor for glycemic control.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Renal Impairment</content>
+                  </paragraph>
+                  <paragraph>Plasma concentrations of acarbose in renally impaired volunteers were proportionally increased relative to the degree of renal dysfunction. Long‑term clinical trials in diabetic patients with significant renal dysfunction (serum creatinine &gt; 2.0 mg/dL) have not been conducted. Therefore, treatment of these patients with acarbose is not recommended.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Drug Interactions</content>
+                  </paragraph>
+                  <paragraph>Certain drugs tend to produce hyperglycemia and may lead to loss of blood glucose control. These drugs include the thiazides and other diuretics, corticosteroids, phenothiazines, thyroid products, estrogens, oral contraceptives, phenytoin, nicotinic acid, sympathomimetics, calcium channel-blocking drugs, and isoniazid. When such drugs are administered to a patient receiving acarbose, the patient should be closely observed for loss of blood glucose control. When such drugs are withdrawn from patients receiving acarbose in combination with sulfonylureas or insulin, patients should be observed closely for any evidence of hypoglycemia.</paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Patients Receiving Sulfonylureas or Insulin</content>
+                  </paragraph>
+                  <paragraph>Sulfonylurea agents or insulin may cause hypoglycemia. Acarbose given in combination with a sulfonylurea or insulin may cause a further lowering of blood glucose and may increase the potential for hypoglycemia. If hypoglycemia occurs, appropriate adjustments in the dosage of these agents should be made. Very rarely, individual cases of hypoglycemic shock have been reported in patients receiving acarbose therapy in combination with sulfonylureas and/or insulin.</paragraph>
+                  <paragraph>Intestinal adsorbents (for example, charcoal) and digestive enzyme preparations containing carbohydrate-splitting enzymes (for example, amylase, pancreatin) may reduce the effect of acarbose and should not be taken concomitantly.</paragraph>
+                  <paragraph>Acarbose has been shown to change the bioavailability of digoxin when they are coadministered, which may require digoxin dose adjustment. (See
+ 
+  <linkHtml href="#_Refi4i_clinical_pharmacology_id_e5886fa">CLINICAL PHARMACOLOGY</linkHtml>,
+ 
+  <linkHtml href="#_Refi4i_section_id_de9e55a2-59fa-42b4-b5">Drug-Drug Interactions</linkHtml>.)
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Carcinogenesis, Mutagenesis, and Impairment of Fertility</content>
+                  </paragraph>
+                  <paragraph>Eight carcinogenicity studies were conducted with acarbose. Six studies were performed in rats (two strains, Sprague-Dawley and Wistar) and two studies were performed in hamsters.</paragraph>
+                  <paragraph>In the first rat study, Sprague-Dawley rats received acarbose in feed at high doses (up to approximately 500 mg/kg body weight) for 104 weeks. Acarbose treatment resulted in a significant increase in the incidence of renal tumors (adenomas and adenocarcinomas) and benign Leydig cell tumors. This study was repeated with a similar outcome. Further studies were performed to separate direct carcinogenic effects of acarbose from indirect effects resulting from the carbohydrate malnutrition induced by the large doses of acarbose employed in the studies. In one study using Sprague-Dawley rats, acarbose was mixed with feed but carbohydrate deprivation was prevented by the addition of glucose to the diet. In a 26-month study of Sprague-Dawley rats, acarbose was administered by daily postprandial gavage so as to avoid the pharmacologic effects of the drug. In both of these studies, the increased incidence of renal tumors found in the original studies did not occur. Acarbose was also given in food and by postprandial gavage in two separate studies in Wistar rats. No increased incidence of renal tumors was found in either of these Wistar rat studies. In two feeding studies of hamsters, with and without glucose supplementation, there was also no evidence of carcinogenicity.</paragraph>
+                  <paragraph>Acarbose did not induce any DNA damage
+ 
+  <content styleCode="italics">in vitro</content>in the CHO chromosomal aberration assay, bacterial mutagenesis (Ames) assay, or a DNA binding assay.
+ 
+  <content styleCode="italics">In vivo</content>, no DNA damage was detected in the dominant lethal test in male mice, or the mouse micronucleus test.
+
+ </paragraph>
+                  <paragraph>Fertility studies conducted in rats after oral administration produced no untoward effect on fertility or on the overall capability to reproduce.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Pregnancy</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Teratogenic Effects</content>
+                  </paragraph>
+                  <paragraph>The safety of acarbose in pregnant women has not been established. Reproduction studies have been performed in rats at doses up to 480 mg/kg (corresponding to 9 times the exposure in humans, based on drug blood levels) and have revealed no evidence of impaired fertility or harm to the fetus due to acarbose. In rabbits, reduced maternal body weight gain, probably the result of the pharmacodynamic activity of high doses of acarbose in the intestines, may have been responsible for a slight increase in the number of embryonic losses. However, rabbits given 160 mg/kg acarbose (corresponding to 10 times the dose in man, based on body surface area) showed no evidence of embryotoxicity and there was no evidence of teratogenicity at a dose 32 times the dose in man (based on body surface area). There are, however, no adequate and well-controlled studies of acarbose in pregnant women. Because animal reproduction studies are not always predictive of the human response, this drug should be used during pregnancy only if clearly needed. Because current information strongly suggests that abnormal blood glucose levels during pregnancy are associated with a higher incidence of congenital anomalies as well as increased neonatal morbidity and mortality, most experts recommend that insulin be used during pregnancy to maintain blood glucose levels as close to normal as possible.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Nursing Mothers</content>
+                  </paragraph>
+                  <paragraph>A small amount of radioactivity has been found in the milk of lactating rats after administration of radiolabeled acarbose. It is not known whether this drug is excreted in human milk. Because many drugs are excreted in human milk, acarbose should not be administered to a nursing woman.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Pediatric Use</content>
+                  </paragraph>
+                  <paragraph>Safety and effectiveness of acarbose in pediatric patients have not been established.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Geriatric Use</content>
+                  </paragraph>
+                  <paragraph>Of the total number of subjects in clinical studies of acarbose in the United States, 27% were 65 and over, while 4% were 75 and over. No overall differences in safety and effectiveness were observed between these subjects and younger subjects. The mean steady-state area under the curve (AUC) and maximum concentrations of acarbose were approximately 1.5 times higher in elderly compared to young volunteers; however, these differences were not statistically significant.</paragraph>
+               </text>
+               <effectiveTime value="20240719"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_ae892faf-f3e0-42bb-835b-472963f80da6">
+               <id root="20c2796b-5866-ef6a-e063-6294a90ac934"/>
+               <code code="34084-4" codeSystem="2.16.840.1.113883.6.1" displayName="ADVERSE REACTIONS SECTION"/>
+               <title>ADVERSE REACTIONS</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Digestive Tract</content>
+                  </paragraph>
+                  <paragraph>Gastrointestinal symptoms are the most common reactions to acarbose. In U.S. placebo-controlled trials, the incidences of abdominal pain, diarrhea, and flatulence were 19%, 31%, and 74% respectively in 1255 patients treated with acarbose  50 to 300 mg t.i.d., whereas the corresponding incidences were 9%, 12% and 29% in 999 placebo-treated patients.</paragraph>
+                  <paragraph>In a one-year safety study, during which patients kept diaries of gastrointestinal symptoms, abdominal pain and diarrhea tended to return to pretreatment levels over time, and the frequency and intensity of flatulence tended to abate with time. The increased gastrointestinal tract symptoms in patients treated with acarbose are a manifestation of the mechanism of action of acarbose and are related to the presence of undigested carbohydrate in the lower GI tract.</paragraph>
+                  <paragraph>If the prescribed diet is not observed, the intestinal side effects may be intensified. If strongly distressing symptoms develop in spite of adherence to the diabetic diet prescribed, the doctor must be consulted and the dose temporarily or permanently reduced.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Elevated Serum Transaminase Levels</content>
+                  </paragraph>
+                  <paragraph>See
+ 
+  <linkHtml href="#_Refi4i_precautions_id_10c5645f-26bd-4f3">PRECAUTIONS</linkHtml>.
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Other Abnormal Laboratory Findings</content>
+                  </paragraph>
+                  <paragraph>Small reductions in hematocrit occurred more often in acarbose-treated patients than in placebo-treated patients but were not associated with reductions in hemoglobin. Low serum calcium and low plasma vitamin B
+ 
+  <sub>6</sub>levels were associated with acarbose therapy but are thought to be either spurious or of no clinical significance.
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Postmarketing Adverse Event Reports</content>
+                  </paragraph>
+                  <paragraph>Additional adverse events reported from worldwide postmarketing experience include fulminant hepatitis with fatal outcome, hypersensitive skin reactions (for example rash, erythema, exanthema and urticaria), edema, ileus/subileus, jaundice and/or hepatitis and associated liver damage, thrombocytopenia, and pneumatosis cystoides intestinalis (see
+ 
+  <linkHtml href="#_Refi4i_precautions_id_10c5645f-26bd-4f3">PRECAUTIONS</linkHtml>).
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Pneumatosis Cystoides Intestinalis</content>
+                  </paragraph>
+                  <paragraph>There have been rare postmarketing reports of pneumatosis cystoides intestinalis associated with the use of alpha-glucosidase inhibitors, including acarbose. Pneumatosis cystoides intestinalis may present with symptoms of diarrhea, mucus discharge, rectal bleeding, and constipation. Complications may include pneumoperitoneum, volvulus, intestinal obstruction, intussusception, intestinal hemorrhage, and intestinal perforation. If pneumatosis cystoides intestinalis is suspected, discontinue acarbose and perform the appropriate diagnostic imaging.</paragraph>
+               </text>
+               <effectiveTime value="20230228"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_fb5be394-507d-4c9f-b0a5-3f375379958a">
+               <id root="20c2796b-5867-ef6a-e063-6294a90ac934"/>
+               <code code="34088-5" codeSystem="2.16.840.1.113883.6.1" displayName="OVERDOSAGE SECTION"/>
+               <title>OVERDOSAGE</title>
+               <text>
+                  <paragraph>Unlike sulfonylureas or insulin, an overdose of acarbose will not result in hypoglycemia. An overdose may result in transient increases in flatulence, diarrhea, and abdominal discomfort which shortly subside. In cases of overdosage the patient should not be given drinks or meals containing carbohydrates (polysaccharides, oligosaccharides and disaccharides) for the next 4 to 6 hours.</paragraph>
+               </text>
+               <effectiveTime value="20121001"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_d6ed162e-304a-46f5-b4c1-dc5ff6515974">
+               <id root="20c2796b-5868-ef6a-e063-6294a90ac934"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>DOSAGE AND ADMINISTRATION</title>
+               <text>
+                  <paragraph>There is no fixed dosage regimen for the management of diabetes mellitus with acarbose or any other pharmacologic agent. Dosage of acarbose must be individualized on the basis of both effectiveness and tolerance while not exceeding the maximum recommended dose of 100 mg t.i.d. Acarbose should be taken three times daily at the start (with the first bite) of each main meal.</paragraph>
+                  <paragraph>Acarbose should be started at a low dose, with gradual dose escalation as described below, both to reduce gastrointestinal side effects and to permit identification of the minimum dose required for adequate glycemic control of the patient. If the prescribed diet is not observed, the intestinal side effects may be intensified. If strongly distressing symptoms develop in spite of adherence to the diabetic diet prescribed, the doctor must be consulted and the dose temporarily or permanently reduced.</paragraph>
+                  <paragraph>During treatment initiation and dose titration (see below), one-hour postprandial plasma glucose may be used to determine the therapeutic response to acarbose and identify the minimum effective dose for the patient. Thereafter, glycosylated hemoglobin should be measured at intervals of approximately three months. The therapeutic goal should be to decrease both postprandial plasma glucose and glycosylated hemoglobin levels to normal or near normal by using the lowest effective dose of acarbose, either as monotherapy or in combination with sulfonylureas, insulin or metformin.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Initial Dosage</content>
+                  </paragraph>
+                  <paragraph>The recommended starting dosage of acarbose is 25 mg given orally three times daily at the start (with the first bite) of each main meal. However, some patients may benefit from more gradual dose titration to minimize gastrointestinal side effects. This may be achieved by initiating treatment at 25 mg once per day and subsequently increasing the frequency of administration to achieve 25 mg t.i.d.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Maintenance Dosage</content>
+                  </paragraph>
+                  <paragraph>Once a 25 mg t.i.d. dosage regimen is reached, dosage of acarbose should be adjusted at 4 to 8 week intervals based on one-hour postprandial glucose or glycosylated hemoglobin levels, and on tolerance. The dosage can be increased from 25 mg t.i.d. to 50 mg t.i.d. Some patients may benefit from further increasing the dosage to 100 mg t.i.d. The maintenance dose ranges from 50 mg t.i.d. to 100 mg t.i.d. However, since patients with low body weight may be at increased risk for elevated serum transaminases, only patients with body weight &gt; 60 kg should be considered for dose titration above 50 mg t.i.d. (see
+ 
+  <linkHtml href="#_Refi4i_precautions_id_10c5645f-26bd-4f3">PRECAUTIONS</linkHtml>). If no further reduction in postprandial glucose or glycosylated hemoglobin levels is observed with titration to 100 mg t.i.d., consideration should be given to lowering the dose. Once an effective and tolerated dosage is established, it should be maintained.
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Maximum Dosage</content>
+                  </paragraph>
+                  <paragraph>The maximum recommended dose for patients ≤ 60 kg is 50 mg t.i.d. The maximum recommended dose for patients &gt; 60 kg is 100 mg t.i.d.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Patients Receiving Sulfonylureas or Insulin</content>
+                  </paragraph>
+                  <paragraph>Sulfonylurea agents or insulin may cause hypoglycemia. Acarbose given in combination with a sulfonylurea or insulin will cause a further lowering of blood glucose and may increase the potential for hypoglycemia. If hypoglycemia occurs, appropriate adjustments in the dosage of these agents should be made.</paragraph>
+               </text>
+               <effectiveTime value="20210601"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_7f6570b5-5576-4503-9d5c-2c22f082307a">
+               <id root="5506d52f-de6b-6497-e063-6394a90ac2e2"/>
+               <code code="34069-5" codeSystem="2.16.840.1.113883.6.1" displayName="HOW SUPPLIED SECTION"/>
+               <title>HOW SUPPLIED</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Acarbose Tablets, USP</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">25 mg tablets are supplied as round, white to off-white, biconvex tablets, debossed with product identification “54” over “311” on one side and plain on the other side.</content>
+                  </paragraph>
+                  <paragraph>NDC 72789-131-30: Bottle of   30 Tablets</paragraph>
+                  <paragraph>NDC 72789-131-60: Bottle of   60 Tablets</paragraph>
+                  <paragraph>NDC 72789-131-90: Bottle of   90 Tablets</paragraph>
+                  <paragraph>NDC 72789-131-01: Bottle of 100 Tablets</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">50 mg tablets are supplied as round, white to off-white, biconvex tablets, debossed with product identification “54” over “737” on one side and plain on the other side.</content>
+                  </paragraph>
+                  <paragraph>NDC 72789-132-30: Bottle of   30 Tablets</paragraph>
+                  <paragraph>NDC 72789-132-60: Bottle of   60 Tablets</paragraph>
+                  <paragraph>NDC 72789-132-90: Bottle of   90 Tablets</paragraph>
+                  <paragraph>NDC 72789-132-01: Bottle of 100 Tablets</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">100 mg tablets are supplied as round, white to off-white, biconvex tablets, debossed with product identification “54” over “251” on one side and plain on the other side.</content>
+                  </paragraph>
+                  <paragraph>NDC 72789-133-30: Bottle of   30 Tablets</paragraph>
+                  <paragraph>NDC 72789-133-60: Bottle of   60 Tablets</paragraph>
+                  <paragraph>NDC 72789-133-90: Bottle of   90 Tablets</paragraph>
+                  <paragraph>NDC 72789-133-01: Bottle of 100 Tablets</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Storage</content>
+                  </paragraph>
+                  <paragraph>Store at 20° to 25°C (68° to 77°F). [See USP Controlled Room Temperature.] Protect from moisture. For bottles, keep container tightly closed.</paragraph>
+               </text>
+               <effectiveTime value="20230228"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_362a0d93-32ad-44eb-8bbd-cd15ea753c46">
+               <id root="5506e802-0efb-a845-e063-6394a90aad0e"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>Package/Label Principal Display Panel</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">25 mg tablets</content>
+                  </paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="img_5506dbd1-4c55-57ab-e063-6294a90a5b3f"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20230228"/>
+               <component>
+                  <observationMedia ID="img_5506dbd1-4c55-57ab-e063-6294a90a5b3f">
+                     <text>image</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="72789131.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_ec036a23-8187-4eee-81f5-0d00de7f5afb">
+               <id root="5506dbd1-4c57-57ab-e063-6294a90a5b3f"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>Package/Label Principal Display Panel</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">50 mg tablets</content>
+                  </paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="img_5506dbd1-4c56-57ab-e063-6294a90a5b3f"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20230228"/>
+               <component>
+                  <observationMedia ID="img_5506dbd1-4c56-57ab-e063-6294a90a5b3f">
+                     <text>image</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="72789132.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_34f81be0-70cc-4c0a-ae40-56093e89b525">
+               <id root="5506e2b3-b278-a3aa-e063-6394a90ad337"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>Package/Label Principal Display Panel</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">100 mg tablets</content>
+                  </paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="img_5506db10-c45d-a45f-e063-6394a90a8651"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20230228"/>
+               <component>
+                  <observationMedia ID="img_5506db10-c45d-a45f-e063-6394a90a8651">
+                     <text>image</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="72789133.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

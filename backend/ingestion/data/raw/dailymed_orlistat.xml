@@ -1,0 +1,894 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="4d51b8f1-a819-7ff6-e063-6294a90a82bc"/>
+   <code code="34390-5" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN OTC DRUG LABEL"/>
+   <title>
+      <content styleCode="italics">Drug Facts</content>
+   </title>
+   <effectiveTime value="20260318"/>
+   <setId root="a2d3bd73-f3af-4ea5-a57c-66b0004cfe4f"/>
+   <versionNumber value="15"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id root="1.3.6.1.4.1.519.1" extension="079944263"/>
+            <name>Haleon US Holdings LLC</name>
+            <assignedEntity>
+               <assignedOrganization/>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="4d51ed42-6485-edc5-e063-6294a90a88c6"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL product data elements section"/>
+               <effectiveTime value="20260318"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="0135-0461" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>ALLI</name>
+                        <formCode code="C25158" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CAPSULE"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>orlistat</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="L06K8R7DQK" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>FD&amp;C BLUE NO. 2</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="2G86QN327L" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>GELATIN, UNSPECIFIED</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="G7036X8B5H" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>FERROUS OXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="OP1R32D61U" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MICROCRYSTALLINE CELLULOSE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="FZ989GH94E" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>POVIDONE, UNSPECIFIED</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="368GB5141J" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SODIUM LAURYL SULFATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="H8AV0SQX4D" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SODIUM STARCH GLYCOLATE TYPE A</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="7SEV7J4R1U" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>TALC</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="15FIX9V2JP" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>TITANIUM DIOXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mg" value="60"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="95M8R751W8" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>ORLISTAT</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="95M8R751W8" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>ORLISTAT</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="90" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="0135-0461-02" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="completed"/>
+                                 <effectiveTime>
+                                    <low value="20070207"/>
+                                    <high value="20170329"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="120" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="0135-0461-03" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="completed"/>
+                                 <effectiveTime>
+                                    <low value="20070207"/>
+                                    <high value="20260318"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="120" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="0135-0461-05" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20070207"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="170" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="0135-0461-06" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20070207"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="21" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="0135-0461-07" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="completed"/>
+                                 <effectiveTime>
+                                    <low value="20070207"/>
+                                    <high value="20260318"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="60" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="2" unit="1"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="0135-0461-08" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="completed"/>
+                                       <effectiveTime>
+                                          <low value="20070207"/>
+                                          <high value="20260318"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="60" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="0135-0461-01" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20160901"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="NDA021887" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73594" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="NDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20070207"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48334" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="turquoise" xsi:type="CE">
+                              <originalText>capsule</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48333" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="blue" xsi:type="CE">
+                              <originalText>dark blue band</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="15" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48336" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CAPSULE" xsi:type="CE">
+                              <originalText/>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value value="1" xsi:type="INT"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="ST">Orlistat;60</value>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_OTC_Active_Ingredient_id_02a93eeb-9398-4ea8-b450-df52c3073c86">
+               <id root="4d51b8f1-a81a-7ff6-e063-6294a90a82bc"/>
+               <code code="55106-9" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - ACTIVE INGREDIENT SECTION"/>
+               <title>
+                  <content styleCode="italics">Active ingredient (in each sealed capsule)</content>
+               </title>
+               <text>
+                  <paragraph>Orlistat 60 mg</paragraph>
+               </text>
+               <effectiveTime value="20180419"/>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_OTC_Purpose_id_9f675565-1c75-48e7-8b93-bda7d1bb687e">
+               <id root="4d51b8f1-a81b-7ff6-e063-6294a90a82bc"/>
+               <code code="55105-1" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - PURPOSE SECTION"/>
+               <title>
+                  <content styleCode="italics">Purpose</content>
+               </title>
+               <text>
+                  <paragraph>Weight loss aid</paragraph>
+               </text>
+               <effectiveTime value="20180419"/>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_indications_id_8d546286-93ee-4c48-973d-f277730187ab">
+               <id root="4d51b8f1-a81c-7ff6-e063-6294a90a82bc"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>
+                  <content styleCode="italics">Use</content>
+               </title>
+               <text>
+                  <list listType="unordered">
+                     <item>for weight loss in overweight adults, 18 years and older, when used along with a reduced-calorie and low-fat diet</item>
+                  </list>
+               </text>
+               <effectiveTime value="20180419"/>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_warnings_id_6a917d15-200c-4298-b26c-483bbadec233">
+               <id root="4d51b8f1-a81d-7ff6-e063-6294a90a82bc"/>
+               <code code="34071-1" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS SECTION"/>
+               <title>
+                  <content styleCode="italics">Warnings</content>
+               </title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Organ transplant alert:</content>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>
+                        <content styleCode="bold">do not use if you have had an organ transplant. Orlistat interferes with the medicines used to prevent transplant rejection.</content>
+                     </item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">Allergy alert:</content>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>do not use if you are allergic to any of the ingredients in orlistat capsules</item>
+                  </list>
+               </text>
+               <effectiveTime value="20260318"/>
+               <component>
+                  <section ID="i4i_OTC_Do_not_use_id_4d78c0ee-c003-4758-8d26-f615fda879f6">
+                     <id root="4d51b8f1-a81e-7ff6-e063-6294a90a82bc"/>
+                     <code code="50570-1" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - DO NOT USE SECTION"/>
+                     <title>Do not use</title>
+                     <text>
+                        <list listType="unordered">
+                           <item>
+                              <content styleCode="bold">if you are taking cyclosporine</content>
+                           </item>
+                           <item>if you have been diagnosed with problems absorbing food</item>
+                           <item>if you are not overweight</item>
+                        </list>
+                     </text>
+                     <effectiveTime value="20180419"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="i4i_OTC_Ask_Doctor_id_e24f771f-a093-4ed1-8901-dfbb8975a1ee">
+                     <id root="4d51b8f1-a81f-7ff6-e063-6294a90a82bc"/>
+                     <code code="50569-3" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - ASK DOCTOR SECTION"/>
+                     <title>Ask a doctor before use if you have ever had</title>
+                     <text>
+                        <list listType="unordered">
+                           <item>gallbladder problems</item>
+                           <item>kidney disease or kidney stones</item>
+                           <item>pancreatitis</item>
+                        </list>
+                     </text>
+                     <effectiveTime value="20260318"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="i4i_OTC_Ask_Doctor_Pharmacist_id_81c22ced-280e-4a9a-9d72-ab461279b59a">
+                     <id root="4d51b8f1-a820-7ff6-e063-6294a90a82bc"/>
+                     <code code="50568-5" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - ASK DOCTOR/PHARMACIST SECTION"/>
+                     <title>Ask a doctor or pharmacist before use if you are</title>
+                     <text>
+                        <list listType="unordered">
+                           <item>taking any of the following prescription medications. Some prescription doses may need to be adjusted, or some medications may not work as well when used with orlistat.</item>
+                           <item>anticoagulants (blood thinning medicine)</item>
+                           <item>amiodarone (heart medicine)</item>
+                           <item>diabetes medicine</item>
+                           <item>thyroid disease medicine</item>
+                           <item>seizure medicine</item>
+                           <item>antiretrovirals (HIV medicine)</item>
+                           <item>taking any other weight loss products</item>
+                        </list>
+                     </text>
+                     <effectiveTime value="20180419"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="i4i_OTC_When_Using_id_84676d06-4930-46ae-a698-15e9d84e9da3">
+                     <id root="4d51b8f1-a821-7ff6-e063-6294a90a82bc"/>
+                     <code code="50567-7" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - WHEN USING SECTION"/>
+                     <title>When using this product</title>
+                     <text>
+                        <list listType="unordered">
+                           <item>
+                              <content styleCode="bold">take a multivitamin once a day, at bedtime</content>. Orlistat can reduce the absorption of some vitamins.
+ 
+  </item>
+                           <item>follow a well-balanced, reduced-calorie, low-fat diet. Try starting this diet before taking orlistat.</item>
+                           <item>orlistat works by preventing the absorption of some of the fat you eat. The fat passes out of your body, so you may have bowel changes. You may get:
+  
+   <list listType="unordered">
+                                 <item>gas with oily spotting</item>
+                                 <item>loose stools</item>
+                                 <item>more frequent stools that may be hard to control</item>
+                              </list>
+                           </item>
+                           <item>eating a low-fat diet lowers the chance of having these bowel changes</item>
+                           <item>for every 5 pounds you lose from diet alone, orlistat can help you lose 2-3 pounds more. In studies, most people lost 5-10 pounds over 6 months.</item>
+                        </list>
+                     </text>
+                     <effectiveTime value="20260318"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="i4i_OTC_Stop_Use_id_9fa310a5-e64e-4053-9a48-6cb0983d13b8">
+                     <id root="4d51b8f1-a822-7ff6-e063-6294a90a82bc"/>
+                     <code code="50566-9" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - STOP USE SECTION"/>
+                     <title>Stop use and ask a doctor if</title>
+                     <text>
+                        <list listType="unordered">
+                           <item>you develop itching, yellow eyes or skin, dark urine or loss of appetite. There have been rare reports of liver injury in people taking orlistat.</item>
+                           <item>you develop severe pain in the back or groin, painful urination, blood in your urine, swelling of the legs or feet, or are urinating less often than normal. There have been rare reports of kidney injury in people taking orlistat.</item>
+                           <item>severe or continuous abdominal pain occurs. This may be a sign of a serious medical condition.</item>
+                           <item>you are taking medicine for seizures and your seizures happen more often or get worse</item>
+                        </list>
+                     </text>
+                     <effectiveTime value="20260318"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="i4i_OTC_Pregancy_Breastfeeding_id_143f7b0b-d9ed-4e34-9126-5ba5dff5771b">
+                     <id root="4d51b8f1-a823-7ff6-e063-6294a90a82bc"/>
+                     <code code="53414-9" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - PREGNANCY OR BREAST FEEDING SECTION"/>
+                     <title>If pregnant or breast-feeding, do not use.</title>
+                     <effectiveTime value="20100804"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="i4i_OTC_Keep_Away_Children_id_604a2c93-6d99-4827-8edc-e873a648ebff">
+                     <id root="4d51b8f1-a824-7ff6-e063-6294a90a82bc"/>
+                     <code code="50565-1" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - KEEP OUT OF REACH OF CHILDREN SECTION"/>
+                     <title>Keep out of reach of children.</title>
+                     <text>
+                        <paragraph>In case of overdose, get medical help or contact a Poison Control Center right away.</paragraph>
+                     </text>
+                     <effectiveTime value="20180419"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_dosage_admin_id_5c71ea1a-4669-410b-abe4-83913da47742">
+               <id root="4d51b8f1-a825-7ff6-e063-6294a90a82bc"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>
+                  <content styleCode="italics">Directions</content>
+               </title>
+               <text>
+                  <list listType="unordered">
+                     <item>read the enclosed brochure for other important information</item>
+                     <item>diet and exercise are the starting points for any weight loss program. Try these first before adding orlistat. Check with your doctor before starting any exercise program.</item>
+                     <item>to see if orlistat capsules are right for you, find your height on the chart to the right. You may consider starting a weight loss program with orlistat if your weight is the same or more than the weight shown for your height.</item>
+                     <item>
+                        <content styleCode="bold">for overweight adults 18 years and older:</content>
+                        <list listType="unordered">
+                           <item>take 1 capsule with each meal containing fat</item>
+                           <item>do not take more than 3 capsules daily</item>
+                        </list>
+                     </item>
+                     <item>use with a reduced-calorie, low-fat diet and exercise program until you reach your weight loss goal. Most weight loss occurs in the first 6 months.</item>
+                     <item>if you stop taking orlistat, continue with your diet and exercise program</item>
+                     <item>if you start to regain weight after you stop taking orlistat, you may need to start taking orlistat again along with your diet and exercise program</item>
+                     <item>
+                        <content styleCode="bold">take a multivitamin once a day, at bedtime, when using orlistat</content>
+                     </item>
+                  </list>
+                  <table width="100%">
+                     <col width="44%"/>
+                     <col width="56%"/>
+                     <tbody>
+                        <tr>
+                           <td align="center" colspan="2" styleCode="Botrule Toprule " valign="top">
+                              <paragraph>Ht. / Wt.</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>4’10”</paragraph>
+                           </td>
+                           <td styleCode="Botrule " valign="top">
+                              <paragraph>129 lbs.</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>4’11”</paragraph>
+                           </td>
+                           <td styleCode="Botrule " valign="top">
+                              <paragraph>133 lbs.</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>5’0”</paragraph>
+                           </td>
+                           <td styleCode="Botrule " valign="top">
+                              <paragraph>138 lbs.</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>5’1”</paragraph>
+                           </td>
+                           <td styleCode="Botrule " valign="top">
+                              <paragraph>143 lbs.</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>5’2”</paragraph>
+                           </td>
+                           <td styleCode="Botrule " valign="top">
+                              <paragraph>147 lbs.</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>5’3”</paragraph>
+                           </td>
+                           <td styleCode="Botrule " valign="top">
+                              <paragraph>152 lbs.</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>5’4”</paragraph>
+                           </td>
+                           <td styleCode="Botrule " valign="top">
+                              <paragraph>157 lbs.</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>5’5”</paragraph>
+                           </td>
+                           <td styleCode="Botrule " valign="top">
+                              <paragraph>162 lbs.</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>5’6”</paragraph>
+                           </td>
+                           <td styleCode="Botrule " valign="top">
+                              <paragraph>167 lbs.</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>5’7”</paragraph>
+                           </td>
+                           <td styleCode="Botrule " valign="top">
+                              <paragraph>172 lbs.</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>5’8”</paragraph>
+                           </td>
+                           <td styleCode="Botrule " valign="top">
+                              <paragraph>177 lbs.</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>5’9”</paragraph>
+                           </td>
+                           <td styleCode="Botrule " valign="top">
+                              <paragraph>182 lbs.</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>5’10”</paragraph>
+                           </td>
+                           <td styleCode="Botrule " valign="top">
+                              <paragraph>188 lbs.</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>5’11”</paragraph>
+                           </td>
+                           <td styleCode="Botrule " valign="top">
+                              <paragraph>193 lbs.</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>6’0”</paragraph>
+                           </td>
+                           <td styleCode="Botrule " valign="top">
+                              <paragraph>199 lbs.</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>6’1”</paragraph>
+                           </td>
+                           <td styleCode="Botrule " valign="top">
+                              <paragraph>204 lbs.</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>6’2”</paragraph>
+                           </td>
+                           <td styleCode="Botrule " valign="top">
+                              <paragraph>210 lbs.</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>6’3”</paragraph>
+                           </td>
+                           <td styleCode="Botrule " valign="top">
+                              <paragraph>216 lbs.</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>6’4”</paragraph>
+                           </td>
+                           <td styleCode="Botrule " valign="top">
+                              <paragraph>221 lbs.</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Botrule " valign="top">
+                              <paragraph>6’5”</paragraph>
+                           </td>
+                           <td styleCode="Botrule " valign="top">
+                              <paragraph>227 lbs.</paragraph>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </text>
+               <effectiveTime value="20260318"/>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_storage_id_a292eb9d-f4cb-4c7a-bee9-5ec1324d1a81">
+               <id root="4d51b8f1-a826-7ff6-e063-6294a90a82bc"/>
+               <code code="44425-7" codeSystem="2.16.840.1.113883.6.1" displayName="STORAGE AND HANDLING SECTION"/>
+               <title>
+                  <content styleCode="italics">Other information</content>
+               </title>
+               <text>
+                  <list listType="unordered">
+                     <item>store at 20 - 25
+  
+   <sup>o</sup>C (68 - 77
+  
+   <sup>o</sup>F)
+ 
+  </item>
+                     <item>protect drug from excessive light, humidity and temperatures over 30
+  
+   <sup>o</sup>C (86
+  
+   <sup>o</sup>F)
+ 
+  </item>
+                  </list>
+               </text>
+               <effectiveTime value="20180419"/>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_inactive_ingredients_id_a622971b-0bac-4266-8be7-7580cfa0cbe1">
+               <id root="4d51b8f1-a827-7ff6-e063-6294a90a82bc"/>
+               <code code="51727-6" codeSystem="2.16.840.1.113883.6.1" displayName="INACTIVE INGREDIENT SECTION"/>
+               <title>
+                  <content styleCode="italics">Inactive ingredients</content>
+               </title>
+               <text>
+                  <paragraph>edible ink, FD&amp;C blue no. 2, gelatin, iron oxide, microcrystalline cellulose, povidone, sodium lauryl sulfate, sodium starch glycolate, talc, titanium dioxide</paragraph>
+               </text>
+               <effectiveTime value="20260318"/>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_OTC_Questions_id_cb1339f4-4a71-4d69-8be5-c06328a036eb">
+               <id root="4d51b8f1-a828-7ff6-e063-6294a90a82bc"/>
+               <code code="53413-1" codeSystem="2.16.840.1.113883.6.1" displayName="OTC - QUESTIONS SECTION"/>
+               <title>
+                  <content styleCode="italics">Questions or comments?</content>
+               </title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">1-800-452-0051</content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20260318"/>
+               <component>
+                  <section ID="ID_c8c4c632-1481-4537-b09b-f991c6ed80ad">
+                     <id root="4d51b8f1-a829-7ff6-e063-6294a90a82bc"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Additional information</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="bold">TAMPER- EVIDENT features for your protection. The package has a security seal on both ends of the carton. The bottle of capsules has a foil seal under the cap imprinted with the words “sealed for your protection”. Each individual capsule is sealed with a dark blue band around the center of the capsule. DO NOT USE THIS PRODUCT IF ANY OF THESE TAMPER-EVIDENT FEATURES ARE MISSING, TORN OR BROKEN.</content>
+                        </paragraph>
+                        <paragraph>For more information and to learn more about
+ 
+  <content styleCode="bold">alli,</content>visit us at www.my
+ 
+  <content styleCode="bold">alli</content>.com
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="bold">
+                              <content styleCode="italics">The Starter Pack includes:</content>
+                           </content>
+                        </paragraph>
+                        <list listType="unordered">
+                           <item>
+                              <content styleCode="italics">Read Me First brochure</content>
+                           </item>
+                           <item>
+                              <content styleCode="italics">Up to 20 day supply (60 capsules)</content>
+                           </item>
+                        </list>
+                        <paragraph>
+                           <content styleCode="bold">
+                              <content styleCode="italics">For more information, visit www.myalli.com</content>
+                           </content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20260318"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_Principal_display_panel_id_f07211b9-c877-436b-8a68-cb41cd6e8e19">
+               <id root="4d51b8f1-a82a-7ff6-e063-6294a90a82bc"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>Principal Display Panel</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">60 capsules Starter Pack</content>
+                  </paragraph>
+                  <paragraph>SEE TOP OF PACKAGE FOR LISTING OF CONTENTS</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">alli</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Orlistat 60 mg Capsules</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Weight Loss Aid</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">60 capsules</content>
+                  </paragraph>
+                  <paragraph>FDA approved non-prescription weight loss aid</paragraph>
+                  <paragraph>
+                     <content styleCode="italics">Helps you lose more weight than dieting alone</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">60 CAPSULES</content>
+                  </paragraph>
+                  <renderMultiMedia ID="id556750010" referencedObject="B05890D8-3766-47FD-899C-EE0202F19282"/>
+               </text>
+               <effectiveTime value="20260318"/>
+               <component>
+                  <observationMedia ID="B05890D8-3766-47FD-899C-EE0202F19282">
+                     <text>Alli 60 ct starter pack</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="Alli 60 ct starter pack.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

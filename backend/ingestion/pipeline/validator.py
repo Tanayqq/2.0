@@ -123,7 +123,7 @@ class MedicalValidator:
         }
         
         seen_hashes = set()
-        required_keys = ["drug_name", "generic_name", "section", "source", "document_id", "chunk_index", "total_chunks", "version", "ingested_at"]
+        required_keys = ["drug_name", "generic_name", "section", "source", "document_id", "chunk_index", "total_chunks", "label_version", "ingested_at"]
         
         for chunk in chunks:
             # 1. Check empty chunk
