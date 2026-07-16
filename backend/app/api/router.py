@@ -64,8 +64,10 @@ def get_dashboard(usecase: ProcessClinicalQueryUseCase = Depends(get_usecase)):
             exact=True
         ).count
         
+        from qdrant_client.models import Filter, FieldCondition, MatchValue
         complete = usecase.profile_store.client.count(
             collection_name=usecase.profile_store.profiles_col,
+            count_filter=Filter(must=[FieldCondition(key="profile_type", match=MatchValue(value="identity"))]),
             exact=True
         ).count
     except Exception as e:
