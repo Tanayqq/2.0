@@ -1590,13 +1590,13 @@ Identity Profile (Grounded FDA Label Metadata):
                 "detected_sections": retrieval_stats.get("detected_sections", []),
                 "retrieved_chunks_details": [
                     {
-                        "id": doc.id,
-                        "authority": doc.metadata.get("authority", "DailyMed"),
-                        "drug": doc.metadata.get("drug_name"),
-                        "section": doc.metadata.get("section"),
-                        "vector_score": round(doc.score, 4) if doc.score else 0.0,
-                        "corpus_version": doc.metadata.get("corpus_version", "v3.2"),
-                        "text_snippet": doc.content[:150] + "..."
+                        "id": getattr(doc, "id", None),
+                        "authority": getattr(doc, "metadata", {}).get("authority", "DailyMed") if getattr(doc, "metadata", None) else "DailyMed",
+                        "drug": getattr(doc, "metadata", {}).get("drug_name") if getattr(doc, "metadata", None) else None,
+                        "section": getattr(doc, "metadata", {}).get("section") if getattr(doc, "metadata", None) else None,
+                        "vector_score": round(doc.score, 4) if getattr(doc, "score", None) else 0.0,
+                        "corpus_version": getattr(doc, "metadata", {}).get("corpus_version", "v3.2") if getattr(doc, "metadata", None) else "v3.2",
+                        "text_snippet": (getattr(doc, "content", "") or "")[:150] + "..."
                     } for doc in documents
                 ],
                 "llm_context_size": len(prompt) if 'prompt' in locals() else 0,
@@ -1605,8 +1605,9 @@ Identity Profile (Grounded FDA Label Metadata):
         }
         
         # Inject Identity Profile directly into response metadata if it's a single drug
-        if single_resolved:
-            entity_id = f"drug:{single_resolved}"
+        resolved_drug = retrieval_stats.get("resolved_drug")
+        if resolved_drug and isinstance(resolved_drug, str):
+            entity_id = f"drug:{resolved_drug.lower()}"
             identity_prof = self.profile_store.get_profile(entity_id, "identity", authority="FDA")
             if identity_prof:
                 metadata["identity_profile"] = identity_prof
