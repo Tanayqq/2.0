@@ -25,7 +25,7 @@ export interface AnswerResponse {
 }
 
 // Fallback to localhost if environment variable is not set (useful for local dev)
-const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8000/api/v1";
+export const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8000/api/v1";
 
 export const queryMedicalAPI = async (question: string): Promise<AnswerResponse> => {
   const response = await fetch(`${API_BASE_URL}/query`, {

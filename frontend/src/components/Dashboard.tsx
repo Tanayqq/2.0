@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Activity, Database, CheckCircle, AlertCircle, Server, Info } from 'lucide-react';
+import { API_BASE_URL } from '../services/api';
 
 interface DashboardMetrics {
   total_drugs: number;
@@ -20,7 +21,7 @@ export function Dashboard() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/v1/dashboard')
+    fetch(`${API_BASE_URL}/dashboard`)
       .then(res => res.json())
       .then(data => {
         setMetrics(data);
