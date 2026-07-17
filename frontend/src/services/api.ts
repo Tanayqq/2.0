@@ -21,6 +21,38 @@ export interface AnswerResponse {
     confidence?: string;
     audit?: any;
     identity_profile?: any;
+    
+    // MedRef Phase 2 Enriched Metadata
+    section_status?: Record<string, Record<string, {
+      status: string;
+      confidence_stars: string;
+      original_section: string | null;
+      evidence_count: number;
+      evidence_diversity: string | null;
+      authority: string;
+      missing_reason: string | null;
+    }>>;
+    retrieval_trace?: any[];
+    clinical_coverage?: {
+      sections: Record<string, boolean>;
+      overall_percentage: number;
+    };
+    provenance_block?: {
+      authority: string;
+      document: string;
+      version: string;
+      corpus: string;
+      chunk_id: string;
+    }[];
+    groundedness?: string;
+    groundedness_details?: string;
+    latency_breakdown?: {
+      alias_resolution_ms: number;
+      identity_lookup_ms: number;
+      vector_search_ms: number;
+      rerank_ms: number;
+      generation_ms: number;
+    };
   };
 }
 

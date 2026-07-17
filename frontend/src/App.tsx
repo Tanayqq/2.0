@@ -223,6 +223,42 @@ function parseMarkdownReport(text: string): ParsedDrug[] {
   return parsedDrugs;
 }
 
+
+function SectionHeaderBadge({ drugName, sectionKeys, activeItem }: { drugName: string, sectionKeys: string[], activeItem: any }) {
+  if (!activeItem?.a?.metadata?.section_status) return null;
+  const statusMap = activeItem.a.metadata.section_status[drugName.toLowerCase()];
+  if (!statusMap) return null;
+  
+  let bestMeta: any = null;
+  for (const key of sectionKeys) {
+     if (statusMap[key] && statusMap[key].status !== "NO_DATA") {
+         bestMeta = statusMap[key];
+         break;
+     }
+  }
+  if (!bestMeta) return null;
+  
+  return (
+    <div className="flex flex-col items-end gap-1">
+      <div className="flex items-center gap-2">
+        {bestMeta.status.includes("SEMANTIC") && (
+          <span className="text-[9px] font-bold text-yellow-500 tracking-wider font-mono-dash bg-yellow-950/30 px-1.5 py-0.5 rounded border border-yellow-900/50">
+            ⚠ Recovered from: {bestMeta.original_section || "Unknown"}
+          </span>
+        )}
+        <span className="text-[9px] font-bold text-slate-300 tracking-wider uppercase font-mono-dash bg-slate-900 px-1.5 py-0.5 rounded border border-slate-800">
+          {bestMeta.confidence_stars} {bestMeta.status.replace("_", " ")}
+        </span>
+      </div>
+      {bestMeta.evidence_diversity && (
+        <span className="text-[8px] text-slate-500 font-mono-dash text-right max-w-[150px] leading-tight">
+          Evidence: {bestMeta.evidence_diversity}
+        </span>
+      )}
+    </div>
+  );
+}
+
 // ── CUSTOM TEXT RENDERING COMPONENT ─────────────────────────────────────────
 function CustomTextRenderer({ 
   text, 
@@ -907,11 +943,14 @@ export default function App() {
                     {/* Card 1: Clinical Profile Overview */}
                     <Card className="medref-card medref-card-cyan border-cyan-500/10">
                       <CardContent className="p-5 space-y-3">
-                        <div className="flex items-center gap-2">
-                          <BookOpen className="h-4.5 w-4.5 text-cyan-400" />
-                          <span className="text-xs font-bold text-cyan-400 uppercase tracking-widest font-mono-dash">
-                            Clinical Profile Overview
-                          </span>
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            <BookOpen className="h-4.5 w-4.5 text-cyan-400" />
+                            <span className="text-xs font-bold text-cyan-400 uppercase tracking-widest font-mono-dash">
+                              Clinical Profile Overview
+                            </span>
+                          </div>
+                          <SectionHeaderBadge drugName={activeDrug.name} sectionKeys={["indications", "mechanism_of_action", "clinical_pharmacology"]} activeItem={activeItem} />
                         </div>
                         <CustomTextRenderer 
                           text={activeDrug.sections.overview} 
@@ -928,9 +967,7 @@ export default function App() {
                           <span className="text-xs font-bold text-cyan-400 uppercase tracking-widest font-mono-dash flex items-center gap-2">
                             💊 Dosing & Administration
                           </span>
-                          <span className="text-[9px] font-bold text-slate-500 tracking-wider uppercase font-mono-dash bg-slate-900 px-1.5 py-0.5 rounded border border-slate-800">
-                            Verbatim Match
-                          </span>
+                          <SectionHeaderBadge drugName={activeDrug.name} sectionKeys={["dosage_and_administration", "administration", "dosage_forms"]} activeItem={activeItem} />
                         </div>
                         {activeDrug.sections.dosing.toLowerCase() === 'not found in available sources.' ? (
                           <div className="p-3.5 rounded-lg border border-slate-800/80 bg-[#070b12] text-xs text-slate-600 italic">
@@ -949,11 +986,14 @@ export default function App() {
                     {/* Card 3: Contraindications & Warnings */}
                     <Card className="medref-card medref-card-red border-red-500/10">
                       <CardContent className="p-5 space-y-3">
-                        <div className="flex items-center gap-2">
-                          <ShieldAlert className="h-4.5 w-4.5 text-red-400" />
-                          <span className="text-xs font-bold text-red-400 uppercase tracking-widest font-mono-dash">
-                            Contraindications & Warnings
-                          </span>
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            <ShieldAlert className="h-4.5 w-4.5 text-red-400" />
+                            <span className="text-xs font-bold text-red-400 uppercase tracking-widest font-mono-dash">
+                              Contraindications & Warnings
+                            </span>
+                          </div>
+                          <SectionHeaderBadge drugName={activeDrug.name} sectionKeys={["contraindications", "warnings", "warnings_and_precautions"]} activeItem={activeItem} />
                         </div>
                         {/* Combine contraindications and warnings */}
                         <div className="space-y-3">
@@ -988,11 +1028,14 @@ export default function App() {
                     {/* Card 4: Co-Administration Risks */}
                     <Card className="medref-card medref-card-gold border-yellow-500/10">
                       <CardContent className="p-5 space-y-3">
-                        <div className="flex items-center gap-2">
-                          <AlertTriangle className="h-4.5 w-4.5 text-yellow-500" />
-                          <span className="text-xs font-bold text-yellow-500 uppercase tracking-widest font-mono-dash">
-                            Co-Administration Risks
-                          </span>
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            <AlertTriangle className="h-4.5 w-4.5 text-yellow-500" />
+                            <span className="text-xs font-bold text-yellow-500 uppercase tracking-widest font-mono-dash">
+                              Co-Administration Risks
+                            </span>
+                          </div>
+                          <SectionHeaderBadge drugName={activeDrug.name} sectionKeys={["drug_interactions", "cyp_interactions"]} activeItem={activeItem} />
                         </div>
                         <CustomTextRenderer 
                           text={activeDrug.sections.interactions} 
@@ -1053,7 +1096,7 @@ export default function App() {
                   </div>
                   
                   {/* CLINICAL AUDIT COMPONENT */}
-                  <ClinicalAudit audit={activeItem?.a.metadata?.audit} />
+                  <ClinicalAudit metadata={activeItem?.a.metadata} />
 
                   {/* 4. Sources Referenced Card List */}
                 <div className="space-y-3">

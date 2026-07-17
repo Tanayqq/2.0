@@ -23,6 +23,7 @@ class ReferenceDocument(BaseModel):
     source: str
     metadata: dict
     score: Optional[float] = None
+    cross_encoder_score: Optional[float] = None
 
 class AnswerResponse(BaseModel):
     answer: str
