@@ -1408,8 +1408,6 @@ Identity Profile (Grounded FDA Label Metadata):
 - **RxNorm ID**: {rxnorm}
 - **UNII**: {unii}"""
                 
-                import re
-                
                 # Match ### or #### Clinical Profile Overview
                 header_pattern = re.compile(r'(#{3,4}\s*Clinical Profile Overview)', re.IGNORECASE)
                 match = header_pattern.search(final_answer_text)
