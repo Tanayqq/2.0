@@ -363,12 +363,19 @@ class ProcessClinicalQueryUseCase:
                     step_trace["attempts"].append({"type": "Exact Section", "chunks": 0})
                     # 2. Semantic Search
                     qdrant_filter = {"drug_name": drug.title()}
-                    sem_docs = self.vector_db.hybrid_search(
-                        dense_vector=dense_vec,
-                        sparse_vector=sparse_vec,
-                        top_k=5,
-                        filters=qdrant_filter
-                    )
+                    if sparse_vec:
+                        sem_docs = self.vector_db.hybrid_search(
+                            dense_vector=dense_vec,
+                            sparse_vector=sparse_vec,
+                            top_k=5,
+                            filters=qdrant_filter
+                        )
+                    else:
+                        sem_docs = self.vector_db.search(
+                            query_vector=dense_vec,
+                            top_k=5,
+                            filters=qdrant_filter
+                        )
                     if sem_docs:
                         mode = "SEMANTIC_PARENT"
                         docs_for_sec = sem_docs[:3]
