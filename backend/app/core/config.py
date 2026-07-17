@@ -12,7 +12,7 @@ class Settings(BaseSettings):
     GROQ_API_KEY: str = ""
     
     # Qdrant Configuration
-    VECTOR_DB_MODE: str = "local" # Options: local, server
+    VECTOR_DB_MODE: str = "server" # Options: local, server
     QDRANT_PATH: str = "./qdrant_data"
     QDRANT_URL: str = "http://localhost:6333"
     QDRANT_API_KEY: str = ""

@@ -215,7 +215,9 @@ class ProcessClinicalQueryUseCase:
         self.expander = LayeredQueryExpander()
         self.prompt_version = "v2.0-hybrid-reranked"
         
-        self.profile_store = StructuredProfileStore()
+        # Reuse existing client from vector_db to avoid SQLite locks in local mode
+        client_instance = getattr(vector_db, "client", None)
+        self.profile_store = StructuredProfileStore(client=client_instance)
         try:
             self.profile_store.load_aliases_cache()
         except Exception as e:
@@ -265,8 +267,48 @@ class ProcessClinicalQueryUseCase:
         elif len(detected_drugs) > 1:
             resolved_drug = detected_drugs
             
-        from app.section_utils import get_canonical_sections
-        detected_sections = get_canonical_sections(query.question)
+        detected_sections = []
+        q_lower = query.question.lower()
+        
+        # Check negations helper
+        def is_negated(text: str, keyword: str) -> bool:
+            idx = text.find(keyword)
+            if idx == -1:
+                return False
+            before = text[max(0, idx-30):idx]
+            negation_pattern = r'\b(no|not|neither|nor|without|except|excluding|free\s+of)\b'
+            return bool(re.search(negation_pattern, text, re.IGNORECASE))
+            
+        for canonical_sec, keywords in SECTION_KEYWORDS.items():
+            for kw in keywords:
+                if re.search(r'\b' + re.escape(kw) + r'\b', q_lower):
+                    if not is_negated(q_lower, kw):
+                        detected_sections.append(canonical_sec)
+                        break
+        detected_sections = list(set(detected_sections))
+
+        # Expand detected sections
+        def expand_sections(detected: list[str]) -> list[str]:
+            expanded = set(detected)
+            groups = {
+                "warnings": ["warnings", "warnings_and_precautions", "boxed_warning", "precautions"],
+                "warnings_and_precautions": ["warnings", "warnings_and_precautions", "boxed_warning", "precautions"],
+                "precautions": ["warnings", "warnings_and_precautions", "boxed_warning", "precautions"],
+                "boxed_warning": ["warnings", "warnings_and_precautions", "boxed_warning", "precautions"],
+                "drug_interactions": ["drug_interactions", "alcohol_interactions", "food_interactions", "cyp_interactions", "laboratory_interactions", "monitoring"],
+                "dosage_and_administration": ["dosage_and_administration", "administration", "dosage_forms", "strengths", "maximum_dose", "loading_dose", "maintenance_dose", "renal_dose", "hepatic_dose", "dose_adjustment"],
+                "dosage": ["dosage_and_administration", "administration", "dosage_forms", "strengths", "maximum_dose", "loading_dose", "maintenance_dose", "renal_dose", "hepatic_dose", "dose_adjustment"],
+                "pregnancy": ["pregnancy", "lactation"],
+                "lactation": ["pregnancy", "lactation"],
+                "renal_impairment": ["renal_impairment", "renal_dose", "dialysis"],
+                "hepatic_impairment": ["hepatic_impairment", "hepatic_dose"]
+            }
+            for item in detected:
+                if item in groups:
+                    expanded.update(groups[item])
+            return list(expanded)
+            
+        detected_sections = expand_sections(detected_sections)
         
         logger.info(
             "section_detection",

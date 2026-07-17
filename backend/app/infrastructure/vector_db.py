@@ -10,13 +10,16 @@ class QdrantAdapter(VectorDatabaseProtocol):
     """
     def __init__(
         self, 
+        client: Optional[QdrantClient] = None,
         mode: str = "local",
         path: str = "./qdrant_data",
         url: str = "http://localhost:6333", 
         api_key: str = "", 
         collection_name: str = "openfda_labels"
     ):
-        if mode == "local":
+        if client:
+            self.client = client
+        elif mode == "local":
             self.client = QdrantClient(path=path)
         else:
             if api_key:

@@ -12,14 +12,21 @@ class StructuredProfileStore:
     """
     Manages Qdrant collections for Structured Entity Profiles, Entity Registry, and Brand Aliases.
     """
-    def __init__(self, url: Optional[str] = None, api_key: Optional[str] = None):
+    def __init__(self, client: Optional[QdrantClient] = None, mode: Optional[str] = None, path: Optional[str] = None, url: Optional[str] = None, api_key: Optional[str] = None):
+        self.mode = mode or settings.VECTOR_DB_MODE
+        self.path = path or settings.QDRANT_PATH
         self.url = url or settings.QDRANT_URL
         self.api_key = api_key or settings.QDRANT_API_KEY
         
-        if self.api_key:
-            self.client = QdrantClient(url=self.url, api_key=self.api_key, timeout=60.0)
+        if client:
+            self.client = client
+        elif self.mode == "local":
+            self.client = QdrantClient(path=self.path)
         else:
-            self.client = QdrantClient(url=self.url, timeout=60.0)
+            if self.api_key:
+                self.client = QdrantClient(url=self.url, api_key=self.api_key, timeout=60.0)
+            else:
+                self.client = QdrantClient(url=self.url, timeout=60.0)
             
         self.registry_col = "entity_registry"
         self.profiles_col = "drug_profiles"
