@@ -19,6 +19,7 @@ from .uploader import MedicalUploader
 from .statistics import IngestionStatistics
 from .reports import ReportGenerator
 from .generate_reports import generate_reports
+from app.core.config import settings
 from app.infrastructure.vector_db import QdrantAdapter
 from app.infrastructure.profile_store import StructuredProfileStore
 from .profile_parser import DeterministicProfileParser
@@ -230,8 +231,10 @@ class IngestionOrchestrator:
         """
         logger.info("running_retrieval_smoke_tests")
         db_adapter = QdrantAdapter(
-            url=ingestion_config.QDRANT_URL,
-            api_key=ingestion_config.QDRANT_API_KEY,
+            mode=settings.VECTOR_DB_MODE,
+            path=settings.QDRANT_PATH,
+            url=settings.QDRANT_URL,
+            api_key=settings.QDRANT_API_KEY,
             collection_name=ingestion_config.QDRANT_COLLECTION
         )
 

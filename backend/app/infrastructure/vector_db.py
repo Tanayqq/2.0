@@ -8,11 +8,22 @@ class QdrantAdapter(VectorDatabaseProtocol):
     """
     Adapter for Qdrant vector database supporting Hybrid Search and Metadata Filtering.
     """
-    def __init__(self, url: str = "http://localhost:6333", api_key: str = "", collection_name: str = "openfda_labels"):
-        if api_key:
-            self.client = QdrantClient(url=url, api_key=api_key, timeout=60.0)
+    def __init__(
+        self, 
+        mode: str = "local",
+        path: str = "./qdrant_data",
+        url: str = "http://localhost:6333", 
+        api_key: str = "", 
+        collection_name: str = "openfda_labels"
+    ):
+        if mode == "local":
+            self.client = QdrantClient(path=path)
         else:
-            self.client = QdrantClient(url=url, timeout=60.0)
+            if api_key:
+                self.client = QdrantClient(url=url, api_key=api_key, timeout=60.0)
+            else:
+                self.client = QdrantClient(url=url, timeout=60.0)
+        
         self.collection_name = collection_name
 
     def _build_filter(self, filters: Optional[Dict[str, Any]]) -> Optional[Filter]:

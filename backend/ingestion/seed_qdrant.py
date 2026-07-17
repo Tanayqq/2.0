@@ -44,12 +44,20 @@ def run_ingestion():
     embedder = TextEmbedding(model_name=MODEL_NAME)
     print("  Model ready.")
 
-    # ── Connect to Qdrant Cloud ───────────────────────────────────────────────
-    if not QDRANT_URL:
-        print("ERROR: QDRANT_URL is not set. Add it to your .env file.")
-        sys.exit(1)
-    print(f"Connecting to Qdrant Cloud at {QDRANT_URL} ...")
-    client = QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY)
+    VECTOR_DB_MODE = os.getenv("VECTOR_DB_MODE", "server")
+    QDRANT_PATH = os.getenv("QDRANT_PATH", "./qdrant_data")
+    
+    # ── Connect to Qdrant ───────────────────────────────────────────────
+    if VECTOR_DB_MODE == "local":
+        print(f"Connecting to Qdrant Local at {QDRANT_PATH} ...")
+        client = QdrantClient(path=QDRANT_PATH)
+    else:
+        if not QDRANT_URL:
+            print("ERROR: QDRANT_URL is not set. Add it to your .env file.")
+            sys.exit(1)
+        print(f"Connecting to Qdrant Cloud at {QDRANT_URL} ...")
+        client = QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY)
+    
     print("  Connected.")
 
     # ── Create / recreate collection ─────────────────────────────────────────

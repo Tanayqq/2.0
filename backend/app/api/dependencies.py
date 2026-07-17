@@ -21,7 +21,12 @@ def get_embedding_model() -> EmbeddingModelProtocol:
 
 @lru_cache()
 def get_vector_db() -> VectorDatabaseProtocol:
-    return QdrantAdapter(url=settings.QDRANT_URL, api_key=settings.QDRANT_API_KEY)
+    return QdrantAdapter(
+        mode=settings.VECTOR_DB_MODE,
+        path=settings.QDRANT_PATH,
+        url=settings.QDRANT_URL, 
+        api_key=settings.QDRANT_API_KEY
+    )
 
 @lru_cache()
 def get_cross_encoder() -> CrossEncoderProtocol:

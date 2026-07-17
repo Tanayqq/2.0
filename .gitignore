@@ -9,3 +9,4 @@ dist/
 build/
 .gemini/
 scratch/
+backend/qdrant_data/
