@@ -95,6 +95,22 @@ def run_ingestion():
         if "section" in normalized_item:
             normalized_item["section"] = parser.normalize_section_title(normalized_item["section"])
             
+        # Map to Phase 2 schema keys
+        normalized_item["drug_name"] = item.get("drug", "")
+        canon_sec = normalized_item.get("category", "")
+        normalized_item["canonical_section"] = canon_sec
+        normalized_item["section"] = canon_sec
+        
+        # Add basic metadata to prevent None errors
+        normalized_item["authority"] = "DailyMed" if "DailyMed" in item.get("source", "") else "openFDA"
+        normalized_item["authority_rank"] = 2 if "DailyMed" in item.get("source", "") else 1
+        normalized_item["corpus_version"] = "v3.2"
+        normalized_item["document_version"] = "2026-07"
+        normalized_item["retrieved_at"] = "2026-07-17T00:00:00Z"
+        normalized_item["chunk_hash"] = "mock_hash"
+        normalized_item["patient_population"] = "general"
+        normalized_item["clinical_category"] = "Clinical Overview"
+            
         points.append(PointStruct(
             id      = point_id,
             vector  = {"dense": vec.tolist()},
