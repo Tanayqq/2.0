@@ -15,6 +15,7 @@ class DrugNameResolver:
         "fortamet": "metformin",
         "glumetza": "metformin",
         "amoxil": "amoxicillin",
+        "novamox": "amoxicillin",
         "advil": "ibuprofen",
         "motrin": "ibuprofen",
         "cozaar": "losartan",

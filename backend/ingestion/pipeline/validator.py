@@ -135,9 +135,19 @@ class MedicalValidator:
                 
             # 2. Check token bounds
             token_count = chunk.get("token_count", 0)
-            if token_count < ingestion_config.MIN_CHUNK_TOKENS:
+            section_title = chunk.get("section", "")
+            effective_min = ingestion_config.MIN_CHUNK_TOKENS
+            critical_sections = {
+                "pregnancy", "lactation", "pediatric_use", "geriatric_use", 
+                "renal_impairment", "hepatic_impairment", "contraindications", 
+                "warnings", "precautions"
+            }
+            if section_title.lower() in critical_sections:
+                effective_min = 5
+
+            if token_count < effective_min:
                 stats["rejected_too_short"] += 1
-                logger.warning("chunk_validation_failed_too_short", drug=chunk.get("drug_name"), tokens=token_count, min=ingestion_config.MIN_CHUNK_TOKENS)
+                logger.warning("chunk_validation_failed_too_short", drug=chunk.get("drug_name"), tokens=token_count, min=effective_min)
                 continue
                 
             if token_count > ingestion_config.MAX_CHUNK_TOKENS:

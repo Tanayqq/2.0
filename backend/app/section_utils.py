@@ -137,6 +137,9 @@ SECTION_SYNONYMS: dict[str, str] = {
     "contraindications": "contraindications",
     "contraindication": "contraindications",
     "contraindicated": "contraindications",
+    "do not use": "contraindications",
+    "do not use if": "contraindications",
+    "do not use if you have": "contraindications",
     
     # Boxed Warning
     "boxed warning": "boxed_warning",
@@ -162,6 +165,9 @@ SECTION_SYNONYMS: dict[str, str] = {
     "drug-drug interactions": "drug_interactions",
     "interactions": "drug_interactions",
     "interaction": "drug_interactions",
+    "ask a doctor or pharmacist before use if you are": "drug_interactions",
+    "ask a doctor or pharmacist before use if": "drug_interactions",
+    "ask a doctor or pharmacist": "drug_interactions",
     
     # Alcohol Interactions
     "alcohol interactions": "alcohol_interactions",
@@ -195,6 +201,10 @@ SECTION_SYNONYMS: dict[str, str] = {
     "use in pregnancy": "pregnancy",
     "pregnancy and lactation": "pregnancy",
     "pregnancy warning": "pregnancy",
+    "if pregnant or breast-feeding": "pregnancy",
+    "if pregnant or breast feeding": "pregnancy",
+    "if pregnant or breast-feeding,": "pregnancy",
+    "if pregnant or breast feeding,": "pregnancy",
     
     # Lactation
     "lactation": "lactation",

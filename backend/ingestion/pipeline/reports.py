@@ -362,6 +362,15 @@ This report records the retrieval smoke test results following ingestion.
                 pct = round((count / all_drugs) * 100, 1) if all_drugs > 0 else 0.0
                 section_coverage[cat] = pct
 
+        # Collect all authorities from chunks and aliases
+        authorities_stats = {}
+        for src, count in self.stats.source_distribution.items():
+            auth_name = "FDA" if "openfda" in src.lower() else ("DailyMed" if "dailymed" in src.lower() else src)
+            authorities_stats[auth_name] = authorities_stats.get(auth_name, 0) + count
+        for src, count in self.stats.alias_source_distribution.items():
+            auth_name = "CDSCO" if "resolver" in src.lower() else ("RxNorm" if "rxnorm" in src.lower() else src)
+            authorities_stats[auth_name] = authorities_stats.get(auth_name, 0) + count
+
         manifest = {
             "pipeline_version": ingestion_config.PIPELINE_VERSION,
             "parser_version": "2.1.0",
@@ -369,7 +378,7 @@ This report records the retrieval smoke test results following ingestion.
             "embedding_dimension": ingestion_config.EMBEDDING_DIMENSION,
             "vector_db": "Qdrant",
             "collection": ingestion_config.QDRANT_COLLECTION,
-            "authorities": list(self.stats.source_distribution.keys()) if hasattr(self.stats, "source_distribution") else ["DailyMed", "openFDA"],
+            "authorities": authorities_stats,
             "created_at": now.isoformat() + "Z",
             "drugs": len(self.stats.drug_chunk_counts),
             "chunks": self.stats.chunks_created,

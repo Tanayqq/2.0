@@ -187,9 +187,99 @@ class IngestionOrchestrator:
                 checksum=checksum,
                 version=1
             )
-            # 3. Upsert brand aliases
-            for brand in brand_names_list:
-                self.profile_store.upsert_alias(brand, entity_id)
+             # 3. Build and upsert prioritized brand aliases with rich metadata
+            from app.usecases.drug_resolver import DrugNameResolver
+            aliases_with_meta = []
+            seen_aliases = set()
+            generic_title = parsed_doc.generic_name.title() if parsed_doc.generic_name else parsed_doc.drug.title()
+
+            def add_alias(alias_str, generic, country, authority, source, alias_type):
+                if not alias_str:
+                    return
+                name_clean = alias_str.strip()
+                name_lower = name_clean.lower()
+                if name_lower not in seen_aliases:
+                    seen_aliases.add(name_lower)
+                    aliases_with_meta.append({
+                        "alias": name_clean,
+                        "generic": generic,
+                        "country": country,
+                        "authority": authority,
+                        "source": source,
+                        "type": alias_type
+                    })
+
+            # Priority 0: Always register the generic name itself (type: generic)
+            add_alias(generic_title, generic_title, "US", "FDA", "Registry", "generic")
+
+            # Priority 1: DailyMed Proprietary Names (from XML)
+            if parsed_doc.source.lower() == "dailymed":
+                add_alias(parsed_doc.drug.title(), generic_title, "US", "DailyMed", "DailyMed XML", "brand")
+
+            # Load raw openfda to extract RxNorm synonyms & OpenFDA brand_names
+            openfda_raw = self.profile_parser._read_raw_openfda(parsed_doc.drug)
+            openfda_meta = openfda_raw.get("openfda", {})
+
+            # Priority 2: RxNorm Synonyms
+            rxnorm_substances = openfda_meta.get("substance_name", [])
+            for substance in rxnorm_substances:
+                add_alias(substance.title(), generic_title, "US", "FDA", "RxNorm", "synonym")
+            rxnorm_generics = openfda_meta.get("generic_name", [])
+            for gen_name in rxnorm_generics:
+                add_alias(gen_name.title(), generic_title, "US", "FDA", "RxNorm", "generic")
+
+            # Priority 2.5: RxNorm API Integration
+            try:
+                from .providers.sources.rxnorm_client import RxNormClient
+                import time
+                rx_client = RxNormClient()
+                rxcui = rx_client.get_rxcui(parsed_doc.drug)
+                if not rxcui and parsed_doc.generic_name:
+                    rxcui = rx_client.get_rxcui(parsed_doc.generic_name)
+                if rxcui:
+                    rx_names = rx_client.get_all_names(rxcui)
+                    for rx_name in rx_names:
+                        add_alias(rx_name.title(), generic_title, "US", "FDA", "RxNorm API", "brand")
+                    time.sleep(0.2)
+            except Exception as rx_err:
+                logger.warning("rxnorm_api_integration_failed", drug=parsed_doc.drug, error=str(rx_err))
+
+            # Priority 3: OpenFDA brand_names
+            openfda_brands = openfda_meta.get("brand_name", [])
+            for brand in openfda_brands:
+                add_alias(brand.title(), generic_title, "US", "FDA", "OpenFDA", "brand")
+
+            # Priority 4: DrugNameResolver (manual brand-to-generic mappings)
+            generic_to_brands = {}
+            for brand, gen in DrugNameResolver.BRAND_TO_GENERIC.items():
+                generic_to_brands.setdefault(gen.lower(), []).append(brand.title())
+            
+            lookup_names = [parsed_doc.drug.lower(), parsed_doc.generic_name.lower()]
+            for name in lookup_names:
+                if name in generic_to_brands:
+                    for brand in generic_to_brands[name]:
+                        country = "US" if brand.lower() in [b.lower() for b in openfda_brands] else "India"
+                        authority = "FDA" if country == "US" else "CDSCO"
+                        source = "OpenFDA" if country == "US" else "DrugNameResolver"
+                        add_alias(brand, generic_title, country, authority, source, "brand")
+
+            # Priority 5: User-defined synonyms
+            if parsed_doc.synonyms:
+                for syn in parsed_doc.synonyms:
+                    add_alias(syn.title(), generic_title, "US", "FDA", "DailyMed XML", "synonym")
+
+            # Upsert all resolved aliases with their metadata
+            for entry in aliases_with_meta:
+                self.profile_store.upsert_alias(
+                    alias=entry["alias"],
+                    entity_id=entity_id,
+                    generic=entry["generic"],
+                    country=entry["country"],
+                    authority=entry["authority"],
+                    source=entry["source"],
+                    alias_type=entry["type"]
+                )
+                self.stats.record_alias(source=entry["source"])
                 
             logger.info("structured_profiles_uploaded_successfully", drug=parsed_doc.drug)
         except Exception as e:

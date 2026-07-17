@@ -125,9 +125,19 @@ class MedicalSectionChunker:
         content = content.strip()
         total_tokens = self.count_tokens(content)
         
+        # Determine effective minimum size: bypass/reduce for critical clinical sections
+        effective_min_size = self.min_size
+        critical_sections = {
+            "pregnancy", "lactation", "pediatric_use", "geriatric_use", 
+            "renal_impairment", "hepatic_impairment", "contraindications", 
+            "warnings", "precautions"
+        }
+        if section_title.lower() in critical_sections:
+            effective_min_size = 5  # Allow very short warnings/lists
+            
         # If the entire section fits inside the max size, return it as a single chunk
         if total_tokens <= self.max_size:
-            if total_tokens >= self.min_size:
+            if total_tokens >= effective_min_size:
                 return [ChunkedSection(section_title, content, 0, total_tokens)]
             return []
             
@@ -140,10 +150,31 @@ class MedicalSectionChunker:
         chunked_sections = []
         for idx, text in enumerate(chunk_texts):
             tokens = self.count_tokens(text)
-            if tokens >= self.min_size:
-                chunked_sections.append(ChunkedSection(section_title, text, idx, tokens))
-                
-        return chunked_sections
+            chunked_sections.append(ChunkedSection(section_title, text, idx, tokens))
+            
+        # Merging pass for short chunks (< 15 tokens) within the same section
+        if len(chunked_sections) > 1:
+            merged_sections = []
+            for cs in chunked_sections:
+                if cs.token_count < 15:
+                    if merged_sections:
+                        prev = merged_sections[-1]
+                        prev.content += f"\n\n{cs.content}"
+                        prev.token_count = self.count_tokens(prev.content)
+                    else:
+                        merged_sections.append(cs)
+                else:
+                    if merged_sections and merged_sections[-1].token_count < 15:
+                        short_chunk = merged_sections.pop()
+                        cs.content = f"{short_chunk.content}\n\n{cs.content}"
+                        cs.token_count = self.count_tokens(cs.content)
+                    merged_sections.append(cs)
+            # Re-index chunks
+            for i, cs in enumerate(merged_sections):
+                cs.chunk_index = i
+            return [c for c in merged_sections if c.token_count >= effective_min_size]
+        else:
+            return [c for c in chunked_sections if c.token_count >= effective_min_size]
 
     def _extract_structured_dosing(self, content: str, section: str) -> dict:
         """
@@ -181,6 +212,22 @@ class MedicalSectionChunker:
             for cs in chunked_secs:
                 temp_chunks.append(cs)
                 
+        # Generate stub chunks for missing sections to prevent cross-contamination in direct searches
+        expected_sections = {
+            "indications", "dosage_and_administration", "contraindications",
+            "warnings", "precautions", "drug_interactions", "pregnancy",
+            "lactation", "pediatric_use", "geriatric_use", "renal_impairment",
+            "hepatic_impairment", "storage", "patient_counseling"
+        }
+        present_sections = {sec.title.lower() for sec in doc.sections}
+        missing_sections = expected_sections - present_sections
+        
+        for missing in missing_sections:
+            clean_missing = missing.replace("_", " ").title()
+            stub_content = f"No specific instructions, data, or warnings regarding {clean_missing} are provided in the official FDA label for {doc.drug}."
+            tokens = int(len(stub_content.split()) * 1.3)
+            temp_chunks.append(ChunkedSection(missing, stub_content, 0, tokens))
+                
         total_chunks = len(temp_chunks)
         chunks = []
         
@@ -196,9 +243,28 @@ class MedicalSectionChunker:
             else:
                 authority = doc.source
 
-        for cs in temp_chunks:
+        # Resolve brands/aliases for this drug to embed them in vector space
+        from app.usecases.drug_resolver import DrugNameResolver
+        generic_to_brands = {}
+        for brand, gen in DrugNameResolver.BRAND_TO_GENERIC.items():
+            generic_to_brands.setdefault(gen.lower(), []).append(brand.title())
+            
+        lookup_names = [doc.drug.lower(), doc.generic_name.lower()]
+        brands = []
+        for name in lookup_names:
+            if name in generic_to_brands:
+                brands.extend(generic_to_brands[name])
+        if doc.synonyms:
+            brands.extend([s.title() for s in doc.synonyms])
+        brands = list(dict.fromkeys(brands))
+
+        for idx, cs in enumerate(temp_chunks):
+            clean_title = cs.section_title.replace("_", " ").title()
+            brand_str = f" ({', '.join(brands)})" if brands else ""
+            content_with_context = f"Drug: {doc.drug}{brand_str} | Section: {clean_title} | {cs.content}"
+
             # SHA256 hash of content for integrity verification and deduplication
-            chunk_hash = hashlib.sha256(cs.content.encode("utf-8")).hexdigest()
+            chunk_hash = hashlib.sha256(content_with_context.encode("utf-8")).hexdigest()
             
             # Extract structured dosing
             structured_dosing = self._extract_structured_dosing(cs.content, cs.section_title)
@@ -209,8 +275,8 @@ class MedicalSectionChunker:
                 "generic_name": doc.generic_name,
                 "section": cs.section_title,
                 "canonical_section": cs.section_title,
-                "content": cs.content,
-                "chunk_index": cs.chunk_index,
+                "content": content_with_context,
+                "chunk_index": idx,
                 "total_chunks": total_chunks,
                 "token_count": cs.token_count,
                 

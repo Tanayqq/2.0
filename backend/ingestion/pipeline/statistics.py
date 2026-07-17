@@ -22,6 +22,7 @@ class IngestionStatistics:
         self.upload_success: int = 0
         self.upload_failures: int = 0
         self.duplicates_skipped: int = 0
+        self.aliases_created: int = 0
         
         self.chunk_sizes: List[int] = []  # Token counts
         self.section_distribution: Dict[str, int] = {}
@@ -29,6 +30,7 @@ class IngestionStatistics:
         self.drug_sections_counts: Dict[str, int] = {}
         self.drug_sources: Dict[str, str] = {}
         self.source_distribution: Dict[str, int] = {}
+        self.alias_source_distribution: Dict[str, int] = {}
         self.country_distribution: Dict[str, int] = {}
         self.drug_completeness: Dict[str, Any] = {}
 
@@ -82,3 +84,7 @@ class IngestionStatistics:
 
     def record_drug_completeness(self, drug: str, status_by_category: Dict[str, bool], score: int, percentage: float):
         self.drug_completeness[drug] = (status_by_category, score, percentage)
+
+    def record_alias(self, source: str = "OpenFDA"):
+        self.aliases_created += 1
+        self.alias_source_distribution[source] = self.alias_source_distribution.get(source, 0) + 1

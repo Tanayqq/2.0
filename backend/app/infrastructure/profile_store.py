@@ -104,16 +104,68 @@ class StructuredProfileStore:
         except Exception as e:
             logger.error("failed_upserting_drug_profile", entity_id=entity_id, profile_type=profile_type, error=str(e))
             
-    def upsert_alias(self, alias: str, entity_id: str):
+    def upsert_alias(
+        self, 
+        alias: str, 
+        entity_id: str, 
+        generic: str = "", 
+        country: str = "US", 
+        authority: str = "FDA", 
+        source: str = "OpenFDA", 
+        alias_type: str = "brand"
+    ):
         """
-        Upsert entry into drug_aliases.
+        Upsert entry into drug_aliases with rich metadata.
         """
         key_str = f"alias_{alias}".lower()
         uid = self.get_deterministic_uuid(key_str)
         payload = {
             "alias": alias,
-            "entity_id": entity_id
+            "entity_id": entity_id,
+            "generic": generic or entity_id.replace("drug:", "").capitalize(),
+            "country": country,
+            "authority": authority,
+            "source": source,
+            "type": alias_type
         }
+        # Check for conflicts before upserting
+        try:
+            res = self.client.retrieve(
+                collection_name=self.aliases_col,
+                ids=[uid],
+                with_payload=True
+            )
+            if res:
+                existing_payload = res[0].payload
+                existing_entity = existing_payload.get("entity_id")
+                if existing_entity and existing_entity != entity_id:
+                    existing_generic = existing_payload.get("generic", existing_entity)
+                    logger.warning(
+                        "alias_conflict_detected",
+                        alias=alias,
+                        existing_entity=existing_entity,
+                        incoming_entity=entity_id,
+                        existing_generic=existing_generic,
+                        incoming_generic=generic
+                    )
+                    # Write to docs/ALIAS_CONFLICTS.md
+                    import os
+                    os.makedirs("docs", exist_ok=True)
+                    conflict_file = "docs/ALIAS_CONFLICTS.md"
+                    entry = f"\n| `{alias}` | `{existing_generic}` (`{existing_entity}`) | `{generic}` (`{entity_id}`) | `{authority}` / `{source}` |"
+                    if not os.path.exists(conflict_file):
+                        with open(conflict_file, "w", encoding="utf-8") as f:
+                            f.write("# Alias Conflicts Report\n\n| Conflicting Alias | Existing Generic | Incoming Generic | Authority / Source |\n| --- | --- | --- | --- |\n")
+                    
+                    # Read to verify if entry is already logged
+                    with open(conflict_file, "r", encoding="utf-8") as f:
+                        content = f.read()
+                    if entry.strip() not in content:
+                        with open(conflict_file, "a", encoding="utf-8") as f:
+                            f.write(entry)
+        except Exception as e:
+            logger.error("failed_checking_alias_conflict", alias=alias, error=str(e))
+
         try:
             self.client.upsert(
                 collection_name=self.aliases_col,

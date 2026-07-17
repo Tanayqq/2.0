@@ -1,0 +1,77 @@
+[
+  {
+    "query": "Pregnancy safety of Acetaminophen",
+    "expected_drug": "Acetaminophen",
+    "expected_section": "pregnancy"
+  },
+  {
+    "query": "Omeprazole pregnancy safety",
+    "expected_drug": "Omeprazole",
+    "expected_section": "pregnancy"
+  },
+  {
+    "query": "Renal dose adjustment for Furosemide",
+    "expected_drug": "Furosemide",
+    "expected_section": "renal_impairment"
+  },
+  {
+    "query": "Pediatric use of Furosemide",
+    "expected_drug": "Furosemide",
+    "expected_section": "pediatric_use"
+  },
+  {
+    "query": "Indications for Furosemide",
+    "expected_drug": "Furosemide",
+    "expected_section": "indications"
+  },
+  {
+    "query": "Storage conditions for Furosemide",
+    "expected_drug": "Furosemide",
+    "expected_section": "storage"
+  },
+  {
+    "query": "Contraindications of Lisinopril",
+    "expected_drug": "Lisinopril",
+    "expected_section": "contraindications"
+  },
+  {
+    "query": "Metformin dosage",
+    "expected_drug": "Metformin",
+    "expected_section": "dosage_and_administration"
+  },
+  {
+    "query": "Warfarin interactions",
+    "expected_drug": "Warfarin",
+    "expected_section": "drug_interactions"
+  },
+  {
+    "query": "Novamox dosage",
+    "expected_drug": "Amoxicillin",
+    "expected_section": "dosage_and_administration"
+  },
+  {
+    "query": "Amoxicillin renal safety",
+    "expected_drug": "Amoxicillin",
+    "expected_section": "renal_impairment"
+  },
+  {
+    "query": "Atorvastatin pregnancy",
+    "expected_drug": "Atorvastatin",
+    "expected_section": "pregnancy"
+  },
+  {
+    "query": "Ibuprofen pediatric dose",
+    "expected_drug": "Ibuprofen",
+    "expected_section": "pediatric_use"
+  },
+  {
+    "query": "Gabapentin precautions",
+    "expected_drug": "Gabapentin",
+    "expected_section": "precautions"
+  },
+  {
+    "query": "Levothyroxine storage",
+    "expected_drug": "Levothyroxine",
+    "expected_section": "storage"
+  }
+]

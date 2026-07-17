@@ -99,13 +99,26 @@ class MedicalParser:
             "warnings",
             "clinical_pharmacology",
             "adverse_reactions",
-            "pharmacokinetics"
+            "pharmacokinetics",
+            "other_information"
         ]:
             return [MedicalSection(title=parent_title, content=content)]
 
         matches = []
         for pattern, canonical in self.SUBSECTION_PATTERNS:
             for m in pattern.finditer(content):
+                matched_text = m.group(1)
+                if not matched_text:
+                    continue
+                pre_text = content[max(0, m.start(1) - 5):m.start(1)]
+                is_header = (
+                    matched_text[0].isupper() or 
+                    "\n" in pre_text or 
+                    any(b in pre_text for b in ["•", "*", "-", "·"]) or
+                    any(c.isdigit() for c in pre_text)
+                )
+                if not is_header:
+                    continue
                 # Ensure we only split out the FIRST occurrence of a subsection to avoid splintering the text
                 if not any(x[1] == canonical for x in matches):
                     matches.append((m.start(1), canonical))
