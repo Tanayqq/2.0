@@ -1,0 +1,30 @@
+stages:
+  - build
+
+variables:
+  DOCKER_HOST: tcp://docker:2375
+  DOCKER_TLS_CERTDIR: ""
+
+services:
+  - name: docker:dind
+    entrypoint: ["env", "-u", "DOCKER_HOST"]
+    command: ["dockerd-entrypoint.sh"]
+
+build-and-push:
+  stage: build
+  image: docker:latest
+  only:
+    - master
+    - main
+  before_script:
+    - echo "$DOCKERHUB_TOKEN" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+  script:
+    # Build & push Backend
+    - docker build -t tanykr17/medref-backend:latest -t tanykr17/medref-backend:$CI_COMMIT_SHA ./backend
+    - docker push tanykr17/medref-backend:latest
+    - docker push tanykr17/medref-backend:$CI_COMMIT_SHA
+    
+    # Build & push Frontend
+    - docker build --build-arg VITE_API_URL=$VITE_API_URL -t tanykr17/medref-frontend:latest -t tanykr17/medref-frontend:$CI_COMMIT_SHA ./frontend
+    - docker push tanykr17/medref-frontend:latest
+    - docker push tanykr17/medref-frontend:$CI_COMMIT_SHA
