@@ -595,6 +595,20 @@ class ProcessClinicalQueryUseCase:
             
             context_str += drug_str + "\n"
             
+        # Determine overall retrieval confidence
+        if not final_docs:
+            confidence = "☆☆☆☆☆"
+        else:
+            avg_ce = sum(getattr(d, "cross_encoder_score", 0.0) or 0.0 for d in final_docs) / len(final_docs)
+            if avg_ce > 0.90:
+                confidence = "★★★★★"
+            elif avg_ce > 0.80:
+                confidence = "★★★★☆"
+            elif avg_ce > 0.60:
+                confidence = "★★★☆☆"
+            else:
+                confidence = "★★☆☆☆"
+            
         retrieval_stats = {
             "retrieval_latency_sec": round(retrieve_time, 4),
             "retrieved_count": len(final_docs),
