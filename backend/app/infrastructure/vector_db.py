@@ -61,15 +61,41 @@ class QdrantAdapter(VectorDatabaseProtocol):
     def search(self, query_vector: List[float], top_k: int = 5, filters: Optional[Dict[str, Any]] = None) -> List[ReferenceDocument]:
         qdrant_filter = self._build_filter(filters)
         
-        search_result = self.client.query_points(
-            collection_name=self.collection_name,
-            query=query_vector,
-            using="dense",
-            limit=top_k,
-            query_filter=qdrant_filter
-        )
-        
-        return self._map_results(search_result.points)
+        try:
+            search_result = self.client.query_points(
+                collection_name=self.collection_name,
+                query=query_vector,
+                using="dense",
+                limit=top_k,
+                query_filter=qdrant_filter
+            )
+            return self._map_results(search_result.points)
+        except Exception as e:
+            if "Index required" in str(e) or "400" in str(e):
+                try:
+                    self.client.create_payload_index(
+                        collection_name=self.collection_name,
+                        field_name="drug_name",
+                        field_schema=models.PayloadSchemaType.KEYWORD
+                    )
+                    search_result = self.client.query_points(
+                        collection_name=self.collection_name,
+                        query=query_vector,
+                        using="dense",
+                        limit=top_k,
+                        query_filter=qdrant_filter
+                    )
+                    return self._map_results(search_result.points)
+                except Exception:
+                    # Fallback to unfiltered search if index creation fails
+                    search_result = self.client.query_points(
+                        collection_name=self.collection_name,
+                        query=query_vector,
+                        using="dense",
+                        limit=top_k
+                    )
+                    return self._map_results(search_result.points)
+            raise e
 
     def hybrid_search(self, dense_vector: List[float], sparse_vector: Dict[int, float], top_k: int = 20, filters: Optional[Dict[str, Any]] = None) -> List[ReferenceDocument]:
         """
@@ -81,30 +107,45 @@ class QdrantAdapter(VectorDatabaseProtocol):
         # Build Qdrant sparse vector format
         sparse_indices = list(sparse_vector.keys())
         sparse_values = list(sparse_vector.values())
-        qdrant_sparse = models.SparseVector(indices=sparse_indices, values=sparse_values)
         
-        # Qdrant Query API for Hybrid Search (combining multiple prefetch vectors)
-        search_result = self.client.query_points(
-            collection_name=self.collection_name,
-            prefetch=[
-                models.Prefetch(
-                    query=dense_vector,
-                    using="dense",
-                    limit=top_k,
-                    filter=qdrant_filter
-                ),
-                models.Prefetch(
-                    query=models.SparseVector(indices=sparse_indices, values=sparse_values),
-                    using="sparse",
-                    limit=top_k,
-                    filter=qdrant_filter
-                )
-            ],
-            query=models.FusionQuery(fusion=models.Fusion.RRF),
-            limit=top_k
-        )
-        
-        return self._map_results(search_result.points)
+        def _execute(filter_obj):
+            return self.client.query_points(
+                collection_name=self.collection_name,
+                prefetch=[
+                    models.Prefetch(
+                        query=dense_vector,
+                        using="dense",
+                        limit=top_k,
+                        filter=filter_obj
+                    ),
+                    models.Prefetch(
+                        query=models.SparseVector(indices=sparse_indices, values=sparse_values),
+                        using="sparse",
+                        limit=top_k,
+                        filter=filter_obj
+                    )
+                ],
+                query=models.FusionQuery(fusion=models.Fusion.RRF),
+                limit=top_k
+            )
+
+        try:
+            search_result = _execute(qdrant_filter)
+            return self._map_results(search_result.points)
+        except Exception as e:
+            if "Index required" in str(e) or "400" in str(e):
+                try:
+                    self.client.create_payload_index(
+                        collection_name=self.collection_name,
+                        field_name="drug_name",
+                        field_schema=models.PayloadSchemaType.KEYWORD
+                    )
+                    search_result = _execute(qdrant_filter)
+                    return self._map_results(search_result.points)
+                except Exception:
+                    search_result = _execute(None)
+                    return self._map_results(search_result.points)
+            raise e
 
     def scroll_by_drug_sections(self, drug_name: str, canonical_sections: List[str], limit_per_section: int = 3) -> List[ReferenceDocument]:
         """
@@ -146,8 +187,40 @@ class QdrantAdapter(VectorDatabaseProtocol):
                         score=1.0  # Exact match — no similarity scoring needed
                     )
                     results.append(doc)
-            except Exception:
-                pass  # Silently skip if index not available for this batch
+            except Exception as e:
+                if "Index required" in str(e) or "400" in str(e):
+                    try:
+                        self.client.create_payload_index(
+                            collection_name=self.collection_name,
+                            field_name="drug_name",
+                            field_schema=models.PayloadSchemaType.KEYWORD
+                        )
+                        self.client.create_payload_index(
+                            collection_name=self.collection_name,
+                            field_name="canonical_section",
+                            field_schema=models.PayloadSchemaType.KEYWORD
+                        )
+                        scroll_result, _ = self.client.scroll(
+                            collection_name=self.collection_name,
+                            scroll_filter=qdrant_filter,
+                            limit=limit_per_section * len(section_batch),
+                            with_payload=True,
+                            with_vectors=False
+                        )
+                        for point in scroll_result:
+                            payload = point.payload or {}
+                            doc = ReferenceDocument(
+                                id=str(point.id),
+                                content=payload.get("content", payload.get("chunk_text", "")),
+                                source=payload.get("source", "Unknown"),
+                                metadata=payload,
+                                score=1.0
+                            )
+                            results.append(doc)
+                    except Exception:
+                        pass
+                else:
+                    pass  # Silently skip if index not available for this batch
         return results
 
     def _map_results(self, search_result) -> List[ReferenceDocument]:
