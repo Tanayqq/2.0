@@ -435,7 +435,7 @@ class ProcessClinicalQueryUseCase:
 
             # Guaranteed 4-Category Fill: Fetch all available chunks for the drug so all 4 UI cards populate
             if hasattr(self.vector_db, 'scroll_by_drug_all'):
-                all_drug_docs = self.vector_db.scroll_by_drug_all(drug, limit=60)
+                all_drug_docs = self.vector_db.scroll_by_drug_all(drug, limit=15)
                 for doc in all_drug_docs:
                     doc.cross_encoder_score = 0.95
                     auth = doc.metadata.get("authority", "DailyMed")
@@ -466,12 +466,8 @@ class ProcessClinicalQueryUseCase:
         
         docs_by_drug_category: Dict[str, Dict[str, list]] = {}
         for doc in final_docs:
-            # Normalize to lowercase so TitleCase chunk payloads ("Amoxicillin") match
-            # lowercase resolved drug keys ("amoxicillin") produced by the drug resolver.
-            drug = (doc.metadata.get('drug_name', doc.metadata.get('drug', '')) or '').lower()
-            raw_sec = _resolve_raw_section(doc.metadata)
-            norm_sec = normalize_section(raw_sec)
-            clinical_cat = doc.metadata.get('clinical_category', get_clinical_category(norm_sec))
+            drug = (doc.metadata.get("drug_name") or doc.metadata.get("drug") or "").strip().lower()
+            clinical_cat = get_clinical_category(doc.metadata.get("requested_section") or doc.metadata.get("section") or "")
             
             if drug not in docs_by_drug_category:
                 docs_by_drug_category[drug] = {}
@@ -518,7 +514,7 @@ class ProcessClinicalQueryUseCase:
         
         # Build structured context string (with strict size limit to stay under Groq rate limits)
         context_str = ""
-        max_char_limit = 18000
+        max_char_limit = 12000
         
         for drug in drug_order:
             if len(context_str) >= max_char_limit:
