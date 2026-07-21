@@ -1476,16 +1476,19 @@ Identity Profile (Grounded FDA Label Metadata):
         if validation_failed_reason:
             logger.warning("Inline citation removed during processing.", errors=[safe_log_str(e) for e in final_validation_errors])
             
-        logger.info(
-            "query_completed",
-            retrieval_latency=round(retrieval_time, 4),
-            llm_latency=round(total_llm_time, 4),
-            total_latency=round(retrieval_time + total_llm_time, 4),
-            retrieved_chunk_ids=[doc.id for doc in documents],
-            provider=settings.ACTIVE_LLM_PROVIDER,
-            prompt_version=self.prompt_version,
-            retrieval_confidence=confidence
-        )
+        try:
+            logger.info(
+                "query_completed",
+                retrieval_latency=round(retrieval_time, 4),
+                llm_latency=round(total_llm_time, 4),
+                total_latency=round(retrieval_time + total_llm_time, 4),
+                retrieved_chunk_ids=[doc.id for doc in documents],
+                provider=settings.ACTIVE_LLM_PROVIDER,
+                prompt_version=self.prompt_version,
+                retrieval_confidence=safe_log_str(confidence)
+            )
+        except Exception:
+            pass
         
         
         # Compute Groundedness
