@@ -28,6 +28,21 @@ class QdrantAdapter(VectorDatabaseProtocol):
                 self.client = QdrantClient(url=url, timeout=60.0)
         
         self.collection_name = collection_name
+        
+        # Ensure payload indexes exist for metadata filtering (required by Qdrant Cloud)
+        try:
+            self.client.create_payload_index(
+                collection_name=self.collection_name,
+                field_name="drug_name",
+                field_schema=models.PayloadSchemaType.KEYWORD
+            )
+            self.client.create_payload_index(
+                collection_name=self.collection_name,
+                field_name="canonical_section",
+                field_schema=models.PayloadSchemaType.KEYWORD
+            )
+        except Exception:
+            pass
 
     def _build_filter(self, filters: Optional[Dict[str, Any]]) -> Optional[Filter]:
         if not filters:
