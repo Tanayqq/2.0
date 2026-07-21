@@ -458,7 +458,9 @@ class ProcessClinicalQueryUseCase:
         
         docs_by_drug_category: Dict[str, Dict[str, list]] = {}
         for doc in final_docs:
-            drug = doc.metadata.get('drug_name', doc.metadata.get('drug', ''))
+            # Normalize to lowercase so TitleCase chunk payloads ("Amoxicillin") match
+            # lowercase resolved drug keys ("amoxicillin") produced by the drug resolver.
+            drug = (doc.metadata.get('drug_name', doc.metadata.get('drug', '')) or '').lower()
             raw_sec = _resolve_raw_section(doc.metadata)
             norm_sec = normalize_section(raw_sec)
             clinical_cat = doc.metadata.get('clinical_category', get_clinical_category(norm_sec))
@@ -468,6 +470,7 @@ class ProcessClinicalQueryUseCase:
             if clinical_cat not in docs_by_drug_category[drug]:
                 docs_by_drug_category[drug][clinical_cat] = []
             docs_by_drug_category[drug][clinical_cat].append(doc)
+
         
         # Determine the list of drugs (preserve order from resolved_drug or from docs)
         if resolved_drug and isinstance(resolved_drug, list):
@@ -812,9 +815,16 @@ CRITICAL RULES:
         self, 
         answer_text: str, 
         citations: List[Citation], 
-        citation_map: CitationMap
+        citation_map: CitationMap,
+        drug_aliases_map: Dict[str, List[str]] = None
     ) -> Tuple[str, List[Citation], Dict[str, str], List[str]]:
         import re as regex
+        
+        # Build a reverse alias lookup: alias_lower -> [generic_name, ...aliases]
+        # Used to expand chunk_search_text so brand names used by LLM match generic-name chunks
+        _alias_augment: Dict[str, List[str]] = {}  # generic -> list of all aliases
+        if drug_aliases_map:
+            _alias_augment = drug_aliases_map
         
         if answer_text.strip().strip(".!").lower() == "not found in available sources":
             return "Not found in available sources.", [], {}, []
@@ -972,7 +982,12 @@ CRITICAL RULES:
                         standard_citation = "[Unsupported Citation Removed]"
                         validation_errors.append(f"Orphan citation [{cit_num}] for sentence: '{clean_sentence_text}'")
                     else:
-                        chunk_search_text = f"{entry.drug} {entry.section} {entry.text}"
+                        # Augment chunk_search_text with all known aliases/brand names for the drug
+                        # This prevents valid brand-name sentences (e.g. "Novamox 500 mg...") from
+                        # being flagged as hallucinations when the chunk uses the generic name.
+                        drug_generic = (entry.drug or "").lower()
+                        alias_extras = " ".join(_alias_augment.get(drug_generic, []))
+                        chunk_search_text = f"{entry.drug} {alias_extras} {entry.section} {entry.text}"
                         chunk_kws = get_keywords(chunk_search_text)
                         
                         overlap_ratio = 0.0
@@ -1119,6 +1134,19 @@ CRITICAL RULES:
         context_str, citations, documents, retrieval_time, confidence, retrieval_stats, citation_map = self._build_context(query)
         prompt = self._build_prompt(context_str, query.question)
         
+        # Build alias map for grounding validation (same as execute())
+        _debug_aliases_map: Dict[str, List[str]] = {}
+        try:
+            aliases_cache = getattr(self.profile_store, 'aliases_cache', None)
+            if aliases_cache:
+                for alias, entity_id in aliases_cache.items():
+                    generic = entity_id.split(':')[-1].lower() if ':' in entity_id else entity_id.lower()
+                    if generic not in _debug_aliases_map:
+                        _debug_aliases_map[generic] = []
+                    _debug_aliases_map[generic].append(alias)
+        except Exception:
+            pass
+        
         start_llm = time.time()
         if not documents:
             raw_answer = "Not found in available sources."
@@ -1146,7 +1174,7 @@ CRITICAL RULES:
             # Post-process and validate
             citations_copy = [c.model_copy() for c in citations]
             post_processed_answer, final_citations, remapping, validation_errors = self._post_process_and_validate(
-                raw_answer, citations_copy, citation_map
+                raw_answer, citations_copy, citation_map, drug_aliases_map=_debug_aliases_map
             )
             final_answer = post_processed_answer
             validation_failed_reason = " | ".join(validation_errors) if validation_errors else None
@@ -1298,6 +1326,21 @@ Identity Profile (Grounded FDA Label Metadata):
 
         context_str, citations, documents, retrieval_time, confidence, retrieval_stats, citation_map = self._build_context(query)
         
+        # Build a generic->aliases map from the profile_store cache for grounding validation
+        # This lets the validator accept brand-name sentences (e.g. "Novamox 500 mg...") as
+        # grounded in generic-name chunks (e.g. amoxicillin dosage section).
+        drug_aliases_map: Dict[str, List[str]] = {}
+        try:
+            aliases_cache = getattr(self.profile_store, 'aliases_cache', None)
+            if aliases_cache:
+                for alias, entity_id in aliases_cache.items():
+                    generic = entity_id.split(':')[-1].lower() if ':' in entity_id else entity_id.lower()
+                    if generic not in drug_aliases_map:
+                        drug_aliases_map[generic] = []
+                    drug_aliases_map[generic].append(alias)
+        except Exception:
+            pass  # Non-critical; falls back to no alias augmentation
+
         if not documents:
             logger.info("no_documents_found")
             total_latency = time.time() - start_time
@@ -1356,7 +1399,7 @@ Identity Profile (Grounded FDA Label Metadata):
             # Post-process & validate
             citations_copy = [c.model_copy() for c in citations]
             processed_answer, processed_citations, remapping, validation_errors = self._post_process_and_validate(
-                answer_text, citations_copy, citation_map
+                answer_text, citations_copy, citation_map, drug_aliases_map=drug_aliases_map
             )
             
             if coverage >= 0.95 or attempt == max_attempts:
