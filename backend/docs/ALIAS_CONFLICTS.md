@@ -95,3 +95,5 @@
 | `Pylera` | `Tetracycline` (`drug:tetracycline`) | `Metronidazole` (`drug:metronidazole`) | `FDA` / `RxNorm API` |
 | `Bismuth Subcitrate / Metronidazole / Tetracycline` | `Tetracycline` (`drug:tetracycline`) | `Metronidazole` (`drug:metronidazole`) | `FDA` / `RxNorm API` |
 | `Bismuth Biskalcitrate / Metronidazole / Tetracycline` | `Tetracycline` (`drug:tetracycline`) | `Metronidazole` (`drug:metronidazole`) | `FDA` / `RxNorm API` |
+| `Synjardy` | `drug:empagliflozin` (`drug:empagliflozin`) | `Metformin` (`drug:metformin`) | `FDA` / `RxNorm API` |
+| `Segluromet` | `drug:ertugliflozin` (`drug:ertugliflozin`) | `Metformin` (`drug:metformin`) | `FDA` / `RxNorm API` |

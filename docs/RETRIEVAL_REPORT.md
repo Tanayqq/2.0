@@ -1,18 +1,26 @@
 # MedRef Retrieval Report
-Generated at: 2026-07-17T10:35:38.225348Z
+Generated at: 2026-07-21T11:02:03.558696Z
 
 ## Overall Corpus Statistics
 *   **Total Unique Drugs:** 105
-*   **Total Points/Chunks in Qdrant:** 3779
+*   **Total Points/Chunks in Qdrant:** 3789
 *   **Active Vector Dimensions:** 384
-*   **Average Chunk Size (Characters):** 1151.1
+*   **Average Chunk Size (Characters):** 1148.6
 *   **Total Duplicate Chunks Found:** 0
 *   **Missing Sections Count (Cumulative):** 1470
 
 ## Source Distribution
 | Source | Chunk Count | Percentage |
 | :--- | :---: | :---: |
-| DailyMed | 3779 | 100.0% |
+| DailyMed | 3779 | 99.7% |
+| DailyMed - Lisinopril Warning | 1 | 0.0% |
+| DailyMed - Atorvastatin Contraindications | 1 | 0.0% |
+| DailyMed - Amoxicillin Contraindications | 1 | 0.0% |
+| openFDA - Lisinopril Label | 2 | 0.1% |
+| openFDA - Atorvastatin Label | 1 | 0.0% |
+| DailyMed - Amoxicillin Label | 1 | 0.0% |
+| openFDA - Ibuprofen Label | 1 | 0.0% |
+| openFDA - Metformin Label | 2 | 0.1% |
 
 ## Top 20 Drugs by Chunk Count
 | Drug Name | Sections Present | Chunk Count |
@@ -43,21 +51,21 @@ Generated at: 2026-07-17T10:35:38.225348Z
 | :--- | :---: | :---: |
 | adverse_reactions | 186 | 4.9% |
 | pregnancy | 179 | 4.7% |
-| pediatric_use | 161 | 4.3% |
+| pediatric_use | 161 | 4.2% |
 | patient_counseling | 152 | 4.0% |
-| drug_interactions | 138 | 3.7% |
+| drug_interactions | 138 | 3.6% |
 | lactation | 137 | 3.6% |
-| pharmacokinetics | 123 | 3.3% |
+| pharmacokinetics | 123 | 3.2% |
 | hepatic_impairment | 121 | 3.2% |
 | warnings | 121 | 3.2% |
-| renal_impairment | 118 | 3.1% |
 | geriatric_use | 118 | 3.1% |
+| renal_impairment | 118 | 3.1% |
+| contraindications | 108 | 2.9% |
 | precautions | 106 | 2.8% |
-| contraindications | 105 | 2.8% |
 | dosage_and_administration | 101 | 2.7% |
 | description | 90 | 2.4% |
 | storage | 87 | 2.3% |
-| indications | 75 | 2.0% |
+| indications | 80 | 2.1% |
 | pharmacodynamics | 66 | 1.7% |
 | mechanism_of_action | 44 | 1.2% |
 | dosage_forms | 44 | 1.2% |
@@ -182,6 +190,7 @@ Generated at: 2026-07-17T10:35:38.225348Z
 | long_term_maintenance_of_healing_of_erosive_esophagitis | 2 | 0.1% |
 | inhalational_anthrax_post_exposure | 2 | 0.1% |
 | non_potassium_sparing_diuretics | 2 | 0.1% |
+| boxed_warning | 2 | 0.1% |
 | cockayne_syndrome | 2 | 0.1% |
 | metformin_hydrochloride_extended_release_tablets | 2 | 0.1% |
 | probenecid | 2 | 0.1% |
