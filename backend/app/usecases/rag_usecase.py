@@ -329,9 +329,8 @@ class ProcessClinicalQueryUseCase:
             resolved_drug[0] if isinstance(resolved_drug, list) and len(resolved_drug) == 1 else None
         )
         
-        sections_to_fetch = detected_sections if detected_sections else REQUIRED_UI_SECTIONS
-        if single_resolved and not detected_sections:
-            sections_to_fetch = REQUIRED_UI_SECTIONS
+        # Always include REQUIRED_UI_SECTIONS so all 4 UI cards receive evidence chunks for the drug
+        sections_to_fetch = list(dict.fromkeys(detected_sections + REQUIRED_UI_SECTIONS)) if detected_sections else REQUIRED_UI_SECTIONS
             
         drugs_to_fetch = [single_resolved] if single_resolved else (resolved_drug if isinstance(resolved_drug, list) else [])
         if not drugs_to_fetch:
