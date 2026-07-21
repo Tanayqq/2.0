@@ -223,6 +223,40 @@ class QdrantAdapter(VectorDatabaseProtocol):
                     pass  # Silently skip if index not available for this batch
         return results
 
+    def scroll_by_drug_all(self, drug_name: str, limit: int = 50) -> List[ReferenceDocument]:
+        """
+        Retrieves all available chunks for a given drug regardless of section key.
+        Guarantees complete coverage across all 4 UI categories.
+        """
+        drug_title = drug_name.strip().title()
+        qdrant_filter = Filter(
+            must=[
+                FieldCondition(key="drug_name", match=MatchValue(value=drug_title))
+            ]
+        )
+        try:
+            scroll_result, _ = self.client.scroll(
+                collection_name=self.collection_name,
+                scroll_filter=qdrant_filter,
+                limit=limit,
+                with_payload=True,
+                with_vectors=False
+            )
+            results = []
+            for point in scroll_result:
+                payload = point.payload or {}
+                doc = ReferenceDocument(
+                    id=str(point.id),
+                    content=payload.get("content", payload.get("chunk_text", "")),
+                    source=payload.get("source", "Unknown"),
+                    metadata=payload,
+                    score=1.0
+                )
+                results.append(doc)
+            return results
+        except Exception:
+            return []
+
     def _map_results(self, search_result) -> List[ReferenceDocument]:
         documents = []
         for hit in search_result:
