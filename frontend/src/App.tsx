@@ -150,25 +150,30 @@ const DRUG_EQUIVALENTS: Record<string, string[]> = {
   ramipril:            ["Altace", "Cardace", "Ramace"],
   rosuvastatin:        ["Crestor", "Rosuvas", "Rozavel"],
   // S
-  salmeterol:          ["Serevent", "Seretide", "Viani"],
-  sertraline:          ["Zoloft", "Serta", "Daxid"],
-  simvastatin:         ["Zocor", "Simvotin", "Simcard"],
-  spironolactone:      ["Aldactone", "Aldactide", "Spirotone"],
-  sulfasalazine:       ["Azulfidine", "Salazopyrin", "Sulfazine"],
+  salmeterol:          ["Serevent", "Salmeter"],
+  saxagliptin:         ["Onglyza"],
+  semaglutide:         ["Ozempic", "Wegovy", "Rybelsus"],
+  sertraline:          ["Zoloft", "Serlift", "Daxid"],
+  simvastatin:         ["Zocor", "Simvotin"],
+  sitagliptin:         ["Januvia", "Janumet"],
+  spironolactone:      ["Aldactone", "Aldactazide"],
+  sulfasalazine:       ["Azulfidine", "Salazopyrin"],
   // T
-  tacrolimus:          ["Prograf", "Pangraf", "Tacrograf"],
-  tamsulosin:          ["Flomax", "Urimax", "Veltam"],
-  terbinafine:         ["Lamisil", "Terbicip", "Terboderm"],
-  tetracycline:        ["Sumycin", "Achromycin", "Hostacycline"],
-  tiotropium:          ["Spiriva", "Tiova", "Tiomate"],
-  trimethoprim:        ["Proloprim", "Cotrim", "Bactrim"],
+  tacrolimus:          ["Prograf", "Advagraf", "Protopic"],
+  tamsulosin:          ["Flomax", "Urimax", "Contiflo"],
+  terbinafine:         ["Lamisil", "Terbinaforce"],
+  tetracycline:        ["Achromycin", "Hostacycline"],
+  tiotropium:          ["Spiriva", "Tiova"],
+  tirzepatide:         ["Mounjaro", "Zepbound"],
+  trimethoprim:        ["Bactrim", "Septra", "Trimpex"],
   // V
-  valacyclovir:        ["Valtrex", "Valacivir", "Valtoval"],
-  valsartan:           ["Diovan", "Valent", "Valsartin"],
-  vancomycin:          ["Vancocin", "Vanco", "Vancoled"],
+  valacyclovir:        ["Valtrex", "Valcivir"],
+  valsartan:           ["Diovan", "Valzaar"],
+  vancomycin:          ["Vancocin", "Vancogen"],
+  // W
   warfarin:            ["Coumadin", "Jantoven", "Marevan"],
   // Z
-  zolpidem:            ["Ambien", "Stilnoct", "Zoldrem"],
+  zolpidem:            ["Ambien", "Stilnoct", "Zolfresh"],
 };
 
 // ── SECTION PARSER HELPER ────────────────────────────────────────────────────
@@ -561,14 +566,24 @@ export default function App() {
   // Filter citations for the active drug
   const drugCitations = activeCitations.filter(c => {
     const num = c.citation_number ?? parseInt(c.document_id, 10);
-    const isCited = referencedNums.has(num);
-    const matchesDrug = !c.drug || !activeDrug || (() => {
-      const drugLower = (c.drug || "").toLowerCase();
-      const activeLower = activeDrug.name.toLowerCase();
-      return drugLower === activeLower ||
-        (drugLower ? DRUG_EQUIVALENTS[drugLower]?.some(eq => eq.toLowerCase() === activeLower) : false) ||
-        DRUG_EQUIVALENTS[activeLower]?.some(eq => eq.toLowerCase() === drugLower);
-    })();
+    const isCited = referencedNums.size === 0 || referencedNums.has(num);
+    
+    // For single drug results, display all citations referenced in the text
+    if (parsedDrugs.length <= 1) {
+      return isCited;
+    }
+
+    const drugLower = (c.drug || "").toLowerCase().trim();
+    const activeLower = (activeDrug?.name || "").toLowerCase().trim();
+    
+    const matchesDrug = !c.drug || !activeDrug || (
+      drugLower === activeLower ||
+      activeLower.includes(drugLower) ||
+      drugLower.includes(activeLower) ||
+      (drugLower ? DRUG_EQUIVALENTS[drugLower]?.some(eq => eq.toLowerCase() === activeLower || activeLower.includes(eq.toLowerCase())) : false) ||
+      (activeLower ? DRUG_EQUIVALENTS[activeLower]?.some(eq => eq.toLowerCase() === drugLower || drugLower.includes(eq.toLowerCase())) : false)
+    );
+    
     return isCited && matchesDrug;
   });
 
