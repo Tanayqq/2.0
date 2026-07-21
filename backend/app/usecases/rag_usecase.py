@@ -430,6 +430,7 @@ class ProcessClinicalQueryUseCase:
                         "evidence_diversity": None,
                         "authority": "DailyMed",
                         "missing_reason": f"No dedicated {sec} exists in the indexed label. Semantic retrieval searched the remaining document and found no clinically relevant content."
+                    }
                 retrieval_trace.append(step_trace)
 
             # Guaranteed 4-Category Fill: Fetch all available chunks for the drug so all 4 UI cards populate
