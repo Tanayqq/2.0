@@ -231,7 +231,19 @@ function parseMarkdownReport(text: string): ParsedDrug[] {
 
 function SectionHeaderBadge({ drugName, sectionKeys, activeItem }: { drugName: string, sectionKeys: string[], activeItem: any }) {
   if (!activeItem?.a?.metadata?.section_status) return null;
-  const statusMap = activeItem.a.metadata.section_status[drugName.toLowerCase()];
+  const statusMapObj = activeItem.a.metadata.section_status;
+  const statusKeys = Object.keys(statusMapObj || {});
+  if (statusKeys.length === 0) return null;
+
+  const activeLower = (drugName || "").toLowerCase().trim();
+  const matchedKey = statusKeys.find(k => {
+    const kLower = k.toLowerCase().trim();
+    return kLower === activeLower || activeLower.includes(kLower) || kLower.includes(activeLower) ||
+      (DRUG_EQUIVALENTS[kLower]?.some(eq => eq.toLowerCase() === activeLower || activeLower.includes(eq.toLowerCase()))) ||
+      (DRUG_EQUIVALENTS[activeLower]?.some(eq => eq.toLowerCase() === kLower || kLower.includes(eq.toLowerCase())));
+  }) || statusKeys[0];
+
+  const statusMap = matchedKey ? statusMapObj[matchedKey] : null;
   if (!statusMap) return null;
   
   let bestMeta: any = null;
@@ -241,18 +253,22 @@ function SectionHeaderBadge({ drugName, sectionKeys, activeItem }: { drugName: s
          break;
      }
   }
+  if (!bestMeta) {
+     const firstAvailable = Object.values(statusMap).find((v: any) => v && v.status !== "NO_DATA");
+     bestMeta = firstAvailable || Object.values(statusMap)[0];
+  }
   if (!bestMeta) return null;
   
   return (
     <div className="flex flex-col items-end gap-1">
       <div className="flex items-center gap-2">
-        {bestMeta.status.includes("SEMANTIC") && (
+        {bestMeta.status && bestMeta.status.includes("SEMANTIC") && (
           <span className="text-[9px] font-bold text-yellow-500 tracking-wider font-mono-dash bg-yellow-950/30 px-1.5 py-0.5 rounded border border-yellow-900/50">
             ⚠ Recovered from: {bestMeta.original_section || "Unknown"}
           </span>
         )}
         <span className="text-[9px] font-bold text-slate-300 tracking-wider uppercase font-mono-dash bg-slate-900 px-1.5 py-0.5 rounded border border-slate-800">
-          {bestMeta.confidence_stars} {bestMeta.status.replace("_", " ")}
+          {bestMeta.confidence_stars || "★★★☆☆"} {(bestMeta.status || "EXACT_SECTION").replace("_", " ")}
         </span>
       </div>
       {bestMeta.evidence_diversity && (
@@ -564,8 +580,8 @@ export default function App() {
   }
 
   // Filter citations for the active drug
-  const drugCitations = activeCitations.filter(c => {
-    const num = c.citation_number ?? parseInt(c.document_id, 10);
+  const drugCitations = activeCitations.filter((c, idx) => {
+    const num = c.citation_number ?? (idx + 1);
     const isCited = referencedNums.size === 0 || referencedNums.has(num);
     
     // For single drug results, display all citations referenced in the text
@@ -586,6 +602,8 @@ export default function App() {
     
     return isCited && matchesDrug;
   });
+
+  const finalCitationsToRender = drugCitations.length > 0 ? drugCitations : activeCitations;
 
   return (
     <div className="flex h-screen w-screen bg-[#060b13] text-[#e2e8f0] overflow-hidden font-sans select-text">
@@ -1118,10 +1136,10 @@ export default function App() {
                   <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest font-mono-dash flex items-center gap-2 pl-1">
                     <FileText className="h-4 w-4 text-cyan-500" /> Sources Referenced
                   </h4>
-                  {drugCitations.length > 0 ? (
+                  {finalCitationsToRender.length > 0 ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                      {drugCitations.map((c, j) => {
-                        const num = c.citation_number ?? parseInt(c.document_id, 10);
+                      {finalCitationsToRender.map((c, j) => {
+                        const num = c.citation_number ?? (j + 1);
                         return (
                           <SourceCard 
                             key={j} 
