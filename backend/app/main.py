@@ -26,8 +26,8 @@ logger.info("Allowed CORS Origins:\\n" + "\\n".join(cors_origins))
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=cors_origins,
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
