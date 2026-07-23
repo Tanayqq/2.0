@@ -3,6 +3,9 @@ from qdrant_client.models import Filter, FieldCondition, MatchValue, MatchAny, P
 from typing import List, Dict, Any, Optional
 from app.domain.interfaces import VectorDatabaseProtocol
 from app.domain.models import ReferenceDocument
+import structlog
+
+logger = structlog.get_logger()
 
 class QdrantAdapter(VectorDatabaseProtocol):
     """
