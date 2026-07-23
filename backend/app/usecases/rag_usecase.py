@@ -345,8 +345,9 @@ class ProcessClinicalQueryUseCase:
         dense_vec = self.embedding.embed_query(query.question)
         sparse_vec = self.embedding.embed_sparse(query.question)
         
-        # If no single drug was detected (e.g. Disease Chat, Guideline RAG, Primary Literature), query routed collections directly
-        if not drugs_to_fetch:
+        # If mode is non-drug (Disease Chat, Guideline RAG, Primary Literature, Symptom Chat) or no drug resolved, query routed collections directly
+        is_non_drug_mode = query.mode and query.mode.upper() in ["DISEASE_CHAT", "CLINICAL_GUIDELINE", "RESEARCH_LITERATURE", "SYMPTOM_CHAT", "INTERACTION_CHECK", "PATIENT_SCENARIO"]
+        if is_non_drug_mode or not drugs_to_fetch:
             from app.usecases.intent_router import IntentRouter
             routed = IntentRouter.route_query(query.question, country_context=query.country_context, mode_override=query.mode)
             target_cols = routed.get("target_collections", ["disease_corpus", "disease_guidelines"])
@@ -363,7 +364,8 @@ class ProcessClinicalQueryUseCase:
                         cdoc.metadata["section"] = cdoc.metadata.get("section", "indications")
                         final_docs.append(cdoc)
 
-        for drug in drugs_to_fetch:
+        if not is_non_drug_mode:
+            for drug in drugs_to_fetch:
             section_statuses[drug] = {}
             for sec in sections_to_fetch:
                 step_trace = {"drug": drug, "section": sec, "attempts": []}
