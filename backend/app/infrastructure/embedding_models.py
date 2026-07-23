@@ -3,16 +3,25 @@ from app.domain.interfaces import EmbeddingModelProtocol, CrossEncoderProtocol
 from fastembed import TextEmbedding
 
 
+_global_dense_model = None
+
+def get_shared_dense_model(model_name: str = "sentence-transformers/all-MiniLM-L6-v2"):
+    global _global_dense_model
+    if _global_dense_model is None:
+        _global_dense_model = TextEmbedding(model_name=model_name, threads=1)
+    return _global_dense_model
+
 class FastEmbedModel(EmbeddingModelProtocol):
     """
     Ultra-lightweight embedding model using fastembed (ONNX-based).
     Dense-only search to fit within Render's 512MB free tier.
     """
     def __init__(self, model_name: str = "sentence-transformers/all-MiniLM-L6-v2"):
-        self.dense_model = TextEmbedding(model_name=model_name)
+        self.model_name = model_name
 
     def embed_query(self, text: str) -> List[float]:
-        result = list(self.dense_model.embed([text]))[0]
+        model = get_shared_dense_model(self.model_name)
+        result = list(model.embed([text]))[0]
         return result.tolist()
 
     def embed_sparse(self, text: str) -> Dict[int, float]:
