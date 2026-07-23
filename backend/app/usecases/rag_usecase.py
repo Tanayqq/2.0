@@ -1654,3 +1654,22 @@ Identity Profile (Grounded FDA Label Metadata):
             metadata=metadata
         )
 
+    def get_debug_retrieval(self, query: MedicalQuery) -> Dict[str, Any]:
+        docs, stats = self._search_qdrant(query)
+        return {
+            "question": query.question,
+            "mode": query.mode,
+            "total_retrieved": len(docs),
+            "chunks": [
+                {
+                    "id": d.id,
+                    "score": d.score,
+                    "authority": d.metadata.get("authority"),
+                    "source": d.source,
+                    "title": d.metadata.get("title"),
+                    "content_snippet": (d.content or "")[:200]
+                } for d in docs
+            ]
+        }
+
+
