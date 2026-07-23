@@ -1,0 +1,36 @@
+{
+  "pipeline_version": "2.0.0",
+  "parser_version": "2.1.0",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "embedding_dimension": 384,
+  "vector_db": "Qdrant",
+  "collection": "openfda_labels",
+  "authorities": {
+    "DailyMed": 4241,
+    "Registry": 114,
+    "RxNorm": 505
+  },
+  "created_at": "2026-07-22T23:27:03.158641Z",
+  "drugs": 114,
+  "chunks": 4241,
+  "sections_extracted": 3073,
+  "validation_failures": 2,
+  "upload_success": 4081,
+  "upload_failures": 0,
+  "coverage": {
+    "Clinical Overview": 97.4,
+    "Dosage": 89.5,
+    "Contraindications": 85.1,
+    "Warnings": 78.9,
+    "Drug Interactions": 45.6,
+    "Pregnancy": 60.5,
+    "Lactation": 89.5,
+    "Pediatric": 74.6,
+    "Geriatric": 86.0,
+    "Renal": 45.6,
+    "Hepatic": 50.0,
+    "Storage": 88.6,
+    "Patient Counseling": 86.8
+  },
+  "avg_completeness_pct": 75.2
+}

@@ -1,15 +1,13 @@
 {
   "manifest_version": "1.0",
-  "pipeline_version": "1.6.0",
+  "pipeline_version": "2.0.0",
   "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
   "embedding_dimension": 384,
-  "timestamp": "2026-07-21T11:01:24.788316Z",
+  "timestamp": "2026-07-23T03:59:09.134690Z",
   "metadata": {
-    "total_drugs": 105,
-    "total_chunks": 3916,
-    "total_sections": 2882,
-    "source_counts": {
-      "DailyMed": 3916
-    }
+    "total_drugs": 0,
+    "total_chunks": 0,
+    "total_sections": 0,
+    "source_counts": {}
   }
 }

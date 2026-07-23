@@ -499,14 +499,40 @@ class ProcessClinicalQueryUseCase:
         # For any single-drug query (or when categories are missing), force all 4 UI categories
         if single_resolved or not detected_categories:
             detected_categories = ALL_UI_CATEGORIES
+        # Guaranteed 4-Category Retrieval Fallback: Ensure every UI card category has evidence chunks
+        CATEGORY_SECTIONS_FALLBACK = {
+            "Clinical Overview": ["indications", "mechanism_of_action", "clinical_pharmacology", "description"],
+            "Dosing & Administration": ["dosage_and_administration", "administration", "dosage_forms", "strengths"],
+            "Contraindications & Safety": ["contraindications", "warnings", "warnings_and_precautions", "boxed_warning", "precautions"],
+            "Co-Administration Risks": ["drug_interactions", "adverse_reactions", "cyp_interactions", "monitoring"]
+        }
+
+        for drug in drug_order:
+            if drug not in docs_by_drug_category:
+                docs_by_drug_category[drug] = {}
+            for cat in ALL_UI_CATEGORIES:
+                if len(docs_by_drug_category[drug].get(cat, [])) == 0:
+                    sec_list = CATEGORY_SECTIONS_FALLBACK.get(cat, [])
+                    fallback_docs = self.vector_db.scroll_by_drug_sections(drug, sec_list, limit_per_section=2)
+                    if fallback_docs:
+                        for fdoc in fallback_docs:
+                            fdoc.cross_encoder_score = 0.90
+                            fdoc.metadata["authority_rank"] = AUTHORITY_RANK.get(fdoc.metadata.get("authority", "DailyMed"), 99)
+                            fdoc.metadata["retrieval_mode"] = "EXACT_SECTION"
+                            if fdoc.id not in seen_uuids:
+                                seen_uuids.add(fdoc.id)
+                                final_docs.append(fdoc)
+                                docs_by_drug_category[drug].setdefault(cat, []).append(fdoc)
+
+        # Re-log per-drug per-category chunk counts after fallback fill
         for drug in drug_order:
             coverage_log[drug] = {}
             for cat in detected_categories:
                 count = len(docs_by_drug_category.get(drug, {}).get(cat, []))
                 coverage_log[drug][cat] = count
-        
+
         logger.info(
-            "retrieval_coverage",
+            "retrieval_coverage_post_fallback",
             drugs=drug_order,
             detected_sections=detected_sections,
             detected_categories=detected_categories,
