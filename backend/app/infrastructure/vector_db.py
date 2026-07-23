@@ -265,26 +265,23 @@ class QdrantAdapter(VectorDatabaseProtocol):
         Searches a specific target collection in Qdrant with backward compatibility fallback.
         """
         try:
-            if hasattr(self.client, 'query_points'):
-                try:
-                    res = self.client.query_points(
-                        collection_name=collection_name,
-                        query=query_vector,
-                        limit=top_k
-                    )
-                    return self._map_results(res.points)
-                except Exception:
-                    pass
-            
-            res = self.client.search(
+            res = self.client.query_points(
                 collection_name=collection_name,
-                query_vector=query_vector,
+                query=query_vector,
                 limit=top_k
             )
-            return self._map_results(res)
-        except Exception as e:
-            logger.error("search_collection_failed", collection=collection_name, error=str(e))
-            return []
+            return self._map_results(res.points)
+        except Exception as e1:
+            try:
+                res = self.client.search(
+                    collection_name=collection_name,
+                    query_vector=query_vector,
+                    limit=top_k
+                )
+                return self._map_results(res)
+            except Exception as e2:
+                print(f"[Qdrant] search_collection failed on {collection_name}: query_points error: {e1} | search error: {e2}")
+                return []
 
 
     def _map_results(self, search_result) -> List[ReferenceDocument]:
