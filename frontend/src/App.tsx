@@ -274,6 +274,19 @@ function parseMarkdownReport(text: string): ParsedDrug[] {
     });
   }
   
+  if (parsedDrugs.length === 0 && text.trim()) {
+    parsedDrugs.push({
+      name: "Clinical Evidence",
+      sections: {
+        contraindications: "Refer to evidence sources below for specific contraindications.",
+        warnings: "Refer to evidence sources below for specific warnings.",
+        interactions: "Refer to evidence sources below for drug interaction details.",
+        overview: text.trim(),
+        dosing: "Refer to specific medication dosing guidelines."
+      }
+    });
+  }
+  
   return parsedDrugs;
 }
 
