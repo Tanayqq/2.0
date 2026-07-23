@@ -228,6 +228,7 @@ class ProcessClinicalQueryUseCase:
         start_retrieve = time.time()
         
         from app.usecases.drug_resolver import DrugNameResolver
+        DrugNameResolver._ensure_initialized()
         from app.section_utils import normalize_section, get_clinical_category
         
         detected_drugs = []
@@ -697,6 +698,7 @@ CRITICAL RULES:
         
         # Also do a raw unfiltered search so the caller can see what Qdrant returned before filtering
         from app.usecases.drug_resolver import DrugNameResolver
+        DrugNameResolver._ensure_initialized()
         q_lower = query.question.lower()
         
         # Drug resolution (duplicate minimal version for debug only)
