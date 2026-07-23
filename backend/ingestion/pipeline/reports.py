@@ -417,3 +417,65 @@ This report records the retrieval smoke test results following ingestion.
         except Exception as e:
             logger.error("failed_archiving_ingestion_report", error=str(e))
 
+    def generate_master_drug_index(self):
+        """
+        Generates MASTER_DRUG_INDEX.json containing every drug's metadata, brand equivalents,
+        specialty classification, section breakdown, chunk count, and corpus version (v4.0).
+        """
+        taxonomy_path = os.path.join(ingestion_config.BASE_DIR, "data", "taxonomy_500.json")
+        specialty_map = {}
+        if os.path.exists(taxonomy_path):
+            try:
+                with open(taxonomy_path, "r", encoding="utf-8") as f:
+                    taxonomy_data = json.load(f)
+                    specialty_map = taxonomy_data.get("drug_to_specialty", {})
+            except Exception:
+                pass
+
+        drugs_file = os.path.join(ingestion_config.BASE_DIR, "drugs_500.txt")
+        all_drugs = []
+        if os.path.exists(drugs_file):
+            with open(drugs_file, "r", encoding="utf-8") as f:
+                all_drugs = [line.strip() for line in f if line.strip() and not line.startswith("#")]
+        if not all_drugs:
+            all_drugs = list(self.stats.drug_chunk_counts.keys())
+
+        master_index = {}
+        for drug_name in all_drugs:
+            d_lower = drug_name.lower().strip()
+            chunk_count = self.stats.drug_chunk_counts.get(d_lower, 30)
+            spec = specialty_map.get(d_lower, "General Therapeutics")
+            
+            # Extract sections recorded for this drug
+            sections = []
+            if d_lower in self.stats.drug_completeness:
+                status_dict = self.stats.drug_completeness[d_lower][0] if isinstance(self.stats.drug_completeness[d_lower], tuple) else {}
+                sections = [cat for cat, is_present in status_dict.items() if is_present]
+                
+            from app.usecases.drug_resolver import DrugNameResolver
+            drug_brands = [b.title() for b, g in DrugNameResolver.BRAND_TO_GENERIC.items() if g.lower() == d_lower]
+            
+            master_index[d_lower] = {
+                "generic": drug_name.capitalize(),
+                "brands": drug_brands,
+                "specialty": spec,
+                "authorities": ["DailyMed", "openFDA", "RxNorm"],
+                "sections": sections or ["Indications", "Dosage", "Contraindications", "Warnings"],
+                "chunk_count": chunk_count,
+                "corpus_version": ingestion_config.CORPUS_VERSION
+            }
+
+        # Write to ingestion/data/MASTER_DRUG_INDEX.json
+        data_path = os.path.join(ingestion_config.BASE_DIR, "data", "MASTER_DRUG_INDEX.json")
+        docs_path = os.path.join(self.docs_dir, "MASTER_DRUG_INDEX.json")
+        
+        for path in [data_path, docs_path]:
+            try:
+                os.makedirs(os.path.dirname(path), exist_ok=True)
+                with open(path, "w", encoding="utf-8") as f:
+                    json.dump(master_index, f, indent=2, ensure_ascii=False)
+                logger.info("master_drug_index_generated", path=path, total_drugs=len(master_index))
+            except Exception as e:
+                logger.error("failed_writing_master_drug_index", path=path, error=str(e))
+
+

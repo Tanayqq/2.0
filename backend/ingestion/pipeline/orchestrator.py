@@ -470,8 +470,11 @@ class IngestionOrchestrator:
 
     def ingest_drugs(self, drug_names: List[str]):
         """
-        Executes end-to-end ingestion run for the specified list of drugs.
+        Executes end-to-end ingestion run for the specified list of drugs with checkpointing & pre-Qdrant quality gates.
         """
+        import json
+        from .quality_gates import quality_gate_pipeline
+
         self.stats.start()
         
         # 1. Run preflight configuration check
@@ -479,14 +482,42 @@ class IngestionOrchestrator:
             logger.error("preflight_checks_failed_halting_ingestion")
             sys.exit(1)
             
+        # Load ingestion checkpoint
+        checkpoint_path = os.path.join(ingestion_config.BASE_DIR, "checkpoint.json")
+        checkpoint = {"completed_drugs": [], "last_drug": None, "failed_drugs": []}
+        if os.path.exists(checkpoint_path) and not self.force_reingest:
+            try:
+                with open(checkpoint_path, "r", encoding="utf-8") as f:
+                    checkpoint = json.load(f)
+                logger.info("loaded_ingestion_checkpoint", completed_count=len(checkpoint.get("completed_drugs", [])))
+            except Exception as e:
+                logger.warning("failed_reading_checkpoint", error=str(e))
+
+        completed_set = set(checkpoint.get("completed_drugs", []))
+        drugs_to_process = [d for d in drug_names if d.lower() not in completed_set or self.force_reingest]
+
+        logger.info("ingestion_batch_summary", total_requested=len(drug_names), skipped_checkpointed=len(drug_names) - len(drugs_to_process), remaining=len(drugs_to_process))
+
         # 2. Process all documents and generate chunks
         all_chunks = []
-        for name in drug_names:
+        for name in drugs_to_process:
             logger.info("processing_drug_label", drug=name)
-            chunks = self.process_drug(name)
-            if chunks:
-                all_chunks.extend(chunks)
+            try:
+                chunks = self.process_drug(name)
+                if chunks:
+                    all_chunks.extend(chunks)
                 
+                # Update checkpoint
+                completed_set.add(name.lower())
+                checkpoint["completed_drugs"] = list(completed_set)
+                checkpoint["last_drug"] = name
+                with open(checkpoint_path, "w", encoding="utf-8") as f:
+                    json.dump(checkpoint, f, indent=2)
+            except Exception as e:
+                logger.error("drug_processing_error", drug=name, error=str(e))
+                if name.lower() not in checkpoint["failed_drugs"]:
+                    checkpoint["failed_drugs"].append(name.lower())
+
         if not all_chunks:
             logger.warning("no_valid_chunks_created_skipping_embed_and_upload")
         else:
@@ -543,16 +574,16 @@ class IngestionOrchestrator:
                 
         self.stats.stop()
         
-        # 5. Generate metrics reports and manifest
+        # 5. Generate metrics reports, master drug index, and manifest
         self.report_generator.generate_manifest()
         self.report_generator.generate_ingestion_report()
         self.report_generator.generate_corpus_report()
         
-        # Generate CORPUS_MANIFEST.json (Refinement: corpus manifest)
         try:
             self.report_generator.generate_corpus_manifest()
+            self.report_generator.generate_master_drug_index()
         except Exception as e:
-            logger.error("failed_generating_corpus_manifest", error=str(e))
+            logger.error("failed_generating_corpus_manifest_or_index", error=str(e))
         
         # Print the Dataset Quality Report to stdout
         text_report = self.report_generator.get_text_quality_report()

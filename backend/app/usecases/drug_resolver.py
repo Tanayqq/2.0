@@ -171,7 +171,57 @@ class DrugNameResolver:
         "toujeo": "insulin glargine",
         "basaglar": "insulin glargine",
         "levemir": "insulin detemir",
-        "tresiba": "insulin degludec"
+        "tresiba": "insulin degludec",
+        # Specialty & Oncology Mappings
+        "eliquis": "apixaban",
+        "xarelto": "rivaroxaban",
+        "pradaxa": "dabigatran",
+        "savaysa": "edoxaban",
+        "plavix": "clopidogrel",
+        "brilinta": "ticagrelor",
+        "effient": "prasugrel",
+        "entresto": "sacubitril_valsartan",
+        "keytruda": "pembrolizumab",
+        "opdivo": "nivolumab",
+        "tecentriq": "atezolizumab",
+        "imfinzi": "durvalumab",
+        "yervoy": "ipilimumab",
+        "herceptin": "trastuzumab",
+        "perjeta": "pertuzumab",
+        "avastin": "bevacizumab",
+        "rituxan": "rituximab",
+        "erbitux": "cetuximab",
+        "gleevec": "imatinib",
+        "sprycel": "dasatinib",
+        "tasigna": "nilotinib",
+        "tagrisso": "osimertinib",
+        "tarceva": "erlotinib",
+        "alecensa": "alectinib",
+        "imbruvica": "ibrutinib",
+        "calquence": "acalabrutinib",
+        "brukinsa": "zanubrutinib",
+        "venclexta": "venetoclax",
+        "ibrance": "palbociclib",
+        "kisqali": "ribociclib",
+        "verzenio": "abemaciclib",
+        "lynparza": "olaparib",
+        "zejula": "niraparib",
+        "rubraca": "rucaparib",
+        "humira": "adalimumab",
+        "enbrel": "etanercept",
+        "remicade": "infliximab",
+        "cimzia": "certolizumab",
+        "simponi": "golimumab",
+        "actemra": "tocilizumab",
+        "cosentyx": "secukinumab",
+        "taltz": "ixekizumab",
+        "stelara": "ustekinumab",
+        "tremfya": "guselkumab",
+        "skyrizi": "risankizumab",
+        "benlysta": "belimumab",
+        "orencia": "abatacept",
+        "cellcept": "mycophenolate_mofetil",
+        "uloric": "febuxostat"
     }
 
     GENERIC_NAMES = {
@@ -209,14 +259,52 @@ class DrugNameResolver:
         "insulin glargine", "insulin detemir", "insulin degludec"
     }
 
-    @staticmethod
-    def resolve(query_text: str) -> Optional[str]:
+    _initialized: bool = False
+
+    @classmethod
+    def _ensure_initialized(cls):
+        """
+        Dynamically load MASTER_DRUG_INDEX.json to populate all 500 generic and brand names.
+        """
+        if cls._initialized:
+            return
+
+        import os, json
+        possible_paths = [
+            os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "ingestion", "data", "MASTER_DRUG_INDEX.json"),
+            os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))), "docs", "MASTER_DRUG_INDEX.json"),
+        ]
+
+        for path in possible_paths:
+            if os.path.exists(path):
+                try:
+                    with open(path, "r", encoding="utf-8") as f:
+                        data = json.load(f)
+                    for drug_key, entry in data.items():
+                        gen_name = entry.get("generic", "").lower().strip()
+                        if gen_name:
+                            cls.GENERIC_NAMES.add(gen_name)
+                            cls.GENERIC_NAMES.add(drug_key.lower().strip())
+                        for b in entry.get("brands", []):
+                            b_clean = b.lower().strip()
+                            if b_clean:
+                                cls.BRAND_TO_GENERIC[b_clean] = gen_name or drug_key
+                    break
+                except Exception:
+                    pass
+
+        cls._initialized = True
+
+    @classmethod
+    def resolve(cls, query_text: str) -> Optional[str]:
         """
         Scan the query text for drug brand names or generic names.
         Returns the canonical lowercase generic name if found, otherwise None.
         """
         if not query_text:
             return None
+
+        cls._ensure_initialized()
             
         words = [w.strip("?,.:;!\"'()[]{}").lower() for w in query_text.split()]
         

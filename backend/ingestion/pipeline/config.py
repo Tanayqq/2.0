@@ -52,8 +52,8 @@ class IngestionSettings(BaseSettings):
     BACKOFF_FACTOR: float = 2.0  # Exponential factor
     
     # Versioning
-    PIPELINE_VERSION: str = "1.6.0"
-    CORPUS_VERSION: str = "v3.1"
+    PIPELINE_VERSION: str = "2.0.0"
+    CORPUS_VERSION: str = "v4.0"
     
     model_config = SettingsConfigDict(
         env_file=".env",

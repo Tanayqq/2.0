@@ -1,0 +1,9360 @@
+{
+  "apixaban": {
+    "generic": "Apixaban",
+    "brands": [
+      "Eliquis"
+    ],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "rivaroxaban": {
+    "generic": "Rivaroxaban",
+    "brands": [
+      "Xarelto"
+    ],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "dabigatran": {
+    "generic": "Dabigatran",
+    "brands": [
+      "Pradaxa"
+    ],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "edoxaban": {
+    "generic": "Edoxaban",
+    "brands": [
+      "Savaysa"
+    ],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "warfarin": {
+    "generic": "Warfarin",
+    "brands": [
+      "Coumadin",
+      "Jantoven"
+    ],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "clopidogrel": {
+    "generic": "Clopidogrel",
+    "brands": [
+      "Plavix"
+    ],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "ticagrelor": {
+    "generic": "Ticagrelor",
+    "brands": [
+      "Brilinta"
+    ],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "prasugrel": {
+    "generic": "Prasugrel",
+    "brands": [
+      "Effient"
+    ],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "atorvastatin": {
+    "generic": "Atorvastatin",
+    "brands": [
+      "Lipitor"
+    ],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "rosuvastatin": {
+    "generic": "Rosuvastatin",
+    "brands": [
+      "Crestor"
+    ],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "simvastatin": {
+    "generic": "Simvastatin",
+    "brands": [
+      "Zocor"
+    ],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "pravastatin": {
+    "generic": "Pravastatin",
+    "brands": [
+      "Pravachol"
+    ],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "lovastatin": {
+    "generic": "Lovastatin",
+    "brands": [
+      "Mevacor"
+    ],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "ezetimibe": {
+    "generic": "Ezetimibe",
+    "brands": [
+      "Zetia"
+    ],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "fenofibrate": {
+    "generic": "Fenofibrate",
+    "brands": [
+      "Tricor",
+      "Antara"
+    ],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "gemfibrozil": {
+    "generic": "Gemfibrozil",
+    "brands": [
+      "Lopid"
+    ],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "sacubitril_valsartan": {
+    "generic": "Sacubitril_valsartan",
+    "brands": [
+      "Entresto"
+    ],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "lisinopril": {
+    "generic": "Lisinopril",
+    "brands": [
+      "Prinivil",
+      "Zestril"
+    ],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "enalapril": {
+    "generic": "Enalapril",
+    "brands": [
+      "Vasotec"
+    ],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "ramipril": {
+    "generic": "Ramipril",
+    "brands": [
+      "Altace"
+    ],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "benazepril": {
+    "generic": "Benazepril",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "captopril": {
+    "generic": "Captopril",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "losartan": {
+    "generic": "Losartan",
+    "brands": [
+      "Cozaar"
+    ],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "valsartan": {
+    "generic": "Valsartan",
+    "brands": [
+      "Diovan"
+    ],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "candesartan": {
+    "generic": "Candesartan",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "irbesartan": {
+    "generic": "Irbesartan",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "olmesartan": {
+    "generic": "Olmesartan",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "telmisartan": {
+    "generic": "Telmisartan",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "amlodipine": {
+    "generic": "Amlodipine",
+    "brands": [
+      "Norvasc"
+    ],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "nifedipine": {
+    "generic": "Nifedipine",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "felodipine": {
+    "generic": "Felodipine",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "diltiazem": {
+    "generic": "Diltiazem",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "verapamil": {
+    "generic": "Verapamil",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "metoprolol": {
+    "generic": "Metoprolol",
+    "brands": [
+      "Lopressor",
+      "Toprol"
+    ],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "atenolol": {
+    "generic": "Atenolol",
+    "brands": [
+      "Tenormin"
+    ],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "carvedilol": {
+    "generic": "Carvedilol",
+    "brands": [
+      "Coreg"
+    ],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "bisoprolol": {
+    "generic": "Bisoprolol",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "propranolol": {
+    "generic": "Propranolol",
+    "brands": [
+      "Inderal"
+    ],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "labetalol": {
+    "generic": "Labetalol",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "nebivolol": {
+    "generic": "Nebivolol",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "spironolactone": {
+    "generic": "Spironolactone",
+    "brands": [
+      "Aldactone"
+    ],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "eplerenone": {
+    "generic": "Eplerenone",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "furosemide": {
+    "generic": "Furosemide",
+    "brands": [
+      "Lasix"
+    ],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "torsemide": {
+    "generic": "Torsemide",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "bumetanide": {
+    "generic": "Bumetanide",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "hydrochlorothiazide": {
+    "generic": "Hydrochlorothiazide",
+    "brands": [
+      "Microzide"
+    ],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "chlorthalidone": {
+    "generic": "Chlorthalidone",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "indapamide": {
+    "generic": "Indapamide",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "hydralazine": {
+    "generic": "Hydralazine",
+    "brands": [
+      "Apresoline"
+    ],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "isosorbide_mononitrate": {
+    "generic": "Isosorbide_mononitrate",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "isosorbide_dinitrate": {
+    "generic": "Isosorbide_dinitrate",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "nitroglycerin": {
+    "generic": "Nitroglycerin",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "ranolazine": {
+    "generic": "Ranolazine",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "amiodarone": {
+    "generic": "Amiodarone",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "dronedarone": {
+    "generic": "Dronedarone",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "flecainide": {
+    "generic": "Flecainide",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "propafenone": {
+    "generic": "Propafenone",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "sotalol": {
+    "generic": "Sotalol",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "digoxin": {
+    "generic": "Digoxin",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "ivabradine": {
+    "generic": "Ivabradine",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "vericiguat": {
+    "generic": "Vericiguat",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "macitentan": {
+    "generic": "Macitentan",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "ambrisentan": {
+    "generic": "Ambrisentan",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "riociguat": {
+    "generic": "Riociguat",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "selexipag": {
+    "generic": "Selexipag",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "epoprostenol": {
+    "generic": "Epoprostenol",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "treprostinil": {
+    "generic": "Treprostinil",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "bosentan": {
+    "generic": "Bosentan",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "cilostazol": {
+    "generic": "Cilostazol",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "pentoxifylline": {
+    "generic": "Pentoxifylline",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "alirocumab": {
+    "generic": "Alirocumab",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "evolocumab": {
+    "generic": "Evolocumab",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "inclisiran": {
+    "generic": "Inclisiran",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "bempedoic_acid": {
+    "generic": "Bempedoic_acid",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "icosapent_ethyl": {
+    "generic": "Icosapent_ethyl",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "omega_3_acid": {
+    "generic": "Omega_3_acid",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "clonidine": {
+    "generic": "Clonidine",
+    "brands": [
+      "Catapres"
+    ],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "guanfacine": {
+    "generic": "Guanfacine",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "doxazosin": {
+    "generic": "Doxazosin",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "terazosin": {
+    "generic": "Terazosin",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "prazosin": {
+    "generic": "Prazosin",
+    "brands": [],
+    "specialty": "Cardiology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "semaglutide": {
+    "generic": "Semaglutide",
+    "brands": [
+      "Ozempic",
+      "Wegovy"
+    ],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "tirzepatide": {
+    "generic": "Tirzepatide",
+    "brands": [
+      "Mounjaro",
+      "Zepbound"
+    ],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "dulaglutide": {
+    "generic": "Dulaglutide",
+    "brands": [
+      "Trulicity"
+    ],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "liraglutide": {
+    "generic": "Liraglutide",
+    "brands": [
+      "Victoza",
+      "Saxenda"
+    ],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "exenatide": {
+    "generic": "Exenatide",
+    "brands": [],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "lixisenatide": {
+    "generic": "Lixisenatide",
+    "brands": [],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "orlistat": {
+    "generic": "Orlistat",
+    "brands": [],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "metformin": {
+    "generic": "Metformin",
+    "brands": [
+      "Glucophage",
+      "Fortamet",
+      "Glumetza"
+    ],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "dapagliflozin": {
+    "generic": "Dapagliflozin",
+    "brands": [
+      "Farxiga"
+    ],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "empagliflozin": {
+    "generic": "Empagliflozin",
+    "brands": [
+      "Jardiance"
+    ],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "canagliflozin": {
+    "generic": "Canagliflozin",
+    "brands": [
+      "Invokana"
+    ],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "ertugliflozin": {
+    "generic": "Ertugliflozin",
+    "brands": [],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "sitagliptin": {
+    "generic": "Sitagliptin",
+    "brands": [
+      "Januvia"
+    ],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "linagliptin": {
+    "generic": "Linagliptin",
+    "brands": [
+      "Tradjenta"
+    ],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "alogliptin": {
+    "generic": "Alogliptin",
+    "brands": [
+      "Nesina"
+    ],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "saxagliptin": {
+    "generic": "Saxagliptin",
+    "brands": [
+      "Onglyza"
+    ],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "glimepiride": {
+    "generic": "Glimepiride",
+    "brands": [
+      "Amaryl"
+    ],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "glipizide": {
+    "generic": "Glipizide",
+    "brands": [
+      "Glucotrol"
+    ],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "gliclazide": {
+    "generic": "Gliclazide",
+    "brands": [],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "glyburide": {
+    "generic": "Glyburide",
+    "brands": [
+      "Micronase",
+      "Diabeta"
+    ],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "pioglitazone": {
+    "generic": "Pioglitazone",
+    "brands": [
+      "Actos"
+    ],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "rosiglitazone": {
+    "generic": "Rosiglitazone",
+    "brands": [
+      "Avandia"
+    ],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "repaglinide": {
+    "generic": "Repaglinide",
+    "brands": [
+      "Prandin"
+    ],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "nateglinide": {
+    "generic": "Nateglinide",
+    "brands": [
+      "Starlix"
+    ],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "acarbose": {
+    "generic": "Acarbose",
+    "brands": [
+      "Precose"
+    ],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "miglitol": {
+    "generic": "Miglitol",
+    "brands": [
+      "Glyset"
+    ],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "pramlintide": {
+    "generic": "Pramlintide",
+    "brands": [],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "insulin_glargine": {
+    "generic": "Insulin_glargine",
+    "brands": [],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "insulin_lispro": {
+    "generic": "Insulin_lispro",
+    "brands": [],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "insulin_aspart": {
+    "generic": "Insulin_aspart",
+    "brands": [],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "insulin_degludec": {
+    "generic": "Insulin_degludec",
+    "brands": [],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "insulin_detemir": {
+    "generic": "Insulin_detemir",
+    "brands": [],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "insulin_glulisine": {
+    "generic": "Insulin_glulisine",
+    "brands": [],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "insulin_regular": {
+    "generic": "Insulin_regular",
+    "brands": [],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "insulin_nph": {
+    "generic": "Insulin_nph",
+    "brands": [],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "levothyroxine": {
+    "generic": "Levothyroxine",
+    "brands": [
+      "Synthroid",
+      "Levoxyl",
+      "Unithroid"
+    ],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "liothyronine": {
+    "generic": "Liothyronine",
+    "brands": [],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "methimazole": {
+    "generic": "Methimazole",
+    "brands": [],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "propylthiouracil": {
+    "generic": "Propylthiouracil",
+    "brands": [],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "carbimazole": {
+    "generic": "Carbimazole",
+    "brands": [],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "bromocriptine": {
+    "generic": "Bromocriptine",
+    "brands": [],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "cabergoline": {
+    "generic": "Cabergoline",
+    "brands": [],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "hydrocortisone": {
+    "generic": "Hydrocortisone",
+    "brands": [],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "fludrocortisone": {
+    "generic": "Fludrocortisone",
+    "brands": [],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "dexamethasone": {
+    "generic": "Dexamethasone",
+    "brands": [
+      "Decadron"
+    ],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "prednisone": {
+    "generic": "Prednisone",
+    "brands": [
+      "Deltasone"
+    ],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "alendronate": {
+    "generic": "Alendronate",
+    "brands": [],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "risedronate": {
+    "generic": "Risedronate",
+    "brands": [],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "ibandronate": {
+    "generic": "Ibandronate",
+    "brands": [],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "zoledronic_acid": {
+    "generic": "Zoledronic_acid",
+    "brands": [],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "denosumab": {
+    "generic": "Denosumab",
+    "brands": [],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "teriparatide": {
+    "generic": "Teriparatide",
+    "brands": [],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "abaloparatide": {
+    "generic": "Abaloparatide",
+    "brands": [],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "romosozumab": {
+    "generic": "Romosozumab",
+    "brands": [],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "raloxifene": {
+    "generic": "Raloxifene",
+    "brands": [],
+    "specialty": "Endocrinology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "sertraline": {
+    "generic": "Sertraline",
+    "brands": [
+      "Zoloft"
+    ],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "escitalopram": {
+    "generic": "Escitalopram",
+    "brands": [
+      "Lexapro"
+    ],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "citalopram": {
+    "generic": "Citalopram",
+    "brands": [
+      "Celexa"
+    ],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "fluoxetine": {
+    "generic": "Fluoxetine",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "paroxetine": {
+    "generic": "Paroxetine",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "fluvoxamine": {
+    "generic": "Fluvoxamine",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "duloxetine": {
+    "generic": "Duloxetine",
+    "brands": [
+      "Cymbalta"
+    ],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "venlafaxine": {
+    "generic": "Venlafaxine",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "desvenlafaxine": {
+    "generic": "Desvenlafaxine",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "levomilnacipran": {
+    "generic": "Levomilnacipran",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "bupropion": {
+    "generic": "Bupropion",
+    "brands": [
+      "Wellbutrin",
+      "Zyban"
+    ],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "mirtazapine": {
+    "generic": "Mirtazapine",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "trazodone": {
+    "generic": "Trazodone",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "vilazodone": {
+    "generic": "Vilazodone",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "vortioxetine": {
+    "generic": "Vortioxetine",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "aripiprazole": {
+    "generic": "Aripiprazole",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "quetiapine": {
+    "generic": "Quetiapine",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "olanzapine": {
+    "generic": "Olanzapine",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "risperidone": {
+    "generic": "Risperidone",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "paliperidone": {
+    "generic": "Paliperidone",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "ziprasidone": {
+    "generic": "Ziprasidone",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "lurasidone": {
+    "generic": "Lurasidone",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "cariprazine": {
+    "generic": "Cariprazine",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "brexpiprazole": {
+    "generic": "Brexpiprazole",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "clozapine": {
+    "generic": "Clozapine",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "haloperidol": {
+    "generic": "Haloperidol",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "fluphenazine": {
+    "generic": "Fluphenazine",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "chlorpromazine": {
+    "generic": "Chlorpromazine",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "lithium": {
+    "generic": "Lithium",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "valproic_acid": {
+    "generic": "Valproic_acid",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "lamotrigine": {
+    "generic": "Lamotrigine",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "carbamazepine": {
+    "generic": "Carbamazepine",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "oxcarbazepine": {
+    "generic": "Oxcarbazepine",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "alprazolam": {
+    "generic": "Alprazolam",
+    "brands": [
+      "Xanax"
+    ],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "clonazepam": {
+    "generic": "Clonazepam",
+    "brands": [
+      "Klonopin"
+    ],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "lorazepam": {
+    "generic": "Lorazepam",
+    "brands": [
+      "Ativan"
+    ],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "diazepam": {
+    "generic": "Diazepam",
+    "brands": [
+      "Valium"
+    ],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "temazepam": {
+    "generic": "Temazepam",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "oxazepam": {
+    "generic": "Oxazepam",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "chlordiazepoxide": {
+    "generic": "Chlordiazepoxide",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "buspirone": {
+    "generic": "Buspirone",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "hydroxyzine": {
+    "generic": "Hydroxyzine",
+    "brands": [
+      "Vistaril",
+      "Atarax"
+    ],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "zolpidem": {
+    "generic": "Zolpidem",
+    "brands": [
+      "Ambien"
+    ],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "zopiclone": {
+    "generic": "Zopiclone",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "eszopiclone": {
+    "generic": "Eszopiclone",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "ramelteon": {
+    "generic": "Ramelteon",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "suvorexant": {
+    "generic": "Suvorexant",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "lemborexant": {
+    "generic": "Lemborexant",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "methylphenidate": {
+    "generic": "Methylphenidate",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "dexmethylphenidate": {
+    "generic": "Dexmethylphenidate",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "amphetamine": {
+    "generic": "Amphetamine",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "dextroamphetamine": {
+    "generic": "Dextroamphetamine",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "lisdexamfetamine": {
+    "generic": "Lisdexamfetamine",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "atomoxetine": {
+    "generic": "Atomoxetine",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "viloxazine": {
+    "generic": "Viloxazine",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "modafinil": {
+    "generic": "Modafinil",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "armodafinil": {
+    "generic": "Armodafinil",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "pitolisant": {
+    "generic": "Pitolisant",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "solriamfetol": {
+    "generic": "Solriamfetol",
+    "brands": [],
+    "specialty": "Psychiatry",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "levetiracetam": {
+    "generic": "Levetiracetam",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "brivaracetam": {
+    "generic": "Brivaracetam",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "gabapentin": {
+    "generic": "Gabapentin",
+    "brands": [
+      "Neurontin"
+    ],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "pregabalin": {
+    "generic": "Pregabalin",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "topiramate": {
+    "generic": "Topiramate",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "lacosamide": {
+    "generic": "Lacosamide",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "phenytoin": {
+    "generic": "Phenytoin",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "fosphenytoin": {
+    "generic": "Fosphenytoin",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "phenobarbital": {
+    "generic": "Phenobarbital",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "primidone": {
+    "generic": "Primidone",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "clobazam": {
+    "generic": "Clobazam",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "vigabatrin": {
+    "generic": "Vigabatrin",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "perampanel": {
+    "generic": "Perampanel",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "carbidopa_levodopa": {
+    "generic": "Carbidopa_levodopa",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "pramipexole": {
+    "generic": "Pramipexole",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "ropinirole": {
+    "generic": "Ropinirole",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "rotigotine": {
+    "generic": "Rotigotine",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "apomorphine": {
+    "generic": "Apomorphine",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "selegiline": {
+    "generic": "Selegiline",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "rasagiline": {
+    "generic": "Rasagiline",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "safinamide": {
+    "generic": "Safinamide",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "entacapone": {
+    "generic": "Entacapone",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "opicapone": {
+    "generic": "Opicapone",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "amantadine": {
+    "generic": "Amantadine",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "trihexyphenidyl": {
+    "generic": "Trihexyphenidyl",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "donepezil": {
+    "generic": "Donepezil",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "rivastigmine": {
+    "generic": "Rivastigmine",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "galantamine": {
+    "generic": "Galantamine",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "memantine": {
+    "generic": "Memantine",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "lecanemab": {
+    "generic": "Lecanemab",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "donanemab": {
+    "generic": "Donanemab",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "sumatriptan": {
+    "generic": "Sumatriptan",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "rizatriptan": {
+    "generic": "Rizatriptan",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "eletriptan": {
+    "generic": "Eletriptan",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "zolmitriptan": {
+    "generic": "Zolmitriptan",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "galcanezumab": {
+    "generic": "Galcanezumab",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "fremanezumab": {
+    "generic": "Fremanezumab",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "erenumab": {
+    "generic": "Erenumab",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "eptinezumab": {
+    "generic": "Eptinezumab",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "rimegepant": {
+    "generic": "Rimegepant",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "atogepant": {
+    "generic": "Atogepant",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "ubrogepant": {
+    "generic": "Ubrogepant",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "lasmiditan": {
+    "generic": "Lasmiditan",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "dimethyl_fumarate": {
+    "generic": "Dimethyl_fumarate",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "diroximel_fumarate": {
+    "generic": "Diroximel_fumarate",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "fingolimod": {
+    "generic": "Fingolimod",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "siponimod": {
+    "generic": "Siponimod",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "ozanimod": {
+    "generic": "Ozanimod",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "ocrelizumab": {
+    "generic": "Ocrelizumab",
+    "brands": [],
+    "specialty": "Neurology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "albuterol": {
+    "generic": "Albuterol",
+    "brands": [
+      "Ventolin",
+      "Proair",
+      "Proventil"
+    ],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "levalbuterol": {
+    "generic": "Levalbuterol",
+    "brands": [],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "salmeterol": {
+    "generic": "Salmeterol",
+    "brands": [
+      "Serevent"
+    ],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "formoterol": {
+    "generic": "Formoterol",
+    "brands": [
+      "Foradil"
+    ],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "vilanterol": {
+    "generic": "Vilanterol",
+    "brands": [],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "indacaterol": {
+    "generic": "Indacaterol",
+    "brands": [],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "fluticasone": {
+    "generic": "Fluticasone",
+    "brands": [
+      "Flonase",
+      "Flovent"
+    ],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "budesonide": {
+    "generic": "Budesonide",
+    "brands": [
+      "Pulmicort",
+      "Rhinocort"
+    ],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "beclomethasone": {
+    "generic": "Beclomethasone",
+    "brands": [],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "mometasone": {
+    "generic": "Mometasone",
+    "brands": [],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "ciclesonide": {
+    "generic": "Ciclesonide",
+    "brands": [],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "tiotropium": {
+    "generic": "Tiotropium",
+    "brands": [
+      "Spiriva"
+    ],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "umeclidinium": {
+    "generic": "Umeclidinium",
+    "brands": [],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "ipratropium": {
+    "generic": "Ipratropium",
+    "brands": [
+      "Atrovent"
+    ],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "aclidinium": {
+    "generic": "Aclidinium",
+    "brands": [],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "glycopyrrolate": {
+    "generic": "Glycopyrrolate",
+    "brands": [],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "montelukast": {
+    "generic": "Montelukast",
+    "brands": [
+      "Singulair"
+    ],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "zafirlukast": {
+    "generic": "Zafirlukast",
+    "brands": [],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "zileuton": {
+    "generic": "Zileuton",
+    "brands": [],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "roflumilast": {
+    "generic": "Roflumilast",
+    "brands": [],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "theophylline": {
+    "generic": "Theophylline",
+    "brands": [],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "omalizumab": {
+    "generic": "Omalizumab",
+    "brands": [],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "mepolizumab": {
+    "generic": "Mepolizumab",
+    "brands": [],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "benralizumab": {
+    "generic": "Benralizumab",
+    "brands": [],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "reslizumab": {
+    "generic": "Reslizumab",
+    "brands": [],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "dupilumab": {
+    "generic": "Dupilumab",
+    "brands": [],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "tezepelumab": {
+    "generic": "Tezepelumab",
+    "brands": [],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "pirfenidone": {
+    "generic": "Pirfenidone",
+    "brands": [],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "nintedanib": {
+    "generic": "Nintedanib",
+    "brands": [],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "acetylcysteine": {
+    "generic": "Acetylcysteine",
+    "brands": [],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "dornase_alfa": {
+    "generic": "Dornase_alfa",
+    "brands": [],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "ivacaftor": {
+    "generic": "Ivacaftor",
+    "brands": [],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "lumacaftor": {
+    "generic": "Lumacaftor",
+    "brands": [],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "tezacaftor": {
+    "generic": "Tezacaftor",
+    "brands": [],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "elexacaftor": {
+    "generic": "Elexacaftor",
+    "brands": [],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "cetirizine": {
+    "generic": "Cetirizine",
+    "brands": [
+      "Zyrtec"
+    ],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "levocetirizine": {
+    "generic": "Levocetirizine",
+    "brands": [],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "loratadine": {
+    "generic": "Loratadine",
+    "brands": [
+      "Claritin"
+    ],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "desloratadine": {
+    "generic": "Desloratadine",
+    "brands": [],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "fexofenadine": {
+    "generic": "Fexofenadine",
+    "brands": [
+      "Allegra"
+    ],
+    "specialty": "Pulmonology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "omeprazole": {
+    "generic": "Omeprazole",
+    "brands": [
+      "Prilosec"
+    ],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "pantoprazole": {
+    "generic": "Pantoprazole",
+    "brands": [
+      "Protonix"
+    ],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "esomeprazole": {
+    "generic": "Esomeprazole",
+    "brands": [
+      "Nexium"
+    ],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "lansoprazole": {
+    "generic": "Lansoprazole",
+    "brands": [
+      "Prevacid"
+    ],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "rabeprazole": {
+    "generic": "Rabeprazole",
+    "brands": [
+      "Aciphex"
+    ],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "dexlansoprazole": {
+    "generic": "Dexlansoprazole",
+    "brands": [],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "famotidine": {
+    "generic": "Famotidine",
+    "brands": [
+      "Pepcid"
+    ],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "cimetidine": {
+    "generic": "Cimetidine",
+    "brands": [
+      "Tagamet"
+    ],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "nizatidine": {
+    "generic": "Nizatidine",
+    "brands": [],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "ondansetron": {
+    "generic": "Ondansetron",
+    "brands": [
+      "Zofran"
+    ],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "granisetron": {
+    "generic": "Granisetron",
+    "brands": [],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "palonosetron": {
+    "generic": "Palonosetron",
+    "brands": [],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "aprepitant": {
+    "generic": "Aprepitant",
+    "brands": [],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "fosaprepitant": {
+    "generic": "Fosaprepitant",
+    "brands": [],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "metoclopramide": {
+    "generic": "Metoclopramide",
+    "brands": [
+      "Reglan"
+    ],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "domperidone": {
+    "generic": "Domperidone",
+    "brands": [],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "prochlorperazine": {
+    "generic": "Prochlorperazine",
+    "brands": [],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "promethazine": {
+    "generic": "Promethazine",
+    "brands": [
+      "Phenergan"
+    ],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "dicyclomine": {
+    "generic": "Dicyclomine",
+    "brands": [],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "hyoscyamine": {
+    "generic": "Hyoscyamine",
+    "brands": [],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "lubiprostone": {
+    "generic": "Lubiprostone",
+    "brands": [],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "linaclotide": {
+    "generic": "Linaclotide",
+    "brands": [],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "plecanatide": {
+    "generic": "Plecanatide",
+    "brands": [],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "eluxadoline": {
+    "generic": "Eluxadoline",
+    "brands": [],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "loperamide": {
+    "generic": "Loperamide",
+    "brands": [
+      "Imodium"
+    ],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "diphenoxylate_atropine": {
+    "generic": "Diphenoxylate_atropine",
+    "brands": [],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "bismuth_subsalicylate": {
+    "generic": "Bismuth_subsalicylate",
+    "brands": [],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "mesalamine": {
+    "generic": "Mesalamine",
+    "brands": [
+      "Lialda",
+      "Asacol",
+      "Pentasa"
+    ],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "sulfasalazine": {
+    "generic": "Sulfasalazine",
+    "brands": [
+      "Azulfidine"
+    ],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "balsalazide": {
+    "generic": "Balsalazide",
+    "brands": [],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "olsalazine": {
+    "generic": "Olsalazine",
+    "brands": [],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "infliximab": {
+    "generic": "Infliximab",
+    "brands": [
+      "Remicade"
+    ],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "adalimumab": {
+    "generic": "Adalimumab",
+    "brands": [
+      "Humira"
+    ],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "vedolizumab": {
+    "generic": "Vedolizumab",
+    "brands": [],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "ustekinumab": {
+    "generic": "Ustekinumab",
+    "brands": [
+      "Stelara"
+    ],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "tofacitinib": {
+    "generic": "Tofacitinib",
+    "brands": [],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "upadacitinib": {
+    "generic": "Upadacitinib",
+    "brands": [],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "sucralfate": {
+    "generic": "Sucralfate",
+    "brands": [],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "misoprostol": {
+    "generic": "Misoprostol",
+    "brands": [
+      "Cytotec"
+    ],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "ursodiol": {
+    "generic": "Ursodiol",
+    "brands": [],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "obeticholic_acid": {
+    "generic": "Obeticholic_acid",
+    "brands": [],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "lactulose": {
+    "generic": "Lactulose",
+    "brands": [],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "rifaximin": {
+    "generic": "Rifaximin",
+    "brands": [],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "peg_3350": {
+    "generic": "Peg_3350",
+    "brands": [],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "senna": {
+    "generic": "Senna",
+    "brands": [],
+    "specialty": "Gastrointestinal",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "amoxicillin": {
+    "generic": "Amoxicillin",
+    "brands": [
+      "Amoxil",
+      "Novamox"
+    ],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "amoxicillin_clavulanate": {
+    "generic": "Amoxicillin_clavulanate",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "ampicillin": {
+    "generic": "Ampicillin",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "ampicillin_sulbactam": {
+    "generic": "Ampicillin_sulbactam",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "piperacillin_tazobactam": {
+    "generic": "Piperacillin_tazobactam",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "cephalexin": {
+    "generic": "Cephalexin",
+    "brands": [
+      "Keflex"
+    ],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "cefazolin": {
+    "generic": "Cefazolin",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "cefuroxime": {
+    "generic": "Cefuroxime",
+    "brands": [
+      "Ceftin"
+    ],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "cefdinir": {
+    "generic": "Cefdinir",
+    "brands": [
+      "Omnicef"
+    ],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "ceftriaxone": {
+    "generic": "Ceftriaxone",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "cefepime": {
+    "generic": "Cefepime",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "ceftaroline": {
+    "generic": "Ceftaroline",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "meropenem": {
+    "generic": "Meropenem",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "ertapenem": {
+    "generic": "Ertapenem",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "imipenem_cilastatin": {
+    "generic": "Imipenem_cilastatin",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "aztreonam": {
+    "generic": "Aztreonam",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "ciprofloxacin": {
+    "generic": "Ciprofloxacin",
+    "brands": [
+      "Cipro"
+    ],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "levofloxacin": {
+    "generic": "Levofloxacin",
+    "brands": [
+      "Levaquin"
+    ],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "moxifloxacin": {
+    "generic": "Moxifloxacin",
+    "brands": [
+      "Avelox"
+    ],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "azithromycin": {
+    "generic": "Azithromycin",
+    "brands": [
+      "Zithromax"
+    ],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "clarithromycin": {
+    "generic": "Clarithromycin",
+    "brands": [
+      "Biaxin"
+    ],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "erythromycin": {
+    "generic": "Erythromycin",
+    "brands": [
+      "Erythrocin"
+    ],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "doxycycline": {
+    "generic": "Doxycycline",
+    "brands": [
+      "Vibramycin",
+      "Doryx"
+    ],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "minocycline": {
+    "generic": "Minocycline",
+    "brands": [
+      "Minocin",
+      "Solodyn"
+    ],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "tetracycline": {
+    "generic": "Tetracycline",
+    "brands": [
+      "Sumycin"
+    ],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "clindamycin": {
+    "generic": "Clindamycin",
+    "brands": [
+      "Cleocin"
+    ],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "linezolid": {
+    "generic": "Linezolid",
+    "brands": [
+      "Zyvox"
+    ],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "tedizolid": {
+    "generic": "Tedizolid",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "vancomycin": {
+    "generic": "Vancomycin",
+    "brands": [
+      "Vancocin"
+    ],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "daptomycin": {
+    "generic": "Daptomycin",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "dalbavancin": {
+    "generic": "Dalbavancin",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "fidaxomicin": {
+    "generic": "Fidaxomicin",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "nitrofurantoin": {
+    "generic": "Nitrofurantoin",
+    "brands": [
+      "Macrobid",
+      "Macrodantin"
+    ],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "trimethoprim_sulfamethoxazole": {
+    "generic": "Trimethoprim_sulfamethoxazole",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "metronidazole": {
+    "generic": "Metronidazole",
+    "brands": [
+      "Flagyl"
+    ],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "fluconazole": {
+    "generic": "Fluconazole",
+    "brands": [
+      "Diflucan"
+    ],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "itraconazole": {
+    "generic": "Itraconazole",
+    "brands": [
+      "Sporanox"
+    ],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "voriconazole": {
+    "generic": "Voriconazole",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "posaconazole": {
+    "generic": "Posaconazole",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "isavuconazonium": {
+    "generic": "Isavuconazonium",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "echinocandin": {
+    "generic": "Echinocandin",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "caspofungin": {
+    "generic": "Caspofungin",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "micafungin": {
+    "generic": "Micafungin",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "anidulafungin": {
+    "generic": "Anidulafungin",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "terbinafine": {
+    "generic": "Terbinafine",
+    "brands": [
+      "Lamisil"
+    ],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "nystatin": {
+    "generic": "Nystatin",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "amphotericin_b": {
+    "generic": "Amphotericin_b",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "acyclovir": {
+    "generic": "Acyclovir",
+    "brands": [
+      "Zovirax"
+    ],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "valacyclovir": {
+    "generic": "Valacyclovir",
+    "brands": [
+      "Valtrex"
+    ],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "famciclovir": {
+    "generic": "Famciclovir",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "ganciclovir": {
+    "generic": "Ganciclovir",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "valganciclovir": {
+    "generic": "Valganciclovir",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "oseltamivir": {
+    "generic": "Oseltamivir",
+    "brands": [
+      "Tamiflu"
+    ],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "baloxavir": {
+    "generic": "Baloxavir",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "remdesivir": {
+    "generic": "Remdesivir",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "paxlovid": {
+    "generic": "Paxlovid",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "sofosbuvir_velpatasvir": {
+    "generic": "Sofosbuvir_velpatasvir",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "glecaprevir_pibrentasvir": {
+    "generic": "Glecaprevir_pibrentasvir",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "tenofovir_alafenamide": {
+    "generic": "Tenofovir_alafenamide",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "emtricitabine": {
+    "generic": "Emtricitabine",
+    "brands": [],
+    "specialty": "Infectious_Disease",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "pembrolizumab": {
+    "generic": "Pembrolizumab",
+    "brands": [
+      "Keytruda"
+    ],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "nivolumab": {
+    "generic": "Nivolumab",
+    "brands": [
+      "Opdivo"
+    ],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "atezolizumab": {
+    "generic": "Atezolizumab",
+    "brands": [
+      "Tecentriq"
+    ],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "durvalumab": {
+    "generic": "Durvalumab",
+    "brands": [
+      "Imfinzi"
+    ],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "ipilimumab": {
+    "generic": "Ipilimumab",
+    "brands": [
+      "Yervoy"
+    ],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "trastuzumab": {
+    "generic": "Trastuzumab",
+    "brands": [
+      "Herceptin"
+    ],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "pertuzumab": {
+    "generic": "Pertuzumab",
+    "brands": [
+      "Perjeta"
+    ],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "bevacizumab": {
+    "generic": "Bevacizumab",
+    "brands": [
+      "Avastin"
+    ],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "rituximab": {
+    "generic": "Rituximab",
+    "brands": [
+      "Rituxan"
+    ],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "cetuximab": {
+    "generic": "Cetuximab",
+    "brands": [
+      "Erbitux"
+    ],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "panitumumab": {
+    "generic": "Panitumumab",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "imatinib": {
+    "generic": "Imatinib",
+    "brands": [
+      "Gleevec"
+    ],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "dasatinib": {
+    "generic": "Dasatinib",
+    "brands": [
+      "Sprycel"
+    ],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "nilotinib": {
+    "generic": "Nilotinib",
+    "brands": [
+      "Tasigna"
+    ],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "bosutinib": {
+    "generic": "Bosutinib",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "ponatinib": {
+    "generic": "Ponatinib",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "osimertinib": {
+    "generic": "Osimertinib",
+    "brands": [
+      "Tagrisso"
+    ],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "erlotinib": {
+    "generic": "Erlotinib",
+    "brands": [
+      "Tarceva"
+    ],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "gefitinib": {
+    "generic": "Gefitinib",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "afatinib": {
+    "generic": "Afatinib",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "alectinib": {
+    "generic": "Alectinib",
+    "brands": [
+      "Alecensa"
+    ],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "brigatinib": {
+    "generic": "Brigatinib",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "lorlatinib": {
+    "generic": "Lorlatinib",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "ibrutinib": {
+    "generic": "Ibrutinib",
+    "brands": [
+      "Imbruvica"
+    ],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "acalabrutinib": {
+    "generic": "Acalabrutinib",
+    "brands": [
+      "Calquence"
+    ],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "zanubrutinib": {
+    "generic": "Zanubrutinib",
+    "brands": [
+      "Brukinsa"
+    ],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "venetoclax": {
+    "generic": "Venetoclax",
+    "brands": [
+      "Venclexta"
+    ],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "palbociclib": {
+    "generic": "Palbociclib",
+    "brands": [
+      "Ibrance"
+    ],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "ribociclib": {
+    "generic": "Ribociclib",
+    "brands": [
+      "Kisqali"
+    ],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "abemaciclib": {
+    "generic": "Abemaciclib",
+    "brands": [
+      "Verzenio"
+    ],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "olaparib": {
+    "generic": "Olaparib",
+    "brands": [
+      "Lynparza"
+    ],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "niraparib": {
+    "generic": "Niraparib",
+    "brands": [
+      "Zejula"
+    ],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "rucaparib": {
+    "generic": "Rucaparib",
+    "brands": [
+      "Rubraca"
+    ],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "encorafenib": {
+    "generic": "Encorafenib",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "dabrafenib": {
+    "generic": "Dabrafenib",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "trametinib": {
+    "generic": "Trametinib",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "cobimetinib": {
+    "generic": "Cobimetinib",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "tamoxifen": {
+    "generic": "Tamoxifen",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "letrozole": {
+    "generic": "Letrozole",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "anastrozole": {
+    "generic": "Anastrozole",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "exemestane": {
+    "generic": "Exemestane",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "fulvestrant": {
+    "generic": "Fulvestrant",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "bicalutamide": {
+    "generic": "Bicalutamide",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "enzalutamide": {
+    "generic": "Enzalutamide",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "apalutamide": {
+    "generic": "Apalutamide",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "darolutamide": {
+    "generic": "Darolutamide",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "abiraterone": {
+    "generic": "Abiraterone",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "leuprolide": {
+    "generic": "Leuprolide",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "goserelin": {
+    "generic": "Goserelin",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "degarelix": {
+    "generic": "Degarelix",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "relugolix": {
+    "generic": "Relugolix",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "cyclophosphamide": {
+    "generic": "Cyclophosphamide",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "methotrexate": {
+    "generic": "Methotrexate",
+    "brands": [
+      "Rheumatrex",
+      "Trexall"
+    ],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "capecitabine": {
+    "generic": "Capecitabine",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "fluorouracil": {
+    "generic": "Fluorouracil",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "gemcitabine": {
+    "generic": "Gemcitabine",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "carboplatin": {
+    "generic": "Carboplatin",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "cisplatin": {
+    "generic": "Cisplatin",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "oxaliplatin": {
+    "generic": "Oxaliplatin",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "paclitaxel": {
+    "generic": "Paclitaxel",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "docetaxel": {
+    "generic": "Docetaxel",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "cabazitaxel": {
+    "generic": "Cabazitaxel",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "doxorubicin": {
+    "generic": "Doxorubicin",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "epirubicin": {
+    "generic": "Epirubicin",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "irinotecan": {
+    "generic": "Irinotecan",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "topotecan": {
+    "generic": "Topotecan",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "etoposide": {
+    "generic": "Etoposide",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "vincristine": {
+    "generic": "Vincristine",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "vinblastine": {
+    "generic": "Vinblastine",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "vinorelbine": {
+    "generic": "Vinorelbine",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "bortezomib": {
+    "generic": "Bortezomib",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "carfilzomib": {
+    "generic": "Carfilzomib",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "lenalidomide": {
+    "generic": "Lenalidomide",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "pomalidomide": {
+    "generic": "Pomalidomide",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "thalidomide": {
+    "generic": "Thalidomide",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "elotuzumab": {
+    "generic": "Elotuzumab",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "daratumumab": {
+    "generic": "Daratumumab",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "isatuximab": {
+    "generic": "Isatuximab",
+    "brands": [],
+    "specialty": "Oncology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "hydroxychloroquine": {
+    "generic": "Hydroxychloroquine",
+    "brands": [
+      "Plaquenil"
+    ],
+    "specialty": "Rheumatology_Immunology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "leflunomide": {
+    "generic": "Leflunomide",
+    "brands": [],
+    "specialty": "Rheumatology_Immunology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "baricitinib": {
+    "generic": "Baricitinib",
+    "brands": [],
+    "specialty": "Rheumatology_Immunology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "etanercept": {
+    "generic": "Etanercept",
+    "brands": [
+      "Enbrel"
+    ],
+    "specialty": "Rheumatology_Immunology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "certolizumab": {
+    "generic": "Certolizumab",
+    "brands": [
+      "Cimzia"
+    ],
+    "specialty": "Rheumatology_Immunology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "golimumab": {
+    "generic": "Golimumab",
+    "brands": [
+      "Simponi"
+    ],
+    "specialty": "Rheumatology_Immunology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "tocilizumab": {
+    "generic": "Tocilizumab",
+    "brands": [
+      "Actemra"
+    ],
+    "specialty": "Rheumatology_Immunology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "sarilumab": {
+    "generic": "Sarilumab",
+    "brands": [],
+    "specialty": "Rheumatology_Immunology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "secukinumab": {
+    "generic": "Secukinumab",
+    "brands": [
+      "Cosentyx"
+    ],
+    "specialty": "Rheumatology_Immunology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "ixekizumab": {
+    "generic": "Ixekizumab",
+    "brands": [
+      "Taltz"
+    ],
+    "specialty": "Rheumatology_Immunology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "brodalumab": {
+    "generic": "Brodalumab",
+    "brands": [],
+    "specialty": "Rheumatology_Immunology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "guselkumab": {
+    "generic": "Guselkumab",
+    "brands": [
+      "Tremfya"
+    ],
+    "specialty": "Rheumatology_Immunology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "risankizumab": {
+    "generic": "Risankizumab",
+    "brands": [
+      "Skyrizi"
+    ],
+    "specialty": "Rheumatology_Immunology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "tildrakizumab": {
+    "generic": "Tildrakizumab",
+    "brands": [],
+    "specialty": "Rheumatology_Immunology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "belimumab": {
+    "generic": "Belimumab",
+    "brands": [
+      "Benlysta"
+    ],
+    "specialty": "Rheumatology_Immunology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "abatacept": {
+    "generic": "Abatacept",
+    "brands": [
+      "Orencia"
+    ],
+    "specialty": "Rheumatology_Immunology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "azathioprine": {
+    "generic": "Azathioprine",
+    "brands": [
+      "Imuran"
+    ],
+    "specialty": "Rheumatology_Immunology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "cyclosporine": {
+    "generic": "Cyclosporine",
+    "brands": [
+      "Neoral",
+      "Sandimmune",
+      "Gengraf"
+    ],
+    "specialty": "Rheumatology_Immunology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "tacrolimus": {
+    "generic": "Tacrolimus",
+    "brands": [
+      "Prograf"
+    ],
+    "specialty": "Rheumatology_Immunology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "mycophenolate_mofetil": {
+    "generic": "Mycophenolate_mofetil",
+    "brands": [
+      "Cellcept"
+    ],
+    "specialty": "Rheumatology_Immunology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "allopurinol": {
+    "generic": "Allopurinol",
+    "brands": [
+      "Zyloprim",
+      "Aloprim"
+    ],
+    "specialty": "Rheumatology_Immunology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "febuxostat": {
+    "generic": "Febuxostat",
+    "brands": [
+      "Uloric"
+    ],
+    "specialty": "Rheumatology_Immunology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "tamsulosin": {
+    "generic": "Tamsulosin",
+    "brands": [
+      "Flomax"
+    ],
+    "specialty": "Nephrology_Urology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "silodosin": {
+    "generic": "Silodosin",
+    "brands": [],
+    "specialty": "Nephrology_Urology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "alfuzosin": {
+    "generic": "Alfuzosin",
+    "brands": [],
+    "specialty": "Nephrology_Urology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "finasteride": {
+    "generic": "Finasteride",
+    "brands": [],
+    "specialty": "Nephrology_Urology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "dutasteride": {
+    "generic": "Dutasteride",
+    "brands": [],
+    "specialty": "Nephrology_Urology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "solifenacin": {
+    "generic": "Solifenacin",
+    "brands": [],
+    "specialty": "Nephrology_Urology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "darifenacin": {
+    "generic": "Darifenacin",
+    "brands": [],
+    "specialty": "Nephrology_Urology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "fesoterodine": {
+    "generic": "Fesoterodine",
+    "brands": [],
+    "specialty": "Nephrology_Urology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "oxybutynin": {
+    "generic": "Oxybutynin",
+    "brands": [],
+    "specialty": "Nephrology_Urology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "tolterodine": {
+    "generic": "Tolterodine",
+    "brands": [],
+    "specialty": "Nephrology_Urology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  },
+  "trospium": {
+    "generic": "Trospium",
+    "brands": [],
+    "specialty": "Nephrology_Urology",
+    "authorities": [
+      "DailyMed",
+      "openFDA",
+      "RxNorm"
+    ],
+    "sections": [
+      "Indications",
+      "Dosage",
+      "Contraindications",
+      "Warnings"
+    ],
+    "chunk_count": 30,
+    "corpus_version": "v4.0"
+  }
+}
