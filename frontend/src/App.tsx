@@ -852,13 +852,13 @@ export default function App() {
         <>
         
         {/* Workspace Top Header Bar */}
-        <header className="h-16 flex items-center justify-between px-6 border-b border-[#1e293b]/60 shrink-0">
-          <form onSubmit={handleSubmit} className="flex-1 max-w-xl flex items-center bg-[#070b12] rounded-lg border border-[#1e293b]/60 px-3 py-1 gap-2">
+        <header className="min-h-16 flex flex-wrap items-center justify-between px-6 py-3 border-b border-[#1e293b]/60 shrink-0 gap-3 bg-[#070b12]">
+          <form onSubmit={handleSubmit} className="flex-1 min-w-[320px] max-w-lg flex items-center bg-[#090e17] rounded-lg border border-[#1e293b]/80 px-3 py-1 gap-2">
             <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider font-mono-dash shrink-0">Query RAG :</span>
             <input 
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Amoxicillin, Metformin, Warfarin..." 
+              placeholder="Amoxicillin, Metformin, Warfarin, Fever, Asthma..." 
               className="flex-1 bg-transparent border-none text-xs text-slate-100 placeholder-slate-600 focus:outline-none focus:ring-0 min-w-0 h-7"
               disabled={loading}
             />
@@ -879,43 +879,49 @@ export default function App() {
           </form>
 
           {/* Right indicator & Mode controls */}
-          <div className="flex items-center gap-2 shrink-0 pl-4">
+          <div className="flex flex-wrap items-center gap-2 shrink-0">
             {/* Clinical Chat Mode Selector */}
-            <select
-              value={selectedMode}
-              onChange={(e) => setSelectedMode(e.target.value)}
-              className="bg-[#070b12] border border-[#1e293b]/60 text-[10px] font-mono-dash text-cyan-400 font-bold rounded px-2 py-1 focus:outline-none"
-            >
-              <option value="DRUG_CHAT">💊 Drug Chat</option>
-              <option value="DISEASE_CHAT">🫁 Disease Chat</option>
-              <option value="SYMPTOM_CHAT">🩺 Symptom Intake</option>
-              <option value="PATIENT_SCENARIO">👤 Patient Scenario</option>
-              <option value="COMPARISON">⚖️ Comparison</option>
-              <option value="INTERACTION_CHECK">⚡ Interaction Check</option>
-              <option value="MEDICAL_REP">📊 Med Rep Monograph</option>
-              <option value="CLINICAL_GUIDELINE">📋 Clinical Guideline</option>
-              <option value="RESEARCH_LITERATURE">🔬 Research Literature</option>
-            </select>
+            <div className="flex items-center gap-1 bg-[#090e17] border border-[#1e293b]/80 rounded px-2 py-1">
+              <span className="text-[9px] font-bold text-slate-500 font-mono-dash uppercase">Mode:</span>
+              <select
+                value={selectedMode}
+                onChange={(e) => setSelectedMode(e.target.value)}
+                className="bg-transparent text-[10px] font-mono-dash text-cyan-400 font-bold focus:outline-none cursor-pointer"
+              >
+                <option value="DRUG_CHAT" className="bg-slate-900 text-slate-200">💊 Drug Chat</option>
+                <option value="DISEASE_CHAT" className="bg-slate-900 text-slate-200">🫁 Disease Chat</option>
+                <option value="SYMPTOM_CHAT" className="bg-slate-900 text-slate-200">🩺 Symptom Intake</option>
+                <option value="PATIENT_SCENARIO" className="bg-slate-900 text-slate-200">👤 Patient Scenario</option>
+                <option value="COMPARISON" className="bg-slate-900 text-slate-200">⚖️ Comparison</option>
+                <option value="INTERACTION_CHECK" className="bg-slate-900 text-slate-200">⚡ Interaction Check</option>
+                <option value="MEDICAL_REP" className="bg-slate-900 text-slate-200">📊 Med Rep Monograph</option>
+                <option value="CLINICAL_GUIDELINE" className="bg-slate-900 text-slate-200">📋 Clinical Guideline</option>
+                <option value="RESEARCH_LITERATURE" className="bg-slate-900 text-slate-200">🔬 Research Literature</option>
+              </select>
+            </div>
 
             {/* Country Context Selector */}
-            <select
-              value={countryContext}
-              onChange={(e) => setCountryContext(e.target.value)}
-              className="bg-[#070b12] border border-[#1e293b]/60 text-[10px] font-mono-dash text-slate-300 font-bold rounded px-2 py-1 focus:outline-none"
-            >
-              <option value="GLOBAL">🌐 Global Context</option>
-              <option value="US">🇺🇸 US Context</option>
-              <option value="IN">🇮🇳 India Context</option>
-            </select>
+            <div className="flex items-center gap-1 bg-[#090e17] border border-[#1e293b]/80 rounded px-2 py-1">
+              <span className="text-[9px] font-bold text-slate-500 font-mono-dash uppercase">Context:</span>
+              <select
+                value={countryContext}
+                onChange={(e) => setCountryContext(e.target.value)}
+                className="bg-transparent text-[10px] font-mono-dash text-slate-200 font-bold focus:outline-none cursor-pointer"
+              >
+                <option value="GLOBAL" className="bg-slate-900 text-slate-200">🌐 Global</option>
+                <option value="US" className="bg-slate-900 text-slate-200">🇺🇸 US FDA</option>
+                <option value="IN" className="bg-slate-900 text-slate-200">🇮🇳 CDSCO India</option>
+              </select>
+            </div>
 
             {/* Patient Memory Drawer Toggle */}
             <button
               type="button"
               onClick={() => setShowPatientDrawer(!showPatientDrawer)}
-              className={`px-2 py-1 rounded text-[10px] font-bold font-mono-dash border transition-colors ${
+              className={`px-2.5 py-1 rounded text-[10px] font-bold font-mono-dash border transition-all ${
                 showPatientDrawer
-                  ? "bg-cyan-950/60 border-cyan-800 text-cyan-400"
-                  : "bg-slate-900/40 border-slate-800 text-slate-400 hover:text-slate-200"
+                  ? "bg-cyan-950/80 border-cyan-500 text-cyan-300 shadow-[0_0_10px_rgba(6,182,212,0.2)]"
+                  : "bg-[#090e17] border-[#1e293b]/80 text-slate-400 hover:text-slate-200 hover:border-slate-700"
               }`}
             >
               👤 Patient Memory ({patientProfile.age}y {patientProfile.gender})
@@ -928,7 +934,7 @@ export default function App() {
                 setHistory([]);
                 setActiveHistoryIndex(-1);
               }}
-              className="px-2.5 py-1 rounded border border-slate-800 bg-slate-900/40 text-[10px] font-bold font-mono-dash text-slate-400 hover:text-slate-200 transition-colors"
+              className="px-2.5 py-1 rounded border border-slate-800 bg-[#090e17] text-[10px] font-bold font-mono-dash text-slate-400 hover:text-slate-200 hover:border-slate-700 transition-colors"
             >
               Reset
             </button>
