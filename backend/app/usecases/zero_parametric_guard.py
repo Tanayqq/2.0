@@ -13,10 +13,11 @@ class ZeroParametricGuard:
     SEARCHED_AUTHORITIES = ["DailyMed", "FDA", "CDSCO", "ICMR", "ADA", "KDIGO", "WHO", "EMA"]
 
     @classmethod
-    def validate_retrieval(cls, docs: List[ReferenceDocument], min_score_threshold: float = 0.40) -> Tuple[bool, Optional[str]]:
-        valid_docs = [d for d in docs if (d.score or 0.0) >= min_score_threshold]
+    def validate_retrieval(cls, docs: List[ReferenceDocument], min_score_threshold: float = 0.20) -> Tuple[bool, Optional[str]]:
+        # Accept any retrieved docs if docs non-empty or score >= threshold
+        valid_docs = [d for d in docs if (d.score or 0.0) >= min_score_threshold or (d.cross_encoder_score or 0.0) >= 0.50]
         
-        if not valid_docs:
+        if not docs or not valid_docs:
             logger.warning("zero_parametric_guard_triggered", total_docs=len(docs))
             
             auth_check_list = "\n".join([f"  ✓ {auth}" for auth in cls.SEARCHED_AUTHORITIES])
