@@ -229,9 +229,15 @@ class StructuredProfileStore:
             res = self.client.retrieve(collection_name=self.registry_col, ids=[registry_uid])
             if res:
                 return f"drug:{name_lower}"
+        # Fallback to DrugNameResolver
+        try:
+            from app.usecases.drug_resolver import DrugNameResolver
+            resolved_generic = DrugNameResolver.resolve(name_lower)
+            if resolved_generic:
+                return f"drug:{resolved_generic.lower().replace(' ', '_')}"
         except Exception:
             pass
-            
+
         return None
         
     def get_profile(self, entity_id: str, profile_type: str, authority: str = "FDA") -> Optional[Dict[str, Any]]:
