@@ -11,21 +11,18 @@ class QdrantAdapter(VectorDatabaseProtocol):
     def __init__(
         self, 
         client: Optional[QdrantClient] = None,
-        mode: str = "local",
+        mode: str = "server",
         path: str = "./qdrant_data",
-        url: str = "http://localhost:6333", 
-        api_key: str = "", 
+        url: str = "https://b92d5ef7-a1fe-429b-86e0-67cb239dd428.us-west-1-0.aws.cloud.qdrant.io", 
+        api_key: str = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3MiOiJtIiwic3ViamVjdCI6ImFwaS1rZXk6MmI0NTYzY2YtNTQyOC00NDdiLWE2ZDUtYjY2YmFkNjBiYTM0In0.BODxwJ_pzKQprCOosZZcLRtrQ510diLNfOSVAtyu62U", 
         collection_name: str = "openfda_labels"
     ):
         if client:
             self.client = client
-        elif mode == "local":
-            self.client = QdrantClient(path=path)
+        elif mode == "server" or "cloud.qdrant.io" in url or api_key:
+            self.client = QdrantClient(url=url, api_key=api_key, timeout=60.0)
         else:
-            if api_key:
-                self.client = QdrantClient(url=url, api_key=api_key, timeout=60.0)
-            else:
-                self.client = QdrantClient(url=url, timeout=60.0)
+            self.client = QdrantClient(path=path)
         
         self.collection_name = collection_name
         
