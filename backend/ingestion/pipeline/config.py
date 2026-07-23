@@ -37,8 +37,8 @@ class IngestionSettings(BaseSettings):
     EMBEDDING_DIMENSION: int = 384
     
     # Qdrant Database Configuration
-    QDRANT_URL: str = os.getenv("QDRANT_URL", "http://localhost:6333")
-    QDRANT_API_KEY: str = os.getenv("QDRANT_API_KEY", "")
+    QDRANT_URL: str = os.getenv("QDRANT_URL", "https://b92d5ef7-a1fe-429b-86e0-67cb239dd428.us-west-1-0.aws.cloud.qdrant.io")
+    QDRANT_API_KEY: str = os.getenv("QDRANT_API_KEY", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3MiOiJtIiwic3ViamVjdCI6ImFwaS1rZXk6MmI0NTYzY2YtNTQyOC00NDdiLWE2ZDUtYjY2YmFkNjBiYTM0In0.BODxwJ_pzKQprCOosZZcLRtrQ510diLNfOSVAtyu62U")
     QDRANT_COLLECTION: str = "openfda_labels"
     
     # Chunker Configuration
