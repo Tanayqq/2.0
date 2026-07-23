@@ -46,11 +46,13 @@ const DRUG_EQUIVALENTS: Record<string, string[]> = {
   // A
   acetaminophen:       ["Tylenol", "Paracetamol", "Calpol", "Panadol"],
   acyclovir:           ["Zovirax", "Herpex", "Acivir"],
+  adalimumab:          ["Humira", "Amjevita", "Hadlima", "Hulio"],
   albuterol:           ["Ventolin", "Proair", "Proventil", "Asthalin"],
   allopurinol:         ["Zyloprim", "Zyloric", "Uricad"],
   alprazolam:          ["Xanax", "Alprax", "Restyl"],
   amlodipine:          ["Norvasc", "Amlovas", "Amlip"],
   amoxicillin:         ["Novamox", "Mox", "Amoxil", "Trimox"],
+  apixaban:            ["Eliquis"],
   atenolol:            ["Tenormin", "Aten", "Betacard"],
   atorvastatin:        ["Lipitor", "Atorva", "Storvas", "Tonact"],
   azathioprine:        ["Imuran", "Azoran", "Azapress"],
@@ -138,8 +140,8 @@ const DRUG_EQUIVALENTS: Record<string, string[]> = {
   omeprazole:          ["Prilosec", "Omez", "Losec", "Ocid"],
   ondansetron:         ["Zofran", "Emeset", "Ondem"],
   oseltamivir:         ["Tamiflu", "Antiflu", "Fluvir"],
-  // P
   pantoprazole:        ["Protonix", "Pantop", "Pan"],
+  pembrolizumab:       ["Keytruda"],
   pravastatin:         ["Pravachol", "Pravator", "Pravostat"],
   prednisolone:        ["Omnipred", "Deltastab", "Wysolone"],
   prednisone:          ["Deltasone", "Predcort", "Rayos"],
@@ -148,7 +150,12 @@ const DRUG_EQUIVALENTS: Record<string, string[]> = {
   // R
   rabeprazole:         ["Aciphex", "Rablet", "Razo"],
   ramipril:            ["Altace", "Cardace", "Ramace"],
+  rituximab:           ["Rituxan", "MabThera"],
+  rivaroxaban:         ["Xarelto"],
   rosuvastatin:        ["Crestor", "Rosuvas", "Rozavel"],
+  // S
+  sacubitril_valsartan: ["Entresto"],
+  sacubitril:          ["Entresto"],
   // S
   salmeterol:          ["Serevent", "Salmeter"],
   saxagliptin:         ["Onglyza"],
