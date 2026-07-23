@@ -18,7 +18,7 @@ structlog.configure(
 
 logger = structlog.get_logger()
 
-app = FastAPI(title=settings.APP_NAME)
+app = FastAPI(title=settings.APP_NAME, version="5.0.1")
 
 # Secure CORS Configuration
 cors_origins = [origin.strip() for origin in settings.CORS_ORIGINS.split(",") if origin.strip()]
