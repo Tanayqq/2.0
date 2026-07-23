@@ -366,9 +366,9 @@ class ProcessClinicalQueryUseCase:
 
         if not is_non_drug_mode:
             for drug in drugs_to_fetch:
-            section_statuses[drug] = {}
-            for sec in sections_to_fetch:
-                step_trace = {"drug": drug, "section": sec, "attempts": []}
+                section_statuses[drug] = {}
+                for sec in sections_to_fetch:
+                    step_trace = {"drug": drug, "section": sec, "attempts": []}
                 
                 # 1. Exact Section Search
                 exact_docs = []
