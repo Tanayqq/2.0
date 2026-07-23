@@ -229,6 +229,9 @@ class StructuredProfileStore:
             res = self.client.retrieve(collection_name=self.registry_col, ids=[registry_uid])
             if res:
                 return f"drug:{name_lower}"
+        except Exception:
+            pass
+
         # Fallback to DrugNameResolver
         try:
             from app.usecases.drug_resolver import DrugNameResolver
