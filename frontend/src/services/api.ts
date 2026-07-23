@@ -38,6 +38,7 @@ export interface AnswerResponse {
     total_latency_sec?: number;
     provider?: string;
     confidence?: string;
+    identity_profile?: any;
     zero_parametric_guard_triggered?: boolean;
     explainability?: any;
     conflict_resolution?: any;

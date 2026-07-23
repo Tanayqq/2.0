@@ -878,12 +878,49 @@ export default function App() {
             </Button>
           </form>
 
-          {/* Right indicator */}
-          <div className="flex items-center gap-4 shrink-0 pl-4">
-            <div className="flex items-center gap-1.5 px-3 py-1 rounded-md border border-[#1e293b]/50 bg-[#070b12] text-[10px] font-mono-dash text-slate-400">
-              <span className="h-1.5 w-1.5 rounded-full bg-cyan-500 glowing-dot" />
-              <span>Core Node: <span className="text-cyan-400 font-bold">MedGemma-27B local</span></span>
-            </div>
+          {/* Right indicator & Mode controls */}
+          <div className="flex items-center gap-2 shrink-0 pl-4">
+            {/* Clinical Chat Mode Selector */}
+            <select
+              value={selectedMode}
+              onChange={(e) => setSelectedMode(e.target.value)}
+              className="bg-[#070b12] border border-[#1e293b]/60 text-[10px] font-mono-dash text-cyan-400 font-bold rounded px-2 py-1 focus:outline-none"
+            >
+              <option value="DRUG_CHAT">💊 Drug Chat</option>
+              <option value="DISEASE_CHAT">🫁 Disease Chat</option>
+              <option value="SYMPTOM_CHAT">🩺 Symptom Intake</option>
+              <option value="PATIENT_SCENARIO">👤 Patient Scenario</option>
+              <option value="COMPARISON">⚖️ Comparison</option>
+              <option value="INTERACTION_CHECK">⚡ Interaction Check</option>
+              <option value="MEDICAL_REP">📊 Med Rep Monograph</option>
+              <option value="CLINICAL_GUIDELINE">📋 Clinical Guideline</option>
+              <option value="RESEARCH_LITERATURE">🔬 Research Literature</option>
+            </select>
+
+            {/* Country Context Selector */}
+            <select
+              value={countryContext}
+              onChange={(e) => setCountryContext(e.target.value)}
+              className="bg-[#070b12] border border-[#1e293b]/60 text-[10px] font-mono-dash text-slate-300 font-bold rounded px-2 py-1 focus:outline-none"
+            >
+              <option value="GLOBAL">🌐 Global Context</option>
+              <option value="US">🇺🇸 US Context</option>
+              <option value="IN">🇮🇳 India Context</option>
+            </select>
+
+            {/* Patient Memory Drawer Toggle */}
+            <button
+              type="button"
+              onClick={() => setShowPatientDrawer(!showPatientDrawer)}
+              className={`px-2 py-1 rounded text-[10px] font-bold font-mono-dash border transition-colors ${
+                showPatientDrawer
+                  ? "bg-cyan-950/60 border-cyan-800 text-cyan-400"
+                  : "bg-slate-900/40 border-slate-800 text-slate-400 hover:text-slate-200"
+              }`}
+            >
+              👤 Patient Memory ({patientProfile.age}y {patientProfile.gender})
+            </button>
+
             <button
               onClick={() => {
                 setQuery("");
@@ -891,12 +928,25 @@ export default function App() {
                 setHistory([]);
                 setActiveHistoryIndex(-1);
               }}
-              className="px-3 py-1.5 rounded border border-slate-800 bg-slate-900/40 text-[10px] font-bold font-mono-dash text-slate-400 hover:text-slate-200 transition-colors"
+              className="px-2.5 py-1 rounded border border-slate-800 bg-slate-900/40 text-[10px] font-bold font-mono-dash text-slate-400 hover:text-slate-200 transition-colors"
             >
               Reset
             </button>
           </div>
         </header>
+
+        {/* Patient Context Drawer Bar */}
+        {showPatientDrawer && (
+          <div className="bg-[#09111e] border-b border-cyan-950 px-6 py-2 flex items-center justify-between text-xs text-slate-300 font-mono-dash">
+            <div className="flex items-center gap-4">
+              <span className="font-bold text-cyan-400">PATIENT PROFILE MEMORY:</span>
+              <span>Age: <input type="number" value={patientProfile.age || 67} onChange={(e) => setPatientProfile(p => ({...p, age: parseInt(e.target.value) || 0}))} className="w-12 bg-slate-950 border border-slate-800 px-1 rounded text-center text-cyan-300" /></span>
+              <span>eGFR: <input type="number" value={patientProfile.eGFR || 42} onChange={(e) => setPatientProfile(p => ({...p, eGFR: parseFloat(e.target.value) || 0}))} className="w-12 bg-slate-950 border border-slate-800 px-1 rounded text-center text-amber-400 font-bold" /> mL/min</span>
+              <span>Meds: <span className="text-slate-200">{patientProfile.active_medications?.join(", ")}</span></span>
+            </div>
+            <span className="text-[10px] text-slate-500">Auto-evaluates Interaction & Renal Safety</span>
+          </div>
+        )}
 
         {/* Workspace Scroll Area */}
         <ScrollArea className="flex-1 p-6">
