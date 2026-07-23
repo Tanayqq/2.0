@@ -17,12 +17,15 @@ class QdrantAdapter(VectorDatabaseProtocol):
         api_key: str = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3MiOiJtIiwic3ViamVjdCI6ImFwaS1rZXk6MmI0NTYzY2YtNTQyOC00NDdiLWE2ZDUtYjY2YmFkNjBiYTM0In0.BODxwJ_pzKQprCOosZZcLRtrQ510diLNfOSVAtyu62U", 
         collection_name: str = "openfda_labels"
     ):
+        CLOUD_URL = "https://b92d5ef7-a1fe-429b-86e0-67cb239dd428.us-west-1-0.aws.cloud.qdrant.io"
+        CLOUD_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3MiOiJtIiwic3ViamVjdCI6ImFwaS1rZXk6MmI0NTYzY2YtNTQyOC00NDdiLWE2ZDUtYjY2YmFkNjBiYTM0In0.BODxwJ_pzKQprCOosZZcLRtrQ510diLNfOSVAtyu62U"
+
         if client:
             self.client = client
-        elif mode == "server" or "cloud.qdrant.io" in url or api_key:
-            self.client = QdrantClient(url=url, api_key=api_key, timeout=60.0)
         else:
-            self.client = QdrantClient(path=path)
+            final_url = url if ("cloud.qdrant.io" in (url or "")) else CLOUD_URL
+            final_key = api_key if api_key else CLOUD_KEY
+            self.client = QdrantClient(url=final_url, api_key=final_key, timeout=60.0)
         
         self.collection_name = collection_name
         
