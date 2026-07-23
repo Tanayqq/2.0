@@ -28,7 +28,7 @@ class QdrantAdapter(VectorDatabaseProtocol):
         else:
             final_url = url if ("cloud.qdrant.io" in (url or "")) else CLOUD_URL
             final_key = api_key if api_key else CLOUD_KEY
-            self.client = QdrantClient(url=final_url, api_key=final_key, timeout=60.0)
+            self.client = QdrantClient(url=final_url, api_key=final_key, prefer_grpc=False, timeout=60.0)
         
         self.collection_name = collection_name
         
