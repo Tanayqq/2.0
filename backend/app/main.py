@@ -32,6 +32,18 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.on_event("startup")
+async def startup_event():
+    logger.info("prewarming_models_start")
+    try:
+        from app.api.dependencies import get_embedding_model, get_vector_db
+        embed = get_embedding_model()
+        embed.embed_query("warmup query")
+        vdb = get_vector_db()
+        logger.info("prewarming_models_complete")
+    except Exception as e:
+        logger.error("prewarming_models_error", error=str(e))
+
 @app.middleware("http")
 async def request_logging_middleware(request: Request, call_next):
     request_id = str(uuid.uuid4())
