@@ -24,11 +24,12 @@ def handle_query(query: MedicalQuery, usecase: ProcessClinicalQueryUseCase = Dep
     try:
         return usecase.execute(query)
     except Exception as e:
-        logger.exception("Query failed", error=str(e))
+        tb = traceback.format_exc()
+        logger.exception("Query failed", error=str(e), traceback=tb)
         error_msg = str(e)
         if "rate limit" in error_msg.lower():
             return JSONResponse(status_code=429, content={"success": False, "error": error_msg})
-        return JSONResponse(status_code=500, content={"success": False, "error": "Internal Server Error"})
+        return JSONResponse(status_code=500, content={"success": False, "error": f"{error_msg} | TRACE: {tb[-300:]}"})
 
 @router.post("/debug/retrieval")
 def debug_retrieval(query: MedicalQuery, usecase: ProcessClinicalQueryUseCase = Depends(get_usecase)):
