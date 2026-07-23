@@ -247,3 +247,28 @@ def version_check():
             "active_llm_provider": settings.ACTIVE_LLM_PROVIDER,
         }
     }
+
+@router.post("/intake")
+def handle_conversation_intake(query: MedicalQuery):
+    """Conversation Engine: Processes dialogue state, slot filling, and physician history taking."""
+    from app.usecases.conversation_engine import ConversationEngine
+    engine = ConversationEngine()
+    return engine.process_intake(
+        text=query.question, 
+        conversation_id=query.conversation_id, 
+        profile=query.patient_profile
+    )
+
+@router.post("/workflow")
+def handle_clinical_workflow(query: MedicalQuery):
+    """Clinical Workflow Engine: Executes diagnostic and therapeutic pathways."""
+    from app.usecases.clinical_workflow import ClinicalWorkflowEngine
+    workflow = ClinicalWorkflowEngine.execute_workflow(query.question)
+    return {"success": True, "workflow": workflow or "No specific pathway matched for query."}
+
+@router.get("/quality")
+def get_quality_telemetry():
+    """Quality Dashboard: Returns Recall@K, MRR, NDCG, citation coverage, and corpus metrics."""
+    from eval.quality_dashboard import QualityDashboard
+    return QualityDashboard.get_quality_metrics()
+

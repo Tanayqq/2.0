@@ -1,0 +1,83 @@
+{
+  "spl_product_data_elements": [
+    "Ambrisentan Ambrisentan AMBRISENTAN AMBRISENTAN CROSCARMELLOSE SODIUM LACTOSE MONOHYDRATE LECITHIN, SOYBEAN MAGNESIUM STEARATE CELLULOSE, MICROCRYSTALLINE POLYETHYLENE GLYCOL, UNSPECIFIED POVIDONE TALC TITANIUM DIOXIDE FD&C RED NO. 40 ALUMINUM OXIDE POLYVINYL ALCOHOL, UNSPECIFIED PINK ROUND 1179 Ambrisentan Ambrisentan AMBRISENTAN AMBRISENTAN CROSCARMELLOSE SODIUM LACTOSE MONOHYDRATE LECITHIN, SOYBEAN MAGNESIUM STEARATE CELLULOSE, MICROCRYSTALLINE POLYETHYLENE GLYCOL, UNSPECIFIED POVIDONE TALC TITANIUM DIOXIDE POLYVINYL ALCOHOL, UNSPECIFIED OFF WHITE OVAL 1180"
+  ],
+  "spl_unclassified_section": [
+    ""
+  ],
+  "spl_medguide": [
+    "SPL MEDGUIDE"
+  ],
+  "package_label_principal_display_panel": [
+    "PACKAGE LABEL.PRINCIPAL DISPLAY PANEL NDC 70771-1363-3 Ambrisentan Tablets, 5 mg 30 Tablets Rx only NDC 70771-1364-3 Ambrisentan Tablets, 10 mg 30 Tablets Rx only labels label"
+  ],
+  "set_id": "0e3e3320-27ac-404f-9f01-3d82696e768a",
+  "id": "14a85c38-61bf-4621-8e3a-34ab57a15758",
+  "effective_time": "20241125",
+  "version": "10",
+  "openfda": {
+    "application_number": [
+      "ANDA210058"
+    ],
+    "brand_name": [
+      "Ambrisentan"
+    ],
+    "generic_name": [
+      "AMBRISENTAN"
+    ],
+    "manufacturer_name": [
+      "Zydus Lifesciences Limited"
+    ],
+    "product_ndc": [
+      "70771-1363",
+      "70771-1364"
+    ],
+    "product_type": [
+      "HUMAN PRESCRIPTION DRUG"
+    ],
+    "route": [
+      "ORAL"
+    ],
+    "substance_name": [
+      "AMBRISENTAN"
+    ],
+    "rxcui": [
+      "722116",
+      "722122"
+    ],
+    "spl_id": [
+      "14a85c38-61bf-4621-8e3a-34ab57a15758"
+    ],
+    "spl_set_id": [
+      "0e3e3320-27ac-404f-9f01-3d82696e768a"
+    ],
+    "package_ndc": [
+      "70771-1363-3",
+      "70771-1363-9",
+      "70771-1363-1",
+      "70771-1363-8",
+      "70771-1363-7",
+      "70771-1364-3",
+      "70771-1364-9",
+      "70771-1364-1",
+      "70771-1364-8",
+      "70771-1364-7"
+    ],
+    "is_original_packager": [
+      true
+    ],
+    "nui": [
+      "N0000175581",
+      "N0000175364"
+    ],
+    "pharm_class_epc": [
+      "Endothelin Receptor Antagonist [EPC]"
+    ],
+    "pharm_class_moa": [
+      "Endothelin Receptor Antagonists [MoA]"
+    ],
+    "unii": [
+      "HW6NV07QEC"
+    ]
+  }
+}

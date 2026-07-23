@@ -1373,10 +1373,21 @@ Identity Profile (Grounded FDA Label Metadata):
         except Exception:
             pass  # Non-critical; falls back to no alias augmentation
 
-        if not documents:
-            logger.info("no_documents_found")
+        # Zero Parametric Guard Validation
+        from app.usecases.zero_parametric_guard import ZeroParametricGuard
+        from app.usecases.explainability_engine import ExplainabilityEngine
+        from app.usecases.conflict_engine import MultiAuthorityConflictEngine
+
+        is_valid_grounded, guard_audit_text = ZeroParametricGuard.validate_retrieval(documents)
+        if not documents or not is_valid_grounded:
+            logger.info("zero_parametric_guard_triggered_in_execute")
             total_latency = time.time() - start_time
-            ans = "No dedicated clinical sections exist in the indexed authorities for the requested query.\nSemantic retrieval searched the remaining documents and found no clinically relevant content.\n\nStatus: NO_DATA"
+            ans = guard_audit_text or (
+                "### ⚠️ No Authoritative Evidence Found\n\n"
+                "No dedicated clinical sections exist in the indexed authorities for the requested query.\n"
+                "Authorities searched: ✓ DailyMed, ✓ FDA, ✓ CDSCO, ✓ ICMR, ✓ ADA, ✓ KDIGO, ✓ WHO, ✓ EMA.\n\n"
+                "The system intentionally avoids generating unsupported medical advice."
+            )
             return AnswerResponse(
                 answer=ans,
                 citations=[],
@@ -1389,13 +1400,12 @@ Identity Profile (Grounded FDA Label Metadata):
                     "retrieval_confidence": "Low",
                     "confidence": "Low",
                     "retrieval_stats": retrieval_stats,
-                    "latency_breakdown": {
-                        "alias_resolution_ms": round(retrieval_time * 0.1 * 1000, 2),
-                        "identity_lookup_ms": 0.0,
-                        "vector_search_ms": round(retrieval_time * 0.9 * 1000, 2),
-                        "rerank_ms": 0.0,
-                        "generation_ms": 0.0
-                    }
+                    "zero_parametric_guard_triggered": True,
+                    "explainability": ExplainabilityEngine.generate_explainability_payload(
+                        mode=getattr(query, 'mode', 'DRUG_CHAT'),
+                        collections_searched=retrieval_stats.get('collections_searched', ['openfda_labels']),
+                        retrieved_docs=documents
+                    )
                 }
             )
             

@@ -1,0 +1,927 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="db5ad93e-b7af-4e0b-a40c-8eacc8cef96a"/>
+   <code code="34391-3" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN PRESCRIPTION DRUG LABEL"/>
+   <title>
+      <content styleCode="bold">VinCRIStine Sulfate </content>
+      <br/>
+      <content styleCode="bold">Injection, USP</content>
+   </title>
+   <effectiveTime value="20260217"/>
+   <setId root="b22e4c8e-dbe1-4d4b-a026-e1812974071c"/>
+   <versionNumber value="16"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id extension="141588017" root="1.3.6.1.4.1.519.1"/>
+            <name>Hospira, Inc.</name>
+            <assignedEntity>
+               <assignedOrganization>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id extension="758967652" root="1.3.6.1.4.1.519.1"/>
+                        <name>Hospira Australia Pty Ltd</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C25391" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANALYSIS"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="61703-309" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                     <performance>
+                        <actDefinition>
+                           <code code="C43360" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="MANUFACTURE"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="61703-309" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                     <performance>
+                        <actDefinition>
+                           <code code="C84731" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="PACK"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="61703-309" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                     <performance>
+                        <actDefinition>
+                           <code code="C84732" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="LABEL"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="61703-309" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+               </assignedOrganization>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="b481ecca-f940-4502-b2a8-edb58f2075e1"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL product data elements section"/>
+               <effectiveTime value="20230201"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="61703-309" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>VinCRIStine Sulfate</name>
+                        <formCode code="C42945" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INJECTION, SOLUTION"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>VINCRISTINE SULFATE</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mg" value="1"/>
+                              <denominator unit="mL" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="T5IRO3534A" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>VINCRISTINE SULFATE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="5J49Q6B70F" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>VINCRISTINE</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <quantity>
+                              <numerator unit="mg" value="100"/>
+                              <denominator unit="mL" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="3OWL53L36A" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MANNITOL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="O40UQP6WCF" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SULFURIC ACID</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="55X04QC32I" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SODIUM HYDROXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="059QF0KO0R" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>WATER</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="mL" value="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C43215" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="VIAL, SINGLE-DOSE"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator unit="1" value="1"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="61703-309-26" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20140219"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="mL" value="2"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C43215" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="VIAL, SINGLE-DOSE"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator unit="1" value="1"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="61703-309-25" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20131127"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="ANDA071484" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73584" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20131127"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38276" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INTRAVENOUS"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_d8a98235-135e-4391-818a-81fa87c27f2f">
+               <id root="6f7d1fa6-8016-49f8-a692-c538b0457de8"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <text>
+                  <paragraph>Rx only</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">PRESERVATIVE FREE SOLUTION</content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20230201"/>
+            </section>
+         </component>
+         <component>
+            <section ID="BOX">
+               <id root="84f01545-4e85-4cd3-83a7-2edc507babb5"/>
+               <code code="34066-1" codeSystem="2.16.840.1.113883.6.1" displayName="Boxed Warning section"/>
+               <title>
+                  <content styleCode="emphasis">WARNINGS</content>
+               </title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Caution–This preparation should be administered by individuals experienced in the administration of Vincristine Sulfate Injection. It is extremely important that the intravenous needle or catheter be properly positioned before any vincristine is injected. Leakage into surrounding tissue during intravenous administration of Vincristine Sulfate Injection may cause considerable irritation. If extravasation occurs, the injection should be discontinued immediately, and any remaining portion of the dose should then be introduced into another vein. Local injection of hyaluronidase and the application of moderate heat to the area of leakage help disperse the drug and are thought to minimize discomfort and the possibility of cellulitis.</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">FOR INTRAVENOUS USE ONLY – FATAL IF GIVEN BY OTHER ROUTES.</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">See <linkHtml href="#overdosage">OVERDOSAGE</linkHtml> section for the treatment of patients given intrathecal Vincristine Sulfate Injection.</content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20260217"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_59933157-9c23-44a4-943f-fa5c54c85a3e">
+               <id root="41936013-72d7-40b1-a85c-a35202bed823"/>
+               <code code="34089-3" codeSystem="2.16.840.1.113883.6.1" displayName="DESCRIPTION SECTION"/>
+               <title>DESCRIPTION</title>
+               <text>
+                  <paragraph>Vincristine Sulfate Injection, USP is the salt of an alkaloid obtained from a common flowering herb, the periwinkle plant (<content styleCode="italics">Vinca rosea</content> Linn). Originally known as leurocristine, it has also been referred to as LCR and VCR.</paragraph>
+                  <paragraph>The molecular formula for Vincristine Sulfate, USP is C<sub>46</sub>H<sub>56</sub>N<sub>4</sub>O<sub>10</sub>∙H<sub>2</sub>SO<sub>4</sub>. It has a molecular weight of 923.04.</paragraph>
+                  <paragraph>The structural formula is as follows:</paragraph>
+                  <renderMultiMedia ID="id327" referencedObject="MM1"/>
+                  <paragraph>Vincristine Sulfate, USP is a white to off–white powder. It is soluble in methanol, freely soluble in water, but only slightly soluble in 95% ethanol. In 98% ethanol, Vincristine Sulfate, USP has an ultraviolet spectrum with maxima at 221 nm (ϵ+47,100).</paragraph>
+                  <paragraph>Vincristine Sulfate Injection, USP is a sterile, preservative–free, single-dose only solution available for intravenous use in 1 mg/mL and 2 mg/2 mL (1 mg/mL) vials. Each mL contains 1 mg Vincristine Sulfate, USP, 100 mg mannitol and Water for Injection, USP. Q.S. Sulfuric acid or sodium hydroxide have been added for pH control. The pH of Vincristine Sulfate Injection, USP ranges from 4.0 to 5.0. At the time of manufacture, the air in the containers is replaced by nitrogen.</paragraph>
+               </text>
+               <effectiveTime value="20230201"/>
+               <component>
+                  <observationMedia ID="MM1">
+                     <text>Chemical Structure</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="vincristine-01.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="clinical">
+               <id root="c200b1e4-a108-4c9e-9c5f-4cd294001b6d"/>
+               <code code="34090-1" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+               <title>CLINICAL PHARMACOLOGY</title>
+               <text>
+                  <paragraph>The mechanisms of action of vincristine sulfate remain under investigation. The mechanism of action of vincristine sulfate has been related to the inhibition of microtubule formation in mitotic spindle, resulting in an arrest of dividing cells at the metaphase stage.</paragraph>
+                  <paragraph>Central nervous system leukemia has been reported in patients undergoing otherwise successful therapy with vincristine sulfate. This suggests that vincristine does not penetrate well into the cerebrospinal fluid.</paragraph>
+                  <paragraph>Pharmacokinetic studies in patients with cancer have shown a triphasic serum decay pattern following rapid intravenous injection. The initial, middle and terminal half–lives are 5 minutes, 2.3 hours, and 85 hours respectively; however, the range of the terminal half–life in humans is from 19 to 155 hours. The liver is the major excretory organ in humans and animals. The metabolism of vinca alkaloids has been shown to be mediated by hepatic cytochrome P450 isoenzymes in the CYP 3A subfamily. This metabolic pathway may be impaired in patients with hepatic dysfunction or who are taking concomitant potent inhibitors of these isoenzymes (see <content styleCode="bold">
+                        <linkHtml href="#precautions">PRECAUTIONS</linkHtml>
+                     </content>). About 80% of an injected dose of vincristine sulfate appears in the feces and 10% to 20% can be found in the urine. Within 15 to 30 minutes after injection, over 90% of the drug is distributed from the blood into tissue, where it remains tightly, but not irreversibly, bound.</paragraph>
+                  <paragraph>Current principles of cancer chemotherapy involve the simultaneous use of several agents. Generally, each agent used has a unique toxicity and mechanism of action so that therapeutic enhancement occurs without additive toxicity. It is rarely possible to achieve equally good results with single–agent methods of treatment. Thus, vincristine sulfate is often chosen as part of polychemotherapy because of lack of significant bone–marrow suppression (at recommended doses) and of unique clinical toxicity (neuropathy). See <content styleCode="bold">
+                        <linkHtml href="#dosage">DOSAGE AND ADMINISTRATION</linkHtml>
+                     </content> section for possible increased toxicity when used in combination therapy.</paragraph>
+               </text>
+               <effectiveTime value="20230201"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_f7df5fd8-de3b-4ceb-92d3-422638ff51f8">
+               <id root="8d2f4431-3dd5-4b08-882f-11bb6c4d08bf"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>INDICATIONS AND USAGE</title>
+               <text>
+                  <paragraph>Vincristine Sulfate Injection is indicated in acute leukemia.</paragraph>
+                  <paragraph>Vincristine Sulfate Injection has also been shown to be useful in combination with other oncolytic agents in Hodgkin's disease, non–Hodgkin's malignant lymphomas, rhabdomyosarcoma, neuroblastoma, and Wilms' tumor.</paragraph>
+               </text>
+               <effectiveTime value="20230201"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_ca53fc11-2dd5-427d-9e41-a13fc6669304">
+               <id root="614f9e4c-aabf-401c-b73f-3073c9a960e9"/>
+               <code code="34070-3" codeSystem="2.16.840.1.113883.6.1" displayName="CONTRAINDICATIONS SECTION"/>
+               <title>CONTRAINDICATIONS</title>
+               <text>
+                  <paragraph>Patients with the demyelinating form of Charcot–Marie–Tooth syndrome should not be given Vincristine Sulfate Injection. Careful attention should be given to those conditions listed under <content styleCode="bold">WARNINGS</content> and <content styleCode="bold">PRECAUTIONS</content>.</paragraph>
+               </text>
+               <effectiveTime value="20230201"/>
+            </section>
+         </component>
+         <component>
+            <section ID="warnings">
+               <id root="829d5a92-33f4-454e-827a-79000b3da906"/>
+               <code code="34071-1" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS SECTION"/>
+               <effectiveTime value="20260217"/>
+               <component>
+                  <section ID="ID_012b9f76-6a4b-4032-9c67-c6d4f54640e8">
+                     <id root="986da178-4251-476f-94a6-ac50bb9f96ea"/>
+                     <code code="34066-1" codeSystem="2.16.840.1.113883.6.1" displayName="Boxed Warning section"/>
+                     <title>WARNINGS</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="bold">This preparation is for intravenous use only. It should be administered by individuals experienced in the administration of Vincristine Sulfate Injection. The intrathecal administration of Vincristine Sulfate Injection usually results in death.</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="bold">To reduce the potential for fatal medication errors due to incorrect route of administration, Vincristine Sulfate Injection should be diluted in a flexible plastic container and prominently labeled as indicated "FOR INTRAVENOUS USE ONLY – FATAL IF GIVEN BY OTHER ROUTES."</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="bold">See <linkHtml href="#overdosage">OVERDOSAGE</linkHtml> section for the treatment of patients given intrathecal Vincristine Sulfate Injection.</content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20260217"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_ed27a436-c3ed-49a1-ad23-046816361ee8">
+                     <id root="1a984ef6-e336-40ee-8ed9-c1023c68c57a"/>
+                     <code code="34077-8" codeSystem="2.16.840.1.113883.6.1" displayName="TERATOGENIC EFFECTS SECTION"/>
+                     <title>Pregnancy</title>
+                     <text>
+                        <paragraph>Vincristine sulfate can cause fetal harm when administered to a pregnant woman. When pregnant mice and hamsters were given doses of vincristine sulfate that caused resorption of 23% to 85% of fetuses, fetal malformations were produced in those that survived. Five monkeys were given single doses of vincristine sulfate between days 27 and 34 of their pregnancies; 3 of the fetuses were normal at term, and 2 viable fetuses had grossly evident malformations at term. In several animal species, vincristine sulfate can induce teratogenesis as well as embryo death at doses that are nontoxic to the pregnant animal. There are no adequate and well–controlled studies in pregnant women. If this drug is used during pregnancy or if the patient becomes pregnant while receiving this drug, she should be apprised of the potential hazard to the fetus. Women of child–bearing potential should be advised to avoid becoming pregnant.</paragraph>
+                     </text>
+                     <effectiveTime value="20230201"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="precautions">
+               <id root="93c0d32e-1349-49b4-9afa-82bcf6872a9e"/>
+               <code code="42232-9" codeSystem="2.16.840.1.113883.6.1" displayName="PRECAUTIONS SECTION"/>
+               <title>PRECAUTIONS</title>
+               <effectiveTime value="20260217"/>
+               <component>
+                  <section ID="ID_116d46f2-5b1d-491b-aa1c-0c807ba5ea22">
+                     <id root="c30e4bb6-cc38-48fa-8b4e-97e1e68f1a14"/>
+                     <code code="34072-9" codeSystem="2.16.840.1.113883.6.1" displayName="GENERAL PRECAUTIONS SECTION"/>
+                     <title>General</title>
+                     <text>
+                        <paragraph>Acute uric acid nephropathy, which may occur after the administration of oncolytic agents, has also been reported with vincristine sulfate. In the presence of leukopenia or a complicating infection, administration of the next dose of Vincristine Sulfate Injection warrants careful consideration. Treatment with vincristine sulfate in combination with other chemotherapy agents may cause myelosuppression. Monitor complete blood counts during treatment with vincristine sulfate (see <content styleCode="bold">
+                              <linkHtml href="#ID_c4b27801-d1b7-4cff-b2a3-0c60a3542b6c">Laboratory Tests</linkHtml>
+                           </content> below) and provide supportive care, including administration of hematopoietic growth factors, as clinically indicated.</paragraph>
+                        <paragraph>If central nervous system leukemia is diagnosed, additional agents may be required, because vincristine does not appear to cross the blood–brain barrier in adequate amounts.</paragraph>
+                        <paragraph>Particular attention should be given to dosage and neurologic side effects if Vincristine Sulfate Injection is administered to patients with preexisting neuromuscular disease and when other drugs with neurotoxic potential are also being used.</paragraph>
+                        <paragraph>Acute shortness of breath and severe bronchospasm have been reported following the administration of vinca alkaloids. These reactions have been encountered most frequently when the vinca alkaloid was used in combination with mitomycin–C and may require aggressive treatment, particularly when there is preexisting pulmonary dysfunction. The onset of these reactions may occur minutes to several hours after the vinca alkaloid is injected and may occur up to 2 weeks following the dose of mitomycin. Progressive dyspnea requiring chronic therapy may occur. Vincristine sulfate should not be readministered.</paragraph>
+                        <paragraph>Care must be taken to avoid contamination of the eye with concentration of Vincristine Sulfate Injection used clinically. If accidental contamination occurs severe irritation (or, if the drug was delivered under pressure, even corneal ulceration) may result. The eye should be washed immediately and thoroughly. </paragraph>
+                        <paragraph>The safety of immunization with live vaccines during treatment with vincristine sulfate has not been studied and vaccination with a live virus is not recommended during treatment with vincristine sulfate. Follow current vaccination practice guidelines for administration of live vaccines for patients who have received chemotherapy after completion of treatment with vincristine sulfate.</paragraph>
+                     </text>
+                     <effectiveTime value="20260217"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_c4b27801-d1b7-4cff-b2a3-0c60a3542b6c">
+                     <id root="e3c8f84b-3d9f-49af-8702-45bc0ad4d4bb"/>
+                     <code code="34075-2" codeSystem="2.16.840.1.113883.6.1" displayName="LABORATORY TESTS SECTION"/>
+                     <title>Laboratory Tests</title>
+                     <text>
+                        <paragraph>Because dose–limiting clinical toxicity is manifested as neurotoxicity clinical evaluation (e.g., history, physical examination) is necessary to detect the need for dosage modification. Following administration of Vincristine Sulfate Injection, some individuals may have a fall in the white blood cell count or platelet count, particularly when previous therapy or the disease itself has reduced bone–marrow function. Therefore, a complete blood count should be done before administration of each dose. Acute elevation of serum uric acid may also occur during induction of remission in acute leukemia; thus, such levels should be determined frequently during the first 3 to 4 weeks of treatment or appropriate measures taken to prevent uric acid nephropathy. The laboratory performing these tests should be consulted for its range of normal values.</paragraph>
+                     </text>
+                     <effectiveTime value="20230201"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_5dec7dfb-376b-45e8-a746-832d5f9c0268">
+                     <id root="56cc492a-113b-44ac-8ca7-9596e1a082e4"/>
+                     <code code="34073-7" codeSystem="2.16.840.1.113883.6.1" displayName="DRUG INTERACTIONS SECTION"/>
+                     <title>Drug Interactions</title>
+                     <text>
+                        <paragraph>The simultaneous oral or intravenous administration of phenytoin and antineoplastic chemotherapy combinations that included vincristine sulfate has been reported to reduce blood levels of the anticonvulsant and to increase seizure activity. Dosage adjustment should be based on serial blood level monitoring. The contribution of vincristine sulfate to this interaction is not certain. The interaction may result from reduced absorption of phenytoin and an increase in the rate of its metabolism and elimination.</paragraph>
+                        <paragraph>Vincristine sulfate is a substrate for cytochrome P450 3A isozymes (CYP3A). Concurrent administration of vincristine sulfate with itraconazole or fluconazole (known inhibitors of the CYP3A metabolic pathway) has been reported to cause an earlier onset and/or an increased severity of neuromuscular side effects (see <content styleCode="bold">
+                              <linkHtml href="#adverse">ADVERSE REACTIONS</linkHtml>
+                           </content>). This interaction is presumed to be related to inhibition of the metabolism of vincristine. Therefore, the concomitant use of strong CYP3A inhibitors with vincristine sulfate should be avoided. Patients should be frequently monitored for adverse reactions with concomitant use of moderate CYP3A inhibitors (e.g., fluconazole) with vincristine sulfate.</paragraph>
+                        <paragraph>Concurrent use of strong CYP3A inducers (e.g., St. John's Wort) with vincristine sulfate should be avoided.</paragraph>
+                        <paragraph>Vincristine sulfate is also a substrate for P-glycoprotein (P-gp). Therefore, the concomitant use of P-gp inhibitors or inducers should be avoided.</paragraph>
+                     </text>
+                     <effectiveTime value="20230201"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_d052041d-431f-4339-8264-ab0ae919fdaa">
+                     <id root="d201bad2-5109-4685-8508-601fcd9c04b7"/>
+                     <code code="34083-6" codeSystem="2.16.840.1.113883.6.1" displayName="CARCINOGENESIS &amp; MUTAGENESIS &amp; IMPAIRMENT OF FERTILITY SECTION"/>
+                     <title>Carcinogenesis, Mutagenesis, Impairment of Fertility</title>
+                     <text>
+                        <paragraph>Neither <content styleCode="italics">in vivo</content> nor <content styleCode="italics">in vitro</content> laboratory tests have conclusively demonstrated the mutagenicity of this product. Fertility following treatment with vincristine sulfate alone for malignant disease has not been studied in humans. Clinical reports of both male and female patients who received multiple–agent chemotherapy that included vincristine sulfate indicate that azoospermia and amenorrhea can occur in postpubertal patients. Recovery occurred many months after completion of chemotherapy in some but not all patients. When the same treatment is administered to prepubertal patients, permanent azoospermia and amenorrhea are much less likely.</paragraph>
+                        <paragraph>Patients who received chemotherapy with vincristine sulfate in combination with anti–cancer drugs known to be carcinogenic have developed second malignancies. The contributing role of vincristine sulfate in this development has not been determined. No evidence of carcinogenicity was found following intraperitoneal administration of vincristine sulfate in rats and mice, although this study was limited.</paragraph>
+                     </text>
+                     <effectiveTime value="20230201"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_9ca7913a-729f-472c-be75-760d5ab737f4">
+                     <id root="facc914d-ac9c-4010-8b48-13bc91f59ca9"/>
+                     <code code="42228-7" codeSystem="2.16.840.1.113883.6.1" displayName="PREGNANCY SECTION"/>
+                     <title>Usage in Pregnancy</title>
+                     <text>
+                        <paragraph>See <content styleCode="bold">
+                              <linkHtml href="#ID_012b9f76-6a4b-4032-9c67-c6d4f54640e8">WARNINGS</linkHtml>.</content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20260217"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_6f67318b-14b2-49cb-ac9d-c028522dd07d">
+                     <id root="98bca209-5273-482e-92bb-9ce5ccea9653"/>
+                     <code code="34080-2" codeSystem="2.16.840.1.113883.6.1" displayName="NURSING MOTHERS SECTION"/>
+                     <title>Nursing Mothers</title>
+                     <text>
+                        <paragraph>It is not known whether this drug is excreted in human milk. Because many drugs are excreted in human milk and because of the potential for serious adverse reactions due to vincristine sulfate in nursing infants, a decision should be made either to discontinue nursing or the drug, taking into account the importance of the drug to the mother.</paragraph>
+                     </text>
+                     <effectiveTime value="20230201"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_b85aa7ff-9520-4844-92e4-9115b2a51862">
+                     <id root="903811fe-6154-4ba7-87e2-3765df9d12b2"/>
+                     <code code="34081-0" codeSystem="2.16.840.1.113883.6.1" displayName="PEDIATRIC USE SECTION"/>
+                     <title>Pediatric Use</title>
+                     <text>
+                        <paragraph>See <content styleCode="bold">
+                              <linkHtml href="#dosage">DOSAGE AND ADMINISTRATION</linkHtml>
+                           </content> section.</paragraph>
+                     </text>
+                     <effectiveTime value="20230201"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="adverse">
+               <id root="7207065c-961a-4395-a380-af993cd40cb2"/>
+               <code code="34084-4" codeSystem="2.16.840.1.113883.6.1" displayName="ADVERSE REACTIONS SECTION"/>
+               <title>ADVERSE REACTIONS</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Prior to the use of this drug, patients and/or their parents/guardian should be advised of the possibility of untoward symptoms.</content>
+                  </paragraph>
+                  <paragraph>In general, adverse reactions are reversible and are related to dosage. The most common adverse reaction is hair loss; the most troublesome adverse reactions are neuromuscular in origin.</paragraph>
+                  <paragraph>When single, weekly doses of the drug are employed, the adverse reactions of leukopenia, neuritic pain, and constipation occur but are usually of short duration (ie., less than 7 days). When the dosage is reduced, these reactions may lessen or disappear. The severity of such reactions seems to increase when the calculated amount of drug is given in divided doses. Other adverse reactions, such as hair loss, sensory loss, paresthesia, difficulty in walking, slapping gait, loss of deep–tendon reflexes, and muscle wasting, may persist for at least as long as therapy is continued. Generalized sensorimotor dysfunction may become progressively more severe with continued treatment. Although most such symptoms usually disappear by about the sixth week after discontinuance of treatment, some neuromuscular difficulties may persist for prolonged periods in some patients. Regrowth of hair may occur while maintenance therapy continues.</paragraph>
+                  <paragraph>The following adverse reactions have been reported:</paragraph>
+                  <paragraph>Hepatic veno-occlusive disease has been reported in patients receiving vincristine, particularly in pediatric patients, as part of standard combination chemotherapy regimens. Some of the patients had fatal outcomes; some who survived had undergone liver transplantation.</paragraph>
+               </text>
+               <effectiveTime value="20230201"/>
+               <component>
+                  <section ID="ID_152c51cb-aee6-461b-8b53-a2f7bf83b6fb">
+                     <id root="088f3f44-62a4-4c12-9cfc-cbdb2005be1d"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Hypersensitivity</title>
+                     <text>
+                        <paragraph>Rare cases of allergic–type reactions, such as anaphylaxis, rash and edema, that are temporally related to vincristine therapy have been reported in patients receiving vincristine as a part of multidrug chemotherapy regimens.</paragraph>
+                     </text>
+                     <effectiveTime value="20230201"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_ff2f5795-f799-4c8e-b86b-1dd819d8036f">
+                     <id root="7397dc3c-2176-40e0-b38b-cba0591389b5"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Gastrointestinal</title>
+                     <text>
+                        <paragraph>Constipation, abdominal cramps, weight loss, nausea, vomiting, oral ulceration, diarrhea, paralytic ileus, intestinal necrosis and/or perforation, and anorexia have occurred. Constipation may take the form of upper–colon impaction, and, on physical examination, the rectum may be empty. Colicky abdominal pain coupled with an empty rectum may mislead the physician. A flat film of the abdomen is useful in demonstrating this condition. All cases have responded to high enemas and laxatives. A routine prophylactic regimen against constipation is recommended for all patients receiving Vincristine Sulfate Injection.</paragraph>
+                        <paragraph>Paralytic ileus (which mimics the "surgical abdomen") may occur, particularly in young pediatric patients. The ileus will reverse itself with temporary discontinuance of Vincristine Sulfate Injection and with symptomatic care.</paragraph>
+                     </text>
+                     <effectiveTime value="20230201"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_0486e739-f21c-4ae2-b602-1b2d499f8fbf">
+                     <id root="1df42492-8433-4b6a-8ad9-edeb518116bb"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Genitourinary</title>
+                     <text>
+                        <paragraph>Polyuria, dysuria, and urinary retention due to bladder atony have occurred. Other drugs known to cause urinary retention (particularly in the elderly) should, if possible, be discontinued for the first few days following administration of Vincristine Sulfate Injection.</paragraph>
+                     </text>
+                     <effectiveTime value="20230201"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_2b16ad7d-6a8d-4650-a9d6-e6401b502215">
+                     <id root="a714075d-07f4-432a-a638-6cf554e19550"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Cardiovascular</title>
+                     <text>
+                        <paragraph> Hypertension and hypotension have occurred. Chemotherapy combinations that have included vincristine sulfate, when given to patients previously treated with mediastinal radiation, have been associated with coronary artery disease and myocardial infarction. Causality has not been established.</paragraph>
+                     </text>
+                     <effectiveTime value="20230201"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_796fd842-afc3-4b6b-8782-bd6183047edf">
+                     <id root="bf7f6b82-2508-4d7b-8185-dd06a0dd845f"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Neurologic</title>
+                     <text>
+                        <paragraph>Frequently, there is a sequence to the development of neuromuscular side effects. Initially, only sensory impairment and paresthesia may be encountered. With continued treatment, neuritic pain and, later, motor difficulties may occur. There have been no reports of any agent that can reverse the neuromuscular manifestations that may accompany therapy with vincristine sulfate.</paragraph>
+                        <paragraph>Loss of deep–tendon reflexes, foot drop, ataxia, and paralysis have been reported with continued administration. Cranial nerve manifestations, such as isolated paresis and/or paralysis of muscles controlled by cranial motor nerves including potentially life–threatening bilateral vocal cord paralysis, may occur in the absence of motor impairment elsewhere; extraocular and laryngeal muscles are those most commonly involved. Jaw pain, pharyngeal pain, parotid gland pain, bone pain, back pain, limb pain, and myalgias have been reported; pain in these areas may be severe. Convulsions, frequently with hypertension, have been reported in a few patients receiving vincristine sulfate. Several instances of convulsions followed by coma have been reported in pediatric patients. Transient cortical blindness and optic atrophy with blindness have been reported. Treatment with vinca alkaloids has resulted in both vestibular and auditory damage to the eighth cranial nerve. Manifestations include partial or total deafness which may be temporary or permanent, and difficulties with balance including dizziness, nystagmus, and vertigo. Particular caution is warranted when vincristine is used in combination with other agents known to be ototoxic such as the platinum–containing oncolytics.</paragraph>
+                     </text>
+                     <effectiveTime value="20230201"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_5cef7608-b7e2-439d-88c7-ee576d10acda">
+                     <id root="0a7e54fd-0f53-4ceb-957b-59506665cf85"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Pulmonary</title>
+                     <text>
+                        <paragraph>See <content styleCode="bold">
+                              <linkHtml href="#precautions">PRECAUTIONS</linkHtml>
+                           </content> section. Acute respiratory distress syndrome has been reported.</paragraph>
+                     </text>
+                     <effectiveTime value="20230201"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_c2e60242-fe08-49b0-8fdf-540043007c30">
+                     <id root="f7a13aee-a11a-4ddc-ac24-5e488eee614a"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Endocrine</title>
+                     <text>
+                        <paragraph>Rare occurrences of a syndrome attributable to inappropriate antidiuretic hormone secretion have been observed in patients treated with vincristine sulfate. This syndrome is characterized by high urinary sodium excretion in the presence of hyponatremia; renal or adrenal disease, hypotension, dehydration, azotemia, and clinical edema are absent. With fluid deprivation, improvement occurs in the hyponatremia and in the renal loss of sodium.</paragraph>
+                     </text>
+                     <effectiveTime value="20230201"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_d2aeed32-a8da-404b-a562-1e1f9610f9e7">
+                     <id root="66de24ac-ba07-4df1-add7-b15f699b06c2"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Hematologic</title>
+                     <text>
+                        <paragraph>Vincristine Sulfate Injection does not appear to have any constant or significant effect on platelets or red blood cells. Serious bone–marrow depression is usually not a major dose–limiting event. However, anemia, leukopenia, and thrombocytopenia have been reported. Thrombocytopenia, if present when therapy with Vincristine Sulfate Injection is begun, may actually improve before the appearance of bone marrow remission. Granulocytopenia has been reported.</paragraph>
+                     </text>
+                     <effectiveTime value="20230201"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_f3c9c14c-4832-438b-b850-cf72a3602f35">
+                     <id root="3579b5f5-a4ce-4cd9-812f-87d358c1bd1c"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Skin</title>
+                     <text>
+                        <paragraph>Alopecia and rash have been reported.</paragraph>
+                     </text>
+                     <effectiveTime value="20230201"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_7bf188c6-02e7-436a-a029-c8b1199ebc7d">
+                     <id root="f8aaab86-3726-4681-b321-a4ec051f995a"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Other</title>
+                     <text>
+                        <paragraph>Fever, headache, dehydration, and hyperuricemia have occurred.</paragraph>
+                     </text>
+                     <effectiveTime value="20230201"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="overdosage">
+               <id root="8caea812-2b50-40b8-959b-7f64f10ab32e"/>
+               <code code="34088-5" codeSystem="2.16.840.1.113883.6.1" displayName="OVERDOSAGE SECTION"/>
+               <title>OVERDOSAGE</title>
+               <text>
+                  <paragraph>Side effects following the use of Vincristine Sulfate Injection are dose related. In pediatric patients under 13 years of age, death has occurred following doses of vincristine sulfate that were 10 times those recommended for therapy. Severe symptoms may occur in this patient group following dosages of 3 to 4 mg/m<sup>2</sup>. Adults can be expected to experience severe symptoms after single doses of 3 mg/m<sup>2</sup> or more (see <content styleCode="bold">
+                        <linkHtml href="#adverse">ADVERSE REACTIONS</linkHtml>
+                     </content>). Therefore, following administration of doses higher than those recommended, patients can be expected to experience exaggerated side effects. Supportive care should include the following: (1) prevention of side effects resulting from the syndrome of inappropriate antidiuretic hormone secretion (preventive treatment would include restriction of fluid intake and perhaps the administration of a diuretic affecting the function of Henle's loop and the distal tubule); (2) administration of anticonvulsants; (3) use of enemas or cathartics to prevent ileus (in some instances, decompression of the gastrointestinal tract may be necessary); (4) monitoring the cardiovascular system; (5) determining daily blood counts for guidance in transfusion requirements.</paragraph>
+                  <paragraph>Folinic acid has been observed to have a protective effect in normal mice that were administered lethal doses of vincristine sulfate (<content styleCode="italics">Cancer Res</content> 1963;23:1390). Isolated case reports suggest that folinic acid may be helpful in treating humans who have received an overdose of vincristine sulfate. It is suggested that 100 mg of folinic acid be administered intravenously every 3 hours for 24 hours and then every 6 hours for at least 48 hours. Theoretically (based on pharmacokinetic data), tissue levels of vincristine sulfate can be expected to remain significantly elevated for at least 72 hours. Treatment with folinic acid does not eliminate the need for the above mentioned supportive measures.</paragraph>
+                  <paragraph>Most of an intravenous dose of vincristine is excreted into the bile after rapid tissue binding (see <content styleCode="bold">
+                        <linkHtml href="#clinical">CLINICAL PHARMACOLOGY</linkHtml>
+                     </content>). Because only very small amounts of the drug appear in dialysate, hemodialysis is not likely to be helpful in cases of overdosage. An increase in the severity of side effects may be experienced by patients with liver disease that is severe enough to decrease biliary excretion. Enhanced fecal excretion of parenterally administered vincristine has been demonstrated in dogs pretreated with cholestyramine. There are no published clinical data on the use of cholestyramine as an antidote in humans.</paragraph>
+                  <paragraph>There are no published clinical data on the consequences of oral ingestion of vincristine. Should oral ingestion occur, the stomach should be evacuated. Evacuation should be followed by oral administration of activated charcoal and a cathartic.</paragraph>
+                  <paragraph>Treatment of patients following intrathecal administration of Vincristine Sulfate Injection has included immediate removal of spinal fluid and flushing with Lactated Ringer's, as well as other solutions and has not prevented ascending paralysis and death. In one case, progressive paralysis in an adult was arrested by the following treatment <content styleCode="bold">initiated immediately after the intrathecal injection:</content>
+                  </paragraph>
+                  <list listType="ordered">
+                     <item>
+                        <caption>1.</caption>As much spinal fluid was removed as could be safely done through lumbar access.</item>
+                     <item>
+                        <caption>2.</caption>The subarachnoid space was flushed with Lactated Ringer's solution infused continuously through a catheter in a cerebral lateral ventricle at the rate of 150 mL/h. The fluid was removed through a lumbar access.</item>
+                     <item>
+                        <caption>3.</caption>As soon as fresh frozen plasma became available, the fresh frozen plasma, 25 mL, diluted in 1 L of Lactated Ringer's solution was infused through the cerebral ventricular catheter at the rate of 75 mL/h with removal through the lumbar access. The rate of infusion was adjusted to maintain a protein level in the spinal fluid of 150 mg/dL.</item>
+                     <item>
+                        <caption>4.</caption>Glutamic acid, 10 g, was given intravenously over 24 hours followed by 500 mg 3 times daily by mouth for 1 month or until neurological dysfunction stabilized. The role of glutamic acid in this treatment is not certain and may not be essential.</item>
+                  </list>
+               </text>
+               <effectiveTime value="20230201"/>
+            </section>
+         </component>
+         <component>
+            <section ID="dosage">
+               <id root="8e277eb8-65eb-4ab8-9e6b-e1e0a60e02a6"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>DOSAGE AND ADMINISTRATION</title>
+               <text>
+                  <paragraph>This preparation is for intravenous use only (see <content styleCode="bold">
+                        <linkHtml href="#ID_012b9f76-6a4b-4032-9c67-c6d4f54640e8">WARNINGS</linkHtml>
+                     </content>).</paragraph>
+                  <paragraph>Neurotoxicity appears to be dose related. Extreme care must be used in calculating and administering the dose of <content styleCode="bold">Vincristine Sulfate Injection</content> since overdosage may have a very serious or fatal outcome.</paragraph>
+                  <paragraph>The usual dose of Vincristine Sulfate Injection for pediatric patients is 1.5–2 mg/m<sup>2</sup>. For pediatric patients weighing 10 kg or less, the starting dose should be 0.05 mg/kg, administered once a week. The usual dose of Vincristine Sulfate Injection for adults is 1.4 mg/m<sup>2</sup>. A 50% reduction in the dose of Vincristine Sulfate Injection is recommended for patients having a direct serum bilirubin value above 3 mg/100 mL.</paragraph>
+                  <paragraph>The drug is administered intravenously <content styleCode="italics">at weekly intervals.</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">TO REDUCE THE POTENTIAL FOR FATAL MEDICATION ERRORS DUE TO INCORRECT ROUTE OF ADMINISTRATION, VINCRISTINE SULFATE INJECTION SHOULD BE DILUTED IN A FLEXIBLE PLASTIC CONTAINER AND PROMINENTLY LABELED AS INDICATED FOR INTRAVENOUS USE ONLY – FATAL IF GIVEN BY OTHER ROUTES (See <linkHtml href="#ID_012b9f76-6a4b-4032-9c67-c6d4f54640e8">WARNINGS</linkHtml>).</content>
+                  </paragraph>
+                  <paragraph>The concentration of Vincristine Sulfate Injection is 1 mg/mL. Do not add extra fluid to the vial prior to removal of the dose. Withdraw the solution of Vincristine Sulfate Injection into an accurate dry syringe, measuring the dose carefully. Do not add extra fluid to the vial in an attempt to empty it completely.</paragraph>
+               </text>
+               <effectiveTime value="20260217"/>
+               <component>
+                  <section ID="ID_5bf917f2-698b-47cf-8cf1-376c9e0bb948">
+                     <id root="bc889413-707a-4110-ba1a-14438be991f5"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>
+                        <content styleCode="underline">Preparation for flexible plastic container</content>
+                     </title>
+                     <text>
+                        <paragraph>Vincristine Sulfate Injection when diluted with 0.9% Sodium Chloride Injection in concentrations from 0.0015 mg/mL to 0.08 mg/mL is stable for up to 24 hours when protected from light or 8 hours under normal light at 25°C.</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Caution: It is extremely important that the intravenous needle or catheter be properly positioned before any vincristine is injected. Leakage into surrounding tissue during intravenous administration of Vincristine Sulfate Injection may cause considerable irritation.</content> If extravasation occurs, the injection should be discontinued immediately and any remaining portion of the dose should then be introduced into another vein. Local injection of hyaluronidase and the application of moderate heat to the area of leakage will help disperse the drug and may minimize discomfort and the possibility of cellulitis.</paragraph>
+                        <paragraph>Vincristine Sulfate Injection must be administered via an intact, free–flowing intravenous needle or catheter. Care should be taken that there is no leakage or swelling occurring during administration (see boxed<content styleCode="bold">
+                              <linkHtml href="#BOX"> WARNINGS</linkHtml>
+                           </content>).</paragraph>
+                        <paragraph>The diluted Vincristine Sulfate Injection may be infused via a flexible plastic container directly into an intravenous catheter/needle or into a running intravenous infusion (see <content styleCode="bold">
+                              <linkHtml href="#druginter">Drug Interactions</linkHtml>
+                           </content> below).</paragraph>
+                     </text>
+                     <effectiveTime value="20260217"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_29676b55-96c4-4ed4-aba0-c7e9306e2e93">
+                     <id root="c27f41b7-cb38-4717-9369-d8687fe5767f"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Patients Receiving Radiation Therapy</title>
+                     <text>
+                        <paragraph>Vincristine Sulfate Injection should not be given to patients while they are receiving radiation therapy through ports that include the liver. When Vincristine Sulfate Injection is used in combination with L–asparaginase, Vincristine Sulfate Injection should be given 12 to 24 hours before administration of the enzyme in order to minimize toxicity; administering L–asparaginase before Vincristine Sulfate Injection may reduce hepatic clearance of vincristine.</paragraph>
+                     </text>
+                     <effectiveTime value="20260217"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="druginter">
+                     <id root="d7aa318c-4f11-41db-880e-78a3d1d87acf"/>
+                     <code code="34073-7" codeSystem="2.16.840.1.113883.6.1" displayName="DRUG INTERACTIONS SECTION"/>
+                     <title>Drug Interactions</title>
+                     <text>
+                        <paragraph>Vincristine Sulfate Injection should not be diluted in solutions that raise or lower the pH outside the range of 3.5 to 5.5. It should not be mixed with anything other than 0.9% Sodium Chloride Injection USP.</paragraph>
+                        <paragraph>Whenever solution and container permit, parenteral drug products should be inspected visually for particulate matter and discoloration prior to administration.</paragraph>
+                     </text>
+                     <effectiveTime value="20260217"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_7f60e830-c8e2-4353-9866-50f5cf68a4bb">
+                     <id root="1b52bce1-825c-4034-afc6-2ae664d511ec"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>Handling and Disposal</title>
+                     <text>
+                        <paragraph>Procedures for proper handling and disposal of anticancer drugs should be considered. Several guidelines on this subject have been published.<sup>1</sup> There is no general agreement that all of the procedures recommended in the guidelines are necessary or appropriate.</paragraph>
+                     </text>
+                     <effectiveTime value="20230201"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_62c60e48-07e3-43c0-9690-201109a4e50b">
+               <id root="34144d37-0895-4519-8361-cc2a5e477da5"/>
+               <code code="34069-5" codeSystem="2.16.840.1.113883.6.1" displayName="HOW SUPPLIED SECTION"/>
+               <title>HOW SUPPLIED</title>
+               <text>
+                  <paragraph>Vincristine Sulfate Injection, USP, is available as follows:</paragraph>
+                  <table styleCode="Noautorules" width="100%">
+                     <col width="49%"/>
+                     <col width="49%"/>
+                     <tbody>
+                        <tr>
+                           <td align="center" styleCode="Rrule Botrule Lrule Toprule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">Unit of Sale</content>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule Lrule Toprule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">Total Strength/Total Volume</content>
+                              </paragraph>
+                              <paragraph>
+                                 <content styleCode="bold">(Concentration)</content>
+                              </paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">NDC 61703–309–26</content>
+                              </paragraph>
+                              <paragraph>Carton of 1 single-dose flip-top vial (blue cap)</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                              <paragraph>1 mg/mL</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td align="center" styleCode="Rrule Botrule Lrule Toprule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">NDC 61703–309–25</content>
+                              </paragraph>
+                              <paragraph>Carton of 1 single-dose flip-top vial (blue cap)</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule Lrule Toprule " valign="top">
+                              <paragraph>2 mg/2 mL</paragraph>
+                              <paragraph>(1 mg/mL)</paragraph>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </text>
+               <effectiveTime value="20230201"/>
+               <component>
+                  <section ID="ID_0f12d1f8-feb3-42dc-a32b-e5f8bc514999">
+                     <id root="f6fc297b-0b0a-4f29-bd96-e9b2cce1662d"/>
+                     <code code="44425-7" codeSystem="2.16.840.1.113883.6.1" displayName="STORAGE AND HANDLING SECTION"/>
+                     <text>
+                        <paragraph>This product should be refrigerated between 2°C–8°C (36°F–46°F). Discard unused solution. Protect from light. Store Upright.</paragraph>
+                     </text>
+                     <effectiveTime value="20230201"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_fb536374-ea73-4705-90a8-657aa0af7c97">
+               <id root="db4e8c25-c1e0-4cad-b831-f67c543da792"/>
+               <code code="34093-5" codeSystem="2.16.840.1.113883.6.1" displayName="REFERENCES SECTION"/>
+               <title>REFERENCES</title>
+               <text>
+                  <list listType="ordered">
+                     <item>
+                        <caption>1.</caption>
+                        <content styleCode="bold"> OSHA Hazardous Drugs. OSHA. <linkHtml href="https://www.osha.gov/hazardous-drugs">http://www.osha.gov/SLTC/hazardousdrugs/index.html</linkHtml>
+                        </content>
+                     </item>
+                  </list>
+               </text>
+               <effectiveTime value="20260217"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_cc9e47e4-444b-4ac2-9b0c-7ab4965a0370">
+               <id root="ed3acec7-451f-474e-9140-1b5cfb982e11"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <text>
+                  <paragraph>Distributed by: <content styleCode="bold">Hospira, Inc.</content> Lake Forest, IL 60045 USA</paragraph>
+                  <renderMultiMedia ID="id728" referencedObject="MM2"/>
+                  <paragraph>Novaplus is a registered trademark of Vizient, Inc.</paragraph>
+                  <paragraph>LAB-1313-8.0</paragraph>
+                  <paragraph>Revised: 12/2025</paragraph>
+               </text>
+               <effectiveTime value="20260217"/>
+               <component>
+                  <observationMedia ID="MM2">
+                     <text>Logo</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="vincristine-02.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_2df2524f-ef6d-49dd-9021-b0a020782b09">
+               <id root="63793bc0-2dd4-4f3e-b452-ed68db712091"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PRINCIPAL DISPLAY PANEL - 1 mL Vial Label</title>
+               <text>
+                  <paragraph>NDC 61703-309-26<br/>Rx only<br/>1 mL</paragraph>
+                  <paragraph>VinCRIStine<br/>Sulfate Injection, USP</paragraph>
+                  <paragraph>1 mg/mL</paragraph>
+                  <paragraph>Single-dose Vial<br/>For IV Use Only</paragraph>
+                  <paragraph>Cytotoxic Agent</paragraph>
+                  <renderMultiMedia ID="id755" referencedObject="MM3"/>
+               </text>
+               <effectiveTime value="20230201"/>
+               <component>
+                  <observationMedia ID="MM3">
+                     <text>Principal Display Panel - 1 mL Vial Label</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="vincristine-03.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_5079cf90-86e7-4ad0-9579-16bd05cf470f">
+               <id root="7c68d407-2fd2-4d70-afad-4a2e8aee90aa"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PRINCIPAL DISPLAY PANEL - 1 mL Vial Carton</title>
+               <text>
+                  <paragraph>VIAL</paragraph>
+                  <paragraph>NDC 61703-309-26<br/>1 x 1 mL Vial</paragraph>
+                  <paragraph>Sterile<br/>Rx only</paragraph>
+                  <paragraph>VinCRIStine Sulfate<br/>Injection, USP</paragraph>
+                  <paragraph>1 mg/mL</paragraph>
+                  <paragraph>Single-dose Vial<br/>For Intravenous Use Only</paragraph>
+                  <paragraph>Fatal If Given By Other Routes</paragraph>
+                  <paragraph>Caution: Cytotoxic Agent</paragraph>
+                  <renderMultiMedia ID="id781" referencedObject="MM4"/>
+               </text>
+               <effectiveTime value="20240424"/>
+               <component>
+                  <observationMedia ID="MM4">
+                     <text>PRINCIPAL DISPLAY PANEL - 1 mL Vial Carton</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="vincristine-04.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_38e3ea89-afd6-4cac-93a1-86fdf41d2843">
+               <id root="24efad81-9e51-4f1e-a8fb-e9f7b5e18185"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PRINCIPAL DISPLAY PANEL - 2 mL Vial Label</title>
+               <text>
+                  <paragraph>NDC 61703-309-25<br/>Rx only<br/>2 mL</paragraph>
+                  <paragraph>VinCRIStine<br/>Sulfate Injection, USP</paragraph>
+                  <paragraph>2 mg/2 mL (1 mg/mL)</paragraph>
+                  <paragraph>Single-dose Vial<br/>For IV Use Only</paragraph>
+                  <paragraph>Cytotoxic Agent</paragraph>
+                  <renderMultiMedia ID="id804" referencedObject="MM5"/>
+               </text>
+               <effectiveTime value="20230201"/>
+               <component>
+                  <observationMedia ID="MM5">
+                     <text>Principal Display Panel - 2 mL Vial Label</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="vincristine-05.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_7af194b4-4c25-42b2-83ff-c88e0b0c0a5d">
+               <id root="a9753d46-12a9-49fd-9974-f67db553c7b5"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PRINCIPAL DISPLAY PANEL - 2 mL Vial Carton</title>
+               <text>
+                  <paragraph>VIAL</paragraph>
+                  <paragraph>NDC 61703-309-25<br/>1 x 2 mL Vial</paragraph>
+                  <paragraph>Sterile<br/>Rx only</paragraph>
+                  <paragraph>VinCRIStine Sulfate<br/>Injection, USP</paragraph>
+                  <paragraph>2 mg/2 mL<br/>(1 mg/mL)</paragraph>
+                  <paragraph>Single-dose Vial<br/>For Intravenous Use Only</paragraph>
+                  <paragraph>Fatal If Given By Other Routes</paragraph>
+                  <paragraph>Caution: Cytotoxic Agent</paragraph>
+                  <renderMultiMedia ID="id831" referencedObject="MM6"/>
+               </text>
+               <effectiveTime value="20240424"/>
+               <component>
+                  <observationMedia ID="MM6">
+                     <text>PRINCIPAL DISPLAY PANEL - 2 mL Vial Carton</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="vincristine-06.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

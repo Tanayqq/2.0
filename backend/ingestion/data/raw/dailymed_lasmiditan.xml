@@ -1,0 +1,2041 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="75a13e98-3736-4256-8277-6c05bcaddcf5"/>
+   <code code="34391-3" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN PRESCRIPTION DRUG LABEL"/>
+   <title>These highlights do not include all the information needed to use REYVOW safely and effectively. See full prescribing information for REYVOW.<br/>
+      <br/> REYVOW (lasmiditan) tablets, for oral use, CV <br/>Initial U.S. Approval: 2020</title>
+   <effectiveTime value="20241113"/>
+   <setId root="aea3358c-ff41-4490-9e6d-c7bf7b3de13f"/>
+   <versionNumber value="15"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id extension="006421325" root="1.3.6.1.4.1.519.1"/>
+            <name>Eli Lilly and Company</name>
+            <assignedEntity>
+               <assignedOrganization/>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section ID="dcl-dpl">
+               <id root="95710ab1-41dd-424a-8a59-1380ad57add2"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL PRODUCT DATA ELEMENTS SECTION"/>
+               <effectiveTime value="20220222"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="0002-4312" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Reyvow</name>
+                        <formCode code="C42998" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TABLET"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>lasmiditan</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mg" value="50"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="760I9WM792" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>lasmiditan</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="760I9WM792" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>lasmiditan</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="OP1R32D61U" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Microcrystalline cellulose</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="O8232NY3SJ" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Starch, corn</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="M28OL1HH48" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Croscarmellose Sodium</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="368GB5141J" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Sodium Lauryl Sulfate</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="70097M6I30" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Magnesium Stearate</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="532B59J990" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Polyvinyl Alcohol, Unspecified</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="15FIX9V2JP" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Titanium dioxide</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="G2M7P15E5P" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Polyethylene Glycol 3350</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="7SEV7J4R1U" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Talc</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="XM0M87F357" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Ferrosoferric Oxide</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="1" value="4"/>
+                              <denominator value="1" unit="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C43168" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BLISTER PACK"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator unit="1" value="2"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="0002-4312-08" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20200131"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV" displayName="Type 0: Not a Combination Product"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="1" value="4"/>
+                              <denominator value="1" unit="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C43168" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BLISTER PACK"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator unit="1" value="1"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="0002-4312-61" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C96974" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20210303"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV" displayName="Type 0: Not a Combination Product"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="1" value="2"/>
+                              <denominator value="1" unit="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C43168" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BLISTER PACK"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator unit="1" value="1"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="0002-4312-62" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C96974" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20220228"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV" displayName="Type 0: Not a Combination Product"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20191011"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <approval>
+                           <id extension="NDA211280" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73594" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="NDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48324" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="gray" xsi:type="CE">
+                              <originalText>light gray</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48345" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="OVAL" xsi:type="CE">
+                              <originalText>oval</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="9" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value value="1" xsi:type="INT"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="ST">L50;4312</value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <policy classCode="DEADrugSchedule">
+                           <code code="C48679" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CV"/>
+                        </policy>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="0002-4491" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Reyvow</name>
+                        <formCode code="C42998" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TABLET"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>lasmiditan</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mg" value="100"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="760I9WM792" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>lasmiditan</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="760I9WM792" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>lasmiditan</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="OP1R32D61U" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Microcrystalline cellulose</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="O8232NY3SJ" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Starch, corn</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="M28OL1HH48" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Croscarmellose Sodium</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="368GB5141J" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Sodium Lauryl Sulfate</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="70097M6I30" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Magnesium Stearate</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="532B59J990" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Polyvinyl Alcohol, Unspecified</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="15FIX9V2JP" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Titanium dioxide</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="G2M7P15E5P" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Polyethylene Glycol 3350</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="7SEV7J4R1U" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Talc</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="XM0M87F357" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Ferrosoferric Oxide</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="1K09F3G675" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Ferric Oxide Red</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="1" value="4"/>
+                              <denominator value="1" unit="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C43168" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BLISTER PACK"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator unit="1" value="2"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="0002-4491-08" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20200131"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV" displayName="Type 0: Not a Combination Product"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="1" value="4"/>
+                              <denominator value="1" unit="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C43168" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BLISTER PACK"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator unit="1" value="1"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="0002-4491-61" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C96974" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20200131"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV" displayName="Type 0: Not a Combination Product"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="1" value="2"/>
+                              <denominator value="1" unit="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C43168" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BLISTER PACK"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator unit="1" value="1"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="0002-4491-62" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C96974" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20220228"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV" displayName="Type 0: Not a Combination Product"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20191011"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <approval>
+                           <id extension="NDA211280" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73594" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="NDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48327" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="purple" xsi:type="CE">
+                              <originalText>light purple</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48345" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="OVAL" xsi:type="CE">
+                              <originalText/>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="12" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value value="1" xsi:type="INT"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="ST">L100;4491</value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <policy classCode="DEADrugSchedule">
+                           <code code="C48679" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CV"/>
+                        </policy>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="s1">
+               <id root="81b68f35-e746-4fda-8570-945de0bdbbbc"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>1 INDICATIONS AND USAGE</title>
+               <text>
+                  <paragraph>REYVOW<sup>®</sup> is indicated for the acute treatment of migraine with or without aura in adults.</paragraph>
+               </text>
+               <effectiveTime value="20201218"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>REYVOW<sup>®</sup> is a serotonin (5-HT) 1F receptor agonist indicated for the acute treatment of migraine with or without aura in adults. (<linkHtml href="#s1">1</linkHtml>)</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Limitations of Use</content>
+                        </paragraph>
+                        <paragraph>REYVOW is not indicated for the preventive treatment of migraine. (<linkHtml href="#s1">1</linkHtml>)</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="s2">
+                     <id root="515f7935-775c-482c-b747-d8abae8ea1cb"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Limitations of Use</content>
+                        </paragraph>
+                        <paragraph>REYVOW is not indicated for the preventive treatment of migraine.</paragraph>
+                     </text>
+                     <effectiveTime value="20191011"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s3">
+               <id root="3cb1a3eb-4968-42c7-9567-5b147ad83217"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>2 DOSAGE AND ADMINISTRATION</title>
+               <text>
+                  <paragraph>The recommended dose of REYVOW is 50 mg, 100 mg, or 200 mg taken orally, as needed. No more than one dose should be taken in 24 hours, and REYVOW should not be taken unless the patient can wait at least 8 hours between dosing and driving or operating machinery <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#s7">5.1</linkHtml>)]</content>.</paragraph>
+                  <paragraph>A second dose of REYVOW has not been shown to be effective for the same migraine attack.</paragraph>
+                  <paragraph>The safety of treating an average of more than 4 migraine attacks in a 30-day period has not been established.</paragraph>
+                  <paragraph>REYVOW may be taken with or without food.</paragraph>
+                  <paragraph>Administer tablets whole; do not split, crush, or chew.</paragraph>
+               </text>
+               <effectiveTime value="20201218"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered" styleCode="Disc">
+                           <item>The recommended dose is 50 mg, 100 mg, or 200 mg taken orally, as needed. (<linkHtml href="#s3">2</linkHtml>)</item>
+                           <item>No more than one dose should be taken in 24 hours. (<linkHtml href="#s3">2</linkHtml>, <linkHtml href="#s7">5.1</linkHtml>)</item>
+                           <item>Administer tablets whole. (<linkHtml href="#s3">2</linkHtml>)</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="s4">
+               <id root="eb817237-3b0e-4d73-af58-a6d21fef7dd5"/>
+               <code code="43678-2" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE FORMS &amp; STRENGTHS SECTION"/>
+               <title>3 DOSAGE FORMS AND STRENGTHS</title>
+               <text>
+                  <paragraph>REYVOW (lasmiditan) tablets are available in two strengths:</paragraph>
+                  <list listType="unordered" styleCode="Disc">
+                     <item>50 mg tablet: light gray, oval, film coated, tablets with “L-50” debossed on one side and “4312” on the other</item>
+                     <item>100 mg tablet: light purple, oval, film coated, tablets with “L-100” debossed on one side and “4491” on the other</item>
+                  </list>
+               </text>
+               <effectiveTime value="20210824"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Tablets: 50 mg, 100 mg (<linkHtml href="#s4">3</linkHtml>)</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="s5">
+               <id root="c8b8e6a6-d29a-4b13-a0f2-5483e6f2621c"/>
+               <code code="34070-3" codeSystem="2.16.840.1.113883.6.1" displayName="CONTRAINDICATIONS SECTION"/>
+               <title>4 CONTRAINDICATIONS</title>
+               <text>
+                  <paragraph>None.</paragraph>
+               </text>
+               <effectiveTime value="20191011"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered" styleCode="Disc">
+                           <item>None. (<linkHtml href="#s5">4</linkHtml>)</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="s6">
+               <id root="043bc3a2-6a04-472b-900a-3a8841b21ac0"/>
+               <code code="43685-7" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS AND PRECAUTIONS SECTION"/>
+               <title>5 WARNINGS AND PRECAUTIONS</title>
+               <effectiveTime value="20191011"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered" styleCode="Disc">
+                           <item>Driving Impairment: Advise patients not to drive or operate machinery until at least 8 hours after taking each dose of REYVOW. Patients who cannot follow this advice should not take REYVOW. Patients may not be able to assess their own driving competence and the degree of impairment caused by REYVOW. (<linkHtml href="#s7">5.1</linkHtml>)</item>
+                           <item>Central Nervous System (CNS) Depression: REYVOW may cause CNS depression and should be used with caution if used in combination with alcohol or other CNS depressants. (<linkHtml href="#s8">5.2</linkHtml>, <linkHtml href="#s19">7.1</linkHtml>)</item>
+                           <item>Serotonin Syndrome: Reactions consistent with serotonin syndrome were reported in patients treated with REYVOW. Discontinue REYVOW if symptoms of serotonin syndrome occur. (<linkHtml href="#s9">5.3</linkHtml>)</item>
+                           <item>Medication Overuse Headache: Detoxification may be necessary. (<linkHtml href="#s10">5.4</linkHtml>)</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="s7">
+                     <id root="384220ba-a006-4671-babe-77dcf4a8453c"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.1 Driving Impairment</title>
+                     <text>
+                        <paragraph>REYVOW may cause significant driving impairment. In a driving study, administration of single 50 mg, 100 mg, or 200 mg doses of REYVOW significantly impaired subjects' ability to drive <content styleCode="italics">[see Clinical Studies (<linkHtml href="#s69">14.2</linkHtml>)]</content>. Additionally, more sleepiness was reported at 8 hours following a single dose of REYVOW compared to placebo. Advise patients not to engage in potentially hazardous activities requiring complete mental alertness, such as driving a motor vehicle or operating machinery, for at least 8 hours after each dose of REYVOW. Patients who cannot follow this advice should not take REYVOW. Prescribers and patients should be aware that patients may not be able to assess their own driving competence and the degree of impairment caused by REYVOW.</paragraph>
+                     </text>
+                     <effectiveTime value="20191011"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s8">
+                     <id root="fb60da92-0f02-400f-a757-717cb2fdd31d"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.2 Central Nervous System Depression</title>
+                     <text>
+                        <paragraph>REYVOW may cause central nervous system (CNS) depression, including dizziness and sedation <content styleCode="italics">[see Adverse Reactions (<linkHtml href="#s12">6.1</linkHtml>)]</content>.</paragraph>
+                        <paragraph>Because of the potential for REYVOW to cause sedation, other cognitive and/or neuropsychiatric adverse reactions, and driving impairment, REYVOW should be used with caution if used in combination with alcohol or other CNS depressants <content styleCode="italics">[see Drug Interactions (<linkHtml href="#s19">7.1</linkHtml>)]</content>. Patients should be warned against driving and other activities requiring complete mental alertness for at least 8 hours after REYVOW is taken <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#s7">5.1</linkHtml>)]</content>.</paragraph>
+                     </text>
+                     <effectiveTime value="20191011"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s9">
+                     <id root="35d5756e-aff9-4b19-8885-fbdb6a745ff4"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.3 Serotonin Syndrome</title>
+                     <text>
+                        <paragraph>In clinical trials, reactions consistent with serotonin syndrome were reported in patients treated with REYVOW who were not taking any other drugs associated with serotonin syndrome. Serotonin syndrome may also occur with REYVOW during coadministration with serotonergic drugs [e.g., selective serotonin reuptake inhibitors (SSRIs), serotonin norepinephrine reuptake inhibitors (SNRIs), tricyclic antidepressants (TCAs), and monoamine oxidase (MAO) inhibitors]. Serotonin syndrome symptoms may include mental status changes (e.g., agitation, hallucinations, coma), autonomic instability (e.g., tachycardia, labile blood pressure, hyperthermia), neuromuscular signs (e.g., hyperreflexia, incoordination), and/or gastrointestinal signs and symptoms (e.g., nausea, vomiting, diarrhea). The onset of symptoms usually occurs within minutes to hours of receiving a new or a greater dose of a serotonergic medication. Discontinue REYVOW if serotonin syndrome is suspected.</paragraph>
+                     </text>
+                     <effectiveTime value="20191011"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s10">
+                     <id root="f792a491-8dc5-4e44-b818-0d03e43f8ca2"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.4 Medication Overuse Headache</title>
+                     <text>
+                        <paragraph>Overuse of acute migraine drugs (e.g., ergotamines, triptans, opioids, or a combination of these drugs for 10 or more days per month) may lead to exacerbation of headache (i.e., medication overuse headache). Medication overuse headache may present as migraine-like daily headaches or as a marked increase in frequency of migraine attacks. Detoxification of patients including withdrawal of the overused drugs and treatment of withdrawal symptoms (which often includes a transient worsening of headache) may be necessary.</paragraph>
+                     </text>
+                     <effectiveTime value="20191011"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s11">
+               <id root="0a983ae8-7d2f-4774-84d0-89394c516abb"/>
+               <code code="34084-4" codeSystem="2.16.840.1.113883.6.1" displayName="ADVERSE REACTIONS SECTION"/>
+               <title>6 ADVERSE REACTIONS</title>
+               <text>
+                  <paragraph>The following clinically significant adverse reactions are described elsewhere in the labeling:</paragraph>
+                  <list listType="unordered" styleCode="Disc">
+                     <item>Driving Impairment <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#s7">5.1</linkHtml>)]</content>
+                     </item>
+                     <item>Central Nervous System Depression <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#s8">5.2</linkHtml>)]</content>
+                     </item>
+                     <item>Serotonin Syndrome <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#s9">5.3</linkHtml>)]</content>
+                     </item>
+                     <item>Medication Overuse Headache <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#s10">5.4</linkHtml>)]</content>
+                     </item>
+                  </list>
+               </text>
+               <effectiveTime value="20210120"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Most common adverse reactions (≥5% and &gt; placebo) were dizziness, fatigue, paresthesia, and sedation. (<linkHtml href="#s12">6.1</linkHtml>)</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">To report SUSPECTED ADVERSE REACTIONS, contact Eli Lilly and Company at 1-800-LillyRx (1-800-545-5979) or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch.</content>
+                        </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="s12">
+                     <id root="86ce30cf-62bb-4431-a4f6-9c43c241b64a"/>
+                     <code code="90374-0" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL TRIALS EXPERIENCE SECTION"/>
+                     <title>6.1 Clinical Trials Experience</title>
+                     <text>
+                        <paragraph>Because clinical studies are conducted under widely varying conditions, adverse reaction rates observed in the clinical studies of a drug cannot be directly compared to rates in the clinical studies of another drug and may not reflect the rates observed in practice.</paragraph>
+                        <paragraph>The safety of REYVOW has been evaluated in 4,878 subjects who received at least one dose of REYVOW. In 2 placebo-controlled, Phase 3 trials in adult patients with migraine (Studies 1 and 2), a total of 3,177 patients received REYVOW 50, 100, or 200 mg <content styleCode="italics">[see Clinical Studies (<linkHtml href="#s68">14.1</linkHtml>)]</content>. Of the REYVOW-treated patients in these 2 studies, approximately 84% were female, 78% were White, 18% were Black, and 18% were of Hispanic or Latino ethnicity. The mean age at study entry was 42.4 years (range 18 to 81).</paragraph>
+                        <paragraph>Long-term safety was assessed for 2,030 patients, dosing intermittently for up to 12 months in a long-term safety study. Of these, 728 patients were exposed to 100 mg or 200 mg for at least 3 months, 361 patients were exposed to these doses for at least 6 months, and 180 patients were exposed to these doses for at least 12 months, all of whom treated at least 2 migraine attacks per month on average. In that study, 14% (148 out of 1,039) in the 200 mg dose group, and 11% (112 out of 991) in the 100 mg dose group withdrew from the trial because of an adverse event. The most common adverse event resulting in discontinuation in the long-term safety study (greater than 2%) was dizziness.</paragraph>
+                        <paragraph>
+                           <linkHtml href="#t1">Table 1</linkHtml> shows adverse reactions that occurred in at least 2% of patients treated with REYVOW and more frequently than in patients who received placebo in Studies 1 and 2. The most common adverse reactions (at least 5%) were dizziness, fatigue, paresthesia, and sedation.</paragraph>
+                        <table ID="t1" width="100%">
+                           <caption>Table 1: Adverse Reactions Occurring in ≥2% and at a Frequency Greater than Placebo in Studies 1 and 2</caption>
+                           <col width="20.120%" align="left"/>
+                           <col width="19.980%" align="left"/>
+                           <col width="19.980%" align="left"/>
+                           <col width="19.980%" align="left"/>
+                           <col width="19.940%" align="left"/>
+                           <tfoot>
+                              <tr>
+                                 <td colspan="5" align="left" valign="top">
+                                    <paragraph styleCode="footnote">
+                                       <sup>a</sup> Fatigue includes the adverse reaction related terms asthenia and malaise.</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td colspan="5" align="left" valign="top">
+                                    <paragraph styleCode="footnote">
+                                       <sup>b</sup> Paresthesia includes the adverse reaction related terms paresthesia oral, hypoesthesia, and hypoesthesia oral.</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td colspan="5" align="left" valign="top">
+                                    <paragraph styleCode="footnote">
+                                       <sup>c</sup> Sedation includes the adverse reaction related term somnolence.</paragraph>
+                                 </td>
+                              </tr>
+                           </tfoot>
+                           <tbody>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Toprule Botrule Lrule Rrule">
+                                    <content styleCode="bold">Adverse Reaction</content>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Toprule Botrule Rrule">
+                                    <content styleCode="bold">REYVOW 50 mg<br/>N=654<br/>%</content>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Toprule Botrule Rrule">
+                                    <content styleCode="bold">REYVOW 100 mg<br/>N=1265<br/>%</content>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Toprule Botrule Rrule">
+                                    <content styleCode="bold">REYVOW 200 mg<br/>N=1258<br/>%</content>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Toprule Botrule Rrule">
+                                    <content styleCode="bold">Placebo<br/>N=1262<br/>%</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">Dizziness</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">9</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">15</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">17</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">3</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">Fatigue<sup>a</sup>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">4</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">5</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">6</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">1</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">Paresthesia<sup>b</sup>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">3</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">7</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">9</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">2</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">Sedation<sup>c</sup>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">6</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">6</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">7</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">2</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">Nausea and/or Vomiting</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">3</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">4</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">4</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">2</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">Muscle Weakness</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">1</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">1</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">2</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">0</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </text>
+                     <effectiveTime value="20210120"/>
+                     <component>
+                        <section ID="s13">
+                           <id root="04ad2887-4ba9-4830-a2fc-4e21ee97fa90"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Less Common Adverse Reactions</content>
+                              </paragraph>
+                              <paragraph>The following adverse reactions occurred in less than 2% of REYVOW-treated patients but more frequently than in patients receiving placebo: vertigo, incoordination, lethargy, visual impairment, feeling abnormal, feeling hot or feeling cold, palpitations, anxiety, tremor, restlessness, sleep abnormalities including sleep disturbance and abnormal dreams, muscle spasm, limb discomfort, cognitive changes, confusion, euphoric mood, chest discomfort, speech abnormalities, dyspnea, and hallucinations.</paragraph>
+                           </text>
+                           <effectiveTime value="20210120"/>
+                           <component>
+                              <section ID="s14">
+                                 <id root="66d245f4-9287-428a-8ecd-9d8bff98d6bf"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <text>
+                                    <paragraph>
+                                       <content styleCode="italics">Hypersensitivity</content>
+                                    </paragraph>
+                                    <paragraph>Events of hypersensitivity, including angioedema, rash and photosensitivity reaction, occurred in patients treated with REYVOW. In controlled trials, hypersensitivity was reported in 0.2% of patients treated with REYVOW compared to no patients who received placebo. If a serious or severe hypersensitivity reaction occurs, initiate appropriate therapy and discontinue administration of REYVOW.</paragraph>
+                                 </text>
+                                 <effectiveTime value="20191011"/>
+                              </section>
+                           </component>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s15">
+                           <id root="43f5b098-5233-4a59-be30-e231d53bf985"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Vital Sign Changes</content>
+                              </paragraph>
+                           </text>
+                           <effectiveTime value="20191011"/>
+                           <component>
+                              <section ID="s16">
+                                 <id root="5eb24f75-e5b7-4a40-b8ae-21a67a0e82b1"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <text>
+                                    <paragraph>
+                                       <content styleCode="italics">Heart Rate Decrease</content>
+                                    </paragraph>
+                                    <paragraph>REYVOW was associated with mean decreases in heart rate of 5 to 10 beats per minute (bpm) while placebo was associated with mean decreases of 2 to 5 bpm. Consider evaluating heart rate after administration of REYVOW in patients for whom these changes may not be tolerated, including patients taking other medications that lower heart rate <content styleCode="italics">[see Drug Interactions (<linkHtml href="#s21">7.3</linkHtml>)]</content>.</paragraph>
+                                 </text>
+                                 <effectiveTime value="20191011"/>
+                              </section>
+                           </component>
+                           <component>
+                              <section ID="s17">
+                                 <id root="05b0ef40-13a5-4a08-b644-bd2c63726755"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <text>
+                                    <paragraph>
+                                       <content styleCode="italics">Blood Pressure Increase</content>
+                                    </paragraph>
+                                    <paragraph>REYVOW may increase blood pressure following a single dose. In non-elderly healthy volunteers there was a mean increase from baseline in ambulatory systolic and diastolic blood pressure of approximately 2 to 3 mm Hg one hour after administration of 200 mg REYVOW compared to a mean increase of up to 1 mm Hg for placebo. In healthy volunteers over 65 years of age, there was a mean increase from baseline in ambulatory systolic blood pressure of 7 mm Hg one hour after administration of 200 mg REYVOW compared to a mean increase of 4 mm Hg for placebo. By 2 hours, there were no increases in mean blood pressure with REYVOW compared to placebo. REYVOW has not been well studied in patients with ischemic heart disease. Consider evaluating blood pressure after administration of REYVOW in patients for whom these changes may not be tolerated.</paragraph>
+                                 </text>
+                                 <effectiveTime value="20191011"/>
+                              </section>
+                           </component>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s18">
+               <id root="f3df9657-c445-43d7-be3b-005d9b8a5b01"/>
+               <code code="34073-7" codeSystem="2.16.840.1.113883.6.1" displayName="DRUG INTERACTIONS SECTION"/>
+               <title>7 DRUG INTERACTIONS</title>
+               <effectiveTime value="20220915"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered" styleCode="Disc">
+                           <item>REYVOW may further lower heart rate when administered with heart rate lowering drugs. (<linkHtml href="#s21">7.3</linkHtml>)</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="s19">
+                     <id root="518cfa35-d2dd-404a-80f4-e6915829d59a"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>7.1 CNS Depressants</title>
+                     <text>
+                        <paragraph>Concomitant administration of REYVOW and alcohol or other CNS depressant drugs has not been evaluated in clinical studies. Because of the potential of REYVOW to cause sedation, as well as other cognitive and/or neuropsychiatric adverse reactions, REYVOW should be used with caution if used in combination with alcohol or other CNS depressants <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#s8">5.2</linkHtml>)]</content>.</paragraph>
+                     </text>
+                     <effectiveTime value="20191011"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s20">
+                     <id root="b82b9328-ab78-441f-91e0-c52c7acb60e5"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>7.2 Serotonergic Drugs</title>
+                     <text>
+                        <paragraph>Concomitant administration of REYVOW and drugs (e.g., SSRIs, SNRIs, TCAs, MAO inhibitors, trazodone, etc.), over-the counter medications (e.g., dextromethorphan), or herbal supplements (e.g., St. John's Wort) that increase serotonin may increase the risk of serotonin syndrome <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#s9">5.3</linkHtml>)]</content>. Use REYVOW with caution in patients taking medications that increase serotonin.</paragraph>
+                     </text>
+                     <effectiveTime value="20191011"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s21">
+                     <id root="3886f9aa-f814-4c1c-8a80-558c68f81f02"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>7.3 Heart Rate Lowering Drugs</title>
+                     <text>
+                        <paragraph>REYVOW has been associated with a lowering of heart rate <content styleCode="italics">[see Adverse Reactions (<linkHtml href="#s12">6.1</linkHtml>)]</content>. In a drug interaction study, addition of a single 200 mg dose of REYVOW to propranolol decreased heart rate by an additional 5 beats per minute compared to propranolol alone, for a mean maximum of 19 beats per minute. Use REYVOW with caution in patients taking concomitant medications that lower heart rate if this magnitude of heart rate decrease may pose a concern.</paragraph>
+                     </text>
+                     <effectiveTime value="20191011"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s22">
+                     <id root="ab84068f-d49c-416f-8e60-1b2defb082f2"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>7.4 P-glycoprotein (P-gp) Transporter Substrates</title>
+                     <text>
+                        <paragraph>Coadministration of REYVOW with P-gp substrates where a small change in substrate plasma concentration may lead to serious toxicities (e.g., digoxin) is not recommended <content styleCode="italics">[see Clinical Pharmacology (<linkHtml href="#s44">12.3</linkHtml>)]</content>.</paragraph>
+                     </text>
+                     <effectiveTime value="20220915"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s23">
+               <id root="dc621009-c500-4d5f-a227-1d0eb45abff8"/>
+               <code code="43684-0" codeSystem="2.16.840.1.113883.6.1" displayName="USE IN SPECIFIC POPULATIONS SECTION"/>
+               <title>8 USE IN SPECIFIC POPULATIONS</title>
+               <effectiveTime value="20211215"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered" styleCode="Disc">
+                           <item>Based on animal data, may cause fetal harm. (<linkHtml href="#s24">8.1</linkHtml>)</item>
+                           <item>REYVOW has not been studied in patients with severe hepatic impairment (Child-Pugh C) and its use in these patients is not recommended. (<linkHtml href="#s34">8.6</linkHtml>)</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="s24">
+                     <id root="3f9492fe-9462-4bb0-87cc-6038c7401ba5"/>
+                     <code code="42228-7" codeSystem="2.16.840.1.113883.6.1" displayName="PREGNANCY SECTION"/>
+                     <title>8.1 Pregnancy</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Pregnancy Exposure Registry</content>
+                        </paragraph>
+                        <paragraph>There is a pregnancy exposure registry that monitors pregnancy outcomes in women exposed to REYVOW during pregnancy. Healthcare providers are encouraged to register pregnant patients, or pregnant women may enroll themselves in the registry by calling 1-833-464-4724. To learn more please call or visit www.migrainepregnancyregistry.com.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Risk Summary</content>
+                        </paragraph>
+                        <paragraph>There are no adequate data on the developmental risk associated with the use of REYVOW in pregnant women. In animal studies, adverse effects on development (increased incidences of fetal abnormalities, increased embryofetal and offspring mortality, decreased fetal body weight) occurred at maternal exposures less than (rabbit) or greater than (rat) those observed clinically <content styleCode="italics">(see Data)</content>.</paragraph>
+                        <paragraph>In the U.S. general population, the estimated background risk of major birth defects and of miscarriage in clinically recognized pregnancies is 2% to 4% and 15% to 20%, respectively. The estimated rates of major birth defects (2.2% to 2.9%) and miscarriage (17%) among deliveries to women with migraine are similar to rates reported in women without migraine.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Clinical Considerations</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Disease-Associated Maternal and/or Embryo/Fetal Risk</content>
+                        </paragraph>
+                        <paragraph>Published data have suggested that women with migraine may be at increased risk for preeclampsia and gestational hypertension during pregnancy.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Data</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Animal Data</content>
+                        </paragraph>
+                        <paragraph>Oral administration of lasmiditan (0, 100, 175, or 250 mg/kg/day) to pregnant rats throughout organogenesis resulted in increases in skeletal variations at the mid and high doses and reduced fetal body weight at the high dose. The high dose was associated with maternal toxicity. At the no-effect dose (100 mg/kg/day) for adverse effects on embryofetal development in rats, plasma exposure (AUC) was approximately 10 times that in humans at the MRHD.</paragraph>
+                        <paragraph>Oral administration of lasmiditan (0, 50, 75, or 115 mg/kg/day) to pregnant rabbits throughout organogenesis resulted in malformations (skeletal and visceral), increases in skeletal variations and embryofetal mortality, and decreased fetal body weight at the highest dose tested, which was associated with maternal toxicity. Plasma exposure (AUC) at the no-effect dose (75 mg/kg/day) for adverse effects on embryofetal development in rabbits was less than that in humans at the MRHD.</paragraph>
+                        <paragraph>Oral administration of lasmiditan (0, 100, 150, or 225 mg/kg/day) to rats throughout pregnancy and lactation resulted in increases in stillbirth and neonatal mortality at the highest dose tested, which was associated with maternal toxicity and delayed parturition. Plasma exposure (AUC) at the no-effect dose (150 mg/kg/day) for adverse effects on pre- and postnatal development was approximately 16 times that in humans at the MRHD.</paragraph>
+                     </text>
+                     <effectiveTime value="20211215"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s30">
+                     <id root="de6d5b54-8145-477e-af70-436805c5f623"/>
+                     <code code="77290-5" codeSystem="2.16.840.1.113883.6.1" displayName="LACTATION SECTION"/>
+                     <title>8.2 Lactation</title>
+                     <effectiveTime value="20191011"/>
+                     <component>
+                        <section ID="s31">
+                           <id root="b38d14a2-a555-4109-b2c0-d0995f5337e4"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Risk Summary</content>
+                              </paragraph>
+                              <paragraph>There are no data on the presence of lasmiditan in human milk, the effects of lasmiditan on the breastfed infant, or the effects of lasmiditan on milk production. Excretion of lasmiditan and/or metabolites into milk, at levels approximately 3 times those in maternal plasma, was observed in lactating rats following oral administration of lasmiditan.</paragraph>
+                              <paragraph>The developmental and health benefits of breastfeeding should be considered along with the mother's clinical need for REYVOW and any potential adverse effects on the breastfed infant from REYVOW or from the underlying maternal condition.</paragraph>
+                           </text>
+                           <effectiveTime value="20191011"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s32">
+                     <id root="a958afc9-a1bf-4785-acb9-3c353696901c"/>
+                     <code code="34081-0" codeSystem="2.16.840.1.113883.6.1" displayName="PEDIATRIC USE SECTION"/>
+                     <title>8.4 Pediatric Use</title>
+                     <text>
+                        <paragraph>Safety and effectiveness in pediatric patients have not been established.</paragraph>
+                     </text>
+                     <effectiveTime value="20191011"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s33">
+                     <id root="d6124b64-47cc-49d4-abd5-14df66b8b248"/>
+                     <code code="34082-8" codeSystem="2.16.840.1.113883.6.1" displayName="GERIATRIC USE SECTION"/>
+                     <title>8.5 Geriatric Use</title>
+                     <text>
+                        <paragraph>In controlled clinical trials, dizziness occurred more frequently in patients who were at least 65 years of age (19% for REYVOW, 2% for placebo) compared to patients who were less than 65 years of age (14% for REYVOW, 3% for placebo). A larger increase in systolic blood pressure also occurred in patients 65 years of age and older compared to patients who were less than 65 years of age <content styleCode="italics">[see Adverse Reactions (<linkHtml href="#s12">6.1</linkHtml>)]</content>. Clinical studies of REYVOW did not include sufficient numbers of subjects aged 65 and over to determine whether there is a difference in efficacy in these patients compared to younger subjects. However, in clinical pharmacology studies, no clinically relevant effect on exposure to REYVOW was observed in elderly subjects <content styleCode="italics">[see Clinical Pharmacology (<linkHtml href="#s44">12.3</linkHtml>)]</content>. In general, dose selection for an elderly patient should be cautious, usually starting at the low end of the dosing range, reflecting the greater frequency of decreased hepatic, renal, or cardiac function, and of concomitant disease or other drug therapy.</paragraph>
+                     </text>
+                     <effectiveTime value="20191011"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s34">
+                     <id root="5540e222-6d3a-43e6-ad32-c15d83108b9d"/>
+                     <code code="88829-7" codeSystem="2.16.840.1.113883.6.1" displayName="HEPATIC IMPAIRMENT SUBSECTION"/>
+                     <title>8.6 Hepatic Impairment</title>
+                     <text>
+                        <paragraph>No dosage adjustment is needed for patients with mild or moderate hepatic impairment (Child-Pugh A or B). REYVOW has not been studied in patients with severe hepatic impairment (Child-Pugh C) and its use in these patients is not recommended.</paragraph>
+                     </text>
+                     <effectiveTime value="20191011"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s35">
+               <id root="f219820d-82aa-4a0a-871d-743d257fb8c0"/>
+               <code code="42227-9" codeSystem="2.16.840.1.113883.6.1" displayName="DRUG ABUSE AND DEPENDENCE SECTION"/>
+               <title>9 DRUG ABUSE AND DEPENDENCE</title>
+               <effectiveTime value="20200717"/>
+               <component>
+                  <section ID="s36">
+                     <id root="31fbffd9-94d8-428c-b5ec-d66ee143f709"/>
+                     <code code="34085-1" codeSystem="2.16.840.1.113883.6.1" displayName="CONTROLLED SUBSTANCE SECTION"/>
+                     <title>9.1 Controlled Substance</title>
+                     <text>
+                        <paragraph>REYVOW contains lasmiditan, a Schedule V controlled substance (CV).</paragraph>
+                     </text>
+                     <effectiveTime value="20200717"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s37">
+                     <id root="293fda09-66de-4343-9da7-d53464dbf66a"/>
+                     <code code="34086-9" codeSystem="2.16.840.1.113883.6.1" displayName="ABUSE SECTION"/>
+                     <title>9.2 Abuse</title>
+                     <text>
+                        <paragraph>Abuse is the intentional, non-therapeutic use of a drug, even once, for its desirable psychological or physiological effects. In a human abuse potential (HAP) study in recreational poly-drug users (n=58), single oral therapeutic doses (100 and 200 mg) and a supratherapeutic dose (400 mg) of REYVOW were compared to alprazolam (2 mg) (C-IV) and placebo. With all doses of REYVOW, subjects reported statistically significantly higher “drug liking” scores than placebo, indicating that REYVOW has abuse potential. In comparison to alprazolam, subjects who received REYVOW reported statistically significantly lower “drug liking” scores. In the HAP study, euphoric mood occurred to a similar extent with REYVOW 200 mg, REYVOW 400 mg, and alprazolam 2 mg (43-49%). A feeling of relaxation was noted in more subjects on alprazolam (22.6%) than with any dose of REYVOW (7-11%).</paragraph>
+                        <paragraph>Phase 2 and 3 studies indicate that, at therapeutic doses, REYVOW produced adverse events of euphoria and hallucinations to a greater extent than placebo. However these events occur at a low frequency (about 1% of patients).</paragraph>
+                        <paragraph>Evaluate patients for risk of drug abuse and observe them for signs of lasmiditan misuse or abuse.</paragraph>
+                     </text>
+                     <effectiveTime value="20191011"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s38">
+                     <id root="cbe53bee-df32-4464-b276-370f76e88f20"/>
+                     <code code="34087-7" codeSystem="2.16.840.1.113883.6.1" displayName="DEPENDENCE SECTION"/>
+                     <title>9.3 Dependence</title>
+                     <text>
+                        <paragraph>Physical withdrawal was not observed in healthy subjects following abrupt cessation after 7 daily doses of lasmiditan 200 mg or 400 mg.</paragraph>
+                     </text>
+                     <effectiveTime value="20191011"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s39">
+               <id root="815f182a-b94a-4bb8-a915-8ab51542d3d6"/>
+               <code code="34089-3" codeSystem="2.16.840.1.113883.6.1" displayName="DESCRIPTION SECTION"/>
+               <title>11 DESCRIPTION</title>
+               <text>
+                  <paragraph>REYVOW (lasmiditan) is a serotonin (5-HT) 1F receptor agonist for oral administration. The chemical name of lasmiditan hemisuccinate is 2,4,6-trifluoro-N-[6-(1-methylpiperidine-4-carbonyl)pyridine-2-yl]benzamide hemisuccinate. It has the empirical formula of C<sub>19</sub>H<sub>18</sub>F<sub>3</sub>N<sub>3</sub>O<sub>2</sub>•0.5[C<sub>4</sub>H<sub>6</sub>O<sub>4</sub>] and a molecular weight of 436.41 (hemisuccinate). Lasmiditan hemisuccinate has the following structural formula:</paragraph>
+                  <renderMultiMedia ID="f01" referencedObject="mm01"/>
+                  <paragraph>Lasmiditan hemisuccinate is a white, crystalline powder that is sparingly soluble in water, slightly soluble in ethanol, and soluble in methanol. A 1 mg/mL aqueous solution of lasmiditan hemisuccinate has a pH of 6.8 at ambient conditions.</paragraph>
+                  <paragraph>REYVOW 50 mg tablets contain 50 mg lasmiditan (equivalent to 57.824 mg lasmiditan hemisuccinate) and the inactive ingredients as follows:</paragraph>
+                  <paragraph>Excipients – croscarmellose sodium, magnesium stearate, microcrystalline cellulose, pregelatinized starch, sodium lauryl sulfate.</paragraph>
+                  <paragraph>Color mixture ingredients – black ferric oxide, polyethylene glycol, polyvinyl alcohol, talc, titanium dioxide.</paragraph>
+                  <paragraph>REYVOW 100 mg tablets contain 100 mg lasmiditan (equivalent to 115.65 mg lasmiditan hemisuccinate) and the inactive ingredients as follows:</paragraph>
+                  <paragraph>Excipients – croscarmellose sodium, magnesium stearate, microcrystalline cellulose, pregelatinized starch, sodium lauryl sulfate.</paragraph>
+                  <paragraph>Color mixture ingredients – black ferric oxide, polyethylene glycol, polyvinyl alcohol, red ferric oxide, talc, titanium dioxide.</paragraph>
+               </text>
+               <effectiveTime value="20210824"/>
+               <component>
+                  <observationMedia ID="mm01">
+                     <text>Structural Formula</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="reyvow-uspi-chem-v1.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s40">
+               <id root="c3f8420a-9496-4b7d-b20d-351b78493fef"/>
+               <code code="34090-1" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+               <title>12 CLINICAL PHARMACOLOGY</title>
+               <effectiveTime value="20220915"/>
+               <component>
+                  <section ID="s41">
+                     <id root="9cc36807-5acb-4112-8f2c-f181104ebd92"/>
+                     <code code="43679-0" codeSystem="2.16.840.1.113883.6.1" displayName="MECHANISM OF ACTION SECTION"/>
+                     <title>12.1 Mechanism of Action</title>
+                     <text>
+                        <paragraph>Lasmiditan binds with high affinity to the 5-HT<sub>1F</sub> receptor. Lasmiditan presumably exerts its therapeutic effects in the treatment of migraine through agonist effects at the 5-HT<sub>1F</sub> receptor; however, the precise mechanism is unknown.</paragraph>
+                     </text>
+                     <effectiveTime value="20191011"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s42">
+                     <id root="c2f79626-5618-4d55-9df6-a81f29a8a6bc"/>
+                     <code code="43681-6" codeSystem="2.16.840.1.113883.6.1" displayName="PHARMACODYNAMICS SECTION"/>
+                     <title>12.2 Pharmacodynamics</title>
+                     <effectiveTime value="20191011"/>
+                     <component>
+                        <section ID="s43">
+                           <id root="8100e438-2331-4ebb-9a56-0476aa48bf6d"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Cardiac Electrophysiology</content>
+                              </paragraph>
+                              <paragraph>At a dose two times the maximum recommended daily dose, REYVOW does not prolong the QTc interval to any clinically relevant extent.</paragraph>
+                           </text>
+                           <effectiveTime value="20191011"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s44">
+                     <id root="72bdf960-d9f1-4092-9e74-8a7c7e188b00"/>
+                     <code code="43682-4" codeSystem="2.16.840.1.113883.6.1" displayName="PHARMACOKINETICS SECTION"/>
+                     <title>12.3 Pharmacokinetics</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Absorption</content>
+                        </paragraph>
+                        <paragraph>Following oral administration, lasmiditan is rapidly absorbed with a median t<sub>max</sub> of 1.8 hours. In patients with migraine, the absorption or pharmacokinetics of lasmiditan was not different during a migraine attack versus during the interictal period.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Effect of Food</content>
+                        </paragraph>
+                        <paragraph>Coadministration of lasmiditan with a high-fat meal increased the mean lasmiditan C<sub>max</sub> and AUC values by 22% and 19%, respectively, and delayed the median t<sub>max</sub> by 1 hour. This difference in exposure is not expected to be clinically significant <content styleCode="italics">[see Dosage and Administration (<linkHtml href="#s3">2</linkHtml>)]</content>. Lasmiditan was administered without regard to food in clinical efficacy studies.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Distribution</content>
+                        </paragraph>
+                        <paragraph>The human plasma protein binding of lasmiditan is approximately 55% to 60% and independent of concentration between 15 and 500 ng/mL.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Elimination</content>
+                        </paragraph>
+                        <paragraph>Lasmiditan was eliminated with a geometric mean t<sub>½</sub> value of approximately 5.7 hours. No accumulation of lasmiditan was observed with daily dosing. Lasmiditan is primarily eliminated via metabolism, with ketone reduction representing the major pathway. Renal excretion is a minor route of lasmiditan clearance.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Metabolism</content>
+                        </paragraph>
+                        <paragraph>Lasmiditan undergoes hepatic and extrahepatic metabolism primarily by non-CYP enzymes. The following enzymes are not involved in metabolism of lasmiditan: MAO-A, MAO-B, flavin monooxygenase 3, CYP450 reductase, xanthine oxidase, alcohol dehydrogenase, aldehyde dehydrogenase, and aldo-keto reductases. Lasmiditan is also metabolized to M7 (oxidation on piperidine ring) and M18 (combination of M7 and M8 pathways). These metabolites are considered pharmacologically inactive.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Excretion</content>
+                        </paragraph>
+                        <paragraph>Recovery of unchanged lasmiditan in urine was low and accounted for approximately 3% of the dose. Metabolite S-M8 represented approximately 66% of the dose in urine, with the majority of recovery within 48 hours postdose.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Specific Populations</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Age, Sex, Race/Ethnicity, and Body Weight</content>
+                        </paragraph>
+                        <paragraph>Based on a population pharmacokinetic (PK) analysis, age, sex, race/ethnicity, and body weight did not have a significant effect on the PK (C<sub>max</sub> and AUC) of lasmiditan. Therefore, no dose adjustments are warranted based on age, sex, race/ethnicity, or body weight.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Geriatric Use</content>
+                        </paragraph>
+                        <paragraph>In a clinical pharmacology study, administration of lasmiditan to subjects 65 years of age or older demonstrated 26% greater exposure in AUC(0-∞) and 21% higher C<sub>max</sub>, compared to subjects 45 years of age or less. This difference in exposure is not expected to be clinically significant <content styleCode="italics">[see Use in Specific Populations (<linkHtml href="#s33">8.5</linkHtml>)]</content>.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Renal Impairment</content>
+                        </paragraph>
+                        <paragraph>In a clinical pharmacology study, administration of lasmiditan to subjects with severe renal impairment (eGFR &lt;30 mL/min/1.73 m<sup>2</sup>) demonstrated 18% greater exposure in AUC(0-∞) and 13% higher C<sub>max</sub>, compared to subjects with normal renal function. No dose adjustment is required based on renal function.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Hepatic Impairment</content>
+                        </paragraph>
+                        <paragraph>In a clinical pharmacology study, subjects with mild and moderate hepatic impairment (Child-Pugh Class A and B, respectively) demonstrated 11% and 35%, respectively, greater exposure [AUC(0-∞)] to lasmiditan, compared to subjects with normal hepatic function. The C<sub>max</sub> were higher by 19% and 33%, respectively, for subjects with mild and moderate hepatic impairment. This difference in exposure is not expected to be clinically significant. The use of lasmiditan has not been studied in subjects with severe hepatic impairment <content styleCode="italics">[see Use in Specific Populations (<linkHtml href="#s34">8.6</linkHtml>)]</content>.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Drug Interaction Studies</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Potential for Lasmiditan to Affect Other Drugs</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Drug Metabolizing Enzymes</content>
+                        </paragraph>
+                        <paragraph>Lasmiditan is an <content styleCode="italics">in-vitro</content> inhibitor of CYP2D6 but did not significantly inhibit the activity of other CYP450 enzymes. Modeling and simulation of the impact of lasmiditan on the exposure of dextromethorphan, a recognized sensitive CYP2D6 substrate, indicate that lasmiditan is unlikely to exert clinically significant inhibition of CYP2D6. Lasmiditan, M7, S-M8, and [S,R]-M18 are not reversible or time-dependent inhibitors of monoamine oxidase A (MAO-A).</paragraph>
+                        <paragraph>Daily dosing of lasmiditan did not alter the PK of midazolam, caffeine, or tolbutamide, which are substrates of CYP3A, CYP1A2, and CYP2C9, respectively. Coadministration of lasmiditan with sumatriptan, propranolol, or topiramate resulted in no clinically meaningful changes in exposure of these medicinal products.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Drug Transporters</content>
+                        </paragraph>
+                        <paragraph>In a drug interaction study in healthy volunteers, co-administration of 200 mg REYVOW with dabigatran (P-gp substrate) increased the systemic exposures, AUC and C<sub>max</sub>, of dabigatran by 25% and 22%, respectively <content styleCode="italics">[see Drug Interactions (<linkHtml href="#s22">7.4</linkHtml>)]</content>. Co-administration of 200 mg REYVOW with rosuvastatin (BCRP substrate) did not affect exposures of rosuvastatin.</paragraph>
+                        <paragraph>Lasmiditan inhibits OCT1 <content styleCode="italics">in-vitro</content>. However, in a drug-drug interaction study with lasmiditan and sumatriptan (OCT1 substrate), no change in sumatriptan PK was observed. Lasmiditan inhibits renal efflux transporters, MATE1 and MATE2-K, <content styleCode="italics">in-vitro</content>.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Potential for Other Drugs to Affect Lasmiditan</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Drug Metabolizing Enzymes</content>
+                        </paragraph>
+                        <paragraph>Lasmiditan undergoes hepatic and extrahepatic metabolism primarily by non-CYP enzymes. Therefore, it is unlikely that CYP inhibitors or inducers will affect lasmiditan pharmacokinetics. Clinical studies of lasmiditan with sumatriptan, propranolol, or topiramate did not show any significant drug interaction potential.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Drug Transporters</content>
+                        </paragraph>
+                        <paragraph>Lasmiditan is a substrate for P-gp <content styleCode="italics">in-vitro</content>.</paragraph>
+                     </text>
+                     <effectiveTime value="20220915"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s62">
+               <id root="a2b52263-02dd-4633-bf42-9ad4409c1c1f"/>
+               <code code="43680-8" codeSystem="2.16.840.1.113883.6.1" displayName="NONCLINICAL TOXICOLOGY SECTION"/>
+               <title>13 NONCLINICAL TOXICOLOGY</title>
+               <effectiveTime value="20191011"/>
+               <component>
+                  <section ID="s63">
+                     <id root="57a0522c-c813-4694-a779-9d5b53da8e0f"/>
+                     <code code="34083-6" codeSystem="2.16.840.1.113883.6.1" displayName="CARCINOGENESIS &amp; MUTAGENESIS &amp; IMPAIRMENT OF FERTILITY SECTION"/>
+                     <title>13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility</title>
+                     <effectiveTime value="20191011"/>
+                     <component>
+                        <section ID="s64">
+                           <id root="a94ec2cf-2f4e-42c5-81a8-1f69e3901b31"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Carcinogenesis</content>
+                              </paragraph>
+                              <paragraph>No drug-related tumors were observed following oral administration of lasmiditan to TgRasH2 mice at doses of up to 150 (males) or 250 (females) mg/kg/day for 26 weeks or to rats at doses of up to 75 mg/kg/day for 2 years. Plasma exposures (AUC) at the highest dose tested in rats were approximately 15 times that in humans at the maximum recommended human dose (MRHD) of 200 mg/day.</paragraph>
+                           </text>
+                           <effectiveTime value="20191011"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s65">
+                           <id root="92b055ad-e3f8-4531-a0e4-e95328bba950"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Mutagenesis</content>
+                              </paragraph>
+                              <paragraph>Lasmiditan was negative in in vitro (bacterial reverse mutation, chromosomal aberration in mammalian cells) and in vivo (mouse bone marrow micronucleus) assays.</paragraph>
+                           </text>
+                           <effectiveTime value="20191011"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s66">
+                           <id root="69dcd4e9-b85f-43ca-be01-e92eb4a79c72"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Impairment of Fertility</content>
+                              </paragraph>
+                              <paragraph>Oral administration of lasmiditan to male (0, 100, 175, or 200 mg/kg/day) or female (0, 100, 150, or 200 mg/kg/day) rats prior to and during mating and continuing in females to Gestation Day 7 resulted in no adverse effects on fertility or reproductive performance. Plasma exposures (AUC) at the highest dose tested (200 mg/kg/day) were approximately 26 times that in humans at the MRHD.</paragraph>
+                           </text>
+                           <effectiveTime value="20191011"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s67">
+               <id root="7e9059d6-45ea-4c4b-89d1-68ff7c6f64e3"/>
+               <code code="34092-7" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL STUDIES SECTION"/>
+               <title>14 CLINICAL STUDIES</title>
+               <effectiveTime value="20191011"/>
+               <component>
+                  <section ID="s68">
+                     <id root="f787bf79-3519-47b8-b6ff-afaad9a51f57"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>14.1 Migraine</title>
+                     <text>
+                        <paragraph>The efficacy of REYVOW in the acute treatment of migraine was demonstrated in two randomized, double-blind, placebo-controlled trials [Study 1 (NCT02439320) and Study 2 (NCT02605174)]. These studies enrolled patients with a history of migraine with and without aura according to the International Classification of Headache Disorders (ICHD-II) diagnostic criteria. Patients were predominantly female (84%), and White (78%), with a mean age of 42 years (range 18-81). Twenty-two percent of patients were taking preventive medication for migraine at baseline. Study 1 randomized patients to REYVOW 100 mg (n=744), or 200 mg (n=745) or placebo (n=742) and Study 2 randomized patients to REYVOW 50 mg (n=750), 100 mg (n=754), or 200 mg (n=750) or placebo (n=751). Patients were allowed to take a rescue medication 2 hours after taking study drug; however, opioids, barbiturates, triptans, and ergots were not allowed within 24 hours of study drug administration.</paragraph>
+                        <paragraph>The primary efficacy analyses were conducted in patients that treated a migraine with moderate to severe pain within 4 hours of the onset of the attack. The efficacy of REYVOW was established by an effect on pain freedom at 2 hours and Most Bothersome Symptom (MBS) freedom at 2 hours compared to placebo for Studies 1 and 2. Pain freedom was defined as a reduction of moderate or severe headache pain to no pain, and MBS freedom was defined as the absence of the self-identified MBS (photophobia, phonophobia, or nausea). Among patients who selected an MBS, the most commonly selected MBS was photophobia (54%), followed by nausea (24%), and phonophobia (22%).</paragraph>
+                        <paragraph>In both studies, the percentage of patients achieving pain freedom and MBS freedom 2 hours after treatment was significantly greater among patients receiving REYVOW at all doses compared to those receiving placebo (see <linkHtml href="#t2">Table 2</linkHtml>).</paragraph>
+                        <table ID="t2" width="100%">
+                           <caption>Table 2: Migraine Efficacy Endpoints after Treatment for Studies 1 and 2</caption>
+                           <col width="29.259%" align="left"/>
+                           <col width="10.574%" align="left"/>
+                           <col width="10.736%" align="left"/>
+                           <col width="8.874%" align="left"/>
+                           <col width="9.986%" align="left"/>
+                           <col width="11.061%" align="left"/>
+                           <col width="10.574%" align="left"/>
+                           <col width="8.936%" align="left"/>
+                           <tbody>
+                              <tr>
+                                 <td rowspan="2" align="left" valign="top" styleCode="Toprule Botrule Lrule Rrule"/>
+                                 <td colspan="3" align="center" valign="top" styleCode="Toprule Botrule Rrule">
+                                    <content styleCode="bold">Study 1</content>
+                                 </td>
+                                 <td colspan="4" align="center" valign="top" styleCode="Toprule Botrule Rrule">
+                                    <content styleCode="bold">Study 2</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">
+                                    <content styleCode="bold">REYVOW<br/>100 mg</content>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">
+                                    <content styleCode="bold">REYVOW<br/>200 mg</content>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">
+                                    <content styleCode="bold">Placebo</content>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">
+                                    <content styleCode="bold">REYVOW<br/>50 mg</content>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">
+                                    <content styleCode="bold">REYVOW<br/>100 mg</content>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">
+                                    <content styleCode="bold">REYVOW<br/>200 mg</content>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">
+                                    <content styleCode="bold">Placebo</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td colspan="8" align="left" valign="top" styleCode="Botrule Lrule Rrule">
+                                    <content styleCode="bold">Pain Free at 2 hours</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">     N</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">498</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">503</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">515</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">544</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">523</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">521</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">534</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">     % Responders</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">28.3</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">31.8</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">15.3</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">28.3</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">31.4</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">38.8</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">21.0</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">     Difference from placebo (%)</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">13</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">16.5</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">7.3</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">10.4</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">17.8</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">     <content styleCode="italics">p</content>-value</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">&lt;0.001</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">&lt;0.001</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">0.006</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">&lt;0.001</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">&lt;0.001</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                              </tr>
+                              <tr>
+                                 <td colspan="8" align="left" valign="top" styleCode="Botrule Lrule Rrule">
+                                    <content styleCode="bold">MBS Free at 2 hours</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">     N</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">464</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">467</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">480</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">502</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">491</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">478</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">509</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">     % Responders</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">41.2</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">40.7</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">29.6</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">40.8</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">44.0</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">48.7</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">33.2</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">     Difference from placebo (%)</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">11.6</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">11.1</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">7.6</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">10.8</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">15.5</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">     <content styleCode="italics">p</content>-value</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">&lt;0.001</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">&lt;0.001</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">0.014</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">&lt;0.001</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">&lt;0.001</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>Pain relief at 2 hours, defined as a reduction in migraine pain from moderate or severe to mild or none, was also evaluated (see <linkHtml href="#t3">Table 3</linkHtml>).</paragraph>
+                        <table ID="t3" width="100%">
+                           <caption>Table 3: Additional Migraine Efficacy Endpoint after Treatment for Studies 1 and 2</caption>
+                           <col width="29.259%" align="left"/>
+                           <col width="10.574%" align="left"/>
+                           <col width="10.736%" align="left"/>
+                           <col width="8.874%" align="left"/>
+                           <col width="9.986%" align="left"/>
+                           <col width="11.061%" align="left"/>
+                           <col width="10.574%" align="left"/>
+                           <col width="8.936%" align="left"/>
+                           <tfoot>
+                              <tr>
+                                 <td colspan="8" align="left" valign="top">
+                                    <paragraph styleCode="footnote">
+                                       <sup>a</sup> The analysis of pain relief was descriptive and was not controlled for Type I error.</paragraph>
+                                 </td>
+                              </tr>
+                           </tfoot>
+                           <tbody>
+                              <tr>
+                                 <td rowspan="2" align="left" valign="top" styleCode="Toprule Botrule Lrule Rrule"/>
+                                 <td colspan="3" align="center" valign="top" styleCode="Toprule Botrule Rrule">
+                                    <content styleCode="bold">Study 1</content>
+                                 </td>
+                                 <td colspan="4" align="center" valign="top" styleCode="Toprule Botrule Rrule">
+                                    <content styleCode="bold">Study 2</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">
+                                    <content styleCode="bold">REYVOW<br/>100 mg</content>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">
+                                    <content styleCode="bold">REYVOW<br/>200 mg</content>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">
+                                    <content styleCode="bold">Placebo</content>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">
+                                    <content styleCode="bold">REYVOW<br/>50 mg</content>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">
+                                    <content styleCode="bold">REYVOW<br/>100 mg</content>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">
+                                    <content styleCode="bold">REYVOW<br/>200 mg</content>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">
+                                    <content styleCode="bold">Placebo</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td colspan="8" align="left" valign="top" styleCode="Botrule Lrule Rrule">
+                                    <content styleCode="bold">Pain Relief at 2 hours</content>
+                                    <sup>a</sup>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">     N</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">498</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">503</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">515</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">544</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">523</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">521</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">534</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">     % Responders</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">54.0</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">55.3</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">40.0</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">55.9</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">61.4</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">61.0</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">45.1</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">     Difference from placebo (%)</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">14.0</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">15.3</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">10.8</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">16.3</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">15.9</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>
+                           <linkHtml href="#fig1">Figure 1</linkHtml> presents the percentage of patients achieving migraine pain freedom within 2 hours following treatment in Studies 1 and 2.<br/>
+                           <br/>
+                        </paragraph>
+                        <paragraph ID="fig1" styleCode="MultiMediaCaption">
+                           <content styleCode="bold">Figure 1: Percentage of Patients Achieving Migraine Pain Freedom within 2 Hours in Pooled Studies 1 and 2</content>
+                        </paragraph>
+                        <renderMultiMedia ID="f02" referencedObject="mm02"/>
+                        <paragraph>
+                           <sup>a</sup> The 50 mg arm was only included in Study 2.</paragraph>
+                        <paragraph>
+                           <linkHtml href="#fig2">Figure 2</linkHtml> presents the percentage of patients achieving MBS freedom within 2 hours in Studies 1 and 2.<br/>
+                           <br/>
+                        </paragraph>
+                        <paragraph ID="fig2" styleCode="MultiMediaCaption">
+                           <content styleCode="bold">Figure 2: Percentage of Patients Achieving MBS Freedom within 2 Hours in Pooled Studies 1 and 2</content>
+                        </paragraph>
+                        <renderMultiMedia ID="f03" referencedObject="mm03"/>
+                        <paragraph>
+                           <sup>a</sup> The 50 mg arm was only included in Study 2.</paragraph>
+                     </text>
+                     <effectiveTime value="20191011"/>
+                     <component>
+                        <observationMedia ID="mm02">
+                           <text>Figure 1</text>
+                           <value xsi:type="ED" mediaType="image/jpeg">
+                              <reference value="reyvow-uspi-1-v1.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                     <component>
+                        <observationMedia ID="mm03">
+                           <text>Figure 2</text>
+                           <value xsi:type="ED" mediaType="image/jpeg">
+                              <reference value="reyvow-uspi-2-v1.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s69">
+                     <id root="79768bf9-ee20-40be-8928-d84b6a0e9a71"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>14.2 Effects on Driving</title>
+                     <text>
+                        <paragraph>Driving performance was assessed at 90 minutes after administration of REYVOW 50 mg, 100 mg, 200 mg, alprazolam 1 mg, and placebo in a randomized, double-blind, placebo- and active-controlled, five-period crossover study in 90 healthy volunteers (mean age 34.9 years) using a computer-based driving simulation. Driving performance was evaluated using a validated threshold established in a population with blood alcohol concentration of 0.05%. The primary outcome measure was the difference from placebo in the Standard Deviation of Lateral Position (SDLP), a measure of driving performance. A dose-dependent impairment of computer-based simulated driving performance was seen with all doses of REYVOW at 90 minutes after administration.</paragraph>
+                        <paragraph>Driving performance was also assessed at 8, 12, and 24 hours after administration of REYVOW 100 mg or 200 mg, in a separate randomized, double-blind, placebo- and active-controlled, four-period crossover study in 67 healthy volunteers (mean age 32.8 years) evaluating computer-based simulated driving performance using SDLP as the primary endpoint. Diphenhydramine 50 mg was used as a positive control. The mean SDLP did not reach the threshold for driving impairment at 8 hours or later after administration of REYVOW 100 or 200 mg.</paragraph>
+                     </text>
+                     <effectiveTime value="20191011"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s70">
+               <id root="f070db22-1746-456c-a181-f006b846b29a"/>
+               <code code="34069-5" codeSystem="2.16.840.1.113883.6.1" displayName="HOW SUPPLIED SECTION"/>
+               <title>16 HOW SUPPLIED/STORAGE AND HANDLING</title>
+               <effectiveTime value="20210824"/>
+               <component>
+                  <section ID="s71">
+                     <id root="141f85d8-d2ec-4a9a-86d7-7529f4566bb9"/>
+                     <code code="34069-5" codeSystem="2.16.840.1.113883.6.1" displayName="HOW SUPPLIED SECTION"/>
+                     <title>16.1 How Supplied</title>
+                     <text>
+                        <paragraph>REYVOW (lasmiditan) 50 mg tablets are light gray, oval, film coated, tablets with “L-50” debossed on one side and “4312” on the other.</paragraph>
+                        <paragraph>REYVOW (lasmiditan) 100 mg tablets are light purple, oval, film coated, tablets with “L-100” debossed on one side and “4491” on the other.</paragraph>
+                        <table width="100%">
+                           <col width="33.333%" align="left"/>
+                           <col width="33.333%" align="left"/>
+                           <col width="33.333%" align="left"/>
+                           <tbody>
+                              <tr>
+                                 <td rowspan="2" align="left" valign="top" styleCode="Toprule Botrule Lrule Rrule"/>
+                                 <td colspan="2" align="center" valign="top" styleCode="Toprule Botrule Rrule">
+                                    <content styleCode="bold">Strengths</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">50 mg</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">100 mg</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">
+                                    <content styleCode="bold">Tablet color</content>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">Light gray</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">Light purple</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">
+                                    <content styleCode="bold">Imprint (debossed)</content>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">L-50 <br/>4312</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">L-100 <br/>4491</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">
+                                    <content styleCode="bold">Carton of 8</content>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">NDC 0002-4312-08</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">NDC 0002-4491-08</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </text>
+                     <effectiveTime value="20210824"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s72">
+                     <id root="428815a8-fbc2-4098-9d4f-beb836dfad15"/>
+                     <code code="44425-7" codeSystem="2.16.840.1.113883.6.1" displayName="STORAGE AND HANDLING SECTION"/>
+                     <title>16.2 Storage and Handling</title>
+                     <text>
+                        <paragraph>Store at 20°C to 25°C (68°F to 77°F); excursions permitted to 15°C to 30°C (59°F to 86°F) [see USP Controlled Room Temperature].</paragraph>
+                     </text>
+                     <effectiveTime value="20191011"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s73">
+               <id root="ef7a28c6-c1bf-470b-88a5-13669a842d34"/>
+               <code code="34076-0" codeSystem="2.16.840.1.113883.6.1" displayName="INFORMATION FOR PATIENTS SECTION"/>
+               <title>17 PATIENT COUNSELING INFORMATION</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="italics">Advise the patient to read the FDA-approved patient labeling (<linkHtml href="#s82">Medication Guide</linkHtml>).</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Driving Impairment</content> – Advise patients not to engage in potentially hazardous activities requiring complete mental alertness, such as driving a motor vehicle or operating machinery for at least 8 hours after taking each dose of REYVOW. Patients who cannot follow this advice should not take REYVOW. Patients may not be able to assess their own driving competence and the degree of impairment caused by REYVOW <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#s7">5.1</linkHtml>)]</content>.</paragraph>
+                  <paragraph>
+                     <content styleCode="underline">CNS Depression</content> – Inform patients that REYVOW may cause dizziness and sedation. Advise patients to use caution if taking REYVOW in combination with alcohol or other CNS depressants <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#s8">5.2</linkHtml>) and Drug Interactions (<linkHtml href="#s19">7.1</linkHtml>)]</content>.</paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Serotonin Syndrome</content> – Caution patients about the risk of serotonin syndrome with the use of REYVOW, particularly during combined use with serotonergic medications such as SSRIs, SNRIs, TCAs, or MAO inhibitors <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#s9">5.3</linkHtml>) and Drug Interactions (<linkHtml href="#s20">7.2</linkHtml>)]</content>.</paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Medication Overuse Headache</content> – Inform patients that use of drugs to treat migraine attacks for 10 or more days per month may lead to an exacerbation of headache, and encourage patients to record headache frequency and drug use (e.g., by keeping a headache diary) <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#s10">5.4</linkHtml>)]</content>.</paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Hypersensitivity</content> – Advise patients to seek immediate medical attention if they experience any symptoms of serious or severe hypersensitivity reaction <content styleCode="italics">[see Adverse Reactions (<linkHtml href="#s12">6.1</linkHtml>)]</content>.</paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Abuse and Dependence</content> – Advise patients that REYVOW is a federally controlled substance because it has the potential to be abused <content styleCode="italics">[see Drug Abuse and Dependence (<linkHtml href="#s35">9</linkHtml>)]</content>. Advise patients to keep their medication secure.</paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Pregnancy</content>
+                  </paragraph>
+                  <list listType="unordered" styleCode="Disc">
+                     <item>Advise patients to notify their healthcare provider if they become pregnant during treatment or plan to become pregnant <content styleCode="italics">[see Use in Specific Populations (<linkHtml href="#s24">8.1</linkHtml>)]</content>.</item>
+                     <item>Advise patients that there is a pregnancy exposure registry that monitors pregnancy outcomes in women exposed to REYVOW during pregnancy <content styleCode="italics">[see Use in Specific Populations (<linkHtml href="#s24">8.1</linkHtml>)]</content>.</item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="underline">Nursing Mothers</content> – Inform patients to notify their healthcare provider if they are breastfeeding or plan to breastfeed <content styleCode="italics">[see Use in Specific Populations (<linkHtml href="#s30">8.2</linkHtml>)]</content>.</paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Administration</content> – Advise patients to swallow tablets whole (do not split, crush, or chew) <content styleCode="italics">[see Dosage and Administration (<linkHtml href="#s3">2</linkHtml>)]</content>.</paragraph>
+                  <paragraph>Literature revised September 2022</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Marketed by: Lilly USA, LLC, Indianapolis, IN 46285, USA<br/>
+                     </content>Copyright © 2019, 2022, Eli Lilly and Company. All rights reserved.</paragraph>
+                  <paragraph>REY-0007-USPI-20220915</paragraph>
+               </text>
+               <effectiveTime value="20220915"/>
+            </section>
+         </component>
+         <component>
+            <section ID="s82">
+               <id root="cf8f8f61-3ef3-4be5-8ffb-241caca022f1"/>
+               <code code="42231-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL MEDGUIDE SECTION"/>
+               <text>
+                  <table width="100%">
+                     <col width="33.333%" align="left"/>
+                     <col width="33.333%" align="left"/>
+                     <col width="33.333%" align="left"/>
+                     <tfoot>
+                        <tr>
+                           <td colspan="2" align="left" valign="top">
+                              <paragraph styleCode="footnote">This Medication Guide has been approved by the U.S. Food and Drug Administration</paragraph>
+                           </td>
+                           <td align="right" valign="top">
+                              <paragraph styleCode="footnote">Revised: 07/2022</paragraph>
+                           </td>
+                        </tr>
+                     </tfoot>
+                     <tbody>
+                        <tr>
+                           <td colspan="3" align="center" valign="top" styleCode="Toprule Botrule Lrule Rrule">
+                              <content styleCode="bold">Medication Guide</content>
+                              <br/>
+                              <content styleCode="bold">REYVOW<sup>®</sup> (RAY-vow)</content>
+                              <br/>
+                              <content styleCode="bold">(lasmiditan)</content>
+                              <br/>
+                              <content styleCode="bold">tablets, for oral use, CV</content>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="3" align="left" valign="top" styleCode="Botrule Lrule Rrule">
+                              <paragraph ID="p01">
+                                 <content styleCode="bold">What is the most important information I should know about REYVOW?</content>
+                                 <br/>
+                              </paragraph>
+                              <list listType="unordered" styleCode="Disc">
+                                 <item>
+                                    <content styleCode="bold">Do not</content> drive or operate machinery for at least 8 hours after you take REYVOW, even if you feel well enough.</item>
+                                 <item>
+                                    <content styleCode="bold">You should not</content> take REYVOW if you cannot wait at least 8 hours between taking REYVOW and driving or operating machinery.</item>
+                              </list>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="3" align="left" valign="top" styleCode="Botrule Lrule Rrule">
+                              <content styleCode="bold">What is REYVOW?</content>
+                              <br/> 
+									REYVOW is a prescription medicine used for the acute treatment of migraine attacks with or without aura in adults. <br/>
+                              <list listType="unordered" styleCode="Disc">
+                                 <item>REYVOW is not used as a preventive treatment of migraine.</item>
+                                 <item>It is not known if REYVOW is safe and effective in children.</item>
+                                 <item>REYVOW is a federally controlled substance (CV) because it contains lasmiditan that can be abused. Keep REYVOW in a safe place to protect it from theft. Never give your REYVOW to anyone else, because it may harm them. Selling or giving away REYVOW is against the law. Tell your healthcare provider if you have ever abused or been dependent on alcohol, prescription medicines or street drugs.</item>
+                              </list>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="3" align="left" valign="top" styleCode="Lrule Rrule">
+                              <content styleCode="bold">Before you take REYVOW, tell your healthcare provider about all of your medical conditions, including if you:</content>
+                              <br/>
+                              <list listType="unordered" styleCode="Disc">
+                                 <item>have liver problems</item>
+                                 <item>have high blood pressure</item>
+                                 <item>have a low heart rate</item>
+                                 <item>are allergic to lasmiditan</item>
+                                 <item>are pregnant or plan to become pregnant. It is not known if REYVOW will harm your unborn baby.	
+													<list listType="unordered" styleCode="Circle">
+                                       <item>
+                                          <content styleCode="underline">Pregnancy Registry</content>: There is a pregnancy registry for pregnant women who take REYVOW. The purpose of this registry is to collect information about the health of you and your baby if you take REYVOW during pregnancy. To learn more call 1-833-464-4724 or visit www.migrainepregnancyregistry.com. You may also talk to your healthcare provider about how you can take part in this registry.</item>
+                                    </list>
+                                 </item>
+                                 <item>are breastfeeding or plan to breastfeed. It is not known if REYVOW passes into your breastmilk.<br/>
+                                 </item>
+                              </list>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="3" align="left" valign="top" styleCode="Lrule Rrule">
+                              <content styleCode="bold">Tell your healthcare provider about all the medicines you take,</content> including prescription and over-the-counter medicines, vitamins, and herbal supplements. 				Your healthcare provider will decide if you can take REYVOW with your other medicines.<br/>
+                              <content styleCode="bold">Especially, tell your healthcare provider if you take:</content>
+                              <br/>
+                              <list listType="unordered" styleCode="Disc">
+                                 <item>propranolol or other medicines that can lower your heart rate</item>
+                                 <item>any medicines that can increase your blood pressure</item>
+                                 <item>any medicines that make you sleepy</item>
+                                 <item>anti-depressant medicines called:<list listType="unordered" styleCode="Circle">
+                                       <item>selective serotonin reuptake inhibitors (SSRIs)</item>
+                                       <item>serotonin norepinephrine reuptake inhibitors (SNRIs)</item>
+                                       <item>tricyclic anti-depressants (TCAs)</item>
+                                       <item>monoamine oxidase inhibitors (MAOIs)<br/>
+                                       </item>
+                                    </list>
+                                 </item>
+                              </list>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="3" align="left" valign="top" styleCode="Botrule Lrule Rrule">Ask your healthcare provider or pharmacist for a list of these medicines if you are not sure.<br/>Know the medicines you take. Keep a list of them and show it to your healthcare provider or pharmacist when you get a new medicine.</td>
+                        </tr>
+                        <tr>
+                           <td colspan="3" align="left" valign="top" styleCode="Botrule Lrule Rrule">
+                              <content styleCode="bold">How should I take REYVOW?</content>
+                              <br/>
+                              <list listType="unordered" styleCode="Disc">
+                                 <item>Take REYVOW exactly as your healthcare provider tells you to take it.</item>
+                                 <item>Your healthcare provider may change your dose. Do not change your dose without first talking to your healthcare provider.</item>
+                                 <item>Take REYVOW tablets by mouth with or without food.</item>
+                                 <item>Swallow REYVOW tablets whole. Do not split, crush, or chew.</item>
+                                 <item>Do not take more than one dose in a 24-hour period.<list listType="unordered" styleCode="Circle">
+                                       <item>If you take REYVOW 50 mg, 100 mg, or 200 mg, and your headache goes away but comes back, you should not take a second dose within 24 hours.</item>
+                                    </list>
+                                 </item>
+                                 <item>Some people who take too many REYVOW tablets may have worse headaches (medication overuse headache). If your headaches get worse, your healthcare provider may decide to stop your treatment with REYVOW.</item>
+                                 <item>You should write down when you have headaches and when you take REYVOW so you can talk to your healthcare provider about how REYVOW is working for you.</item>
+                              </list>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="3" align="left" valign="top" styleCode="Botrule Lrule Rrule">
+                              <content styleCode="bold">What should I avoid while taking REYVOW?</content>
+                              <br/>
+                              <list listType="unordered" styleCode="Disc">
+                                 <item>
+                                    <content styleCode="bold">Do not</content> drive or operate machinery for at least 8 hours after taking REYVOW.</item>
+                                 <item>You should not drink alcohol or take other medicines that make you drowsy while taking REYVOW.</item>
+                              </list>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="3" align="left" valign="top" styleCode="Lrule Rrule">
+                              <content styleCode="bold">What are the possible side effects of REYVOW?</content>
+                              <br/>
+                              <content styleCode="bold">REYVOW can cause serious side effects including:</content>
+                              <br/>
+                              <list listType="unordered" styleCode="Disc">
+                                 <item>
+                                    <content styleCode="bold">See “<linkHtml href="#p01">What is the most important information I should know about REYVOW?</linkHtml>”</content>
+                                    <list listType="unordered" styleCode="Disc">
+                                       <item>
+                                          <content styleCode="bold">serotonin syndrome.</content> Serotonin syndrome is a rare but serious problem that can happen in people using REYVOW, especially if REYVOW is used with anti-depressant medicines called SSRIs or SNRIs. Call your healthcare provider right away if you have any of the following symptoms of serotonin syndrome:<list listType="unordered" styleCode="Circle">
+                                             <item>mental changes such as seeing things that are not there (hallucinations), agitation, or coma</item>
+                                             <item>fast heartbeat</item>
+                                             <item>changes in blood pressure</item>
+                                             <item>high body temperature</item>
+                                             <item>tight muscles</item>
+                                             <item>trouble walking</item>
+                                             <item>nausea, vomiting, or diarrhea</item>
+                                          </list>
+                                       </item>
+                                       <item>
+                                          <content styleCode="bold">medication overuse headache.</content> Some people who take medicines like REYVOW for the acute treatment of migraine attacks for 10 or more days each month may have worse headaches (medication overuse headache). If your headaches get worse, your healthcare provider may decide to stop your treatment with REYVOW.</item>
+                                    </list>
+                                 </item>
+                              </list>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="3" align="left" valign="top" styleCode="Lrule Rrule">
+                              <content styleCode="bold">The most common side effects of REYVOW include:</content>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td align="left" valign="top" styleCode="Lrule">
+                              <list listType="unordered" styleCode="Disc">
+                                 <item>dizziness</item>
+                                 <item>sleepiness</item>
+                              </list>
+                           </td>
+                           <td align="left" valign="top">
+                              <list listType="unordered" styleCode="Disc">
+                                 <item>numbness</item>
+                                 <item>feeling tired</item>
+                              </list>
+                           </td>
+                           <td align="left" valign="top" styleCode="Rrule">
+                              <list listType="unordered" styleCode="Disc">
+                                 <item>tingling</item>
+                              </list>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="3" align="left" valign="top" styleCode="Botrule Lrule Rrule">Tell your healthcare provider if you have any side effect that bothers you or that does not go away.<br/>These are not all of the possible side effects of REYVOW. For more information ask your healthcare provider or pharmacist. <br/>
+                              <content styleCode="bold">Call your doctor for medical advice about side effects. You may report side effects to FDA at 1-800-FDA-1088.</content> You may also report side effects to Lilly at 1-800-LillyRx (1-800-545-5979).</td>
+                        </tr>
+                        <tr>
+                           <td colspan="3" align="left" valign="top" styleCode="Botrule Lrule Rrule">
+                              <content styleCode="bold">How should I store REYVOW?</content>
+                              <br/>
+                              <list listType="unordered" styleCode="Disc">
+                                 <item>Store REYVOW at room temperature between 68°F to 77°F (20°C to 25°C).</item>
+                                 <item>
+                                    <content styleCode="bold">Keep REYVOW and all medicines out of the reach of children.</content>
+                                 </item>
+                              </list>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="3" align="left" valign="top" styleCode="Botrule Lrule Rrule">
+                              <content styleCode="bold">General information about the safe and effective use of REYVOW.</content>
+                              <br/> Medicines are sometimes prescribed for purposes other than those listed in a Medication Guide. Do not use REYVOW for a condition for which it was not prescribed. Do not give REYVOW to other people, even if they have the same symptoms you have. It may harm them.
+									<br/> You can ask your pharmacist or healthcare provider for information about REYVOW that is written for health professionals.</td>
+                        </tr>
+                        <tr>
+                           <td colspan="3" align="left" valign="top" styleCode="Botrule Lrule Rrule">
+                              <content styleCode="bold">What are the ingredients in REYVOW?</content>
+                              <br/>
+                              <content styleCode="bold">Active ingredient:</content> lasmiditan hemisuccinate
+									<br/>
+                              <content styleCode="bold">Inactive ingredients:</content> croscarmellose sodium, magnesium stearate, microcrystalline cellulose, pregelatinized starch, sodium lauryl sulfate.
+									<br/>
+                              <content styleCode="bold">Color mixture ingredients:</content> black ferric oxide, polyethylene glycol, polyvinyl alcohol, talc, titanium dioxide. 100 mg tablets also contain red ferric oxide.<br/>REYVOW is a registered trademark of Eli Lilly and Company.<br/>
+                              <content styleCode="bold">Marketed by: Lilly USA, LLC, Indianapolis, IN 46285, USA</content>
+                              <br/>
+                              <content styleCode="bold">www.REYVOW.com</content>
+                              <br/>
+											Copyright © 2019, 2022, Eli Lilly and Company. All rights reserved.<br/> 
+											For more information go to www.REYVOW.com or call 1-800-LillyRx (1-800-545-5979).</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>REY-0005-MG-20220715</paragraph>
+               </text>
+               <effectiveTime value="20241113"/>
+            </section>
+         </component>
+         <component>
+            <section ID="s83">
+               <id root="1b78fcd3-4b84-4780-b2a7-4212d6dc6307"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">PACKAGE LABEL - REYVOW 50 mg 8ct carton</content>
+                  </paragraph>
+                  <paragraph>NDC 0002-4312-08						</paragraph>
+                  <paragraph>8 tablets (2 cards of 4 tablets)						</paragraph>
+                  <paragraph>REYVOW<sup>®</sup>
+                  </paragraph>
+                  <paragraph>(lasmiditan) CV</paragraph>
+                  <paragraph>tablets 50 mg</paragraph>
+                  <paragraph>Each tablet contains 50 mg of lasmiditan.</paragraph>
+                  <paragraph>Rx only						</paragraph>
+                  <paragraph>www.REYVOW.com</paragraph>
+                  <paragraph>50 mg</paragraph>
+                  <paragraph>Dispense enclosed Medication Guide to each patient.</paragraph>
+                  <paragraph>Lilly</paragraph>
+                  <renderMultiMedia ID="f06" referencedObject="mm06"/>
+               </text>
+               <effectiveTime value="20241113"/>
+               <component>
+                  <observationMedia ID="mm06">
+                     <text>PDP Text – REYVOW 50 mg 8ct carton</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="reyvow-50mg-8ct-040-02.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s84">
+               <id root="c3e67a8b-e00b-4491-a479-6e6dfb33ecdf"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">PACKAGE LABEL - REYVOW 100 mg 8ct carton</content>
+                  </paragraph>
+                  <paragraph>NDC 0002-4491-08						</paragraph>
+                  <paragraph>8 tablets (2 cards of 4 tablets)						</paragraph>
+                  <paragraph>REYVOW<sup>®</sup>
+                  </paragraph>
+                  <paragraph>(lasmiditan) CV</paragraph>
+                  <paragraph>tablets 100 mg</paragraph>
+                  <paragraph>Each tablet contains 100 mg of lasmiditan.</paragraph>
+                  <paragraph>Rx only						</paragraph>
+                  <paragraph>www.REYVOW.com</paragraph>
+                  <paragraph>100 mg</paragraph>
+                  <paragraph>Dispense enclosed Medication Guide to each patient.</paragraph>
+                  <paragraph>Lilly</paragraph>
+                  <renderMultiMedia ID="f07" referencedObject="mm07"/>
+               </text>
+               <effectiveTime value="20241113"/>
+               <component>
+                  <observationMedia ID="mm07">
+                     <text>PDP Text – REYVOW 100 mg trade carton</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="reyvow-100mg-8ct-042-02.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

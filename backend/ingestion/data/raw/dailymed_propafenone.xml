@@ -1,0 +1,2279 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="2f88518a-063e-435c-82bf-1b23f35e5451"/>
+   <code code="34391-3" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN PRESCRIPTION DRUG LABEL"/>
+   <title>These highlights do not include all the information needed to use PROPAFENONE HYDROCHLORIDE EXTENDED-RELEASE CAPSULES safely and effectively. See full prescribing information for PROPAFENONE HYDROCHLORIDE EXTENDED-RELEASE CAPSULES.<br/>
+      <br/>PROPAFENONE HYDROCHLORIDE extended-release capsules, for oral use<br/>Initial U.S. Approval: 1989</title>
+   <effectiveTime value="20260604"/>
+   <setId root="2ecd6452-ccc3-493f-9a4a-69f0fbf67a42"/>
+   <versionNumber value="5"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id extension="830546433" root="1.3.6.1.4.1.519.1"/>
+            <name>Northstar Rx LLC</name>
+            <assignedEntity>
+               <assignedOrganization>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id extension="862603186" root="1.3.6.1.4.1.519.1"/>
+                        <name>Glenmark Pharmaceuticals Limited</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C25391" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANALYSIS"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="16714-825" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                     <performance>
+                        <actDefinition>
+                           <code code="C25391" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANALYSIS"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="16714-826" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                     <performance>
+                        <actDefinition>
+                           <code code="C25391" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANALYSIS"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="16714-827" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                     <performance>
+                        <actDefinition>
+                           <code code="C43360" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="MANUFACTURE"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="16714-825" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                     <performance>
+                        <actDefinition>
+                           <code code="C43360" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="MANUFACTURE"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="16714-826" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                     <performance>
+                        <actDefinition>
+                           <code code="C43360" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="MANUFACTURE"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="16714-827" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+               </assignedOrganization>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="8aef7c69-0c23-44aa-9b83-3994487b0a19"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL product data elements section"/>
+               <effectiveTime value="20211007"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="16714-825" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>propafenone hydrochloride</name>
+                        <formCode code="C42916" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CAPSULE, EXTENDED RELEASE"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>propafenone hydrochloride</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mg" value="225"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="33XCH0HOCD" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>PROPAFENONE HYDROCHLORIDE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="68IQX3T69U" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>PROPAFENONE</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="EWQ57Q8I5X" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>LACTOSE MONOHYDRATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="OP1R32D61U" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MICROCRYSTALLINE CELLULOSE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="3NXW29V3WO" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>HYPROMELLOSE, UNSPECIFIED</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="70097M6I30" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MAGNESIUM STEARATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="15FIX9V2JP" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>TITANIUM DIOXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="2G86QN327L" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>GELATIN, UNSPECIFIED</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="368GB5141J" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SODIUM LAURYL SULFATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="46N107B71O" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SHELLAC</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="XM0M87F357" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>FERROSOFERRIC OXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="WZH3C48M4T" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>POTASSIUM HYDROXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="1" value="60"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="16714-825-01" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20180716"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                           <subjectOf>
+                              <characteristic classCode="OBS">
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CE"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="ANDA205268" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73584" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20170331"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48325" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="WHITE" xsi:type="CE">
+                              <originalText>opaque white cap</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48325" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="WHITE" xsi:type="CE">
+                              <originalText>opaque white body</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="22" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48336" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CAPSULE" xsi:type="CE">
+                              <originalText>hard gelatin</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value value="1" xsi:type="INT"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="ST">408;G</value>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="16714-826" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>propafenone hydrochloride</name>
+                        <formCode code="C42916" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CAPSULE, EXTENDED RELEASE"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>propafenone hydrochloride</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mg" value="325"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="33XCH0HOCD" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>PROPAFENONE HYDROCHLORIDE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="68IQX3T69U" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>PROPAFENONE</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="EWQ57Q8I5X" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>LACTOSE MONOHYDRATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="OP1R32D61U" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MICROCRYSTALLINE CELLULOSE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="3NXW29V3WO" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>HYPROMELLOSE, UNSPECIFIED</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="70097M6I30" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MAGNESIUM STEARATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="15FIX9V2JP" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>TITANIUM DIOXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="2G86QN327L" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>GELATIN, UNSPECIFIED</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="368GB5141J" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SODIUM LAURYL SULFATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="46N107B71O" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SHELLAC</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="XM0M87F357" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>FERROSOFERRIC OXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="WZH3C48M4T" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>POTASSIUM HYDROXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="1" value="60"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="16714-826-01" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20180716"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                           <subjectOf>
+                              <characteristic classCode="OBS">
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CE"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="ANDA205268" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73584" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20170331"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48325" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="WHITE" xsi:type="CE">
+                              <originalText>opaque white cap</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48325" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="WHITE" xsi:type="CE">
+                              <originalText>opaque white body</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="23" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48336" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CAPSULE" xsi:type="CE">
+                              <originalText>hard gelatin</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value value="1" xsi:type="INT"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="ST">409;G</value>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="16714-827" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>propafenone hydrochloride</name>
+                        <formCode code="C42916" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CAPSULE, EXTENDED RELEASE"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>propafenone hydrochloride</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mg" value="425"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="33XCH0HOCD" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>PROPAFENONE HYDROCHLORIDE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="68IQX3T69U" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>PROPAFENONE</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="EWQ57Q8I5X" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>LACTOSE MONOHYDRATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="OP1R32D61U" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MICROCRYSTALLINE CELLULOSE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="3NXW29V3WO" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>HYPROMELLOSE, UNSPECIFIED</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="70097M6I30" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MAGNESIUM STEARATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="15FIX9V2JP" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>TITANIUM DIOXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="2G86QN327L" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>GELATIN, UNSPECIFIED</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="368GB5141J" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SODIUM LAURYL SULFATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="46N107B71O" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SHELLAC</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="XM0M87F357" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>FERROSOFERRIC OXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="WZH3C48M4T" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>POTASSIUM HYDROXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="1" value="60"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="16714-827-01" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20180716"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                           <subjectOf>
+                              <characteristic classCode="OBS">
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CE"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="ANDA205268" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73584" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20170331"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48325" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="WHITE" xsi:type="CE">
+                              <originalText>opaque white cap with black band</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48325" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="WHITE" xsi:type="CE">
+                              <originalText>opaque white body with black band</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="23" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48336" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CAPSULE" xsi:type="CE">
+                              <originalText>hard gelatin</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value value="1" xsi:type="INT"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="ST">410;G</value>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_d6152806-cee3-4f1d-8a6a-ec8dac782d68">
+               <id root="b78c6e7d-bb26-4810-9f00-443d49dfa832"/>
+               <code code="34066-1" codeSystem="2.16.840.1.113883.6.1" displayName="Boxed Warning section"/>
+               <title>WARNING: MORTALITY</title>
+               <text>
+                  <list listType="unordered">
+                     <item>
+                        <caption>•</caption>
+                        <content styleCode="bold">In the National Heart, Lung, and Blood Institute’s Cardiac Arrhythmia Suppression Trial (CAST), a long-term, multicenter, randomized, double-blind trial in patients with asymptomatic non-life-threatening ventricular arrhythmias who had a myocardial infarction more than 6 days but less than 2 years previously, an increased rate of death or reversed cardiac arrest rate (7.7%; 56/730) was seen in patients treated with encainide or flecainide (Class IC antiarrhythmics) compared with that seen in patients assigned to placebo (3 %; 22/725). The average duration of treatment with encainide or flecainide in this trial was 10 months.</content>
+                     </item>
+                     <item>
+                        <caption>•</caption>
+                        <content styleCode="bold">The applicability of the CAST results to other populations (e.g., those without recent myocardial infarction) or other antiarrhythmic drugs is uncertain, but at present, it is prudent to consider any IC antiarrhythmic to have a significant proarrhythmic risk in patients with structural heart disease. Given the lack of any evidence that these drugs improve survival, antiarrhythmic agents should generally be avoided in patients with non-life-threatening ventricular arrhythmias, even if the patients are experiencing unpleasant, but not life-threatening, symptoms or signs.</content>
+                     </item>
+                  </list>
+               </text>
+               <effectiveTime value="20211007"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>WARNING: MORTALITY</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">
+                              <content styleCode="italics">See full prescribing information for complete boxed warning.</content>
+                           </content>
+                        </paragraph>
+                        <list listType="unordered">
+                           <item>
+                              <caption>•</caption>An increased rate of death or reversed cardiac arrest rate was seen in patients treated with encainide or flecainide (Class IC antiarrhythmics) compared with that seen in patients assigned to placebo. At present, it is prudent to consider any IC antiarrhythmic to have a significant risk of provoking proarrhythmic events in patients with structural heart disease.</item>
+                           <item>
+                              <caption>•</caption>Given the lack of any evidence that these drugs improve survival, antiarrhythmic agents should generally be avoided in patients with non-life-threatening ventricular arrhythmias, even if the patients are experiencing unpleasant, but not life-threatening, symptoms or signs.</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_7fff8d16-cef1-4f22-9e30-70b1c249cd36">
+               <id root="88694a48-f601-42f8-9b3a-bd8b23a0fc2c"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>1 INDICATIONS AND USAGE</title>
+               <text>
+                  <paragraph>Propafenone hydrochloride extended-release capsules are indicated to prolong the time to recurrence of symptomatic atrial fibrillation (AF) in patients with episodic (most likely paroxysmal or persistent) AF who do not have structural heart disease.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Usage Considerations:</content>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>
+                        <caption>•</caption>The use of propafenone hydrochloride extended-release capsules in patients with permanent AF or in patients exclusively with atrial flutter or paroxysmal supraventricular tachycardia (PSVT) has not been evaluated. Do not use propafenone hydrochloride extended-release capsules to control ventricular rate during AF.</item>
+                     <item>
+                        <caption>•</caption>Some patients with atrial flutter treated with propafenone have developed 1:1 conduction, producing an increase in ventricular rate. Concomitant treatment with drugs that increase the functional atrioventricular (AV) nodal refractory period is recommended.</item>
+                     <item>
+                        <caption>•</caption>The effect of propafenone on mortality has not been determined <content styleCode="italics">[see <linkHtml href="#_RefLINK_d6152806-cee3-4f1d-8a6a-ec8dac7">Boxed Warning</linkHtml>]</content>.</item>
+                  </list>
+               </text>
+               <effectiveTime value="20211007"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Propafenone hydrochloride extended-release capsules are an antiarrhythmic indicated to prolong the time to recurrence of symptomatic atrial fibrillation (AF) in patients with episodic (most likely paroxysmal or persistent) AF who do not have structural heart disease. (<linkHtml href="#LINK_7fff8d16-cef1-4f22-9e30-70b1c249cd36">1</linkHtml>)</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Usage Considerations:</content>
+                        </paragraph>
+                        <list listType="unordered">
+                           <item>
+                              <caption>•</caption>Use in patients with permanent atrial fibrillation or with atrial flutter or paroxysmal supraventricular tachycardia (PSVT) has not been evaluated. Do not use to control ventricular rate during atrial fibrillation. (<linkHtml href="#LINK_7fff8d16-cef1-4f22-9e30-70b1c249cd36">1</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>In patients with atrial fibrillation and atrial flutter, use propafenone hydrochloride extended-release capsules with drugs that increase the atrioventricular nodal refractory period. (<linkHtml href="#LINK_7fff8d16-cef1-4f22-9e30-70b1c249cd36">1</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>The effect of propafenone on mortality has not been determined. (<linkHtml href="#LINK_7fff8d16-cef1-4f22-9e30-70b1c249cd36">1</linkHtml>)</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_8fcf8d58-3902-4219-a6d3-559ef765f460">
+               <id root="238bfae2-6a13-409f-8451-303b48eea741"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>2 DOSAGE AND ADMINISTRATION</title>
+               <text>
+                  <paragraph>Propafenone hydrochloride extended-release capsules can be taken with or without food. Do not crush or further divide the contents of the capsule. </paragraph>
+                  <paragraph>The dose of propafenone hydrochloride extended-release capsules must be individually titrated on the basis of response and tolerance. Initiate therapy with propafenone hydrochloride extended-release capsules 225 mg given every 12 hours. Dosage may be increased at a minimum of 5-day intervals to 325 mg given every 12 hours. If additional therapeutic effect is needed, the dose of propafenone hydrochloride extended-release capsules may be increased to 425 mg given every 12 hours. </paragraph>
+                  <paragraph>In patients with hepatic impairment or those with significant widening of the QRS complex or second- or third-degree AV block, consider reducing the dose. </paragraph>
+                  <paragraph>The combination of cytochrome P450 3A4 (CYP3A4) inhibition and either cytochrome P450 2D6 (CYP2D6) deficiency or CYP2D6 inhibition with the simultaneous administration of propafenone may significantly increase the concentration of propafenone and thereby increase the risk of proarrhythmia and other adverse events. Therefore, avoid simultaneous use of propafenone hydrochloride extended-release capsules with both a CYP2D6 inhibitor and a CYP3A4 inhibitor <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#LINK_88855246-ffdd-4218-944d-d4097e572f9f">5.4</linkHtml>), Drug Interactions (<linkHtml href="#LINK_bef8dc74-80f5-4fc0-9930-7a6ceedca927">7.1</linkHtml>)].</content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20211007"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered">
+                           <item>
+                              <caption>•</caption>Initiate therapy with 225 mg given every 12 hours. (<linkHtml href="#LINK_8fcf8d58-3902-4219-a6d3-559ef765f460">2</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>Dosage may be increased at a minimum of 5-day intervals to 325 mg every 12 hours and, if necessary, to 425 mg every 12 hours, if necessary, to 425 mg every 12 hours. (<linkHtml href="#LINK_8fcf8d58-3902-4219-a6d3-559ef765f460">2</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>Consider reducing the dose in patients with hepatic impairment, significant widening of the QRS complex, or second- or third-degree AV block. (<linkHtml href="#LINK_8fcf8d58-3902-4219-a6d3-559ef765f460">2</linkHtml>)</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_d14a418e-f738-48e7-b26b-7f727d428c07">
+               <id root="38495dd0-0ddd-416d-9d03-6bad8f8674fa"/>
+               <code code="43678-2" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE FORMS &amp; STRENGTHS SECTION"/>
+               <title>3 DOSAGE FORMS AND STRENGTHS</title>
+               <text>
+                  <paragraph>Propafenone Hydrochloride Extended-Release Capsules, USP are supplied as hard gelatin capsules containing 225 mg, 325 mg or 425 mg of propafenone hydrochloride, USP.</paragraph>
+                  <paragraph>The 225 mg capsule has a white opaque body imprinted with “408” in black ink and white opaque cap imprinted with Glenmark logo “G” in black ink.</paragraph>
+                  <paragraph>The 325 mg capsule has a white opaque body imprinted with “409” in black ink and white opaque cap imprinted with Glenmark logo “G” in black ink.</paragraph>
+                  <paragraph>The 425 mg capsule has a white opaque body imprinted with “410” and single band in black ink and white opaque cap imprinted with Glenmark logo “G” and single band in black ink.</paragraph>
+               </text>
+               <effectiveTime value="20211007"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Capsules: 225 mg, 325 mg, 425 mg. (<linkHtml href="#LINK_d14a418e-f738-48e7-b26b-7f727d428c07">3</linkHtml>)</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_a3f948b2-75ea-4673-a32b-83e3ffd2393d">
+               <id root="b2cb9d79-8a9c-46d7-81ce-6878e04207cc"/>
+               <code code="34070-3" codeSystem="2.16.840.1.113883.6.1" displayName="CONTRAINDICATIONS SECTION"/>
+               <title>4 CONTRAINDICATIONS</title>
+               <text>
+                  <paragraph>Propafenone hydrochloride extended-release capsules are contraindicated in the following circumstances:</paragraph>
+                  <list listType="unordered">
+                     <item>
+                        <caption>•</caption>Heart failure</item>
+                     <item>
+                        <caption>•</caption>Cardiogenic shock</item>
+                     <item>
+                        <caption>•</caption>Sinoatrial, atrioventricular and intraventricular disorders of impulse generation or conduction (e.g., sick sinus node syndrome, AV block) in the absence of an artificial pacemaker</item>
+                     <item>
+                        <caption>•</caption>Known Brugada Syndrome</item>
+                     <item>
+                        <caption>•</caption>Bradycardia</item>
+                     <item>
+                        <caption>•</caption>Marked hypotension</item>
+                     <item>
+                        <caption>•</caption>Bronchospastic disorders or severe obstructive pulmonary disease</item>
+                     <item>
+                        <caption>•</caption>Marked electrolyte imbalance</item>
+                  </list>
+               </text>
+               <effectiveTime value="20211007"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered">
+                           <item>
+                              <caption>•</caption>Heart failure (<linkHtml href="#LINK_a3f948b2-75ea-4673-a32b-83e3ffd2393d">4</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>Cardiogenic shock (<linkHtml href="#LINK_a3f948b2-75ea-4673-a32b-83e3ffd2393d">4</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>Sinoatrial, atrioventricular, and intraventricular disorders of impulse generation and/or conduction in the absence of pacemaker (<linkHtml href="#LINK_a3f948b2-75ea-4673-a32b-83e3ffd2393d">4</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>Known Brugada Syndrome (<linkHtml href="#LINK_a3f948b2-75ea-4673-a32b-83e3ffd2393d">4</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>Bradycardia (<linkHtml href="#LINK_a3f948b2-75ea-4673-a32b-83e3ffd2393d">4</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>Marked hypotension (<linkHtml href="#LINK_a3f948b2-75ea-4673-a32b-83e3ffd2393d">4</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>Bronchospastic disorders and severe obstructive pulmonary disease (<linkHtml href="#LINK_a3f948b2-75ea-4673-a32b-83e3ffd2393d">4</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>Marked electrolyte imbalance (<linkHtml href="#LINK_a3f948b2-75ea-4673-a32b-83e3ffd2393d">4</linkHtml>)</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_5e9c63ef-0c28-469f-a733-fbe91210c7a3">
+               <id root="9c874cc3-9b6a-438f-9503-0c2d26aab862"/>
+               <code code="43685-7" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS AND PRECAUTIONS SECTION"/>
+               <title>5 WARNINGS AND PRECAUTIONS</title>
+               <effectiveTime value="20211007"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered">
+                           <item>
+                              <caption>•</caption>May cause new or worsened arrhythmias. Evaluate patients via ECG prior to and during therapy. (<linkHtml href="#LINK_084e6ea1-02c1-4a9c-8496-e97854ce7558">5.1</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>Propafenone hydrochloride extended-release capsules may unmask Brugada or Brugada-like Syndrome. Evaluate patients via ECG after initiation of therapy. (<linkHtml href="#LINK_a3f948b2-75ea-4673-a32b-83e3ffd2393d">4</linkHtml>, <linkHtml href="#LINK_17342ea7-f33d-4813-a990-a23e751c5fa8">5.2</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>Avoid use with other antiarrhythmic agents or drugs that prolong the QT interval. (<linkHtml href="#LINK_54c2980b-480e-4b8f-89c9-e8a3c4632dec">5.3</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>Avoid simultaneous use of propafenone with both a cytochrome P450 2D6 (CYP2D6) inhibitor and a 3A4 inhibitor (CYP3A4). (<linkHtml href="#LINK_88855246-ffdd-4218-944d-d4097e572f9f">5.4</linkHtml>) </item>
+                           <item>
+                              <caption>•</caption>May provoke overt heart failure. (<linkHtml href="#LINK_fafb7469-eaa9-4e15-92e2-e2c3f1a0403a">5.5</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>May cause dose-related first-degree AV block or other conduction disturbances. Should not be given to patients with conduction defects in absence of a pacemaker. (<linkHtml href="#LINK_2074eba3-e1c2-4eb7-b13c-7ce0eeac843c">5.6</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>May affect artificial pacemakers. Pacemakers should be monitored during therapy. (<linkHtml href="#LINK_0d878d16-1af4-4870-b164-ea6552308523">5.7</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>Agranulocytosis: Patients should report signs of infection. (<linkHtml href="#LINK_f7746317-5442-4a33-ab32-4aa886c4b3ce">5.8</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>Administer cautiously to patients with impaired hepatic and renal function. (<linkHtml href="#LINK_bb10a9aa-7661-4494-a837-5d16fa723f73">5.9</linkHtml>, <linkHtml href="#LINK_92e1fd36-c3d8-4544-8264-6b5e9e8c001a">5.10</linkHtml>)</item>
+                        </list>
+                        <paragraph>Exacerbation of myasthenia gravis has been reported. (<linkHtml href="#LINK_c4cb3190-7267-4c1d-99d0-9f437320eb5f">5.11</linkHtml>)</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="LINK_084e6ea1-02c1-4a9c-8496-e97854ce7558">
+                     <id root="165cf21d-6e9c-46fd-8ab0-dd9ae9f3f3ae"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.1 Proarrhythmic Effects</title>
+                     <text>
+                        <paragraph>Propafenone has caused new or worsened arrhythmias. Such proarrhythmic effects include sudden death and life-threatening ventricular arrhythmias such as ventricular fibrillation, ventricular tachycardia, asystole and torsade de pointes. It may also worsen premature ventricular contractions or supraventricular arrhythmias, and it may prolong the QT interval. It is therefore essential that each patient given propafenone hydrochloride extended-release capsules be evaluated electrocardiographically prior to and during therapy to determine whether the response to propafenone hydrochloride extended-release capsules supports continued treatment. Because propafenone prolongs the QRS interval in the electrocardiogram, changes in the QT interval are difficult to interpret <content styleCode="italics">[see Clinical Pharmacology (<linkHtml href="#LINK_6bed2f55-21d1-4f92-8d05-cea5c21add2b">12.2</linkHtml>)]</content>. </paragraph>
+                        <paragraph>In the propafenone hydrochloride extended-release capsules Atrial Fibrillation Trial (RAFT) trial [see Clinical Studies (<linkHtml href="#LINK_ec98553e-a447-4255-9b03-e3750e0aa54e">14)</linkHtml>], there were too few deaths to assess the long-term risk to patients. There were 5 deaths, 3 in the pooled group for propafenone hydrochloride extended-release capsules (0.8%) and 2 in the placebo group (1.6%). In the overall database of 8 trials of propafenone hydrochloride extended-release capsules and immediate-release propafenone hydrochloride, the mortality rate was 2.5% per year on propafenone and 4% per year on placebo. Concurrent use of propafenone with other antiarrhythmic agents has not been well studied.</paragraph>
+                        <paragraph>In a U.S. uncontrolled, open-label, multicenter trial using the immediate-release formulation in patients with symptomatic supraventricular tachycardia (SVT), 1.9% (9/474) of these patients experienced ventricular tachycardia (VT) or ventricular fibrillation (VF) during the trial. However, in 4 of the 9 patients, the ventricular tachycardia was of atrial origin. Six of the 9 patients that developed ventricular arrhythmias did so within 14 days of onset of therapy. About 2.3% (11/474) of all patients had recurrence of SVT during the trial which could have been a change in the patients’ arrhythmia behavior or could represent a proarrhythmic event. Case reports in patients treated with propafenone for atrial fibrillation/flutter have included increased premature ventricular contractions (PVCs), VT, VF, torsades de pointes, asystole, and death. </paragraph>
+                        <paragraph>Overall in clinical trials with propafenone hydrochloride immediate-release (which included patients treated for ventricular arrhythmias, atrial fibrillation/flutter, and PSVT), 4.7% of all patients had new or worsened ventricular arrhythmia possibly representing a proarrhythmic event (0.7% was an increase in PVCs; 4% a worsening or new appearance of VT or VF). Of the patients who had worsening of VT (4%), 92% had a history of VT and/or VT/VF, 71% had coronary artery disease, and 68% had a prior myocardial infarction. The incidence of proarrhythmia in patients with less serious or benign arrhythmias, which include patients with an increase in frequency of PVCs, was 1.6%. Although most proarrhythmic events occurred during the first week of therapy, late events also were seen and the CAST trial <content styleCode="italics">[see Boxed Warning: Mortality]</content> suggests that an increased risk of proarrythmia is present throughout treatment.</paragraph>
+                     </text>
+                     <effectiveTime value="20211007"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_17342ea7-f33d-4813-a990-a23e751c5fa8">
+                     <id root="480ef973-8257-4c34-b581-950e636d1a1b"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.2 Unmasking Brugada Syndrome </title>
+                     <text>
+                        <paragraph>Brugada Syndrome may be unmasked after exposure to propafenone hydrochloride extended-release capsules. Perform an ECG after initiation of propafenone hydrochloride extended-release capsules and discontinue the drug if changes are suggestive of Brugada Syndrome <content styleCode="italics">[see Contraindications (<linkHtml href="#LINK_a3f948b2-75ea-4673-a32b-83e3ffd2393d">4</linkHtml>)].</content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20211007"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_54c2980b-480e-4b8f-89c9-e8a3c4632dec">
+                     <id root="12e49787-3d01-425c-a04c-9bb922326732"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.3 Use with Drugs that Prolong the QT Interval and Antiarrhythmic Agents </title>
+                     <text>
+                        <paragraph>The use of propafenone hydrochloride extended-release capsules in conjunction with other drugs that prolong the QT interval has not been extensively studied. Such drugs may include many antiarrhythmics, some phenothiazines, tricyclic antidepressants, and oral macrolides. Withhold Class IA and III antiarrhythmic agents for at least 5 half-lives prior to dosing with propafenone hydrochloride extended-release capsules. Avoid the use of propafenone with Class IA and III antiarrhythmic agents (including quinidine and amiodarone). There is only limited experience with the concomitant use of Class IB or IC antiarrhythmics.</paragraph>
+                     </text>
+                     <effectiveTime value="20211007"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_88855246-ffdd-4218-944d-d4097e572f9f">
+                     <id root="e2f2c048-7ab0-4941-b8cc-1705ecdf6853"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.4 Drug Interactions: Simultaneous Use with Inhibitors of Cytochrome P450 Isoenzymes 2D6 and 3A4</title>
+                     <text>
+                        <paragraph>Propafenone is metabolized by CYP2D6, CYP3A4, and CYP1A2 isoenzymes. Approximately 6% of Caucasians in the U.S. population are naturally deficient in CYP2D6 activity and other demographic groups are deficient to a somewhat lesser extent. Drugs that inhibit these CYP pathways (such as desipramine, paroxetine, ritonavir, sertraline for CYP2D6; ketoconazole, erythromycin, saquinavir, and grapefruit juice for CYP3A4; and amiodarone and tobacco smoke for CYP1A2) can be expected to cause increased plasma levels of propafenone.</paragraph>
+                        <paragraph>Increased exposure to propafenone may lead to cardiac arrhythmias and exaggerated beta-adrenergic blocking activity. Because of its metabolism, the combination of CYP3A4 inhibition and either CYP2D6 deficiency or CYP2D6 inhibition in users of propafenone is potentially hazardous. Therefore, avoid simultaneous use of propafenone hydrochloride extended-release capsules with both a CYP2D6 inhibitor and a CYP3A4 inhibitor.</paragraph>
+                     </text>
+                     <effectiveTime value="20211007"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_fafb7469-eaa9-4e15-92e2-e2c3f1a0403a">
+                     <id root="4df68970-572f-4f83-970c-664c72485fef"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.5   Use in Patients with a History of Heart Failure   </title>
+                     <text>
+                        <paragraph>Propafenone exerts a negative inotropic activity on the myocardium as well as beta-blockade effects and may provoke overt heart failure. In the U.S. trial (RAFT) in patients with symptomatic AF, heart failure was reported in 4 (1%) patients receiving propafenone hydrochloride extended-release capsules (all doses) compared with 1 (0.8%) patient receiving placebo. Proarrhythmic effects more likely occur when propafenone is administered to patients with heart failure (NYHA III and IV) or severe myocardial ischemia <content styleCode="italics">[see Contraindications (<linkHtml href="#LINK_a3f948b2-75ea-4673-a32b-83e3ffd2393d">4</linkHtml>)]</content>. </paragraph>
+                        <paragraph>In clinical trial experience with propafenone hydrochloride immediate-release, new or worsened congestive heart failure has been reported in 3.7% of patients with ventricular arrhythmia. These events were more likely in subjects with pre-existing heart failure and coronary artery disease. New onset of heart failure attributable to propafenone developed in less than 0.2% of patients with ventricular arrhythmia and in 1.9% of patients with paroxysmal AF or PSVT.</paragraph>
+                     </text>
+                     <effectiveTime value="20211007"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_2074eba3-e1c2-4eb7-b13c-7ce0eeac843c">
+                     <id root="9ddca616-bd9d-426f-8376-9376332e99bc"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.6 Conduction Disturbances</title>
+                     <text>
+                        <paragraph>Propafenone slows atrioventricular conduction and may also cause dose-related first-degree AV block. Average PR interval prolongation and increases in QRS duration are also dose-related. Do not give propafenone to patients with atrioventricular and intraventricular conduction defects in the absence of a pacemaker <content styleCode="italics">[see Contraindications (<linkHtml href="#LINK_a3f948b2-75ea-4673-a32b-83e3ffd2393d">4</linkHtml>), Clinical Pharmacology (<linkHtml href="#LINK_6bed2f55-21d1-4f92-8d05-cea5c21add2b">12.2</linkHtml>)]</content>. </paragraph>
+                        <paragraph>In a U.S. trial (RAFT) in 523 patients with a history of symptomatic AF treated with propafenone hydrochloride extended-release capsules, sinus bradycardia (rate less than 50 beats/min) was reported with the same frequency with propafenone hydrochloride extended-release capsules and placebo.</paragraph>
+                     </text>
+                     <effectiveTime value="20211007"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_0d878d16-1af4-4870-b164-ea6552308523">
+                     <id root="c8d37831-c9fe-45cd-ad48-608b7fa8facc"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.7 Effects on Pacemaker Threshold</title>
+                     <text>
+                        <paragraph>Propafenone may alter both pacing and sensing thresholds of implanted pacemakers and defibrillators. During and after therapy, monitor and re-program these devices accordingly.</paragraph>
+                     </text>
+                     <effectiveTime value="20211007"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_f7746317-5442-4a33-ab32-4aa886c4b3ce">
+                     <id root="ab3ef5e9-7200-4ebc-ac5c-01bc84a27efc"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.8 Agranulocytosis</title>
+                     <text>
+                        <paragraph>Agranulocytosis has been reported in patients receiving propafenone. Generally, the agranulocytosis occurred within the first 2 months of propafenone therapy and upon discontinuation of therapy, the white count usually normalized by 14 days. Unexplained fever or decrease in white cell count, particularly during the initial 3 months of therapy warrant consideration of possible agranulocytosis or granulocytopenia. Instruct patients to report promptly any signs of infection such as fever, sore throat, or chills.</paragraph>
+                     </text>
+                     <effectiveTime value="20211007"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_bb10a9aa-7661-4494-a837-5d16fa723f73">
+                     <id root="3ef4b6cb-e626-4710-8a81-739c5d53df7a"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.9 Use in Patients with Hepatic Dysfunction</title>
+                     <text>
+                        <paragraph>Propafenone is highly metabolized by the liver. Severe liver dysfunction increases the bioavailability of propafenone to approximately 70% compared with 3% to 40% in patients with normal liver function when given propafenone hydrochloride immediate-release tablets. In 8 patients with moderate to severe liver disease administered propafenone hydrochloride immediate-release tablets, the mean half-life was approximately 9 hours. No trials have compared bioavailability of propafenone from propafenone hydrochloride extended-release capsules in patients with normal and impaired hepatic function. Increased bioavailability of propafenone in these patients may result in excessive accumulation. Carefully monitor patients with impaired hepatic function for excessive pharmacological effects <content styleCode="italics">[see Overdosage (<linkHtml href="#LINK_0c21b645-4b14-4c39-b92b-46685eb93c1c">10</linkHtml>)]</content>.</paragraph>
+                     </text>
+                     <effectiveTime value="20211007"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_92e1fd36-c3d8-4544-8264-6b5e9e8c001a">
+                     <id root="8bf9045e-3109-4396-89c7-94a8e5e06ddf"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.10 Use in Patients with Renal Dysfunction</title>
+                     <text>
+                        <paragraph>Approximately 50% of propafenone metabolites are excreted in the urine following administration of propafenone hydrochloride immediate-release tablets. No trials have been performed to assess the percentage of metabolites eliminated in the urine following the administration of propafenone hydrochloride extended-release capsules. </paragraph>
+                        <paragraph>In patients with impaired renal function monitor for signs of overdosage <content styleCode="italics">[see Overdosage (<linkHtml href="#LINK_0c21b645-4b14-4c39-b92b-46685eb93c1c">10</linkHtml>)]</content>.</paragraph>
+                     </text>
+                     <effectiveTime value="20211007"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_c4cb3190-7267-4c1d-99d0-9f437320eb5f">
+                     <id root="36123872-1901-4f2b-9519-35cedacd42db"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.11 Use in Patients with Myasthenia Gravis</title>
+                     <text>
+                        <paragraph>Exacerbation of myasthenia gravis has been reported during propafenone therapy.</paragraph>
+                     </text>
+                     <effectiveTime value="20211007"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_e49b8a50-6543-418a-8df2-831db90b8f06">
+                     <id root="55005367-3a11-4b97-9355-98236f8f900b"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.12 Elevated ANA Titers</title>
+                     <text>
+                        <paragraph>Positive ANA titers have been reported in patients receiving propafenone. They have been reversible upon cessation of treatment and may disappear even in the face of continued propafenone therapy. These laboratory findings were usually not associated with clinical symptoms, but there is one published case of drug-induced lupus erythematosis (positive rechallenge); it resolved completely upon discontinuation of therapy. Carefully evaluate patients who develop an abnormal ANA test and if persistent or worsening elevation of ANA titers is detected, consider discontinuing therapy.</paragraph>
+                     </text>
+                     <effectiveTime value="20211007"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_7f1c3955-8069-469c-a794-d9b2345b78bc">
+               <id root="41a62038-5059-4be9-a09b-49dd1d18dff3"/>
+               <code code="34084-4" codeSystem="2.16.840.1.113883.6.1" displayName="ADVERSE REACTIONS SECTION"/>
+               <title>6 ADVERSE REACTIONS</title>
+               <effectiveTime value="20211007"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>The most commonly reported adverse events with propafenone (greater than 5% and greater than placebo) excluding those not reasonably associated with the use of the drug included the following: dizziness, palpitations, chest pain, dyspnea, taste disturbance, nausea, fatigue, anxiety, constipation, upper respiratory tract infection, edema, and influenza. (<linkHtml href="#LINK_a86c16ba-4648-4718-9512-11f72654b8dc">6.1</linkHtml>) </paragraph>
+                        <paragraph>
+                           <content styleCode="bold">To report SUSPECTED ADVERSE REACTIONS, contact NorthStar RxLLC at 1-800-206-7821 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch.</content>
+                        </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="LINK_a86c16ba-4648-4718-9512-11f72654b8dc">
+                     <id root="194096af-bd54-4278-8b73-82a5a40829bf"/>
+                     <code code="34092-7" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL STUDIES SECTION"/>
+                     <title>6.1  Clinical Trials Experience</title>
+                     <text>
+                        <paragraph>Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared with rates in the clinical trials of another drug and may not reflect the rates observed in practice. </paragraph>
+                        <paragraph>The data described below reflect exposure to propafenone hydrochloride extended-release capsules 225 mg twice daily in 126 patients, to propafenone hydrochloride extended-release capsules 325 mg twice daily in 135 patients, to propafenone hydrochloride extended-release capsules 425 mg twice daily in 136 patients, and to placebo in 126 patients for up to 39 weeks (mean: 20 weeks) in a placebo-controlled trial (RAFT) conducted in the U.S. The most commonly reported adverse events with propafenone (greater than 5% and greater than placebo), excluding those not reasonably associated with the use of the drug or because they were associated with the condition being treated, were dizziness, palpitations, chest pain, dyspnea, taste disturbance, nausea, fatigue, anxiety, constipation, upper respiratory tract infection, edema, and influenza. The frequency of discontinuation due to adverse events was 17%, and the rate was highest during the first 14 days of treatment. </paragraph>
+                        <paragraph>Cardiac-related adverse events occurring in greater than or equal to 2% of the patients in any of the RAFT propafenone extended-release treatment groups and more common with propafenone than with placebo, excluding those that are common in the population and those not plausibly related to drug therapy, included the following: angina pectoris, atrial flutter, AV block first-degree, bradycardia, congestive cardiac failure, cardiac murmur, edema, dyspnea, rales, wheezing, and cardioactive drug level above therapeutic. </paragraph>
+                        <paragraph>Propafenone prolongs the PR and QRS intervals in patients with atrial and ventricular arrhythmias. Prolongation of the QRS interval makes it difficult to interpret the effect of propafenone on the QT interval <content styleCode="italics">[see Clinical Pharmacology (<linkHtml href="#LINK_6bed2f55-21d1-4f92-8d05-cea5c21add2b">12.2</linkHtml>)]</content>. </paragraph>
+                        <paragraph>Non-cardiac related adverse events occurring in greater than or equal to 2% of the patients in any of the RAFT propafenone extended-release treatment groups and more common with propafenone than with placebo, excluding those that are common in the population and those not plausibly related to drug therapy, included the following: blurred vision, constipation, diarrhea, dry mouth, flatulence, nausea, vomiting, fatigue, weakness, upper respiratory tract infection, blood alkaline phosphatase increased, hematuria, muscle weakness, dizziness (excluding vertigo), headache, taste disturbance, tremor, somnolence, anxiety, depression, ecchymosis.</paragraph>
+                        <paragraph>No clinically important differences in incidence of adverse reactions were noted by age or gender. Too few non-Caucasian patients were enrolled to assess adverse events according to race. </paragraph>
+                        <paragraph>Adverse events occurring in 2% or more of the patients in any of the ERAFT <content styleCode="italics">[see Clinical Studies (<linkHtml href="#LINK_ec98553e-a447-4255-9b03-e3750e0aa54e">14</linkHtml>)] </content>propafenone extended-release treatment groups and not listed above include the following: bundle branch block left, bundle branch block right, conduction disorders, sinus bradycardia, and hypotension. </paragraph>
+                        <paragraph>Other adverse events reported with propafenone clinical trials not already listed elsewhere in the prescribing information include the following adverse events by body and preferred term.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Blood and Lymphatic System </content>
+                        </paragraph>
+                        <paragraph>Anemia, lymphadenopathy, spleen disorder, thrombocytopenia.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Cardiac </content>
+                        </paragraph>
+                        <paragraph>Unstable angina, atrial hypertrophy, cardiac arrest, coronary artery disease, extrasystoles, myocardial infarction, nodal arrhythmia, palpitations, pericarditis, sinoatrial block, sinus arrest, sinus arrhythmia, supraventricular extrasystoles, ventricular extrasystoles, ventricular hypertrophy. </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Ear and Labyrinth </content>
+                        </paragraph>
+                        <paragraph>Hearing impaired, tinnitus, vertigo. </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Eye </content>
+                        </paragraph>
+                        <paragraph>Eye hemorrhage, eye inflammation, eyelid ptosis, miosis, retinal disorder, visual acuity reduced. </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Gastrointestinal </content>
+                        </paragraph>
+                        <paragraph>Abdominal distension, abdominal pain, duodenitis, dyspepsia, dysphagia, eructation, gastritis, gastroesophageal reflux disease, gingival bleeding, glossitis, glossodynia, gum pain, halitosis, intestinal obstruction, melena, mouth ulceration, pancreatitis, peptic ulcer, rectal bleeding, sore throat. </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">General Disorders and Administration Site Conditions</content>
+                        </paragraph>
+                        <paragraph>Chest pain, feeling hot, hemorrhage, malaise, pain, pyrexia. </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Hepatobiliary </content>
+                        </paragraph>
+                        <paragraph>Hepatomegaly.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Investigations</content>
+                        </paragraph>
+                        <paragraph>Abnormal heart sounds, abnormal pulse, carotid bruit, decreased blood chloride, decreased blood pressure, decreased blood sodium, decreased hemoglobin, decreased neutrophil count, decreased platelet count, decreased prothrombin level, decreased red blood cell count, decreased weight, glycosuria present, increased alanine aminotransferase, increased aspartate aminotransferase, increased blood bilirubin, increased blood cholesterol, increased blood creatinine, increased blood glucose, increased blood lactate dehydrogenase, increased blood pressure, increased blood prolactin, increased blood triglycerides, increased blood urea, increased blood uric acid, increased eosinophil count, increased gamma-glutamyltransferase, increased monocyte count, increased prostatic specific antigen, increased prothrombin level, increased weight, increased white blood cell count, ketonuria present, proteinuria present. </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Metabolism and Nutrition </content>
+                        </paragraph>
+                        <paragraph>Anorexia, dehydration, diabetes mellitus, gout, hypercholesterolemia, hyperglycemia, hyperlipidemia, hypokalemia. </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Musculoskeletal, Connective Tissue and Bone </content>
+                        </paragraph>
+                        <paragraph>Arthritis, bursitis, collagen-vascular disease, costochondritis, joint disorder, muscle cramps, muscle spasms, myalgia, neck pain, pain in jaw, sciatica, tendonitis. </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Nervous System </content>
+                        </paragraph>
+                        <paragraph>Amnesia, ataxia, balance impaired, brain damage, cerebrovascular accident, dementia, gait abnormal, hypertonia, hypothesia, insomnia, paralysis, paresthesia, peripheral neuropathy, speech disorder, syncope, tongue hypoesthesia. </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Psychiatric </content>
+                        </paragraph>
+                        <paragraph>Decreased libido, emotional disturbance, mental disorder, neurosis, nightmare, sleep disorder. </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Renal and Urinary </content>
+                        </paragraph>
+                        <paragraph>Dysuria, nocturia, oliguria, pyuria, renal failure, urinary casts, urinary frequency, urinary incontinence, urinary retention, urine abnormal.  </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Reproductive System and Breast </content>
+                        </paragraph>
+                        <paragraph>Breast pain, impotence, prostatism.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Respiratory, Thoracic and Mediastinal </content>
+                        </paragraph>
+                        <paragraph>Atelectasis, breath sounds decreased, chronic obstructive airways disease, cough, epistaxis, hemoptysis, lung disorder, pleural effusion, pulmonary congestion, rales, respiratory failure, rhinitis, throat tightness. </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Skin and Subcutaneous Tissue </content>
+                        </paragraph>
+                        <paragraph>Alopecia, dermatitis, dry skin, erythema, nail abnormality, petechiae, pruritus, sweating increased, urticaria. </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Vascular </content>
+                        </paragraph>
+                        <paragraph>Arterial embolism limb, deep limb venous thrombosis, flushing, hematoma, hypertension, hypertensive crisis, hypotension, labile blood pressure, pallor, peripheral coldness, peripheral vascular disease, thrombosis.</paragraph>
+                     </text>
+                     <effectiveTime value="20211007"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_3d9f28a5-59ee-4551-9e49-785ed3f08f4d">
+               <id root="be0d6716-3274-4769-9bd6-9e647d493826"/>
+               <code code="34073-7" codeSystem="2.16.840.1.113883.6.1" displayName="DRUG INTERACTIONS SECTION"/>
+               <title>7 DRUG INTERACTIONS</title>
+               <effectiveTime value="20211007"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered">
+                           <item>
+                              <caption>•</caption>Inhibitors of CYP2D6, 1A2, and 3A4 may increase propafenone levels which may lead to cardiac arrhythmias. Simultaneous use with both a CYP3A4 and CYP2D6 inhibitor (or in patients with CYP2D6 deficiency) should be avoided. (<linkHtml href="#LINK_bef8dc74-80f5-4fc0-9930-7a6ceedca927">7.1</linkHtml>)  </item>
+                           <item>
+                              <caption>•</caption>Propafenone may increase digoxin or warfarin levels. (<linkHtml href="#LINK_e14d5326-400b-4c95-80a5-bdfc86617898">7.2</linkHtml>, <linkHtml href="#LINK_ea291ad2-fb73-4925-afbb-a5e1186033da">7.3</linkHtml>)  </item>
+                           <item>
+                              <caption>•</caption>Orlistat may reduce propafenone concentrations. Abrupt cessation of orlistat in patients stable on propafenone hydrochloride extended-release capsules has resulted in convulsions, atrioventricular block, and circulatory failure. (<linkHtml href="#LINK_aa2c8a61-a996-4332-93ce-606da2513a78">7.4</linkHtml>) </item>
+                           <item>
+                              <caption>•</caption>Concomitant use of lidocaine may increase central nervous system side effects. (<linkHtml href="#LINK_08a5f2f3-7785-40c4-b3bc-b51d6c1a3463">7.6</linkHtml>)</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="LINK_bef8dc74-80f5-4fc0-9930-7a6ceedca927">
+                     <id root="1be8814f-469d-473f-b2d1-1d0b3a91e45b"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>7.1  CYP2D6 and CYP3A4 Inhibitors</title>
+                     <text>
+                        <paragraph>Drugs that inhibit CYP2D6 (such as desipramine, paroxetine, ritonavir, sertraline) and CYP3A4 (such as ketoconazole, ritonavir, saquinavir, erythromycin, and grapefruit juice) can be expected to cause increased plasma levels of propafenone. The combination of CYP3A4 inhibition and either CYP2D6 deficiency or CYP2D6 inhibition with administration of propafenone may increase the risk of adverse reactions, including proarrhythmia. Therefore, simultaneous use of propafenone hydrochloride extended-release capsules with both a CYP2D6 inhibitor and a CYP3A4 inhibitor should be avoided<content styleCode="italics"> [see Warnings and Precautions (<linkHtml href="#LINK_88855246-ffdd-4218-944d-d4097e572f9f">5.4</linkHtml>) and Dosage and Administration (<linkHtml href="#LINK_8fcf8d58-3902-4219-a6d3-559ef765f460">2</linkHtml>)].</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Amiodarone</content>
+                        </paragraph>
+                        <paragraph>Concomitant administration of propafenone and amiodarone can affect conduction and repolarization and is not recommended. </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Cimetidine</content>
+                        </paragraph>
+                        <paragraph>Concomitant administration of propafenone immediate-release tablets and cimetidine in 12 healthy subjects resulted in a 20% increase in steady-state plasma concentrations of propafenone. </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Fluoxetine</content>
+                        </paragraph>
+                        <paragraph>Concomitant administration of propafenone and fluoxetine in extensive metabolizers increased the S-propafenone C<sub>max</sub> and AUC by 39% and 50% respectively and the R-propafenone C<sub>max</sub> and AUC by 71% and 50%, respectively. </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Quinidine</content>
+                        </paragraph>
+                        <paragraph>Small doses of quinidine completely inhibit the CYP2D6 hydroxylation metabolic pathway, making all patients, in effect, slow metabolizers <content styleCode="italics">[see Clinical Pharmacology (<linkHtml href="#LINK_7371cf7a-20c7-41dd-a49c-c115d1f65f15">12.3</linkHtml>)].</content> Concomitant administration of quinidine (50 mg 3 times daily) with 150 mg immediate-release propafenone 3 times daily decreased the clearance of propafenone by 60% in extensive metabolizers, making them poor metabolizers. Steady-state plasma concentrations increased by more than 2-fold for propafenone, and decreased 50% for 5-OH-propafenone. A 100 mg dose of quinidine increased steady state concentrations of propafenone 3-fold. Avoid concomitant use of propafenone and quinidine.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Rifampin</content>
+                        </paragraph>
+                        <paragraph>Concomitant administration of rifampin and propafenone in extensive metabolizers decreased the plasma concentrations of propafenone by 67% with a corresponding decrease of 5-OH-propafenone by 65%. The concentration of norpropafenone increased by 30%. In poor metabolizers, there was a 50% decrease in propafenone plasma concentrations and increase in the AUC and C<sub>max</sub> of norpropafenone by 74% and 20%, respectively. Urinary excretion of propafenone and its metabolites decreased significantly. Similar results were noted in elderly patients: Both the AUC and C<sub>max</sub> of propafenone decreased by 84%, with a corresponding decrease in AUC and C<sub>max</sub> of 5-OH-propafenone by 69% and 57% respectively.</paragraph>
+                     </text>
+                     <effectiveTime value="20211007"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_e14d5326-400b-4c95-80a5-bdfc86617898">
+                     <id root="b4c88976-5ebe-4ab0-8840-c35ebffcfc02"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>7.2  Digoxin</title>
+                     <text>
+                        <paragraph>Concomitant use of propafenone and digoxin increased steady-state serum digoxin exposure (AUC) in patients by 60% to 270%, and decreased the clearance of digoxin by 31% to 67%. Monitor plasma digoxin levels of patients receiving propafenone and adjust digoxin dosage as needed.</paragraph>
+                     </text>
+                     <effectiveTime value="20211007"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_ea291ad2-fb73-4925-afbb-a5e1186033da">
+                     <id root="9c292bec-9244-4dce-b288-ca2f1412e8c4"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>7.3  Warfarin</title>
+                     <text>
+                        <paragraph>The concomitant administration of propafenone and warfarin increased warfarin plasma concentrations at steady state by 39% in healthy volunteers and prolonged the prothrombin time (PT) in patients taking warfarin. Adjust the warfarin dose as needed by monitoring INR (international normalized ratio).</paragraph>
+                     </text>
+                     <effectiveTime value="20211007"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_aa2c8a61-a996-4332-93ce-606da2513a78">
+                     <id root="01ee4290-9499-4ca4-bf04-7d4bd5e15863"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>7.4 Orlistat</title>
+                     <text>
+                        <paragraph>Orlistat may limit the fraction of propafenone available for absorption. In post marketing reports, abrupt cessation of orlistat in patients stabilized on propafenone has resulted in severe adverse events including convulsions, atrioventricular block and acute circulatory failure.</paragraph>
+                     </text>
+                     <effectiveTime value="20211007"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_5ee2d43f-5217-4497-ae67-aa181caa68c4">
+                     <id root="18773469-887c-4c04-9219-54696375784b"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>7.5  Beta-Antagonists</title>
+                     <text>
+                        <paragraph>Concomitant use of propafenone and propranolol in healthy subjects increased propranolol plasma concentrations at steady state by 113%. In 4 patients, administration of metoprolol with propafenone increased the metoprolol plasma concentrations at steady state by 100% to 400%. The pharmacokinetics of propafenone was not affected by the coadministration of either propranolol or metoprolol. In clinical trials using propafenone immediate-release tablets, patients who were receiving beta-blockers concurrently did not experience an increased incidence of side effects.</paragraph>
+                     </text>
+                     <effectiveTime value="20211007"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_08a5f2f3-7785-40c4-b3bc-b51d6c1a3463">
+                     <id root="627b0763-10b0-4c39-8103-58f4e6ea2596"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>7.6  Lidocaine</title>
+                     <text>
+                        <paragraph>No significant effects on the pharmacokinetics of propafenone or lidocaine have been seen following their concomitant use in patients. However, concomitant use of propafenone and lidocaine has been reported to increase the risks of central nervous system side effects of lidocaine.</paragraph>
+                     </text>
+                     <effectiveTime value="20211007"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_b0f86179-d2cc-4883-96fa-c97620d107be">
+               <id root="63ac3d3e-5a74-49ce-a2fa-f8530c1ba243"/>
+               <code code="43684-0" codeSystem="2.16.840.1.113883.6.1" displayName="USE IN SPECIFIC POPULATIONS SECTION"/>
+               <title>8 USE IN SPECIFIC POPULATIONS </title>
+               <effectiveTime value="20211007"/>
+               <component>
+                  <section ID="ID_5811d4db-91c1-4aeb-9216-653ec5021a0d">
+                     <id root="a72cff96-6163-4c22-9349-598958a01437"/>
+                     <code code="42228-7" codeSystem="2.16.840.1.113883.6.1" displayName="PREGNANCY SECTION"/>
+                     <title>8.1 Pregnancy </title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Risk Summary</content>
+                        </paragraph>
+                        <paragraph>In the absence of studies in pregnant women, available data from published case reports and several decades of</paragraph>
+                        <paragraph>post-marketing experience with use of propafenone hydrochloride extended-release capsules in pregnancy have not identified any drug-associated risks of miscarriage, birth defects, or adverse maternal or fetal outcomes. Untreated arrhythmias during pregnancy may pose a risk to the pregnant woman and fetus <content styleCode="italics">(see Clinical Considerations). </content>Propafenone and its metabolite, 5-OH-propafenone, cross the placenta in humans. In animal studies, propafenone was not teratogenic. At maternally toxic doses (ranging from 2 to 6 times the maximum recommended human dose [MRHD]), there was evidence of adverse developmental outcomes when administered to pregnant rabbits and rats during organogenesis or when administered to pregnant rats during mid-gestation through weaning of their offspring <content styleCode="italics">(see Data)</content>.</paragraph>
+                        <paragraph>The estimated background risks of major birth defects and miscarriage for the indicated populations are unknown. All pregnancies have a background risk of birth defect, loss, or other adverse outcomes. In the U.S. general population, the estimated background risk of major birth defects and miscarriage in clinically recognized pregnancies is 2% to 4% and 15% to 20%, respectively.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Clinical Considerations</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Disease-associated maternal and/or embryo/fetal risk: </content>The incidence of VT is increased and may be more symptomatic during pregnancy. Ventricular arrhythmias most often occur in pregnant women with underlying cardiomyopathy, congenital heart disease, valvular heart disease, or mitral valve prolapse. Breakthrough arrhythmias may also occur during pregnancy, as therapeutic treatment levels may be difficult to maintain due to the increased volume of distribution and increased drug metabolism inherent in the pregnant state.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Fetal/Neonatal Adverse Reactions:</content> Propafenone and its metabolite have been shown to cross the placenta. Adverse reactions such as fetal/neonatal arrhythmias have been associated with the use of other antiarrhythmic agents by pregnant women. Fetal/neonatal monitoring for signs and symptoms of arrhythmia is recommended during and after treatment of pregnant women with propafenone.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Labor or Delivery: </content>Risk of arrhythmias may increase during labor and delivery. Patients treated with propafenone hydrochloride extended-release capsules should be monitored continuously for arrhythmias during labor and delivery <content styleCode="italics">[see Warnings and Precautions (5.1)]</content>.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Data</content>
+                        </paragraph>
+                        <paragraph>Propafenone has been shown to cause embryo-fetal mortality in rabbits and rats when given orally during organogenesis at maternally toxic doses of 150 mg/kg/day (rabbit: maternal mortality, decreased body weight gain and food consumption at approximately 3 times the MRHD on a mg/m<sup>2</sup> basis) and 600 mg/kg/day (rat: maternal decreased body weight gain and food consumption at approximately 6 times the MRHD on a mg/m<sup>2</sup> basis). In addition, a maternally toxic dose of 600 mg/kg/day (approximately 6 times the MRHD on a mg/m<sup>2</sup> basis) also caused decreased fetal weights in rats. Increased placental weights and delayed ossification occurred in rabbits at a dose of 30 mg/kg/day (less than the MRHD on a mg/m<sup>2</sup> basis) in the absence of maternal toxicity. No adverse developmental outcomes in the absence of maternal toxicity were seen following oral doses of 15 mg/kg/day to rabbits or up to 270 mg/kg/day to rats administered during organogenesis (equivalent to 0.3 times or approximately 3 times the MRHD on a mg/m<sup>2</sup> basis, respectively). In an oral study, female rats received propafenone up to 500 mg/kg/day from mid-gestation through weaning. At 90 mg/kg/day (equivalent to the MRHD on a mg/m<sup>2</sup> basis), there were no adverse developmental outcomes in the absence of maternal toxicity. However, doses ≥180 mg/kg/day (2 or more times the MRHD on a mg/m<sup>2</sup> basis) produced increases in maternal deaths and resulted in reductions in neonatal survival, body weight gain, and delayed development in the presence of maternal toxicity.</paragraph>
+                     </text>
+                     <effectiveTime value="20211007"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_e39dfc1b-d585-4072-a125-8493d1891938">
+                     <id root="bb6b387c-3ffb-4f94-b0de-1e2be505b32d"/>
+                     <code code="77290-5" codeSystem="2.16.840.1.113883.6.1" displayName="LACTATION SECTION"/>
+                     <title>8.2 Lactation </title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Risk Summary</content>
+                        </paragraph>
+                        <paragraph>Propafenone and its active metabolite, 5-OH-propafenone, are present in human milk<content styleCode="italics">, </content>but the levels are likely to be low.  There are no data on the effects of propafenone on the breastfed infant or the effects on milk production. </paragraph>
+                        <paragraph>The developmental and health benefits of breastfeeding should be considered along with the mother’s clinical need for propafenone and any potential adverse effects on the breastfed infant from propafenone or from the underlying maternal condition.</paragraph>
+                     </text>
+                     <effectiveTime value="20211007"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_89757579-3f39-410c-85c7-e1e8ff188e11">
+                     <id root="79375b6d-09fe-4620-85d6-143b5e445435"/>
+                     <code code="77291-3" codeSystem="2.16.840.1.113883.6.1" displayName="FEMALES &amp; MALES OF REPRODUCTIVE POTENTIAL SECTION"/>
+                     <title>8.3 Females and Males of Reproductive Potential </title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Infertility</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Males: </content>Based on human and animal studies, propafenone hydrochloride extended-release capsules may transiently impair spermatogenesis in males. Evaluation of the effects on spermatogenesis was performed in 11 healthy males given oral propafenone 300 mg b.i.d. for 4 days, which was then increased to 300 mg t.i.d. for an additional 4 days. Study findings included a 28% reduction in semen sample volume on Treatment Day 8 and a 27% reduction in sperm count 64 days after treatment (both values remained within the laboratories normal reference range). These effects were not seen in follow-up visits up to 120 days after treatment. Reversible decreases in spermatogenesis have been demonstrated in monkeys, dogs, and rabbits after lethal or near-lethal intravenous doses of propafenone <content styleCode="italics">[see Nonclinical Toxicology (13.1)].</content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20211007"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_3ed35f77-bebc-4f69-bf97-4d21dec6ab5e">
+                     <id root="5aca5ef6-decb-46c9-82ce-95667cbe59f8"/>
+                     <code code="34081-0" codeSystem="2.16.840.1.113883.6.1" displayName="PEDIATRIC USE SECTION"/>
+                     <title>8.4 Pediatric Use </title>
+                     <text>
+                        <paragraph>The safety and effectiveness of propafenone in pediatric patients have not been established.</paragraph>
+                     </text>
+                     <effectiveTime value="20211007"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_d09cfd6e-47de-4a3f-a1e8-525b8495b03a">
+                     <id root="5680923d-1679-43a5-aad1-f1668e7c5283"/>
+                     <code code="34082-8" codeSystem="2.16.840.1.113883.6.1" displayName="GERIATRIC USE SECTION"/>
+                     <title>8.5 Geriatric Use </title>
+                     <text>
+                        <paragraph>Of the total number of subjects in Phase 3 clinical trials of propafenone hydrochloride extended-release 46% were 65 and older, while 16% were 75 and older. No overall differences in safety or effectiveness were observed between these subjects and younger subjects, but greater sensitivity of some older individuals at higher doses cannot be ruled out. The effect of age on the pharmacokinetics and pharmacodynamics of propafenone has not been studied.</paragraph>
+                     </text>
+                     <effectiveTime value="20211007"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_0c21b645-4b14-4c39-b92b-46685eb93c1c">
+               <id root="589edd92-470b-4082-bdfd-56357b68d1ba"/>
+               <code code="34088-5" codeSystem="2.16.840.1.113883.6.1" displayName="OVERDOSAGE SECTION"/>
+               <title>10 OVERDOSAGE</title>
+               <text>
+                  <paragraph>The symptoms of overdosage may include hypotension, somnolence, bradycardia, intra-atrial and intraventricular conduction disturbances, and rarely convulsions and high-grade ventricular arrhythmias. Defibrillation as well as infusion of dopamine and isoproterenol has been effective in controlling abnormal rhythm and blood pressure. Convulsions have been alleviated with intravenous diazepam. General supportive measures such as mechanical respiratory assistance and external cardiac massage may be necessary. </paragraph>
+                  <paragraph>The hemodialysis of propafenone in patients with an overdose is expected to be of limited value in the removal of propafenone as a result of both its high protein binding (greater than 95%) and large volume of distribution.</paragraph>
+               </text>
+               <effectiveTime value="20211007"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_ec864e86-debf-46d1-a9e9-2f25f2870432">
+               <id root="57b524fb-0899-4751-9c44-3f61d152db81"/>
+               <code code="34089-3" codeSystem="2.16.840.1.113883.6.1" displayName="DESCRIPTION SECTION"/>
+               <title>11 DESCRIPTION</title>
+               <text>
+                  <paragraph>Propafenone Hydrochloride Extended Release Capsules, USP are an antiarrhythmic drug supplied in extended-release capsules of 225 mg, 325 mg and 425 mg for oral administration.</paragraph>
+                  <paragraph>Chemically, propafenone hydrochloride, USP is 2’-[2-hydroxy-3-(propylamino)-propoxy]-3-phenylpropiophenone hydrochloride, with a molecular weight of 377.9 g/mol. The molecular formula is C<sub>21</sub>H<sub>27</sub>NO<sub>3</sub>•HCl.</paragraph>
+                  <paragraph>Propafenone hydrochloride, USP has some structural similarities to beta-blocking agents. The structural formula of propafenone hydrochloride, USP is given below:</paragraph>
+                  <renderMultiMedia ID="id1216003477" referencedObject="ID_92b17037-2719-4a42-9328-a59bdf09bae2"/>
+                  <paragraph>Propafenone hydrochloride, USP occurs as a white to almost white powder or crystals. It is soluble in methanol and in hot water; slightly soluble in alcohol and in chloroform; very slightly soluble in acetone; insoluble in diethyl ether and in toluene. </paragraph>
+                  <paragraph>Propafenone Hydrochloride Extended-Release Capsules, USP are filled with white to off white colored, round shaped flat mini tablets, containing propafenone hydrochloride, USP and the following inactive ingredients: black iron oxide, gelatin, hypromellose, lactose monohydrate, magnesium stearate, microcrystalline cellulose, potassium hydroxide, shellac, sodium lauryl sulfate and titanium dioxide.</paragraph>
+                  <paragraph>USP dissolution test is pending.</paragraph>
+               </text>
+               <effectiveTime value="20211007"/>
+               <component>
+                  <observationMedia ID="ID_92b17037-2719-4a42-9328-a59bdf09bae2">
+                     <text>structure</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="structure.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_6c81a183-8c74-4469-a4a7-347feb61d7c9">
+               <id root="d0b92740-1099-4f79-beb8-2af649cf8a5f"/>
+               <code code="34090-1" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+               <title>12 CLINICAL PHARMACOLOGY</title>
+               <effectiveTime value="20211007"/>
+               <component>
+                  <section ID="LINK_24cbcb73-4a4d-4784-aec1-766b701f0c39">
+                     <id root="4764daf6-1f17-4ee3-a6c3-fbfcc98c93c4"/>
+                     <code code="43679-0" codeSystem="2.16.840.1.113883.6.1" displayName="MECHANISM OF ACTION SECTION"/>
+                     <title>12.1 Mechanism of Action</title>
+                     <text>
+                        <paragraph>Propafenone is a Class 1C antiarrhythmic drug with local anesthetic effects, and a direct stabilizing action on myocardial membranes. The electrophysiological effect of propafenone manifests itself in a reduction of upstroke velocity (Phase 0) of the monophasic action potential. In Purkinje fibers, and to a lesser extent myocardial fibers, propafenone reduces the fast inward current carried by sodium ions. Diastolic excitability threshold is increased and effective refractory period prolonged. Propafenone reduces spontaneous automaticity and depresses triggered activity. </paragraph>
+                        <paragraph>Studies in anesthetized dogs and isolated organ preparations show that propafenone has beta-sympatholytic activity at about 1/50 the potency of propranolol. Clinical studies employing isoproterenol challenge and exercise testing after single doses of propafenone indicate a beta-adrenergic blocking potency (per mg) about 1/40 that of propranolol in man. In clinical trials with the immediate-release formulation, resting heart rate decreases of about 8% were noted at the higher end of the therapeutic plasma concentration range. At very high concentrations <content styleCode="italics">in vitro</content>, propafenone can inhibit the slow inward current carried by calcium, but this calcium antagonist effect probably does not contribute to antiarrhythmic efficacy. Moreover, propafenone inhibits a variety of cardiac potassium currents in <content styleCode="italics">in vitro </content>studies (i.e. the transient outward, the delayed rectifier, and the inward rectifier current). Propafenone has local anesthetic activity approximately equal to procaine. Compared to propafenone, the main metabolite, 5-hydroxypropafenone, has similar sodium and calcium channel activity, but about 10 times less beta-blocking activity (N-depropylpropafenone has weaker sodium channel activity but equivalent affinity for beta-receptors). </paragraph>
+                     </text>
+                     <effectiveTime value="20211007"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_6bed2f55-21d1-4f92-8d05-cea5c21add2b">
+                     <id root="06d3291b-0ecb-4e57-85fc-e25ffc9c5ef5"/>
+                     <code code="43681-6" codeSystem="2.16.840.1.113883.6.1" displayName="PHARMACODYNAMICS SECTION"/>
+                     <title>12.2 Pharmacodynamics</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Cardiac Electrophysiology</content>
+                        </paragraph>
+                        <paragraph>Electrophysiology trials in patients with ventricular tachycardia have shown that propafenone prolongs atrioventricular conduction while having little or no effect on sinus node function. Both atrioventricular nodal conduction time (AH interval) and His-Purkinje conduction time (HV interval) are prolonged. Propafenone has little or no effect on the atrial functional refractory period, but AV nodal functional and effective refractory periods are prolonged. In patients with Wolff-Parkinson-White syndrome, propafenone hydrochloride immediate-release tablets reduce conduction and increase the effective refractory period of the accessory pathway in both directions. </paragraph>
+                        <list listType="unordered">
+                           <item>
+                              <caption> </caption>
+                              <content styleCode="underline">Electrocardiograms</content>: Propafenone prolongs the PR and QRS intervals. Prolongation of the QRS interval makes it difficult to interpret the effect of propafenone on the QT interval. </item>
+                        </list>
+                        <table ID="_RefID0EDXAG" width="100%">
+                           <caption>Table 1. Mean Change ± SD in 12-Lead Electrocardiogram Results (RAFT)</caption>
+                           <col width="20%"/>
+                           <col width="20%"/>
+                           <col width="20%"/>
+                           <col width="20%"/>
+                           <col width="20%"/>
+                           <tbody>
+                              <tr>
+                                 <td align="center" rowspan="3" styleCode="Rrule Botrule Lrule Toprule " valign="top">
+                                    <paragraph> </paragraph>
+                                 </td>
+                                 <td align="center" colspan="3" styleCode="Rrule Botrule Lrule Toprule " valign="top">
+                                    <paragraph>
+                                       <content styleCode="bold">Propafenone Hydrochloride Extended-Release</content>
+                                       <br/>
+                                       <content styleCode="bold">Capsules Twice-Daily Dosing</content>
+                                    </paragraph>
+                                 </td>
+                                 <td align="center" rowspan="2" styleCode="Rrule Botrule Lrule Toprule " valign="top">
+                                    <paragraph>
+                                       <content styleCode="bold">Placebo</content>
+                                       <br/> <br/>
+                                    </paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph> 225 mg</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph>325 mg </paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph>425 mg</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph>N=126</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph>N=135 </paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph>N=136 </paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph> N=126</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph>PR (ms) </paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph> 9±22</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph> 12±23</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph> 21±24</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph> 1±16</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph>QRS (ms)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph> 4±14</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph>6±15 </paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph> 6±15</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph> -2±12</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph>Heart rate</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph> 5±24</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph> 7±23</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph> 2±22</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph> 8±27</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Botrule Lrule " valign="top">
+                                    <paragraph>QTc* (ms)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Botrule Lrule " valign="top">
+                                    <paragraph> 2±30</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Botrule Lrule " valign="top">
+                                    <paragraph> 5±36</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Botrule Lrule " valign="top">
+                                    <paragraph> 6±37</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Botrule Lrule " valign="top">
+                                    <paragraph> 5±35</paragraph>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>*Calculated using Bazett’s correction factor</paragraph>
+                        <paragraph>In RAFT <content styleCode="italics">[see Clinical Studies (<linkHtml href="#LINK_ec98553e-a447-4255-9b03-e3750e0aa54e">14</linkHtml>)]</content>, the distribution of the maximum changes in QTc compared to baseline over the study in each patient was similar in the propafenone hydrochloride extended-release capsules 225 mg twice daily, 325 mg twice daily, and 425 mg twice daily and placebo dose groups. Similar results were seen in the ERAFT trial.</paragraph>
+                        <table ID="_RefID0ED2AG" width="100%">
+                           <caption>Table 2. Number of Patients According to the Range of Maximum QTc change compared to baseline over the Trial in each dose group (RAFT Trial).</caption>
+                           <col width="20%"/>
+                           <col width="20%"/>
+                           <col width="20%"/>
+                           <col width="20%"/>
+                           <col width="20%"/>
+                           <tbody>
+                              <tr>
+                                 <td align="center" styleCode="Rrule Botrule Lrule Toprule " valign="top">
+                                    <paragraph>
+                                       <content styleCode="bold">Range</content>
+                                       <br/>
+                                       <content styleCode="bold">maximum QTc</content>
+                                       <br/>
+                                       <content styleCode="bold">change</content>
+                                    </paragraph>
+                                 </td>
+                                 <td align="center" colspan="3" styleCode="Rrule Botrule Lrule Toprule " valign="top">
+                                    <paragraph>
+                                       <content styleCode="bold">Propafenone Hydrochloride Extended-release    </content>
+                                       <br/>
+                                       <content styleCode="bold">Capsules</content>
+                                    </paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Botrule Lrule Toprule " valign="top">
+                                    <paragraph>
+                                       <content styleCode="bold">Placebo</content>
+                                       <br/> </paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph> </paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph>225 mg<br/>Twice Daily </paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph>325 mg<br/>Twice Daily </paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph>425 mg<br/>Twice Daily </paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph> </paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph> </paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph> N=119</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph>N=129</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph>N=123</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph>N=100 </paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph> </paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph>n (%) </paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph>n (%) </paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph>n (%) </paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph>n (%) </paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph>&gt;20% </paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph>1 (1) </paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph>6 (5) </paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph>3 (2) </paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph>5 (4) </paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph>10-20% </paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph>19 (16)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph>28 (22)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph>32 (26)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph>24 (20) </paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Botrule Lrule " valign="top">
+                                    <paragraph>0≤10%</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Botrule Lrule " valign="top">
+                                    <paragraph>99 (83) </paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Botrule Lrule " valign="top">
+                                    <paragraph>95 (74) </paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Botrule Lrule " valign="top">
+                                    <paragraph>88 (72) </paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Botrule Lrule " valign="top">
+                                    <paragraph>91 (76) </paragraph>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>
+                           <content styleCode="underline">Hemodynamics</content> Trials in humans have shown that propafenone exerts a negative inotropic effect on the myocardium. Cardiac catheterization trials in patients with moderately impaired ventricular function (mean C.I.=2.61 L/min/m<sup>2</sup>), utilizing intravenous propafenone infusions (loading dose of 2 mg/kg over 10 min+ followed by 2 mg/min for 30 min) that gave mean plasma concentrations of 3 mcg/mL (a dose that produces plasma levels of propafenone greater than recommended oral dosing), showed significant increases in pulmonary capillary wedge pressure, systemic and pulmonary vascular resistances and depression of cardiac output and cardiac index.</paragraph>
+                     </text>
+                     <effectiveTime value="20211007"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_7371cf7a-20c7-41dd-a49c-c115d1f65f15">
+                     <id root="496cb702-b204-4775-8500-18e6b489fb5b"/>
+                     <code code="43682-4" codeSystem="2.16.840.1.113883.6.1" displayName="PHARMACOKINETICS SECTION"/>
+                     <title>12.3 Pharmacokinetics</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Absorption/Bioavailability</content>
+                        </paragraph>
+                        <paragraph>Maximal plasma levels of propafenone are reached between 3 to 8 hours following the administration of propafenone hydrochloride extended-release capsules. Propafenone is known to undergo extensive and saturable presystemic biotransformation which results in a dose and dosage form dependent absolute bioavailability; e.g., a 150 mg immediate-release tablet had an absolute bioavailability of 3.4%, while a 300 mg immediate-release tablet had an absolute bioavailability of 10.6%. Absorption from a 300 mg solution dose was rapid, with an absolute bioavailability of 21.4%. At still larger doses, above those recommended, bioavailability of propafenone from immediate-release tablets increased still further. </paragraph>
+                        <paragraph>Relative bioavailability assessments have been performed between propafenone hydrochloride extended-release capsules and propafenone hydrochloride immediate-release tablets. In extensive metabolizers, the bioavailability of propafenone from the SR formulation was less than that of the immediate-release formulation as the more gradual release of propafenone from the prolonged-release preparations resulted in an increase of overall first pass metabolism <content styleCode="italics">[see Metabolism]</content>. As a result of the increased first pass effect, higher daily doses of propafenone were required from the extended-release formulation relative to the immediate-release formulation, to obtain similar exposure to propafenone. The relative bioavailability of propafenone from the 325 mg twice daily regimens of propafenone hydrochloride extended-release capsules approximates that of propafenone hydrochloride immediate-release 150 mg 3 times daily regimen. Mean exposure to 5-hydroxypropafenone was about 20 to 25% higher after extended-release capsule administration than after immediate-release tablet administration. </paragraph>
+                        <paragraph>Food increased the exposure to propafenone 4-fold after single dose administration of 425 mg of propafenone hydrochloride extended-release capsules. However, in the multiple dose Trial (425 mg dose twice daily), the difference between the fed and fasted state was not significant. </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Distribution</content>
+                        </paragraph>
+                        <paragraph>Following intravenous administration of propafenone, plasma levels decline in a bi-phasic manner consistent with a 2 compartment pharmacokinetic model. The average distribution half-life corresponding to the first phase was about 5 minutes. The volume of the central compartment was about 88 liters (1.1 L/kg) and the total volume of distribution about 252 liters. </paragraph>
+                        <paragraph>In serum, propafenone is greater than 95% bound to proteins within the concentration range of 0.5 to 2 mcg/mL. </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Metabolism</content>
+                        </paragraph>
+                        <paragraph>There are two genetically determined patterns of propafenone metabolism. In over 90% of patients, the drug is rapidly and extensively metabolized with an elimination half-life from 2 to 10 hours. These patients metabolize propafenone into two active metabolites: 5-hydroxypropafenone which is formed by CYP2D6 and N-depropylpropafenone (norpropafenone) which is formed by both CYP3A4 and CYP1A2. In less than 10% of patients, metabolism of propafenone is slower because the 5-hydroxy metabolite is not formed or is minimally formed. In these patients, the estimated propafenone elimination half-life ranges from 10 to 32 hours. Decreased ability to form the 5-hydroxy metabolite of propafenone is associated with a diminished ability to metabolize debrisoquine and a variety of other drugs such as encainide, metoprolol, and dextromethorphan whose metabolism is mediated by the CYP2D6 isozyme. In these patients, the N-depropylpropafenone metabolite occurs in quantities comparable to the levels occurring in extensive metabolizers. </paragraph>
+                        <paragraph>As a consequence of the observed differences in metabolism, administration of propafenone hydrochloride extended-release capsules to slow and extensive metabolizers results in significant differences in plasma concentrations of propafenone, with slow metabolizers achieving concentrations about twice those of the extensive metabolizers at daily doses of 850 mg/day. At low doses the differences are greater, with slow metabolizers attaining concentrations about 3 to 4 times higher than extensive metabolizers. In extensive metabolizers, saturation of the hydroxylation pathway (CYP2D6) results in greater-than-linear increases in plasma levels following administration of propafenone hydrochloride extended-release capsules. In slow metabolizers, propafenone pharmacokinetics is linear. Because the difference decreases at high doses and is mitigated by the lack of the active 5-hydroxymetabolite in the slow metabolizers, and because steady-state conditions are achieved after 4 to 5-days of dosing in all patients, the recommended dosing regimen of propafenone hydrochloride extended-release capsules is the same for all patients. The larger inter-subject variability in blood levels require that the dose of the drug be titrated carefully in patients with close attention paid to clinical and ECG evidence of toxicity <content styleCode="italics">[see Dosage and Administration (<linkHtml href="#LINK_8fcf8d58-3902-4219-a6d3-559ef765f460">2</linkHtml>)]</content>. </paragraph>
+                        <paragraph>The 5-hydroxypropafenone and norpropafenone metabolites have electrophysiologic properties similar to propafenone <content styleCode="italics">in vitro</content>. In man after administration of propafenone hydrochloride extended-release capsules, the 5-hydroxypropafenone metabolite is usually present in concentrations less than 40% of propafenone. The norpropafenone metabolite is usually present in concentrations less than 10% of propafenone. </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Inter-Subject Variability</content>: With propafenone, there is a considerable degree of inter-subject variability in pharmacokinetics which is due in large part to the first pass hepatic effect and non-linear pharmacokinetics in extensive metabolizers. A higher degree of inter-subject variability in pharmacokinetic parameters of propafenone was observed following both single and multiple dose administration of propafenone hydrochloride extended-release capsules. Inter-subject variability appears to be substantially less in the poor metabolizer group than in the extensive metabolizer group, suggesting that a large portion of the variability is intrinsic to CYP2D6 polymorphism rather than to the formulation. </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Stereochemistry</content>: Propafenone hydrochloride is a racemic mixture. The R- and S-enantiomers of propafenone display stereoselective disposition characteristics. <content styleCode="italics">In vitro</content> and <content styleCode="italics">in vivo</content> studies have shown that the R-isomer of propafenone is cleared faster than the S-isomer via the 5-hydroxylation pathway (CYP2D6). This results in a higher ratio of S-propafenone to R-propafenone at steady state. Both enantiomers have equivalent potency to block sodium channels; however, the S-enantiomer is a more potent beta-antagonist than the R-enantiomer. Following administration of propafenone hydrochloride immediate-release tablets or propafenone hydrochloride extended-release capsules, the S/R ratio for the area under the plasma concentration-time curve was about 1.7. The S/R ratios of propafenone obtained after administration of 225 mg, 325 mg and 425 mg propafenone hydrochloride extended-release capsules are independent of dose. In addition, no difference in the average values of the S/R ratios is evident between genotypes or over time. </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Specific Populations</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Patients with Hepatic Impairment:</content> Decreased liver function increases the bioavailability of propafenone. Absolute bioavailability assessments have not been determined for the propafenone hydrochloride extended-release capsule formulation. Absolute bioavailability of propafenone hydrochloride immediate-release tablets is inversely related to indocyanine green clearance, reaching 60% to 70% at clearances of 7 mL/min and below. Protein binding decreases to about 88% in patients with severe hepatic dysfunction. The clearance of propafenone is reduced and the elimination half-life increased in patients with significant hepatic dysfunction <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#LINK_bb10a9aa-7661-4494-a837-5d16fa723f73">5.9</linkHtml>)]</content>.</paragraph>
+                     </text>
+                     <effectiveTime value="20211007"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_1240d97d-38ff-41c7-bc38-5ab932106e70">
+               <id root="860739ce-d533-4bb0-a0b4-562fdaa9c909"/>
+               <code code="43680-8" codeSystem="2.16.840.1.113883.6.1" displayName="NONCLINICAL TOXICOLOGY SECTION"/>
+               <title>13 NONCLINICAL TOXICOLOGY</title>
+               <effectiveTime value="20211007"/>
+               <component>
+                  <section ID="LINK_84a50128-6905-4c76-9cd5-12b2aba1da91">
+                     <id root="7ccccd88-370d-40d1-b404-62e7e0180996"/>
+                     <code code="34083-6" codeSystem="2.16.840.1.113883.6.1" displayName="CARCINOGENESIS &amp; MUTAGENESIS &amp; IMPAIRMENT OF FERTILITY SECTION"/>
+                     <title>13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility</title>
+                     <text>
+                        <paragraph>Lifetime maximally tolerated oral dose studies in mice (up to 360 mg/kg/day, approximately twice MRHD on a mg/m<sup>2</sup> basis) and rats (up to 270 mg/kg/day, approximately 3 times the MRHD on a mg/m<sup>2</sup> basis) provided no evidence of a carcinogenic potential for propafenone.</paragraph>
+                        <paragraph>Propafenone was not mutagenic in the Ames (salmonella) test and the in vivo mouse dominantlethal test. Propafenone was not clastogenic in the human lymphocyte chromosome aberration assay in vitro, the rat and Chinese hamster micronucleus tests, and other in vivo tests for chromosomal aberrations in rat bone marrow and Chinese hamster bone marrow and spermatogonia.</paragraph>
+                        <paragraph>Propafenone, administered intravenously, has been shown to decrease spermatogenesis at lethal doses in rabbits (≥3.5 mg/kg/day) or at near-lethal dose levels in monkeys and dogs (≤5 mg/kg/day); doses were less than the MRHD on a mg/m<sup>2</sup> basis. These effects were reversible and did not impair fertility in rabbits at an intravenous dose of 3.5 mg/kg/day (a spermatogenesis-impairing dose). Effects on spermatogenesis were not found when propafenone was administered to rats either orally or intravenously up to 360 mg/kg/day or 6 mg/kg/day, respectively, or in dogs at oral doses up to 240 mg/kg/day (up to approximately 4 or 9 times the MRHD on a mg/m<sup>2</sup> basis in rats and dogs, respectively). Treatment of male rabbits for 10 weeks prior to mating at an oral dose of 120 mg/kg/day (approximately 2 times the MRHD on a mg/m<sup>2</sup> basis) did not result in evidence of impaired fertility. Nor was there evidence of impaired fertility when propafenone was administered orally to male and female rats at dose levels up to 270 mg/kg/day (approximately 3 times the MRHD on a mg/m<sup>2</sup> basis) for 10 weeks (males) or 2 weeks (females) prior to mating through mating.</paragraph>
+                     </text>
+                     <effectiveTime value="20211007"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="LINK_36ead976-2c36-48c0-abad-69dcee4d5ec0">
+                     <id root="abe872d3-b05f-4507-a874-562533aaa784"/>
+                     <code code="34091-9" codeSystem="2.16.840.1.113883.6.1" displayName="ANIMAL PHARMACOLOGY &amp; OR TOXICOLOGY SECTION"/>
+                     <title>13.2 Animal Toxicology and/or Pharmacology</title>
+                     <text>
+                        <paragraph>Renal changes have been observed in the rat following 6 months of oral administration of propafenone at doses of 180 and 360 mg/kg/day (about 2 and 4 times, respectively, the MRHD on a mg/m<sup>2</sup> basis). Both inflammatory and non-inflammatory changes in the renal tubules, with accompanying interstitial nephritis, were observed. These changes were reversible, as they were not found in rats allowed to recover for 6 weeks. Fatty degenerative changes of the liver were found in rats following longer durations of administration of propafenone at a dose of 270 mg/kg/day (about 3 times the MRHD on a mg/m<sup>2</sup> basis). There were no renal or hepatic changes at 90 mg/kg/day equivalent to the MRHD on a mg/m<sup>2</sup> basis).</paragraph>
+                     </text>
+                     <effectiveTime value="20211007"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_ec98553e-a447-4255-9b03-e3750e0aa54e">
+               <id root="0d20452a-041f-48f7-80d6-4adda465b4a0"/>
+               <code code="34092-7" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL STUDIES SECTION"/>
+               <title>14 CLINICAL STUDIES</title>
+               <text>
+                  <paragraph>Propafenone hydrochloride extended-release capsules have been evaluated in patients with a history of electrocardiographically documented recurrent episodes of symptomatic AF in 2 randomized, double-blind, placebo-controlled trials. </paragraph>
+                  <paragraph>
+                     <content styleCode="underline">RAFT</content>
+                  </paragraph>
+                  <paragraph>In one US multicenter trial (RAFT), 3 doses of propafenone hydrochloride extended-release capsules (225 mg twice daily, 325 mg twice daily and 425 mg twice daily) and placebo were compared in 523 patients with symptomatic, episodic AF. The patient population in this trial was 59% male with a mean age of 63 years; 91% White and 6% Black. The patients had a median history of AF of 13 months, and documented symptomatic AF within 12 months of trial entry. Over 90% were NYHA Class I, and 21% had a prior electrical cardioversion. At baseline, 24% were treated with calcium channel blockers, 37% with beta blockers, and 38% with digoxin. Symptomatic arrhythmias after randomization were documented by transtelephonic electrocardiogram and centrally read and adjudicated by a blinded adverse event committee. Propafenone hydrochloride extended-release capsules administered for up to 39 weeks was shown to prolong significantly the time to the first recurrence of symptomatic atrial arrhythmia, predominantly AF, from Day 1 of randomization (primary efficacy variable) compared to placebo, as shown in Table 3.</paragraph>
+                  <table ID="_RefID0EXFBG" width="100%">
+                     <caption>Table 3: Analysis of Tachycardia-Free Period (Days) from Day 1 of Randomization</caption>
+                     <col width="20%"/>
+                     <col width="20%"/>
+                     <col width="20%"/>
+                     <col width="20%"/>
+                     <col width="20%"/>
+                     <tbody>
+                        <tr>
+                           <td styleCode="Rrule Botrule Lrule Toprule " valign="top">
+                              <paragraph> </paragraph>
+                           </td>
+                           <td align="center" colspan="4" styleCode="Rrule Botrule Lrule Toprule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">Dose of Propafenone Hydrochloride Extended-release Capsules    </content>
+                                 <br/>
+                                 <content styleCode="bold">Twice-Daily Dose</content>
+                              </paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">Parameter</content>
+                                 <br/>
+                                 <br/>
+                                 <content styleCode="bold"> </content>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">225 mg</content>
+                              </paragraph>
+                              <paragraph>
+                                 <content styleCode="bold">Twice Daily</content>
+                                 <br/>
+                                 <content styleCode="bold">(N = 126)</content>
+                                 <br/>
+                                 <content styleCode="bold">n (%) </content>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold"> 325 mg</content>
+                              </paragraph>
+                              <paragraph>
+                                 <content styleCode="bold">Twice Daily</content>
+                                 <br/>
+                                 <content styleCode="bold">(N = 135)</content>
+                                 <br/>
+                                 <content styleCode="bold">n (%)</content>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold"> 425 mg</content>
+                              </paragraph>
+                              <paragraph>
+                                 <content styleCode="bold">Twice Daily</content>
+                                 <br/>
+                                 <content styleCode="bold">(N = 136)</content>
+                                 <br/>
+                                 <content styleCode="bold">n (%)</content>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold"> Placebo</content>
+                              </paragraph>
+                              <paragraph>
+                                 <content styleCode="bold">Twice Daily</content>
+                                 <br/>
+                                 <content styleCode="bold">(N = 126)</content>
+                                 <br/>
+                                 <content styleCode="bold">n (%)</content>
+                              </paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>Patients completing with<br/>terminating event* </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph> 66 (52)</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>56 (41)</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>41 (30) </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>87 (69) </paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="5" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>Comparison of tachycardia-free periods </paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>Kaplan-Meier Media </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>112 </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>291 </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>NA<sup>†</sup> </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>41 </paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>    Range</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>0 to 285 </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>0 to 293 </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>0 to 300 </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>0 to 289 </paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>    p-Value (Log-rank test)</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>0.014 </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>&lt;0.0001 </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>&lt;0.0001 </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>-- </paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>Hazard Ratio compared to placebo </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>0.67 </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>0.43 </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>0.35 </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>-- </paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Rrule Botrule Lrule " valign="top">
+                              <paragraph>95% CI for Hazard Ratio</paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule Lrule " valign="top">
+                              <paragraph>(0.49, 0.93) </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule Lrule " valign="top">
+                              <paragraph>(0.31, 0.61) </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule Lrule " valign="top">
+                              <paragraph>(0.24, 0.51) </paragraph>
+                           </td>
+                           <td align="center" styleCode="Rrule Botrule Lrule " valign="top">
+                              <paragraph>-- </paragraph>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>
+                     <sup>*</sup> Terminating events comprised 91% AF, 5% atrial flutter, and 4% PSVT. <br/>
+                     <sup>†</sup> Not Applicable: Fewer than 50% of the patients had events. The median time is not calculable.</paragraph>
+                  <paragraph>There was a dose response for propafenone hydrochloride extended-release capsules for the tachycardia-free period as shown in the proportional hazard analysis and the Kaplan-Meier curves presented in Figure 1.</paragraph>
+                  <paragraph>Figure 1: RAFT Kaplan-Meier Analysis for the Tachycardia-Free Period From Day 1 of Randomization </paragraph>
+                  <renderMultiMedia ID="id2277" referencedObject="C1B04759-ECF1-4F56-BF26-71E29C43A02B"/>
+                  <paragraph>In additional analyses, propafenone hydrochloride extended-release capsules (225 mg twice daily, 325 mg twice daily, and 425 mg twice daily) were also shown to prolong time to the first recurrence of symptomatic AF from Day 5 (steady-state pharmacokinetics were attained). The antiarrhythmic effect of propafenone hydrochloride extended-release capsules was not influenced by age, gender, history of cardioversion, duration of AF, frequency of AF or use of medication that lowers heart rate. Similarly, the antiarrhythmic effect of propafenone hydrochloride extended-release capsules was not influenced by the individual use of calcium channel blockers, beta-blockers or digoxin. Too few non-White patients were enrolled to assess the influence of race on effects of propafenone hydrochloride extended-release. </paragraph>
+                  <paragraph>No difference in the average heart rate during the first recurrence of symptomatic arrhythmia between propafenone hydrochloride extended-release capsules and placebo was observed. </paragraph>
+                  <paragraph>
+                     <content styleCode="underline">ERAFT</content>
+                  </paragraph>
+                  <paragraph>In a European multicenter trial [(Propafenone Hydrochloride Extended-release Atrial Fibrillation Trial)], 2 doses of propafenone hydrochloride extended-release capsules (325 mg twice daily and 425 mg twice daily) and placebo were compared in 293 patients with documented electrocardiographic evidence of symptomatic paroxysmal AF. The patient population in this trial was 61% male, 100% White with a mean age of 61 years. Patients had a median duration of AF of 3.3 years, and 61% were taking medications that lowered heart rate. At baseline, 15% of the patients were treated with calcium channel blockers (verapamil and diltiazem), 42% with beta-blockers and 8% with digoxin. During a qualifying period of up to 28 days, patients had to have 1 ECG-documented incident of symptomatic AF. The double-blind treatment phase consisted of a 4 day loading period followed by a 91-day efficacy period. Symptomatic arrhythmias were documented by electrocardiogram monitoring. </paragraph>
+                  <paragraph>In ERAFT, propafenone hydrochloride extended-release capsules were shown to prolong the time to the first recurrence of symptomatic atrial arrhythmia from Day 5 of randomization (primary efficacy analysis). The proportional hazard analysis revealed that both propafenone hydrochloride extended-release capsules doses were superior to placebo. The antiarrhythmic effect of propafenone extended-release was not influenced by age, gender, duration of AF, frequency of AF or use of medication that lowers heart rate. It was also not influenced by the individual use of calcium channel blockers, beta-blockers or digoxin. Too few non-White patients were enrolled to assess the influence of race on the effects of propafenone hydrochloride extended-release capsules. There was a slight increase in the incidence of centrally diagnosed asymptomatic AF or atrial flutter in each of the 2 propafenone hydrochloride extended-release treatment groups compared to placebo. </paragraph>
+               </text>
+               <effectiveTime value="20211007"/>
+               <component>
+                  <observationMedia ID="C1B04759-ECF1-4F56-BF26-71E29C43A02B">
+                     <text>figure-1</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="figure-1.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_bbcb2a9f-4aa0-48b4-88d0-1133badbb085">
+               <id root="f91cd82d-739d-448a-b974-09571eac4729"/>
+               <code code="34069-5" codeSystem="2.16.840.1.113883.6.1" displayName="HOW SUPPLIED SECTION"/>
+               <title>16 HOW SUPPLIED/STORAGE AND HANDLING</title>
+               <text>
+                  <paragraph>Propafenone Hydrochloride Extended-Release Capsules, USP are supplied as hard gelatin capsules containing either 225 mg, 325 mg or 425 mg of propafenone hydrochloride, USP.</paragraph>
+                  <paragraph>The 225 mg capsule has a white opaque body imprinted with “408” in black ink and white opaque cap imprinted with a “G” in black ink. They are available as follows:</paragraph>
+                  <list listType="unordered">
+                     <item>
+                        <caption> </caption>  NDC 16714-825-01 	Bottles of 60 capsules</item>
+                  </list>
+                  <paragraph>The 325 mg capsule has a white opaque body imprinted with “409” in black ink and white opaque cap imprinted with a “G” in black ink. They are available as follows:</paragraph>
+                  <list listType="unordered">
+                     <item>
+                        <caption> </caption>               NDC 16714-826-01       Bottles of 60 capsules </item>
+                  </list>
+                  <paragraph>The 425 mg capsule has a white opaque body imprinted with “410” and single band in black ink and white opaque cap imprinted with a “G” and single band in black ink. They are available as follows:</paragraph>
+                  <list listType="unordered">
+                     <item>
+                        <caption> </caption>  NDC 16714-827-01	Bottles of 60 capsules </item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">Storage:</content> Store at 20° to 25°C (68° to 77°F); excursions permitted to 15° to 30°C (59° to 86°F) [See USP Controlled Room Temperature]. Dispense in a tight container.</paragraph>
+               </text>
+               <effectiveTime value="20211007"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_ac108fb9-2cad-42be-b880-17af56331395">
+               <id root="0c230b75-1130-4705-908a-fa8b250b2686"/>
+               <code code="34076-0" codeSystem="2.16.840.1.113883.6.1" displayName="INFORMATION FOR PATIENTS SECTION"/>
+               <title>17 PATIENT COUNSELING INFORMATION</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="italics">Advise the patient to read the FDA-approved patient labeling (Patient Information).</content>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>
+                        <caption>•</caption>Instruct patients to notify their healthcare providers of any change in over-the-counter, prescription, and supplement use.</item>
+                     <item>
+                        <caption>•</caption>Instruct patients to report symptoms that may be associated with altered electrolyte balance, such as excessive or prolonged diarrhea, sweating, vomiting, or loss of appetite or thirst.</item>
+                     <item>
+                        <caption>•</caption>Instruct patients not to double the next dose if a dose is missed. The next dose should be taken at the usual time.</item>
+                  </list>
+                  <paragraph>Manufactured for: <br/>
+                     <content styleCode="bold">Northstar Rx LLC</content>
+                     <br/>Memphis, TN 38141.</paragraph>
+                  <paragraph>Manufactured by:<br/>
+                     <content styleCode="bold">Glenmark Pharmaceuticals Limited</content>
+                     <br/>Pithampur, Madhya Pradesh 454775, India</paragraph>
+                  <paragraph>10/2021</paragraph>
+                  <paragraph>PHARMACIST-DETACH HERE AND GIVE INSTRUCTIONS TO PATIENT</paragraph>
+               </text>
+               <effectiveTime value="20211007"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_274be820-fdf8-4a10-92cb-85870d1d115f">
+               <id root="69a32d66-db7c-4b1d-85e9-577bfea08787"/>
+               <code code="42230-3" codeSystem="2.16.840.1.113883.6.1" displayName="SPL PATIENT PACKAGE INSERT SECTION"/>
+               <title>PATIENT INFORMATION </title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Propafenone Hydrochloride (proeʺ pa feeʹ none hye′′ droe klor′ ide)</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Extended-release Capsules</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">What are propafenone hydrochloride extended-release capsules?</content>
+                  </paragraph>
+                  <paragraph>Propafenone hydrochloride extended-release capsules are a prescription medicine that is used:</paragraph>
+                  <list listType="unordered">
+                     <item>
+                        <caption>•</caption>in certain people who have a heart rhythm disorder called atrial fibrillation (AF)  </item>
+                     <item>
+                        <caption>•</caption>to increase the amount of time between having symptoms of AF</item>
+                  </list>
+                  <paragraph>It is not known if propafenone hydrochloride extended-release capsules are safe and effective in children.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Who should not take propafenone hydrochloride extended-release capsules?</content>
+                  </paragraph>
+                  <paragraph>Do not take propafenone hydrochloride extended -release capsules if you have:</paragraph>
+                  <list listType="unordered">
+                     <item>
+                        <caption>•</caption>heart failure (weak heart)  </item>
+                     <item>
+                        <caption>•</caption>had a recent heart attack </item>
+                     <item>
+                        <caption>•</caption>have a heart condition called Brugada Syndrome</item>
+                     <item>
+                        <caption>•</caption>a heart rate that is too slow, and you do not have a pacemaker  </item>
+                     <item>
+                        <caption>•</caption>very low blood pressure  </item>
+                     <item>
+                        <caption>•</caption>certain breathing problems that make you short of breath or wheeze  </item>
+                     <item>
+                        <caption>•</caption>certain abnormal body salt (electrolyte) levels in your blood </item>
+                  </list>
+                  <paragraph>Talk to your doctor before taking propafenone hydrochloride extended-release capsules if you think you have any of the conditions listed above.<br/> <br/>
+                     <content styleCode="bold">What should I tell my doctor before taking propafenone hydrochloride extended-release capsules?</content>
+                  </paragraph>
+                  <paragraph>Before you take propafenone hydrochloride extended-release capsules tell your doctor if you:</paragraph>
+                  <list listType="unordered">
+                     <item>
+                        <caption>•</caption>have liver or kidney problems  </item>
+                     <item>
+                        <caption>•</caption>have breathing problems  </item>
+                     <item>
+                        <caption>•</caption>have symptoms including diarrhea, sweating, vomiting, or loss of appetite or thirst that are severe. These symptoms may be a sign of abnormal electrolyte levels in your blood.  </item>
+                     <item>
+                        <caption>•</caption>have myasthenia gravis  </item>
+                     <item>
+                        <caption>•</caption>have lupus erythematosus   </item>
+                     <item>
+                        <caption>•</caption>have been told you have or had an abnormal blood test called Antinuclear Antibody Test or ANA Test  </item>
+                     <item>
+                        <caption>•</caption>are pregnant or plan to become pregnant. </item>
+                     <item>
+                        <caption>•</caption>are breastfeeding or plan to breastfeed. Propafenone hydrochloride can pass into your milk. You and your doctor</item>
+                     <item>
+                        <caption> </caption>should discuss the best way to feed your baby during this time</item>
+                     <item>
+                        <caption>•</caption>have any other medical conditions </item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">Tell your doctor about all the medicines you take</content>, including prescription and non-prescription medicines, vitamins, and herbal supplements. Propafenone hydrochloride extended-release capsules and certain other medicines can affect each other and cause serious side effects. Propafenone hydrochloride extended-release capsules may affect the way other medicines work, and other medicines may affect how propafenone hydrochloride extended-release capsules work. </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Especially tell your doctor if you take</content>:</paragraph>
+                  <list listType="unordered">
+                     <item>
+                        <caption>•</caption>amiodarone or other medicines for your abnormal heart beats  </item>
+                     <item>
+                        <caption>•</caption>an antidepressant medicine  </item>
+                     <item>
+                        <caption>•</caption>a medicine to treat anxiety  </item>
+                     <item>
+                        <caption>•</caption>ritonavir (for example, KALETRA<sup>®</sup>, NORVIR<sup>®</sup>) or saquinavir (for example, INVIRASE<sup>®</sup>)  </item>
+                     <item>
+                        <caption>•</caption>an antibiotic medicine  </item>
+                     <item>
+                        <caption>•</caption>ketoconazole (for example, NIZORAL<sup>®</sup>)  </item>
+                     <item>
+                        <caption>•</caption>digoxin (LANOXIN<sup>®</sup>)  </item>
+                     <item>
+                        <caption>•</caption>warfarin sodium (for example, COUMADIN<sup>®</sup>, JANTOVEN<sup>®</sup>) </item>
+                  </list>
+                  <paragraph>Know the medicines you take. Keep a list of them to show your doctor and pharmacist when you get a new medicine. </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">How should I take propafenone hydrochloride extended-release capsules?</content>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>
+                        <caption>•</caption>Take propafenone hydrochloride extended-release capsules exactly as prescribed. Your doctor will tell you how many capsules to take and how often to take them.  </item>
+                     <item>
+                        <caption>•</caption>To help reduce the chance of certain side effects, your doctor may start you with a low dose of propafenone hydrochloride extended-release capsules and then slowly increase the dose.  </item>
+                     <item>
+                        <caption>•</caption>Do not open or crush the capsule.  </item>
+                     <item>
+                        <caption>•</caption>You may take propafenone hydrochloride extended-release capsules with or without food.  </item>
+                     <item>
+                        <caption>•</caption>You should not drink grapefruit juice during treatment with propafenone hydrochloride extended-release capsules  </item>
+                     <item>
+                        <caption>•</caption>If you miss a dose of propafenone hydrochloride extended-release capsules take your next dose at the usual time. Do not take 2 doses at the same time.  </item>
+                     <item>
+                        <caption>•</caption>If you take too much propafenone hydrochloride extended-release capsules call your doctor or go to the nearest hospital emergency room right away.  </item>
+                     <item>
+                        <caption>•</caption>Call your doctor if your heart problems get worse.</item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">What are possible side effects of propafenone hydrochloride extended-release capsules? </content>
+                     <br/>
+                     <content styleCode="bold">Propafenone hydrochloride extended-release capsules can cause serious side effects including:</content>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>
+                        <caption>•</caption>
+                        <content styleCode="bold">New or worsened abnormal heart beats, that can cause sudden death or be life-threatening</content>. Your doctor may do an electrocardiogram (ECG or EKG) before and during treatment to check your heart for these problems.  </item>
+                     <item>
+                        <caption>•</caption>
+                        <content styleCode="bold">New or worsened heart failure. Tell your doctor about any changes in your heart symptoms, including:</content>
+                        <list listType="unordered">
+                           <item>
+                              <caption>o</caption>any new or increased swelling in your arms or legs  </item>
+                           <item>
+                              <caption>o</caption>trouble breathing  </item>
+                           <item>
+                              <caption>o</caption>sudden weight gain</item>
+                        </list>
+                     </item>
+                     <item>
+                        <caption>•</caption>
+                        <content styleCode="bold">Effects on pacemaker function</content>. Propafenone hydrochloride extended-release capsules may affect how an implanted pacemaker or defibrillator works. Your doctor should check how your pacemaker or defibrillator is working during and after treatment with propafenone hydrochloride extended-release capsules. They may need to be re-programmed.  </item>
+                     <item>
+                        <caption>•</caption>
+                        <content styleCode="bold">Very low white blood cell levels in your blood (agranulocytosis)</content>. Your bone marrow may not produce enough of a certain type of white blood cells called neutrophils. If this happens, you are more likely to get infections. Tell your doctor right away if you have any of these symptoms, especially during the first 3 months of treatment:  <list listType="unordered">
+                           <item>
+                              <caption>o</caption>fever  </item>
+                           <item>
+                              <caption>o</caption>sore throat  </item>
+                           <item>
+                              <caption>o</caption>chills</item>
+                        </list>
+                     </item>
+                     <item>
+                        <caption>•</caption>
+                        <content styleCode="bold">Worsening of myasthenia gravis in people who already have this condition</content>. Tell your doctor about any change in your symptoms.  </item>
+                     <item>
+                        <caption>•</caption>
+                        <content styleCode="bold">Propafenone hydrochloride extended-release capsules may cause lower sperm counts in men</content>. This could affect the ability to father a child. Talk to your doctor if this is a concern for you. </item>
+                  </list>
+                  <paragraph>Common side effects of propafenone hydrochloride extended-release capsules include:</paragraph>
+                  <list listType="unordered">
+                     <item>
+                        <caption>•</caption>dizziness  </item>
+                     <item>
+                        <caption>•</caption>fast or irregular heart beats  </item>
+                     <item>
+                        <caption>•</caption>chest pain  </item>
+                     <item>
+                        <caption>•</caption>trouble breathing  </item>
+                     <item>
+                        <caption>•</caption>taste changes  </item>
+                     <item>
+                        <caption>•</caption>nausea  </item>
+                     <item>
+                        <caption>•</caption>tiredness  </item>
+                     <item>
+                        <caption>•</caption>feeling anxious  </item>
+                     <item>
+                        <caption>•</caption>constipation  </item>
+                     <item>
+                        <caption>•</caption>upper respiratory infection or flu  </item>
+                     <item>
+                        <caption>•</caption>swelling </item>
+                  </list>
+                  <paragraph>Tell your doctor if you have any side effect that bothers you or that does not go away. <br/>These are not all the possible side effects of propafenone hydrochloride extended-release capsules. For more information, ask your doctor or pharmacist. <br/>Call your doctor for medical advice about side effects. You may report side effects to FDA at 1-800-FDA-1088. </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">How should I store propafenone hydrochloride extended-release capsules?</content>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>
+                        <caption>•</caption>Store propafenone hydrochloride extended-release capsules at room temperature between 68°F to 77°F (20°C to 25°C).  </item>
+                     <item>
+                        <caption>•</caption>Keep the bottle tightly closed. </item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">Keep propafenone hydrochloride extended-release capsules and all medicines out of the reach of children. </content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">General information about propafenone hydrochloride extended-release capsules</content>
+                     <br/>Medicines are sometimes prescribed for conditions other than those described in patient information leaflets. Do not use propafenone hydrochloride extended-release capsules for a condition for which it was not prescribed by your doctor. Do not give propafenone hydrochloride extended-release capsules to other people, even if they have the same symptoms you have. It may harm them. </paragraph>
+                  <paragraph>This leaflet summarizes the most important information about propafenone hydrochloride extended-release capsules. If you would like more information, talk with your doctor. You can ask your doctor or pharmacist for information about propafenone hydrochloride extended-release capsules that is written for healthcare professionals. For more information about propafenone hydrochloride extended-release capsules call 1-800-206-7821. </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">What are the ingredients in propafenone hydrochloride extended-release capsules?</content>
+                     <br/>Active Ingredient: Propafenone hydrochloride </paragraph>
+                  <paragraph>Inactive Ingredients: black iron oxide, gelatin, hypromellose, lactose monohydrate, magnesium stearate, microcrystalline cellulose, potassium hydroxide, shellac, sodium lauryl sulfate and titanium dioxide.</paragraph>
+                  <paragraph>Brands listed are trademarks of their respective owners and are not trademarks of Glenmark Pharmaceuticals Inc., USA. The makers of these brands are not affiliated with and do not endorse Glenmark Pharmaceuticals Inc., USA or its products.</paragraph>
+                  <paragraph>Manufactured for: <br/>
+                     <content styleCode="bold">Northstar Rx LLC</content>
+                     <br/>Memphis, TN 38141.</paragraph>
+                  <paragraph>Manufactured by:<br/>
+                     <content styleCode="bold">Glenmark Pharmaceuticals Limited</content>
+                     <br/>Pithampur, Madhya Pradesh 454775 India</paragraph>
+                  <paragraph>10/2021</paragraph>
+               </text>
+               <effectiveTime value="20211007"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_dbb9e101-c3ec-4e8d-b603-01abd32beb13">
+               <id root="3417c8d7-6b8f-4258-abfb-b24d323d78fe"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PRINCIPAL DISPLAY PANEL</title>
+               <text>
+                  <renderMultiMedia ID="id-1679268535" referencedObject="ID_0fc215f2-84c0-4d2e-88ee-3e0c27ba4e1e"/>
+               </text>
+               <effectiveTime value="20211007"/>
+               <component>
+                  <observationMedia ID="ID_0fc215f2-84c0-4d2e-88ee-3e0c27ba4e1e">
+                     <text>225mg60s.jpg</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="225mg60s.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_de43e714-78bf-41aa-8fa6-1d03accadec7">
+               <id root="e792d20c-5d80-4fbc-8ab4-369e55dbb530"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PRINCIPAL DISPLAY PANEL</title>
+               <text>
+                  <renderMultiMedia ID="id614174745" referencedObject="ID_5738dbcf-4d0d-4e66-afee-aa1e11a756f4"/>
+               </text>
+               <effectiveTime value="20211007"/>
+               <component>
+                  <observationMedia ID="ID_5738dbcf-4d0d-4e66-afee-aa1e11a756f4">
+                     <text>325mg60s.jpg</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="325mg60s.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_042aeef6-c1df-4117-b27a-28340f8aef4f">
+               <id root="9fdd9fc6-d188-4406-8ab1-9fce2808745e"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PRINCIPAL DISPLAY PANEL</title>
+               <text>
+                  <renderMultiMedia ID="id-8915188" referencedObject="ID_0334ee5d-32e9-4e4e-bb24-0d90048dc2ee"/>
+               </text>
+               <effectiveTime value="20211007"/>
+               <component>
+                  <observationMedia ID="ID_0334ee5d-32e9-4e4e-bb24-0d90048dc2ee">
+                     <text>425mg60s.jpg</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="425mg60s.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

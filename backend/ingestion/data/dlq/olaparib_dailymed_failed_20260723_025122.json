@@ -1,0 +1,21 @@
+{
+  "error_reason": "Parser returned zero sections — likely corrupt or unreachable label",
+  "failed_at": "2026-07-23T02:51:22.671057Z",
+  "document": {
+    "drug": "Olaparib",
+    "generic_name": "Olaparib",
+    "source": "DailyMed",
+    "source_url": null,
+    "authority": null,
+    "authority_version": null,
+    "drug_revision": null,
+    "country": "US",
+    "version": "2",
+    "effective_date": "2026-04-01",
+    "revision": "9d25e526-6b0d-4e86-b0f0-b8bfed20c7ac",
+    "ingested_at": "2026-07-23T02:51:22.666369Z",
+    "retrieved_on": null,
+    "sections": [],
+    "synonyms": []
+  }
+}

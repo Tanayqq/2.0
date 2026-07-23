@@ -1,0 +1,2894 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="3a8b4338-890b-bc2f-e063-6394a90ab578"/>
+   <code code="34391-3" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN PRESCRIPTION DRUG LABEL"/>
+   <title>These highlights do not include all the information needed to use ALVESCO 
+ <sup>®</sup>safely and effectively. See full prescribing information for ALVESCO 
+ <sup>®</sup>.
+ <br/>
+      <br/>
+      <content styleCode="bold">ALVESCO 
+  <sup>®</sup>(ciclesonide) inhalation aerosol, for oral inhalation use 
+ </content>
+      <br/>
+Initial U.S. Approval: 2006
+</title>
+   <effectiveTime value="20250228"/>
+   <setId root="9f6112fb-78ef-43cf-8ae3-36370eb45468"/>
+   <versionNumber value="8"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id root="1.3.6.1.4.1.519.1" extension="118094829"/>
+            <name>Covis Pharma US, Inc</name>
+            <assignedEntity>
+               <assignedOrganization/>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="3a8bd9f9-df3f-bdb5-e063-6294a90a1122"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL product data elements section"/>
+               <effectiveTime value="20250228"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="70515-711" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Alvesco</name>
+                        <formCode code="C42960" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="AEROSOL, METERED"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>ciclesonide</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="DH9E53K1Y8" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>NORFLURANE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="3K9958V90M" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>ALCOHOL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="ug" value="80"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="S59502J185" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CICLESONIDE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="S59502J185" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>CICLESONIDE</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="60" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C16738" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INHALER"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="1" unit="1"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="70515-711-01" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20180326"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C102835" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 2: Prefilled Drug Delivery Device/System (syringe, patch, etc.)" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="60" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C16738" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INHALER"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="1" unit="1"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="70515-711-02" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C96974" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20180326"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C102835" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 2: Prefilled Drug Delivery Device/System (syringe, patch, etc.)" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="30" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C16738" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INHALER"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="1" unit="1"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="70515-711-03" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20210430"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C102835" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 2: Prefilled Drug Delivery Device/System (syringe, patch, etc.)" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="30" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C16738" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INHALER"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="1" unit="1"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="70515-711-04" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20210430"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C102835" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 2: Prefilled Drug Delivery Device/System (syringe, patch, etc.)" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="60" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C16738" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INHALER"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="1" unit="1"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="70515-711-05" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20210430"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C102835" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 2: Prefilled Drug Delivery Device/System (syringe, patch, etc.)" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="NDA021658" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73594" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="NDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20180326"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38216" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="RESPIRATORY (INHALATION)"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="70515-712" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Alvesco</name>
+                        <formCode code="C42960" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="AEROSOL, METERED"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>ciclesonide</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="DH9E53K1Y8" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>NORFLURANE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="3K9958V90M" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>ALCOHOL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="ug" value="160"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="S59502J185" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CICLESONIDE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="S59502J185" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>CICLESONIDE</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="60" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C16738" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INHALER"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="1" unit="1"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="70515-712-01" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20180326"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C102835" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 2: Prefilled Drug Delivery Device/System (syringe, patch, etc.)" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="60" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C16738" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INHALER"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="1" unit="1"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="70515-712-02" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C96974" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20180326"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C102835" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 2: Prefilled Drug Delivery Device/System (syringe, patch, etc.)" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="30" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C16738" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INHALER"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="1" unit="1"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="70515-712-03" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20210430"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C102835" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 2: Prefilled Drug Delivery Device/System (syringe, patch, etc.)" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="30" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C16738" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INHALER"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="1" unit="1"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="70515-712-04" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20210430"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C102835" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 2: Prefilled Drug Delivery Device/System (syringe, patch, etc.)" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="60" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C16738" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INHALER"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="1" unit="1"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="70515-712-05" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20210430"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C102835" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 2: Prefilled Drug Delivery Device/System (syringe, patch, etc.)" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="NDA021658" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73594" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="NDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20180326"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38216" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="RESPIRATORY (INHALATION)"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_86c83c83-5c0b-42b9-8d2b-c7a3ff3009f9">
+               <id root="3a8b4338-890c-bc2f-e063-6394a90ab578"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>1 INDICATIONS AND USAGE</title>
+               <text>
+                  <paragraph>ALVESCO is indicated for the maintenance treatment of asthma as prophylactic therapy in adult and pediatric patients 12 years of age and older.</paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Limitations of Use</content>:
+
+ </paragraph>
+                  <paragraph>ALVESCO is not indicated for the relief of acute bronchospasm.</paragraph>
+                  <paragraph>ALVESCO is not indicated for children under 12 years of age.</paragraph>
+               </text>
+               <effectiveTime value="20230216"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>ALVESCO is an inhaled corticosteroid indicated for maintenance treatment of asthma as prophylactic therapy in adult and pediatric patients 12 years of age and older. (
+ 
+    <linkHtml href="#ID_86c83c83-5c0b-42b9-8d2b-c7a3ff3009f9">1</linkHtml>)
+
+   </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Limitations of Use</content>:
+
+   </paragraph>
+                        <paragraph>ALVESCO is not indicated for the relief of acute bronchospasm or in pediatric patients less than 12 years of age. (
+ 
+    <linkHtml href="#ID_86c83c83-5c0b-42b9-8d2b-c7a3ff3009f9">1</linkHtml>)
+
+   </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_8d834bd3-81ca-483f-9bf7-064266a1ed6a">
+               <id root="3a8b4338-890d-bc2f-e063-6394a90ab578"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>2 DOSAGE AND ADMINISTRATION</title>
+               <effectiveTime value="20230216"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered">
+                           <item>For oral inhalation only. (
+  
+     <linkHtml href="#ID_8d834bd3-81ca-483f-9bf7-064266a1ed6a">2</linkHtml>)
+ 
+    </item>
+                           <item>Prime ALVESCO before first use or when inhaler not used for more than 10 days. (
+  
+     <linkHtml href="#ID_8d834bd3-81ca-483f-9bf7-064266a1ed6a">2</linkHtml>)
+ 
+    </item>
+                        </list>
+                        <table cellpadding="3.6pt" width="100%">
+                           <col width="43%"/>
+                           <col width="28%"/>
+                           <col width="29%"/>
+                           <tfoot>
+                              <tr>
+                                 <td align="left" colspan="3" styleCode="Botrule" valign="top">
+                                    <sup>1</sup>Prednisone should be reduced gradually, no faster than 2.5 mg/day on a weekly basis, beginning after at least 1 week of therapy with ALVESCO. Patients should be carefully monitored for signs of asthma instability, including monitoring of serial objective measures of airflow, and for signs of adrenal insufficiency during steroid taper and following discontinuation of oral corticosteroid therapy
+    
+       <content styleCode="italics">[see Warnings and Precautions (
+     
+        <linkHtml href="#ID_28ae3eda-6ea2-486f-b0da-697ab6b4081a">5.1</linkHtml>)]
+    
+       </content>.
+   
+      </td>
+                              </tr>
+                           </tfoot>
+                           <tbody>
+                              <tr>
+                                 <td align="center" styleCode="Rrule Botrule " valign="middle">
+                                    <paragraph>
+                                       <content styleCode="bold">Previous Therapy</content>
+                                    </paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Botrule Lrule " valign="middle">
+                                    <paragraph>
+                                       <content styleCode="bold">Recommended 
+         <br/>  Starting Dose
+        </content>
+                                    </paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Botrule Lrule " valign="middle">
+                                    <paragraph>
+                                       <content styleCode="bold">Highest 
+         <br/>  Recommended Dose
+        </content>
+                                    </paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Botrule " valign="top">
+                                    <paragraph>Patients ≥ 12 years who received bronchodilators alone</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="middle">
+                                    <paragraph>80 mcg twice daily</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Lrule Toprule Botrule " valign="middle">
+                                    <paragraph>160 mcg twice daily</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Botrule " valign="top">
+                                    <paragraph>Patients ≥ 12 years who received inhaled corticosteroids</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="middle">
+                                    <paragraph>80 mcg twice daily</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Lrule Toprule Botrule " valign="middle">
+                                    <paragraph>320 mcg twice daily</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Toprule " valign="top">
+                                    <paragraph>Patients ≥ 12 years who received oral corticosteroids
+     
+        <sup>1</sup>
+                                    </paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule " valign="middle">
+                                    <paragraph>320 mcg twice daily</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Lrule Toprule " valign="middle">
+                                    <paragraph>320 mcg twice daily</paragraph>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="ID_09c19499-99ed-4251-bbab-ee32df049fdc">
+                     <id root="3a8b4338-890e-bc2f-e063-6394a90ab578"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.1 Administration Information</title>
+                     <text>
+                        <list listType="unordered">
+                           <item>Administer ALVESCO by the orally inhaled route.</item>
+                           <item>After administration, rinse the mouth with water and spit out without swallowing to help reduce the risk of oropharyngeal candidiasis
+  
+   <content styleCode="italics">[see Warnings and Precautions (
+   
+    <linkHtml href="#ID_28ae3eda-6ea2-486f-b0da-697ab6b4081a">5.1</linkHtml>)]
+  
+   </content>.
+ 
+  </item>
+                        </list>
+                        <paragraph>
+                           <content styleCode="underline">Priming</content>
+                        </paragraph>
+                        <paragraph>Prime ALVESCO before using for the first time by actuating 3 times prior to using the first dose from a new canister or when the inhaler has not been used for more than 10 days.</paragraph>
+                     </text>
+                     <effectiveTime value="20230216"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_6d63e4f5-fb3c-4b25-90f0-355077431653">
+                     <id root="3a8b4338-890f-bc2f-e063-6394a90ab578"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.2 Recommended Dosage</title>
+                     <text>
+                        <paragraph>The recommended starting dosage and the highest recommended dosage of ALVESCO are listed in
+ 
+  <linkHtml href="#_Ref128296384">Table 1</linkHtml>
+                        </paragraph>
+                        <table ID="_Ref128296384" cellpadding="3.6pt" width="100%">
+                           <caption>Table 1: Recommended Dosages for Adults and Pediatric Patients 12 Years and Older</caption>
+                           <col width="48%"/>
+                           <col width="25%"/>
+                           <col width="27%"/>
+                           <tfoot>
+                              <tr>
+                                 <td align="left" colspan="3" styleCode="Botrule" valign="top">
+                                    <sup>1</sup>Prednisone should be reduced gradually, no faster than 2.5 mg/day on a weekly basis, beginning after at least 1 week of therapy with ALVESCO. Patients should be carefully monitored for signs of asthma instability, including monitoring of serial objective measures of airflow, and for signs of adrenal insufficiency during steroid taper and following discontinuation of oral corticosteroid therapy
+    
+     <content styleCode="italics">[see Warnings and Precautions (
+     
+      <linkHtml href="#ID_28ae3eda-6ea2-486f-b0da-697ab6b4081a">5.1</linkHtml>)]
+    
+     </content>.
+   
+    </td>
+                              </tr>
+                           </tfoot>
+                           <tbody>
+                              <tr>
+                                 <td align="center" styleCode="Botrule " valign="middle">
+                                    <paragraph>
+                                       <content styleCode="bold">Previous Therapy</content>
+                                    </paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Botrule " valign="middle">
+                                    <paragraph>
+                                       <content styleCode="bold">Recommended Starting Dosage</content>
+                                    </paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Botrule " valign="middle">
+                                    <paragraph>
+                                       <content styleCode="bold">Highest Recommended Dosage</content>
+                                    </paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Toprule " valign="top">
+                                    <paragraph>Patients ≥ 12 years who received bronchodilators alone</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Toprule " valign="middle">
+                                    <paragraph>80 mcg twice daily</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Toprule " valign="middle">
+                                    <paragraph>160 mcg twice daily</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="middle">
+                                    <paragraph>Patients ≥ 12 years who received inhaled corticosteroids</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>80 mcg twice daily</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>320 mcg twice daily</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="middle">
+                                    <paragraph>Patients ≥ 12 years who received oral corticosteroids
+     
+      <sup>1</sup>
+                                    </paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>320 mcg twice daily</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>320 mcg twice daily</paragraph>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>
+                           <content styleCode="underline">General Dosing Recommendations</content>
+                        </paragraph>
+                        <paragraph>Individual patients will experience a variable time to onset and degree of symptom relief. Maximum benefit may not be achieved for four weeks or longer after initiation. After asthma stability has been achieved, it is desirable to titrate to the lowest effective dosage to reduce the possibility of side effects. For patients who do not respond adequately to the starting dose after 4 weeks of therapy, higher doses may provide additional asthma control. Patients should not exceed the highest recommended dosage per day.</paragraph>
+                     </text>
+                     <effectiveTime value="20230216"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_025c4d03-fa51-41b0-bb0a-276769a6f257">
+               <id root="3a8b4338-8910-bc2f-e063-6394a90ab578"/>
+               <code code="43678-2" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE FORMS &amp; STRENGTHS SECTION"/>
+               <title>3 DOSAGE FORMS AND STRENGTHS</title>
+               <text>
+                  <paragraph>Inhalation aerosol:</paragraph>
+                  <list listType="unordered">
+                     <item>80 mcg of ciclesonide per actuation, supplied with a brown plastic actuator with a red dust cap</item>
+                     <item>160 mcg of ciclesonide per actuation, supplied with a red plastic actuator with a red dust cap</item>
+                  </list>
+               </text>
+               <effectiveTime value="20230216"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Inhalation aerosol: 80 mcg per actuation or 160 mcg per actuation (
+ 
+    <linkHtml href="#ID_025c4d03-fa51-41b0-bb0a-276769a6f257">3</linkHtml>)
+
+   </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_79fb7eee-10f9-489a-96d3-fee84a639495">
+               <id root="3a8b4338-8911-bc2f-e063-6394a90ab578"/>
+               <code code="34070-3" codeSystem="2.16.840.1.113883.6.1" displayName="CONTRAINDICATIONS SECTION"/>
+               <title>4 CONTRAINDICATIONS</title>
+               <text>
+                  <paragraph>ALVESCO is contraindicated in:</paragraph>
+                  <list listType="unordered">
+                     <item>the primary treatment of status asthmaticus or other acute episodes of asthma where intensive measures are required.</item>
+                     <item>patients with known hypersensitivity to ciclesonide or any of the ingredients of ALVESCO. Rare cases of hypersensitivity reactions with manifestations such as angioedema, with swelling of the lips, tongue and pharynx, have been reported.</item>
+                  </list>
+               </text>
+               <effectiveTime value="20230216"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered">
+                           <item>Patients with status asthmaticus or other acute episodes of asthma where intensive measures are required. (
+  
+     <linkHtml href="#ID_79fb7eee-10f9-489a-96d3-fee84a639495">4</linkHtml>)
+ 
+    </item>
+                           <item>Patients with a known hypersensitivity to ciclesonide or any of the ingredients of ALVESCO. (
+  
+     <linkHtml href="#ID_79fb7eee-10f9-489a-96d3-fee84a639495">4</linkHtml>)
+ 
+    </item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_5588afde-8bff-4996-ad31-d2a995ec6d61">
+               <id root="3a8b4338-8912-bc2f-e063-6394a90ab578"/>
+               <code code="43685-7" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS AND PRECAUTIONS SECTION"/>
+               <title>5 WARNINGS AND PRECAUTIONS</title>
+               <effectiveTime value="20230216"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered">
+                           <item>
+                              <content styleCode="italics">Candida albicans</content>infection of the mouth and pharynx. Monitor patients periodically for signs of adverse effects on the oral cavity. Advise patients to rinse mouth following inhalation. (
+  
+     <linkHtml href="#ID_28ae3eda-6ea2-486f-b0da-697ab6b4081a">5.1</linkHtml>)
+ 
+    </item>
+                           <item>Potential worsening of existing tuberculosis: fungal, bacterial, viral, or parasitic infection; or ocular herpes simplex. More serious or even fatal course of chickenpox or measles in susceptible patients. Use caution in patients with above because of the potential for worsening of these infections. (
+  
+     <linkHtml href="#ID_f4f9b92e-ecbb-4192-8c56-20815de07c7b">5.3</linkHtml>)
+ 
+    </item>
+                           <item>Risk of impaired adrenal function when transferring from oral steroids to inhaled corticosteroids. Taper patients slowly from systemic corticosteroids if transferring to ALVESCO. (
+  
+     <linkHtml href="#ID_8b8bb0b5-34ad-4458-ba56-4afa635d4999">5.4</linkHtml>)
+ 
+    </item>
+                           <item>Hypercorticism, suppression of hypothalamic-pituitary-adrenal (HPA) function with very high dosages or at the regular dosage in susceptible individuals. If such changes occur, discontinue ALVESCO slowly (
+  
+     <linkHtml href="#ID_f3a4665e-06d9-464c-a6c4-a9a523a8d1fa">5.5</linkHtml>)
+ 
+    </item>
+                           <item>Suppression of growth in children. Monitor growth routinely in pediatric patients receiving ALVESCO. (
+  
+     <linkHtml href="#ID_65559f3f-ef44-457b-a1d4-f2ac5022bbac">5.7</linkHtml>)
+ 
+    </item>
+                           <item>Development of glaucoma, increased intraocular pressure and posterior subcapsular cataracts. Monitor patients with a change in vision or with a history of increased intraocular pressure, glaucoma, and/or cataracts closely. (
+  
+     <linkHtml href="#ID_57cc85c8-5b4c-46be-9480-5d9cefa87cfb">5.8</linkHtml>)
+ 
+    </item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="ID_28ae3eda-6ea2-486f-b0da-697ab6b4081a">
+                     <id root="3a8b4338-8913-bc2f-e063-6394a90ab578"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.1 Oropharyngeal Candidiasis</title>
+                     <text>
+                        <paragraph>In clinical trials, the development of localized infections of the mouth and pharynx with
+ 
+  <content styleCode="italics">Candida albicans</content>occurred in 32 of 3038 patients treated with ALVESCO. Of the 32 reported cases, 20 occurred in 1394 patients treated with a total daily dose of 320 mcg of ALVESCO or higher. Most cases of
+ 
+  <content styleCode="italics">Candida</content>infection were mild to moderate. When such an infection occurs, treat it with appropriate local or systemic (i.e., oral antifungal) therapy and discontinue ALVESCO. Patients should rinse the mouth after inhalation of ALVESCO.
+
+ </paragraph>
+                     </text>
+                     <effectiveTime value="20230216"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_95c0dc20-b254-4a18-8b3d-e7c6ea486915">
+                     <id root="3a8b4338-8914-bc2f-e063-6394a90ab578"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.2 Acute Asthma Episodes</title>
+                     <text>
+                        <paragraph>ALVESCO is not a bronchodilator and is not indicated for rapid relief of bronchospasm or other acute episodes of asthma. Patients should be instructed to contact their physician immediately if episodes of asthma not responsive to their usual doses of bronchodilators occur during the course of treatment with ALVESCO. During such episodes, patients may require therapy with oral corticosteroids.</paragraph>
+                     </text>
+                     <effectiveTime value="20180305"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_f4f9b92e-ecbb-4192-8c56-20815de07c7b">
+                     <id root="3a8b4338-8915-bc2f-e063-6394a90ab578"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.3 Immunosuppression and Risk of Infections</title>
+                     <text>
+                        <paragraph>Persons who are using drugs that suppress the immune system are more susceptible to infections than healthy individuals. Chickenpox and measles, for example, can have a more serious or even fatal course in susceptible children or adults using corticosteroids. In such children or adults who have not had these diseases or been properly immunized, particular care should be taken to avoid exposure. How the dose, route, and duration of corticosteroid administration affect the risk of developing a disseminated infection is not known. The safety and effectiveness of ALVESCO have not been established in pediatric patients less than 12 years of age and ALVESCO is not indicated for use in this population. The contribution of the underlying disease and/or prior corticosteroid treatment to the risk is also not known. If exposed to chickenpox, prophylaxis with varicella zoster immune globulin (VZIG) may be indicated. If exposed to measles, prophylaxis with pooled intramuscular immunoglobulin (IG) may be indicated. (See Prescribing Information for VZIG and IG.) If chickenpox develops, treatment with antiviral agents may be considered.</paragraph>
+                        <paragraph>Inhaled corticosteroids should be used with caution, if at all, in patients with active or quiescent tuberculosis infection of the respiratory tract; untreated systemic fungal, bacterial, viral, or parasitic infections; or ocular herpes simplex.</paragraph>
+                     </text>
+                     <effectiveTime value="20230216"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_8b8bb0b5-34ad-4458-ba56-4afa635d4999">
+                     <id root="3a8b4338-8916-bc2f-e063-6394a90ab578"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.4 Transferring Patients from Systemic Corticosteroid Therapy</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">HPA Suppression/Adrenal Insufficiency</content>
+                        </paragraph>
+                        <paragraph>Particular care is needed for patients who are transferred from systemically active corticosteroids to ALVESCO because deaths due to adrenal insufficiency have occurred in asthmatic patients during and after transfer from systemic corticosteroids to less systemically-available inhaled corticosteroids. After withdrawal from systemic corticosteroids, a number of months are required for recovery of hypothalamic-pituitary-adrenal (HPA) function.</paragraph>
+                        <paragraph>Patients who have been previously maintained on 20 mg or more per day of prednisone (or its equivalent) may be most susceptible, particularly when their systemic corticosteroids have been almost completely withdrawn. During this period of HPA suppression, patients may exhibit signs and symptoms of adrenal insufficiency when exposed to trauma, surgery, or infection (particularly gastroenteritis) or other conditions associated with severe electrolyte loss. Although ALVESCO may provide control of asthma symptoms during these episodes, in recommended doses it supplies less than normal physiological amounts of corticosteroid systemically and does NOT provide the mineralocorticoid activity that is necessary for coping with these emergencies.</paragraph>
+                        <paragraph>During periods of stress or a severe asthma attack, patients who have been withdrawn from systemic corticosteroids should be instructed to resume oral corticosteroids (in large doses) immediately and to contact their physicians for further instruction. These patients should also be instructed to carry a medical identification card indicating that they may need supplementary systemic corticosteroids during periods of stress or a severe asthma attack.</paragraph>
+                        <paragraph>Patients requiring oral corticosteroids should be weaned slowly from systemic corticosteroid use after transferring to ALVESCO. Prednisone reduction can be accomplished by reducing the daily prednisone dose by 2.5 mg on a weekly basis during ALVESCO therapy
+ 
+  <content styleCode="italics">[see Dosage and Administration (
+  
+   <linkHtml href="#ID_8d834bd3-81ca-483f-9bf7-064266a1ed6a">2</linkHtml>)]
+ 
+  </content>. Lung function (FEV
+ 
+  <sub>1</sub>or AM PEFR), beta-agonist use, and asthma symptoms should be carefully monitored during withdrawal of oral corticosteroids. In addition to monitoring asthma signs and symptoms, patients should be observed for signs and symptoms of adrenal insufficiency, such as fatigue, lassitude, weakness, nausea and vomiting, and hypotension.
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Unmasking of Allergic Conditions Previously Suppressed by Systemic Corticosteroids</content>
+                        </paragraph>
+                        <paragraph>Transfer of patients from systemic steroid therapy to ALVESCO may unmask allergic conditions previously suppressed by the systemic steroid therapy, e.g., rhinitis, conjunctivitis, eczema, arthritis, and eosinophilic conditions.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Corticosteroid Withdrawal Symptoms</content>
+                        </paragraph>
+                        <paragraph>During withdrawal from oral steroids, some patients may experience symptoms of systemically active steroid withdrawal, e.g., joint and/or muscular pain, lassitude, and depression, despite maintenance or even improvement of respiratory function.</paragraph>
+                     </text>
+                     <effectiveTime value="20230216"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_f3a4665e-06d9-464c-a6c4-a9a523a8d1fa">
+                     <id root="3a8b4338-8917-bc2f-e063-6394a90ab578"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.5 Hypercorticism and Adrenal Suppression</title>
+                     <text>
+                        <paragraph>ALVESCO will often help control asthma symptoms with less suppression of HPA function than therapeutically similar oral doses of prednisone. Since individual sensitivity to effects on cortisol production exists, physicians should consider this information when prescribing ALVESCO. Particular care should be taken in observing patients postoperatively or during periods of stress for evidence of inadequate adrenal response.</paragraph>
+                        <paragraph>Hypercorticism and adrenal suppression may occur when corticosteroids, including ALVESCO, are used at higher-than-recommended dosages
+ 
+  <content styleCode="italics">[see Dosage and Administration (
+  
+   <linkHtml href="#ID_8d834bd3-81ca-483f-9bf7-064266a1ed6a">2</linkHtml>)]
+ 
+  </content>or patients at risk for such effects.
+
+ </paragraph>
+                     </text>
+                     <effectiveTime value="20230216"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_ddca2108-0e3d-4a21-b8a5-6e5d180b04c4">
+                     <id root="3a8b4338-8918-bc2f-e063-6394a90ab578"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.6 Reduction in Bone Mineral Density</title>
+                     <text>
+                        <paragraph>Decreases in bone mineral density (BMD) have been observed with long-term administration of products containing inhaled corticosteroids. The clinical significance of small changes in BMD with regard to long-term outcomes is unknown. Patients with major risk factors for decreased bone mineral content, such as prolonged immobilization, family history of osteoporosis, or chronic use of drugs that can reduce bone mass (e.g., anticonvulsants and oral corticosteroids) should be monitored and treated with established standards of care.</paragraph>
+                     </text>
+                     <effectiveTime value="20180305"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_65559f3f-ef44-457b-a1d4-f2ac5022bbac">
+                     <id root="3a8b4338-8919-bc2f-e063-6394a90ab578"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.7 Effect on Growth</title>
+                     <text>
+                        <paragraph>Orally inhaled corticosteroids, including ALVESCO, may cause a reduction in growth velocity when administered to pediatric patients. The safety and effectiveness of ALVESCO have not been established in pediatric patients less than 12 years of age and ALVESCO is not indicated for use in this population. Monitor the growth of pediatric patients receiving ALVESCO routinely (e.g., via stadiometry). To minimize the systemic effects of orally inhaled corticosteroids, including ALVESCO, titrate each patient’s dose to the lowest dosage that effectively controls his/her symptoms
+ 
+  <content styleCode="italics">[see Use in Specific Populations (
+  
+   <linkHtml href="#ID_a911b174-f649-4f0c-b2e4-4733fb9bed0d">8.4</linkHtml>)]
+ 
+  </content>.
+
+ </paragraph>
+                     </text>
+                     <effectiveTime value="20230216"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_57cc85c8-5b4c-46be-9480-5d9cefa87cfb">
+                     <id root="3a8b4338-891a-bc2f-e063-6394a90ab578"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.8 Glaucoma and Cataracts</title>
+                     <text>
+                        <paragraph>Glaucoma, increased intraocular pressure, and cataracts have been reported following the administration of inhaled corticosteroids including ALVESCO. Therefore, close monitoring is warranted in patients with a change in vision or with a history of increased intraocular pressure, glaucoma, and/or cataracts.</paragraph>
+                        <paragraph>In a comparator control study of one-year treatment duration, 743 patients 18 years of age and older (mean age 43.1 years) with moderate persistent asthma were treated with ALVESCO 320 mcg twice daily and 742 were treated with a labeled dose of a comparator-inhaled corticosteroid appropriate for the patient population. Patients had an ophthalmology examination that included visual acuity, intraocular pressure measurement, and a slit lamp examination at baseline, 4, 8 and 12 months. Lens opacities were graded using the Lens Opacification System III. After 52 weeks, CLASS I effects (minimally detected changes) were recorded in 36.1% of the ALVESCO-treated patients and in 38.4% of patients treated with the comparator-inhaled corticosteroid. The more severe CLASS III effects were recorded in 8.1% of the ALVESCO-treated patients and 9.2% of patients treated with the comparator-inhaled corticosteroid. Of those patients having a CLASS III effect, the incidence of posterior sub-capsular opacities was 0.9% and 0.5% in the ALVESCO- and comparator-treated patients, respectively.</paragraph>
+                     </text>
+                     <effectiveTime value="20180305"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_e2ea6d6b-b3f3-4be5-b4bc-4aa2fdacfc9d">
+                     <id root="3a8b4338-891b-bc2f-e063-6394a90ab578"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.9 Paradoxical Bronchospasm</title>
+                     <text>
+                        <paragraph>As with other inhaled asthma medications, bronchospasm, with an immediate increase in wheezing, may occur after dosing. If bronchospasm occurs following dosing with ALVESCO, it should be treated immediately with a fast-acting inhaled bronchodilator. Treatment with ALVESCO should be discontinued and alternative treatment should be instituted.</paragraph>
+                     </text>
+                     <effectiveTime value="20230216"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_8c87111b-d19c-4324-92ef-ac6ee151e3bf">
+               <id root="3a8b5e6d-9b17-cc42-e063-6394a90aba09"/>
+               <code code="34084-4" codeSystem="2.16.840.1.113883.6.1" displayName="ADVERSE REACTIONS SECTION"/>
+               <title>6 ADVERSE REACTIONS</title>
+               <text>
+                  <paragraph>The following clinically significant adverse reactions are described elsewhere in the labeling:</paragraph>
+                  <list listType="unordered">
+                     <item>Oropharyngeal Candidiasis 
+   <content styleCode="italics">[see Warnings and Precautions ( 
+    <linkHtml href="#ID_28ae3eda-6ea2-486f-b0da-697ab6b4081a">5.1</linkHtml>)] 
+   </content>
+                     </item>
+                     <item>Immunosuppression and Risk of Infections 
+   <content styleCode="italics">[see Warnings and Precautions ( 
+    <linkHtml href="#ID_f4f9b92e-ecbb-4192-8c56-20815de07c7b">5.3</linkHtml>)] 
+   </content>
+                     </item>
+                     <item>Hypercorticism and Adrenal Suppression 
+   <content styleCode="italics">[see Warnings and Precautions ( 
+    <linkHtml href="#ID_f3a4665e-06d9-464c-a6c4-a9a523a8d1fa">5.5</linkHtml>)] 
+   </content>
+                     </item>
+                     <item>Reduction in Bone Mineral Density 
+   <content styleCode="italics">[see Warnings and Precautions ( 
+    <linkHtml href="#ID_ddca2108-0e3d-4a21-b8a5-6e5d180b04c4">5.6</linkHtml>)] 
+   </content>
+                     </item>
+                     <item>Growth Effects 
+   <content styleCode="italics">[see Warnings and Precautions ( 
+    <linkHtml href="#ID_65559f3f-ef44-457b-a1d4-f2ac5022bbac">5.7</linkHtml>)] 
+   </content>
+                     </item>
+                     <item>Glaucoma and Cataracts 
+   <content styleCode="italics">[see Warnings and Precautions ( 
+    <linkHtml href="#ID_57cc85c8-5b4c-46be-9480-5d9cefa87cfb">5.8</linkHtml>)] 
+   </content>
+                     </item>
+                  </list>
+               </text>
+               <effectiveTime value="20250228"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Most common adverse reactions (≥ 3%) are headache, nasopharyngitis, sinusitis, pharyngolaryngeal pain, upper respiratory infection, arthralgia, nasal congestion, pain in extremity and back pain. ( 
+    <linkHtml href="#ID_8c87111b-d19c-4324-92ef-ac6ee151e3bf">6</linkHtml>)
+   </paragraph>
+                        <paragraph>Other adverse reactions have been reported. ( 
+    <linkHtml href="#ID_8c87111b-d19c-4324-92ef-ac6ee151e3bf">6</linkHtml>)
+   </paragraph>
+                        <paragraph>
+                           <content styleCode="bold">To report SUSPECTED ADVERSE REACTIONS, contact</content>
+                           <content styleCode="bold">Covis Pharma at 1-877-411-2510</content>
+                           <content styleCode="bold">or FDA at 1-800-FDA-1088 or 
+     <linkHtml href="http://www.fda.gov/medwatch">www.fda.gov/medwatch.</linkHtml>
+                           </content>
+                        </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="ID_d92badad-3619-4572-b340-c6a7bbd8373f">
+                     <id root="3a8b4338-891d-bc2f-e063-6394a90ab578"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>6.1 Clinical Trial Experience</title>
+                     <text>
+                        <paragraph>The safety data described below for adult and pediatric patients 12 years of age and older reflect exposure to ALVESCO in doses ranging from 80 mcg to 640 mcg twice daily in five double-blind placebo-controlled clinical trials. Studies with once daily dosing are omitted from the safety database because the doses studied once daily are lower than the highest recommended twice daily doses. The five studies were of 12 to 16 weeks treatment duration, one of which included a safety extension follow-up of one year. In the 12 to 16 week treatment studies, 720 patients (298 males and 422 females) aged 12 years and older were exposed to ALVESCO. In the long-term safety trial, 197 patients (82 males and 115 females) with severe persistent asthma from one of the 12-week trials were re-randomized and treated for up to one year with ALVESCO 320 mcg twice daily.</paragraph>
+                        <paragraph>Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Adults and Pediatric Patients 12 Years of Age and Older</content>
+                        </paragraph>
+                        <paragraph>Four of the five trials included a total of 624 patients ages 12 years and older (359 females and 265 males) with asthma of varying severity who were treated with ALVESCO 80 mcg, 160 mcg, or 320 mcg twice daily for 12 to 16 weeks. These studies included patients previously using either controller therapy (predominantly inhaled corticosteroids) or reliever therapy (bronchodilator therapy alone). In these trials, the mean age was 39.1 years, and the majority of the patients (79.0%) were Caucasian. In these trials, 52.3%, 59.8% and 54.1% of the patients in the ALVESCO 80 mcg, 160 mcg, and 320 mcg treatment groups, respectively, had at least one adverse event compared to 58.0% in the placebo group.</paragraph>
+                        <paragraph>
+                           <linkHtml href="#_Ref495308304">Table 2</linkHtml>includes adverse reactions for the recommended doses of ALVESCO that occurred at an incidence of ≥ 3% in any of the ALVESCO groups and which were more frequent with ALVESCO compared to placebo.
+
+ </paragraph>
+                        <table ID="_Ref495308304" cellpadding="3.6pt" width="100%">
+                           <caption>Table 2: Adverse Reactions with ≥ 3% Incidence Reported in Patients ≥ 12 Years of Age with ALVESCO in US Placebo-Controlled Clinical Trials in Patients Previously on Bronchodilators and/or Inhaled Corticosteroids</caption>
+                           <col width="30%"/>
+                           <col width="14%"/>
+                           <col width="19%"/>
+                           <col width="19%"/>
+                           <col width="19%"/>
+                           <tbody>
+                              <tr styleCode="Toprule">
+                                 <td rowspan="2" valign="top">
+                                    <paragraph>Adverse Reaction</paragraph>
+                                 </td>
+                                 <td align="center" rowspan="2" valign="bottom">
+                                    <paragraph>Placebo 
+      <br/>  (N=507) 
+      <br/>  %
+     </paragraph>
+                                 </td>
+                                 <td align="center" colspan="3" styleCode="Botrule " valign="top">
+                                    <paragraph>
+                                       <content styleCode="bold">ALVESCO</content>
+                                    </paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="center" styleCode="Toprule Botrule " valign="bottom">
+                                    <paragraph>80 mcg BID 
+      <br/>  (N=325) 
+      <br/>  %
+     </paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Toprule Botrule " valign="bottom">
+                                    <paragraph>160 mcg BID 
+      <br/>  (N=127) 
+      <br/>  %
+     </paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Toprule Botrule " valign="bottom">
+                                    <paragraph>320 mcg BID 
+      <br/>  (N=172) 
+      <br/>  %
+     </paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Toprule " valign="top">
+                                    <paragraph>Headache</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Toprule " valign="middle">
+                                    <paragraph>7.3</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Toprule " valign="middle">
+                                    <paragraph>4.9</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Toprule " valign="middle">
+                                    <paragraph>11.0</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Toprule " valign="middle">
+                                    <paragraph>8.7</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top">
+                                    <paragraph>Nasopharyngitis</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>7.5</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>10.5</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>8.7</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>7.0</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top">
+                                    <paragraph>Sinusitis</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>3.0</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>3.1</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>5.5</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>5.2</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top">
+                                    <paragraph>Pharyngolaryngeal pain</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>4.3</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>4.3</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>2.4</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>4.7</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top">
+                                    <paragraph>Upper respiratory Inf.</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>6.5</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>7.1</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>8.7</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>4.1</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top">
+                                    <paragraph>Arthralgia</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>1.0</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>0.9</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>2.4</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>3.5</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top">
+                                    <paragraph>Nasal congestion</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>1.6</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>1.8</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>5.5</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>2.9</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top">
+                                    <paragraph>Pain in extremity</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>1.0</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>0.3</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>3.1</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>2.3</paragraph>
+                                 </td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td valign="top">
+                                    <paragraph>Back pain</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>2.0</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>0.6</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>3.1</paragraph>
+                                 </td>
+                                 <td align="center" valign="middle">
+                                    <paragraph>1.2</paragraph>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>The following adverse reactions occurred in these clinical trials using ALVESCO with an incidence of less than 1% and occurred at a greater incidence with ALVESCO than with placebo.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Infections and Infestations</content>: Oral candidiasis
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Respiratory Disorders</content>: Cough
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Gastrointestinal Disorders</content>: Dry mouth, nausea
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">General Disorders and Administrative Site Conditions</content>: Chest discomfort
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Respiratory, Thoracic, and Mediastinal Disorders</content>: Dysphonia, dry throat
+
+ </paragraph>
+                        <paragraph>The fifth study was a 12-week clinical trial in asthma patients 12 years of age and older who previously required oral corticosteroids (average daily dose of oral prednisone of 12 mg/day), in which the effects of ALVESCO 320 mcg twice daily (n = 47) and 640 mcg twice daily (n = 49) were compared with placebo (n = 45) for the frequency of reported adverse reactions. The following adverse reactions occurred at an incidence of ≥ 3% in the ALVESCO-treated patients and were more frequent compared to placebo: sinusitis, hoarseness, oral candidiasis, influenza, pneumonia, nasopharyngitis, arthralgia, back pain, musculoskeletal chest pain, headache, urticaria, dizziness, gastroenteritis, face edema, fatigue, and conjunctivitis.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Long-Term Clinical Trials Experience</content>
+                        </paragraph>
+                        <paragraph>A total of 197 patients 12 years of age and older (82 males and 115 females) from one of the 12-week treatment placebo-controlled studies were re-randomized to ciclesonide 320 mcg twice daily and followed for one year. The safety profile from the one-year follow-up was similar to that seen in the 12- and 16-week treatment studies.</paragraph>
+                     </text>
+                     <effectiveTime value="20230216"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_79072df9-53c4-4acb-91b1-81aa3b53a5a0">
+                     <id root="3a8b4338-891e-bc2f-e063-6394a90ab578"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>6.2 Post-marketing Experience</title>
+                     <text>
+                        <paragraph>In addition to adverse reactions identified from clinical trials, the following adverse reactions have been identified during worldwide post-marketing use of ciclesonide oral inhalation. Because these reactions are reported voluntarily from a population of uncertain size, it is not always possible to reliably estimate their frequency or establish a causal relationship to drug exposure.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Immune System Disorders</content>: Immediate or delayed hypersensitivity reactions such as angioedema with swelling of the lips, tongue and pharynx.
+
+ </paragraph>
+                     </text>
+                     <effectiveTime value="20230216"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_77d39a37-8230-4c1c-b1e9-b796b870a918">
+               <id root="3a8b4338-891f-bc2f-e063-6394a90ab578"/>
+               <code code="34073-7" codeSystem="2.16.840.1.113883.6.1" displayName="DRUG INTERACTIONS SECTION"/>
+               <title>7 DRUG INTERACTIONS</title>
+               <text>
+                  <paragraph>In clinical studies, concurrent administration of ciclesonide and other drugs commonly used in the treatment of asthma (albuterol, formoterol) had no effect on pharmacokinetics of des-ciclesonide
+ 
+  <content styleCode="italics">[see Clinical Pharmacology (
+  
+   <linkHtml href="#ID_07e1e4e1-4a02-4b63-b3a6-f53cc3831dd7">12.3</linkHtml>)]
+ 
+  </content>.
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="italics">In vitro</content>studies and clinical pharmacology studies suggested that des-ciclesonide has no potential for metabolic drug interactions or protein binding-based drug interactions
+ 
+  <content styleCode="italics">[see Clinical Pharmacology (
+  
+   <linkHtml href="#ID_07e1e4e1-4a02-4b63-b3a6-f53cc3831dd7">12.3</linkHtml>)]
+ 
+  </content>.
+
+ </paragraph>
+                  <paragraph>In a drug interaction study, co-administration of orally inhaled ciclesonide and oral ketoconazole, a potent inhibitor of cytochrome P450 3A4, increased the exposure (AUC) of des-ciclesonide by approximately 3.6-fold at steady state, while levels of ciclesonide remained unchanged.</paragraph>
+               </text>
+               <effectiveTime value="20180305"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_41d97d41-b1b5-4f7c-9752-7b4f3fddbeb7">
+               <id root="3a8b4338-8920-bc2f-e063-6394a90ab578"/>
+               <code code="43684-0" codeSystem="2.16.840.1.113883.6.1" displayName="USE IN SPECIFIC POPULATIONS SECTION"/>
+               <title>8 USE IN SPECIFIC POPULATIONS</title>
+               <effectiveTime value="20230216"/>
+               <component>
+                  <section ID="ID_8e4e5a86-42fd-4c20-b505-500fcaaa870c">
+                     <id root="3a8b4338-8921-bc2f-e063-6394a90ab578"/>
+                     <code code="42228-7" codeSystem="2.16.840.1.113883.6.1" displayName="PREGNANCY SECTION"/>
+                     <title>8.1 Pregnancy</title>
+                     <effectiveTime value="20230216"/>
+                     <component>
+                        <section ID="ID_dc755f33-1d0c-4715-8277-728237a58cf1">
+                           <id root="3a8b4338-8922-bc2f-e063-6394a90ab578"/>
+                           <code code="69759-9" codeSystem="2.16.840.1.113883.6.1" displayName="RISKS"/>
+                           <title>
+                              <content styleCode="underline">Risk Summary</content>
+                           </title>
+                           <text>
+                              <paragraph>There are no available data on ALVESCO use in pregnant women to assess a drug associated risk of major birth defects, miscarriage, or adverse maternal or fetal outcomes. There is low systemic exposure following ALVESCO oral inhalation administration at the recommended dose
+ 
+  <content styleCode="italics">[see Clinical Pharmacology (
+  
+   <linkHtml href="#ID_07e1e4e1-4a02-4b63-b3a6-f53cc3831dd7">12.3</linkHtml>)]
+ 
+  </content>.
+
+ </paragraph>
+                              <paragraph>In animal reproduction studies, ciclesonide administered by the oral route to pregnant rats during the period of organogenesis did not cause any evidence of fetal harm at doses up to 15 times the maximum recommended human daily oral inhalation dose (MRHDOID) of 640 mcg/day. Teratogenicity, characteristic of corticosteroids, decreased body weight and/or skeletal variations were observed in rabbit fetuses following administration of ciclesonide to pregnant rabbits by the subcutaneous route during the period of organogenesis at doses 0.15 times the MRHDOID and higher on a mcg/m
+ 
+  <sup>2</sup>basis (see Data). No evidence of fetal harm was observed in rabbits at doses of 0.03 times the MRHDOID.
+
+ </paragraph>
+                              <paragraph>All pregnancies have a background risk of birth defect, loss, or other adverse outcomes. The estimated background risk of major birth defects and miscarriage for the indicated population is unknown. In the United States general population, the estimated background risk of major birth defects and miscarriage in clinically recognized pregnancies is 2% to 4% and 15% to 20%, respectively.</paragraph>
+                           </text>
+                           <effectiveTime value="20230216"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="ID_885bf153-48f9-472e-909f-79921e82deef">
+                           <id root="3a8b4338-8923-bc2f-e063-6394a90ab578"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <title>
+                              <content styleCode="underline">Clinical Considerations</content>
+                           </title>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="italics">Disease-Associated Maternal and/or Embryo/Fetal Risk</content>
+                              </paragraph>
+                              <paragraph>In women with poorly or moderately controlled asthma, there is an increased risk of several perinatal outcomes such as pre‑eclampsia in the mother and prematurity, low birth weight, and small for gestational age in the neonate. Pregnant women with asthma should be closely monitored and medication adjusted as necessary to maintain optimal asthma control.</paragraph>
+                           </text>
+                           <effectiveTime value="20230216"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="ID_ed3023a6-f3c2-4090-abe1-f8a2626b05e1">
+                           <id root="3a8b4338-8924-bc2f-e063-6394a90ab578"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <title>
+                              <content styleCode="underline">Data</content>
+                           </title>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="italics">Animal Data</content>
+                              </paragraph>
+                              <paragraph>In an embryo-fetal development study in pregnant rats dosed by the oral route during the period of organogenesis from gestation days 6 to 15, ciclesonide did not cause any evidence of fetal harm at doses up to approximately 15 times the MRHDOID in adults (on a mcg/m
+ 
+  <sup>2</sup>basis with maternal oral dose up to 900 mcg/kg/day). Maternal toxicity, as evidenced by decreased body weight gain, was observed at approximately 15 times the MRHDOID in adults (on a mcg/m
+ 
+  <sup>2</sup>basis at a maternal dose of 900 mcg/kg/day); however, no adverse effects were observed at doses 5 times the MRHDOID and lower (on a mcg/m
+ 
+  <sup>2</sup>basis with maternal oral doses of 300 mcg/kg/day and lower).
+
+ </paragraph>
+                              <paragraph>In two embryo-fetal development studies in pregnant rabbits dosed by the subcutaneous route during the period of organogenesis from gestation days 6 to 18, ciclesonide caused acampsia (flexures of legs) in fetuses at doses 0.15 times the MRHDOID and higher (on a mcg/m
+ 
+  <sup>2</sup>basis with maternal oral doses of 5 mcg/kg/day and higher), decreased body weight, cleft palate, enlarged fontanelle, parchment-like skin, and incomplete ossification of bones in fetuses at doses 0.76 times the MRHDOID (on a mcg/m
+ 
+  <sup>2</sup>basis with a maternal subcutaneous dose of 25 mcg/kg/day), and embryo-fetal death at doses 3 times the MRHDOID and higher (on a mcg/m
+ 
+  <sup>2</sup>basis with maternal subcutaneous doses of 100 mcg/kg/day and higher). No evidence of fetal harm was observed at a dose 0.03 times the MRHDOID in adults (on a mcg/m
+ 
+  <sup>2</sup>basis at a maternal subcutaneous dose of 1 mcg/kg/day). Maternal toxicity was observed at doses 3 times the MRHDOID in adults (on a mcg/m
+ 
+  <sup>2</sup>basis with maternal subcutaneous doses of 100 mcg/kg/day and lower); however, no evidence of toxicity was observed at doses 0.76 times the MRHDOID and lower (on a mcg/m
+ 
+  <sup>2</sup>basis with maternal subcutaneous doses of 25 mcg/kg/day and lower).
+
+ </paragraph>
+                              <paragraph>In a prenatal and postnatal development study in pregnant rats dosed by the oral route from gestation day 6 to lactation day 20, ciclesonide produced no adverse developmental effects on offspring at doses up to approximately 15 times the MRHDOID (on a mcg/m
+ 
+  <sup>2</sup>basis at maternal oral doses up to 900 mcg/kg/day).
+
+ </paragraph>
+                           </text>
+                           <effectiveTime value="20230216"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_944cc6ed-c635-4e04-89e9-7ab172a8af49">
+                     <id root="3a8b4338-8925-bc2f-e063-6394a90ab578"/>
+                     <code code="77290-5" codeSystem="2.16.840.1.113883.6.1" displayName="LACTATION SECTION"/>
+                     <title>8.2 Lactation</title>
+                     <effectiveTime value="20230216"/>
+                     <component>
+                        <section ID="ID_a8b7db37-72db-4ff5-93df-de43cb1aabb6">
+                           <id root="3a8b4338-8926-bc2f-e063-6394a90ab578"/>
+                           <code code="69759-9" codeSystem="2.16.840.1.113883.6.1" displayName="RISKS"/>
+                           <title>
+                              <content styleCode="underline">Risk Summary</content>
+                           </title>
+                           <text>
+                              <paragraph>There are no data on the presence of ciclesonide or its metabolite in human milk, the effects on the breastfed infant, or the effects on milk production. It is not known whether oral inhalation administration of ciclesonide at the recommended dose could result in sufficient systemic absorption to produce detectable quantities in human milk
+ 
+  <content styleCode="italics">[see</content>
+                                 <content styleCode="italics">Clinical Pharmacology (
+  
+   <linkHtml href="#ID_07e1e4e1-4a02-4b63-b3a6-f53cc3831dd7">12.3</linkHtml>)]
+ 
+  </content>. The developmental and health benefits of breastfeeding should be considered along with the mother’s clinical need for ALVESCO, and any potential adverse effects on the breastfed infant from ALVESCO, or from the underlying maternal condition.
+
+ </paragraph>
+                           </text>
+                           <effectiveTime value="20230216"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="ID_fd2141d6-8b55-4d9c-9855-45656a0d5882">
+                           <id root="3a8b4338-8927-bc2f-e063-6394a90ab578"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <title>
+                              <content styleCode="underline">Clinical Considerations</content>
+                           </title>
+                           <text>
+                              <paragraph>The molecular weight of the prodrug ciclesonide (approximately 541 g/mol) is small enough to be excreted into breast milk; however, its high plasma protein binding affinity and very short half-life suggests that minimal amounts will be present within the milk. Conversely, the half-life of the active metabolite des-ciclesonide (approximately 471 g/mol) suggests that exposure to the nursing infant will be greater than that of the prodrug ciclesonide. Although ciclesonide and des-ciclesonide have negligible oral bioavailability (both less than 1% for each) due to low gastrointestinal absorption and high first-pass metabolism, the relative anti‑inflammatory activity of des-ciclesonide is 120 times greater than that of the ciclesonide and 12 times greater than that of dexamethasone
+ 
+  <content styleCode="italics">[see</content>
+                                 <content styleCode="italics">Clinical Pharmacology (
+  
+   <linkHtml href="#ID_b9d21bfc-9552-4a91-881e-5a88fb65db62">12.1</linkHtml>)]
+ 
+  </content>. The effects of this exposure on a nursing infant are unknown, however, like all corticosteroids, suppression of the HPA function is a potential complication.
+
+ </paragraph>
+                           </text>
+                           <effectiveTime value="20230216"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="ID_6eb403a2-b920-4e5c-8022-65f6377ac877">
+                           <id root="3a8b4338-8928-bc2f-e063-6394a90ab578"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <title>
+                              <content styleCode="underline">Data</content>
+                           </title>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="italics">Animal Data</content>
+                              </paragraph>
+                              <paragraph>A study with
+ 
+  <sup>14</sup>C-ciclesonide showed milk exposure of rat pups to 0.006% of the dose secreted in milk.
+
+ </paragraph>
+                           </text>
+                           <effectiveTime value="20230216"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_a911b174-f649-4f0c-b2e4-4733fb9bed0d">
+                     <id root="3a8b4338-8929-bc2f-e063-6394a90ab578"/>
+                     <code code="34081-0" codeSystem="2.16.840.1.113883.6.1" displayName="PEDIATRIC USE SECTION"/>
+                     <title>8.4 Pediatric Use</title>
+                     <text>
+                        <paragraph>The safety and effectiveness of ALVESCO for the maintenance treatment of asthma as prophylactic therapy have been established in pediatric patients aged 12 years and older. Use of ALVESCO for this indication is supported by evidence from randomized, double-blind, placebo-controlled, parallel-group clinical trials in adult and pediatric patients 12 years of age and older with mild persistent to severe persistent asthma
+ 
+  <content styleCode="italics">[see Clinical Studies (
+  
+   <linkHtml href="#ID_f58920af-090d-485c-8968-f217381dded6">14</linkHtml>)]
+ 
+  </content>.
+
+ </paragraph>
+                        <paragraph>The safety and effectiveness of ALVESCO have not been established in pediatric patients younger than 12 years of age.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Pediatric Patients 4 to 11 years of age</content>
+                        </paragraph>
+                        <paragraph>Effectiveness was not demonstrated in two randomized, double-blind, placebo-controlled studies that were conducted to evaluate the efficacy of ALVESCO 40, 80, or 160 mcg administered once daily for 12 weeks in patients 4 to 11 years of age with asthma. These studies included 1018 patients previously using either controller therapy (predominately inhaled corticosteroids) or reliever therapy (bronchodilator therapy alone). The patients had a mean baseline percent predicted FEV
+ 
+  <sub>1</sub>of 68%. The primary efficacy endpoint was morning pre-dose FEV
+ 
+  <sub>1</sub>. Other measures of efficacy included AM PEF, asthma symptoms, and rescue albuterol use. The studies showed inconsistent results and did not establish the efficacy of ALVESCO in patients 4 to 11 years of age.
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Pediatric Patients 2 to 6 years of age</content>
+                        </paragraph>
+                        <paragraph>Effectiveness was not demonstrated in one randomized, double-blind, placebo-controlled study that was conducted to evaluate the efficacy of ALVESCO 40, 80, and 160 mcg administered once daily for 24 weeks in 992 patients 2 to 6 years of age with persistent asthma. The primary efficacy endpoint was time to the first severe asthma exacerbation [defined as worsening of asthma which required treatment with systemic (including oral) steroids or any other asthma medication besides treatment medication and rescue medication] or lack of improvement, whichever occurred first. No statistically significant differences were observed for the individual comparisons of ALVESCO 40, 80, and 160 mcg to placebo. Results from this study did not establish efficacy of ALVESCO in patients 2 to 6 years of age.</paragraph>
+                        <paragraph>Studies in children under 2 years of age have not been conducted given the lack of efficacy observed in patients 2 to 11 years of age.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Effect on Growth</content>
+                        </paragraph>
+                        <paragraph>Controlled clinical studies have shown that orally inhaled corticosteroids may cause a reduction in growth velocity in pediatric patients. In these studies, the mean reduction in growth velocity was approximately one centimeter per year (range 0.3 to 1.8 cm per year) and appears to be related to dose and duration of exposure. This effect has been observed in the absence of laboratory evidence of hypothalamic-pituitary-adrenal (HPA) axis suppression, suggesting that growth velocity is a more sensitive indicator of systemic corticosteroid exposure in pediatric patients than some commonly used tests of HPA axis function. The long-term effects of this reduction in growth velocity associated with orally inhaled corticosteroids, including the impact on final adult height, are unknown. The potential for "catch up" growth following discontinuation of treatment with orally inhaled corticosteroids has not been adequately studied. The growth of pediatric patients receiving orally inhaled corticosteroids, including ALVESCO, should be monitored routinely (e.g., via stadiometry).</paragraph>
+                        <paragraph>A 52-week, multi-center, double-blind, randomized, placebo-controlled, parallel-group study was conducted to assess the effect of orally inhaled ciclesonide on growth rate in 609 pediatric patients with mild persistent asthma, aged 5 to 8.5 years. Treatment groups included orally inhaled ciclesonide 40 mcg or 160 mcg or placebo given once daily. Growth was measured by stadiometer height during the baseline, treatment and follow-up periods. The primary comparison was the difference in growth rates between ciclesonide 40 mcg and 160 mcg and placebo groups. Conclusions cannot be drawn from this study because compliance could not be assured. There was no difference in efficacy measures between the placebo and the ALVESCO groups. Ciclesonide blood levels were also not measured during the one-year treatment period.</paragraph>
+                        <paragraph>The potential growth effects of prolonged treatment with orally inhaled corticosteroids should be weighed against clinical benefits obtained and the availability of safe and effective noncorticosteroid treatment alternatives. To minimize the systemic effects of orally inhaled corticosteroids, including ALVESCO, each patient should be titrated to his/her lowest effective dose.</paragraph>
+                     </text>
+                     <effectiveTime value="20230216"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_7e6ba3ee-00cc-4e4c-9ecb-02419f145f42">
+                     <id root="3a8b4338-892a-bc2f-e063-6394a90ab578"/>
+                     <code code="34082-8" codeSystem="2.16.840.1.113883.6.1" displayName="GERIATRIC USE SECTION"/>
+                     <title>8.5 Geriatric Use</title>
+                     <text>
+                        <paragraph>Clinical studies of ALVESCO did not include sufficient numbers of patients aged 65 years and older to determine whether they respond differently than younger patients. Other reported clinical experience has not identified differences in responses between the elderly and younger patients. In general, dose selection for an elderly patient should be cautious, usually starting at the low end of the dosing range reflecting the greater frequency of decreased hepatic, renal, or cardiac function and of concomitant disease or other drug therapy.</paragraph>
+                     </text>
+                     <effectiveTime value="20180305"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_ee03ab34-fb36-45a6-af7c-b59f4c09dd5f">
+               <id root="3a8b4338-892b-bc2f-e063-6394a90ab578"/>
+               <code code="34088-5" codeSystem="2.16.840.1.113883.6.1" displayName="OVERDOSAGE SECTION"/>
+               <title>10 OVERDOSAGE</title>
+               <text>
+                  <paragraph>Chronic overdosage may result in signs/symptoms of hypercorticism
+ 
+  <content styleCode="italics">[see Warnings and Precautions (
+  
+   <linkHtml href="#ID_f3a4665e-06d9-464c-a6c4-a9a523a8d1fa">5.5</linkHtml>)]
+ 
+  </content>.
+
+ </paragraph>
+               </text>
+               <effectiveTime value="20230216"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_4a9c1755-52eb-4dde-8493-3a8a91c1cbef">
+               <id root="3a8b4338-892c-bc2f-e063-6394a90ab578"/>
+               <code code="34089-3" codeSystem="2.16.840.1.113883.6.1" displayName="DESCRIPTION SECTION"/>
+               <title>11 DESCRIPTION</title>
+               <text>
+                  <paragraph>The active component of ALVESCO 80 mcg, and ALVESCO 160 mcg is ciclesonide, a non-halogenated glucocorticoid having the chemical name pregna-1,4-diene-3,20-dione, 16,17-[[(R)-cyclohexylmethylene]bis(oxy)]-11-hydroxy-21-(2-methyl-1-oxopropoxy)-,(11β,16α). The empirical formula is C
+ 
+  <sub>32</sub>H
+ 
+  <sub>44</sub>O
+ 
+  <sub>7</sub>and its molecular weight is 540.7. Its structural formula is as follows:
+
+ </paragraph>
+                  <renderMultiMedia ID="id1400182648" referencedObject="CAC9725B-F2EC-4EB5-BAEB-0FDEA5398422"/>
+                  <paragraph>Ciclesonide is a white to yellow-white powder. It is soluble in dehydrated alcohol, acetone, dichloromethane, and chloroform.</paragraph>
+                  <paragraph>ALVESCO 80 mcg and ALVESCO 160 mcg are pressurized, metered-dose aerosol units fitted with a dose indicator. ALVESCO is intended for oral inhalation only. Each unit contains a solution of ciclesonide in propellant HFA-134a (1,1,1,2 tetrafluoroethane) and ethanol. After priming, ALVESCO 80 mcg delivers 100 mcg from the valve and 80 mcg of ciclesonide from the actuator. ALVESCO 160 mcg delivers 200 mcg from the valve and 160 mcg of ciclesonide from the actuator. This product delivers 50 microliters (59.3 milligrams) of solution as a fine particle mist from the valve with each actuation. The actual amount of drug delivered to the lung may depend on patient factors, such as the coordination between the actuation of the device and inspiration through the delivery system. ALVESCO should be “primed” by actuating 3 times prior to using the first dose from a new canister or when the inhaler has not been used for more than 10 days. Avoid spraying in the eyes or face while priming ALVESCO.</paragraph>
+               </text>
+               <effectiveTime value="20230216"/>
+               <component>
+                  <observationMedia ID="CAC9725B-F2EC-4EB5-BAEB-0FDEA5398422">
+                     <text>Structural Formula</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-01.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_c4bc266f-7ee7-4a8e-99f6-b75d57d86ade">
+               <id root="3a8b4338-892d-bc2f-e063-6394a90ab578"/>
+               <code code="34090-1" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+               <title>12 CLINICAL PHARMACOLOGY</title>
+               <effectiveTime value="20230216"/>
+               <component>
+                  <section ID="ID_b9d21bfc-9552-4a91-881e-5a88fb65db62">
+                     <id root="3a8b4338-892e-bc2f-e063-6394a90ab578"/>
+                     <code code="43679-0" codeSystem="2.16.840.1.113883.6.1" displayName="MECHANISM OF ACTION SECTION"/>
+                     <title>12.1 Mechanism of Action</title>
+                     <text>
+                        <paragraph>Ciclesonide is a prodrug that is enzymatically hydrolyzed to a pharmacologically active metabolite, C21-desisobutyryl-ciclesonide (des-ciclesonide or RM1) following oral inhalation. Des-ciclesonide has anti-inflammatory activity with affinity for glucocorticoid receptors that is 120 times greater than the parent compound and 12 times greater than dexamethasone. The clinical significance of these findings is unknown.</paragraph>
+                        <paragraph>The precise mechanisms of corticosteroid action in asthma are unknown. Inflammation is recognized as an important component in the pathogenesis of asthma. Corticosteroids have been shown to have a wide range of inhibitory activities against multiple cell types (e.g., mast cells, eosinophils, basophils, lymphocytes, macrophages, and neutrophils) and mediators (e.g., histamine, eicosanoids, leukotrienes, and cytokines) involved in the asthmatic response. These anti-inflammatory actions of corticosteroids may contribute to their efficacy in asthma. Though effective for the treatment of asthma, corticosteroids do not affect asthma symptoms immediately. Individual patients will experience a variable time to onset and degree of symptom relief. Maximum benefit may not be achieved for four weeks or longer after starting treatment. When corticosteroids are discontinued, asthma stability may persist for several days or longer.</paragraph>
+                     </text>
+                     <effectiveTime value="20180305"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_0f76a53b-afcd-4eac-a4ff-5400653cc070">
+                     <id root="3a8b4338-892f-bc2f-e063-6394a90ab578"/>
+                     <code code="43681-6" codeSystem="2.16.840.1.113883.6.1" displayName="PHARMACODYNAMICS SECTION"/>
+                     <title>12.2 Pharmacodynamics</title>
+                     <text>
+                        <paragraph>The effect of ciclesonide by oral inhalation on the HPA axis was assessed in adults with mild asthma in a 29-day placebo-controlled study. Twenty-four-hour urinary-free cortisol was assessed in a total of 59 adults who were randomized to 320 mcg or 640 mcg ALVESCO, a comparator corticosteroid, or placebo twice daily. At the end of 29 days of treatment, the mean (SE) change from baseline in 24-hr urinary-free cortisol was -8.69 (5.6) mcg/day, -4.01 (5.03) mcg/day, and -8.84 (5.02) mcg/day for the placebo, ALVESCO 640 mcg/day, and ALVESCO 1280 mcg/day, respectively. The difference from placebo for the change from baseline in 24-hr urinary-free cortisol was +4.7 mcg/day [95% CI: -10.58; 19.93] and -0.16 mcg/day [95% CI: -15.20; 14.89] for the 640 mcg/day or 1280 mcg/day treatments, respectively. The effects observed with the comparator corticosteroid validate the sensitivity of the study to assess the effect of ciclesonide on the HPA axis.</paragraph>
+                     </text>
+                     <effectiveTime value="20180305"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_07e1e4e1-4a02-4b63-b3a6-f53cc3831dd7">
+                     <id root="3a8b4338-8930-bc2f-e063-6394a90ab578"/>
+                     <code code="43682-4" codeSystem="2.16.840.1.113883.6.1" displayName="PHARMACOKINETICS SECTION"/>
+                     <title>12.3 Pharmacokinetics</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Absorption</content>: Ciclesonide and des-ciclesonide have negligible oral bioavailability (both are less than 1%) due to low gastrointestinal absorption and high first-pass metabolism. Serum concentrations of ciclesonide and des-ciclesonide were measured and compared following oral inhalation of 1280 mcg ALVESCO and intravenous administration of 800 mcg ciclesonide. The absolute bioavailability of ciclesonide was 22% and the relative systemic exposure of des-ciclesonide was 63%. The mean C
+ 
+  <sub>max</sub>for des-ciclesonide was 1.02 ng/mL (range 0.6-1.5 ng/mL) in asthmatic patients following a single dose of 1280 mcg by oral inhalation. The mean C
+ 
+  <sub>max</sub>(0.369 ng/mL) and AUC
+ 
+  <sub>0-∞</sub>(2.18 ng·hr/mL) of des‑ciclesonide following multiple dose administration of ciclesonide 320 mcg once daily increased up to 26% compared to single dose administration.
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Distribution</content>: Following intravenous administration of 800 mcg of ciclesonide, the volumes of distribution of ciclesonide and des-ciclesonide was approximately 2.9 L/kg and 12.1 L/kg, respectively. The percentage of ciclesonide and des-ciclesonide bound to human plasma proteins averaged ≥ 99% each, with ≤ 1% of unbound drug detected in the systemic circulation. Des-ciclesonide is not significantly bound to human transcortin.
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Elimination</content>: Following intravenous administration of 800 mcg of ciclesonide, the clearances of ciclesonide and des-ciclesonide were high (approximately 152 L/L/hr and 228 L/L/hr, respectively).
+ 
+  <sup>14</sup>C-labeled ciclesonide was predominantly excreted via the feces after intravenous administration (66%) indicating that excretion through bile is the major route of elimination. Approximately 20% or less of des-ciclesonide was excreted in the urine. The mean half-life of ciclesonide and des-ciclesonide was 0.71 hours and 6 to 7 hours, respectively. T
+ 
+  <sub>max</sub>of des-ciclesonide occurs at 1.04 hours following inhalation of ciclesonide.
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Metabolism</content>: Ciclesonide is hydrolyzed to a biologically active metabolite, des-ciclesonide, by esterases. Des-ciclesonide undergoes further metabolism in the liver to additional metabolites mainly by the cytochrome P450 (CYP) 3A4 isozyme and to a lesser extent by CYP 2D6. The full range of potentially active metabolites of ciclesonide has not been characterized. After intravenous administration of
+ 
+  <sup>14</sup>C-ciclesonide, 19.3% of the resulting radioactivity in the plasma is accounted for by ciclesonide or des-ciclesonide; the remainder may be a result of other, as yet, unidentified multiple metabolites.
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Specific Populations</content>: Population pharmacokinetic analysis showed that characteristics of des-ciclesonide after oral inhalation of ciclesonide were not appreciably influenced by a variety of subject characteristics such as body weight, age, race, and gender.
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Patients with Renal Impairment</content>: Studies in renally-impaired patients were not conducted since renal excretion of des-ciclesonide is a minor route of elimination (≤ 20%).
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Patients with Hepatic Impairment</content>: Compared to healthy subjects, the systemic exposure of des-ciclesonide (C
+ 
+  <sub>max</sub>and AUC) in patients with moderate to severe liver impairment increased in the range of 1.4 to 2.7 fold after 1280 mcg ex-actuator ciclesonide by oral inhalation. Dose adjustment in patients with liver impairment is not necessary.
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Drug Interaction Studies</content>: In a drug interaction study, co-administration of orally inhaled ciclesonide and oral ketoconazole, a potent inhibitor of cytochrome P450 3A4, increased the exposure (AUC) of ciclesonide active metabolite, des-ciclesonide, by approximately 3.6-fold at steady state, while levels of ciclesonide remained unchanged
+ 
+  <content styleCode="italics">[see Drug Interactions (
+  
+   <linkHtml href="#ID_77d39a37-8230-4c1c-b1e9-b796b870a918">7</linkHtml>)]
+ 
+  </content>.
+
+ </paragraph>
+                        <paragraph>In another single-dose drug interaction study, co-administration of orally inhaled ciclesonide and oral erythromycin, an inhibitor of cytochrome P450 3A4, had no effect on the pharmacokinetics of either ciclesonide and the active metabolite, des-ciclesonide, or erythromycin.</paragraph>
+                        <paragraph>Based on
+ 
+  <content styleCode="italics">in vitro</content>studies in human liver microsomes, des-ciclesonide had no significant potential to inhibit or induce the metabolism of other drugs metabolized by CYP450 enzymes. The inhibitory potential of ciclesonide on CYP450 isoenzymes has not been studied. Based on
+ 
+  <content styleCode="italics">in vitro</content>human hepatocyte studies, ciclesonide and des-ciclesonide had no potential to induce major CYP450 isozymes.
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">In vitro</content>studies demonstrated that the plasma protein binding of des-ciclesonide was not affected by warfarin or salicylic acid, indicating no potential for protein binding-based drug interactions.
+
+ </paragraph>
+                        <paragraph>In a population pharmacokinetic analysis including 98 subjects, co-administration of ALVESCO and albuterol had no effect on the pharmacokinetics of des-ciclesonide.</paragraph>
+                        <paragraph>Concomitant administration of ALVESCO (640 mcg) and formoterol (24 mcg) did not change the pharmacokinetics of either des-ciclesonide or formoterol.</paragraph>
+                     </text>
+                     <effectiveTime value="20230216"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_ee9d8114-a0a6-444f-93ae-07414e3eea5c">
+               <id root="3a8b4338-8931-bc2f-e063-6394a90ab578"/>
+               <code code="43680-8" codeSystem="2.16.840.1.113883.6.1" displayName="NONCLINICAL TOXICOLOGY SECTION"/>
+               <title>13 NONCLINICAL TOXICOLOGY</title>
+               <effectiveTime value="20230216"/>
+               <component>
+                  <section ID="ID_9edd415e-e9c2-4b67-9069-1fb1f32c235a">
+                     <id root="3a8b4338-8932-bc2f-e063-6394a90ab578"/>
+                     <code code="34083-6" codeSystem="2.16.840.1.113883.6.1" displayName="CARCINOGENESIS &amp; MUTAGENESIS &amp; IMPAIRMENT OF FERTILITY SECTION"/>
+                     <title>13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility</title>
+                     <text>
+                        <paragraph>Two-year carcinogenicity studies in B6C3F1 mice and Wistar rats were conducted to assess the carcinogenic potential of ciclesonide. Ciclesonide demonstrated no tumorigenic potential in a study with mice that received oral doses up to 900 mcg/kg/day (approximately 7 times the MRHDOID in adults and pediatric patients ≥ 12 years of age on a mcg/m
+ 
+  <sup>2</sup>basis) and a study with rats that received inhalation doses up to 193 mcg/kg/day (approximately 3 times the MRHDOID in adults and pediatric patients ≥ 12 years of age on a mcg/m
+ 
+  <sup>2</sup>basis).
+
+ </paragraph>
+                        <paragraph>Ciclesonide was not mutagenic in an Ames test or in the Chinese hamster lung V79 cell/hypoxanthine-guanine phosphoribosyl transferase (HGPRT) forward mutation assay and was not clastogenic in a human lymphocyte chromosomal aberration assay or in an
+ 
+  <content styleCode="italics">in vitro</content>micronucleus test. However, ciclesonide was clastogenic in an
+ 
+  <content styleCode="italics">in vivo</content>mouse micronucleus test. The concurrent reference corticosteroid (dexamethasone) in this study showed similar findings.
+
+ </paragraph>
+                        <paragraph>Fertility and reproductive performance were unaffected in male and female rats dosed by the oral route up to 900 mcg/kg/day (approximately 15 times the MRHDOID in adults based on mcg/m
+ 
+  <sup>2</sup>).
+
+ </paragraph>
+                     </text>
+                     <effectiveTime value="20230216"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_f58920af-090d-485c-8968-f217381dded6">
+               <id root="3a8b4338-8933-bc2f-e063-6394a90ab578"/>
+               <code code="34092-7" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL STUDIES SECTION"/>
+               <title>14 CLINICAL STUDIES</title>
+               <effectiveTime value="20230216"/>
+               <component>
+                  <section ID="ID_3793c26a-170c-4bb0-9064-90933b6bdbf9">
+                     <id root="3a8b4338-8934-bc2f-e063-6394a90ab578"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>14.1 Asthma</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Adults and Pediatric Patients 12 Years of Age and Older</content>
+                        </paragraph>
+                        <paragraph>The efficacy of ALVESCO was evaluated in six randomized, double-blind, placebo-controlled, parallel-group clinical trials in adult and pediatric patients 12 years of age and older with mild persistent to severe persistent asthma. The six trials included two trials in which patients were treated with ALVESCO administered once daily for 12 weeks, two trials in which patients were treated with ALVESCO twice daily for 12 weeks, and two trials in which patients were treated with ALVESCO using once daily and twice daily dosing regimens for 12 or 16 weeks. These trials included a total of 2843 patients (1167 males and 1676 females) of whom 296 were pediatric patients 12 to 17 years of age. The primary efficacy endpoint in four of the six trials was the mean change from baseline in pre-dose FEV
+ 
+  <sub>1</sub>at endpoint (last observation). FEV
+ 
+  <sub>1</sub>was measured prior to the morning dose of study medication (at the end of the 24-hour dosing interval for once daily administration, and at the end of the 12-hour dosing interval for twice daily administration). In one of the six trials, the primary endpoint was the change from baseline in the average of the pre-dose FEV
+ 
+  <sub>1</sub>at Weeks 12 and 16, and in another trial, reduction of oral corticosteroid use was the primary efficacy endpoint. Additional efficacy variables were asthma symptoms, use of albuterol for rescue, AM PEF, nighttime awakenings, and withdrawal due to asthma worsening.
+
+ </paragraph>
+                        <paragraph>The two once daily dosing trials were identically designed and were conducted to evaluate the efficacy of ALVESCO 80, 160, and 320 mcg given once daily in the morning for 12 weeks in patients with mild to moderate asthma maintained on inhaled bronchodilators and/or corticosteroids. The results of these trials, along with other trials that explored twice daily dosing, indicate that once daily dosing is not the optimum dosing regimen for ALVESCO.</paragraph>
+                        <paragraph>Four trials were designed to evaluate the efficacy of ALVESCO administered twice daily in patients with asthma who were previously maintained on bronchodilators alone, patients who were previously maintained on inhaled corticosteroids, and patients who were previously maintained on oral corticosteroids.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Patients Previously Maintained on Bronchodilators Alone</content>
+                        </paragraph>
+                        <paragraph>The efficacy of ALVESCO was studied in a randomized, double-blind, placebo-controlled trial in 691 patients with mild-to-moderate persistent asthma (mean baseline percent predicted FEV
+ 
+  <sub>1</sub>of 72%) previously using reliever therapy (bronchodilator therapy alone). In this trial, patients were treated with ALVESCO 160 mcg once daily in the morning for 16 weeks, ALVESCO 80 mcg twice daily for 16 weeks, or ALVESCO 80 mcg twice daily for 4 weeks followed by ALVESCO 160 mcg once daily in the morning for 12 weeks or placebo for 16 weeks. Compared to placebo, all ALVESCO doses showed statistically significant improvement at Week 16 in AM pre-dose FEV
+ 
+  <sub>1</sub>. However, the increase in AM pre-dose FEV
+ 
+  <sub>1</sub>in the patients treated with ALVESCO 80 mcg twice daily was significantly greater than that observed in patients treated with ALVESCO 160 mcg administered once daily. Compared to placebo, increases in AM pre-dose FEV
+ 
+  <sub>1</sub>were 0.12 L or 5.0% for ALVESCO 160 mcg once daily, 0.24 L or 10.4% for ALVESCO 80 mcg twice daily, 0.13 L or 5.0% for ALVESCO 80 mcg twice daily for 4 weeks followed by ALVESCO 160 mcg once daily. Other measures of asthma control, AM PEF, and need for rescue albuterol also improved in all the ALVESCO treatment groups compared to placebo but the improvement was greatest with the ALVESCO 80 mcg twice daily treatment arm. Discontinuations from the study for lack of efficacy were lower in the ALVESCO treatment groups compared to placebo. Fewer patients receiving ALVESCO experienced asthma worsening than did patients receiving placebo. The AM pre-dose FEV
+ 
+  <sub>1</sub>results are shown in
+ 
+  <linkHtml href="#id-1041352002">Figure 1</linkHtml>below.
+
+ </paragraph>
+                        <renderMultiMedia ID="id-1041352002" referencedObject="BF6B533D-CDC8-47B0-B56E-299FEED63E56"/>
+                        <paragraph>
+                           <content styleCode="underline">Patients Previously Maintained on Inhaled Corticosteroids</content>
+                        </paragraph>
+                        <paragraph>The efficacy of ALVESCO in asthma patients previously maintained on inhaled corticosteroids was evaluated in two randomized, double-blind, placebo-controlled trials of 12-weeks treatment duration. In one trial, asthmatic patients with mild to moderate persistent asthma (mean baseline percent predicted FEV
+ 
+  <sub>1</sub>of 79%), previously maintained on controller therapy (predominantly inhaled corticosteroids) were treated with ALVESCO 160 mcg once daily in the morning, ALVESCO 80 mcg twice daily or placebo.
+
+ </paragraph>
+                        <paragraph>The AM pre-dose FEV
+ 
+  <sub>1</sub>results are shown in
+ 
+  <linkHtml href="#id-1197923828">Figure 2</linkHtml>below.
+
+ </paragraph>
+                        <renderMultiMedia ID="id-1197923828" referencedObject="ID_01782a82-5a45-4a76-a89a-71853204a0b6"/>
+                        <paragraph>Statistically significantly more increases in AM pre-dose FEV
+ 
+  <sub>1</sub>compared to placebo were seen at 12 weeks for ALVESCO 160 mcg once daily (0.14 L or 5.7%) and ALVESCO 80 mcg twice daily (0.19 L or 7.5%). Asthma symptoms scores, AM PEF, and decreased need for rescue albuterol remained relatively stable in the ALVESCO treatment groups compared to slight worsening in the placebo. Compared to placebo, fewer patients receiving ALVESCO experienced worsening of asthma.
+
+ </paragraph>
+                        <paragraph>In the other trial, 257 patients with moderate to severe persistent asthma (mean baseline percent predicted FEV
+ 
+  <sub>1</sub>of 54%) were treated with ALVESCO 160 or 320 mcg twice daily for 12 weeks. The AM pre-dose FEV
+ 
+  <sub>1</sub>results are shown in
+ 
+  <linkHtml href="#id1123347778">Figure 3</linkHtml>below.
+
+ </paragraph>
+                        <renderMultiMedia ID="id1123347778" referencedObject="ID_48d7b7ba-fb02-46ea-b392-3a3a9822306a"/>
+                        <paragraph>Compared to placebo, both ALVESCO doses showed statistically significantly more improvement in pre-dose FEV
+ 
+  <sub>1</sub>(0.11 L or 8.6% and 0.18 L or 11.8%). Other measures of asthma control, AM PEF, symptoms, and need for rescue albuterol also showed improvement compared to placebo. Compared to placebo, fewer patients treated with ALVESCO experienced worsening of asthma.
+
+ </paragraph>
+                        <paragraph>Patients treated with ALVESCO were also less likely to discontinue study participation due to asthma deterioration.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Patients Previously Maintained on Oral Corticosteroids</content>
+                        </paragraph>
+                        <paragraph>In a 12-week double-blind clinical trial, 140 patients with severe persistent asthma (mean FEV
+ 
+  <sub>1</sub>at baseline 53% predicted) who had failed prior efforts to eliminate oral prednisone use and had established their lowest effective prednisone dose were randomized to ALVESCO given by oral inhalation at doses of 320 or 640 mcg twice daily or placebo. The average prednisone dose at baseline was approximately 12 mg/day. Compared to patients on placebo whose prednisone requirements increased by 4%, those treated with ALVESCO 320 mcg and 640 mcg twice daily significantly reduced their prednisone requirements by 47% and 62%, respectively. At the same time, patients on ALVESCO maintained asthma control as reflected by lung function, symptoms, and need for rescue albuterol. A significantly larger percentage of patients on ALVESCO were able to reduce oral prednisone use by 50% or more as compared to placebo (64% and 77% of the patients treated with 320 mcg and 640 mcg, respectively twice daily as compared with 33% of patients on placebo). There was no statistically significant difference observed with ALVESCO 640 mcg twice daily compared to ALVESCO 320 mcg twice daily.
+
+ </paragraph>
+                     </text>
+                     <effectiveTime value="20230216"/>
+                     <component>
+                        <observationMedia ID="BF6B533D-CDC8-47B0-B56E-299FEED63E56">
+                           <text>Figure 1</text>
+                           <value mediaType="image/jpeg" xsi:type="ED">
+                              <reference value="image-02.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                     <component>
+                        <observationMedia ID="ID_01782a82-5a45-4a76-a89a-71853204a0b6">
+                           <text>Figure 2</text>
+                           <value mediaType="image/jpeg" xsi:type="ED">
+                              <reference value="image-03.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                     <component>
+                        <observationMedia ID="ID_48d7b7ba-fb02-46ea-b392-3a3a9822306a">
+                           <text>Figure 3</text>
+                           <value mediaType="image/jpeg" xsi:type="ED">
+                              <reference value="image-04.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_0e46bd79-f411-44a3-9c44-81d497c53bb4">
+               <id root="3a8b4338-8935-bc2f-e063-6394a90ab578"/>
+               <code code="34069-5" codeSystem="2.16.840.1.113883.6.1" displayName="HOW SUPPLIED SECTION"/>
+               <title>16 HOW SUPPLIED/STORAGE AND HANDLING</title>
+               <text>
+                  <paragraph>ALVESCO is available in the following strengths and canister presentations.</paragraph>
+                  <table cellpadding="3.6pt" width="100%">
+                     <col width="17%"/>
+                     <col width="26%"/>
+                     <col width="22%"/>
+                     <col width="17%"/>
+                     <col width="18%"/>
+                     <tbody>
+                        <tr>
+                           <td styleCode="Botrule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">Micrograms per Actuation</content>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Botrule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">Number of Actuations per Canister</content>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Botrule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">Canister Weight</content>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Botrule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">Canister per Box</content>
+                              </paragraph>
+                           </td>
+                           <td align="center" styleCode="Botrule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">NDC Number</content>
+                              </paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Toprule " valign="top">
+                              <paragraph>ALVESCO 
+      <br/>  80 mcg
+     </paragraph>
+                           </td>
+                           <td align="center" styleCode="Toprule " valign="top">
+                              <paragraph>60</paragraph>
+                           </td>
+                           <td align="center" styleCode="Toprule " valign="top">
+                              <paragraph>6.1 g</paragraph>
+                           </td>
+                           <td align="center" styleCode="Toprule " valign="top">
+                              <paragraph>1</paragraph>
+                           </td>
+                           <td align="center" styleCode="Toprule " valign="top">
+                              <paragraph>70515-711-01</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td valign="top">
+                              <paragraph>ALVESCO 
+      <br/>  160 mcg
+     </paragraph>
+                           </td>
+                           <td align="center" valign="top">
+                              <paragraph>60</paragraph>
+                           </td>
+                           <td align="center" valign="top">
+                              <paragraph>6.1 g</paragraph>
+                           </td>
+                           <td align="center" valign="top">
+                              <paragraph>1</paragraph>
+                           </td>
+                           <td align="center" valign="top">
+                              <paragraph>70515-712-01</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td valign="top">
+                              <paragraph>ALVESCO 
+      <br/>  80 mcg
+     </paragraph>
+                           </td>
+                           <td align="center" valign="top">
+                              <paragraph>30</paragraph>
+                           </td>
+                           <td align="center" valign="top">
+                              <paragraph>4.7 g</paragraph>
+                           </td>
+                           <td align="center" valign="top">
+                              <paragraph>1</paragraph>
+                           </td>
+                           <td align="center" valign="top">
+                              <paragraph>70515-711-04</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td valign="top">
+                              <paragraph>ALVESCO 
+      <br/>  160 mcg
+     </paragraph>
+                           </td>
+                           <td align="center" valign="top">
+                              <paragraph>30</paragraph>
+                           </td>
+                           <td align="center" valign="top">
+                              <paragraph>4.7 g</paragraph>
+                           </td>
+                           <td align="center" valign="top">
+                              <paragraph>1</paragraph>
+                           </td>
+                           <td align="center" valign="top">
+                              <paragraph>70515-712-04</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td valign="top">
+                              <paragraph>ALVESCO 
+      <br/>  80 mcg
+     </paragraph>
+                           </td>
+                           <td align="center" valign="top">
+                              <paragraph>60</paragraph>
+                           </td>
+                           <td align="center" valign="top">
+                              <paragraph>6.1 g</paragraph>
+                           </td>
+                           <td align="center" valign="top">
+                              <paragraph>1</paragraph>
+                           </td>
+                           <td align="center" valign="top">
+                              <paragraph>70515-711-05</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td valign="top">
+                              <paragraph>ALVESCO 
+      <br/>  160 mcg
+     </paragraph>
+                           </td>
+                           <td align="center" valign="top">
+                              <paragraph>60</paragraph>
+                           </td>
+                           <td align="center" valign="top">
+                              <paragraph>6.1 g</paragraph>
+                           </td>
+                           <td align="center" valign="top">
+                              <paragraph>1</paragraph>
+                           </td>
+                           <td align="center" valign="top">
+                              <paragraph>70515-712-05</paragraph>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>ALVESCO (ciclesonide) 80 mcg inhalation aerosol is supplied with a brown plastic actuator with a red dust cap. Each actuation of the inhaler delivers 80 mcg of ciclesonide from the actuator and contains 60 actuations fill/canister.</paragraph>
+                  <paragraph>ALVESCO 160 (ciclesonide) mcg inhalation aerosol is supplied with a red plastic actuator with a red dust cap. Each actuation of the inhaler delivers 160 mcg of ciclesonide from the actuator and contains 60 actuations fill/canister.</paragraph>
+                  <paragraph>ALVESCO canisters are for use with ALVESCO actuators only. The actuators are fitted with a dose indicator and should not be used with other medications. The correct amount of medication in each actuation cannot be assured from the canister labeled to contain 60 actuations when the dose indicator display window shows zero even though the canister is not completely empty. The canister should be discarded when the dose indicator display window shows zero.</paragraph>
+                  <paragraph>Store at 25°C (77°F). Excursions between 15°C and 30°C (59°F and 86°F) are permitted (see USP). For optimal results, the canister should be at room temperature when used.</paragraph>
+                  <paragraph>Contents under pressure. Do not puncture. Do not use or store near heat or open flame. Exposure to temperatures above 49°C (120°F) may cause bursting. Never throw canister into fire or incinerator.</paragraph>
+               </text>
+               <effectiveTime value="20230216"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_0bc4eb85-b517-4b59-a4d8-6bf2651caf57">
+               <id root="3a8b4338-8936-bc2f-e063-6394a90ab578"/>
+               <code code="34076-0" codeSystem="2.16.840.1.113883.6.1" displayName="INFORMATION FOR PATIENTS SECTION"/>
+               <title>17 PATIENT COUNSELING INFORMATION</title>
+               <text>
+                  <paragraph>Advise the patient to read the FDA-approved patient labeling (Patient Information and Instructions for Use)</paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Oropharyngeal Candidiasis</content>
+                  </paragraph>
+                  <paragraph>Patients should be advised that localized infections with
+ 
+  <content styleCode="italics">Candida albicans</content>occurred in the mouth and pharynx in some patients. If oropharyngeal candidiasis develops, it should be treated with appropriate local or systemic (i.e., oral) antifungal therapy while still continuing with ALVESCO therapy, but at times therapy with the ALVESCO inhaler may need to be temporarily interrupted under close medical supervision. Rinsing the mouth after inhalation is advised
+ 
+  <content styleCode="italics">[see Warnings and Precautions (
+  
+   <linkHtml href="#ID_28ae3eda-6ea2-486f-b0da-697ab6b4081a">5.1</linkHtml>)]
+ 
+  </content>.
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Acute Asthma Episodes</content>
+                  </paragraph>
+                  <paragraph>Patients should be advised that ALVESCO is not a bronchodilator and is not intended for use as rescue medication for acute asthma exacerbations. Acute asthma symptoms should be treated with an inhaled, short-acting beta
+ 
+  <sub>2</sub>-agonist such as albuterol. The patient should be instructed to contact their physician immediately if there is deterioration of their asthma
+ 
+  <content styleCode="italics">[see Warnings and Precautions (
+  
+   <linkHtml href="#ID_95c0dc20-b254-4a18-8b3d-e7c6ea486915">5.2</linkHtml>)]
+ 
+  </content>.
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Immunosuppression and Risk of Infections</content>
+                  </paragraph>
+                  <paragraph>Patients who are on immunosuppressant doses of corticosteroids should be warned to avoid exposure to chickenpox or measles and, if exposed, to consult their physician without delay. Patients should be informed of potential worsening of existing tuberculosis, fungal, bacterial, viral, or parasitic infections, or ocular herpes simplex
+ 
+  <content styleCode="italics">[see Warnings and Precautions (
+  
+   <linkHtml href="#ID_f4f9b92e-ecbb-4192-8c56-20815de07c7b">5.3</linkHtml>)]
+ 
+  </content>.
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Hypercorticism and Adrenal Suppression</content>
+                  </paragraph>
+                  <paragraph>Patients should be advised that ALVESCO may cause systemic corticosteroid effects of hypercorticism and adrenal suppression. Additionally, patients should be instructed that deaths due to adrenal insufficiency have occurred during and after transfer from systemic corticosteroids. Patients should taper slowly from systemic corticosteroids if transferring to ALVESCO
+ 
+  <content styleCode="italics">[see Warnings and Precautions (
+  
+   <linkHtml href="#ID_f3a4665e-06d9-464c-a6c4-a9a523a8d1fa">5.5</linkHtml>)]
+ 
+  </content>.
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Reduction in Bone Mineral Density</content>
+                  </paragraph>
+                  <paragraph>Patients who are at an increased risk for decreased BMD should be advised that the use of corticosteroids may pose an additional risk and should be monitored and where appropriate, be treated for this condition
+ 
+  <content styleCode="italics">[see Warnings and Precautions (
+  
+   <linkHtml href="#ID_ddca2108-0e3d-4a21-b8a5-6e5d180b04c4">5.6</linkHtml>)]
+ 
+  </content>.
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Effect on Growth</content>
+                  </paragraph>
+                  <paragraph>Patients should be informed that orally inhaled corticosteroids, including ALVESCO, may cause a reduction in growth velocity when administered to pediatric patients. Physicians should closely follow the growth of pediatric patients taking corticosteroids by any route
+ 
+  <content styleCode="italics">[see Warnings and Precautions (
+  
+   <linkHtml href="#ID_65559f3f-ef44-457b-a1d4-f2ac5022bbac">5.7</linkHtml>)]
+ 
+  </content>.
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Use Daily for Best Effect</content>
+                  </paragraph>
+                  <paragraph>Patients should be advised to use ALVESCO at regular intervals, since its effectiveness depends on regular use. Maximum benefit may not be achieved for four weeks or longer after starting treatment. The patient should not increase the prescribed dosage but should contact their physician if symptoms do not improve or if the condition worsens. Patients should be instructed not to stop ALVESCO use abruptly. Patients should contact their physician immediately if use of ALVESCO is discontinued.</paragraph>
+                  <paragraph>
+                     <content styleCode="underline">How to Use ALVESCO</content>
+                  </paragraph>
+                  <paragraph>Patients should use ALVESCO only with the actuator supplied with the product. When the dose indicator display window shows a red zone, approximately 20 inhalations are left, and a refill is required. Discard the inhaler when the indicator shows zero.</paragraph>
+                  <paragraph>Manufactured for: 
+  <br/>
+                     <content styleCode="bold">Covis Pharma 
+   <br/>
+                     </content>Zug, 6300 Switzerland 
+  <br/>  Made in United Kingdom
+
+ </paragraph>
+               </text>
+               <effectiveTime value="20230216"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_a13833c5-30a3-48c7-8954-b3c66bde291f">
+               <id root="3a8b58f9-0dfe-c275-e063-6394a90afba1"/>
+               <code code="42230-3" codeSystem="2.16.840.1.113883.6.1" displayName="SPL PATIENT PACKAGE INSERT SECTION"/>
+               <title>Patient Information</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">ALVESCO 
+   <sup>®</sup>[ael-‘ves-ko℧]
+   <br/>
+(ciclesonide) 
+  </content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Note: For Oral Inhalation Only</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Do not</content>use your ALVESCO near heat or an open flame.
+ </paragraph>
+                  <paragraph>Read this Patient Information leaflet before you start using ALVESCO and each time you get a refill. There may be new information. This information does not take the place of talking with your healthcare provider about your medical condition or your treatment. If you have any questions about ALVESCO, ask your healthcare provider or pharmacist.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">What is ALVESCO?</content>
+                  </paragraph>
+                  <paragraph>ALVESCO is a prescription medicine used for the control and prevention of asthma in adults and children 12 years of age and older.</paragraph>
+                  <paragraph>ALVESCO contains ciclesonide, which is a man-made (synthetic) corticosteroid. Corticosteroids are natural substances found in the body and reduce inflammation. When you inhale ALVESCO it may help to control and prevent your symptoms of asthma by reducing your airway inflammation.</paragraph>
+                  <paragraph>ALVESCO is not for the relief of acute bronchospasm. ALVESCO is not a bronchodilator and does not treat sudden symptoms of an asthma attack such as wheezing, cough, shortness of breath, and chest pain or tightness. 
+  <content styleCode="bold">Always have a fast-acting bronchodilator medicine (rescue inhaler) with you to treat sudden symptoms.</content>
+                  </paragraph>
+                  <paragraph>It is not known if ALVESCO is safe and effective in children 11 years of age and younger.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Who should not use ALVESCO?</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Do not use ALVESCO:</content>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>to treat status asthmaticus or other sudden symptoms of asthma. ALVESCO is not a rescue inhaler and should not be used to give you fast relief from your asthma attack. 
+   <content styleCode="bold">Always use a rescue inhaler such as albuterol, during a sudden asthma attack.</content>
+                     </item>
+                     <item>if you are allergic to ciclesonide or any of the ingredients in ALVESCO. See the end of this Patient Information leaflet for a complete list of ingredients in ALVESCO.</item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">What should I tell my healthcare provider before using ALVESCO?</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Before you use ALVESCO tell your healthcare provider if you:</content>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>have or have had eye problems such as increased ocular pressure, glaucoma, or cataracts.</item>
+                     <item>have any infections including tuberculosis or ocular herpes simplex.</item>
+                     <item>have not had or been vaccinated for chicken pox or measles.</item>
+                     <item>are pregnant or plan to become pregnant. It is not known if ALVESCO will harm your unborn baby. Talk to your healthcare provider if you are pregnant or plan to become pregnant.</item>
+                     <item>are breastfeeding or plan to breastfeed. It is not known if ALVESCO passes into your breast milk. Talk to your healthcare provider about the best way to feed your baby if you are using ALVESCO.</item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">Tell your healthcare provider about all the medicines you take</content>, including prescription and non-prescription medicines, vitamins and herbal supplements.
+ </paragraph>
+                  <paragraph>Know the medicines you take. Keep a list of them to show your healthcare provider and pharmacist when you get a new medicine.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">How should I use ALVESCO?</content>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>Read the Instructions for Use at the end of this leaflet for specific information about the right way to use ALVESCO.</item>
+                     <item>Use ALVESCO exactly as your healthcare provider tells you to use it. Do not take more of your medicine, or take it more often than your healthcare provider tells you.</item>
+                     <item>You must use ALVESCO regularly. It may take 4 weeks or longer after you start using ALVESCO for your asthma symptoms to get better. 
+   <content styleCode="bold">Do not stop using ALVESCO even if you are feeling better, unless your healthcare provider tells you to.</content>
+                     </item>
+                     <item>If your symptoms do not improve or get worse, call your healthcare provider.</item>
+                     <item>Your healthcare provider may prescribe a rescue inhaler for emergency relief of sudden asthma attacks. Call your healthcare provider if you have:
+	
+   <list listType="unordered">
+                           <item>an asthma attack that does not respond to your rescue inhaler 
+     <content styleCode="bold">or</content>
+                           </item>
+                           <item>you need more of your rescue inhaler than usual.</item>
+                        </list>
+                     </item>
+                     <item>If you use another inhaled medicine, ask your healthcare provider for instructions on how to use it while you use ALVESCO.</item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">What are the possible side effects of ALVESCO?</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">ALVESCO may cause serious side effects, including:</content>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>
+                        <content styleCode="bold">Thrush (Candida), a fungal infection of your nose, mouth, or throat.</content>Tell your healthcare provider if you have discomfort or pain in your throat, have hoarseness in your voice or have any redness or white colored patches in your mouth or throat. Rinse your mouth after you use your ALVESCO.
+  </item>
+                     <item>
+                        <content styleCode="bold">Immune system problems that may increase your risk of infections.</content>You are more likely to get infections if you take medicines that may weaken your body’s ability to fight infections. Avoid contact with people who have contagious diseases such as chicken pox or measles while you use ALVESCO. Symptoms of an infection may include:
+	
+   <list listType="unordered">
+                           <item>fever</item>
+                           <item>pain</item>
+                           <item>aches</item>
+                           <item>chills</item>
+                           <item>feeling tired</item>
+                           <item>nausea</item>
+                           <item>vomiting</item>
+                        </list>
+                     </item>
+                     <item>
+                        <content styleCode="bold">Adrenal insufficiency.</content>Adrenal insufficiency is a condition in which the adrenal glands do not make enough steroid hormones. Your healthcare provider will follow you closely if you take steroids by mouth and are having them decreased (tapered) or you are being switched to ALVESCO. People have died while steroids are being decreased and when people have been switched from steroids by mouth to inhaled steroids like ALVESCO. If you are under stress, such as with surgery, after surgery or trauma, you may need steroids by mouth again.
+   <br/>
+                        <br/>
+	Call your healthcare provider right away if you have the following symptoms of adrenal insufficiency:
+	
+   <list listType="unordered">
+                           <item>tiredness</item>
+                           <item>weakness</item>
+                           <item>dizziness</item>
+                           <item>nausea that does not go away</item>
+                           <item>vomiting that does not go away</item>
+                        </list>
+                     </item>
+                     <item>
+                        <content styleCode="bold">Decreased bone mass (bone mineral density).</content>People who use inhaled steroid medicines for a long time may have an increased risk of decreased bone mass which can affect bone strength. Talk to your healthcare provider about any concerns you may have about bone health.
+  </item>
+                     <item>
+                        <content styleCode="bold">Slowed or delayed growth in children.</content>A child’s growth should be checked regularly while using ALVESCO.
+  </item>
+                     <item>
+                        <content styleCode="bold">Eye problems such as glaucoma and cataracts.</content>If you have a history of glaucoma or cataracts or have a family history of eye problems, you should have regular eye exams while you use ALVESCO.
+  </item>
+                     <item>
+                        <content styleCode="bold">Increased wheezing (bronchospasm)</content>can happen right away after using ALVESCO. 
+   <content styleCode="bold">Stop using ALVESCO and use an inhaled fast-acting bronchodilator (rescue inhaler) right away. </content>
+                        <br/>
+	Tell your healthcare provider right away so that a new medicine can be prescribed to control your asthma.
+   <br/>
+	The most common side effects with ALVESCO include:
+  </item>
+                     <item>headache</item>
+                     <item>swelling of nose and throat (nasopharyngitis)</item>
+                     <item>swelling of the sinuses (sinusitis)</item>
+                     <item>throat pain</item>
+                     <item>upper respiratory infection</item>
+                     <item>joint pain (arthralgia)</item>
+                     <item>nasal congestion</item>
+                     <item>pain in arms, legs, and back</item>
+                  </list>
+                  <paragraph>Tell your healthcare provider about any side effect that bothers you or that does not go away. These are not all of the possible side effects with ALVESCO. For more information, ask your healthcare provider or pharmacist.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Call your healthcare provider for medical advice about side effects. You may report side effects to FDA at 1-800-FDA-1088.</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">How should I store ALVESCO?</content>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>Store ALVESCO at room temperature between 59°F to 86°F (15°C to 30°C)</item>
+                     <item>
+                        <content styleCode="bold">Do not</content>puncture the ALVESCO canister
+  </item>
+                     <item>
+                        <content styleCode="bold">Do not</content>store the ALVESCO canister near heat or a flame. Temperatures above 120°F (49°C) may cause the canister to burst.
+  </item>
+                     <item>
+                        <content styleCode="bold">Do not</content>throw the ALVESCO canister into a fire or an incinerator.
+  </item>
+                     <item>Safely throw away medicine that is out of date or no longer needed.</item>
+                     <item>Keep ALVESCO Aerosol and dry at all times.</item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">Keep ALVESCO and all medicines out of reach of children.</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">General Information About the Safe and Effective use of ALVESCO</content>
+                  </paragraph>
+                  <paragraph>Medicines are sometimes prescribed for purposes other than those listed in a Patient Information leaflet. Do not use ALVESCO for a condition for which it is not prescribed. Do not give ALVESCO to other people, even if they have the same symptoms that you have. It may harm them.</paragraph>
+                  <paragraph>This Patient Information summarizes the most important information about ALVESCO. If you would like more information, talk with your healthcare provider. You can ask your pharmacist or healthcare provider for information about ALVESCO that is written for health professionals.</paragraph>
+                  <paragraph>For more information, go to www.alvesco.us/.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">What are the ingredients in ALVESCO?</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Active ingredient:</content>ciclesonide
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Inactive ingredients:</content>propellant HFA-134a and ethanol
+  <br/>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Instructions for Use
+   <br/>
+ALVESCO 
+   <sup>®</sup>[ael-‘ves- ko℧]
+   <br/>
+(ciclesonide) 
+  </content>
+                  </paragraph>
+                  <paragraph>Read this Instructions for Use for ALVESCO before you start using it and each time you get a refill. There may be new information. This leaflet does not take the place of talking to your healthcare provider about your medical condition or treatment.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Note: For Oral Inhalation Only</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Do not</content>use your ALVESCO near heat or an open flame.
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">The parts of your ALVESCO</content>
+                  </paragraph>
+                  <paragraph>ALVESCO comes as a canister that fits into an actuator with a dose indicator. 
+  <content styleCode="bold">Do not</content>use the actuator with a canister of medicine from any other inhaler. 
+  <content styleCode="bold">Do not</content>use ALVESCO canister with an actuator from any other inhaler. (See 
+  <content styleCode="bold">Figure A</content>)
+ </paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="ID_892e7035-0e48-41a2-8750-736d54b23bc7"/>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Priming your ALVESCO for use</content>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>Remove your ALVESCO from its package.</item>
+                     <item>
+                        <content styleCode="bold">Before you use ALVESCO for the first time</content>or if you have not used your medicine for 10 days in a row, you will need to prime your ALVESCO unit.
+  </item>
+                     <item>Remove the plastic cap. Look at the dose indicator on top of the inhaler. Make sure that the dose indicator display window pointer is before the “60” inhalation mark before you use your ALVESCO for the first time.</item>
+                     <item>Hold the actuator upright. Spray 3 times into the air away from the face, by pressing down fully onto the center of the dose indicator button. (See 
+   <content styleCode="bold">Figure B</content>)
+  </item>
+                  </list>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="ID_666cd962-8d67-4a1e-841a-7f8114f07eaa"/>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>Check the dose indicator display window after the priming sprays and before the first use to make sure it shows that there are 60 sprays left in your ALVESCO unit. If there are not 60 sprays left in your ALVESCO after the first use priming spray, return it to the pharmacy.</item>
+                     <item>Make sure the canister is firmly placed in the mouthpiece each time you use your ALVESCO.</item>
+                     <item>You do not need to shake your ALVESCO unit before you use it.</item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">Using Your ALVESCO</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Step 1.</content>Remove the cap from the mouthpiece. (See 
+  <content styleCode="bold">Figure C</content>)
+ </paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="ID_9fdc2c25-842d-40d7-a879-06ece058cdfa"/>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Step 2.</content>Hold the actuator upright, between your thumb, forefinger, and middle finger with the mouthpiece pointing towards you. (See 
+  <content styleCode="bold">Figure D</content>)
+ </paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="ID_7bcd25ea-99fd-4dcd-9447-220a3eadaab0"/>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Step 3.</content>Breathe out as fully as you comfortably can. Close your lips around the mouthpiece, keeping your tongue below it. (See 
+  <content styleCode="bold">Figure E</content>)
+ </paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="ID_552a400e-39f7-4ca9-a6b9-84928a3f9e13"/>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Step 4.</content>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>While breathing in deeply and slowly, press down on the center of the dose indicator with your finger. Press down fully on the canister until it stops moving in the actuator while delivering your dose.</item>
+                     <item>When you have finished breathing in, hold your breath for about 10 seconds, or for as long as is comfortable.</item>
+                     <item>Note: It is normal to hear a soft click from the indicator as it counts down during use.</item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">Step 5.</content>
+                  </paragraph>
+                  <paragraph>Take your finger completely off the center of the dose indicator and remove the inhaler from your mouth. Breathe out gently. (See 
+  <content styleCode="bold">Figure F</content>)
+ </paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="ID_2e7de549-579f-4a91-b608-7dc9cf06cca1"/>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Step 6.</content>Replace the cap to keep the mouthpiece clean.
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Step 7.</content>Rinse your mouth with water and spit it out. 
+  <content styleCode="bold">Do not</content>swallow.
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Cleaning your ALVESCO unit</content>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>Clean the mouthpiece weekly with a clean dry tissue, both inside and out. (See 
+   <content styleCode="bold">Figure G</content>)
+  </item>
+                  </list>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="ID_7ffa1b5e-b508-4f0d-a728-6f10a43a4003"/>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>Wipe over the front of the small hole where the medicine comes out with a dry, folded tissue. (See 
+   <content styleCode="bold">Figure H</content>)
+  </item>
+                  </list>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="ID_0d9e2e47-172b-4536-adcc-f7cdc32c43ae"/>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>Do not wash or put any part of your ALVESCO unit in water or any other liquids.</item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">How to tell if your ALVESCO canister is empty</content>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>Your ALVESCO unit is fitted with a dose indicator display which shows you how much of your medicine is left after each use.</item>
+                     <item>Each canister of ALVESCO contains enough medicine for you to spray your medicine 60 times. This does not count the first sprays used for priming.</item>
+                     <item>The dose indicator display counts down by 10 and will move every tenth time you take a puff (i.e., 60-50-40, etc.).</item>
+                     <item>The dose indicator display window will turn red when there are only 20 sprays left. This means that you need to replace your inhaler soon.</item>
+                     <item>When the dose indicator display window reads “0” you should throw away your ALVESCO unit. (See 
+   <content styleCode="bold">Figure I</content>)
+  </item>
+                  </list>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="ID_33b97f31-9748-45ba-a494-63f4b1094d1b"/>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>Although your ALVESCO unit is fitted with a dose indicator display to help determine the number of sprays left, you should keep track of the number of sprays used from each canister of your ALVESCO unit.</item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">This PPI and Instructions for Use has been approved by the U.S. Food and Drug Administration.</content>
+                  </paragraph>
+                  <paragraph>Manufactured for:
+  <br/>
+                     <content styleCode="bold">Covis Pharma </content>
+                     <br/>
+Zug, 6300 Switzerland
+  <br/>
+Made in United Kingdom
+ </paragraph>
+                  <paragraph>ALVESCO is a registered trademark of Covis Pharma.</paragraph>
+                  <paragraph>©2025 Covis Pharma. All rights reserved.</paragraph>
+               </text>
+               <effectiveTime value="20250228"/>
+               <component>
+                  <observationMedia ID="ID_892e7035-0e48-41a2-8750-736d54b23bc7">
+                     <text>Figure A</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-05.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="ID_666cd962-8d67-4a1e-841a-7f8114f07eaa">
+                     <text>Figure B</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-06.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="ID_9fdc2c25-842d-40d7-a879-06ece058cdfa">
+                     <text>Figure C</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-07.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="ID_7bcd25ea-99fd-4dcd-9447-220a3eadaab0">
+                     <text>Figure D</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-08.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="ID_552a400e-39f7-4ca9-a6b9-84928a3f9e13">
+                     <text>Figure E</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-09.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="ID_2e7de549-579f-4a91-b608-7dc9cf06cca1">
+                     <text>Figure F</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-10.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="ID_7ffa1b5e-b508-4f0d-a728-6f10a43a4003">
+                     <text>Figure G</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-11.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="ID_0d9e2e47-172b-4536-adcc-f7cdc32c43ae">
+                     <text>Figure H</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-12.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="ID_33b97f31-9748-45ba-a494-63f4b1094d1b">
+                     <text>Figure I</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-13.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_64bdc717-16a9-4520-80cb-524067c7dd20">
+               <id root="3a8b4338-8938-bc2f-e063-6394a90ab578"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PRINCIPAL DISPLAY PANEL - 80 mcg Carton</title>
+               <text>
+                  <renderMultiMedia ID="id-37277809" referencedObject="ID_804ad7a1-5b9b-4852-9db8-0c17ed0d2886"/>
+                  <paragraph>NDC 70515-711-01         Net Contents: 6.1 g</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Alvesco
+  
+   <sup>®</sup>
+                        <br/>
+                     </content>
+                     <content styleCode="italics">ciclesonide</content>   
+  <br/>
+                     <content styleCode="bold">Inhalation Aerosol</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">80 mcg/actuation</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">60 Metered Actuations</content>
+                  </paragraph>
+                  <paragraph>FOR ORAL INHALATION WITH ALVESCO
+ 
+  <sup>®</sup>
+                     <br/>  INHALATION AEROSOL ACTUATOR ONLY
+
+ </paragraph>
+                  <paragraph>Rx Only</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">COVIS</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Alvesco
+  
+   <sup>®</sup>
+                        <br/>
+                     </content>
+                     <content styleCode="italics">ciclesonide</content>  
+ 
+  <content styleCode="bold">Inhalation Aerosol</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">80 mcg/actuation</content>
+                  </paragraph>
+                  <paragraph>GTIN: 00370515711013 
+  <br/>  S/N: XXXXXXXXXXXXXX 
+  <br/>  EXP: MM/YYYY 
+  <br/>  LOT: YYXXXX
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Pharmacist:</content>Dispense 
+  <br/>  with
+ 
+  <content styleCode="italics">Patient’s Instructions 
+   <br/>  for Use
+  </content>from package 
+  <br/>  insert inside.
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">WARNING:</content>Keep out of 
+  <br/>  reach of children. Avoid 
+  <br/>  spraying in eyes.
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">COVIS 
+   <br/>
+                     </content>Manufactured for: 
+  <br/>  Covis Pharma 
+  <br/>  Zug, 6300 Switzerland
+
+ </paragraph>
+                  <paragraph>Made in the United Kingdom</paragraph>
+                  <paragraph>Each 6.1 g canister of 
+  <br/>  ALVESCO
+ 
+  <sup>®</sup>Inhalation 
+  <br/>  Aerosol contains a solution 
+  <br/>  of ciclesonide in propellant 
+  <br/>  HFA-134a (1,1,1,2 
+  <br/>  tetrafluoroethane) and 
+  <br/>  ethanol. The 80 mcg 
+  <br/>  strength of ALVESCO
+ 
+  <sup>®</sup>
+                     <br/>  Inhalation Aerosol delivers 
+  <br/>  100 mcg from the valve 
+  <br/>  and 80 mcg of ciclesonide 
+  <br/>  from the actuator.
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Dosage and 
+   <br/>  Administration:
+  </content>
+                     <br/>  See package insert for 
+  <br/>  dosage information.
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">CONTENTS UNDER 
+   <br/>  PRESSURE.
+  </content>Do not 
+  <br/>  puncture.
+
+ </paragraph>
+                  <paragraph>Do not use or store near 
+  <br/>  heat or open flame.
+ </paragraph>
+                  <paragraph>Exposure to temperatures 
+  <br/>  above 49°C (120°F) may 
+  <br/>  cause bursting. Never 
+  <br/>  throw canister into fire or 
+  <br/>  incinerator.
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Store at 25°C (77°F);</content>
+                     <br/>  excursions between 
+  <br/>  15–30°C (59–86°F) are 
+  <br/>  permitted [see USP]. For 
+  <br/>  optimal results, canister 
+  <br/>  should be at room 
+  <br/>  temperature when used.
+
+ </paragraph>
+               </text>
+               <effectiveTime value="20201023"/>
+               <component>
+                  <observationMedia ID="ID_804ad7a1-5b9b-4852-9db8-0c17ed0d2886">
+                     <text>Principal Display Panel - 80 mcg Carton</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-14.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_b1c1d7f7-a5b3-46ce-8afd-ce4e718940c9">
+               <id root="3a8b4338-8939-bc2f-e063-6394a90ab578"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PRINCIPAL DISPLAY PANEL - 160 mcg Carton</title>
+               <text>
+                  <renderMultiMedia ID="id-60403798" referencedObject="ID_16cbad01-a0e8-48b2-b5d3-9d932a3f995c"/>
+                  <paragraph>NDC 70515-712-01           Net Contents: 6.1 g</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Alvesco
+  
+   <sup>®</sup>
+                        <br/>
+                     </content>
+                     <content styleCode="italics">ciclesonide</content>   
+  <br/>
+                     <content styleCode="bold">Inhalation Aerosol</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">160 mcg/actuation</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">60 Metered Actuations</content>
+                  </paragraph>
+                  <paragraph>FOR ORAL INHALATION WITH ALVESCO
+ 
+  <sup>®</sup>
+                     <br/>  INHALATION AEROSOL ACTUATOR ONLY
+
+ </paragraph>
+                  <paragraph>Rx Only</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">COVIS</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Alvesco
+  
+   <sup>®</sup>
+                        <br/>
+                     </content>
+                     <content styleCode="italics">ciclesonide</content>   
+  <br/>
+                     <content styleCode="bold">Inhalation Aerosol</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">160 mcg/actuation</content>
+                  </paragraph>
+                  <paragraph>GTIN: 00370515712010 
+  <br/>  S/N: XXXXXXXXXXXXXX 
+  <br/>  EXP: MM/YYYY 
+  <br/>  LOT: YYXXXX
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Pharmacist:</content>Dispense 
+  <br/>  with
+ 
+  <content styleCode="italics">Patient’s Instructions 
+   <br/>  for Use
+  </content>from package 
+  <br/>  insert inside.
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">WARNING:</content>Keep out of 
+  <br/>  reach of children. Avoid 
+  <br/>  spraying in eyes.
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">COVIS 
+   <br/>
+                     </content>Manufactured for: 
+  <br/>  Covis Pharma 
+  <br/>  Zug, 6300 Switzerland
+
+ </paragraph>
+                  <paragraph>Made in the United Kingdom</paragraph>
+                  <paragraph>Each 6.1 g canister of 
+  <br/>  ALVESCO
+ 
+  <sup>®</sup>Inhalation 
+  <br/>  Aerosol contains a solution 
+  <br/>  of ciclesonide in propellant 
+  <br/>  HFA-134a (1,1,1,2 
+  <br/>  tetrafluoroethane) and 
+  <br/>  ethanol. The 160 mcg 
+  <br/>  strength of ALVESCO
+ 
+  <sup>®</sup>
+                     <br/>  Inhalation Aerosol delivers 
+  <br/>  200 mcg from the valve 
+  <br/>  and 160 mcg of ciclesonide 
+  <br/>  from the actuator.
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Dosage and 
+   <br/>  Administration:
+  </content>
+                     <br/>  See package insert for 
+  <br/>  dosage information.
+
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">CONTENTS UNDER 
+   <br/>  PRESSURE.
+  </content>Do not 
+  <br/>  puncture.
+
+ </paragraph>
+                  <paragraph>Do not use or store near 
+  <br/>  heat or open flame.
+ </paragraph>
+                  <paragraph>Exposure to temperatures 
+  <br/>  above 49°C (120°F) may 
+  <br/>  cause bursting. Never 
+  <br/>  throw canister into fire or 
+  <br/>  incinerator.
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Store at 25°C (77°F)</content>; 
+  <br/>  excursions between 
+  <br/>  15–30°C (59–86°F) are 
+  <br/>  permitted [see USP]. For 
+  <br/>  optimal results, canister 
+  <br/>  should be at room 
+  <br/>  temperature when used.
+
+ </paragraph>
+               </text>
+               <effectiveTime value="20201023"/>
+               <component>
+                  <observationMedia ID="ID_16cbad01-a0e8-48b2-b5d3-9d932a3f995c">
+                     <text>Principal Display Panel - 160 mcg Carton</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="image-15.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

@@ -1,0 +1,1834 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="b4a1a1fe-77cf-4ab4-8cbf-817a82a0befa"/>
+   <code code="34391-3" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN PRESCRIPTION DRUG LABEL"/>
+   <title>These highlights do not include all the information needed to use MEROPENEM FOR INJECTION safely and effectively. See full prescribing information for MEROPENEM FOR INJECTION.<br/>MEROPENEM for injection, for intravenous use<br/>Initial U.S. Approval: 1996</title>
+   <effectiveTime value="20260108"/>
+   <setId root="240325ba-47a8-4ad1-bcab-6772069ee790"/>
+   <versionNumber value="5"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id extension="829274633" root="1.3.6.1.4.1.519.1"/>
+            <name>WG Critical Care, LLC</name>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="17512a77-e06d-43c1-88b8-aaac5b32499c"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL product data elements section"/>
+               <effectiveTime value="20241201"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="44567-402" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Meropenem</name>
+                        <formCode code="C42974" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INJECTION, POWDER, FOR SOLUTION"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Meropenem</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="g" value="2"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="FV9J3JU8B1" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MEROPENEM</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="YOP6PX0BAO" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>MEROPENEM ANHYDROUS</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <quantity>
+                              <numerator unit="mg" value="180"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="45P3261C7T" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SODIUM CARBONATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="CNTM">
+                           <quantity>
+                              <numerator unit="1" value="0"/>
+                              <denominator value="1" unit="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="2LQ0UUW8IN" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>NATURAL LATEX RUBBER</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="1" value="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="44567-402-01" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43226" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="VIAL"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator unit="1" value="6"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="44567-402-06" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20230908"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic classCode="OBS">
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CE"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="NDA215212" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73594" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="NDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20230908"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38276" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INTRAVENOUS"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_552d674a-3de8-4038-87d2-4e3fe23ccf05">
+               <id root="1d2098f7-7d4c-4ece-9a01-ccba2af302a6"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="43683-2" displayName="RECENT MAJOR CHANGES SECTION"/>
+               <effectiveTime value="20241201"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph/>
+                        <paragraph>Warnings and Precautions, Rhabdomyolysis (<linkHtml href="#ID_6be1cd4b-1787-4240-81d0-fd9b391fae84">5.3</linkHtml>)	12/2024</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_indications_id_e5e78142-d478-4d5a-8b46-06440366e7b4">
+               <id root="40b28a60-ca1e-4548-a640-5d1dcbe4141a"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34067-9" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>1 INDICATIONS AND USAGE</title>
+               <effectiveTime value="20241201"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Meropenem for Injection is a penem antibacterial indicated for the treatment of bacterial meningitis in pediatric patients 3 months of age and older only. (<linkHtml href="#i4i_section_id_70263ac9-ae66-4588-b222-3fb60005d883">1.1</linkHtml>)</paragraph>
+                        <paragraph>To reduce the development of drug-resistant bacteria and maintain the effectiveness of Meropenem for Injection and other antibacterial drugs, Meropenem for Injection should only be used to treat or prevent infections that are proven or strongly suspected to be caused by susceptible bacteria. (<linkHtml href="#ID_253e13a3-7eaf-4721-acb7-41f889bc41af">1.2</linkHtml>)</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="i4i_section_id_70263ac9-ae66-4588-b222-3fb60005d883">
+                     <id root="aa5ec18c-c003-4a8b-a9d3-f25136908743"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42229-5" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>1.1 Bacterial Meningitis (Pediatric Patients 3 Months of Age and Older Only)</title>
+                     <text>
+                        <paragraph>Meropenem for Injection is indicated for the treatment of bacterial meningitis caused by <content styleCode="italics">Haemophilus influenzae</content>, <content styleCode="italics">Neisseria meningitidis </content>andpenicillin-susceptible isolates of<content styleCode="italics"> Streptococcus pneumoniae,</content> in pediatric patients 3 months of age and older. Meropenem for injection has been found to be effective in eliminating concurrent bacteremia in association with bacterial meningitis.</paragraph>
+                     </text>
+                     <effectiveTime value="20241201"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_253e13a3-7eaf-4721-acb7-41f889bc41af">
+                     <id root="ae716fd2-89ab-41b4-85e3-395154114b44"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42229-5" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>1.2 Usage </title>
+                     <text>
+                        <paragraph>To reduce the development of drug-resistant bacteria and maintain the effectiveness of Meropenem for Injection and other antibacterial drugs, Meropenem for Injection should only be used to treat or prevent infections that are proven or strongly suspected to be caused by susceptible bacteria. When culture and susceptibility information are available, they should be considered in selecting or modifying antibacterial therapy. In the absence of such data, local epidemiology and susceptibility patterns may contribute to the empiric selection of therapy. </paragraph>
+                     </text>
+                     <effectiveTime value="20241201"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_dosage_admin_id_06c534ef-c430-4a30-9384-ee1e57e83763">
+               <id root="aeeb7a6c-e307-48bb-874b-b2b21c6f8d48"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34068-7" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>2 DOSAGE AND ADMINISTRATION</title>
+               <effectiveTime value="20241201"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered">
+                           <item>
+                              <caption>•</caption>Pediatric patients 3 months of age and older with bacterial meningitis (<linkHtml href="#i4i_section_id_0db8be13-ab17-4dc3-9bda-e24569760fc6">2.1</linkHtml>)</item>
+                        </list>
+                        <table width="100%">
+                           <col width="27%"/>
+                           <col width="20%"/>
+                           <col width="31%"/>
+                           <col width="22%"/>
+                           <tbody>
+                              <tr>
+                                 <td colspan="4" align="center" valign="top" styleCode="Rrule Botrule Lrule Toprule ">
+                                    <paragraph>
+                                       <content styleCode="bold">Recommended Meropenem for Injection Dosage Schedule for Pediatric Patients 3 Months of Age and Older with Bacterial Meningitis and Normal Renal Function (2.1)</content>
+                                    </paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>
+                                       <content styleCode="bold">Type of Infection </content>
+                                    </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>
+                                       <content styleCode="bold">Dose (mg/kg)</content>
+                                    </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>
+                                       <content styleCode="bold">Up to a Maximum Dose</content>
+                                    </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>
+                                       <content styleCode="bold">Dosing Interval</content>
+                                    </paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>Bacterial Meningitis </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>40</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>2 grams</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Lrule Toprule Botrule ">
+                                    <paragraph>Every 8 hours</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td colspan="4" valign="top" styleCode="Botrule Toprule ">
+                                    <paragraph>- Intravenous infusion is to be given over approximately 15 minutes to 30 minutes.</paragraph>
+                                    <paragraph>- There is no experience with the use of Meropenem for Injection in pediatric patients with renal impairment. </paragraph>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="i4i_section_id_0db8be13-ab17-4dc3-9bda-e24569760fc6">
+                     <id root="49a86bf2-0946-4512-b55c-02732ff3e9ed"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42229-5" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.1 Recommended Dosage in Pediatric Patients 3 Months of Age and Older with Bacterial Meningitis</title>
+                     <text>
+                        <list listType="unordered">
+                           <item>
+                              <caption>•</caption>For pediatric patients 3 months of age and older with bacterial meningitis, the Meropenem for Injection recommended dosage is 40 mg/kg every 8 hours (maximum dosage is 2 grams every 8 hours). </item>
+                           <item>
+                              <caption>•</caption>For pediatric patients weighing over 50 kg administer Meropenem for Injection at a dosage of 2 grams every 8 hours for bacterial meningitis.</item>
+                           <item>
+                              <caption>•</caption>Administer diluted Meropenem for Injection as an intravenous infusion over approximately 15 minutes to 30 minutes<content styleCode="italics"> [see Dosage and Administration (<linkHtml href="#i4i_section_id_69027b26-b2ff-498a-aed5-0f1da9112f0d">2.2</linkHtml>)]</content>. </item>
+                           <item>
+                              <caption>•</caption>There is limited safety data available to support the administration of a 40 mg/kg (up to a maximum of 2 grams) intravenous bolus injection. There is no experience with the use of Meropenem for Injection in pediatric patients with renal impairment <content styleCode="italics">[see Clinical Pharmacology (<linkHtml href="#i4i_pharmacokinetics_id_a73d690e-f589-4007-b552-43d4cd9454b3">12.3</linkHtml>)]</content>.</item>
+                        </list>
+                     </text>
+                     <effectiveTime value="20241201"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="i4i_section_id_69027b26-b2ff-498a-aed5-0f1da9112f0d">
+                     <id root="43215938-0bf8-46a2-bc42-53e3556cf7f5"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42229-5" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.2 Preparation and Administration of Meropenem for Injection</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Preparation instructions for Intravenous Infusion (Reconstitution and Dilution)</content>
+                        </paragraph>
+                        <list listType="unordered">
+                           <item>
+                              <caption>•</caption>Reconstitute Meropenem for Injection vial (2 grams) with Sterile Water for Injection according to the instructions in Table 1 below. </item>
+                           <item>
+                              <caption>•</caption>Shake well to dissolve and let stand until clear. </item>
+                           <item>
+                              <caption> </caption>
+                              <content styleCode="bold">Table 1: Volume of Sterile Water for Injection for Reconstitution of Injection Vials</content>
+                           </item>
+                        </list>
+                        <table width="100%">
+                           <col width="23%"/>
+                           <col width="21%"/>
+                           <col width="23%"/>
+                           <col width="33%"/>
+                           <tbody>
+                              <tr>
+                                 <td valign="bottom" styleCode="Rrule Botrule Lrule Toprule ">
+                                    <paragraph>
+                                       <content styleCode="bold">Vial Size</content>
+                                    </paragraph>
+                                 </td>
+                                 <td valign="bottom" styleCode="Rrule Botrule Lrule Toprule ">
+                                    <paragraph>
+                                       <content styleCode="bold">Amount of Diluent Added (mL)</content>
+                                    </paragraph>
+                                 </td>
+                                 <td valign="bottom" styleCode="Rrule Botrule Lrule Toprule ">
+                                    <paragraph>
+                                       <content styleCode="bold">Approximate Withdrawable Volume (mL)</content>
+                                    </paragraph>
+                                 </td>
+                                 <td valign="bottom" styleCode="Rrule Botrule Lrule Toprule ">
+                                    <paragraph>
+                                       <content styleCode="bold">Approximate Average Concentration (mg/mL)</content>
+                                    </paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="middle" styleCode="Rrule Botrule Lrule Toprule ">
+                                    <paragraph>2 grams</paragraph>
+                                 </td>
+                                 <td valign="middle" styleCode="Rrule Botrule Lrule Toprule ">
+                                    <paragraph>40 mL</paragraph>
+                                 </td>
+                                 <td valign="middle" styleCode="Rrule Botrule Lrule Toprule ">
+                                    <paragraph>40 mL</paragraph>
+                                 </td>
+                                 <td valign="middle" styleCode="Rrule Botrule Lrule Toprule ">
+                                    <paragraph>50 mg/mL</paragraph>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <list listType="unordered">
+                           <item>
+                              <caption>•</caption>Add the resulting reconstituted solution to an intravenous container and further dilute with an appropriate infusion fluid <content styleCode="italics">[see Dosage and Administration(<linkHtml href="#i4i_section_id_2e9c76de-e2f6-45f2-afd5-dbe0a4497cfd">2.3</linkHtml>)and (<linkHtml href="#i4i_section_id_5dedf7ca-dcc6-408f-a531-b469036ce6c5">2.4</linkHtml>)]</content>.</item>
+                           <item>
+                              <caption>•</caption>Discard unused portion. </item>
+                           <item>
+                              <caption>•</caption>Parenteral drug products should be inspected visually for particulate matter and discoloration prior to administration, whenever solution and container permit. When reconstituted, the solution varies from colorless to yellow depending on the concentration.</item>
+                           <item>
+                              <caption>•</caption>Do not use flexible container in series connections.</item>
+                        </list>
+                        <paragraph>
+                           <content styleCode="underline">Administration Instructions for Meropenem Intravenous Infusion Solution  </content>
+                        </paragraph>
+                        <paragraph>After reconstitution and dilution of Meropenem for Injection, administer the appropriate dose of diluted Meropenem solution as an intravenous infusion over approximately 15 minutes to 30 minutes <content styleCode="italics">[see Dosage and Administration (<linkHtml href="#i4i_section_id_0db8be13-ab17-4dc3-9bda-e24569760fc6">2.1</linkHtml>)].</content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20241201"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="i4i_section_id_2e9c76de-e2f6-45f2-afd5-dbe0a4497cfd">
+                     <id root="63468a29-b32b-43f4-8066-66906f26e320"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42229-5" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.3 Compatibility</title>
+                     <text>
+                        <paragraph>Compatibility of Meropenem for Injection with other drugs has not been established. Meropenem for Injection should not be mixed with or physically added to solutions containing other drugs.</paragraph>
+                     </text>
+                     <effectiveTime value="20241201"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="i4i_section_id_5dedf7ca-dcc6-408f-a531-b469036ce6c5">
+                     <id root="90822c43-3e95-4f60-b9c2-f5d6b1587d21"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42229-5" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.4 Stability and Storage</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Reconstituted Solution with Sterile Water for Injection</content>
+                        </paragraph>
+                        <paragraph>Use the reconstituted solution with Sterile Water for Injection immediately. However, re-constituted solutions of Meropenem for Injection maintain satisfactory potency under the conditions described below. Do not freeze reconstituted solutions of Meropenem for Injection.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Reconstituted Solution Diluted with Sodium Chloride Injection, 0.9 %</content>
+                        </paragraph>
+                        <paragraph>Solutions prepared for infusion (meropenem concentrations ranging from 1 mg/mL to 20 mg/mL) reconstituted with Water for Injection and further diluted with Sodium Chloride Injection 0.9% may be stored for 1 hour at up to 25°C (77°F) or 2 hours at up to 5°C (41°F).</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Reconstituted Solution Diluted with Dextrose Injection, 5 %</content>
+                        </paragraph>
+                        <paragraph>Immediately use solutions (meropenem concentrations ranging from 1 mg/mL to 20 mg/mL) reconstituted with Water for Injection and subsequently diluted with Dextrose Injection 5%.</paragraph>
+                     </text>
+                     <effectiveTime value="20241201"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_dosage_form_strength_id_9a9cda6e-d7a8-4cdd-a44f-5dfc7c1c3ee9">
+               <id root="07d5e444-915e-48a0-bea3-5cde15058a1e"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="43678-2" displayName="DOSAGE FORMS &amp; STRENGTHS SECTION"/>
+               <title>3 DOSAGE FORMS AND STRENGTHS</title>
+               <text>
+                  <paragraph>For Injection: 2 grams of meropenem as a white to light yellow powder in a single-dose vial for reconstitution.</paragraph>
+               </text>
+               <effectiveTime value="20241201"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Meropenem for Injection: 2 grams of meropenem as a powder in a single-dose vial for reconstitution (<linkHtml href="#i4i_dosage_form_strength_id_9a9cda6e-d7a8-4cdd-a44f-5dfc7c1c3ee9">3</linkHtml>)</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_contraindications_id_58d057b3-9365-4ffc-8405-755b569bf01a">
+               <id root="19a76b99-9831-43a5-9978-be735324b459"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34070-3" displayName="CONTRAINDICATIONS SECTION"/>
+               <title>4 CONTRAINDICATIONS</title>
+               <text>
+                  <paragraph>Meropenem for injection is contraindicated in patients with known hypersensitivity to any component of this product or to other drugs in the same class or in patients who have demonstrated anaphylactic reactions to beta (β)-lactams.</paragraph>
+               </text>
+               <effectiveTime value="20241201"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered">
+                           <item>
+                              <caption>•</caption>Known hypersensitivity to product components or other drugs in the same class or in patients who have demonstrated anaphylactic reactions to beta (β)-lactams. (<linkHtml href="#i4i_contraindications_id_58d057b3-9365-4ffc-8405-755b569bf01a">4</linkHtml>)</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_warnings_precautions_id_22ececd3-8732-4e69-82da-fb44100cfb1d">
+               <id root="ad2e001a-9c0b-46c9-8aab-87a6e9aee8bd"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="43685-7" displayName="WARNINGS AND PRECAUTIONS SECTION"/>
+               <title>5 WARNINGS AND PRECAUTIONS</title>
+               <effectiveTime value="20241201"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered">
+                           <item>
+                              <caption>•</caption>Serious and occasionally fatal hypersensitivity (anaphylactic) reactions have been reported in patients receiving β-lactams. (<linkHtml href="#i4i_section_id_4260800f-bbcf-45f1-9d59-37fe644d005b">5.1</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>Severe cutaneous adverse reactions have been reported in patients receiving meropenem for injection. (<linkHtml href="#ID_903aeb8d-761e-4344-bc0e-59da6c9daf08">5.2</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>Rhabdomyolysis: If signs or symptoms of rhabdomyolysis are observed, discontinue meropenem for injection and initiate appropriate therapy. (<linkHtml href="#ID_6be1cd4b-1787-4240-81d0-fd9b391fae84">5.3</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>Seizures and other adverse CNS experiences have been reported during treatment. (<linkHtml href="#i4i_section_id_27953d4c-6e22-4254-ad39-b876a879d7f0">5.4</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>Co-administration of meropenem for injection with valproic acid or divalproex sodium reduces the serum concentration of valproic acid potentially increasing the risk of breakthrough seizures. (<linkHtml href="#i4i_section_id_9290e0dd-9d66-4c0a-8578-89dff67ced41">5.5</linkHtml>, <linkHtml href="#i4i_section_id_5cfd4e97-470a-4275-bb33-054382ea3226">7.2</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>
+                              <content styleCode="italics">Clostridioides difficile</content>-associated diarrhea (ranging from mild diarrhea to fatal colitis) has been reported. Evaluate if diarrhea occurs. (<linkHtml href="#i4i_section_id_2f433e35-0076-4796-9a0f-2942056e4c1f">5.6</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>In patients with renal dysfunction, thrombocytopenia has been observed (<linkHtml href="#i4i_section_id_0be88886-a27c-40fb-bc49-339ab013e3bf">5.9</linkHtml>)</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="i4i_section_id_4260800f-bbcf-45f1-9d59-37fe644d005b">
+                     <id root="547f5654-e4ec-489d-923c-c919b226b98b"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42229-5" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.1 Hypersensitivity Reactions</title>
+                     <text>
+                        <paragraph>Serious and occasionally fatal hypersensitivity (anaphylactic) reactions have been reported in patients receiving therapy with β-lactams. These reactions are more likely to occur in individuals with a history of sensitivity to multiple allergens.</paragraph>
+                        <paragraph>There have been reports of individuals with a history of penicillin hypersensitivity who have experienced severe hypersensitivity reactions when treated with another β-lactam. Before initiating therapy with meropenem for injection, it is important to inquire about previous hypersensitivity reactions to penicillins, cephalosporins, other β-lactams, and other allergens. If an allergic reaction to meropenem for injection occurs, discontinue the drug immediately. </paragraph>
+                     </text>
+                     <effectiveTime value="20241201"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_903aeb8d-761e-4344-bc0e-59da6c9daf08">
+                     <id root="d7d63de4-9a19-4ae1-a37b-11102b7216a3"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42229-5" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.2 Severe Cutaneous Adverse Reactions </title>
+                     <text>
+                        <paragraph>Severe cutaneous adverse reactions (SCAR) such as Stevens-Johnson syndrome (SJS), toxic epidermal necrolysis (TEN), drug reaction with eosinophilia and systemic symptoms (DRESS), erythema multiforme (EM) and acute generalized exanthematous pustulosis (AGEP) have been reported in patients receiving meropenem for injection [<content styleCode="italics">see Adverse Reactions (<linkHtml href="#i4i_section_id_7515bac1-6647-4ff4-874d-867a201934d9">6.2</linkHtml>)</content>]. If signs and symptoms suggestive of these reactions appear, meropenem should be withdrawn immediately and an alternative treatment should be considered.</paragraph>
+                     </text>
+                     <effectiveTime value="20241201"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_6be1cd4b-1787-4240-81d0-fd9b391fae84">
+                     <id root="b4867ad8-5a22-436f-ba54-74c811dbbf81"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42229-5" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.3 Rhabdomyolysis  </title>
+                     <text>
+                        <paragraph>Rhabdomyolysis has been reported with the use of meropenem <content styleCode="italics">[see Adverse Reactions (</content>
+                           <content styleCode="italics">
+                              <linkHtml href="#i4i_section_id_7515bac1-6647-4ff4-874d-867a201934d9">6.2</linkHtml>)]</content>. If signs or symptoms of rhabdomyolysis such as muscle pain, tenderness or weakness, dark urine, or elevated creatine phosphokinase are observed, discontinue meropenem for injection and initiate appropriate therapy.</paragraph>
+                     </text>
+                     <effectiveTime value="20241201"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="i4i_section_id_27953d4c-6e22-4254-ad39-b876a879d7f0">
+                     <id root="0402fbf6-5614-4176-9447-7e146d41d4d6"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42229-5" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.4 Seizure Potential</title>
+                     <text>
+                        <paragraph>Seizures and other adverse CNS experiences have been reported during treatment with meropenem for injection. These experiences have occurred most commonly in patients with CNS disorders (e.g., brain lesions or history of seizures) or with bacterial meningitis and/or compromised renal function [<content styleCode="italics">see Adverse Reactions(<linkHtml href="#i4i_section_id_7a983b76-726f-4348-8cd1-f111b2b3abcc">6.1</linkHtml>) and Drug Interactions(<linkHtml href="#i4i_section_id_5cfd4e97-470a-4275-bb33-054382ea3226">7.2</linkHtml>)</content>].</paragraph>
+                        <paragraph>During clinical investigations, 2904 immunocompetent adult patients were treated for non-CNS infections with the overall seizure rate being 0.7% (based on 20 patients with this adverse event). All meropenem-treated patients with seizures had pre-existing contributing factors. Among these included a prior history of seizures or CNS abnormality and concomitant medications with seizure potential.</paragraph>
+                        <paragraph>Close adherence to the recommended dosage regimens is urged, especially in patients with known factors that predispose to convulsive activity. Continue anti-convulsant therapy in patients with known seizure disorders. If focal tremors, myoclonus, or seizures occur, evaluate neurologically, placed on anti-convulsant therapy if not already instituted, and re-examine the dosage of meropenem for injection to determine whether it should be decreased or discontinued.</paragraph>
+                     </text>
+                     <effectiveTime value="20241201"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="i4i_section_id_9290e0dd-9d66-4c0a-8578-89dff67ced41">
+                     <id root="07ccb297-4514-4763-af2b-c32be7fb8f8c"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42229-5" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.5 Risk of Breakthrough Seizures Due to Drug Interaction with Valproic Acid</title>
+                     <text>
+                        <paragraph>The concomitant use of meropenem and valproic acid or divalproex sodium is generally not recommended. Case reports in the literature have shown that co-administration of carbapenems, including meropenem, to patients receiving valproic acid or divalproex sodium results in a reduction in valproic acid concentrations. The valproic acid concentrations may drop below the therapeutic range as a result of this interaction, therefore increasing the risk of breakthrough seizures. Increasing the dose of valproic acid or divalproex sodium may not be sufficient to overcome this interaction. Consider administration of antibacterial drugs other than carbapenems to treat infections in patients whose seizures are well controlled on valproic acid or divalproex sodium. If administration of meropenem for injection is necessary, consider supplemental anti-convulsant therapy [<content styleCode="italics">see Drug Interactions (<linkHtml href="#i4i_section_id_5cfd4e97-470a-4275-bb33-054382ea3226">7.2</linkHtml>)</content>].</paragraph>
+                     </text>
+                     <effectiveTime value="20241201"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="i4i_section_id_2f433e35-0076-4796-9a0f-2942056e4c1f">
+                     <id root="a70bdfb4-473d-4cc3-9404-492f3233e59c"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42229-5" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.6 <content styleCode="italics">Clostridioides difficile</content>–associated Diarrhea</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="italics">Clostridioides difficile-</content>associated diarrhea (CDAD) has been reported with use of nearly all antibacterial agents, including meropenem for injection, and may range in severity from mild diarrhea to fatal colitis. Treatment with antibacterial agents alters the normal flora of the colon leading to overgrowth of <content styleCode="italics">C. difficile</content>.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">C. difficile </content>produces toxins A and B which contribute to the development of CDAD. Hypertoxin producing isolates of <content styleCode="italics">C. difficile </content>cause increased morbidity and mortality, as these infections can be refractory to antimicrobial therapy and may require colectomy. CDAD must be considered in all patients who present with diarrhea following antibacterial drug use. Careful medical history is necessary since CDAD has been reported to occur over two months after the administration of antibacterial agents.</paragraph>
+                        <paragraph>If CDAD is suspected or confirmed, ongoing antibacterial drug use not directed against <content styleCode="italics">C. difficile </content>may need to be discontinued. Appropriate fluid and electrolyte management, protein supplementation, antibacterial drug treatment of <content styleCode="italics">C. difficile, </content>and surgical evaluation should be instituted as clinically indicated.</paragraph>
+                     </text>
+                     <effectiveTime value="20241201"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="i4i_section_id_9b6c0f8e-ba5f-414b-b311-c94b6f5ad90a">
+                     <id root="636d17c2-cb9a-4ef5-9970-38a1aea03739"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42229-5" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.7 Development of Drug-Resistant Bacteria</title>
+                     <text>
+                        <paragraph>Prescribing meropenem for injection in the absence of a proven or strongly suspected bacterial infection or a prophylactic indication is unlikely to provide benefit to the patient and increases the risk of the development of drug-resistant bacteria.</paragraph>
+                     </text>
+                     <effectiveTime value="20241201"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="i4i_section_id_f4bccde5-3125-4b50-850c-6aa0e31167b6">
+                     <id root="99a73dba-406f-4245-8b30-513fb8b9aadc"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42229-5" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.8 Overgrowth of Nonsusceptible Organisms</title>
+                     <text>
+                        <paragraph>As with other broad-spectrum antibacterial drugs, prolonged use of meropenem may result in overgrowth of nonsusceptible organisms. Repeated evaluation of the patient is essential. If superinfection does occur during therapy, appropriate measures should be taken.</paragraph>
+                     </text>
+                     <effectiveTime value="20241201"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="i4i_section_id_0be88886-a27c-40fb-bc49-339ab013e3bf">
+                     <id root="80fcbb6c-6212-48b5-a09f-19b4d85f1d77"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42229-5" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.9 Thrombocytopenia</title>
+                     <text>
+                        <paragraph>In patients with renal impairment, thrombocytopenia has been observed but no clinical bleeding reported <content styleCode="italics">[see Dosage and Administration (<linkHtml href="#i4i_section_id_69027b26-b2ff-498a-aed5-0f1da9112f0d">2.2</linkHtml>), Adverse Reactions (<linkHtml href="#i4i_section_id_7a983b76-726f-4348-8cd1-f111b2b3abcc">6.1</linkHtml>), and Clinical Pharmacology (<linkHtml href="#i4i_pharmacokinetics_id_a73d690e-f589-4007-b552-43d4cd9454b3">12.3</linkHtml>)].</content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20241201"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_d214dea6-6d27-41e4-bc74-aba1450e82fb">
+                     <id root="cfcc5431-b1dd-4c07-b787-ca3fefa03bd2"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42229-5" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.10 Potential for Neuromotor Impairment</title>
+                     <text>
+                        <paragraph>Alert patients receiving meropenem for injection on an outpatient basis regarding adverse events such as seizures, delirium, headaches and/or paresthesias that could interfere with mental alertness and/or cause motor impairment. Until it is reasonably well established that meropenem for injection is well tolerated, advise patients not to operate machinery or motorized vehicles <content styleCode="italics">[see Adverse Reactions (<linkHtml href="#i4i_section_id_7a983b76-726f-4348-8cd1-f111b2b3abcc">6.1</linkHtml>)]</content>.</paragraph>
+                     </text>
+                     <effectiveTime value="20241201"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_adverse_effects_id_7150b988-5bec-4dc6-a6a4-0a6138d7d014">
+               <id root="741a1afb-bf66-4b7d-9fb7-78cfdb54097c"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34084-4" displayName="ADVERSE REACTIONS SECTION"/>
+               <title>6 ADVERSE REACTIONS</title>
+               <text>
+                  <paragraph>The following are discussed in greater detail in other sections of labeling:</paragraph>
+                  <list listType="unordered">
+                     <item>
+                        <caption>•</caption>Hypersensitivity Reactions <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#i4i_section_id_4260800f-bbcf-45f1-9d59-37fe644d005b">5.1</linkHtml>)]</content>
+                     </item>
+                     <item>
+                        <caption>•</caption>Severe Cutaneous Adverse Reactions <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#ID_903aeb8d-761e-4344-bc0e-59da6c9daf08">5.2</linkHtml>)]</content>
+                     </item>
+                     <item>
+                        <caption>•</caption>Rhabdomyolysis <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#ID_6be1cd4b-1787-4240-81d0-fd9b391fae84">5.3</linkHtml>)]</content>
+                     </item>
+                     <item>
+                        <caption>•</caption>Seizure Potential <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#i4i_section_id_9290e0dd-9d66-4c0a-8578-89dff67ced41">5.4</linkHtml>)]</content>
+                     </item>
+                     <item>
+                        <caption>•</caption>Risk of Breakthrough Seizures Due to Drug Interaction with Valproic Acid <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#i4i_section_id_2f433e35-0076-4796-9a0f-2942056e4c1f">5.5</linkHtml>)]</content>
+                     </item>
+                     <item>
+                        <caption>•</caption>
+                        <content styleCode="italics">Clostridioides difficile</content> – Associated Diarrhea <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#i4i_section_id_9b6c0f8e-ba5f-414b-b311-c94b6f5ad90a">5.6</linkHtml>)]</content>
+                     </item>
+                     <item>
+                        <caption>•</caption>Development of Drug-Resistant Bacteria <content styleCode="italics">[see Warnings and Precautions (</content>
+                        <content styleCode="italics">
+                           <linkHtml href="#i4i_section_id_9b6c0f8e-ba5f-414b-b311-c94b6f5ad90a">5.7</linkHtml>
+                        </content>
+                        <content styleCode="italics">)]</content>
+                     </item>
+                     <item>
+                        <caption>•</caption>Overgrowth of Nonsusceptible Organisms <content styleCode="italics">[see Warnings and Precautions (</content>
+                        <content styleCode="italics">
+                           <linkHtml href="#i4i_section_id_f4bccde5-3125-4b50-850c-6aa0e31167b6">5.8</linkHtml>
+                        </content>
+                        <content styleCode="italics">)]</content>
+                     </item>
+                     <item>
+                        <caption>•</caption>Thrombocytopenia <content styleCode="italics">[see Warnings and Precautions (</content>
+                        <content styleCode="italics">
+                           <linkHtml href="#i4i_section_id_0be88886-a27c-40fb-bc49-339ab013e3bf">5.9</linkHtml>
+                        </content>
+                        <content styleCode="italics">)]</content>
+                     </item>
+                     <item>
+                        <caption>•</caption>Potential for Neuromotor Impairment <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#ID_d214dea6-6d27-41e4-bc74-aba1450e82fb">5.10</linkHtml>)]</content>
+                     </item>
+                  </list>
+               </text>
+               <effectiveTime value="20241201"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Most common adverse reactions (incidence ≥ 1%) are: diarrhea, rash (mostly diaper area moniliasis), oral moniliasis, and glossitis (<linkHtml href="#i4i_section_id_7a983b76-726f-4348-8cd1-f111b2b3abcc">6.1</linkHtml>)</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">To report SUSPECTED ADVERSE REACTIONS, contact WG Critical Care, LLC at 1-866-562-4708 or FDA at 1-800-FDA-1088 or <linkHtml href="http://www.fda.gov/medwatch">www.fda.gov/medwatch</linkHtml>.</content>
+                        </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="i4i_section_id_7a983b76-726f-4348-8cd1-f111b2b3abcc">
+                     <id root="5ad50abc-6256-4cfb-adfa-0515133c639c"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42229-5" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>6.1 Clinical Trials Experience</title>
+                     <text>
+                        <paragraph>Because clinical trials are conducted under widely varying conditions, adverse reactions rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Adverse Reactions in Pediatric Patients with Bacterial Meningitis</content>
+                        </paragraph>
+                        <paragraph>Meropenem for injection was studied in 321 pediatric patients (3 months to less than 17 years of age) with bacterial meningitis at a dosage of 40 mg/kg every 8 hours. The most common adverse reactions and their rates of occurrence were as follows:</paragraph>
+                        <list listType="unordered">
+                           <item>
+                              <caption> </caption>Diarrhea	4.7%</item>
+                           <item>
+                              <caption> </caption>Rash (mostly diaper area moniliasis)	3.1%</item>
+                           <item>
+                              <caption> </caption>Oral Moniliasis	1.9%</item>
+                           <item>
+                              <caption> </caption>Glossitis	1%</item>
+                        </list>
+                        <paragraph>In these studies, the rates of seizure activity during therapy were comparable between patients with no CNS abnormalities who received meropenem for injection and those who received comparator agents (either cefotaxime or ceftriaxone). In the meropenem for injection-treated group, 12/15 patients with seizures had late onset seizures (seizures that occurred on day 3 or later) versus 7/20 patients in the comparator arm.</paragraph>
+                        <paragraph>The meropenem for injection group had a statistically higher number of patients than the comparator with transient elevation of liver enzymes.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Adverse Reactions from Studies of Meropenem for Injectionin Other Serious Bacterial Infections (not bacterial meningitis)</content>
+                        </paragraph>
+                        <paragraph>The following adverse reactions occurred in studies of 2,904 immunocompetent adult patients who received meropenem for injection (500 mg or 1 gram every 8 hours) for the treatment of other serious bacterial infections (not bacterial meningitis). This meropenem for injection product is indicated only for the treatment of bacterial meningitis caused by certain organisms in pediatric patients 3 months of age and older <content styleCode="italics">[see Indications and Usage (<linkHtml href="#i4i_section_id_70263ac9-ae66-4588-b222-3fb60005d883">1.1</linkHtml>)].</content> Many patients in these studies were severely ill and had multiple background diseases, physiological impairments and were receiving multiple other drug therapies. In the seriously ill patient population, it was not possible to determine the relationship between observed adverse events and therapy with meropenem for injection.</paragraph>
+                        <paragraph>Deaths in 5 patients were assessed as possibly related to meropenem for injection; 36 (1.2%) patients had meropenem for injection discontinued because of adverse events.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Local Adverse Reactions</content>
+                        </paragraph>
+                        <paragraph>Local adverse reactions that were reported with meropenem for injection were as follows: Inflammation at the injection site (2.4%), injection site reaction (0.9%), phlebitis/thrombophlebitis (0.8%), pain at the injection site (0.4%), and edema at the injection site (0.2%)</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Systemic Adverse Reactions</content>
+                        </paragraph>
+                        <paragraph>Systemic adverse reactions that occurred in greater than 1% of the meropenem for injection-treated patients were diarrhea (4.8%), nausea/vomiting (3.6%), headache (2.3%), rash (1.9%), sepsis (1.6%), constipation (1.4%), apnea (1.3%), shock (1.2%), and pruritus (1.2%). Additional systemic adverse reactions that occurred in less than or equal to 1% but greater than 0.1% of the meropenem for injection-treated patients are listed below within each body system in order of decreasing frequency:</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Bleeding Events:</content> gastrointestinal hemorrhage (0.5%), melena (0.3%), epistaxis (0.2%), hemoperitoneum (0.2%).</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Body as a Whole:</content> pain, abdominal pain, chest pain, fever, back pain, abdominal enlargement, chills, pelvic pain</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Cardiovascular:</content> heart failure, heart arrest, tachycardia, hypertension, myocardial infarction, pulmonary embolus, bradycardia, hypotension, syncope</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Digestive System:</content> oral moniliasis, anorexia, cholestatic jaundice/jaundice, flatulence, ileus, hepatic failure, dyspepsia, intestinal obstruction</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Hemic/Lymphatic:</content> anemia, hypochromic anemia, hypervolemia</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Metabolic/Nutritional:</content> peripheral edema, hypoxia</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Nervous System:</content> insomnia, agitation, delirium, confusion, dizziness, seizure, nervousness, paresthesia, hallucinations, somnolence, anxiety, depression, asthenia</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Respiratory: </content>respiratory disorder, dyspnea, pleural effusion, asthma, cough increased, lung edema</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Skin and Appendages:</content> urticaria, sweating, skin ulcer</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Urogenital System:</content> dysuria, kidney failure, vaginal moniliasis, urinary incontinence</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Laboratory Abnormalities</content>
+                        </paragraph>
+                        <paragraph>Laboratory abnormalities that occurred in greater than 0.2% of the meropenem for injection-treated patients were as follows:</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Hepatic:</content> increased alanine transaminase (ALT), aspartate transaminase (AST), alkaline phosphatase, lactate dehydrogenase (LDH), and bilirubin</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Hematologic:</content> increased platelets, increased eosinophils, decreased platelets, decreased hemoglobin, decreased hematocrit, decreased white blood cell (WBC), shortened prothrombin time and shortened partial thromboplastin time, leukocytosis, hypokalemia</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Renal:</content> increased creatinine and increased blood urea nitrogen (BUN)</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Urinalysis:</content> presence of red blood cells</paragraph>
+                     </text>
+                     <effectiveTime value="20241201"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="i4i_section_id_7515bac1-6647-4ff4-874d-867a201934d9">
+                     <id root="d996a963-2953-47ae-9340-ff70c709ce76"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42229-5" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>6.2 Post-marketing Experience</title>
+                     <text>
+                        <paragraph>The following adverse reactions have been identified during post-approval use of meropenem, including meropenem for injection. Because these reactions are reported voluntarily from a population of uncertain size, it is not always possible to reliably estimate their frequency or establish a causal relationship to drug exposure.</paragraph>
+                        <paragraph>Worldwide post-marketing adverse reactions not otherwise listed under the Clinical Trials Experience subsection <content styleCode="italics">[see Adverse Reactions (<linkHtml href="#i4i_section_id_7a983b76-726f-4348-8cd1-f111b2b3abcc">6.1</linkHtml>)]</content> and reported as possibly, probably, or definitely drug related are listed within each body system in order of decreasing severity.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Blood and Lymphatic System Disorders:</content> agranulocytosis, neutropenia, and leukopenia; a positive direct or indirect Coombs test, and hemolytic anemia.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Immune System Disorders:</content> angioedema</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Skin and Subcutaneous Disorders:</content> Stevens-Johnson syndrome, toxic epidermal necrolysis, drug reaction with eosinophilia and systemic symptoms (DRESS), erythema multiforme and acute generalized exanthematous pustulosis.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Musculoskeletal Disorders:</content> rhabdomyolysis</paragraph>
+                     </text>
+                     <effectiveTime value="20241201"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_interactions_id_9d8f1d49-91af-4e6d-afbd-13b039204496">
+               <id root="c555fcc4-5025-4c65-8ba2-4263ae78ae38"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34073-7" displayName="DRUG INTERACTIONS SECTION"/>
+               <title>7 DRUG INTERACTIONS</title>
+               <effectiveTime value="20241201"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered">
+                           <item>
+                              <caption>•</caption>Co-administration of meropenem for injection with probenecid inhibits renal excretion of meropenem and therefore Meropenem for Injection is not recommended (<linkHtml href="#i4i_section_id_0c0186cc-9bd1-49b0-b042-c189325eff21">7.1</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>The concomitant use of Meropenem for Injection and valproic acid or divalproex sodium is generally not recommended. Antibacterial drugs other than carbapenems should be considered to treat infections in patients whose seizures are well controlled on valproic acid or divalproex sodium. (<linkHtml href="#i4i_section_id_9290e0dd-9d66-4c0a-8578-89dff67ced41">5.4</linkHtml>, <linkHtml href="#i4i_section_id_5cfd4e97-470a-4275-bb33-054382ea3226">7.2</linkHtml>)</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="i4i_section_id_0c0186cc-9bd1-49b0-b042-c189325eff21">
+                     <id root="2649bbd2-675a-4d5e-b706-0a0ad5cbca54"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42229-5" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>7.1 Probenecid</title>
+                     <text>
+                        <paragraph>Probenecid competes with meropenem for active tubular secretion, resulting in increased plasma concentrations of meropenem. Co-administration of probenecid with meropenem is not recommended.</paragraph>
+                     </text>
+                     <effectiveTime value="20241201"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="i4i_section_id_5cfd4e97-470a-4275-bb33-054382ea3226">
+                     <id root="65b4a969-dd09-4c69-9c1b-dcc67d53ec3d"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42229-5" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>7.2 Valproic Acid</title>
+                     <text>
+                        <paragraph>Case reports in the literature have shown that co-administration of carbapenems, including meropenem, to patients receiving valproic acid or divalproex sodium results in a reduction in valproic acid concentrations. The valproic acid concentrations may drop below the therapeutic range as a result of this interaction, therefore increasing the risk of breakthrough seizures. Although the mechanism of this interaction is unknown, data from <content styleCode="italics">in vitro</content> and animal studies suggest that carbapenems may inhibit the hydrolysis of valproic acid’s glucuronide metabolite (VPA-g) back to valproic acid, thus decreasing the serum concentrations of valproic acid. If administration of meropenem for injection is necessary, then supplemental anti-convulsant therapy should be considered [<content styleCode="italics">see Warnings and Precautions(<linkHtml href="#i4i_section_id_9290e0dd-9d66-4c0a-8578-89dff67ced41">5.4</linkHtml>)</content>].</paragraph>
+                     </text>
+                     <effectiveTime value="20241201"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_specific_populations_id_ffe63fd5-037e-4923-86a5-f182f170dce6">
+               <id root="116c133f-a572-4c48-a3f8-8957f96e93ca"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="43684-0" displayName="USE IN SPECIFIC POPULATIONS SECTION"/>
+               <title>8 USE IN SPECIFIC POPULATIONS</title>
+               <effectiveTime value="20241201"/>
+               <component>
+                  <section ID="i4i_pregnancy_id_bc685751-49b5-4ab0-bec6-97aff125574b">
+                     <id root="b4828789-929e-4ccd-ba7e-6bf07203a53f"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42228-7" displayName="PREGNANCY SECTION"/>
+                     <title>8.1 Pregnancy</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Risk Summary </content>
+                        </paragraph>
+                        <paragraph>There are insufficient human data to establish whether there is a drug-associated risk of major birth defects or miscarriages with meropenem in pregnant women.</paragraph>
+                        <paragraph>No fetal toxicity or malformations were observed in pregnant rats and Cynomolgus monkeys administered intravenous meropenem during organogenesis at doses up to 2.4 and 2.3 times the maximum recommended human dose (MRHD) based on body surface area comparison, respectively. In rats administered intravenous meropenem in late pregnancy and during the lactation period, there were no adverse effects on offspring at doses equivalent to approximately 3.2 times the MRHD based on body surface area comparison (<content styleCode="italics">see <content styleCode="underline">Data</content>
+                           </content>).</paragraph>
+                        <paragraph>The background risk of major birth defects and miscarriage for the indicated population is unknown. All pregnancies have a background risk of birth defect, loss, or other adverse outcomes. In the U.S. general population, the estimated background risk of major birth defects and miscarriage in clinically recognized pregnancies is 2% to 4% and 15% to 20%, respectively.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Data </content>
+                        </paragraph>
+                        <paragraph>Meropenem administered to pregnant rats during organogenesis (Gestation Day 6 to Gestation Day 17) in intravenous doses of 240, 500, and 750 mg/kg/day was associated with mild maternal weight loss at all doses, but did not produce malformations or fetal toxicity. The no-observed-adverse-effect-level (NOAEL) for fetal toxicity in this study was considered to be the high dose of 750 mg/kg/day (equivalent to approximately 2.4 times the MRHD of 1 gram every 8 hours based on body surface area comparison). Meropenem administered intravenously to pregnant Cynomolgus monkeys during organogenesis from Day 20 to 50 after mating at doses of 120, 240, and 360 mg/kg/day did not produce maternal or fetal toxicity at the NOAEL dose of 360 mg/kg/day (approximately 2.3 times the MRHD based on body surface area comparison). </paragraph>
+                        <paragraph>In a peri-postnatal study in rats described in the published literature<sup>1</sup>, intravenous meropenem was administered to dams from Gestation Day 17 until Lactation Day 21 at doses of 240, 500, and 1000 mg/kg/day. There were no adverse effects in the dams and no adverse effects in the first generation offspring (including developmental, behavioral, and functional assessments and reproductive parameters) except that female offspring exhibited lowered body weights which continued during gestation and nursing of the second generation offspring. Second generation offspring showed no meropenem-related effects. The NOAEL value was considered to be 1000 mg/kg/day (approximately 3.2 times the MRHD based on body surface area comparisons).</paragraph>
+                     </text>
+                     <effectiveTime value="20241201"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_8ed0e914-ce1e-403a-aed1-df49c5ab8043">
+                     <id root="a80c4c3b-b3fe-4cfc-a052-e7a5ad395076"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="77290-5" displayName="LACTATION SECTION"/>
+                     <title>8.2 Lactation </title>
+                     <effectiveTime value="20241201"/>
+                     <component>
+                        <section ID="ID_01dd3fb7-84f5-49e8-b372-029ca615a9c0">
+                           <id root="739974d4-0f6b-44b7-9400-21d2bcf99b27"/>
+                           <code codeSystem="2.16.840.1.113883.6.1" code="69759-9" displayName="RISKS"/>
+                           <title>
+                              <content styleCode="bold">
+                                 <content styleCode="underline">Risk Summary</content>
+                              </content>
+                           </title>
+                           <text>
+                              <paragraph>Meropenem has been reported to be excreted in human milk. No information is available on the effects of meropenem on the breast-fed child or on milk production. The developmental and health benefits of breastfeeding should be considered along with the mother’s clinical need for meropenem for injection and any potential adverse effects on the breast-fed child from meropenem for injection or from the underlying maternal conditions.</paragraph>
+                           </text>
+                           <effectiveTime value="20241201"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="i4i_pediatric_use_id_3f2aaf67-7fdb-4d25-aec4-f9f07bdb31c7">
+                     <id root="0289e5ef-a665-4ebd-84cc-9ad7544c2e3e"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="34081-0" displayName="PEDIATRIC USE SECTION"/>
+                     <title>8.4 Pediatric Use</title>
+                     <text>
+                        <paragraph>The safety and effectiveness of Meropenem for Injection have been established for pediatric patients 3 months of age and older for the treatment of bacterial meningitis caused by <content styleCode="italics">Haemophilus influenzae</content>, <content styleCode="italics">Neisseria meningitidis</content> and penicillin-susceptible isolates of <content styleCode="italics">Streptococcus pneumoniae</content>, and the information on this use is discussed throughout the labeling.</paragraph>
+                        <paragraph>The safety and effectiveness of Meropenem for Injection have not been established in pediatric patients younger than 3 months of age.</paragraph>
+                     </text>
+                     <effectiveTime value="20241201"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_overdosage_id_0024718f-0da4-4f4c-b5af-f111f92d5daf">
+               <id root="1184502a-6a18-4efb-af68-6f96c735381e"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34088-5" displayName="OVERDOSAGE SECTION"/>
+               <title>10 OVERDOSAGE</title>
+               <text>
+                  <paragraph>In mice and rats, large intravenous doses of meropenem (2200 mg/kg to 4000 mg/kg) have been associated with ataxia, dyspnea, convulsions, and mortalities.</paragraph>
+                  <paragraph>Intentional overdosing of meropenem for injection is unlikely, although accidental overdosing might occur if large doses are given to patients with reduced renal function. The largest dose of meropenem administered in clinical trials has been 2 grams given intravenously every 8 hours. At this dosage, no adverse pharmacological effects or increased safety risks have been observed.</paragraph>
+                  <paragraph>Limited postmarketing experience indicates that if adverse events occur following overdosage, they are consistent with the adverse event profile described in the Adverse Reactions section and are generally mild in severity and resolve on withdrawal or dose reduction. Consider symptomatic treatments. In individuals with normal renal function, rapid renal elimination takes place. Meropenem and its metabolite are readily dialyzable and effectively removed by hemodialysis; however, no information is available on the use of hemodialysis to treat overdosage.</paragraph>
+               </text>
+               <effectiveTime value="20241201"/>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_description_id_4f13ac52-c3af-41d7-bebf-a141ee26d01e">
+               <id root="db8e86d9-a6fb-46e8-be2c-29f68a20bfd2"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34089-3" displayName="DESCRIPTION SECTION"/>
+               <title>11 DESCRIPTION</title>
+               <text>
+                  <paragraph>Meropenem for Injection contains meropenem a synthetic carbapenem antibacterial. Meropenem is (4R,5S,6S)-3-[[(3S,5S)-5-(Dimethylcarbamoyl)-3-pyrrolidinyl]thio]-6-[(1R)-1-hydroxyethyl]-4-methyl-7-oxo-1-azabicyclo[3.2.0]hept-2-ene-2-carboxylic acid trihydrate. Its empirical formula is C<sub>17</sub>H<sub>25</sub>N<sub>3</sub>O<sub>5</sub>S•3H<sub>2</sub>O with a molecular weight of 437.52. Its structural formula is:</paragraph>
+                  <renderMultiMedia referencedObject="ID_7cb2dea1-f35f-4208-ae84-9c5dd78d91f0" ID="id1074"/>
+                  <paragraph>Meropenem is soluble in 5% monobasic potassium phosphate solution, sparingly soluble in water, very slightly soluble in hydrated ethanol, and practically insoluble in acetone or ether.</paragraph>
+                  <paragraph>Meropenem for Injection is a white to pale yellow sterile powder for intravenous administration. Each vial contains meropenem equivalent to 2 grams and 416 mg of sodium bicarbonate, anhydrous. When re-constituted as instructed Meropenem for Injection will deliver 2 grams of meropenem (on anhydrous basis) and approximately 180 mg of sodium as sodium carbonate (7.8 mEq) <content styleCode="italics">[see Dosage and Administration (<linkHtml href="#i4i_section_id_69027b26-b2ff-498a-aed5-0f1da9112f0d">2.2</linkHtml>)].</content> The solution varies from colorless to yellow depending on the concentration. The pH of freshly constituted solutions is between 7.3 and 8.3.</paragraph>
+               </text>
+               <effectiveTime value="20241201"/>
+               <component>
+                  <observationMedia ID="ID_7cb2dea1-f35f-4208-ae84-9c5dd78d91f0">
+                     <text>structure</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="image-01.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_clinical_pharmacology_id_c125753b-79de-4059-afbb-7a6be48c012d">
+               <id root="69cd05f5-1ea4-4a08-a684-ea88c42c97d3"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34090-1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+               <title>12 CLINICAL PHARMACOLOGY</title>
+               <effectiveTime value="20241201"/>
+               <component>
+                  <section ID="i4i_mechanism_action_id_26decdf2-f9be-4510-a13f-d4bb541db4a5">
+                     <id root="b362d32b-bdee-45d0-8243-158617769917"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="43679-0" displayName="MECHANISM OF ACTION SECTION"/>
+                     <title>12.1 Mechanism of Action</title>
+                     <text>
+                        <paragraph>Meropenem is an antibacterial drug [<content styleCode="italics">see Microbiology (<linkHtml href="#i4i_section_id_89ab5a25-5ef8-46fb-b903-1d16d4a97557">12.4</linkHtml>)</content>].</paragraph>
+                     </text>
+                     <effectiveTime value="20241201"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_fefa85c7-056c-4c71-95ef-f1b720429fb3">
+                     <id root="a21107df-3b40-4a55-8487-f0fcb620c9ff"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="43681-6" displayName="PHARMACODYNAMICS SECTION"/>
+                     <title>12.2 Pharmacodynamics </title>
+                     <text>
+                        <paragraph>The percentage of time of a dosing interval that unbound plasma concentration of meropenem exceeds the meropenem minimum inhibitory concentration (MIC) against the infecting organism has been shown to best correlate with efficacy in animal and in vitro models of infection.</paragraph>
+                     </text>
+                     <effectiveTime value="20241201"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="i4i_pharmacokinetics_id_a73d690e-f589-4007-b552-43d4cd9454b3">
+                     <id root="ad8306cd-a844-470a-a760-2ce19612db9a"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="43682-4" displayName="PHARMACOKINETICS SECTION"/>
+                     <title>12.3 Pharmacokinetics</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="bold">Plasma Concentrations</content>
+                        </paragraph>
+                        <paragraph>At the end of a 30-minute intravenous infusion of a single dose of meropenem for injection in healthy volunteers, mean peak plasma concentrations of meropenem are approximately 49 mcg/mL (range 39 to 58) for the 1 gram dose.</paragraph>
+                        <paragraph>Following intravenous doses of 500 mg, mean plasma concentrations of meropenem usually decline to approximately 1 mcg/mL at 6 hours after administration.</paragraph>
+                        <paragraph>No accumulation of meropenem in plasma was observed with regimens using 1 gram administered every 6 hours in healthy volunteers with normal renal function.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Distribution</content>
+                        </paragraph>
+                        <paragraph>The plasma protein binding of meropenem is approximately 2%.</paragraph>
+                        <paragraph>After a single intravenous dose of meropenem for injection, the highest mean concentrations of meropenem were found in tissues and fluids at 1 hour (0.5 hours to 1.5 hours) after the start of infusion, except where indicated in the tissues and fluids listed in Table 2 below.</paragraph>
+                        <table ID="_RefID81050EE6646A405B934C3677ADD5B9DF" width="100%">
+                           <caption>Table 1: Meropenem Concentrations in Selected Tissues (Highest Concentrations Reported) </caption>
+                           <col width="19%"/>
+                           <col width="19%"/>
+                           <col width="22%"/>
+                           <col width="19%"/>
+                           <col width="21%"/>
+                           <tbody>
+                              <tr>
+                                 <td valign="top" styleCode="Botrule Lrule Toprule ">
+                                    <paragraph>
+                                       <content styleCode="bold">Tissue </content>
+                                    </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Botrule Lrule Toprule ">
+                                    <paragraph>
+                                       <content styleCode="bold">Intravenous Dose</content>
+                                    </paragraph>
+                                    <paragraph>
+                                       <content styleCode="bold">(gram)</content>
+                                    </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Botrule Lrule Toprule ">
+                                    <paragraph>
+                                       <content styleCode="bold">Number of Samples </content>
+                                    </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Botrule Lrule Toprule ">
+                                    <paragraph>
+                                       <content styleCode="bold">Mean [mcg/mL</content>
+                                    </paragraph>
+                                    <paragraph>
+                                       <content styleCode="bold">or mcg/(gram)]</content>
+                                       <footnote ID="_Ref392844843">at 1 hour unless otherwise noted</footnote>
+                                    </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Botrule Lrule Toprule ">
+                                    <paragraph>
+                                       <content styleCode="bold">Range [mcg/mL or</content>
+                                    </paragraph>
+                                    <paragraph>
+                                       <content styleCode="bold">mcg/(gram)]</content>
+                                    </paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Lrule Botrule "/>
+                                 <td valign="top" styleCode="Lrule Botrule "/>
+                                 <td valign="top" styleCode="Lrule Botrule "/>
+                                 <td valign="top" styleCode="Lrule Botrule "/>
+                                 <td valign="top" styleCode="Rrule Lrule Botrule "/>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>Endometrium </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>0.5</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>7</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>4.2</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>1.7 to 10.2</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>Myometrium </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>0.5</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>15</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>3.8</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>0.4 to 8.1</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>Ovary </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>0.5</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>8</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>2.8</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>0.8 to 4.8</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>Cervix </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>0.5</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>2</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>7</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>5.4 to 8.5</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>Fallopian tube </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>0.5</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>9</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>1.7</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>0.3 to 3.4</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>Skin </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>0.5</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>22</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>3.3</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>0.5 to 12.6</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>Interstitial fluid<footnote ID="_Ref392845295">obtained from blister fluid</footnote>
+                                    </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>0.5</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>9</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>5.5</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>3.2 to 8.6</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>Skin </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>1</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>10</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>5.3</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>1.3 to 16.7</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>Interstitial fluid<footnoteRef IDREF="_Ref392845295"/>
+                                    </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>1</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>5</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>26.3</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>20.9 to 37.4</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>Colon </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>1</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>2</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>2.6</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>2.5 to 2.7</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>Bile </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>1</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>7</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>14.6 (3 hours)</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>4 to 25.7</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>Gall bladder </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>1</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>1</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>-</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>3.9</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>Peritoneal fluid </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>1</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>9</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>30.2</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>7.4 to 54.6</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>Lung </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>1</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>2</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>4.8 (2 hours)</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>1.4 to 8.2</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>Bronchial mucosa </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>1</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>7</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>4.5</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>1.3 to 11.1</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>Muscle </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>1</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>2</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>6. 1 (2 hours)</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>5.3 to 6.9</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>Fascia </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>1</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>9</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>8.8 </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>1.5 to 20</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>Heart valves </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>1</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>7</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>9.7 </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>6.4 to 12.1</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>Myocardium </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>1</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>10</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>15.5 </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>5.2 to 25.5</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>CSF (inflamed) </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>20 mg/kg<footnote ID="_Ref392845315">in pediatric patients of age 5 months to 8 years</footnote>
+                                    </paragraph>
+                                    <paragraph>40 mg/kg<footnote ID="_Ref392845320">in pediatric patients of age 1 month to 15 years (Meropenem for Injection is not approved for use in pediatric patients younger than 3 months of age)</footnote>
+                                    </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>8</paragraph>
+                                    <paragraph>5</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>1.1 (2 hours)</paragraph>
+                                    <paragraph>3.3 (3 hours)</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>0.2 to 2.8</paragraph>
+                                    <paragraph>0.9 to 6.5</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Botrule Lrule ">
+                                    <paragraph>CSF (uninflamed) </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Botrule Lrule ">
+                                    <paragraph>1</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Botrule Lrule ">
+                                    <paragraph>4</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Botrule Lrule ">
+                                    <paragraph>0.2 (2 hours)</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Botrule Lrule ">
+                                    <paragraph>0.1 to 0.3</paragraph>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>
+                           <content styleCode="underline">Elimination</content>
+                        </paragraph>
+                        <paragraph>In subjects with normal renal function, the elimination half-life of meropenem is approximately 1 hour. The elimination half-life for meropenem was approximately 1.5 hours in pediatric patients 3 months to 2 years of age.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Metabolism</content>
+                        </paragraph>
+                        <paragraph>There is one metabolite of meropenem that is microbiologically inactive.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Excretion</content>
+                        </paragraph>
+                        <paragraph>Meropenem is primarily excreted unchanged by the kidneys. Approximately 70% (50% to 75%) of the dose is excreted unchanged within 12 hours. A further 28% is recovered as the microbiologically inactive metabolite. Fecal elimination represents only approximately 2% of the dose. The measured renal clearance and the effect of probenecid show that meropenem undergoes both filtration and tubular secretion. Urinary concentrations of meropenem in excess of 10 mcg/mL are maintained for up to 5 hours after a 500 mg dose.</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Specific Populations</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Patients with Hepatic Impairment</content>
+                        </paragraph>
+                        <paragraph>A pharmacokinetic study with meropenem for injection in patients with hepatic impairment has shown no effects of liver disease on the pharmacokinetics of meropenem.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Patients with Renal Impairment</content>
+                        </paragraph>
+                        <paragraph>Pharmacokinetic (PK) studies with meopenem for injection in adult patients with renal impairment have shown that the reduction in plasma clearance of meropenem correlates with creatinine clearance. The effect of renal impairment on the PK of meropenem has not been studied in the pediatric patients. Therefore, there is no experience in pediatric patients with renal impairment <content styleCode="italics">[see Dosage and Administration (<linkHtml href="#i4i_section_id_2e9c76de-e2f6-45f2-afd5-dbe0a4497cfd">2.3</linkHtml>)]</content>.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Drug Interaction Studies</content>
+                        </paragraph>
+                        <paragraph>Probenecid competes with meropenem for active tubular secretion and thus inhibits the renal excretion of meropenem. Following administration of probenecid with meropenem, the mean systemic exposure increased 56% and the mean elimination half-life increased 38% <content styleCode="italics">[see Drug Interactions (<linkHtml href="#i4i_section_id_0c0186cc-9bd1-49b0-b042-c189325eff21">7.1</linkHtml>)]</content>.</paragraph>
+                     </text>
+                     <effectiveTime value="20241201"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="i4i_section_id_89ab5a25-5ef8-46fb-b903-1d16d4a97557">
+                     <id root="11933576-90af-4fbe-b45c-ef16e58903ac"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42229-5" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>12.4 Microbiology</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Mechanism of Action</content>
+                        </paragraph>
+                        <paragraph>The bactericidal activity of meropenem results from the inhibition of cell wall synthesis. Meropenem penetrates the cell wall of most gram-positive and gram-negative bacteria to bind penicillin-binding-protein (PBP) targets. Meropenem binds to PBPs 2, 3 and 4 of <content styleCode="italics">Escherichia coli</content> and <content styleCode="italics">Pseudomonas aeruginosa</content>; and PBPs 1, 2 and 4 of <content styleCode="italics">Staphylococcus aureus</content>. Bactericidal concentrations (defined as a 3 log<sub>10</sub> reduction in cell counts within 12 hours to 24 hours) are typically 1-2 times the bacteriostatic concentrations of meropenem, with the exception of <content styleCode="italics">Listeria monocytogenes</content>, against which lethal activity is not observed.</paragraph>
+                        <paragraph>Meropenem does not have <content styleCode="italics">in vitro</content> activity against methicillin-resistant <content styleCode="italics">Staphylococcus aureus </content>(MRSA) or methicillin-resistant <content styleCode="italics">Staphylococcus epidermidis</content> (MRSE).</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Resistance </content>
+                        </paragraph>
+                        <paragraph>There are several mechanisms of resistance to carbapenems: 1) decreased permeability of the outer membrane of gram-negative bacteria (due to diminished production of porins) causing reduced bacterial uptake, 2) reduced affinity of the target PBPs, 3) increased expression of efflux pump components, and 4) production of antibacterial drug-destroying enzymes (carbapenemases, metallo-β-lactamases).</paragraph>
+                        <paragraph>Cross-resistance is sometimes observed with isolates resistant to other carbapenems.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Interaction with Other Antimicrobials </content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">In vitro</content> tests show meropenem to act synergistically with aminoglycoside antibacterial drugs against some isolates of <content styleCode="italics">Pseudomonas aeruginosa</content>.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Antimicrobial Activity </content>
+                        </paragraph>
+                        <paragraph>Meropenem has been shown to be active against most isolates of the following microorganisms, both <content styleCode="italics">in vitro</content> and in clinical infections [<content styleCode="italics">see Indications and Usage (<linkHtml href="#i4i_indications_id_e5e78142-d478-4d5a-8b46-06440366e7b4">1</linkHtml>)</content>].</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Gram-positive bacteria</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Streptococcus pneumoniae</content> (penicillin-susceptible isolates only)</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Gram-negative bacteria</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Haemophilus influenzae</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Neisseria meningitidis </content>
+                        </paragraph>
+                        <paragraph>The following in vitro data are available, but their clinical significance is unknown. At least 90% of the following bacteria exhibit an in vitro minimum inhibitory concentration (MIC) less than or equal to the susceptible breakpoint for meropenem against isolates of similar genus or organism group. However, the efficacy of meropenem in treating clinical infections caused by these bacteria have not been established in adequate and well-controlled clinical trials.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Gram-positive bacteria</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Staphylococcus epidermidis</content> (methicillin-susceptible isolates only)</paragraph>
+                        <paragraph>  </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Gram-negative bacteria</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Aeromonas hydrophila</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Campylobacter jejuni</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Citrobacter freundii</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Citrobacter koseri</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Enterobacter cloacae</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Hafnia alvei</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Klebsiella oxytoca</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Moraxella catarrhalis</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Morganella morganii</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Pasteurella multocida</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Proteus vulgaris</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Serratia marcescens</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Anaerobic bacteria</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Bacteroides ovatus </content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Bacteroides uniformis </content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Bacteroides vulgatus </content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Clostridium difficile </content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Clostridium perfringens </content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Eggerthella lenta</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Fusobacterium</content> species</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Prevotella intermedia</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Prevotella melaninogenica</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Propionibacterium acnes</content>
+                        </paragraph>
+                        <paragraph>
+                           <br/>
+                           <br/>
+                           <content styleCode="underline">Susceptibility Testing</content>
+                        </paragraph>
+                        <paragraph>For specific information regarding susceptibility test interpretive criteria and associated test methods and quality control standards recognized by FDA for this drug, please see: https://www.fda.gov/STIC.</paragraph>
+                     </text>
+                     <effectiveTime value="20241201"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_nonclinical_toxicology_id_ed12760b-9bc3-4213-afd1-033a6228b322">
+               <id root="7dcb6c7c-61af-4b9d-926d-fb0843669ccc"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="43680-8" displayName="NONCLINICAL TOXICOLOGY SECTION"/>
+               <title>13 NONCLINICAL TOXICOLOGY</title>
+               <effectiveTime value="20241201"/>
+               <component>
+                  <section ID="i4i_carcinogenesis_mutagenesis_fertility_id_29e9075b-9458-46b7-b6a9-7593b497a8a4">
+                     <id root="544fa6b6-5efd-4bec-9fec-fa9706c3e93a"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="34083-6" displayName="CARCINOGENESIS &amp; MUTAGENESIS &amp; IMPAIRMENT OF FERTILITY SECTION"/>
+                     <title>13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="italics">Carcinogenesis</content>
+                        </paragraph>
+                        <paragraph>Carcinogenesis studies have not been performed.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Mutagenesis</content>
+                        </paragraph>
+                        <paragraph>Genetic toxicity studies were performed with meropenem using the bacterial reverse mutation test, the Chinese hamster ovary HGPRT assay, cultured human lymphocytes cytogenic assay, and the mouse micronucleus test. There was no evidence of mutagenic potential found in any of these tests.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Impairment of Fertility</content>
+                        </paragraph>
+                        <paragraph>In fertility studies, intravenous meropenem was administered to male rats beginning 11 weeks before mating and throughout mating and to female rats from 2 weeks before mating through Gestation Day 7 at doses of 240, 500, and 1000 mg/kg/day. There was no evidence of impaired fertility at doses up to 1000 mg/kg/day (on the basis of body surface area comparison, approximately 3.2 times to the MRHD of 1 gram every 8 hours).</paragraph>
+                     </text>
+                     <effectiveTime value="20241201"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_clinical_studies_id_d0a44d0b-0153-4111-9517-4f4c837b458d">
+               <id root="7b072c66-d121-4ce5-846b-8694c132efae"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34092-7" displayName="CLINICAL STUDIES SECTION"/>
+               <title>14 CLINICAL STUDIES</title>
+               <effectiveTime value="20241201"/>
+               <component>
+                  <section ID="i4i_section_id_516d7308-1c3b-46a3-a856-830d2c260cd5">
+                     <id root="f30afdfc-7379-4204-839b-a314b0a9dde0"/>
+                     <code codeSystem="2.16.840.1.113883.6.1" code="42229-5" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>14.1 Bacterial Meningitis</title>
+                     <text>
+                        <paragraph>Four hundred forty-six patients (397 pediatric patients 3 months to less than 17 years of age) were enrolled in 4 separate clinical trials and randomized to treatment with meropenem for injection (n = 225) at a dosage of 40 mg/kg every 8 hours or a comparator drug, i.e., cefotaxime (n = 187) or ceftriaxone (n = 34), at the approved dosing regimens. A comparable number of patients were found to be clinically evaluable (ranging from 61 to 68%) and with a similar distribution of pathogens isolated on initial CSF culture.</paragraph>
+                        <paragraph>A patient was defined as clinically not cured if any one of the following three criteria were met:</paragraph>
+                        <list listType="unordered">
+                           <item>
+                              <caption> </caption>1 At the 5-7 week post-completion of therapy visit, the patient had any one of the following: moderate to severe motor, behavior or development deficits, hearing loss of greater than 60 decibels in one or both ears, or blindness.</item>
+                           <item>
+                              <caption> </caption>2 During therapy the patient’s clinical status necessitated the addition of other antibacterial drugs.</item>
+                           <item>
+                              <caption> </caption>3 Either during or post-therapy, the patient developed a large subdural effusion needing surgical drainage, or a cerebral abscess, or a bacteriologic relapse.</item>
+                        </list>
+                        <paragraph>Using these criteria, the following efficacy rates were obtained, per organism (noted in Table 3). The values represent the number of patients clinically cured/number of clinically evaluable patients, with the percent cure in parentheses. Sequelae were the most common reason patients were assessed as clinically not cured.</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Table 3: Efficacy rates by Pathogen in the Clinically Evaluable Population with Bacterial Meningitis</content>
+                        </paragraph>
+                        <table width="100%">
+                           <col width="36%"/>
+                           <col width="41%"/>
+                           <col width="23%"/>
+                           <tbody>
+                              <tr>
+                                 <td valign="top" styleCode="Botrule Lrule Toprule ">
+                                    <paragraph>
+                                       <content styleCode="bold">Microorganisms</content>
+                                    </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Botrule Lrule Toprule ">
+                                    <paragraph>
+                                       <content styleCode="bold">Meropenem for Injection</content>
+                                    </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Botrule Lrule Toprule ">
+                                    <paragraph>
+                                       <content styleCode="bold">Comparator</content>
+                                    </paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>
+                                       <content styleCode="italics">S. pneumoniae</content>
+                                    </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>17/24 (71)</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>19/30 (63)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>
+                                       <content styleCode="italics">H. influenzae </content>(+)<footnote ID="_Ref392846536">(+) β-lactamase-producing</footnote>
+                                    </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>8/10 (80)</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>6/6 (100)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>
+                                       <content styleCode="italics">H. influenzae</content> (-/NT) <footnote ID="_Ref392846565">(-/NT) non-β-lactamase-producing or not tested</footnote>
+                                    </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>44/59 (75)</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>44/60 (73)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>
+                                       <content styleCode="italics">N. meningitidis</content>
+                                    </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>30/35 (86)</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>35/39 (90)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Botrule Lrule ">
+                                    <paragraph>Total (including others)</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Botrule Lrule ">
+                                    <paragraph>102/131 (78)</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Botrule Lrule ">
+                                    <paragraph>108/140 (77)</paragraph>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>Five patients were found to be bacteriologically not cured, 3 in the comparator group (1 relapse and 2 patients with cerebral abscesses) and 2 in the meropenem for injection group (1 relapse and 1 with continued growth of <content styleCode="italics">Pseudomonas aeruginosa</content>).</paragraph>
+                        <paragraph>With respect to hearing loss, 263 of the 271 evaluable patients had at least one hearing test performed post-therapy. Table 4 shows the degree of hearing loss between the meropenem for injection-treated patients and comparator-treated patients. </paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Table 4: Hearing Loss at Post-Therapy in the Evaluable Population Treated with Meropenem</content>
+                        </paragraph>
+                        <table width="100%">
+                           <col width="42%"/>
+                           <col width="38%"/>
+                           <col width="21%"/>
+                           <tbody>
+                              <tr>
+                                 <td align="center" valign="top" styleCode="Botrule Lrule Toprule ">
+                                    <paragraph>
+                                       <content styleCode="bold">Degree of Hearing Loss</content>
+                                    </paragraph>
+                                    <paragraph>
+                                       <content styleCode="bold">(in one or both ears)</content>
+                                    </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Botrule Lrule Toprule ">
+                                    <paragraph>
+                                       <content styleCode="bold">Meropenem for Injection</content>
+                                    </paragraph>
+                                    <paragraph>
+                                       <content styleCode="bold">n = 128</content>
+                                    </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Botrule Lrule Toprule ">
+                                    <paragraph>
+                                       <content styleCode="bold">Comparator</content>
+                                    </paragraph>
+                                    <paragraph>
+                                       <content styleCode="bold">n = 135</content>
+                                    </paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Lrule Botrule "/>
+                                 <td valign="top" styleCode="Lrule Botrule "/>
+                                 <td valign="top" styleCode="Rrule Lrule Botrule "/>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>No loss </paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>61%</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>56%</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>20 to 40 decibels</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>20%</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>24%</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>Greater than 40 to 60 decibels</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Lrule Botrule ">
+                                    <paragraph>8%</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Lrule Botrule ">
+                                    <paragraph>7%</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top" styleCode="Botrule Lrule ">
+                                    <paragraph>Greater than 60 decibels</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Botrule Lrule ">
+                                    <paragraph>9%</paragraph>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Rrule Botrule Lrule ">
+                                    <paragraph>10%</paragraph>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </text>
+                     <effectiveTime value="20241201"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_references_id_90669b77-7f20-4b0f-aa07-962151ccf40c">
+               <id root="7e5c26a9-800b-4513-9e79-19e6e539b509"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34093-5" displayName="REFERENCES SECTION"/>
+               <title>15 REFERENCES</title>
+               <text>
+                  <list listType="ordered">
+                     <item>
+                        <caption>1.</caption>Kawamura S, AW Russell, SJ Freeman, and RA Siddall, 1992, Reproductive and Developmental Toxicity of Meropenem in Rats, Chemotherapy, 40:S238-250.</item>
+                  </list>
+               </text>
+               <effectiveTime value="20241201"/>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_how_supplied_id_774d91c7-595d-472d-88a0-b5407cbf6add">
+               <id root="b1e7271d-b5cd-4d4d-9823-8aa72edfe73f"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34069-5" displayName="HOW SUPPLIED SECTION"/>
+               <title>16 HOW SUPPLIED/STORAGE AND HANDLING</title>
+               <text>
+                  <paragraph>Meropenem for Injection is supplied in a single-dose vial containing meropenem as a white to light yellow powder to deliver 2 grams of meropenem for intravenous administration after reconstitution. The dry powder should be stored at 20º C to 25ºC (68º F to 77ºF). Brief exposure to 15ºC to 30ºC (59ºF to 86ºF) is permitted [see USP Controlled Room Temperature].</paragraph>
+                  <paragraph>NDC 44567-402-01	2 gram single-dose injection vial</paragraph>
+                  <paragraph>NDC 44567-402-06	2 gram single-dose injection vial packaged in a carton of 6</paragraph>
+                  <paragraph>The container closure is not made with natural rubber latex.</paragraph>
+               </text>
+               <effectiveTime value="20241201"/>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_info_patients_id_13406f6e-3c93-425f-ada6-4dac5802fb76">
+               <id root="d2626115-2876-411b-9c99-2fc6a13a7a45"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="34076-0" displayName="INFORMATION FOR PATIENTS SECTION"/>
+               <title>17 PATIENT COUNSELING INFORMATION</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="underline">Antibacterial Resistance</content>
+                  </paragraph>
+                  <paragraph>Patients should be counseled that antibacterial drugs including Meropenem for Injection should only be used to treat bacterial infections. They do not treat viral infections (e.g., the common cold). When Meropenem for Injection is prescribed to treat a bacterial infection, patients should be told that although it is common to feel better early in the course of therapy, the medication should be taken exactly as directed. Skipping doses or not completing the full course of therapy may (1) decrease the effectiveness of the immediate treatment and (2) increase the likelihood that bacteria will develop resistance and will not be treatable by Meropenem for Injection or other antibacterial drugs in the future <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#i4i_section_id_9b6c0f8e-ba5f-414b-b311-c94b6f5ad90a">5.7</linkHtml>)]</content>.</paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Diarrhea</content>
+                  </paragraph>
+                  <paragraph>Counsel patients that diarrhea is a common problem caused by antibacterial drugs which usually ends when the antibacterial drug is discontinued. Sometimes after starting treatment with antibacterial drugs, patients can develop watery and bloody stools (with or without stomach cramps and fever) even as late as two or more months after having taken the last dose of the antibacterial drug. If this occurs, patients should contact their physician as soon as possible [<content styleCode="italics">see Warnings and Precautions (<linkHtml href="#i4i_section_id_2f433e35-0076-4796-9a0f-2942056e4c1f">5.6</linkHtml>)</content>].</paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Risk of Breakthrough Seizures</content>
+                  </paragraph>
+                  <paragraph>Counsel patients to inform their physician if they are taking valproic acid or divalproex sodium. Valproic acid concentrations in the blood may drop below the therapeutic range upon co-administration with Meropenem for Injection. If treatment with Meropenem for Injection is necessary and continued, alternative or supplemental anti-convulsant medication to prevent and/or treat seizures may be needed [<content styleCode="italics">see Warnings and Precautions (<linkHtml href="#i4i_section_id_27953d4c-6e22-4254-ad39-b876a879d7f0">5.4</linkHtml>)</content>].</paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Potential of Neuromotor Impairment</content>
+                  </paragraph>
+                  <paragraph>Patients receiving Meropenem for Injection on an outpatient basis must be alerted of adverse events such as seizures, delirium, headaches and/or paresthesias that could interfere with mental alertness and/or cause motor impairment. Until it is reasonably well established that Meropenem for Injection is well tolerated, patients should not operate machinery or motorized vehicles [<content styleCode="italics">see Warnings and Precautions (<linkHtml href="#ID_d214dea6-6d27-41e4-bc74-aba1450e82fb">5.10</linkHtml>)</content>].</paragraph>
+                  <paragraph>Manufactured for:</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">WG Critical Care, LLC</content>
+                  </paragraph>
+                  <paragraph>Paramus, NJ 07652</paragraph>
+                  <paragraph>Made in Italy</paragraph>
+               </text>
+               <effectiveTime value="20241201"/>
+            </section>
+         </component>
+         <component>
+            <section ID="i4i_Principal_display_panel_id_472eed04-b0c2-4958-be3a-ca51aee4caab">
+               <id root="c22fb235-1e96-43de-8587-bf695e66e7c7"/>
+               <code codeSystem="2.16.840.1.113883.6.1" code="51945-4" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PRINCIPAL DISPLAY PANEL</title>
+               <text>
+                  <renderMultiMedia referencedObject="DE3FFB4A-363B-432E-B7BD-F15D952E5395" ID="id-336454332"/>
+                  <paragraph>NDC 44567-402-01<br/>Meropenem for Injection, USP<br/>2 grams per vial <br/>For Intravenous Infusion Only<br/>Single-Dose Vial – Discard Unused Portion<br/>Rx only</paragraph>
+               </text>
+               <effectiveTime value="20241201"/>
+               <component>
+                  <observationMedia ID="DE3FFB4A-363B-432E-B7BD-F15D952E5395">
+                     <text>meropenem 2 gram vial label</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="image-02.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

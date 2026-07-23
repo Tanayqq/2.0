@@ -1,0 +1,21 @@
+{
+  "error_reason": "Parser returned zero sections — likely corrupt or unreachable label",
+  "failed_at": "2026-07-23T02:31:34.580203Z",
+  "document": {
+    "drug": "Famciclovir",
+    "generic_name": "Famciclovir",
+    "source": "DailyMed",
+    "source_url": null,
+    "authority": null,
+    "authority_version": null,
+    "drug_revision": null,
+    "country": "US",
+    "version": "1",
+    "effective_date": "2026-03-19",
+    "revision": "96259999-3166-40bb-953f-1a901c84749e",
+    "ingested_at": "2026-07-23T02:31:34.574110Z",
+    "retrieved_on": null,
+    "sections": [],
+    "synonyms": []
+  }
+}

@@ -1,0 +1,1655 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="485d4436-cc9f-8ea9-e063-6294a90a53be"/>
+   <code code="34391-3" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN PRESCRIPTION DRUG LABEL"/>
+   <title>Cilostazol Tablets, USP
+ <br/>
+Rx only
+ <br/>
+      <br/>
+These highlights do not include all the information needed to use CILOSTAZOL TABLETS safely and effectively. See full prescribing information for CILOSTAZOL TABLETS.
+ <br/>
+      <br/>
+Initial U.S. Approval: 1999
+</title>
+   <effectiveTime value="20260114"/>
+   <setId root="dc7c2c25-36a1-e3fd-e053-2995a90adabc"/>
+   <versionNumber value="3"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id root="1.3.6.1.4.1.519.1" extension="796560394"/>
+            <name>AvKARE</name>
+            <assignedEntity>
+               <assignedOrganization/>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="485cc866-41a0-ebc4-e063-6294a90a28aa"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL product data elements section"/>
+               <effectiveTime value="20260114"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="42291-453" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>cilostazol</name>
+                        <formCode code="C42998" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TABLET"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>cilostazol</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <asEquivalentEntity classCode="EQUIV">
+                           <code code="C64637" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <definingMaterialKind>
+                              <code code="60505-2522" codeSystem="2.16.840.1.113883.6.69"/>
+                           </definingMaterialKind>
+                        </asEquivalentEntity>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="O8232NY3SJ" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>STARCH, CORN</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="M28OL1HH48" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CROSCARMELLOSE SODIUM</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="70097M6I30" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MAGNESIUM STEARATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="ETJ7Z6XBU4" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SILICON DIOXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mg" value="100"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="N7Z035406B" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CILOSTAZOL</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="N7Z035406B" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>CILOSTAZOL</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="60" unit="1"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="42291-453-60" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20220412"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="ANDA077030" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73584" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20220412"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48325" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="white" xsi:type="CE">
+                              <originalText/>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value value="1" xsi:type="INT"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48348" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ROUND" xsi:type="CE">
+                              <originalText/>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="ST">APO;CIL;100</value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="9" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="_8e957339-84c0-d7b4-92ac-5259438cce95">
+               <id root="dc7c259e-4bd3-c3d9-e053-2a95a90a0c01"/>
+               <code code="34066-1" codeSystem="2.16.840.1.113883.6.1" displayName="BOXED WARNING SECTION"/>
+               <title>
+                  <content styleCode="bold">WARNING: CONTRAINDICATED IN HEART FAILURE PATIENTS</content> 
+     
+</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Cilostazol tablets are contraindicated in patients with heart failure of any severity. Cilostazol and several of its metabolites are inhibitors of phosphodiesterase III. Several drugs with this pharmacologic effect have caused decreased survival compared to placebo in patients with class III-IV heart failure 
+        
+  
+   <content styleCode="bold">
+                           <content styleCode="italics">[see Contraindications (
+         
+    
+     <linkHtml href="#_759f4718-982e-437a-62e5-a5898b96c144">4</linkHtml>)]
+        
+   
+    </content>
+                        </content>.
+       
+ 
+  </content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20170531"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>
+                           <content styleCode="bold">WARNING: CONTRAINDICATED IN HEART FAILURE PATIENTS</content>
+                           <br/>
+                           <content styleCode="bold">
+                              <content styleCode="italics">See full prescribing information for complete boxed warning.</content>
+                           </content>
+                           <br/>
+                        </paragraph>
+                        <list listType="unordered">
+                           <item>
+                              <content styleCode="bold">Cilostazol tablets is contraindicated in patients with heart failure of any 
+           
+   
+      <content styleCode="bold">severity. Cilostazol and several of its metabolites are inhibitors of phosphodiesterase III. Several drugs with the pharmacologic effect have caused decreased survival compared to placebo patients with class III-IV heart failure. (4)</content>
+                              </content> 
+          
+  
+     <content styleCode="bold"/>
+                           </item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="_a504de45-9626-e2a2-039c-a542f81e94c0">
+               <id root="dc7c259e-4bd4-c3d9-e053-2a95a90a0c01"/>
+               <code code="43683-2" codeSystem="2.16.840.1.113883.6.1" displayName="RECENT MAJOR CHANGES SECTION"/>
+               <title>RECENT MAJOR CHANGES SECTION</title>
+               <effectiveTime value="20170531"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Warnings and Precautions, Left Ventricular Outflow Obstruction (
+         
+ 
+    <linkHtml href="#_03046fbc-4c1d-1e07-faba-6c6ecb2347e3">5.2</linkHtml>) 05/2017
+        
+
+   </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="_a7bbfc4e-4d28-2686-f532-1b3fdb041cb7">
+               <id root="dc7c259e-4bd5-c3d9-e053-2a95a90a0c01"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>1 INDICATIONS AND USAGE</title>
+               <text>
+                  <paragraph>Cilostazol tablets are indicated for the reduction of symptoms of intermittent claudication, as demonstrated by an increased walking distance.</paragraph>
+               </text>
+               <effectiveTime value="20170531"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Cilostazol is a phosphodiesterase III inhibitor (PDE III inhibitor) indicated for the reduction of symptoms of intermittent claudication, as demonstrated by an increased walking distance (
+         
+ 
+    <linkHtml href="#_a7bbfc4e-4d28-2686-f532-1b3fdb041cb7">1</linkHtml>)
+        
+
+   </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="_88850cc2-048e-d63d-3871-5524ff480161">
+               <id root="dc7c259e-4bd6-c3d9-e053-2a95a90a0c01"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>2 DOSAGE AND ADMINISTRATION</title>
+               <effectiveTime value="20170531"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph/>
+                        <list listType="unordered">
+                           <item>The recommended dosage of cilostazol is 100 mg twice daily taken at least half an hour before or two hours after breakfast and dinner (
+          
+  
+     <linkHtml href="#_7f122627-c990-3244-06dc-70b81d828208">2.1</linkHtml>)
+         
+ 
+    </item>
+                           <item>Reduce the dose to 50 mg twice daily when coadministered with CYP3A4 inhibitors such as ketoconazole, itraconazole, erythromycin, and diltiazem, or CYP2C19 inhibitors such as ticlopidine, fluconazole, and omeprazole (
+          
+  
+     <linkHtml href="#_cfd65a7e-98de-fcb3-16c8-4ef4f7a896e3">2.2</linkHtml>)
+         
+ 
+    </item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="_7f122627-c990-3244-06dc-70b81d828208">
+                     <id root="dc7c259e-4bd7-c3d9-e053-2a95a90a0c01"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.1 Recommended dosage</title>
+                     <text>
+                        <paragraph>The recommended dosage of cilostazol is 100 mg twice daily taken at least half an hour before or two hours after breakfast and dinner.</paragraph>
+                        <paragraph>Patients may respond as early as 2 to 4 weeks after the initiation of therapy, but treatment for up to 12 weeks may be needed before a beneficial effect is experienced. If symptoms are unimproved after 3 months, discontinue cilostazol.</paragraph>
+                     </text>
+                     <effectiveTime value="20170531"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_cfd65a7e-98de-fcb3-16c8-4ef4f7a896e3">
+                     <id root="dc7c259e-4bd8-c3d9-e053-2a95a90a0c01"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.2 Dose Reduction with CYP3A4 and CYP2C19 Inhibitors</title>
+                     <text>
+                        <paragraph>Reduce dose to 50 mg twice daily when coadministered with strong or moderate inhibitors of CYP3A4 (e.g., ketoconazole, itraconazole, erythromycin, and diltiazem) or inhibitors of CYP2C19 (e.g., ticlopidine, fluconazole, and omeprazole) 
+         
+ 
+  <content styleCode="italics">[see Drug Interactions (
+          
+  
+   <linkHtml href="#_5d41c3a0-bbf1-b526-f2f2-db4ae6e294c0">7.1</linkHtml>)]
+         
+ 
+  </content>. 
+        
+
+ </paragraph>
+                     </text>
+                     <effectiveTime value="20170531"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="_ea541335-ecd7-4f68-346c-80e3774a2906">
+               <id root="dc7c259e-4bd9-c3d9-e053-2a95a90a0c01"/>
+               <code code="43678-2" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE FORMS &amp; STRENGTHS SECTION"/>
+               <title>3 DOSAGE FORMS AND STRENGTHS</title>
+               <text>
+                  <paragraph>Cilostazol tablets, USP 50 mg are white, round, flat-faced, bevelled-edge tablets, engraved "APO" on one side and "CIL" over "50" on the other side. </paragraph>
+                  <paragraph>Cilostazol tablets, USP 100 mg tablets are white, round, flat-faced, bevelled-edge tablets, engraved "APO" on one side and "CIL" over "100" on the other side.</paragraph>
+               </text>
+               <effectiveTime value="20170531"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph/>
+                        <list listType="unordered">
+                           <item>Tablets: 50 mg and 100 mg (
+          
+  
+     <linkHtml href="#_ea541335-ecd7-4f68-346c-80e3774a2906">3</linkHtml>)
+         
+ 
+    </item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="_759f4718-982e-437a-62e5-a5898b96c144">
+               <id root="dc7c259e-4bda-c3d9-e053-2a95a90a0c01"/>
+               <code code="34070-3" codeSystem="2.16.840.1.113883.6.1" displayName="CONTRAINDICATIONS SECTION"/>
+               <title>4 CONTRAINDICATIONS</title>
+               <text>
+                  <paragraph>Cilostazol is contraindicated in patients with:</paragraph>
+                  <list listType="unordered">
+                     <item>Heart failure of any severity: Cilostazol and several of its metabolites are inhibitors of phosphodiesterase III. Several drugs with this pharmacologic effect have caused decreased survival compared to placebo in patients with class III-IV heart failure.</item>
+                     <item>Hypersensitivity to cilostazol or any components of cilostazol tablets (e.g., anaphylaxis, angioedema)</item>
+                  </list>
+               </text>
+               <effectiveTime value="20170531"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph/>
+                        <list listType="unordered">
+                           <item>Heart failure of any severity (
+          
+  
+     <linkHtml href="#_759f4718-982e-437a-62e5-a5898b96c144">4</linkHtml>)
+         
+ 
+    </item>
+                           <item>Hypersensitivity to cilostazol or any components of cilostazol tablets (
+          
+  
+     <linkHtml href="#_759f4718-982e-437a-62e5-a5898b96c144">4</linkHtml>)
+         
+ 
+    </item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="_b2995db2-df5d-b76b-267e-cdea5d3b9d26">
+               <id root="dc7c259e-4bdb-c3d9-e053-2a95a90a0c01"/>
+               <code code="43685-7" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS AND PRECAUTIONS SECTION"/>
+               <title>5 WARNINGS AND PRECAUTIONS</title>
+               <effectiveTime value="20170531"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph/>
+                        <list listType="unordered">
+                           <item>Risks of tachycardia, palpitation, tachyarrhythmia or hypotension. Risks of exacerbations of angina pectoris or myocardial infarction in patients with a history of ischemic heart disease (
+          
+  
+     <linkHtml href="#_9344929b-0c08-c774-f44d-42b5b73c32af">5.2</linkHtml>)
+         
+ 
+    </item>
+                           <item>Left ventricular outflow tract obstruction has been reported in patients with sigmoid shaped interventricular septum (
+          
+  
+     <linkHtml href="#_9344929b-0c08-c774-f44d-42b5b73c32af">5.1</linkHtml>)
+         
+ 
+    </item>
+                           <item>Risks of thrombocytopenia or leukopenia progressing to agranulocytosis-monitor platelets and white blood cell counts (
+          
+  
+     <linkHtml href="#_ec369c27-bef1-b3b9-93af-d5dc3959533f">5.3</linkHtml>)
+         
+ 
+    </item>
+                           <item>Avoid use in patients with hemostatic disorders or active pathologic bleeding (
+          
+  
+     <linkHtml href="#_f8ae0656-fde1-5e89-155c-5f7328fe24aa">5.4</linkHtml>)
+         
+ 
+    </item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="_9344929b-0c08-c774-f44d-42b5b73c32af">
+                     <id root="dc7c259e-4bdc-c3d9-e053-2a95a90a0c01"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.1 Tachycardia</title>
+                     <text>
+                        <paragraph>Cilostazol may induce tachycardia, palpitation, tachyarrhythmia or hypotension. The increase in heart rate associated with cilostazol is approximately 5 to 7 bpm. Patients with a history of ischemic heart disease may be at risk for exacerbations of angina pectoris or myocardial infarction.</paragraph>
+                     </text>
+                     <effectiveTime value="20170531"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_03046fbc-4c1d-1e07-faba-6c6ecb2347e3">
+                     <id root="dc7c259e-4bdd-c3d9-e053-2a95a90a0c01"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.2 Left Ventricular Outflow Tract Obstruction</title>
+                     <text>
+                        <paragraph>Left ventricular outflow tract obstruction has been reported in patients with sigmoid shaped interventricular septum. Monitor patients for the development of a new systolic murmur or cardiac symptoms after starting cilostazol.</paragraph>
+                     </text>
+                     <effectiveTime value="20170531"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_ec369c27-bef1-b3b9-93af-d5dc3959533f">
+                     <id root="dc7c259e-4bde-c3d9-e053-2a95a90a0c01"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.3 Hematologic Adverse Reactions</title>
+                     <text>
+                        <paragraph>Cases of thrombocytopenia or leukopenia progressing to agranulocytosis when cilostazol was not immediately discontinued have been reported. Agranulocytosis is reversible on discontinuation of cilostazol. Monitor platelets and white blood cell counts periodically.</paragraph>
+                     </text>
+                     <effectiveTime value="20170531"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_f8ae0656-fde1-5e89-155c-5f7328fe24aa">
+                     <id root="dc7c259e-4bdf-c3d9-e053-2a95a90a0c01"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.4 Hemostatic Disorders or Active Pathologic Bleeding</title>
+                     <text>
+                        <paragraph>Cilostazol inhibits platelet aggregation in a reversible manner. Cilostazol has not been studied in patients with hemostatic disorders or active pathologic bleeding. Avoid use of cilostazol tablets in these patients.</paragraph>
+                     </text>
+                     <effectiveTime value="20170531"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="_1070d414-5379-821b-2a2c-3b402a3e9e6a">
+               <id root="dc7c3f9d-b128-870b-e053-2995a90ad8b3"/>
+               <code code="34084-4" codeSystem="2.16.840.1.113883.6.1" displayName="ADVERSE REACTIONS SECTION"/>
+               <title>6 ADVERSE REACTIONS</title>
+               <text>
+                  <paragraph>The following adverse reactions are discussed in greater detail in other sections of the labeling:</paragraph>
+                  <list listType="unordered">
+                     <item>Patients with Heart Failure 
+   <content styleCode="italics">[see Boxed Warning]</content>
+                     </item>
+                     <item>Tachycardia 
+   <content styleCode="italics">[see Warnings and Precautions ( 
+    <linkHtml href="#_9344929b-0c08-c774-f44d-42b5b73c32af">5.1</linkHtml>)] 
+   </content>
+                     </item>
+                     <item>Left Ventricular Outflow Tract Obstruction 
+   <content styleCode="italics">[see Warnings and Precautions ( 
+    <linkHtml href="#_03046fbc-4c1d-1e07-faba-6c6ecb2347e3">5.2</linkHtml>)] 
+   </content>
+                     </item>
+                     <item>Hematologic Adverse Reactions 
+   <content styleCode="italics">[see Warnings and Precautions ( 
+    <linkHtml href="#_ec369c27-bef1-b3b9-93af-d5dc3959533f">5.3</linkHtml>)] 
+   </content>
+                     </item>
+                     <item>Hemostatic Disorders or Active Pathologic Bleeding 
+   <content styleCode="italics">[see Warnings and Precautions ( 
+    <linkHtml href="#_f8ae0656-fde1-5e89-155c-5f7328fe24aa">5.4</linkHtml>)] 
+   </content>
+                     </item>
+                  </list>
+               </text>
+               <effectiveTime value="20170531"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Most common adverse reactions greater than or equal to 2% and at least twice that for placebo in patients on 100 mg twice daily are headache, diarrhea, abnormal stools, and palpitation ( 
+    <linkHtml href="#_3ddfaef5-cace-d5ea-02c2-13895865e332">6.1</linkHtml>)
+   </paragraph>
+                        <paragraph>
+                           <content styleCode="bold">To report SUSPECTED ADVERSE REACTIONS, contact AvKARE at 1-855-361-3993; email drugsafety@avkare.com or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch.</content>
+                        </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="_3ddfaef5-cace-d5ea-02c2-13895865e332">
+                     <id root="dc7c259e-4be1-c3d9-e053-2a95a90a0c01"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>6.1 Clinical Trials Experience</title>
+                     <text>
+                        <paragraph>Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice.</paragraph>
+                        <paragraph>Adverse reactions were assessed in eight placebo-controlled clinical trials involving patients exposed to either 50 or 100 mg twice daily cilostazol tablets (n=1301) or placebo (n=973), with a median treatment duration of 127 days for patients on cilostazol tablets and 134 days for patients on placebo.</paragraph>
+                        <paragraph>The most frequent adverse reaction resulting in discontinuation of therapy in more than 3% of patients treated with cilostazol tablets was headache [50 mg twice daily (1.3%), 100 mg twice daily (3.5%) and placebo (0.3%)]. Other frequent causes of discontinuation included palpitation and diarrhea, both 1.1% for cilostazol tablets (all doses) versus 0.1% for placebo.</paragraph>
+                        <paragraph>The most common adverse reactions, occurring in at least 2% of patients treated with cilostazol tablets 50 or 100 mg twice daily, are shown in Table 1.</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Table 1: Most Common Adverse Reactions in Patients on cilostazol tablets 50 or 100 mg Twice Daily (Incidence at least 2% and Occurring More Frequently (≥ 2%) in the 100 mg Twice Daily Group than on Placebo)</content>
+                        </paragraph>
+                        <table border="1">
+                           <tbody align="center">
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Adverse Reactions</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Placebo
+             
+     
+      <br/>(N=973)
+            
+    
+     </content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Cilostazol tablets 50 mg twice daily
+             
+     
+      <br/>(N=303)
+            
+    
+     </content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Cilostazol tablets 100 mg twice daily 
+             
+     
+      <br/>(N=998)
+            
+    
+     </content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="left">Headache</td>
+                                 <td>14%</td>
+                                 <td>27%</td>
+                                 <td>34%</td>
+                              </tr>
+                              <tr>
+                                 <td align="left">Diarrhea</td>
+                                 <td>7%</td>
+                                 <td>12%</td>
+                                 <td>19%</td>
+                              </tr>
+                              <tr>
+                                 <td align="left">Abnormal stools</td>
+                                 <td>4%</td>
+                                 <td>12%</td>
+                                 <td>15%</td>
+                              </tr>
+                              <tr>
+                                 <td align="left">Palpitation</td>
+                                 <td>1%</td>
+                                 <td>5%</td>
+                                 <td>10%</td>
+                              </tr>
+                              <tr>
+                                 <td align="left">Dizziness</td>
+                                 <td>6%</td>
+                                 <td>9%</td>
+                                 <td>10%</td>
+                              </tr>
+                              <tr>
+                                 <td align="left">Pharyngitis</td>
+                                 <td>7%</td>
+                                 <td>7%</td>
+                                 <td>10%</td>
+                              </tr>
+                              <tr>
+                                 <td align="left">Infection</td>
+                                 <td>8%</td>
+                                 <td>14%</td>
+                                 <td>10%</td>
+                              </tr>
+                              <tr>
+                                 <td align="left">Peripheral edema</td>
+                                 <td>4%</td>
+                                 <td>9%</td>
+                                 <td>7%</td>
+                              </tr>
+                              <tr>
+                                 <td align="left">Rhinitis</td>
+                                 <td>5%</td>
+                                 <td>12%</td>
+                                 <td>7%</td>
+                              </tr>
+                              <tr>
+                                 <td align="left">Dyspepsia</td>
+                                 <td>4%</td>
+                                 <td>6%</td>
+                                 <td>6%</td>
+                              </tr>
+                              <tr>
+                                 <td align="left">Abdominal pain</td>
+                                 <td>3%</td>
+                                 <td>4%</td>
+                                 <td>5%</td>
+                              </tr>
+                              <tr>
+                                 <td align="left">Tachycardia</td>
+                                 <td>1%</td>
+                                 <td>4%</td>
+                                 <td>4%</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>Less frequent clinical significant adverse reactions (less than 2%) that were experienced by patients treated with cilostazol 50 mg twice daily or 100 mg twice daily in the eight controlled clinical trials and that occurred at a frequency in the 100 mg twice daily group greater than in the placebo group are listed below.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Body as a whole:</content> fever, generalized edema, malaise
+        
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Cardiovascular:</content> atrial fibrillation, heart failure, myocardial infarction, nodal arrhythmia, supraventricular tachycardia, ventricular extrasystoles, ventricular tachycardia
+        
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Digestive:</content> anorexia, melena
+         
+ 
+  <content styleCode="bold"/>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Hematologic</content>
+                           <content styleCode="italics"> and Lymphatic:</content> anemia
+        
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Metabolic and Nutritional:</content> increased creatinine, hyperuricemia
+        
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Nervous:</content> insomnia
+        
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Respiratory:</content> epistaxis
+        
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Skin and Appendages: </content>urticaria
+        
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Special Senses: </content>conjunctivitis, retinal hemorrhage, tinnitus
+        
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Urogenital:</content> urinary frequency
+        
+
+ </paragraph>
+                     </text>
+                     <effectiveTime value="20170531"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_2fbc4942-8a51-a8bc-5c78-48bee15d6ce8">
+                     <id root="dc7c259e-4be2-c3d9-e053-2a95a90a0c01"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>6.2 Postmarketing Experience</title>
+                     <text>
+                        <paragraph>The following adverse reactions have been identified during post-approval use of cilostazol tablets. Because these reactions are reported voluntarily from a population of an unknown size, it is not always possible to reliably estimate their frequency or establish a causal relationship to drug exposure.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Blood and lymphatic system disorders:</content>
+                           <br/>Aplastic anemia, granulocytopenia, pancytopenia, bleeding tendency
+        
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Cardiac disorders:</content>
+                           <br/>Torsade de pointes and QTc prolongation in patients with cardiac disorders (e.g. complete atrioventricular block, heart failure; and bradyarrythmia), angina pectoris.
+        
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Gastrointestinal disorders:</content>
+                           <br/>Gastrointestinal hemorrhage, vomiting, flatulence, nausea 
+        
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">General disorders and administration site conditions: </content>
+                           <br/>Pain, chest pain, hot flushes
+        
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Hepatobiliary disorders:</content>
+                           <br/>Hepatic dysfunction/abnormal liver function tests, jaundice
+        
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Immune system disorders:</content>
+                           <br/>Anaphylaxis, angioedema, and hypersensitivity
+        
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Investigations:</content>
+                           <br/>Blood glucose increased, blood uric acid increased, increase in BUN (blood urea increased), blood pressure increase
+        
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Nervous system disorders:</content>
+                           <br/>Intracranial hemorrhage, cerebral hemorrhage, cerebrovascular accident, extradural hematoma and subdural hematoma
+        
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Renal and urinary disorders:</content>
+                           <br/>Hematuria
+        
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Respiratory, thoracic and mediastinal disorders: </content>
+                           <br/>Pulmonary hemorrhage, interstitial pneumonia 
+        
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Skin and subcutaneous tissue disorders:</content>
+                           <br/>Hemorrhage subcutaneous, pruritus, skin eruptions including Stevens-Johnson syndrome, skin drug eruption (dermatitis medicamentosa), rash
+        
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Vascular disorders:</content>
+                           <br/>Subacute stent thrombosis, hypertension.
+        
+
+ </paragraph>
+                     </text>
+                     <effectiveTime value="20170531"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="_b329cc52-55e5-c8ff-5208-bf5b3244a589">
+               <id root="dc7c3637-9a28-0f6c-e053-2995a90aee7f"/>
+               <code code="34073-7" codeSystem="2.16.840.1.113883.6.1" displayName="DRUG INTERACTIONS SECTION"/>
+               <title>7 DRUG INTERACTIONS</title>
+               <effectiveTime value="20220331"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph/>
+                        <list listType="unordered">
+                           <item>
+                              <content styleCode="italics">Strong and moderate CYP3A4 and CYP2C19 inhibitors:</content> Increase exposure to cilostazol. Reduce cilostazol tablets dose ( 
+     <linkHtml href="#_cfd65a7e-98de-fcb3-16c8-4ef4f7a896e3">2.2</linkHtml>, 
+     <linkHtml href="#_5d41c3a0-bbf1-b526-f2f2-db4ae6e294c0">7.1</linkHtml>)
+    </item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="_5d41c3a0-bbf1-b526-f2f2-db4ae6e294c0">
+                     <id root="dc7c259e-4be4-c3d9-e053-2a95a90a0c01"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>7.1 Inhibitors of CYP3A4 or CYP2C19</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Inhibitors of CYP3A4</content>
+                           <br/>Coadministration of strong (e.g., ketoconazole) and moderate (e.g., erythromycin, diltiazem and grapefruit juice) CYP3A4 inhibitors can increase exposure to cilostazol. Reduce cilostazol dose to 50 mg twice daily when coadministered with strong or moderate inhibitors of CYP3A4 
+         
+ 
+  <content styleCode="italics">[see Dosage and Administration (
+          
+  
+   <linkHtml href="#_cfd65a7e-98de-fcb3-16c8-4ef4f7a896e3">2.2</linkHtml>) and Clinical Pharmacology (
+          
+  
+   <linkHtml href="#_484eedc7-45c3-058a-2a42-bf2d6226251c">12.3</linkHtml>)].
+         
+ 
+  </content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Inhibitors of CYP2C19</content>
+                           <br/>Coadministration with CYP2C19 inhibitors (e.g., omeprazole) increases systemic exposure of cilostazol active metabolites. Reduce cilostazol dose to 50 mg twice daily when coadministered with strong or moderate inhibitors of CYP2C19 
+         
+ 
+  <content styleCode="italics">[see Dosage and Administration (
+          
+  
+   <linkHtml href="#_cfd65a7e-98de-fcb3-16c8-4ef4f7a896e3">2.2</linkHtml>) and Clinical Pharmacology (
+          
+  
+   <linkHtml href="#_484eedc7-45c3-058a-2a42-bf2d6226251c">12.3</linkHtml>)].
+         
+ 
+  </content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20170531"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="_50cd9dc4-7b58-cbd5-6e8b-87dbec5813be">
+               <id root="dc7c259e-4be5-c3d9-e053-2a95a90a0c01"/>
+               <code code="43684-0" codeSystem="2.16.840.1.113883.6.1" displayName="USE IN SPECIFIC POPULATIONS SECTION"/>
+               <title>8 USE IN SPECIFIC POPULATIONS</title>
+               <effectiveTime value="20170531"/>
+               <component>
+                  <section ID="_dd18a06c-d554-7a1d-f37d-1c3c6b0fe5dd">
+                     <id root="dc7c259e-4be6-c3d9-e053-2a95a90a0c01"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>8.1 Pregnancy</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Teratogenic Effects</content>
+                           <br/>
+                           <content styleCode="italics">Pregnancy Category C.</content>
+                        </paragraph>
+                        <paragraph>Cilostazol has been shown to be teratogenic in rats at doses that are greater than 5-times the human MRHD on a body surface area basis. There are no adequate and well-controlled studies in pregnant women.</paragraph>
+                        <paragraph>In a rat developmental toxicity study, oral administration of 1000 mg cilostazol/kg/day was associated with decreased fetal weights, and increased incidences of cardiovascular, renal, and skeletal anomalies (ventricular septal, aortic arch and subclavian artery abnormalities, renal pelvic dilation, 14
+         
+ 
+  <sup>th </sup> rib, and retarded ossification). At this dose, systemic exposure to unbound cilostazol in nonpregnant rats was about 5 times the exposure in humans given the MRHD. Increased incidences of ventricular septal defect and retarded ossification were also noted at 150 mg/kg/day (5 times the MRHD on a systemic exposure basis). In a rabbit developmental toxicity study, an increased incidence of retardation of ossification of the sternum was seen at doses as low as 150 mg/kg/day. In nonpregnant rabbits given 150 mg/kg/day, exposure to unbound cilostazol was considerably lower than that seen in humans given the MRHD, and exposure to 3,4-dehydro- cilostazol was barely detectable.
+        
+
+ </paragraph>
+                        <paragraph>When cilostazol was administered to rats during late pregnancy and lactation, an increased incidence of stillborn and decreased birth weights of offspring was seen at doses of 150 mg/kg/day (5 times the MRHD on a systemic exposure basis).
+         
+ 
+  <sup/>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20170531"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_d81ec2bf-7ed2-71a9-e2be-2a41e3a6de44">
+                     <id root="dc7c259e-4be7-c3d9-e053-2a95a90a0c01"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>8.3 Nursing Mothers</title>
+                     <text>
+                        <paragraph>Transfer of cilostazol into milk has been reported in rats. Because many drugs are excreted in human milk and because of the potential for serious adverse reactions in nursing infants from cilostazol, discontinue nursing or discontinue cilostazol.</paragraph>
+                     </text>
+                     <effectiveTime value="20170531"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_131fe571-b33a-0a60-c327-4213f9aabaa0">
+                     <id root="dc7c259e-4be8-c3d9-e053-2a95a90a0c01"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>8.4 Pediatric Use</title>
+                     <text>
+                        <paragraph>Safety and effectiveness of cilostazol in pediatric patients have not been established.</paragraph>
+                     </text>
+                     <effectiveTime value="20170531"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_b544aad7-ae02-65fc-a0de-82102a89a23e">
+                     <id root="dc7c259e-4be9-c3d9-e053-2a95a90a0c01"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>8.5 Geriatric Use</title>
+                     <text>
+                        <paragraph>Of the total number of subjects (n = 2,274) in clinical studies of cilostazol, 56 percent were 65 years old and over, while 16 percent were 75 years old and over. No overall differences in safety or effectiveness were observed between these subjects and younger subjects, and other reported clinical experience has not identified differences in responses between the elderly and younger patients, but greater sensitivity of some older individuals cannot be excluded. Pharmacokinetic studies have not disclosed any age-related effects on the absorption, distribution, metabolism, and elimination of cilostazol and its metabolites.</paragraph>
+                     </text>
+                     <effectiveTime value="20170531"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_5930be9c-db96-0d75-b268-636d1ca93c57">
+                     <id root="dc7c259e-4bea-c3d9-e053-2a95a90a0c01"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>8.6 Hepatic Impairment</title>
+                     <text>
+                        <paragraph>No dose adjustment is required in patients with mild hepatic impairment. Patients with moderate or severe hepatic impairment have not been studied in clinical trials and dosing recommendations cannot be provided 
+         
+ 
+  <content styleCode="italics">[see Clinical Pharmacology (
+          
+  
+   <linkHtml href="#_484eedc7-45c3-058a-2a42-bf2d6226251c">12.3</linkHtml>)].
+         
+ 
+  </content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20170531"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_413191ed-e72a-0ff8-1e32-d7741184d6c7">
+                     <id root="dc7c259e-4beb-c3d9-e053-2a95a90a0c01"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>8.7 Renal Impairment</title>
+                     <text>
+                        <paragraph>No dose adjustment is required in patients with renal impairment. Patients on dialysis have not been studied, but, it is unlikely that cilostazol can be removed efficiently by dialysis because of its high protein binding (95 to 98%) 
+         
+ 
+  <content styleCode="italics">[see Clinical Pharmacology (
+          
+  
+   <linkHtml href="#_484eedc7-45c3-058a-2a42-bf2d6226251c">12.3</linkHtml>)].
+         
+ 
+  </content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20170531"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="_13ceda37-6acf-fd5f-fcea-0fe869edc362">
+               <id root="dc7c259e-4bec-c3d9-e053-2a95a90a0c01"/>
+               <code code="34088-5" codeSystem="2.16.840.1.113883.6.1" displayName="OVERDOSAGE SECTION"/>
+               <title>10 OVERDOSAGE</title>
+               <text>
+                  <paragraph>Information on acute overdosage with cilostazol in humans is limited. The signs and symptoms of an acute overdose can be anticipated to be those of excessive pharmacologic effect: severe headache, diarrhea, hypotension, tachycardia, and possibly cardiac arrhythmias. The patient should be carefully observed and given supportive treatment. Since cilostazol is highly protein-bound, it is unlikely that it can be efficiently removed by hemodialysis or peritoneal dialysis. The oral LD
+       
+ 
+  <sub>50</sub> of cilostazol is greater than 5 g per kg in mice and rats and greater than 2 g per kg in dogs.
+      
+
+ </paragraph>
+               </text>
+               <effectiveTime value="20170531"/>
+            </section>
+         </component>
+         <component>
+            <section ID="_09fe740b-a22e-e82c-e73f-1be3d5458d3f">
+               <id root="dc7c259e-4bed-c3d9-e053-2a95a90a0c01"/>
+               <code code="34089-3" codeSystem="2.16.840.1.113883.6.1" displayName="DESCRIPTION SECTION"/>
+               <title>11 DESCRIPTION</title>
+               <text>
+                  <paragraph>Cilostazol is a quinolinone derivative that inhibits cellular phosphodiesterase (more specific for phosphodiesterase III). The empirical formula of cilostazol is C
+       
+ 
+  <sub>20</sub>H
+       
+ 
+  <sub>27</sub>N
+       
+ 
+  <sub>5</sub>O
+       
+ 
+  <sub>2</sub>, and its molecular weight is 369.47. Cilostazol is 6-[4-(1-cyclohexyl-1
+       
+ 
+  <content styleCode="italics">H</content>-tetrazol-5-yl) butoxy]-3,4-dihydro-2(1
+       
+ 
+  <content styleCode="italics">H</content>)-quinolinone, CAS-73963-72-1.
+      
+
+ </paragraph>
+                  <paragraph>The structural formula is:</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="MM471360702925"/>
+                  </paragraph>
+                  <paragraph>Cilostazol occurs as white to off-white crystals or as a crystalline powder that is slightly soluble in methanol and ethanol, and is practically insoluble in water, 0.1 N HCl, and 0.1 N NaOH.</paragraph>
+                  <paragraph>Cilostazol tablets, USP for oral administration are available in 50 mg and 100 mg round, white tablets. Each tablet, in addition to the active ingredient, contains the following inactive ingredients: corn starch, croscarmellose sodium, magnesium stearate, and silicon dioxide.</paragraph>
+                  <paragraph>Meets USP Dissolution Test 2</paragraph>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20170531"/>
+               <component>
+                  <observationMedia ID="MM471360702925">
+                     <text>Structure.jpg</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="Structure.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="_10a16ff3-766b-5c76-55f0-c0c4689bda99">
+               <id root="dc7c259e-4bee-c3d9-e053-2a95a90a0c01"/>
+               <code code="34090-1" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+               <title>12 CLINICAL PHARMACOLOGY</title>
+               <effectiveTime value="20170531"/>
+               <component>
+                  <section ID="_267ea5bb-f1a9-b0e3-a698-573a042f389f">
+                     <id root="dc7c259e-4bef-c3d9-e053-2a95a90a0c01"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>12.1 Mechanism of Action</title>
+                     <text>
+                        <paragraph>Cilostazol and several of its metabolites inhibit phosphodiesterase III activity and suppress cAMP degradation with a resultant increase in cAMP in platelets and blood vessels, leading to inhibition of platelet aggregation and vasodilation, respectively.</paragraph>
+                        <paragraph>Cilostazol reversibly inhibits platelet aggregation induced by a variety of stimuli, including thrombin, ADP, collagen, arachidonic acid, epinephrine, and shear stress.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Cardiovascular effects:</content>
+                           <content styleCode="italics"/>
+                        </paragraph>
+                        <paragraph>Cilostazol affects both vascular beds and cardiovascular function. It produces heterogeneous dilation of vascular beds, with greater dilation in femoral beds than in vertebral, carotid or superior mesenteric arteries. Renal arteries were not responsive to the effects of cilostazol.</paragraph>
+                        <paragraph>In dogs or cynomolgus monkeys, cilostazol increased heart rate, myocardial contractile force, and coronary blood flow as well as ventricular automaticity, as would be expected for a PDE III inhibitor. Left ventricular contractility was increased at doses required to inhibit platelet aggregation. A-V conduction was accelerated. In humans, heart rate increased in a dose-proportional manner by a mean of 5.1 and 7.4 beats per minute in patients treated with 50 and 100 mg twice daily, respectively.</paragraph>
+                     </text>
+                     <effectiveTime value="20170531"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_14049b48-7f4a-7e26-f07f-c009b44949b7">
+                     <id root="dc7c259e-4bf0-c3d9-e053-2a95a90a0c01"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>12.2 Pharmacodynamics</title>
+                     <text>
+                        <paragraph>Cilostazol’s effects on platelet aggregation were evaluated in both healthy subjects and in patients with stable symptoms of cerebral thrombosis, cerebral embolism, transient ischemic attack, or cerebral arteriosclerosis over a range of doses from 50 mg every day to 100 mg three times a day. Cilostazol significantly inhibited platelet aggregation in a dose-dependent manner. The effects were observed as early as 3 hours post-dose and lasted up to 12 hours following a single dose. Following chronic administration and withdrawal of cilostazol, the effects on platelet aggregation began to subside 48 hours after withdrawal and returned to baseline by 96 hours with no rebound effect. A cilostazol dosage of 100 mg twice daily consistently inhibited platelet aggregation induced with arachidonic acid, collagen and adenosine diphosphate (ADP). Bleeding time was not affected by cilostazol administration.</paragraph>
+                        <paragraph>Effects on circulating plasma lipids have been examined in patients taking cilostazol. After 12 weeks, as compared to placebo, cilostazol 100 mg twice daily produced a reduction in triglycerides of 29.3 mg/dL (15%) and an increase in HDL-cholesterol of 4.0 mg/dL (≅ 10%). </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Drug Interactions</content>
+                           <br/>
+                           <content styleCode="italics">Aspirin</content>
+                           <br/>Short-term (less than or equal to 4 days) coadministration of aspirin with cilostazol increased the inhibition of ADP- induced 
+         
+ 
+  <content styleCode="italics">ex vivo</content> platelet aggregation by 22% to 37% when compared to either aspirin or cilostazol alone. Short-term (less than or equal to 4 days) coadministration of aspirin with cilostazol increased the inhibition of arachidonic acid-induced 
+         
+ 
+  <content styleCode="italics">ex vivo</content> platelet aggregation by 20% compared to cilostazol alone and by 48% compared to aspirin alone. However, short- term coadministration of aspirin with cilostazol had no clinically significant impact on PT, aPTT, or bleeding time compared to aspirin alone. Effects of long-term coadministration in the general population are unknown.
+        
+
+ </paragraph>
+                        <paragraph>In eight randomized, placebo-controlled, double-blind clinical trials, aspirin was coadministered with cilostazol to 201 patients. The most frequent doses and mean durations of aspirin therapy were 75 to 81 mg daily for 137 days (107 patients) and 325 mg daily for 54 days (85 patients). There was no apparent increase in frequency of hemorrhagic adverse effects in patients taking cilostazol and aspirin compared to patients taking placebo and equivalent doses of aspirin.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Warfarin</content>
+                           <br/>Cilostazol did not inhibit the pharmacologic effects (PT, aPTT, bleeding time, or platelet aggregation) of R- and S- warfarin after a single 25-mg dose of warfarin. The effect of concomitant multiple dosing of warfarin and cilostazol on the pharmacodynamics of both drugs is unknown.
+        
+
+ </paragraph>
+                     </text>
+                     <effectiveTime value="20170531"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_484eedc7-45c3-058a-2a42-bf2d6226251c">
+                     <id root="dc7c259e-4bf1-c3d9-e053-2a95a90a0c01"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>12.3 Pharmacokinetics</title>
+                     <text>
+                        <paragraph>Cilostazol is absorbed after oral administration. A high fat meal increases absorption, with an approximately 90% increase in C
+         
+ 
+  <sub>max </sub>and a 25% increase in AUC. Absolute bioavailability is not known. Cilostazol is extensively metabolized by hepatic cytochrome P-450 enzymes, mainly 3A4, and, to a lesser extent, 2C19, with metabolites largely excreted in urine. Two metabolites are active, with one metabolite appearing to account for at least 50% of the pharmacologic (PDE III inhibition) activity after administration of cilostazol.
+        
+
+ </paragraph>
+                        <paragraph>Pharmacokinetics are approximately dose proportional. Cilostazol and its active metabolites have apparent elimination half-lives of about 11 to 13 hours. Cilostazol and its active metabolites accumulate about 2-fold with chronic administration and reach steady state blood levels within a few days. The pharmacokinetics of cilostazol and its two major active metabolites were similar in healthy subjects and patients with intermittent claudication due to peripheral arterial disease (PAD). Figure 1 shows the mean plasma concentration-time profile at steady state after multiple dosing of cilostazol 100 mg twice daily.</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Figure 1: Mean Plasma Concentration-time Profile at Steady State after Multiple Dosing of cilostazol 100 mg Twice Daily</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="bold"/>
+                           <renderMultiMedia referencedObject="MM620341029203"/>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Distribution</content>
+                           <br/>Cilostazol is 95 to 98% protein bound, predominantly to albumin. The binding for 3,4-dehydro-cilostazol is 97.4% and for 4´-trans-hydroxy-cilostazol is 66%. Mild hepatic impairment did not affect protein binding. The free fraction of cilostazol was 27% higher in subjects with renal impairment than in healthy volunteers. The displacement of cilostazol from plasma proteins by erythromycin, quinidine, warfarin, and omeprazole was not clinically significant.
+        
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Metabolism</content>
+                           <br/>Cilostazol is eliminated predominantly by metabolism and subsequent urinary excretion of metabolites. Based on 
+         
+ 
+  <content styleCode="italics">in vitro </content>studies, the primary isoenzymes involved in cilostazol’s metabolism are CYP3A4 and, to a lesser extent, CYP2C19. The enzyme responsible for metabolism of 3,4-dehydro-cilostazol, the most active of the metabolites, is unknown.
+        
+
+ </paragraph>
+                        <paragraph>Following oral administration of 100 mg radiolabeled cilostazol, 56% of the total analytes in plasma was cilostazol, 15% was 3,4-dehydro-cilostazol (4 to 7 times as active as cilostazol), and 4% was 4´-trans-hydroxy-cilostazol (20% as active as cilostazol).</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Elimination</content>
+                           <br/>The primary route of elimination was via the urine (74%), with the remainder excreted in feces (20%). No measurable amount of unchanged cilostazol was excreted in the urine, and less than 2% of the dose was excreted as 3,4-dehydro- cilostazol. About 30% of the dose was excreted in urine as 4´-trans-hydroxy-cilostazol. The remainder was excreted as other metabolites, none of which exceeded 5%. There was no evidence of induction of hepatic microenzymes.
+        
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Special Populations</content>
+                           <br/>
+                           <content styleCode="italics">Age and Gender</content>
+                           <br/>The total and unbound oral clearances, adjusted for body weight, of cilostazol and its metabolites were not significantly different with respect to age (50 to 80 years) or gender.
+        
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Smokers</content>
+                           <br/>Population pharmacokinetic analysis suggests that smoking decreased cilostazol exposure by about 20%.
+        
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Hepatic Impairment</content>
+                           <br/>The pharmacokinetics of cilostazol and its metabolites were similar in subjects with mild hepatic disease as compared to healthy subjects.
+        
+
+ </paragraph>
+                        <paragraph>Patients with moderate or severe hepatic impairment have not been studied.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Renal Impairment</content>
+                           <br/>The total pharmacologic activity of cilostazol and its metabolites was similar in subjects with mild to moderate renal impairment and in healthy subjects. Severe renal impairment increases metabolite levels and alters protein binding of the parent. The expected pharmacologic activity, however, based on plasma concentrations and relative PDE III inhibiting potency of parent drug and metabolites, appeared little changed. Patients on dialysis have not been studied, but, it is unlikely that cilostazol can be removed efficiently by dialysis because of its high protein binding (95 to 98%).
+        
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Drug Interactions</content>
+                           <br/>Cilostazol does not appear to inhibit CYP3A4. 
+        
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Warfarin</content>
+                           <br/>Cilostazol did not inhibit the metabolism of R- and S-warfarin after a single 25-mg dose of warfarin.
+        
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Clopidogrel</content>
+                           <br/>Multiple doses of clopidogrel do not significantly increase steady state plasma concentrations of cilostazol.
+        
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Strong Inhibitors of CYP3A4</content>
+                           <br/>A priming dose of ketoconazole 400 mg (a strong inhibitor of CYP3A4), was given one day prior to coadministration of single doses of ketoconazole 400 mg and cilostazol 100 mg. This regimen increased cilostazol C
+         
+ 
+  <sub>max</sub> by 94% and AUC by 117%. Other strong inhibitors of CYP3A4, such as itraconazole, voriconazole, clarithromycin, ritonavir, saquinavir, and nefazodone would be expected to have a similar effect 
+         
+ 
+  <content styleCode="italics">[see Dosage and Administration (
+          
+  
+   <linkHtml href="#_cfd65a7e-98de-fcb3-16c8-4ef4f7a896e3">2.2</linkHtml>), Drug Interactions (
+          
+  
+   <linkHtml href="#_5d41c3a0-bbf1-b526-f2f2-db4ae6e294c0">7.1</linkHtml>)].
+         
+ 
+  </content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Moderate Inhibitors of CYP3A4</content>
+                           <br/>
+                           <content styleCode="italics">Erythromycin and other macrolide antibiotics:</content> Erythromycin is a moderately strong inhibitor of CYP3A4. Coadministration of erythromycin 500 mg every 8h with a single dose of cilostazol 100 mg increased cilostazol C
+         
+ 
+  <sub>max </sub>by 47% and AUC by 73%. Inhibition of cilostazol metabolism by erythromycin increased the AUC of 4´-trans-hydroxy- cilostazol by 141% 
+         
+ 
+  <content styleCode="italics">[see Dosage and Administration (
+          
+  
+   <linkHtml href="#_cfd65a7e-98de-fcb3-16c8-4ef4f7a896e3">2.2</linkHtml>)].
+         
+ 
+  </content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Diltiazem:</content>
+                           <br/>Diltiazem 180 mg decreased the clearance of cilostazol by ~30%. Cilostazol C
+         
+ 
+  <sub>max </sub>increased ~30% and AUC increased ~40% 
+         
+ 
+  <content styleCode="italics">[see Dosage and Administration (
+          
+  
+   <linkHtml href="#_cfd65a7e-98de-fcb3-16c8-4ef4f7a896e3">2.2</linkHtml>)].
+         
+ 
+  </content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Grapefruit Juice:</content>
+                           <br/>Grapefruit juice increased the C
+         
+ 
+  <sub>max</sub> of cilostazol by ~50%, but had no effect on AUC.
+        
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Inhibitors of CYP2C19</content>
+                           <br/>
+                           <content styleCode="italics">Omeprazole:</content> Coadministration of omeprazole did not significantly affect the metabolism of cilostazol, but the systemic exposure to 3,4-dehydro-cilostazol was increased by 69%, probably the result of omeprazole’s potent inhibition of CYP2C19 
+         
+ 
+  <content styleCode="italics">[see Dosage and Administration (
+          
+  
+   <linkHtml href="#_cfd65a7e-98de-fcb3-16c8-4ef4f7a896e3">2.2</linkHtml>)].
+         
+ 
+  </content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Quinidine</content>
+                           <br/>Concomitant administration of quinidine with a single dose of cilostazol 100 mg did not alter cilostazol pharmacokinetics.
+        
+
+ </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Lovastatin</content>
+                           <br/>The concomitant administration of lovastatin with cilostazol decreases cilostazol C
+         
+ 
+  <sub>ss, max</sub> and AUCτ by 15%. There is also a decrease, although nonsignificant, in cilostazol metabolite concentrations. Coadministration of cilostazol with lovastatin increases lovastatin and ß-hydroxylovastatin AUC approximately 70% and is not expected to be clinically significant.
+        
+
+ </paragraph>
+                        <br/>
+                     </text>
+                     <effectiveTime value="20170531"/>
+                     <component>
+                        <observationMedia ID="MM620341029203">
+                           <text>Figure1.jpg</text>
+                           <value mediaType="image/jpeg" xsi:type="ED">
+                              <reference value="Figure1.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="_e7184486-16f5-0e06-593a-df9b83310944">
+               <id root="dc7c259e-4bf2-c3d9-e053-2a95a90a0c01"/>
+               <code code="43680-8" codeSystem="2.16.840.1.113883.6.1" displayName="NONCLINICAL TOXICOLOGY SECTION"/>
+               <title>13 NONCLINICAL TOXICOLOGY</title>
+               <effectiveTime value="20170531"/>
+               <component>
+                  <section ID="_2b3b15b8-0941-a1a6-5ad1-c21ae2cf51ff">
+                     <id root="dc7c259e-4bf3-c3d9-e053-2a95a90a0c01"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility</title>
+                     <text>
+                        <paragraph>Dietary administration of cilostazol to male and female rats and mice for up to 104 weeks, at doses up to 500 mg/kg/day in rats and 1000 mg/kg/day in mice, revealed no evidence of carcinogenic potential. The maximum doses administered in both rat and mouse studies were, on a systemic exposure basis, less than the human exposure at the MRHD of the drug. Cilostazol tested negative in bacterial gene mutation, bacterial DNA repair, mammalian cell gene mutation, and mouse 
+         
+ 
+  <content styleCode="italics">in vivo</content> bone marrow chromosomal aberration assays. It was, however, associated with a significant increase in chromosomal aberrations in the 
+         
+ 
+  <content styleCode="italics">in vitro </content>Chinese Hamster Ovary Cell assay.
+        
+
+ </paragraph>
+                        <paragraph>In female mice, cilostazol caused a reversible contraceptive effect at a dose (300 mg/kg) that was approximately 7.4-fold greater than the Maximum Recommended Human Dose (MRHD) on a body surface area basis. These findings have not been demonstrated in other animal species.</paragraph>
+                        <paragraph>Cilostazol did not affect fertility or mating performance of male and female rats at doses as high as 1000 mg/kg/day. At this dose, systemic exposures (AUCs) to unbound cilostazol were less than 1.5 times in males, and about 5 times in females, the exposure in humans at the MRHD.</paragraph>
+                     </text>
+                     <effectiveTime value="20170531"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_efc8d58e-dd72-bd45-e976-d14c259e4177">
+                     <id root="dc7c259e-4bf4-c3d9-e053-2a95a90a0c01"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>13.2 Animal Toxicology and/or Pharmacology</title>
+                     <text>
+                        <paragraph>Repeated oral administration of cilostazol to dogs (30 or more mg/kg/day for 52 weeks, 150 or more mg/kg/day for 13 weeks, and 450 mg/kg/day for 2 weeks), produced cardiovascular lesions that included endocardial hemorrhage, hemosiderin deposition and fibrosis in the left ventricle, hemorrhage in the right atrial wall, hemorrhage and necrosis of the smooth muscle in the wall of the coronary artery, intimal thickening of the coronary artery, and coronary arteritis and periarteritis. At the lowest dose associated with cardiovascular lesions in the 52-week study, systemic exposure (AUC) to unbound cilostazol was less than that seen in humans at the maximum recommended human dose (MRHD) of 100 mg twice daily. Similar lesions have been reported in dogs following the administration of other positive inotropic agents (including PDE III inhibitors) and/or vasodilating agents. No cardiovascular lesions were seen in rats following 5 or 13 weeks of administration of cilostazol at doses up to 1500 mg/kg/day. At this dose, systemic exposures (AUCs) to unbound cilostazol were only about 1.5 and 5 times (male and female rats, respectively) the exposure seen in humans at the MRHD. Cardiovascular lesions were also not seen in rats following 52 weeks of administration of cilostazol at doses up to 150 mg/kg/day. At this dose, systemic exposures (AUCs) to unbound cilostazol were about 0.5 and 5 times (male and female rats, respectively) the exposure in humans at the MRHD. In female rats, cilostazol AUCs were similar at 150 and 1500 mg/kg/day. Cardiovascular lesions were also not observed in monkeys after oral administration of cilostazol for 13 weeks at doses up to 1800 mg/kg/day. While this dose of cilostazol produced pharmacologic effects in monkeys, plasma cilostazol levels were less than those seen in humans given the MRHD, and those seen in dogs given doses associated with cardiovascular lesions.</paragraph>
+                     </text>
+                     <effectiveTime value="20170531"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="_7063bf98-0186-3722-4452-802c629919ca">
+               <id root="dc7c259e-4bf5-c3d9-e053-2a95a90a0c01"/>
+               <code code="34092-7" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL STUDIES SECTION"/>
+               <title>14 CLINICAL STUDIES</title>
+               <text>
+                  <paragraph>The ability of cilostazol to improve walking distance in patients with stable intermittent claudication was studied in eight, randomized, placebo-controlled, double-blind trials of 12 to 24 weeks’ duration involving 2,274 patients using dosages of 50 mg twice daily (n=303), 100 mg twice daily (n=998), and placebo (n=973). Efficacy was determined primarily by the change in maximal walking distance from baseline (compared to change on placebo) on one of several standardized exercise treadmill tests.</paragraph>
+                  <paragraph>Compared to patients treated with placebo, patients treated with cilostazol 50 or 100 mg twice daily experienced statistically significant improvements in walking distances both for the distance before the onset of claudication pain and the distance before exercise-limiting symptoms supervened (maximal walking distance). The effect of cilostazol on walking distance was seen as early as the first on-therapy observation point of two or four weeks.</paragraph>
+                  <paragraph>Figure 2 depicts the percent mean improvement in maximal walking distance, at study end for each of the eight studies.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Figure 2: Percent Mean Improvement in Maximal Walking Distance at Study End for the Eight Randomized, Double-Blind, Placebo-Controlled Clinical Trials</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold"/>
+                     <renderMultiMedia referencedObject="MM829165205615"/>
+                  </paragraph>
+                  <paragraph>Across the eight clinical trials, the range of improvement in maximal walking distance in patients treated with cilostazol 100 mg twice daily, expressed as the change from baseline, was 28% to 100%.</paragraph>
+                  <paragraph>The corresponding changes in the placebo group were –10% to 41%.</paragraph>
+                  <paragraph>The Walking Impairment Questionnaire, which was administered in six of the eight clinical trials, assesses the impact of a therapeutic intervention on walking ability. In a pooled analysis of the six trials, patients treated with either cilostazol 100 mg twice daily or 50 mg twice daily reported improvements in their walking speed and walking distance as compared to placebo. Improvements in walking performance were seen in the various subpopulations evaluated, including those defined by gender, smoking status, diabetes mellitus, duration of peripheral artery disease, age, and concomitant use of beta blockers or calcium channel blockers. Cilostazol has not been studied in patients with rapidly progressing claudication or in patients with leg pain at rest, ischemic leg ulcers, or gangrene. Its long-term effects on limb preservation and hospitalization have not been evaluated.</paragraph>
+                  <paragraph>A randomized, double-blind, placebo-controlled Phase IV study was conducted to assess the long-term effects of cilostazol, with respect to mortality and safety, in 1,439 patients with intermittent claudication and no heart failure. The trial stopped early due to enrollment difficulties and a lower than expected overall death rate. With respect to mortality, the observed 36-month Kaplan-Meier event rate for deaths on study drug with a median time on study drug of 18 months was 5.6% (95% CI of 2.8 to 8.4 %) on cilostazol and 6.8% (95% CI of 1.9 to 11.5 %) on placebo. These data appear to be sufficient to exclude a 75% increase in the risk of mortality on cilostazol, which was the 
+       
+ 
+  <content styleCode="italics">a priori</content> study hypothesis.
+      
+
+ </paragraph>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20170531"/>
+               <component>
+                  <observationMedia ID="MM829165205615">
+                     <text>Figure2.jpg</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="Figure2.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s25">
+               <id root="dc7c259e-4bf6-c3d9-e053-2a95a90a0c01"/>
+               <code code="34069-5" codeSystem="2.16.840.1.113883.6.1" displayName="HOW SUPPLIED SECTION"/>
+               <title>16 HOW SUPPLIED/STORAGE AND HANDLING</title>
+               <text>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20170531"/>
+               <component>
+                  <section ID="_de64ca20-ef0e-ba09-01d0-017cb76bd4ac">
+                     <id root="dc7c441d-1bce-4f09-e053-2995a90a514d"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>16.1 How supplied</title>
+                     <text>
+                        <paragraph>Cilostazol tablets, USP are supplied as 50 mg and 100 mg tablets.</paragraph>
+                        <paragraph>Cilostazol tablets, USP 50 mg are white, round, flat-faced, bevelled-edge tablets, engraved "APO" on one side and "CIL" over "50" on the other side.</paragraph>
+                        <paragraph/>
+                        <paragraph/>
+                        <paragraph>Cilostazol tablets, USP 100 mg tablets are white, round, flat-faced, bevelled-edge tablets, engraved "APO" on one side and "CIL" over "100" on the other side.</paragraph>
+                        <paragraph>Bottles of 60  NDC 42291-453-60</paragraph>
+                        <paragraph/>
+                     </text>
+                     <effectiveTime value="20170531"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_fa0b9704-e93a-899a-9162-aba1231e3e47">
+                     <id root="dc7c259e-4bf8-c3d9-e053-2a95a90a0c01"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>16.2 Storage and handling</title>
+                     <text>
+                        <paragraph>Store cilostazol tablets at 25°C (77°F); excursions permitted from 15°C to 30°C (59°F to 86°F) [See USP Controlled Room Temperature].</paragraph>
+                     </text>
+                     <effectiveTime value="20170531"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="_21cbb743-6bed-543f-8a85-39a34c29b2d3">
+               <id root="dc7c441d-1bcf-4f09-e053-2995a90a514d"/>
+               <code code="34076-0" codeSystem="2.16.840.1.113883.6.1" displayName="INFORMATION FOR PATIENTS SECTION"/>
+               <title>17 PATIENT COUNSELING INFORMATION</title>
+               <text>
+                  <paragraph>Advise the patient to read the FDA-approved patient labeling (Patient Information)
+  <br/>
+                     <br/>
+Advise the patient:
+ </paragraph>
+                  <list listType="unordered">
+                     <item>to take cilostazol tablets at least one-half hour before or two hours after food.</item>
+                     <item>to discuss with their doctor before taking any CYP3A4 or CYP2C19 inhibitors (e.g., omeprazole).</item>
+                     <item>that the beneficial effects of cilostazol tablets on the symptoms of intermittent claudication may not be immediate. Although the patient may experience benefit in 2 to 4 weeks after initiation of therapy, treatment for up to 12 weeks may be required before a beneficial effect is experienced. Discontinue cilostazol tablets if symptoms do not improve after 3 months.</item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">Manufactured for:
+   <br/>
+AvKARE
+   <br/>
+Pulaski, TN 38478
+  </content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Mfg. Rev. 05/17 
+   <br/>
+AV 03/22 (P)
+  </content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20170531"/>
+            </section>
+         </component>
+         <component>
+            <section ID="_D061BBA5-0629-161B-8D25-66EE4393E001">
+               <id root="dc7c2edd-4db2-588a-e053-2995a90aef8c"/>
+               <code code="68498-5" codeSystem="2.16.840.1.113883.6.1" displayName="PATIENT MEDICATION INFORMATION SECTION"/>
+               <title>
+                  <content styleCode="bold">
+                     <content styleCode="bold">PATIENT INFORMATION </content>
+                  </content>
+               </title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Cilostazol Tablets, USP</content>
+                     <br/>
+                     <br/>
+(sye loe' sta zol)
+  <br/>
+                     <br/>
+                     <content styleCode="bold">for oral use</content>
+                     <br/>
+                     <br/>
+                     <content styleCode="bold">50 mg and 100 mg</content>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>Read this Patient Information leaflet before you start taking cilostazol tablets and each time you get a refill. There may be new information. This information does not take the place of talking to your doctor about your medical condition or your treatment.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">What is the most important information I should know about cilostazol tablets? </content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Cilostazol tablets can cause serious side effects:</content>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>Cilostazol tablets stops a protein called phosphodiesterase III from working. Other similar drugs which affect this protein may cause death if you already have heart problems, called class 3 to 4 (III-IV) heart failure. 
+   <content styleCode="bold">Do not </content>take cilostazol tablets if you have heart failure of any kind.
+  </item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">What are cilostazol tablets?</content>
+                  </paragraph>
+                  <paragraph>Cilostazol tablets is a prescription medicine used to reduce the symptoms of intermittent claudication and can increase your ability to walk further distances.</paragraph>
+                  <paragraph>It is not known if cilostazol tablets is safe and effective for use in children.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">How does cilostazol tablets work?</content>
+                  </paragraph>
+                  <paragraph>Improvement in symptoms may occur as soon as 2 weeks, but could take up to 12 weeks.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Who should not take cilostazol tablets?</content>
+                     <br/>
+                     <br/>
+                     <content styleCode="bold">Do not take cilostazol tablets if you:</content>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>have heart problems (heart failure)</item>
+                     <item>are allergic to cilostazol or any of the ingredients in cilostazol tablets. See the end of this leaflet for a complete list of ingredients in cilostazol tablets.</item>
+                  </list>
+                  <paragraph>Tell your doctor before taking this medicine if you have any of these conditions.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">What should I tell my doctor before taking cilostazol tablets? </content>
+                     <br/>
+                     <br/>
+                     <content styleCode="bold">Before you take cilostazol tablets, tell your doctor if you:</content>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>drink grapefruit juice. Taking cilostazol tablets and drinking grapefruit juice can increase the amount of cilostazol tablets causing side effects.</item>
+                     <item>have any other medical conditions.</item>
+                     <item>are pregnant or planning to become pregnant. It is not known if cilostazol tablets will harm your unborn baby.</item>
+                     <item>are breastfeeding or planning to breastfeed. It is not known if cilostazol tablets passes into your breast milk. You and your doctor should decide if you will take cilostazol tablets or breastfeed. You should not do both.</item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">Tell your doctor about all the medicines you take, </content>including prescription and over-the-counter medicines, vitamins and herbal supplements.
+ </paragraph>
+                  <paragraph>Ask your doctor for a list of these medicines if you are not sure. You can ask your pharmacist for a list of medicines that interact with cilostazol tablets. Know the medicines you take. Keep a list of them to show to your doctor and pharmacist when you get a new medicine.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">How should I take cilostazol tablets?</content>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>Take cilostazol tablets exactly as your doctor tells you to take it.</item>
+                     <item>Your doctor will tell you how much cilostazol tablets to take and when to take it.</item>
+                     <item>Your doctor may change your dose if needed.</item>
+                     <item>Take cilostazol tablets 
+   <content styleCode="bold">30 minutes before </content>you eat 
+   <content styleCode="bold">or 2 hours after </content>you eat.
+  </item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">What are the possible side effects of cilostazol tablets? </content>
+                     <br/>
+                     <br/>
+                     <content styleCode="bold">Cilostazol tablets may cause serious side effects, including:</content>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>
+                        <content styleCode="bold">heart problems. </content>Taking cilostazol tablets may cause you to have heart problems, including a fast heart beat, palpitations, irregular heartbeat, and low blood pressure.
+  </item>
+                     <item>See "What is the most important information I should know about cilostazol tablets?"</item>
+                     <item>
+                        <content styleCode="bold">severe allergic reactions (anaphylaxis, angioedema). </content>Call your doctor or go to the nearest emergency room right away if you have any of the following signs or symptoms of a severe allergic reaction:
+	
+   <list listType="unordered">
+                           <item>hives</item>
+                           <item>swelling of your face, lips, mouth, or tongue</item>
+                           <item>trouble breathing or wheezing</item>
+                           <item>dizziness</item>
+                        </list>
+                     </item>
+                  </list>
+                  <list listType="unordered">
+                     <item>
+                        <content styleCode="bold">changes in your blood cell counts (thrombocytopenia or leukopenia).</content> Your doctor should do blood tests to check your blood cell counts while you take cilostazol tablets.
+  </item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">The most common side effects of cilostazol tablets include:</content>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>headache</item>
+                     <item>abnormal stools</item>
+                     <item>diarrhea
+   <br/>
+                     </item>
+                  </list>
+                  <paragraph>Tell your doctor if you have any side effect that bothers you or does not go away. These are not all the possible side effects of cilostazol tablets. For more information, ask your doctor or pharmacist.</paragraph>
+                  <paragraph>Call your doctor for medical advice about side effects. You may report side effects to FDA at 1-800-FDA-1088.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">How should I store cilostazol tablets?</content>
+                  </paragraph>
+                  <paragraph>Store cilostazol tablets at room temperature between 68°F to 77°F (20°C to 25°C).</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Keep cilostazol tablets and all medicines out of the reach of children.</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">
+                        <content styleCode="bold">General information about the safe and effective use of cilostazol tablets.</content>
+                     </content>
+                  </paragraph>
+                  <paragraph>Medicines are sometimes prescribed for purposes other than those listed in a Patient Information leaflet. Do not use cilostazol tablets for a condition for which it was not prescribed. Do not give cilostazol tablets to other people, even if they have the same symptoms that you have. It may harm them.</paragraph>
+                  <paragraph>This Patient Information summarizes the most important information about cilostazol tablets. If you would like more information, talk with your doctor. You can ask your pharmacist or doctor for information about cilostazol tablets that is written for health professionals.</paragraph>
+                  <paragraph>For more information, call Apotex Corp. at 1-855-361-3993.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">What are the ingredients in cilostazol tablets? </content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Active ingredient: </content>cilostazol
+  <br/>
+                     <br/>
+                     <content styleCode="bold">Inactive ingredients: </content>corn starch, croscarmellose sodium, magnesium stearate, and silicon dioxide
+ </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">This Patient Information has been approved by the U.S. Food and Drug Administration.</content>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph>
+                     <content styleCode="bold">Manufactured for:
+   <br/>
+AvKARE
+   <br/>
+Pulaski, TN 38478
+  </content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Mfg. Rev. 05/17 
+   <br/>
+AV 03/22 (P)
+  </content>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph/>
+                  <paragraph/>
+                  <paragraph/>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20170531"/>
+            </section>
+         </component>
+         <component>
+            <section ID="_2a682232-9bbe-78ea-cba9-b3425af7e6b6">
+               <id root="dc7c46e7-027a-ff15-e053-2a95a90a21fe"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PRINCIPAL DISPLAY PANEL for 100 mg</title>
+               <text>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="img_dc7c46e7-0279-ff15-e053-2a95a90a21fe"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20220412"/>
+               <component>
+                  <observationMedia ID="img_dc7c46e7-0279-ff15-e053-2a95a90a21fe">
+                     <text>60</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="453-60.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

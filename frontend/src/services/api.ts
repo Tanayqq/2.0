@@ -5,24 +5,42 @@ export interface Citation {
   uuid?: string;
   drug?: string;
   section?: string;
+  authority?: string;
+  authority_priority?: number;
+  freshness_factor?: number;
+  domain?: string;
   similarity?: number;
   count?: number;
   citation_number?: number;
 }
 
+export interface PatientProfilePayload {
+  age?: number;
+  gender?: string;
+  eGFR?: number;
+  hepatic_stage?: string;
+  pregnancy?: boolean;
+  smoking?: boolean;
+  comorbidities?: string[];
+  active_medications?: string[];
+  allergies?: string[];
+  vitals?: Record<string, any>;
+  recent_labs?: Record<string, any>;
+}
+
 export interface AnswerResponse {
   answer: string;
   citations: Citation[];
+  disclaimer?: string;
   metadata: {
     retrieval_latency_sec?: number;
     llm_latency_sec?: number;
     total_latency_sec?: number;
     provider?: string;
     confidence?: string;
-    audit?: any;
-    identity_profile?: any;
-    
-    // MedRef Phase 2 Enriched Metadata
+    zero_parametric_guard_triggered?: boolean;
+    explainability?: any;
+    conflict_resolution?: any;
     section_status?: Record<string, Record<string, {
       status: string;
       confidence_stars: string;
@@ -33,39 +51,30 @@ export interface AnswerResponse {
       missing_reason: string | null;
     }>>;
     retrieval_trace?: any[];
-    clinical_coverage?: {
-      sections: Record<string, boolean>;
-      overall_percentage: number;
-    };
-    provenance_block?: {
-      authority: string;
-      document: string;
-      version: string;
-      corpus: string;
-      chunk_id: string;
-    }[];
-    groundedness?: string;
-    groundedness_details?: string;
-    latency_breakdown?: {
-      alias_resolution_ms: number;
-      identity_lookup_ms: number;
-      vector_search_ms: number;
-      rerank_ms: number;
-      generation_ms: number;
-    };
   };
 }
 
-// Fallback to localhost if environment variable is not set (useful for local dev)
 export const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8000/api/v1";
 
-export const queryMedicalAPI = async (question: string): Promise<AnswerResponse> => {
+export const queryMedicalAPI = async (
+  question: string,
+  mode: string = "DRUG_CHAT",
+  country_context: string = "GLOBAL",
+  patient_profile?: PatientProfilePayload,
+  conversation_id?: string
+): Promise<AnswerResponse> => {
   const response = await fetch(`${API_BASE_URL}/query`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ question }),
+    body: JSON.stringify({
+      question,
+      mode,
+      country_context,
+      patient_profile,
+      conversation_id
+    }),
   });
 
   if (!response.ok) {
@@ -74,10 +83,28 @@ export const queryMedicalAPI = async (question: string): Promise<AnswerResponse>
       const errorData = await response.json();
       if (errorData.error) errorMsg = errorData.error;
     } catch (e) {
-      // Ignore JSON parse errors if response is not JSON
+      // Ignore JSON parse error
     }
     throw new Error(`API Error: ${errorMsg}`);
   }
 
+  return response.json();
+};
+
+export const fetchConversationIntake = async (
+  question: string,
+  conversation_id?: string,
+  patient_profile?: PatientProfilePayload
+) => {
+  const response = await fetch(`${API_BASE_URL}/intake`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ question, conversation_id, patient_profile }),
+  });
+  return response.json();
+};
+
+export const fetchQualityTelemetry = async () => {
+  const response = await fetch(`${API_BASE_URL}/quality`);
   return response.json();
 };

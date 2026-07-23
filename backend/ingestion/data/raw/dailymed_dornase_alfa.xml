@@ -1,0 +1,2096 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="71192c41-f7be-44b0-b232-1f74369239a0"/>
+   <code code="34391-3" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN PRESCRIPTION DRUG LABEL"/>
+   <title>These highlights do not include all the information needed to use PULMOZYME safely and effectively. See full prescribing information for PULMOZYME. <br/>
+      <br/>PULMOZYME<sup>®</sup> (dornase alfa) inhalation solution, for inhalation use <br/>Initial U.S. Approval: 1993</title>
+   <effectiveTime value="20251217"/>
+   <setId root="d8c78a7e-ff99-48f3-8952-643ec2ea0f86"/>
+   <versionNumber value="24"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id extension="080129000" root="1.3.6.1.4.1.519.1"/>
+            <name>Genentech, Inc.</name>
+            <assignedEntity>
+               <assignedOrganization>
+                  <id extension="080129000" root="1.3.6.1.4.1.519.1"/>
+                  <name>Genentech, Inc.</name>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id extension="323105205" root="1.3.6.1.4.1.519.1"/>
+                        <name>Roche Diagnostics GmbH</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C25391" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANALYSIS"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="50242-100" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id extension="080129000" root="1.3.6.1.4.1.519.1"/>
+                        <name>Genentech, Inc.</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C25391" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANALYSIS"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="50242-100" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                     <performance>
+                        <actDefinition>
+                           <code code="C82401" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="API MANUFACTURE"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="50242-100" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id extension="146373191" root="1.3.6.1.4.1.519.1"/>
+                        <name>Genentech, Inc</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C25391" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANALYSIS"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="50242-100" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+               </assignedOrganization>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section ID="DLDE">
+               <id root="aa605434-6675-464e-9cd1-5dccff3435fe"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL PRODUCT DATA ELEMENTS SECTION"/>
+               <effectiveTime value="20251217"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="50242-100" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Pulmozyme</name>
+                        <formCode code="C42986" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="SOLUTION"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>dornase alfa</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator value="1" unit="mg"/>
+                              <denominator value="1" unit="mL"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="953A26OA1Y" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>DORNASE ALFA</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="953A26OA1Y" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>DORNASE ALFA</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <quantity>
+                              <numerator value="0.15" unit="mg"/>
+                              <denominator value="1" unit="mL"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="M4I0D6VV5M" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CALCIUM CHLORIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <quantity>
+                              <numerator value="8.77" unit="mg"/>
+                              <denominator value="1" unit="mL"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="451W47IQ8X" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SODIUM CHLORIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="2.5" unit="mL"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C43165" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="AMPULE"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="6" unit="1"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="50242-100-39" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43200" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="POUCH"/>
+                                    <asContent>
+                                       <quantity>
+                                          <numerator value="5" unit="1"/>
+                                          <denominator value="1"/>
+                                       </quantity>
+                                       <containerPackagedProduct>
+                                          <code code="50242-100-40" codeSystem="2.16.840.1.113883.6.69"/>
+                                          <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                       </containerPackagedProduct>
+                                       <subjectOf>
+                                          <marketingAct>
+                                             <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                             <statusCode code="active"/>
+                                             <effectiveTime>
+                                                <low value="19931230"/>
+                                             </effectiveTime>
+                                          </marketingAct>
+                                       </subjectOf>
+                                    </asContent>
+                                 </containerPackagedProduct>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TYPE 0: NOT A COMBINATION PRODUCT" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="BLA103532" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73585" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BLA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="19931230"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38216" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="RESPIRATORY (INHALATION)"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="d2aeae4b-6a14-40ad-b1e8-52eded62379e"/>
+               <code code="43683-2" codeSystem="2.16.840.1.113883.6.1" displayName="RECENT MAJOR CHANGES SECTION"/>
+               <effectiveTime value="20240216"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <table width="100%" styleCode="Noautorules">
+                           <col width="85%" align="left" valign="top"/>
+                           <col width="15%" align="right" valign="top"/>
+                           <tbody>
+                              <tr>
+                                 <td>Dosage and Administration. (<linkHtml href="#S2.1">2.1</linkHtml>, <linkHtml href="#S2.2">2.2</linkHtml>)</td>
+                                 <td>02/2024</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="S1">
+               <id root="a8671a8a-5dce-4345-a722-e7b3700041ff"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>1 INDICATIONS AND USAGE</title>
+               <text>
+                  <paragraph>PULMOZYME<sup>®</sup> is indicated, in conjunction with standard therapies, for the management of pediatric and adult patients with cystic fibrosis (CF) to improve pulmonary function.</paragraph>
+                  <paragraph>In CF patients with an FVC ≥ 40% of predicted, daily administration of PULMOZYME has also been shown to reduce the risk of respiratory tract infections requiring parenteral antibiotics.</paragraph>
+               </text>
+               <effectiveTime value="20240216"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>PULMOZYME is a recombinant DNase enzyme indicated in conjunction with standard therapies for the management of cystic fibrosis (CF) patients to improve pulmonary function. (<linkHtml href="#S1">1</linkHtml>)</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="S2">
+               <id root="2424f326-0b33-4f98-b0c5-b938bbdbd809"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>2 DOSAGE AND ADMINISTRATION</title>
+               <effectiveTime value="20240216"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered">
+                           <item>The recommended dosage is 2.5 mg (one single-dose ampule) inhaled once daily using a recommended nebulizer. (<linkHtml href="#S2.1">2.1</linkHtml>)</item>
+                           <item>Some patients may benefit from twice daily administration. (<linkHtml href="#S2.1">2.1</linkHtml>)</item>
+                           <item>See full prescribing information for the recommended nebulizers for use with PULMOZYME. (<linkHtml href="#S2.2">2.2</linkHtml>)</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="S2.1">
+                     <id root="e3754926-e9bf-4f66-89ce-72bdf942e6eb"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.1       Recommended Dosage</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="xmChange">The recommended dosage, in most cystic fibrosis patients, is 2.5 mg (one single-dose ampule) inhaled once daily using a recommended jet nebulizer connected to an air compressor system or via a vibrating mesh nebulizer <content styleCode="italics">[see <linkHtml href="#S2.2">Dosage and Administration (2.2)</linkHtml>]</content>.</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="xmChange">Some patients may benefit from twice daily administration <content styleCode="italics">[see <linkHtml href="#S14">Clinical Studies (14)</linkHtml>]</content>.</content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20240216"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S2.2">
+                     <id root="acf4da5f-3ffe-4e8b-aeed-75e00170f700"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.2       Administration Instructions</title>
+                     <effectiveTime value="20240216"/>
+                     <component>
+                        <section>
+                           <id root="8ae30ef8-12fb-4ed0-ab25-371d94c94714"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="xmChange">
+                                    <content styleCode="underline">Nebulizer Information</content>
+                                 </content>
+                              </paragraph>
+                              <list listType="unordered" styleCode="disc">
+                                 <item>
+                                    <content styleCode="xmChange">Administer PULMOZYME via a jet nebulizer connected to an air compressor with an adequate air flow and equipped with a mouthpiece or suitable face mask, or via a vibrating mesh nebulizer.  Refer to <linkHtml href="#t1">Table 1</linkHtml> for the recommended Jet Nebulizers or Vibrating Mesh Nebulizers for use with PULMOZYME.  No data are currently available to support the administration of PULMOZYME with other nebulizer systems. </content>
+                                 </item>
+                                 <item>
+                                    <content styleCode="xmChange">The eRapid Nebulizer System should only be used by adults and pediatric patients who can use a mouthpiece, and not by younger patients who need a mask to inhale PULMOZYME.</content>
+                                 </item>
+                                 <item>
+                                    <content styleCode="xmChange">Use the selected nebulizer in accordance with the manufacturer's instruction manual.</content>
+                                 </item>
+                                 <item>
+                                    <content styleCode="xmChange">Refer to the manufacturer's instruction manual on the use, maintenance, and replacement of the equipment, including cleaning and disinfection procedures for the selected nebulizer.</content>
+                                 </item>
+                                 <item>
+                                    <content styleCode="xmChange">For additional information, refer to the selected nebulizer manufacturer's instruction manual.</content>
+                                 </item>
+                              </list>
+                              <table width="60%" ID="t1">
+                                 <caption>Table 1. Recommended Jet Nebulizers or Vibrating Mesh Nebulizers for Use with PULMOZYME</caption>
+                                 <col width="50%" align="left" valign="top"/>
+                                 <col width="50%" align="left" valign="top"/>
+                                 <thead>
+                                    <tr>
+                                       <th styleCode="Lrule Rrule" align="center">
+                                          <content styleCode="xmChange">Jet Nebulizer<footnote ID="t1f1">
+                                                <content styleCode="xmChange">Follow the selected nebulizer manufacturer's instruction manual.</content>
+                                             </footnote>
+                                          </content>
+                                       </th>
+                                       <th styleCode="Rrule" align="center">Compressor</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr styleCode="Botrule">
+                                       <td styleCode="Lrule Rrule">
+                                          <content styleCode="xmChange">Hudson T Up-draft II<sup>®</sup>
+                                          </content>
+                                       </td>
+                                       <td styleCode="Rrule" rowspan="2" valign="middle">Pulmo-Aide<sup>®</sup> or legally marketed compressor of identical pressure and flow rate (maximum 30 psi, 12 LPM).</td>
+                                    </tr>
+                                    <tr styleCode="Botrule">
+                                       <td styleCode="Lrule Rrule">
+                                          <content styleCode="xmChange">Marquest Acorn II<sup>®</sup>
+                                          </content>
+                                       </td>
+                                    </tr>
+                                    <tr styleCode="Botrule">
+                                       <td styleCode="Lrule Rrule">
+                                          <content styleCode="xmChange">PARI LC<sup>®</sup> Plus</content>
+                                       </td>
+                                       <td styleCode="Rrule" rowspan="2">PARI PRONEB<sup>®</sup> or legally marketed compressor of identical pressure and flow rate (maximum 24 psi, 9 LPM).</td>
+                                    </tr>
+                                    <tr styleCode="Botrule">
+                                       <td styleCode="Lrule Rrule">
+                                          <content styleCode="xmChange">PARI BABY™<footnote>
+                                                <content styleCode="xmChange">Patients who are unable to inhale or exhale orally throughout the entire nebulization period may use the PARI BABY™ nebulizer.</content>
+                                             </footnote>
+                                          </content>
+                                       </td>
+                                    </tr>
+                                    <tr styleCode="Botrule">
+                                       <td styleCode="Lrule Rrule">
+                                          <content styleCode="xmChange">Durable Sidestream<sup>®</sup>
+                                          </content>
+                                       </td>
+                                       <td styleCode="Rrule">MOBILAIRE™, Porta-NEB<sup>®</sup> or legally marketed compressor of identical pressure and flow rate (maximum 45 psi, 7 LPM).  </td>
+                                    </tr>
+                                    <tr styleCode="Botrule">
+                                       <td styleCode="Lrule Rrule" colspan="2" align="center">
+                                          <content styleCode="xmChange">
+                                             <content styleCode="bold">Vibrating Mesh Nebulizers<footnoteRef IDREF="t1f1"/>
+                                             </content>
+                                          </content>
+                                       </td>
+                                    </tr>
+                                    <tr styleCode="Botrule">
+                                       <td colspan="2" styleCode="Lrule Rrule">
+                                          <content styleCode="xmChange">eRapid<sup>®</sup> Nebulizer System<footnote>Consisting of the eRapid<sup>®</sup> Nebulizer Handset with eBase™ Controller. Avoid use in patients who need a mask to inhale PULMOZYME.</footnote>
+                                          </content>
+                                       </td>
+                                    </tr>
+                                    <tr styleCode="Botrule">
+                                       <td styleCode="Lrule Rrule" colspan="2">
+                                          <content styleCode="xmChange">Innospire Go</content>
+                                       </td>
+                                    </tr>
+                                    <tr styleCode="Botrule">
+                                       <td styleCode="Lrule Rrule" colspan="2">
+                                          <content styleCode="xmChange">Pulmogine Vibrating Mesh Nebulizer</content>
+                                       </td>
+                                    </tr>
+                                    <tr styleCode="Botrule">
+                                       <td styleCode="Lrule Rrule" colspan="2">
+                                          <content styleCode="xmChange">AireHealth Nebulizer™</content>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td styleCode="Lrule Rrule" colspan="2">
+                                          <content styleCode="xmChange">Intelligent Mesh Nebulizer</content>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </text>
+                           <effectiveTime value="20240216"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section>
+                           <id root="8aad09a3-1cc3-4aea-bc83-2e91eef6bf61"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">PULMOZYME Information</content>
+                              </paragraph>
+                              <list listType="unordered" styleCode="disc">
+                                 <item>Each PULMOZYME ampule should be squeezed prior to use in order to check for leaks.  Discard ampules if the solution is cloudy or discolored.  Once opened, the entire contents of the ampule must be used or discarded.</item>
+                                 <item>Do not dilute or mix PULMOZYME with other drugs in the nebulizer.  Mixing of PULMOZYME with other drugs could lead to adverse physicochemical and/or functional changes in PULMOZYME or the admixed compound.</item>
+                              </list>
+                           </text>
+                           <effectiveTime value="20240216"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S3">
+               <id root="cf14a6ff-9594-4935-b015-ab9d1fa698b1"/>
+               <code code="43678-2" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE FORMS &amp; STRENGTHS SECTION"/>
+               <title>3 DOSAGE FORMS AND STRENGTHS</title>
+               <text>
+                  <paragraph>Inhalation solution: 2.5 mg/2.5 mL (1 mg/mL) clear, colorless solution in single-dose ampules.</paragraph>
+               </text>
+               <effectiveTime value="20240216"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Inhalation solution: 2.5 mg/2.5 mL (1 mg/mL) clear, colorless solution in single-dose ampules (<linkHtml href="#S3">3</linkHtml>)</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="S4">
+               <id root="3692223a-7b7b-45b6-8735-544cd07488d0"/>
+               <code code="34070-3" codeSystem="2.16.840.1.113883.6.1" displayName="CONTRAINDICATIONS SECTION"/>
+               <title>4 CONTRAINDICATIONS</title>
+               <text>
+                  <paragraph>PULMOZYME is contraindicated in patients with known hypersensitivity to dornase alfa, Chinese Hamster Ovary cell products, or any component of the product.</paragraph>
+               </text>
+               <effectiveTime value="20240216"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>PULMOZYME is contraindicated in patients with known hypersensitivity to dornase alfa, Chinese Hamster Ovary cell products, or any component of the product. (<linkHtml href="#S4">4</linkHtml>)</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="S5">
+               <id root="7c836f4b-a556-4326-9be0-9581c120f1fb"/>
+               <code code="43685-7" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS AND PRECAUTIONS SECTION"/>
+               <title>5 WARNINGS AND PRECAUTIONS</title>
+               <text>
+                  <paragraph>None.</paragraph>
+               </text>
+               <effectiveTime value="20240216"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>None. (<linkHtml href="#S5">5</linkHtml>)</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="S6">
+               <id root="7b6190fe-5ebc-4683-9fa8-a8ca2d7ccd96"/>
+               <code code="34084-4" codeSystem="2.16.840.1.113883.6.1" displayName="ADVERSE REACTIONS SECTION"/>
+               <title>6 ADVERSE REACTIONS</title>
+               <effectiveTime value="20240216"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>The most common adverse reactions (occurring in ≥3% of patients treated with PULMOZYME over placebo) seen in clinical trials in CF patients were: voice alteration, pharyngitis, rash, laryngitis, chest pain, conjunctivitis, rhinitis, decrease in FVC of ≥10%, fever, and dyspnea. (<linkHtml href="#S6.1">6.1</linkHtml>)</paragraph>
+                        <br/>
+                        <paragraph>
+                           <content styleCode="bold">To report SUSPECTED ADVERSE REACTIONS, contact Genentech at 1-888-835-2555 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch.</content>
+                        </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="S6.1">
+                     <id root="e52f5f2a-e29f-4225-8854-8dec8abd8f05"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>6.1              Clinical Trials Experience</title>
+                     <text>
+                        <paragraph>Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice.</paragraph>
+                        <paragraph>The data described below reflect exposure to PULMOZYME in 902 patients, with exposures ranging from 2 weeks of daily administration up to once or twice daily administration for six months. PULMOZYME was studied in both placebo-controlled (n=804) and uncontrolled trials (n=98). The population of patients in placebo-controlled trials was with FVC ≥ 40% of predicted (n=643) or with more advanced pulmonary disease, FVC &lt; 40% of predicted (n=161). The population in the uncontrolled trial included 98 pediatric patients with CF ranging from 3 months to 10 years of age. More than half of the patients received PULMOZYME 2.5 mg by inhalation once a day (n=581), while the rest of patients (n=321) received PULMOZYME 2.5 mg by inhalation twice a day.</paragraph>
+                     </text>
+                     <effectiveTime value="20240216"/>
+                     <component>
+                        <section>
+                           <id root="d13c0541-fc13-4a9a-86c5-73207396b92f"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Placebo-Controlled Trials</content>
+                              </paragraph>
+                           </text>
+                           <effectiveTime value="20240216"/>
+                           <component>
+                              <section>
+                                 <id root="1deb0565-1a1c-43c5-a0d0-cef92108c852"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <text>
+                                    <paragraph>
+                                       <content styleCode="underline">Trial 1</content>: Trial 1 was a randomized, placebo-controlled clinical trial in patients with FVC ≥ 40% of predicted. In this trial, over 600 patients received PULMOZYME once or twice daily for six months. The most common adverse reaction (risk difference ≥5%) was voice alteration. The proportion of most adverse events was similar for patients on PULMOZYME and on placebo, probably reflecting the sequelae of the underlying lung disease. In most cases reactions that were increased were mild, transient in nature, and did not require alterations in dosing. Few patients experienced adverse reactions resulting in permanent discontinuation from PULMOZYME, and the proportion of discontinuations were similar for placebo (2%) and PULMOZYME (3%). Adverse reactions occurring in a higher proportion (greater than 3%) of PULMOZYME treated patients than in placebo-treated patients are listed in <linkHtml href="#t2">Table 2</linkHtml>.</paragraph>
+                                 </text>
+                                 <effectiveTime value="20240216"/>
+                              </section>
+                           </component>
+                           <component>
+                              <section>
+                                 <id root="328f40a0-0f8f-4549-afd4-676388dc61d5"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <text>
+                                    <paragraph>
+                                       <content styleCode="underline">Trial 2</content>: Trial 2 was a randomized, placebo-controlled trial in patients with more advanced pulmonary disease (FVC &lt; 40% of predicted) who were treated for 12 weeks. In this trial, the safety profile of PULMOZYME was similar to that reported in patients with less advanced pulmonary disease (FVC ≥ 40% of predicted). Adverse reactions that were reported in this trial with a higher proportion (greater than 3%) in the PULMOZYME treated patients are listed in <linkHtml href="#t2">Table 2</linkHtml>.</paragraph>
+                                    <table width="90%" ID="t2">
+                                       <caption>Table 2. Adverse Reactions Increased 3% or More in PULMOZYME Treated Patients Over Placebo in CF Clinical Trials</caption>
+                                       <col width="25%" align="left" valign="middle"/>
+                                       <col width="15%" align="center" valign="middle"/>
+                                       <col width="15%" align="center" valign="middle"/>
+                                       <col width="15%" align="center" valign="middle"/>
+                                       <col width="15%" align="center" valign="middle"/>
+                                       <col width="15%" align="center" valign="middle"/>
+                                       <thead>
+                                          <tr styleCode="Botrule" valign="bottom">
+                                             <th styleCode="Lrule Rrule" rowspan="2" align="center">Adverse Reactions<br/>(of any severity or seriousness)</th>
+                                             <th styleCode="Rrule" colspan="3">Trial 1<br/>CF Patients with FVC  ≥ 40% of predicted treated for 24 weeks</th>
+                                             <th styleCode="Rrule" colspan="2">Trial 2<br/>CF Patients with FVC  &lt;40% of predicted treated for 12 weeks</th>
+                                          </tr>
+                                          <tr valign="bottom">
+                                             <th align="center">Placebo<br/>n=325</th>
+                                             <th>Pulmozyme QD<br/>n=322</th>
+                                             <th styleCode="Rrule">Pulmozyme BID<br/>n=321</th>
+                                             <th>Placebo<br/>n=159</th>
+                                             <th styleCode="Rrule">Pulmozyme QD<br/>n=161</th>
+                                          </tr>
+                                       </thead>
+                                       <tbody>
+                                          <tr>
+                                             <td styleCode="Lrule Rrule">Voice alteration</td>
+                                             <td>7%</td>
+                                             <td>12%</td>
+                                             <td styleCode="Rrule">16%</td>
+                                             <td>6%</td>
+                                             <td styleCode="Rrule">18%</td>
+                                          </tr>
+                                          <tr>
+                                             <td styleCode="Lrule Rrule">Pharyngitis</td>
+                                             <td>33%</td>
+                                             <td>36%</td>
+                                             <td styleCode="Rrule">40%</td>
+                                             <td>28%</td>
+                                             <td styleCode="Rrule">32%</td>
+                                          </tr>
+                                          <tr>
+                                             <td styleCode="Lrule Rrule">Rash</td>
+                                             <td>7%</td>
+                                             <td>10%</td>
+                                             <td styleCode="Rrule">12%</td>
+                                             <td>1%</td>
+                                             <td styleCode="Rrule">3%</td>
+                                          </tr>
+                                          <tr>
+                                             <td styleCode="Lrule Rrule">Laryngitis</td>
+                                             <td>1%</td>
+                                             <td>3%</td>
+                                             <td styleCode="Rrule">4%</td>
+                                             <td>1%</td>
+                                             <td styleCode="Rrule">3%</td>
+                                          </tr>
+                                          <tr>
+                                             <td styleCode="Lrule Rrule">Chest Pain</td>
+                                             <td>16%</td>
+                                             <td>18%</td>
+                                             <td styleCode="Rrule">21%</td>
+                                             <td>23%</td>
+                                             <td styleCode="Rrule">25%</td>
+                                          </tr>
+                                          <tr styleCode="Botrule">
+                                             <td styleCode="Lrule Rrule">Conjunctivitis</td>
+                                             <td>2%</td>
+                                             <td>4%</td>
+                                             <td styleCode="Rrule">5%</td>
+                                             <td>0%</td>
+                                             <td styleCode="Rrule">1%</td>
+                                          </tr>
+                                          <tr>
+                                             <td styleCode="Lrule Rrule">Rhinitis</td>
+                                             <td styleCode="Rrule Botrule" colspan="3" rowspan="4">Differences were less than 3%</td>
+                                             <td>24%</td>
+                                             <td styleCode="Rrule">30%</td>
+                                          </tr>
+                                          <tr>
+                                             <td styleCode="Lrule Rrule">FVC decrease of  ≥ 10% of predicted<footnote>Single measurement only, does not reflect overall FVC changes.</footnote>
+                                             </td>
+                                             <td valign="top">17%</td>
+                                             <td styleCode="Rrule" valign="top">22%</td>
+                                          </tr>
+                                          <tr>
+                                             <td styleCode="Lrule Rrule">Fever</td>
+                                             <td>28%</td>
+                                             <td styleCode="Rrule">32%</td>
+                                          </tr>
+                                          <tr styleCode="Botrule">
+                                             <td styleCode="Lrule Rrule">Dyspepsia</td>
+                                             <td>0%</td>
+                                             <td styleCode="Rrule">3%</td>
+                                          </tr>
+                                          <tr>
+                                             <td styleCode="Lrule Rrule">Dyspnea (when reported as serious)</td>
+                                             <td styleCode="Rrule" colspan="3">Differences were less than 3%</td>
+                                             <td>12%<footnote ID="ft2.1">Total reports of dyspnea (regardless of severity or seriousness) had a difference of less than 3% in Trial 2.</footnote>
+                                             </td>
+                                             <td styleCode="Rrule">17%<footnoteRef IDREF="ft2.1"/>
+                                             </td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <paragraph>Mortality rates observed in controlled trials were similar for the placebo and PULMOZYME treated patients. Causes of death were consistent with progression of cystic fibrosis and included apnea, cardiac arrest, cardiopulmonary arrest, cor pulmonale, heart failure, massive hemoptysis, pneumonia, pneumothorax, and respiratory failure.</paragraph>
+                                 </text>
+                                 <effectiveTime value="20240216"/>
+                              </section>
+                           </component>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="29d84e4c-2f49-4123-aaed-51ca3ea4c60e"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Uncontrolled Trial</content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20240216"/>
+                     <component>
+                        <section>
+                           <id root="c2d94804-a956-4953-8c13-faf905a1b064"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Trial 3</content>: The safety of PULMOZYME, 2.5 mg by inhalation, was studied with 2 weeks of daily administration in 98 pediatric patients with cystic fibrosis 3 months to 10 years of age (65 aged 3 months to &lt; 5 years, 33 aged 5 to ≤ 10 years). The PARI BABY™ reusable nebulizer (which uses a facemask instead of a mouthpiece) was utilized in patients unable to demonstrate the ability to inhale or exhale orally throughout the entire treatment period (54/65, 83% of the younger and 2/33, 6% of the older patients). Overall, the nature of adverse reactions was similar to that seen in the placebo-controlled trials. The number of patients reporting cough was higher in the younger age group as compared to the older age group (29/65, 45% compared to 10/33, 30%) as was the number reporting moderate to severe cough (24/65, 37% as compared to 6/33, 18%). The number of patients reporting rhinitis was higher in the younger age group as compared to the older age group (23/65, 35% compared to 9/33, 27%) as was the number reporting rash (4/65, 6% as compared to 0/33).</paragraph>
+                           </text>
+                           <effectiveTime value="20240216"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="db2d7bb1-bf50-4f14-8438-2dfe95d216a1"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Allergic Reactions</content>
+                        </paragraph>
+                        <paragraph>There have been no reports of anaphylaxis attributed to the administration of PULMOZYME. Urticaria, mild to moderate, and mild skin rash have been observed and have been transient. Within all of the studies, a small percentage (average of 2-4%) of patients treated with PULMOZYME developed serum antibodies to PULMOZYME. None of these patients developed anaphylaxis, and the clinical significance of serum antibodies to PULMOZYME is unknown.</paragraph>
+                     </text>
+                     <effectiveTime value="20240216"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S7">
+               <id root="6eb0df9a-2b20-4da8-b156-4adfcbc64df5"/>
+               <code code="34073-7" codeSystem="2.16.840.1.113883.6.1" displayName="DRUG INTERACTIONS SECTION"/>
+               <title>7 DRUG INTERACTIONS</title>
+               <text>
+                  <paragraph>Available data indicate there are no clinically important drug-drug interactions with PULMOZYME.</paragraph>
+               </text>
+               <effectiveTime value="20240216"/>
+            </section>
+         </component>
+         <component>
+            <section ID="S8">
+               <id root="6bdfcdd9-95b6-4064-b184-1e060df0d041"/>
+               <code code="43684-0" codeSystem="2.16.840.1.113883.6.1" displayName="USE IN SPECIFIC POPULATIONS SECTION"/>
+               <title>8 USE IN SPECIFIC POPULATIONS</title>
+               <effectiveTime value="20240216"/>
+               <component>
+                  <section ID="S8.1">
+                     <id root="9ebb847d-3f05-48d6-a893-486e771808df"/>
+                     <code code="42228-7" codeSystem="2.16.840.1.113883.6.1" displayName="PREGNANCY SECTION"/>
+                     <title>8.1 Pregnancy</title>
+                     <effectiveTime value="20240216"/>
+                     <component>
+                        <section>
+                           <id root="f66f34ad-2fd6-4b5d-8930-18a9d6594fbf"/>
+                           <code code="34077-8" codeSystem="2.16.840.1.113883.6.1" displayName="TERATOGENIC EFFECTS SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Risk Summary</content>
+                              </paragraph>
+                              <paragraph>There are no adequate and well-controlled studies with PULMOZYME in pregnant women. However, animal reproduction studies have been conducted with dornase alfa. In these studies, no evidence of fetal harm was observed in rats and rabbits at doses of dornase alfa up to approximately 600 times the maximum recommended human dose (MRHD).</paragraph>
+                              <paragraph>The background risk of major birth defects and miscarriage for the cystic fibrosis population is unknown.  However, the background risk in the U.S. general population of major birth defects is 2-4% and of miscarriage is 15-20% of clinically recognized pregnancies. </paragraph>
+                           </text>
+                           <effectiveTime value="20240216"/>
+                           <component>
+                              <section>
+                                 <id root="7a43387f-5ba1-42b2-b326-fa2bb9f59a68"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <text>
+                                    <paragraph>
+                                       <content styleCode="underline">Data</content>
+                                    </paragraph>
+                                 </text>
+                                 <effectiveTime value="20240216"/>
+                                 <component>
+                                    <section>
+                                       <id root="952023c5-38ba-4f99-85f2-5ce546c8696a"/>
+                                       <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                       <text>
+                                          <paragraph>
+                                             <content styleCode="italics">Animal Data</content>
+                                          </paragraph>
+                                          <paragraph>Reproductive studies have been performed in rats and rabbits at intravenous doses of dornase alfa up to 10 mg/kg/day (approximately 600 times the MRHD in adults). In a combined embryo-fetal development and pre- and post-natal development study, no evidence of maternal toxicity, embryotoxicity, or teratogenicity was observed when dornase alfa was administered to dams throughout organogenesis (Gestation days 6 to 17). Dornase alfa did not elicit adverse effects on fetal or neonatal growth when administered to dams throughout most of gestation and delivery (Gestation days 6 to 25) and nursing (Post-partum days 6 to 21).</paragraph>
+                                          <paragraph>A pharmacokinetic study in Cynomolgus monkeys found no detectable levels of dornase alfa in fetal blood or amniotic fluid on gestation day 150 (end of gestation) from mothers that were administered an intravenous bolus dose (0.1 mg/kg) followed by an intravenous infusion dose (0.080 mg/kg) over a 6-hour period during pregnancy.</paragraph>
+                                       </text>
+                                       <effectiveTime value="20240216"/>
+                                    </section>
+                                 </component>
+                              </section>
+                           </component>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S8.2">
+                     <id root="cf44a6ea-0217-40a7-a06b-1d349d91fd79"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>8.2 Lactation</title>
+                     <effectiveTime value="20240216"/>
+                     <component>
+                        <section>
+                           <id root="bfd12092-e828-4997-9d52-cea9d8ab9949"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Risk Summary</content>
+                              </paragraph>
+                              <paragraph>It is not known whether PULMOZYME is present in human milk. In a pharmacokinetic study in Cynomolgus monkeys, levels of dornase alfa detected in milk were less than 0.1% of the maternal serum concentration at 24 hours after dosing [intravenous bolus dose (0.1 mg/kg) of dornase alfa followed by an intravenous infusion (0.080 mg/kg/hr) over a 6-hour period] on post-partum day 14. The developmental and health benefits of breastfeeding should be considered along with the mother's clinical need for PULMOZYME and any potential adverse effects on the breastfed child from PULMOZYME or from the underlying maternal condition.</paragraph>
+                           </text>
+                           <effectiveTime value="20240216"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S8.4">
+                     <id root="eaaf3897-f26e-4e3e-a71d-315d67165847"/>
+                     <code code="34081-0" codeSystem="2.16.840.1.113883.6.1" displayName="PEDIATRIC USE SECTION"/>
+                     <title>8.4 Pediatric Use</title>
+                     <text>
+                        <paragraph>The safety and effectiveness of PULMOZYME in conjunction with standard therapies for cystic fibrosis have been established in pediatric patients. Use of PULMOZYME in pediatric patients is supported by evidence in the following age groups:</paragraph>
+                        <list>
+                           <item>
+                              <content styleCode="underline">Patients 5 to 17 years of age:</content> Use of PULMOZYME in patients 5 to 17 years of age is supported by evidence from a randomized, placebo-controlled trial of 303 of clinically stable cystic fibrosis patients 5 to 17 years of age who received PULMOZYME <content styleCode="italics">[see <linkHtml href="#S14">Clinical Studies (14)</linkHtml>].</content>
+                           </item>
+                           <item>
+                              <content styleCode="underline">Patients less than 5 years</content>: Use of PULMOZYME in patients less than 5 years of age is supported by extrapolation of efficacy data in patients 5 years of age and older with additional safety data in 65 pediatric patients aged 3 months to less than 5 years who received PULMOZYME 2.5 mg daily by inhalation for 2 weeks <content styleCode="italics">[see <linkHtml href="#S6.1">Adverse Reactions (6.1)</linkHtml> and <linkHtml href="#S14">Clinical Studies (14)</linkHtml>]</content>.  </item>
+                        </list>
+                     </text>
+                     <effectiveTime value="20240216"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S8.5">
+                     <id root="ceebb0dd-5ac0-4d30-b9c3-ebc09d451913"/>
+                     <code code="34082-8" codeSystem="2.16.840.1.113883.6.1" displayName="GERIATRIC USE SECTION"/>
+                     <title>8.5 Geriatric Use</title>
+                     <text>
+                        <paragraph>Cystic fibrosis is primarily a disease of children and young adults. Clinical studies of PULMOZYME did not include sufficient numbers of subjects aged 65 or older to determine whether they respond differently from younger subjects.</paragraph>
+                     </text>
+                     <effectiveTime value="20240216"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S11">
+               <id root="4bbe5daa-edf2-4884-8b00-bc53d71f7c25"/>
+               <code code="34089-3" codeSystem="2.16.840.1.113883.6.1" displayName="DESCRIPTION SECTION"/>
+               <title>11 DESCRIPTION</title>
+               <text>
+                  <paragraph>Dornase alfa is a recombinant human deoxyribonuclease I (rhDNase) an enzyme which selectively cleaves DNA. The protein is produced by genetically engineered Chinese Hamster Ovary (CHO) cells containing DNA encoding for the native human protein, deoxyribonuclease I (DNase). The product is purified by column chromatography and tangential flow filtration. The purified glycoprotein contains 260 amino acids with an approximate molecular weight of 37,000 daltons. The primary amino acid sequence is identical to that of the native human enzyme.</paragraph>
+                  <paragraph>PULMOZYME (dornase alfa) inhalation solution is administered by inhalation of an aerosol mist produced by a compressed air driven nebulizer or a recommended nebulizer system <content styleCode="italics">[see <linkHtml href="#S14">Clinical Studies (14)</linkHtml> and <linkHtml href="#S2.2">Dosage and Administration (2.2)</linkHtml>]</content>. PULMOZYME is a sterile, clear, colorless, highly purified solution in single-dose ampules. Each ampule delivers 2.5 mL of the solution to the nebulizer bowl. Each mL of aqueous solution contains 1 mg dornase alfa, calcium chloride dihydrate (0.15 mg) and sodium chloride (8.77 mg). The solution contains no preservative. The nominal pH of the solution is 6.3.</paragraph>
+               </text>
+               <effectiveTime value="20240216"/>
+            </section>
+         </component>
+         <component>
+            <section ID="S12">
+               <id root="c67c3c8c-3fe6-4ead-9716-f33b3e076f8f"/>
+               <code code="34090-1" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+               <title>12 CLINICAL PHARMACOLOGY</title>
+               <effectiveTime value="20240216"/>
+               <component>
+                  <section ID="S12.1">
+                     <id root="787fd713-8e42-4b1b-95cf-5c222d655e46"/>
+                     <code code="43679-0" codeSystem="2.16.840.1.113883.6.1" displayName="MECHANISM OF ACTION SECTION"/>
+                     <title>12.1 Mechanism of Action</title>
+                     <text>
+                        <paragraph>PULMOZYME is recombinant human deoxyribonuclease I (rhDNase), an enzyme which selectively cleaves DNA. In preclinical <content styleCode="italics">in vitro</content> studies, PULMOZYME hydrolyzes the DNA in sputum of CF patients and reduces sputum viscoelasticity. In CF patients, retention of viscous purulent secretions in the airways contributes both to reduced pulmonary function and to exacerbations of infection. Purulent pulmonary secretions contain very high concentrations of extracellular DNA released by degenerating leukocytes that accumulate in response to infection.</paragraph>
+                     </text>
+                     <effectiveTime value="20240216"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S12.3">
+                     <id root="558769cd-4df1-45e4-bc85-4a51731d16ec"/>
+                     <code code="43682-4" codeSystem="2.16.840.1.113883.6.1" displayName="PHARMACOKINETICS SECTION"/>
+                     <title>12.3 Pharmacokinetics</title>
+                     <text>
+                        <paragraph>When 2.5 mg PULMOZYME was administered by inhalation to eighteen CF patients, mean sputum concentrations of 3 µg/mL DNase were measurable within 15 minutes. Mean sputum concentrations declined to an average of 0.6 µg/mL two hours following inhalation. Inhalation of up to 10 mg TID of PULMOZYME by 4 CF patients for six consecutive days, did not result in a significant elevation of serum concentrations of DNase above normal endogenous levels. After administration of up to 2.5 mg of PULMOZYME twice daily for six months to 321 CF patients, no accumulation of serum DNase was noted. Dornase alfa is expected to be metabolized by proteases present in biological fluids. A human intravenous dose study suggested an elimination half-life of 3-4 hours for dornase alfa.</paragraph>
+                        <paragraph>PULMOZYME, 2.5 mg by inhalation, was administered daily to 98 patients aged 3 months to ≤ 10 years, and bronchoalveolar lavage (BAL) fluid was obtained within 90 minutes of the first dose. BAL DNase concentrations were detectable in all patients but showed a broad range, from 0.007 to 1.8 µg/mL. Over an average of 14 days of exposure, serum DNase concentrations (mean ± s.d.) increased by 1.1 ± 1.6 ng/mL for the 3 months to  &lt; 5 year age group and by 0.8 ± 1.2 ng/mL for the 5 to ≤ 10 year age group. The relationship between BAL or serum DNase concentration and adverse experiences and clinical outcomes is unknown.</paragraph>
+                     </text>
+                     <effectiveTime value="20240216"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S13">
+               <id root="0b1d4073-fe55-4222-84b9-d2fe72c5b468"/>
+               <code code="43680-8" codeSystem="2.16.840.1.113883.6.1" displayName="NONCLINICAL TOXICOLOGY SECTION"/>
+               <title>13 NONCLINICAL TOXICOLOGY</title>
+               <effectiveTime value="20240216"/>
+               <component>
+                  <section ID="S13.1">
+                     <id root="31205625-8e45-4aa8-b5d2-88277916d4f6"/>
+                     <code code="34083-6" codeSystem="2.16.840.1.113883.6.1" displayName="CARCINOGENESIS &amp; MUTAGENESIS &amp; IMPAIRMENT OF FERTILITY SECTION"/>
+                     <title>13.1            Carcinogenesis, Mutagenesis, Impairment of Fertility</title>
+                     <text>
+                        <paragraph>PULMOZYME produced no treatment-related increases in the incidence of tumors in a lifetime study in Sprague Dawley rats that were administered inhaled doses up to 0.246 mg/kg/day (approximately 30 times the MRHD in adults). There was no increase in the development of benign or malignant neoplasms and no occurrence of unusual tumor types in rats after lifetime exposure.</paragraph>
+                        <paragraph>PULMOZYME tested negative in the following genotoxicity assays: the <content styleCode="italics">in vitro</content> Ames assay, <content styleCode="italics">in vitro</content> mouse lymphoma assay, and <content styleCode="italics">in vivo</content> mouse bone marrow micronucleus assay. No evidence of impairment of fertility was observed in male and female rats that received intravenous doses up to 10 mg/kg/day (approximately 600 times the MRHD in adults).</paragraph>
+                     </text>
+                     <effectiveTime value="20240216"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S14">
+               <id root="ef756950-f9ab-46b3-9ca6-f1c59fafab1b"/>
+               <code code="34092-7" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL STUDIES SECTION"/>
+               <title>14 CLINICAL STUDIES</title>
+               <effectiveTime value="20240216"/>
+               <component>
+                  <section>
+                     <id root="bd8415de-82cc-4231-ba5c-69712fe2c187"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Trial in CF Patients with FVC ≥40% of Predicted</content>
+                        </paragraph>
+                        <paragraph>PULMOZYME has been evaluated in a randomized, placebo-controlled trial of clinically stable cystic fibrosis patients, 5 years of age and older, with baseline forced vital capacity (FVC) greater than or equal to 40% of predicted and receiving standard therapies for cystic fibrosis. Patients were treated with placebo (325 patients), 2.5 mg of PULMOZYME once a day (322 patients), or 2.5 mg of PULMOZYME twice a day (321 patients) for six months administered via a Hudson T Up-draft II<sup>®</sup> nebulizer with a Pulmo-Aide<sup>®</sup> compressor.</paragraph>
+                        <paragraph>Both doses of PULMOZYME resulted in significant reductions in the number of patients experiencing respiratory tract infections requiring use of parenteral antibiotics compared with the placebo group. Administration of PULMOZYME reduced the relative risk of developing a respiratory tract infection by 27% and 29% for the 2.5 mg daily dose and the 2.5 mg twice daily dose, respectively (see <linkHtml href="#t3">Table 3</linkHtml>). The data suggest that the effects of PULMOZYME on respiratory tract infections in older patients ( &gt; 21 years) may be smaller than in younger patients, and that twice daily dosing may be required in the older patients. Patients with baseline FVC &gt; 85% may also benefit from twice a day dosing (see <linkHtml href="#t3">Table 3</linkHtml>). The reduced risk of respiratory infection observed in PULMOZYME treated patients did not directly correlate with improvement in FEV<sub>1</sub> during the initial two weeks of therapy.</paragraph>
+                        <paragraph>Within 8 days of the start of treatment with PULMOZYME, mean FEV<sub>1</sub> increased 7.9% in those treated once a day and 9.0% in those treated twice a day compared to the baseline values. The overall mean FEV<sub>1</sub> during long-term therapy increased 5.8% from baseline at the 2.5 mg daily dose level and 5.6% from baseline at the 2.5 mg twice daily dose level. Placebo recipients did not show significant mean changes in pulmonary function testing (see <linkHtml href="#f1">Figure 1</linkHtml>).</paragraph>
+                        <paragraph>For patients 5 years of age or older, with baseline FVC greater than or equal to 40%, administration of PULMOZYME decreased the incidence of occurrence of first respiratory tract infection requiring parenteral antibiotics, and improved mean FEV<sub>1</sub>, regardless of age or baseline FVC.</paragraph>
+                        <table width="75%" ID="t3">
+                           <caption>Table 3. Incidence of First Respiratory Tract Infection Requiring Parenteral Antibiotics in Patients with FVC ≥40% of Predicted</caption>
+                           <col width="40%" align="left" valign="top"/>
+                           <col width="20%" align="center" valign="top"/>
+                           <col width="20%" align="center" valign="top"/>
+                           <col width="20%" align="center" valign="top"/>
+                           <tbody>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule"/>
+                                 <td>
+                                    <content styleCode="bold">Placebo<br/>N=325</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">2.5 mg QD<br/>N=322</content>
+                                 </td>
+                                 <td styleCode="Rrule">
+                                    <content styleCode="bold">2.5 mg BID<br/>N=321</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule">
+                                    <content styleCode="underline">Percent of Patients Infected</content>
+                                 </td>
+                                 <td>43%</td>
+                                 <td>34%</td>
+                                 <td styleCode="Rrule">33%</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule">Relative Risk (vs placebo)</td>
+                                 <td/>
+                                 <td>0.73</td>
+                                 <td styleCode="Rrule">0.71</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule">p-value (vs placebo)</td>
+                                 <td/>
+                                 <td>0.015</td>
+                                 <td styleCode="Rrule">0.007</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule">
+                                    <content styleCode="underline">Subgroup by Age and Baseline FVC</content>
+                                 </td>
+                                 <td>Placebo<br/>% (N)</td>
+                                 <td>2.5 mg QD<br/>% (N)</td>
+                                 <td styleCode="Rrule">2.5 mg BID<br/>% (N)</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule">
+                                    <content styleCode="underline">Age</content>
+                                 </td>
+                                 <td/>
+                                 <td/>
+                                 <td styleCode="Rrule"/>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule">5-20 years</td>
+                                 <td>42% (201)</td>
+                                 <td>25% (199)</td>
+                                 <td styleCode="Rrule">28% (184)</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule">21 years and older</td>
+                                 <td>44% (124)</td>
+                                 <td>48% (123)</td>
+                                 <td styleCode="Rrule">39% (137)</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule">
+                                    <content styleCode="underline">Baseline FVC</content>
+                                 </td>
+                                 <td/>
+                                 <td/>
+                                 <td styleCode="Rrule"/>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule">40-85% Predicted</td>
+                                 <td>54% (194)</td>
+                                 <td>41% (201)</td>
+                                 <td styleCode="Rrule">44% (203)</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule">&gt; 85% Predicted</td>
+                                 <td>27% (131)</td>
+                                 <td>21% (121)</td>
+                                 <td styleCode="Rrule">14% (118)</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <table width="100%" styleCode="Noautorules" ID="f1">
+                           <caption>Figure 1. Mean Percent Change from Baseline FEV<sub>1</sub> in Patients with FVC ≥40% of Predicted</caption>
+                           <col width="100%" align="center" valign="top"/>
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <renderMultiMedia referencedObject="MM1"/>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </text>
+                     <effectiveTime value="20240216"/>
+                     <component>
+                        <observationMedia ID="MM1">
+                           <text>Figure 1</text>
+                           <value xsi:type="ED" mediaType="image/jpeg">
+                              <reference value="pulmozyme-01.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="d5441305-07e9-414f-adad-c6db04fd9a13"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Trial in CF Patients with FVC &lt;40% of Predicted</content>
+                        </paragraph>
+                        <paragraph>PULMOZYME has also been evaluated in a second randomized, placebo-controlled trial in clinically stable patients with baseline FVC &lt; 40% of predicted. Patients were enrolled and treated with placebo (162 patients) or PULMOZYME 2.5 mg QD (158 patients) for twelve weeks. In patients who received PULMOZYME, there was an increase in mean change (as percent of baseline) compared to placebo in FEV<sub>1</sub> (9.4% vs. 2.1%, p &lt; 0.001) and in FVC (12.4% vs. 7.3%, p &lt; 0.01). PULMOZYME did not significantly reduce the risk of developing a respiratory tract infection requiring parenteral antibiotics (54% of PULMOZYME patients vs. 55% of placebo patients had experienced a respiratory tract infection by 12 weeks, relative risk = .93, p = 0.62).</paragraph>
+                        <paragraph>The effect of PULMOZYME on exercise tolerance has not been established in adult and pediatric patients.</paragraph>
+                     </text>
+                     <effectiveTime value="20240216"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="ee63e597-3667-441a-a0f9-3ad087591da5"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Other Studies</content>
+                        </paragraph>
+                        <paragraph>Clinical trials have indicated that PULMOZYME therapy can be continued or initiated during an acute respiratory exacerbation.</paragraph>
+                        <paragraph>Short-term dose ranging studies demonstrated that doses in excess of 2.5 mg BID did not provide further improvement in FEV<sub>1</sub>. Patients who have received drug on a cyclical regimen (i.e., administration of PULMOZYME 10 mg BID for 14 days, followed by a 14 day wash out period) showed rapid improvement in FEV<sub>1</sub> with the initiation of each cycle and a return to baseline with each PULMOZYME withdrawal.</paragraph>
+                     </text>
+                     <effectiveTime value="20240216"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S16">
+               <id root="b51b05e4-7305-4549-a8a1-2dbff417d87c"/>
+               <code code="34069-5" codeSystem="2.16.840.1.113883.6.1" displayName="HOW SUPPLIED SECTION"/>
+               <title>16 HOW SUPPLIED/STORAGE AND HANDLING</title>
+               <text>
+                  <paragraph>PULMOZYME (dornase alfa) inhalation solution is a sterile, clear, colorless solution supplied in:</paragraph>
+                  <list listType="unordered">
+                     <item>30 unit cartons containing 5 foil pouches of 6 single-dose ampules. Each 2.5 mL ampule contains 2.5 mg of dornase alfa (1 mg/mL): NDC 50242-100-40.</item>
+                  </list>
+               </text>
+               <effectiveTime value="20240216"/>
+               <component>
+                  <section>
+                     <id root="33152359-7c49-4e14-9b82-9256c99cb357"/>
+                     <code code="44425-7" codeSystem="2.16.840.1.113883.6.1" displayName="STORAGE AND HANDLING SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Storage and Handling</content>
+                        </paragraph>
+                        <paragraph>Store PULMOZYME ampules at a refrigerated temperature between 2°C to 8°C (36°F to 46°F) in their protective foil to protect from light and heat. Once the protective foil pouch is opened, the unused ampules must be kept refrigerated in the protective foil pouch to protect from light and heat. Do not use beyond the expiration date stamped on the ampule. During transport, keep the ampules refrigerated in their protective foil pouch to protect from light and heat. Do not use if the ampules are exposed to room temperature (22°C to 28°C [72°F to 82°F]) for more than a total of 60 hours. Avoid excessive heat and light.</paragraph>
+                     </text>
+                     <effectiveTime value="20240216"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S17">
+               <id root="59f9361d-77fa-4a17-b73e-a055db38ae2c"/>
+               <code code="34076-0" codeSystem="2.16.840.1.113883.6.1" displayName="INFORMATION FOR PATIENTS SECTION"/>
+               <title>17 PATIENT COUNSELING INFORMATION</title>
+               <text>
+                  <paragraph>Advise patients to read the FDA-approved patient labeling (<linkHtml href="#jet">Instructions for Use</linkHtml>).</paragraph>
+               </text>
+               <effectiveTime value="20240216"/>
+               <component>
+                  <section>
+                     <id root="fa0fe6b0-02d3-4bb1-bc98-fdb04cc50950"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Preparation</content>
+                        </paragraph>
+                        <paragraph>Advise patients to squeeze each ampule prior to use in order to check for leaks. The solution should be discarded if it is cloudy or discolored. Once opened, the entire contents of the ampule must be used or discarded <content styleCode="italics">[see <linkHtml href="#S2.2">Dosage and Administration (2.2)</linkHtml>]</content>.</paragraph>
+                     </text>
+                     <effectiveTime value="20240216"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="a12c132a-e545-48cf-9bc5-96a65501bed3"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Drug Incompatibilities</content>
+                        </paragraph>
+                        <paragraph>Instruct patients not to dilute or mix PULMOZYME with other drugs in the nebulizer. Mixing of PULMOZYME with other drugs could lead to adverse physicochemical and/or functional changes in PULMOZYME or the admixed compound <content styleCode="italics">[see <linkHtml href="#S2.2">Dosage and Administration (2.2)</linkHtml>]</content>.</paragraph>
+                     </text>
+                     <effectiveTime value="20240216"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="c9b35261-dd37-4f56-93f7-1451cde80f81"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Storage</content>
+                        </paragraph>
+                        <paragraph>Instruct patients on the proper techniques to store and handle PULMOZYME <content styleCode="italics">[see <linkHtml href="#S16">How Supplied/Storage and Handling (16)</linkHtml>].</content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20240216"/>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <id root="8b588441-82b6-4fb0-8a89-f23476d8d933"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Manufacturer's Instruction Manual</content>
+                        </paragraph>
+                        <paragraph>Instruct patients to read and follow the manufacturer's instruction manual for the proper use and maintenance of the jet nebulizer/compressor system, or the vibrating mesh nebulizer used in PULMOZYME delivery.</paragraph>
+                     </text>
+                     <effectiveTime value="20240216"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="c5736912-297e-4957-971e-b9e46abcab76"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Pulmozyme<sup>®</sup> (dornase alfa)<br/>Inhalation Solution</content>
+                  </paragraph>
+                  <paragraph>Manufactured by:<br/>
+                     <content styleCode="bold">Genentech, Inc.</content>
+                     <br/>A Member of the Roche Group<br/>1 DNA Way<br/>South San Francisco, CA 94080-4990</paragraph>
+                  <paragraph>US License No. 1048</paragraph>
+                  <paragraph>©2024 Genentech, Inc. All rights reserved</paragraph>
+                  <paragraph>©2024 Genentech, Inc.<br/>Pulmozyme<sup>®</sup> is a registered trademark of Genentech, Inc.</paragraph>
+               </text>
+               <effectiveTime value="20240216"/>
+            </section>
+         </component>
+         <component>
+            <section ID="jet">
+               <id root="e991b8a9-ee99-43cf-ac8c-9fdbe464aba9"/>
+               <code code="42230-3" codeSystem="2.16.840.1.113883.6.1" displayName="SPL PATIENT PACKAGE INSERT SECTION"/>
+               <title>INSTRUCTIONS FOR USE</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">PULMOZYME<sup>® </sup>(PULL-muh-zyme)</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">(dornase alfa)</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Inhalation Solution</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">This Instructions for Use contains information on how to use PULMOZYME with Jet Nebulizers and Compressors</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">See the other side of this Instructions for Use for <linkHtml href="#erapid">information on use of Pulmozyme with the recommended vibrating mesh nebulizers</linkHtml>
+                     </content>
+                  </paragraph>
+                  <paragraph>Read and understand this Instructions for Use and the nebulizer manufacturer's instruction manual before you start taking Pulmozyme and each time you get a refill. There may be new information. This information does not take the place of talking to your doctor about your medical condition or your treatment.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">A nebulizer and a compressor are used together to give a dose of Pulmozyme.</content> A nebulizer changes the Pulmozyme liquid medicine into a fine mist you inhale by breathing through a mouthpiece. A compressor gives the nebulizer power and makes the nebulizer work.</paragraph>
+                  <paragraph>Pulmozyme should only be used with the approved nebulizers and appropriate compressors as <content styleCode="bold">recommended below, or with the recommended vibrating mesh nebulizers (see other side of this Instructions for Use). Read and follow the manufacturer's instruction manual.</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Do not use any other inhaled medicines in the nebulizer at the same time. Keep all other inhaled medicine systems completely separate from Pulmozyme.</content>
+                  </paragraph>
+                  <paragraph>Use the mouthpiece or face mask provided with the nebulizer kit.</paragraph>
+                  <paragraph>If your child cannot breathe in or breathe out by mouth, you may use the PARI BABY reusable nebulizer, but you should discuss it with your doctor first. The PARI BABY nebulizer is the same as the PARI LC Plus Jet system, except the mouthpiece is replaced by a tight-fitting face mask connected to an elbow piece.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Follow the steps on this side of the Instructions for Use to give Pulmozyme using the following jet nebulizer systems</content>
+                  </paragraph>
+                  <table width="70%">
+                     <col width="50%" align="right" valign="top"/>
+                     <col width="50%" align="left" valign="top"/>
+                     <thead>
+                        <tr>
+                           <th styleCode="Lrule Rrule" align="center">Jet Nebulizer</th>
+                           <th styleCode="Rrule" align="center">Compressor</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr styleCode="Botrule">
+                           <td styleCode="Lrule Rrule">Hudson T Up-draft II</td>
+                           <td styleCode="Rrule" rowspan="5">A compressor with the following specifications is recommended:<list styleCode="square" listType="unordered">
+                                 <item>Approximate air flow of 3.5 L/min to 12 L/min at approximately 20 psi to 45 psi pressure</item>
+                              </list>
+                           </td>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td styleCode="Lrule Rrule">Marquest Acorn II</td>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td styleCode="Lrule Rrule">PARI LC Plus</td>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td styleCode="Lrule Rrule">PARI BABY</td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Lrule Rrule">Durable Sidestream</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>For additional information on an appropriate compressor to use with Pulmozyme, read the manufacturer's instruction manual for the recommended nebulizer.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Important Information You Need to Know Before Using PULMOZYME</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Read and follow the nebulizer manufacturer's instruction manual for correct use and maintenance:</content>
+                  </paragraph>
+                  <list listType="unordered" styleCode="disc">
+                     <item>to clean the nebulizer before first use and after each use as recommended.</item>
+                     <item>to disinfect the nebulizer parts by using the disinfecting method recommended.</item>
+                     <item>to replace nebulizer parts as recommended.</item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">Supplies you will need to give a dose of Pulmozyme (See <linkHtml href="#fa">Figure A</linkHtml>):</content>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>1  Pulmozyme ampule</item>
+                     <item>Compressor</item>
+                     <item>Nebulizer cup and cap (screw-on or snap-on)</item>
+                     <item>Plastic T (not needed for Sidestream nebulizer or PARI BABY)</item>
+                     <item>Flexible aerosol tube (not needed for Sidestream nebulizer or PARI BABY)</item>
+                     <item>Mouthpiece (clean) or PARI BABY facemask</item>
+                     <item>Long connecting tube</item>
+                     <item>Nose clip (optional, not needed for PARI BABY)</item>
+                  </list>
+                  <renderMultiMedia referencedObject="MM2" ID="fa"/>
+                  <table width="100%" styleCode="Noautorules">
+                     <col width="70%" align="left" valign="top"/>
+                     <col width="30%" align="left" valign="top"/>
+                     <tbody>
+                        <tr styleCode="Botrule">
+                           <td>
+                              <content styleCode="bold">Preparing the jet nebulizer and compressor:<br/>Step 1. Clean a flat table surface and wash your hands.</content>
+                              <list styleCode="Disc" listType="unordered">
+                                 <item>Clean a flat table surface. </item>
+                                 <item>Wash your hands well with soap and water before using the Pulmozyme ampule and nebulizer. This helps prevent infection <content styleCode="bold">(See <linkHtml href="#fb">Figure B</linkHtml>)</content>.</item>
+                              </list>
+                           </td>
+                           <td>
+                              <renderMultiMedia referencedObject="MM3" ID="fb"/>
+                           </td>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td>
+                              <content styleCode="bold">Step 2. Gather the nebulizer and test the compressor.</content>
+                              <list styleCode="Disc" listType="unordered">
+                                 <item>Place the nebulizer parts on a clean, flat table surface within reach.</item>
+                                 <item>Test the compressor by turning it on and putting your finger in front of the "air out" or "air" port to feel air flowing. Turn off the compressor <content styleCode="bold">(See <linkHtml href="#fc">Figure C</linkHtml>)</content>.</item>
+                              </list>
+                           </td>
+                           <td>
+                              <renderMultiMedia referencedObject="MM4" ID="fc"/>
+                           </td>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td>
+                              <content styleCode="bold">Step 3. Gather the Pulmozyme ampule and check the expiration date.</content>
+                              <list styleCode="Disc" listType="unordered">
+                                 <item>Remove <content styleCode="bold">1</content> foil pouch of Pulmozyme from the refrigerator. Open the foil pouch and remove <content styleCode="bold">1</content> ampule of Pulmozyme. Put the remaining ampules back in the foil pouch and return them to the refrigerator. </item>
+                                 <item>Check the expiration (exp.) date printed on the ampule <content styleCode="bold">(See <linkHtml href="#fd">Figure D</linkHtml>)</content>.</item>
+                                 <item>
+                                    <content styleCode="bold">Do not</content> use the Pulmozyme ampule if the expiration date has passed.</item>
+                              </list>
+                           </td>
+                           <td>
+                              <renderMultiMedia referencedObject="MM5" ID="fd"/>
+                           </td>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td>
+                              <content styleCode="bold">Step 4. Check the Pulmozyme ampule.</content>
+                              <list styleCode="Disc" listType="unordered">
+                                 <item>Check the ampule for leaks by turning it upside down and gently squeezing <content styleCode="bold">(See <linkHtml href="#fe">Figure E</linkHtml>)</content>.<br/>
+                                    <content styleCode="bold">Do not</content> use the ampule if it is leaking. Throw it away and get a new one.</item>
+                                 <item>Check the Pulmozyme liquid in the ampule and make sure it is clear and free of particles.</item>
+                                 <item>
+                                    <content styleCode="bold">Do not </content>use Pulmozyme if the liquid is cloudy or discolored. Take the Pulmozyme back to the pharmacy, hospital, or clinic that gave you the medicine.</item>
+                              </list>
+                           </td>
+                           <td>
+                              <renderMultiMedia referencedObject="MM6" ID="fe"/>
+                           </td>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td>
+                              <content styleCode="bold">Step 5. Attach the long connecting tube to the compressor.</content>
+                              <list styleCode="Disc" listType="unordered">
+                                 <item>Attach the long connecting tube to the "air out" or "air" port on the compressor <content styleCode="bold">(See <linkHtml href="#ff">Figure F</linkHtml>)</content>.</item>
+                              </list>
+                           </td>
+                           <td>
+                              <renderMultiMedia referencedObject="MM7" ID="ff"/>
+                           </td>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td>
+                              <content styleCode="bold">Step 6. Attach the mouthpiece.</content>
+                              <list styleCode="Disc" listType="unordered">
+                                 <item>
+                                    <content styleCode="bold">Skip to Step 7 if you use the Sidestream nebulizer or the PARI BABY nebulizer.</content>
+                                 </item>
+                                 <item>Push the mouthpiece into the wider end of the plastic T. Attach the flexible aerosol tube to the other end of the T <content styleCode="bold">(See <linkHtml href="#fg">Figure G</linkHtml>)</content>.</item>
+                              </list>
+                           </td>
+                           <td>
+                              <renderMultiMedia referencedObject="MM8" ID="fg"/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <content styleCode="bold">Step 7. Remove the cap from the cup.</content>
+                              <list styleCode="Disc" listType="unordered">
+                                 <item>Unscrew or unsnap the cap from the nebulizer cup <content styleCode="bold">(See <linkHtml href="#fh">Figure H</linkHtml>)</content>.</item>
+                              </list>
+                           </td>
+                           <td>
+                              <renderMultiMedia referencedObject="MM9" ID="fh"/>
+                           </td>
+                        </tr>
+                        <tr styleCode="Botrule" valign="middle">
+                           <td>
+                              <list styleCode="Disc" listType="unordered">
+                                 <item>Put the nebulizer cup on the table face up and place the cap upside down on a clean surface <content styleCode="bold">(See <linkHtml href="#fi">Figure I</linkHtml>)</content>. </item>
+                              </list>
+                           </td>
+                           <td>
+                              <renderMultiMedia referencedObject="MM10" ID="fi"/>
+                           </td>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td>
+                              <content styleCode="bold">Step 8. Open the Pulmozyme ampule.</content>
+                              <list styleCode="Disc" listType="unordered">
+                                 <item>Hold the tab at the bottom of the Pulmozyme ampule firmly. Twist off the top. <content styleCode="bold">Do not</content> squeeze the body of the ampule <content styleCode="bold">(See <linkHtml href="#fj">Figure J</linkHtml>)</content>.</item>
+                              </list>
+                           </td>
+                           <td>
+                              <renderMultiMedia referencedObject="MM11" ID="fj"/>
+                           </td>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td>
+                              <content styleCode="bold">Step 9. Pour the full Pulmozyme dose into the nebulizer cup.</content>
+                              <list styleCode="Disc" listType="unordered">
+                                 <item>Turn the ampule upside down and squeeze gently to empty the medicine into the nebulizer cup. Keep squeezing until the ampule is empty. It is very important you squeeze all of the medicine out of the ampule <content styleCode="bold">(See <linkHtml href="#fk">Figure K</linkHtml>)</content>.</item>
+                                 <item>Screw or snap the cap onto the nebulizer cup <content styleCode="bold">(See <linkHtml href="#fl">Figure L</linkHtml>)</content>.</item>
+                              </list>
+                           </td>
+                           <td>
+                              <renderMultiMedia referencedObject="MM12" ID="fk"/>
+                              <renderMultiMedia referencedObject="MM13" ID="fl"/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <content styleCode="bold">Step 10. Connect the plastic T.</content>
+                              <list styleCode="Disc" listType="unordered">
+                                 <item>Connect the plastic T to the nebulizer cap <content styleCode="bold">(See <linkHtml href="#fm">Figure M</linkHtml>)</content>.</item>
+                              </list>
+                           </td>
+                           <td>
+                              <renderMultiMedia referencedObject="MM14" ID="fm"/>
+                           </td>
+                        </tr>
+                        <tr valign="middle">
+                           <td>
+                              <list styleCode="Disc" listType="unordered">
+                                 <item>
+                                    <content styleCode="bold">If you are using the Sidestream nebulizer, attach the mouthpiece to the top of the nebulizer (See <linkHtml href="#fn">Figure N</linkHtml>).</content>
+                                 </item>
+                              </list>
+                           </td>
+                           <td>
+                              <renderMultiMedia referencedObject="MM15" ID="fn"/>
+                           </td>
+                        </tr>
+                        <tr styleCode="Botrule" valign="middle">
+                           <td>
+                              <list styleCode="Disc" listType="unordered">
+                                 <item>
+                                    <content styleCode="bold">If you are using the PARI BABY nebulizer, connect the elbow piece and mask to the nebulizer outlet (See <linkHtml href="#fo">Figure O</linkHtml>).</content>
+                                 </item>
+                              </list>
+                           </td>
+                           <td>
+                              <renderMultiMedia referencedObject="MM16" ID="fo"/>
+                           </td>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td>
+                              <content styleCode="bold">Step 11. Attach the long connecting tube to the cup.</content>
+                              <list styleCode="Disc" listType="unordered">
+                                 <item>Connect the open end of the long connecting tube to the port on the bottom of the nebulizer cup by pushing up firmly <content styleCode="bold">(See <linkHtml href="#fp">Figure P</linkHtml>)</content>.</item>
+                              </list>
+                           </td>
+                           <td>
+                              <renderMultiMedia referencedObject="MM17" ID="fp"/>
+                           </td>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td>
+                              <content styleCode="bold">Step 12. Turn on the compressor.</content>
+                              <list styleCode="Disc" listType="unordered">
+                                 <item>Turn on the compressor and check to see that mist is coming out of the nebulizer <content styleCode="bold">(See <linkHtml href="#fq">Figure Q</linkHtml>)</content>.</item>
+                              </list>
+                           </td>
+                           <td>
+                              <renderMultiMedia referencedObject="MM18" ID="fq"/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2">
+                              <content styleCode="bold">Taking your dose of Pulmozyme with a nebulizer:</content>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <content styleCode="bold">Step 13. Breathe through the mouthpiece.</content>
+                              <list styleCode="Disc" listType="unordered">
+                                 <item>
+                                    <content styleCode="bold">Skip to Step 14 if you are using the PARI BABY to give Pulmozyme to your child.</content>
+                                 </item>
+                                 <item>Place the mouthpiece between your teeth and on top of your tongue <content styleCode="bold">(See <linkHtml href="#fr">Figure R</linkHtml>)</content>. </item>
+                                 <item>Breathe slowly in and out through your mouth. <content styleCode="bold">Do not</content> block the airflow with your tongue.</item>
+                                 <item>
+                                    <content styleCode="bold">Do not</content> breathe through your nose. If you have problems breathing only through your mouth, use a nose clip <content styleCode="bold">(See <linkHtml href="#fs">Figure S</linkHtml>)</content>.</item>
+                                 <item>
+                                    <content styleCode="bold">Do not</content> be concerned if liquid droplets form in the long connecting tube during treatment.  When the nebulizer begins spitting, gently tap the nebulizer cup and continue breathing until the nebulizer cup is empty or stops making mist <content styleCode="bold">(See <linkHtml href="#ft">Figure T</linkHtml>)</content>.</item>
+                                 <item>If you need to stop treatment before you are finished, or you begin coughing, turn off the compressor and do not spill any of the medicine.</item>
+                                 <item>To start treatment again, turn on the compressor and continue breathing slowly in and out through your mouth.</item>
+                                 <item>The complete treatment usually takes from <content styleCode="bold">10 to 15</content> minutes for most nebulizers.</item>
+                                 <item>If you are using the Sidestream nebulizer, treatment usually takes from <content styleCode="bold">2 to 6</content> minutes.</item>
+                              </list>
+                           </td>
+                           <td>
+                              <renderMultiMedia referencedObject="MM20" ID="fr"/>
+                              <renderMultiMedia referencedObject="MM21" ID="fs"/>
+                              <renderMultiMedia referencedObject="MM22" ID="ft"/>
+                           </td>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td>
+                              <list styleCode="Disc" listType="unordered">
+                                 <item>It is important to inhale the full dose of Pulmozyme. If you find a leak or feel any moisture coming from the nebulizer during treatment, turn off the compressor and check to make sure the nebulizer cap is sealed correctly before continuing <content styleCode="bold">(See <linkHtml href="#fu">Figure U</linkHtml>)</content>.</item>
+                              </list>
+                           </td>
+                           <td valign="bottom">
+                              <renderMultiMedia referencedObject="MM23" ID="fu"/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2">
+                              <content styleCode="bold">If you are using the PARI BABY nebulizer to give Pulmozyme to your child, follow the instructions below in Step 14. If not, go to Step 15<br/>Step 14. Breathing through the facemask.</content>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <list styleCode="Disc" listType="unordered">
+                                 <item>During the treatment your child may sit, lie down or stand.</item>
+                                 <item>Place the facemask gently but firmly over your child's nose and mouth <content styleCode="bold">(See <linkHtml href="#fv">Figure V</linkHtml>)</content>. </item>
+                                 <item>
+                                    <content styleCode="bold">Make sure there are no air gaps between the mask and your child's face. This will help make sure that your child will get the full dose of Pulmozyme.</content>
+                                 </item>
+                                 <item>It is important that you try to keep the body of the nebulizer upright during the entire treatment <content styleCode="bold">(See <linkHtml href="#fv">Figure V</linkHtml>)</content>. The elbow piece will allow you to  move the mask for a good fit while keeping the nebulizer body upright.</item>
+                              </list>
+                           </td>
+                           <td>
+                              <renderMultiMedia referencedObject="MM24" ID="fv"/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <list styleCode="Disc" listType="unordered">
+                                 <item>When the nebulizer begins "spitting," gently tap the nebulizer cup and continue treatment until the nebulizer is empty or stops making a mist <content styleCode="bold">(See <linkHtml href="#fw">Figure W</linkHtml>)</content>.</item>
+                                 <item>
+                                    <content styleCode="bold">If you need to stop the treatment or your child begins to cough during treatment, turn the compressor off. Do not spill any Pulmozyme.</content>
+                                 </item>
+                                 <item>If you have not removed the mask and you want to begin the treatment again, turn on the compressor.</item>
+                                 <item>If you have removed the mask, repeat the steps above to replace the mask on your child's face and restart the compressor. </item>
+                                 <item>The complete treatment usually takes from <content styleCode="bold">10 to 15</content> minutes.</item>
+                              </list>
+                           </td>
+                           <td>
+                              <renderMultiMedia referencedObject="MM25" ID="fw"/>
+                           </td>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td>
+                              <content styleCode="bold">It is important that your child inhale the full dose of Pulmozyme.</content> If you find a leak or feel moisture coming from the nebulizer during the treatment, turn off the compressor and make sure the nebulizer cap is sealed correctly before starting the compressor again <content styleCode="bold">(See <linkHtml href="#fx">Figure X</linkHtml>)</content>.</td>
+                           <td valign="top">
+                              <renderMultiMedia referencedObject="MM26" ID="fx"/>
+                           </td>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td>
+                              <content styleCode="bold">After your treatment with Pulmozyme:<br/>Step 15. Prepare the nebulizer for cleaning and storage.</content>
+                              <list styleCode="Disc" listType="unordered">
+                                 <item>Turn off the compressor and take apart the nebulizer system. Set aside the flexible aerosol tube and the long connecting tube.<br/>
+                                    <content styleCode="bold">Note:</content> The Sidestream nebulizer does not use a flexible aerosol tube.</item>
+                                 <item>Throw away the Pulmozyme ampule in your household trash.</item>
+                                 <item>Follow the manufacturer's recommendations for care of your nebulizer and compressor.</item>
+                              </list>
+                           </td>
+                           <td/>
+                        </tr>
+                        <tr>
+                           <td>
+                              <content styleCode="bold">How should I store Pulmozyme?</content>
+                              <list styleCode="Disc" listType="unordered">
+                                 <item>
+                                    <content styleCode="bold">Store Pulmozyme ampules at a refrigerated temperature between 36°F to 46°F (2°C to 8°C) in their protective foil pouch to protect from light and heat</content> until you are ready to use them. When the protective foil pouch is opened, the unused ampules must be kept refrigerated in the protective foil pouch to protect from light and heat.</item>
+                                 <item>When traveling, Pulmozyme ampules should be kept refrigerated in their protective foil pouch to protect from light and heat.</item>
+                                 <item>Protect Pulmozyme from excessive heat and light.</item>
+                                 <item>
+                                    <content styleCode="bold">Do not</content> use Pulmozyme if the ampules have been exposed to room temperature 72°F to 82°F (22°C to 28°C) for more than a total of <content styleCode="bold">60</content> hours or if the solution has turned cloudy or discolored.</item>
+                                 <item>
+                                    <content styleCode="bold">Do not</content> use Pulmozyme past the expiration date printed on the ampule.</item>
+                              </list>
+                           </td>
+                           <td/>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>
+                     <content styleCode="bold">Genentech, Inc.</content>
+                     <br/>A Member of the Roche Group<br/>1 DNA Way<br/>South San Francisco, CA 94080-4990<br/>US License No. 1048</paragraph>
+                  <paragraph>This Instructions for Use has been approved by the U.S. Food and Drug Administration.</paragraph>
+                  <paragraph>Revised: 02/2024</paragraph>
+               </text>
+               <effectiveTime value="20240216"/>
+               <component>
+                  <observationMedia ID="MM2">
+                     <text>Figure A</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="pulmozyme-02.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM3">
+                     <text>Figure B</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="pulmozyme-03.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM4">
+                     <text>Figure C</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="pulmozyme-04.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM5">
+                     <text>Figure D</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="pulmozyme-05.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM6">
+                     <text>Figure E</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="pulmozyme-06.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM7">
+                     <text>Figure F</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="pulmozyme-07.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM8">
+                     <text>Figure G</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="pulmozyme-08.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM9">
+                     <text>Figure H</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="pulmozyme-09.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM10">
+                     <text>Figure I</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="pulmozyme-10.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM11">
+                     <text>Figure J</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="pulmozyme-11.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM12">
+                     <text>Figure K</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="pulmozyme-12.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM13">
+                     <text>Figure L</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="pulmozyme-13.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM14">
+                     <text>Figure M</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="pulmozyme-14.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM15">
+                     <text>Figure N</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="pulmozyme-15.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM16">
+                     <text>Figure O</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="pulmozyme-16.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM17">
+                     <text>Figure P</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="pulmozyme-17.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM18">
+                     <text>Figure Q</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="pulmozyme-18.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM20">
+                     <text>Figure R</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="pulmozyme-20.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM21">
+                     <text>Figure S</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="pulmozyme-21.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM22">
+                     <text>Figure T</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="pulmozyme-22.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM23">
+                     <text>Figure U</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="pulmozyme-23.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM24">
+                     <text>Figure V</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="pulmozyme-24.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM25">
+                     <text>Figure W</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="pulmozyme-25.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM26">
+                     <text>Figure X</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="pulmozyme-26.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="erapid">
+               <id root="3eaa9c0d-2a18-43f2-aa21-a47a0687eb41"/>
+               <code code="59845-8" codeSystem="2.16.840.1.113883.6.1" displayName="INSTRUCTIONS FOR USE SECTION"/>
+               <title>INSTRUCTIONS FOR USE</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">PULMOZYME<sup>®</sup> (PULL-muh-zyme)</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">(dornase alfa)</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Inhalation Solution</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">This Instructions for Use contains information on how to use PULMOZYME with the following recommended vibrating mesh nebulizers:</content>
+                  </paragraph>
+                  <table width="40%">
+                     <col width="100%" align="center" valign="top"/>
+                     <thead>
+                        <tr>
+                           <th styleCode="Lrule Rrule">Recommended Vibrating Mesh Nebulizers</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr styleCode="Botrule">
+                           <td styleCode="Lrule Rrule">eRapid<sup>®</sup> Nebulizer System</td>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td styleCode="Lrule Rrule">Innospire Go</td>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td styleCode="Lrule Rrule">Pulmogine Vibrating Mesh Nebulizer</td>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td styleCode="Lrule Rrule">AireHealth Nebulizer™</td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Lrule Rrule">Intelligent Mesh Nebulizer</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>
+                     <content styleCode="bold">See the other side of this Instructions for Use for <linkHtml href="#jet">information on use with Jet Nebulizers and Compressors</linkHtml>
+                     </content>
+                  </paragraph>
+                  <paragraph>Read and understand this Instructions for Use and the nebulizer manufacturer's instruction manual before you start taking Pulmozyme and each time you get a refill. There may be new information. This information does not take the place of talking to your healthcare provider about your medical condition or your treatment.</paragraph>
+                  <paragraph>This information does not take the place of the manufacturer's instruction manual for the vibrating mesh nebulizer.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">The vibrating mesh nebulizer changes the Pulmozyme liquid medicine into a fine mist you inhale by breathing through a mouthpiece. </content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Do not use any other inhaled medicines in the nebulizer at the same time.  Keep all other inhaled medication systems completely separate from Pulmozyme.</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">The eRapid Nebulizer System should only be used by adults and children who can use a mouthpiece, and not by younger children who need a mask to take Pulmozyme.</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Follow the instructions on this side of the Instructions for Use to give Pulmozyme using a vibrating mesh nebulizer.</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Important Information You Need to Know Before Using PULMOZYME</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Read and follow the nebulizer manufacturer's instruction manual for correct use and maintenance: </content>
+                  </paragraph>
+                  <list listType="unordered" styleCode="Disc">
+                     <item>to clean the nebulizer before first use and after each use as recommended </item>
+                     <item>to disinfect the nebulizer parts by using the disinfecting method recommended </item>
+                     <item>to replace nebulizer parts as recommended</item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">Supplies you will need to give a dose of PULMOZYME:</content>
+                  </paragraph>
+                  <list listType="unordered" styleCode="Disc">
+                     <item>
+                        <content styleCode="bold">1</content> Pulmozyme ampule <content styleCode="bold">(See <linkHtml href="#fa1">Figure A</linkHtml>)</content>
+                     </item>
+                     <item>Vibrating mesh nebulizer and its parts</item>
+                     <item>Manufacturer's instruction manual for the vibrating mesh nebulizer</item>
+                     <item>
+                        <content styleCode="bold">Nose clip (optional) (See <linkHtml href="#fb1">Figure B</linkHtml>)</content>
+                     </item>
+                  </list>
+                  <table width="100%" styleCode="Noautorules" ID="fa1">
+                     <col width="100%" align="center" valign="top"/>
+                     <tbody>
+                        <tr>
+                           <td>
+                              <renderMultiMedia referencedObject="MM27"/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>Pulmozyme ampule<br/>
+                              <content styleCode="bold">Figure A</content>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table width="100%" styleCode="Noautorules" ID="fb1">
+                     <col width="100%" align="center" valign="top"/>
+                     <tbody>
+                        <tr>
+                           <td>
+                              <renderMultiMedia referencedObject="MM28"/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <content styleCode="bold">Figure B</content>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table width="100%" styleCode="Noautorules">
+                     <col width="70%" align="left" valign="top"/>
+                     <col width="30%" align="center" valign="top"/>
+                     <tbody>
+                        <tr>
+                           <td styleCode="Toprule">
+                              <content styleCode="bold">Prepare the vibrating mesh nebulizer:</content>
+                              <br/>
+                              <content styleCode="bold">Step 1. Clean a flat table surface and wash your hands.</content>
+                              <list listType="unordered" styleCode="Disc">
+                                 <item>Clean a flat table surface.</item>
+                                 <item>Wash your hands well with soap and water before using the Pulmozyme ampule and nebulizer.  This helps prevent infection <content styleCode="bold">(See <linkHtml href="#fc1">Figure C</linkHtml>)</content>.</item>
+                              </list>
+                           </td>
+                           <td styleCode="Toprule">
+                              <renderMultiMedia referencedObject="MM29" ID="fc1"/>
+                           </td>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td/>
+                           <td>
+                              <content styleCode="bold">Figure C</content>
+                           </td>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td colspan="2">
+                              <content styleCode="bold">Step 2.  Gather the nebulizer. Make sure you have all parts and make sure they are clean and not damaged. Prepare and test it as recommended in the manufacturer's instruction manual. </content>
+                              <list styleCode="Disc" listType="unordered">
+                                 <item>Place the vibrating mesh nebulizer on a clean, flat table surface within reach. Make sure you have followed the manufacturer's instruction manual to make sure that the nebulizer is charged and ready for use. </item>
+                              </list>
+                           </td>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td>
+                              <content styleCode="bold">Step 3.  Gather the Pulmozyme ampule and check the expiration date.</content>
+                              <list styleCode="Disc" listType="unordered">
+                                 <item>Remove <content styleCode="bold">1</content> foil pouch of Pulmozyme from the refrigerator. Open the foil pouch and remove <content styleCode="bold">1</content> ampule of Pulmozyme. Put the remaining ampules back in the foil pouch and return them to the refrigerator. </item>
+                                 <item>Check the expiration (exp.) date printed on the ampule <content styleCode="bold">(See <linkHtml href="#fd1">Figure D</linkHtml>)</content>. <br/>
+                                    <content styleCode="bold">Do not</content> use the Pulmozyme ampule if the expiration date has passed.</item>
+                              </list>
+                           </td>
+                           <td align="center">
+                              <renderMultiMedia referencedObject="MM30" ID="fd1"/>
+                              <br/>
+                              <content styleCode="bold">Figure D</content>
+                           </td>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td>
+                              <content styleCode="bold">Step 4. Check the Pulmozyme ampule.</content>
+                              <list styleCode="Disc" listType="unordered">
+                                 <item>Check the ampule for leaks by turning it upside down and gently squeezing <content styleCode="bold">(See <linkHtml href="#fe1">Figure E</linkHtml>)</content>.<br/>
+                                    <content styleCode="bold">Do not </content>use the ampule if it is leaking. Throw it away and get a new one.</item>
+                                 <item>Check the Pulmozyme liquid in the ampule and make sure it is clear and free of particles. <br/>
+                                    <content styleCode="bold">Do not</content> use Pulmozyme if the liquid is cloudy or discolored. Take the Pulmozyme back to the pharmacy, hospital, or clinic that gave you the medicine.</item>
+                              </list>
+                           </td>
+                           <td align="center">
+                              <renderMultiMedia referencedObject="MM31" ID="fe1"/>
+                              <br/>
+                              <content styleCode="bold">Figure E</content>
+                           </td>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td colspan="2">
+                              <content styleCode="bold">Step 5. Put the vibrating mesh nebulizer together.</content>
+                              <list styleCode="Disc" listType="unordered">
+                                 <item>Put the nebulizer together according to the step-by-step manufacturer's <content styleCode="bold">instruction manual.</content>
+                                 </item>
+                              </list>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Botrule">
+                              <content styleCode="bold">Step 6. Prepare to take the Pulmozyme treatment.</content>
+                              <list styleCode="Disc" listType="unordered">
+                                 <item>Follow the manufacturer's instruction manual on how to add the Pulmozyme medicine to the nebulizer.</item>
+                                 <item>Open the Pulmozyme ampule.</item>
+                                 <item>Hold the tab at the bottom of the Pulmozyme ampule firmly. Twist off the top. <content styleCode="bold">Do not</content> squeeze the body of the ampule <content styleCode="bold">(See <linkHtml href="#ff1">Figure F</linkHtml>)</content>.</item>
+                                 <item>Turn the ampule upside down and squeeze gently to empty the medicine into the medicine cup. Keep squeezing until the ampule is empty. It is very important that you squeeze out all the medicine in the ampule.</item>
+                              </list>
+                              <content styleCode="bold">Taking your dose of Pulmozyme with a nebulizer:</content>
+                              <list styleCode="Disc" listType="unordered">
+                                 <item>Read the manufacturer's instruction manual on how to turn the nebulizer on and off and follow the steps for how to: <list listType="unordered" styleCode="circle">
+                                       <item>take your nebulized treatment, </item>
+                                       <item>breathe through the mouthpiece or facemask, </item>
+                                       <item>restart treatment if you need to stop before you are finished, and </item>
+                                       <item>confirm that your treatment is complete.</item>
+                                    </list>
+                                 </item>
+                              </list>
+                           </td>
+                           <td align="center">
+                              <renderMultiMedia referencedObject="MM32" ID="ff1"/>
+                              <br/>
+                              <content styleCode="bold">Figure F</content>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Botrule">
+                              <content styleCode="bold">Step 7. Breathing through the mouthpiece.</content>
+                              <list styleCode="Disc" listType="unordered">
+                                 <item>
+                                    <content styleCode="bold">Skip to Step 8 if you are using a facemask to take your dose of Pulmozyme.</content>
+                                 </item>
+                                 <item>Place the mouthpiece between your teeth and on top of your tongue.<list listType="unordered" styleCode="circle">
+                                       <item>Breathe slowly in and out through your mouth when using a mouthpiece<content styleCode="bold">. Do not</content> block medicine flow with your tongue.</item>
+                                       <item>
+                                          <content styleCode="bold">Do not</content> breathe through your nose when using a mouthpiece. If you have problems breathing only through your mouth, use a nose clip <content styleCode="bold">(See <linkHtml href="#fb1">Figure B</linkHtml>)</content>.</item>
+                                    </list>
+                                 </item>
+                              </list>
+                           </td>
+                           <td/>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td>
+                              <content styleCode="bold">Step 8. Breathing through the facemask.</content>
+                              <list styleCode="Disc" listType="unordered">
+                                 <item>Place the facemask gently but firmly over the nose and mouth.</item>
+                                 <item>Make sure there are no air gaps between the mask and the face. This will help make sure that you will get the full dose of Pulmozyme.</item>
+                              </list>
+                           </td>
+                           <td/>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td colspan="2">
+                              <content styleCode="bold">After Your Treatment with Pulmozyme:</content>
+                              <br/>
+                              <content styleCode="bold">Step 9. Clean the nebulizer</content>
+                              <list styleCode="Disc" listType="unordered">
+                                 <item>Throw away the empty Pulmozyme ampule in your household trash.</item>
+                                 <item>Clean the nebulizer thoroughly after each use. Follow the <content styleCode="bold">manufacturer's instruction manual</content> for cleaning the nebulizer. </item>
+                                 <item>All nebulizer parts <content styleCode="bold">must</content> be cleaned after each use and disinfected after each day of use as recommended in the manufacturer's instruction manual.</item>
+                                 <item>Replace the handset as recommended in the manufacturer's instruction manual.</item>
+                              </list>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>
+                     <content styleCode="bold">How should I store Pulmozyme?</content>
+                  </paragraph>
+                  <list styleCode="Disc" listType="unordered">
+                     <item>
+                        <content styleCode="bold">Store Pulmozyme ampules at a refrigerated temperature between 36°F to 46°F (2°C to 8°C) in their protective foil pouch to protect from light and heat</content> until you are ready to use them. When the protective foil pouch is opened, the unused ampules must be kept refrigerated in the protective foil pouch to protect from light and heat.</item>
+                     <item>When traveling, Pulmozyme ampules should be kept refrigerated in their protective foil pouch to protect from light and heat. </item>
+                     <item>Protect Pulmozyme from excessive heat and light.</item>
+                     <item>
+                        <content styleCode="bold">Do not</content> use Pulmozyme if the ampules have been exposed to room temperature at 72°F to 82°F (22°C to 28°C) for more than a total of <content styleCode="bold">60</content> hours or if the solution has turned cloudy or discolored.</item>
+                     <item>
+                        <content styleCode="bold">Do not</content> use Pulmozyme past the expiration date printed on the ampule.</item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">Genentech, Inc.</content>
+                  </paragraph>
+                  <paragraph>A Member of the Roche Group<br/>1 DNA Way<br/>South San Francisco, CA 94080-4990<br/>US License No. 1048</paragraph>
+                  <paragraph>This Instructions for Use has been approved by the U.S. Food and Drug Administration.</paragraph>
+                  <paragraph>Revised: 02/2024</paragraph>
+                  <paragraph>Representative sample of labeling (see the <linkHtml href="#S16">HOW SUPPLIED</linkHtml> section for complete listing):</paragraph>
+               </text>
+               <effectiveTime value="20240216"/>
+               <component>
+                  <observationMedia ID="MM27">
+                     <text>Figure A</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="pulmozyme-27.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM28">
+                     <text>Figure B</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="pulmozyme-28.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM29">
+                     <text>Figure C</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="pulmozyme-29.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM30">
+                     <text>Figure D</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="pulmozyme-30.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM31">
+                     <text>Figure E</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="pulmozyme-31.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM32">
+                     <text>Figure F</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="pulmozyme-32.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <id root="a13fdc26-f548-4045-9de4-57f8a55490a5"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PRINCIPAL DISPLAY PANEL - 2.5 mg/2.5 mL Ampule Pouch Carton</title>
+               <text>
+                  <paragraph>NDC 50242-100-40</paragraph>
+                  <paragraph>DORNASE ALFA</paragraph>
+                  <paragraph>PULMOZYME<sup>®</sup>
+                  </paragraph>
+                  <paragraph>INHALATION SOLUTION</paragraph>
+                  <paragraph>2.5 mg/2.5 mL<br/>(1 mg/mL)</paragraph>
+                  <paragraph>Each carton contains 5 foil pouches<br/>containing 6 single-dose ampules.</paragraph>
+                  <paragraph>KEEP REFRIGERATED</paragraph>
+                  <paragraph>11013278</paragraph>
+                  <paragraph>Genentech, Inc.<br/>A Member of the Roche Group<br/>1 DNA Way, South San Francisco, CA 94080-4990<br/>US License No.: 1048</paragraph>
+                  <renderMultiMedia referencedObject="MM33"/>
+               </text>
+               <effectiveTime value="20240216"/>
+               <component>
+                  <observationMedia ID="MM33">
+                     <text>PRINCIPAL DISPLAY PANEL - 2.5 mg/2.5 mL Ampule Pouch Carton</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="pulmozyme-33.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

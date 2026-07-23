@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="d49e40c7-0635-4220-8b0a-c5068116ee17"/>
+   <code code="34391-3" displayName="HUMAN PRESCRIPTION DRUG LABEL" codeSystem="2.16.840.1.113883.6.1"/>
+   <title>Zyflo</title>
+   <effectiveTime value="20251130"/>
+   <setId root="aee65202-fddb-497f-9f11-17cc727cb157"/>
+   <versionNumber value="33"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id extension="088084228" root="1.3.6.1.4.1.519.1"/>
+            <name>Chiesi USA, Inc.</name>
+            <assignedEntity>
+               <assignedOrganization>
+                  <id extension="088084228" root="1.3.6.1.4.1.519.1"/>
+                  <name>Chiesi USA, Inc.</name>
+               </assignedOrganization>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="551249b6-7f7f-42d2-876c-e7aca3dcbf68"/>
+               <code code="48780-1" displayName="SPL listing data elements section" codeSystem="2.16.840.1.113883.6.1"/>
+               <effectiveTime value="20251130"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="10122-901" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>ZYFLO</name>
+                        <formCode code="C42998" displayName="TABLET" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>zileuton</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mg" value="600"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="V1L22WVE2S" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>ZILEUTON</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="V1L22WVE2S" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>ZILEUTON</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="2S7830E561" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CROSPOVIDONE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="RFW2ET671P" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>HYDROXYPROPYL CELLULOSE (1600000 WAMW)</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="3NXW29V3WO" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>HYPROMELLOSES</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="70097M6I30" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MAGNESIUM STEARATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="OP1R32D61U" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CELLULOSE, MICROCRYSTALLINE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="6DC9Q167V3" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>PROPYLENE GLYCOL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="5856J3G2A2" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SODIUM STARCH GLYCOLATE TYPE A POTATO</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="7SEV7J4R1U" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>TALC</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="15FIX9V2JP" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>TITANIUM DIOXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="O8232NY3SJ" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>STARCH, CORN</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="1" value="120"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="10122-901-12" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" displayName="BOTTLE" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" displayName="Type 0: Not a Combination Product" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="completed"/>
+                                 <effectiveTime>
+                                    <low value="19961206"/>
+                                    <high value="20271130"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="NDA020471" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73594" displayName="NDA" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="completed"/>
+                           <effectiveTime>
+                              <low value="19961206"/>
+                              <high value="20271130"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48325" displayName="white" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="ST">CT1</value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value value="1" xsi:type="INT"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48345" displayName="OVAL" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="19" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" displayName="ORAL" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_8ddfbea1-abad-4b3f-92e4-20c3014ce93c">
+               <id root="68fe931e-5c4e-47b1-bfb1-d11cc5e653d8"/>
+               <code code="34089-3" codeSystem="2.16.840.1.113883.6.1" displayName="DESCRIPTION SECTION"/>
+               <title>DESCRIPTION</title>
+               <text>
+                  <paragraph>Zileuton is an orally active inhibitor of 5-lipoxygenase, the enzyme that catalyzes the formation of leukotrienes from arachidonic acid. Zileuton has the chemical name (±)-1-(1-Benzo[b]thien-2-ylethyl)-1-hydroxyurea and the following chemical structure:</paragraph>
+                  <renderMultiMedia referencedObject="MM1">
+                     <caption>Zileuton</caption>
+                  </renderMultiMedia>
+                  <paragraph>Zileuton has the molecular formula C<sub>11</sub>H<sub>12</sub>N<sub>2</sub>O<sub>2</sub>S and a molecular weight of 236.29. It is a racemic mixture (50:50) of R(+) and S(-) enantiomers. Zileuton is a practically odorless, white, crystalline powder that is soluble in methanol and ethanol, slightly soluble in acetonitrile, and practically insoluble in water and hexane. The melting point ranges from 144.2˚C to 145.2˚C. ZYFLO tablets for oral administration are supplied in one dosage strength containing 600 mg of zileuton. </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Inactive Ingredients:</content> crospovidone, hydroxypropyl cellulose, hypromellose, magnesium stearate, microcrystalline cellulose, pregelatinized starch, propylene glycol, sodium starch glycolate, talc, and titanium dioxide.</paragraph>
+               </text>
+               <effectiveTime value="20251130"/>
+               <component>
+                  <observationMedia ID="MM1">
+                     <text>Zileuton
+</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="zyflo-1.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_cf6b4376-a3c1-40ee-9c14-d3ba670030c5">
+               <id root="ae766f00-e536-47a9-8a17-50ca2a6cfa35"/>
+               <code code="34090-1" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+               <title>CLINICAL PHARMACOLOGY</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Mechanism of Action</content>: </paragraph>
+                  <paragraph>Zileuton is a specific inhibitor of 5-lipoxygenase and thus inhibits leukotriene (LTB<sub>4</sub>, LTC<sub>4</sub>, LTD<sub>4</sub>, and LTE<sub>4</sub>) formation. Both the R(+) and S(-) enantiomers are pharmacologically active as 5-lipoxygenase inhibitors in <content styleCode="italics">in vitro</content> systems. Leukotrienes are substances that induce numerous biological effects including augmentation of neutrophil and eosinophil migration, neutrophil and monocyte aggregation, leukocyte adhesion, increased capillary permeability, and smooth muscle contraction. These effects contribute to inflammation, edema, mucus secretion, and bronchoconstriction in the airways of asthmatic patients. Sulfido-peptide leukotrienes (LTC<sub>4</sub>, LTD<sub>4</sub>, LTE<sub>4</sub>, also known as the slow-releasing substances of anaphylaxis) and LTB<sub>4</sub>, a chemoattractant for neutrophils and eosinophils, can be measured in a number of biological fluids including bronchoalveolar lavage fluid (BALF) from asthmatic patients. </paragraph>
+                  <paragraph>Zileuton is an orally active inhibitor of <content styleCode="italics">ex vivo</content> LTB<sub>4</sub> formation in several species, including dogs, monkeys, rats, sheep, and rabbits. Zileuton inhibits arachidonic acid-induced ear edema in mice, neutrophil migration in mice in response to polyacrylamide gel, and eosinophil migration into the lungs of antigen-challenged sheep. </paragraph>
+                  <paragraph>Zileuton inhibits leukotriene-dependent smooth muscle contractions <content styleCode="italics">in vitro</content> in guinea pig and human airways. The compound inhibits leukotriene-dependent bronchospasm in antigen and arachidonic acid-challenged guinea pigs. In antigen-challenged sheep, zileuton inhibits late-phase bronchoconstriction and airway hyperreactivity. In humans, pretreatment with zileuton attenuated bronchoconstriction caused by cold air challenge in patients with asthma.</paragraph>
+               </text>
+               <effectiveTime value="20251130"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_db7e890b-c094-4c53-9ea5-82efaaeb83c3">
+               <id root="b0892382-a411-45c5-a9f4-09eb21912785"/>
+               <code code="43682-4" codeSystem="2.16.840.1.113883.6.1" displayName="PHARMACOKINETICS SECTION"/>
+               <title>PHARMACOKINETICS</title>
+               <text>
+                  <paragraph>Zileuton is rapidly absorbed upon oral administration with a mean time to peak plasma concentration (T<sub>max</sub>) of 1.7 hours and a mean peak level (C<sub>max</sub>) of 4.98 μg/mL. The absolute bioavailability of ZYFLO is unknown. Systemic exposure (mean AUC) following 600 mg ZYFLO administration is 19.2 μg.hr/mL. Plasma concentrations of zileuton are proportional to dose, and steady-state levels are predictable from single-dose pharmacokinetic data. Administration of ZYFLO with food resulted in a small but statistically significant increase (27%) in zileuton C<sub>max</sub> without significant changes in the extent of absorption (AUC) or T<sub>max</sub>. Therefore, ZYFLO can be administered with or without food (see <content styleCode="bold">DOSAGE AND ADMINISTRATION</content>). </paragraph>
+                  <paragraph>The apparent volume of distribution (V/F) of zileuton is approximately 1.2 L/kg. Zileuton is 93% bound to plasma proteins, primarily to albumin, with minor binding to αl-acid glycoprotein. </paragraph>
+                  <paragraph>Elimination of zileuton is predominantly via metabolism with a mean terminal half-life of 2.5 hours. Apparent oral clearance of zileuton is 7.0 mL/min/kg. ZYFLO activity is primarily due to the parent drug. Studies with radiolabeled drug demonstrated that orally administered zileuton is well absorbed into the systemic circulation with 94.5% and 2.2% of the radiolabeled dose recovered in urine and feces, respectively. Several zileuton metabolites have been identified in human plasma and urine. These include two diastereomeric O-glucuronide conjugates (major metabolites) and an N-dehydroxylated metabolite of zileuton. The urinary excretion of the inactive N-dehydroxylated metabolite and unchanged zileuton each accounted for less than 0.5% of the dose. <content styleCode="italics">In vitro</content> studies utilizing human liver microsomes have shown that zileuton and its N-dehydroxylated metabolite can be oxidatively metabolized by the cytochrome P450 isoenzymes 1A2, 2C9 and 3A4 (CYP1A2, CYP2C9 and CYP3A4). </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">
+                        <content styleCode="italics">Special populations</content>
+                     </content>:</paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Effect of age</content>: The pharmacokinetics of zileuton were investigated in healthy elderly volunteers (ages 65 to 81 years, 9 males, 9 females) and healthy young volunteers (ages 20 to 40 years, 5 males and 4 females) after single and multiple oral doses of 600 mg every 6 hours of zileuton. Zileuton pharmacokinetics were similar in healthy elderly subjects (≥65 years) compared to healthy younger adults (18 to 40 years). </paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Effect of gender</content>: Across several studies, no significant gender effects were observed on the pharmacokinetics of zileuton. </paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Renal insufficiency</content>: The pharmacokinetics of zileuton were similar in healthy subjects and in subjects with mild, moderate, and severe renal insufficiency. In subjects with renal failure requiring hemodialysis, zileuton pharmacokinetics were not altered by hemodialysis and a very small percentage of the administered zileuton dose (&lt;0.5%) was removed by hemodialysis. Hence, dosing adjustment in patients with renal dysfunction or undergoing hemodialysis is not necessary.</paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Hepatic insufficiency</content>: ZYFLO is contraindicated in patients with active liver disease (see <content styleCode="bold">CONTRAINDICATIONS</content> and <content styleCode="bold">PRECAUTIONS</content>, <content styleCode="bold">Hepatic</content>).</paragraph>
+               </text>
+               <effectiveTime value="20251130"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_b902d31d-7e71-407a-bb5f-e71c9ed8f33c">
+               <id root="cbeccb39-b73a-401a-b8a9-d4e66712f632"/>
+               <code code="34092-7" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL STUDIES SECTION"/>
+               <title>CLINICAL STUDIES</title>
+               <text>
+                  <paragraph>Two double-blind, parallel, placebo-controlled, multi-center studies have established the efficacy of ZYFLO in the treatment of asthma. Three hundred seventy-three (373) patients were enrolled in the 6-month, double-blind phase of Study 1, and 401 patients were enrolled in the 3-month double-blind phase of Study 2. In these studies, the patients were mild-to-moderate asthmatics who had a mean baseline FEV<sub>1 </sub>of approximately 2.3 liters and who used inhaled beta-agonists as needed, the mean being approximately 6 puffs of albuterol per day from a metered-dose inhaler. In each study, patients were randomized to receive either ZYFLO 400 mg four times daily, ZYFLO 600 mg four times daily, or placebo. Only the ZYFLO 600 mg four times daily dosage regimen was shown to be efficacious by demonstrating statistically significant improvement across several parameters. </paragraph>
+                  <paragraph>Efficacy endpoints measured in Study 1 are shown in Table 1 below as mean change from baseline to the end of the study (six months). Statistically significant differences from placebo at the p&lt;0.05 level are indicated by an asterisk(*). Similar results were observed after three months in Study 2.</paragraph>
+                  <renderMultiMedia referencedObject="MM2">
+                     <caption>Mean Change from Baseline to End of Study</caption>
+                  </renderMultiMedia>
+                  <paragraph>Figure 1 shows the mean effect of ZYFLO versus placebo for the primary efficacy variable, trough FEV<sub>1</sub>, over the course of Study 1.</paragraph>
+                  <renderMultiMedia referencedObject="MM3">
+                     <caption>Mean Change From Baseline to Trough FEV1 (L)</caption>
+                  </renderMultiMedia>
+                  <paragraph>Of all the patients in Study 1 and Study 2, 7.0% of those administered ZYFLO 600 mg four times daily required systemic corticosteroid therapy for exacerbation of asthma, whereas 18.7% of the placebo group required corticosteroid treatment. This difference was statistically significant. </paragraph>
+                  <paragraph>In these trials, there was a statistically significant improvement from baseline in FEV<sub>1</sub>, which occurred 2 hours after initial administration of ZYFLO. This mean increase was approximately 0.10 L greater than that in placebo-treated patients. </paragraph>
+                  <paragraph>These studies evaluated patients receiving as-needed inhaled beta-agonist as their only asthma therapy. In this patient population, post-hoc analyses suggested that individuals with lower FEV<sub>1 </sub>values at baseline showed a greater improvement. </paragraph>
+                  <paragraph>The role of ZYFLO in the management of patients with more severe asthma, patients receiving anti-asthma therapy other than as-needed, inhaled beta-agonists, or patients receiving it as an oral or inhaled corticosteroid-sparing agent remains to be fully characterized.</paragraph>
+               </text>
+               <effectiveTime value="20251130"/>
+               <component>
+                  <observationMedia ID="MM2">
+                     <text>Mean Change from Baseline to End of Study</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="zyflo-2.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM3">
+                     <text>Mean Change From Baseline to Trough FEV1 (L)</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="zyflo-3.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_3d11147d-8407-4729-af1e-2e82b2f39320">
+               <id root="a3764a9a-649c-4518-b006-788b8a43e2fa"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>INDICATIONS AND USAGE</title>
+               <text>
+                  <paragraph>ZYFLO is indicated for the prophylaxis and chronic treatment of asthma in adults and children 12 years of age and older.</paragraph>
+               </text>
+               <effectiveTime value="20251130"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_74c95842-2736-4cfb-87f1-a4ba6ec0caf0">
+               <id root="a4c79782-26bc-44eb-acc4-0b9b0f75a0b1"/>
+               <code code="34070-3" codeSystem="2.16.840.1.113883.6.1" displayName="CONTRAINDICATIONS SECTION"/>
+               <title>CONTRAINDICATIONS</title>
+               <text>
+                  <paragraph>ZYFLO tablets are contraindicated in patients with:</paragraph>
+                  <list listType="unordered" styleCode="Disk">
+                     <item>Active liver disease or transaminase elevations greater than or equal to three times the upper limit of normal (≥3xULN) (see <content styleCode="bold">PRECAUTIONS, Hepatic</content>).</item>
+                     <item>Hypersensitivity to zileuton or any of its inactive ingredients.</item>
+                  </list>
+               </text>
+               <effectiveTime value="20251130"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_d580dac7-cbdd-48e4-b097-94229fe02c2c">
+               <id root="96356195-2f78-4ff0-ab3c-c6727de9ada4"/>
+               <code code="34071-1" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS SECTION"/>
+               <title>WARNINGS</title>
+               <text>
+                  <paragraph>ZYFLO is not indicated for use in the reversal of bronchospasm in acute asthma attacks, including status asthmaticus. Therapy with ZYFLO can be continued during acute exacerbations of asthma. </paragraph>
+                  <paragraph>Co-administration of ZYFLO and theophylline results in, on average, an approximate doubling of serum theophylline concentrations. Theophylline dosage in these patients should be reduced and serum theophylline concentrations monitored closely (see <content styleCode="bold">PRECAUTIONS, Drug Interactions</content>). </paragraph>
+                  <paragraph>Co-administration of ZYFLO and warfarin results in a clinically significant increase in prothrombin time (PT). Patients on oral warfarin therapy and ZYFLO should have their prothrombin times monitored closely and anticoagulant dose adjusted accordingly (see <content styleCode="bold">PRECAUTIONS, Drug Interactions</content>). </paragraph>
+                  <paragraph>Co-administration of ZYFLO and propranolol results in doubling of propranolol AUC and consequent increased beta-blocker activity. Patients on ZYFLO and propranolol should be closely monitored and the dose of the propranolol reduced as necessary (see<content styleCode="bold"> PRECAUTIONS, Drug Interactions</content>).</paragraph>
+               </text>
+               <effectiveTime value="20251130"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_95594638-bbf2-4d27-baf6-af298489456f">
+               <id root="7180d21a-620e-45a0-9e7a-ff1d994ce1e4"/>
+               <code code="42232-9" codeSystem="2.16.840.1.113883.6.1" displayName="PRECAUTIONS SECTION"/>
+               <title>PRECAUTIONS</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Hepatic</content>: </paragraph>
+                  <paragraph>Elevations of one or more liver function tests may occur during ZYFLO therapy. These laboratory abnormalities may progress, remain unchanged, or resolve with continued therapy. In a few cases, initial transaminase elevations were first noted after discontinuing treatment, usually within 2 weeks. The ALT (SGPT) test is considered the most sensitive indicator of liver injury. In placebo-controlled clinical trials, the frequency of ALT elevations greater than or equal to three times the upper limit of normal (3xULN) was 1.9% for ZYFLO-treated patients, compared with 0.2% for placebo-treated patients. </paragraph>
+                  <paragraph>In a long-term safety surveillance study, 2458 patients received ZYFLO in addition to their usual asthma care and 489 received their usual asthma care. In patients treated for up to 12 months with ZYFLO in addition to their usual asthma care, 4.6% developed an ALT of at least 3xULN, compared with 1.1% of patients receiving only their usual asthma care. Sixty-one percent of these elevations occurred during the first two months of ZYFLO therapy. After two months of treatment, the rate of new ALT elevations ≥3xULN stabilized at a mean of 0.30% per month for patients receiving ZYFLO-plus-usual-asthma care compared with 0.11% per month for patients receiving usual asthma care alone. Of the 61 ZYFLO plus-usual-asthma-care patients with ALT elevations between 3 to 5xULN, 32 patients (52%) had ALT values decrease to below 2xULN while continuing ZYFLO therapy. Twenty-one of the 61 patients (34%) had further increases in ALT levels to ≥5xULN and were withdrawn from the study in accordance with the study protocol. In patients who discontinued ZYFLO, elevated ALT levels returned to &lt;2xULN in an average of 32 days (range 1-111 days). </paragraph>
+                  <paragraph>In controlled and uncontrolled clinical trials involving more than 5000 patients treated with ZYFLO, the overall rate of ALT elevation ≥3xULN was 3.2%. In these trials, one patient developed symptomatic hepatitis with jaundice, which resolved upon discontinuation of therapy. An additional 3 patients with transaminase elevations developed mild hyperbilirubinemia that was less than three times the upper limit of normal. There was no evidence of hypersensitivity or other alternative etiologies for these findings. In subset analyses, females over the age of 65 appeared to be at an increased risk for ALT elevations. Patients with pre-existing transaminase elevations may also be at an increased risk for ALT elevations (see <content styleCode="bold">CONTRAINDICATIONS</content>). </paragraph>
+                  <paragraph>It is recommended that hepatic transaminases be evaluated at initiation of, and during therapy with, ZYFLO. Serum ALT should be monitored before treatment begins, once-a-month for the first 3 months, every two to three months for the remainder of the first year, and periodically thereafter for patients receiving long-term ZYFLO therapy. If clinical signs and/or symptoms of liver dysfunction (e.g., right upper quadrant pain, nausea, fatigue, lethargy, pruritus, jaundice, or “flu-like” symptoms) develop or transaminase elevations greater than 5 times the ULN occur, ZYFLO should be discontinued and transaminase levels followed until normal. </paragraph>
+                  <paragraph>Since treatment with ZYFLO may result in increased hepatic transaminases, ZYFLO should be used with caution in patients who consume substantial quantities of alcohol and/or have a past history of liver disease.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Neuropsychiatric Events</content>: </paragraph>
+                  <paragraph>Neuropsychiatric events have been reported in adult and adolescent patients taking zileuton, the active ingredient in ZYFLO and zileuton extended-release tablets.  Post-marketing reports with zileuton include sleep disorders and behavior changes. The clinical details of some post-marketing reports involving ZYFLO appear consistent with a drug-induced effect. Patients and prescribers should be alert for neuropsychiatric events.  Patients should be instructed to notify their prescriber if these changes occur.  Prescribers should carefully evaluate the risks and benefits of continuing treatment with ZYFLO if such events occur (see <content styleCode="bold">ADVERSE REACTIONS, Post-marketing Experience</content>).  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Information for Patients:</content>
+                  </paragraph>
+                  <paragraph>Patients should be told that: </paragraph>
+                  <list listType="unordered" styleCode="Disk">
+                     <item>ZYFLO is indicated for the chronic treatment of asthma and should be taken regularly as prescribed, even during symptom-free periods. 
+</item>
+                     <item>ZYFLO is not a bronchodilator and should not be used to treat acute episodes of asthma. 
+</item>
+                     <item>When taking ZYFLO, they should not decrease the dose or stop taking any other antiasthma medications unless instructed by a physician. 
+</item>
+                     <item>While using ZYFLO, medical attention should be sought if short-acting bronchodilators are needed more often than usual, or if more than the maximum number of inhalations of short-acting bronchodilator treatment prescribed for a 24-hour period are needed. 
+</item>
+                     <item>The most serious side effect of ZYFLO is elevation of liver enzyme tests and that, while taking ZYFLO, they must return for liver enzyme test monitoring on a regular basis. 
+</item>
+                     <item>If they experience signs and/or symptoms of liver dysfunction (e.g., right upper quadrant pain, nausea, fatigue, lethargy, pruritus, jaundice, or “flu-like” symptoms), they should contact their physician immediately. 
+</item>
+                     <item>Patients should be instructed to notify their healthcare provider if neuropsychiatric events occur while using ZYFLO. 
+</item>
+                     <item>ZYFLO can interact with other drugs and that, while taking ZYFLO, they should consult their doctor before starting or stopping any prescription or non-prescription medicines. </item>
+                  </list>
+                  <paragraph>A patient leaflet is included with the tablets. </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Drug Interactions</content>: </paragraph>
+                  <paragraph>In a drug-interaction study in 16 healthy volunteers, co-administration of multiple doses of zileuton (800 mg every 12 hours) and theophylline (200 mg every 6 hours) for 5 days resulted in a significant decrease (approximately 50%) in steady-state clearance of theophylline, an approximate doubling of theophylline AUC, and an increase in theophylline C<sub>max</sub> (by 73%). The elimination half-life of theophylline was increased by 24%. Also, during co-administration, theophylline-related adverse events were observed more frequently than after theophylline alone. Upon initiation of ZYFLO in patients receiving theophylline, the theophylline dosage should be reduced by approximately one-half and plasma theophylline concentrations monitored. Similarly, when initiating therapy with theophylline in a patient receiving ZYFLO, the maintenance dose and/or dosing interval of theophylline should be adjusted accordingly and guided by serum theophylline determinations (see <content styleCode="bold">WARNINGS</content>). </paragraph>
+                  <paragraph>Concomitant administration of multiple doses of ZYFLO (600 mg every 6 hours) and warfarin (fixed daily dose obtained by titration in each subject) to 30 healthy male volunteers resulted in a 15% decrease in R-warfarin clearance and an increase in AUC of 22%. The pharmacokinetics of S-warfarin were not affected. These pharmacokinetic changes were accompanied by a clinically significant increase in prothrombin times. Monitoring of prothrombin time, or other suitable coagulation tests, with the appropriate dose titration of warfarin is recommended in patients receiving concomitant ZYFLO and warfarin therapy (see <content styleCode="bold">WARNINGS</content>). </paragraph>
+                  <paragraph>Co-administration of ZYFLO and propranolol results in a significant increase in propranolol concentrations. Administration of a single 80-mg dose of propranolol in 16 healthy male volunteers who received ZYFLO 600 mg every 6 hours for 5 days resulted in a 42% decrease in propranolol clearance. This resulted in an increase in propranolol C<sub>max</sub>, AUC, and elimination half-life by 52%, 104%, and 25%, respectively. There was an increase in β-blockade and decrease in heart rate associated with the co-administration of these drugs.  Patients on ZYFLO and propranolol should be closely monitored and the dose of propranolol reduced as necessary (see <content styleCode="bold">WARNINGS</content>). No formal drug-drug interaction studies between ZYFLO and other beta-adrenergic blocking agents (i.e., β-blockers) have been conducted. It is reasonable to employ appropriate clinical monitoring when these drugs are co-administered with ZYFLO. </paragraph>
+                  <paragraph>In a drug interaction study in 16 healthy volunteers, co-administration of multiple doses of terfenadine (60 mg every 12 hours) and ZYFLO (600 mg every 6 hours) for 7 days resulted in a decrease in clearance of terfenadine by 22% leading to a statistically significant increase in mean AUC and C<sub>max</sub> of terfenadine of approximately 35%. This increase in terfenadine plasma concentration in the presence of ZYFLO was not associated with a significant prolongation of the QTc interval. Although there was no cardiac effect in this small number of healthy volunteers, given the high inter-individual pharmacokinetic variability of terfenadine, co-administration of ZYFLO and terfenadine is not recommended. </paragraph>
+                  <paragraph>Drug-drug interaction studies conducted in healthy volunteers between ZYFLO and prednisone and ethinyl estradiol (oral contraceptive), drugs known to be metabolized by the P450 3A4 (CYP3A4) isoenzyme, have shown no significant interaction. However, no formal drug-drug interaction studies between ZYFLO and dihydropyridine, calcium channel blockers, cyclosporine, cisapride, and astemizole, also metabolized by CYP3A4, have been conducted. It is reasonable to employ appropriate clinical monitoring when these drugs are co-administered with ZYFLO. </paragraph>
+                  <paragraph>Drug-drug interaction studies in healthy volunteers have been conducted with ZYFLO and digoxin, phenytoin, sulfasalazine, and naproxen. There was no significant interaction between ZYFLO and any of these drugs. </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Carcinogenesis, Mutagenesis, Impairment of Fertility</content>: </paragraph>
+                  <paragraph>In 2-year carcinogenicity studies, increases in the incidence of liver, kidney, and vascular tumors in female mice and a trend towards an increase in the incidence of liver tumors in male mice were observed at 450 mg/kg/day (providing approximately 4 times [females] or 7 times [males] the systemic exposure [AUC] achieved at the maximum recommended human daily oral dose). No increase in the incidence of tumors was observed at 150 mg/kg/day (providing approximately 2 times the systemic exposure [AUC] achieved at the maximum recommended human daily oral dose). In rats, an increase in the incidence of kidney tumors was observed in both sexes at 170 mg/kg/day (providing approximately 6 times [males] or 14 times [females] the systemic exposure [AUC] achieved at the maximum recommended human daily oral dose). No increased incidence of kidney tumors was seen at 80 mg/kg/day (providing approximately 4 times [males] or 6 times [females] the systemic exposure [AUC] achieved at the maximum recommended human daily oral dose). Although a dose-related increased incidence of benign Leydig cell tumors was observed, Leydig cell tumorigenesis was prevented by supplementing male rats with testosterone. </paragraph>
+                  <paragraph>Zileuton was negative in genotoxicity studies including bacterial reverse mutation (Ames) using <content styleCode="italics">S. typhimurium</content> and<content styleCode="italics"> E. coli</content>, chromosome aberration in human lymphocytes, <content styleCode="italics">in vitro</content> unscheduled DNA synthesis (UDS), in rat hepatocytes with or without zileuton pretreatment and in mouse and rat kidney cells with zileuton pretreatment, and mouse micronucleus assays. However, a dose-related increase in DNA adduct formation was reported in kidneys and livers of female mice treated with zileuton. Although some evidence of DNA damage was observed in a UDS assay in hepatocytes isolated from Aroclor-1254 treated rats, no such finding was noticed in hepatocytes isolated from monkeys, where the metabolic profile of zileuton is more similar to that of humans. </paragraph>
+                  <paragraph>In reproductive performance/fertility studies, zileuton produced no effects on fertility in rats at oral doses up to 300 mg/kg/day (providing approximately 8 times [male rats] and 18 times [female rats] the systemic exposure [AUC] achieved at the maximum recommended human daily oral dose). Comparative systemic exposure (AUC) is based on measurements in male rats or nonpregnant female rats at similar dosages. However, reduction in fetal implants was observed at oral doses of 150 mg/kg/day and higher (providing approximately 9 times the systemic exposure [AUC] achieved at the maximum recommended human daily oral dose). Increases in gestation length, prolongation of estrous cycle, and increases in stillbirths were observed at oral doses of 70 mg/kg/day and higher (providing approximately 4 times the systemic exposure (AUC) achieved at the maximum recommended human daily oral dose). In a perinatal/postnatal study in rats, reduced pup survival and growth were noted at an oral dose of 300 mg/kg/day (providing approximately 18 times the systemic exposure [AUC] achieved at the maximum recommended human daily oral dose). </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Pregnancy</content>: Pregnancy Category C: Developmental studies indicated adverse effects (reduced body weight and increased skeletal variations) in rats at an oral dose of 300 mg/kg/day (providing approximately 18 times the systemic exposure [AUC] achieved at the maximum recommended human daily oral dose). Comparative systemic exposure [AUC] is based on measurements in nonpregnant female rats at a similar dosage. Zileuton and/or its metabolites cross the placental barrier of rats. Three of 118 (2.5%) rabbit fetuses had cleft palates at an oral dose of 150 mg/kg/day (equivalent to the maximum recommended human daily oral dose on a mg/m<sup>2 </sup>basis). There are no adequate and well-controlled studies in pregnant women. ZYFLO should be used during pregnancy only if the potential benefit justifies the potential risk to the fetus. </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Nursing Mothers</content>: Zileuton and/or its metabolites are excreted in rat milk. It is not known if zileuton is excreted in human milk. Because many drugs are excreted in human milk, and because of the potential for tumorigenicity shown for ZYFLO in animal studies, a decision should be made whether to discontinue nursing or to discontinue the drug, taking into account the importance of the drug to the mother. </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Pediatric Use</content>: The safety and effectiveness of ZYFLO in pediatric patients under 12 years of age have not been established. Due to the risk of hepatoxicity, use of ZYFLO in pediatric patients under 12 years of age is not recommended.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Geriatric Use</content>: In subset analyses, females over the age of 65 appeared to be at an increased risk for ALT elevations. Zileuton pharmacokinetics were similar in healthy elderly subjects (≥65 years) compared to healthy younger adults (18 to 40 years) (see <content styleCode="bold">PHARMACOKINETICS-</content>- <content styleCode="bold">
+                        <content styleCode="italics">Special populations</content>
+                     </content>: <content styleCode="underline">Effect of age</content>).</paragraph>
+               </text>
+               <effectiveTime value="20251130"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_ba0ba346-32dd-4ff7-8155-ba8d70f3596d">
+               <id root="a04073af-d4a8-4edb-8993-e5835968fb63"/>
+               <code code="34084-4" codeSystem="2.16.840.1.113883.6.1" displayName="ADVERSE REACTIONS SECTION"/>
+               <title>ADVERSE REACTIONS</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Clinical Studies</content>: </paragraph>
+                  <paragraph>A total of 5542 patients have been exposed to zileuton in clinical trials, 2252 of them for greater than 6 months and 742 for greater than 1 year. </paragraph>
+                  <paragraph>Adverse events most frequently occurring (frequency ≥3%) in ZYFLO-treated patients and at a frequency greater than placebo-treated patients are summarized in Table 2.</paragraph>
+                  <renderMultiMedia referencedObject="MM4">
+                     <caption>Proportion of Patients Experiencing Adverse Events in Placebo-Controlled Studies in Asthma</caption>
+                  </renderMultiMedia>
+                  <paragraph>Less common adverse events occurring at a frequency of greater than 1% and more commonly in ZYFLO-treated patients included: arthralgia, chest pain, conjunctivitis, constipation, dizziness, fever, flatulence, hypertonia, insomnia, lymphadenopathy, malaise, neck pain/rigidity, nervousness, pruritus, somnolence, urinary tract infection, vaginitis, and vomiting. </paragraph>
+                  <paragraph>The frequency of discontinuation from the asthma clinical studies due to any adverse event was comparable between ZYFLO (9.7%) and placebo-treated (8.4%) groups. </paragraph>
+                  <paragraph>In placebo-controlled clinical trials, the frequency of ALT elevations ≥3xULN was 1.9% for ZYFLO-treated patients, compared with 0.2% for placebo-treated patients. In controlled and uncontrolled trials, one patient developed symptomatic hepatitis with jaundice, which resolved upon discontinuation of therapy. An additional 3 patients with transaminase elevations developed mild hyperbilirubinemia that was less than three times the upper limit of normal. There was no evidence of hypersensitivity or other alternative etiologies for these findings. ZYFLO is contraindicated in patients with active liver disease or transaminase elevations greater than or equal to 3xULN (see <content styleCode="bold">CONTRAINDICATIONS</content>).  It is recommended that hepatic transaminases be evaluated at initiation of and during therapy with ZYFLO (see P<content styleCode="bold">RECAUTIONS</content>, <content styleCode="bold">Hepatic</content>). </paragraph>
+                  <paragraph>Occurrences of low white blood cell count (≤2.8 x 10<sup>9</sup>/L) were observed in 1.0% of 1,678 patients taking ZYFLO and 0.6% of 1,056 patients taking placebo in placebo-controlled studies. These findings were transient and the majority of cases returned toward normal or baseline with continued ZYFLO dosing. All remaining cases returned toward normal or baseline after discontinuation of ZYFLO. Similar findings were also noted in a long-term safety surveillance study of 2458 patients treated with ZYFLO plus usual asthma care versus 489 patients treated only with usual asthma care for up to one year. The clinical significance of these observations is not known. </paragraph>
+                  <paragraph>In the long-term safety surveillance trial of ZYFLO plus usual asthma care versus usual asthma care alone, a similar adverse event profile was seen as in other clinical trials. </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Post-Marketing Experience</content>: Cases of sleep disorders and behavior changes have been reported (<content styleCode="bold">see </content>
+                     <content styleCode="bold">PRECAUTIONS, Neuropsychiatric Events</content>).  Rash and urticaria have been also reported with ZYFLO.</paragraph>
+               </text>
+               <effectiveTime value="20251130"/>
+               <component>
+                  <observationMedia ID="MM4">
+                     <text>Proportion of Patients Experiencing Adverse Events in Placebo-Controlled Studies in Asthma</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="zyflo-4.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_8c98a576-dcab-4823-9f8e-a7423bba6224">
+               <id root="f0cd4e63-5d5a-4272-b7a9-167e139b416c"/>
+               <code code="34088-5" codeSystem="2.16.840.1.113883.6.1" displayName="OVERDOSAGE SECTION"/>
+               <title>OVERDOSAGE</title>
+               <text>
+                  <paragraph>Human experience of acute overdose with zileuton is limited. A patient in a clinical trial took between 6.6 and 9.0 grams of zileuton in a single dose. Vomiting was induced and the patient recovered without sequelae. Zileuton is not removed by dialysis. Should an overdose occur, the patient should be treated symptomatically and supportive measures instituted as required. If indicated, elimination of unabsorbed drug should be achieved by emesis or gastric lavage; usual precautions should be observed to maintain the airway. A Certified Poison Control Center should be consulted for up-to-date information on management of overdose with ZYFLO. </paragraph>
+                  <paragraph>The oral minimum lethal doses in mice and rats were 500-4000 and 300-1000 mg/kg in various preparations, respectively (providing greater than 3 and 9 times the systemic exposure [AUC] achieved at the maximum recommended human daily oral dose, respectively). No deaths occurred, but nephritis was reported in dogs at an oral dose of 1000 mg/kg (providing in excess of 12 times the systemic exposure [AUC] achieved at the maximum recommended human daily oral dose).</paragraph>
+               </text>
+               <effectiveTime value="20251130"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_34e91efe-aa4e-4be2-8dc4-0c9756510ba0">
+               <id root="dc198cda-2fcb-4e48-ac3c-8fdfe93a0c59"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>DOSAGE AND ADMINISTRATION</title>
+               <text>
+                  <paragraph>The recommended dosage of ZYFLO for the symptomatic treatment of patients with asthma is one 600-mg tablet four times a day for a total daily dose of 2400 mg. For ease of administration, ZYFLO may be taken with meals and at bedtime. Hepatic transaminases should be evaluated prior to initiation of ZYFLO and periodically during treatment (see <content styleCode="bold">PRECAUTIONS, Hepatic</content>).</paragraph>
+               </text>
+               <effectiveTime value="20251130"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_e7aea69b-0837-4896-be95-4e4a1159bbd5">
+               <id root="578572c0-aa9c-4c52-a4a4-4aa792e5b87b"/>
+               <code code="34069-5" codeSystem="2.16.840.1.113883.6.1" displayName="HOW SUPPLIED SECTION"/>
+               <title>HOW SUPPLIED</title>
+               <text>
+                  <paragraph>ZYFLO Tablets are available as 1 dosage strength: 600-mg white to off white, ovaloid, film coated tablets debossed “CT 1” on one side and bisect on the other side. </paragraph>
+                  <paragraph>High-density polyethylene bottles of: 120 Tablets.....................................................................................NDC 10122-901-12 </paragraph>
+                  <paragraph>Recommended storage: Store tablets at controlled room temperature between 20˚-25˚C, (68˚-77˚F). See USP. Protect from light.</paragraph>
+                  <paragraph>CTZI-003-0314-01-SPL-3 </paragraph>
+                  <paragraph>Manufactured for: </paragraph>
+                  <paragraph>Chiesi USA, Inc.</paragraph>
+                  <paragraph>Cary, NC  27518</paragraph>
+               </text>
+               <effectiveTime value="20251130"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_e5782d95-63da-460f-be4d-7493e77f1284">
+               <id root="df91a779-73dc-43a1-9068-345fb0e27532"/>
+               <code code="34076-0" codeSystem="2.16.840.1.113883.6.1" displayName="INFORMATION FOR PATIENTS SECTION"/>
+               <title>Patient Information Leaflet</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">ZYFLO<sup>®</sup>
+                     </content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">(zileuton tablets)</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Patient Information Leaflet</content>
+                  </paragraph>
+                  <paragraph>ZYFLO<sup>®</sup> Tablets</paragraph>
+                  <paragraph>Generic Name: zileuton </paragraph>
+                  <paragraph>Please read this leaflet carefully before you start taking ZYFLO<sup>®</sup> tablets. Also, read it each time you get your ZYFLO prescription refilled. </paragraph>
+                  <paragraph>This leaflet provides important information about taking ZYFLO. It is not meant to take the place of your doctor’s specific instructions. Talk to your doctor if you have any questions about ZYFLO. Your doctor or pharmacist can also provide you with additional information about ZYFLO. </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">What is the most important information I should know about ZYFLO?</content>
+                  </paragraph>
+                  <paragraph>The most important things to remember are to take all your doses of ZYFLO every day and to make sure that you return to your doctor’s office for scheduled liver enzyme tests. </paragraph>
+                  <paragraph>You should also know that you should seek medical help immediately if you need more “puffs” of your bronchodilator inhaler than normal or if you use the maximum number of “puffs” prescribed for one 24-hour period. These could be a sign of worsening asthma which means that your asthma therapy may need to be changed.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">What is ZYFLO?</content>
+                  </paragraph>
+                  <paragraph>ZYFLO, which contains the active ingredient zileuton, blocks the formation of certain chemicals (leukotrienes) that may contribute to your asthma symptoms.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Who should not take ZYFLO?</content>
+                  </paragraph>
+                  <paragraph>You should not take ZYFLO if you: </paragraph>
+                  <list listType="unordered" styleCode="Disk">
+                     <item>have active liver disease or have liver enzymes that are elevated. 
+
+</item>
+                     <item>have ever had an allergic reaction to this medicine. </item>
+                  </list>
+                  <paragraph>Your doctor will determine if it is safe for you to take ZYFLO. </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">What should I tell my doctor before I take the first dose of ZYFLO?</content>
+                  </paragraph>
+                  <paragraph>You should tell your doctor if you:</paragraph>
+                  <list listType="unordered" styleCode="Disk">
+                     <item>have ever had liver disease, hepatitis, jaundice (yellow eyes or skin), or dark urine. 
+
+</item>
+                     <item>drink alcohol. 
+
+</item>
+                     <item>are taking any prescription or nonprescription medicines. Your doctor may adjust the doses of some of your other medicines while you are taking ZYFLO. 
+
+</item>
+                     <item>if you are taking theophylline for your asthma, the blood-thinning medication warfarin, or the blood-pressure medication propranolol, your doctor may need to change the doses of these drugs. 
+
+</item>
+                     <item>are pregnant, planning to become pregnant, or are breast-feeding. </item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">How should I take ZYFLO?</content>
+                  </paragraph>
+                  <list listType="unordered" styleCode="Disk">
+                     <item>ZYFLO is taken four times a day with or without food. It may be easier to remember to take ZYFLO if you make it part of your daily routine such as with meals and at bedtime. 
+
+</item>
+                     <item>For ZYFLO to help control your asthma symptoms, it must be taken everyday as prescribed by your doctor. ZYFLO WILL NOT relieve an asthma attack that has already started. While taking ZYFLO, it is important to keep taking your other asthma medicines as directed and to follow all of your doctor’s instructions. 
+
+</item>
+                     <item>Even if you have no asthma symptoms, do not decrease the dose of ZYFLO or stop taking the medicine without talking to your doctor first. Feeling good is a sign that the medicine is working. 
+
+</item>
+                     <item>When you take your dose of ZYFLO, the tablets may be swallowed whole or split in half to make them easier to swallow.</item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">What should I avoid while taking ZYFLO?</content>
+                  </paragraph>
+                  <list listType="unordered" styleCode="Disk">
+                     <item>Because ZYFLO may affect how other medications work, always talk to your doctor before you start or stop taking any medicines while taking ZYFLO. This includes all prescription and nonprescription medicines. 
+
+</item>
+                     <item>Never take a larger dose of ZYFLO or take it more often than your doctor has prescribed. 
+
+</item>
+                     <item>It is also important for you to know that it may take several days or a few weeks to get the full benefit from ZYFLO and that you should not stop taking it if you do not feel better right away.</item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">What are the possible side effects of ZYFLO?</content>
+                  </paragraph>
+                  <paragraph>All medicines, including ZYFLO, cause side effects in some people. Some of the most common side effects are abdominal pain, upset stomach, and nausea. You should tell your doctor if you experience any new or unusual symptoms while taking ZYFLO. </paragraph>
+                  <paragraph>One side effect that occurs in a small number of patients is an increased release of substances from the liver called “enzymes.” Liver enzymes can be measured by a simple blood test. It is important that your doctor makes sure that your liver enzymes do not become too high and that it is safe for you to continue taking ZYFLO. To insure your safety, your doctor will do this blood test before you first start taking ZYFLO and repeat it on a regular basis while you are taking the medicine. </paragraph>
+                  <paragraph>Usually, even if your liver enzymes are increased, you will not notice any symptoms. However, some symptoms of increased liver enzymes are feeling more tired than normal, “flu-like” symptoms, itching, yellow skin, and/or yellow color in the whites of the eyes, or urine that is darker than normal.</paragraph>
+                  <paragraph>Sleep problems and changes in your behavior can happen while you take ZYFLO.  Tell your healthcare provider if you have any sleep problems or changes in behavior.</paragraph>
+                  <paragraph>If you notice these or any other symptoms that you think may be caused by ZYFLO, call your doctor immediately. Once the medicine is stopped, these symptoms usually go away. </paragraph>
+                  <paragraph>Even if you do not have any of these symptoms, you should continue to see your doctor for regular check-ups and liver enzyme tests. </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Where should I keep my supply of ZYLFO?</content>
+                  </paragraph>
+                  <paragraph>Keep ZYFLO and all medicines out of the reach of children. In case of an accidental overdose, call your doctor or a Poison Control Center immediately. </paragraph>
+                  <paragraph>Protect ZYFLO from light and replace the child-resistant cap each time after use. Store ZYFLO between 68<sup>◦</sup> - 77<sup>◦</sup> F (20<sup>◦</sup> - 25<sup>◦</sup>C). </paragraph>
+                  <paragraph>If you would like more information about ZYFLO, ask your doctor or pharmacist. If you have any questions or concerns about taking ZYFLO, discuss them with your doctor. </paragraph>
+                  <paragraph>Revised:  January 2017</paragraph>
+               </text>
+               <effectiveTime value="20251130"/>
+            </section>
+         </component>
+         <component>
+            <section ID="LINK_2fd93d07-97c5-4379-b1e4-c7882ee71bb5">
+               <id root="4de46ba8-85f8-475c-b273-0cbd555af534"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title/>
+               <text>
+                  <renderMultiMedia referencedObject="MM5"/>
+               </text>
+               <effectiveTime value="20251130"/>
+               <component>
+                  <observationMedia ID="MM5">
+                     <text>Zyflo Bottle</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="zyflo-5.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

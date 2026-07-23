@@ -1,0 +1,2132 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="0d9200dd-878e-4e93-98af-e1149e84c21f"/>
+   <code code="34391-3" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN PRESCRIPTION DRUG LABEL"/>
+   <title>These highlights do not include all the information needed to use ORGOVYX safely and effectively. See full prescribing information for ORGOVYX.<br/>
+      <br/>ORGOVYX (relugolix) tablets, for oral use <br/>Initial U.S. Approval:  2020
+</title>
+   <effectiveTime value="20251010"/>
+   <setId root="077a92f6-9f1b-479a-87c7-c92b5db6aa9c"/>
+   <versionNumber value="12"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id extension="131661746" root="1.3.6.1.4.1.519.1"/>
+            <name>Sumitomo Pharma America, Inc.</name>
+            <assignedEntity>
+               <assignedOrganization>
+                  <id extension="131661746" root="1.3.6.1.4.1.519.1"/>
+                  <name>Sumitomo Pharma America, Inc.</name>
+               </assignedOrganization>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section ID="dcl-dpl">
+               <id root="607ff85f-114c-40b0-ac4c-c934183be13c"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL PRODUCT DATA ELEMENTS SECTION"/>
+               <effectiveTime value="20251010"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="72974-120" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Orgovyx</name>
+                        <formCode code="C42931" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TABLET, FILM COATED"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>relugolix</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator value="120" unit="mg"/>
+                              <denominator value="1" unit="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="P76B05O5V6" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>relugolix</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="P76B05O5V6" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>relugolix</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="3OWL53L36A" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MANNITOL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="H8AV0SQX4D" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SODIUM STARCH GLYCOLATE TYPE A</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="UKE75GEA7F" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>HYDROXYPROPYL CELLULOSE (90000 WAMW)</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="70097M6I30" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>MAGNESIUM STEARATE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="0WZ8WG20P6" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>HYPROMELLOSE 2910 (6 MPA.S)</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="15FIX9V2JP" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>TITANIUM DIOXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="1K09F3G675" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>FERRIC OXIDE RED</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="R12CBM0EIZ" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CARNAUBA WAX</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="30" unit="1"/>
+                              <denominator value="1" unit="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="72974-120-01" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43173" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE, PLASTIC"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20201218"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV" displayName="Type 0: Not a Combination Product"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="30" unit="1"/>
+                              <denominator value="1" unit="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="72974-120-97" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43173" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE, PLASTIC"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C96974" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20211021"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV" displayName="Type 0: Not a Combination Product"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="16" unit="1"/>
+                              <denominator value="1" unit="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="72974-120-95" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43173" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE, PLASTIC"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C96974" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20230127"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV" displayName="Type 0: Not a Combination Product"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48326" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="RED" xsi:type="CE">
+                              <originalText>light red</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48340" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="FREEFORM" xsi:type="CE">
+                              <originalText>almond</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="PQ" value="11" unit="mm"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="INT" value="1"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="ST">R;120
+</value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20201218"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <approval>
+                           <id extension="NDA214621" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73594" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="NDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="s2">
+               <id root="959373b3-fb46-4b67-8ee2-437a7789ab9d"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>1  INDICATIONS AND USAGE
+</title>
+               <text>
+                  <paragraph>ORGOVYX is indicated for the treatment of adult patients with advanced prostate cancer.
+</paragraph>
+               </text>
+               <effectiveTime value="20241031"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>ORGOVYX is a gonadotropin-releasing hormone (GnRH) receptor antagonist indicated for the treatment of adult patients with advanced prostate cancer (<linkHtml href="#s2">1</linkHtml>).
+</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="s3">
+               <id root="22a94784-3d1b-4063-bf59-0c56206775e8"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>2  DOSAGE AND ADMINISTRATION
+</title>
+               <effectiveTime value="20251010"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered" styleCode="Disc">
+                           <item>Recommended Dosage: A loading dose of 360 mg on the first day of treatment followed by 120 mg taken orally once daily, at approximately the same time each day (<linkHtml href="#s4">2.1</linkHtml>).
+</item>
+                           <item>ORGOVYX can be taken with or without food (<linkHtml href="#s4">2.1</linkHtml>, <linkHtml href="#s43">12.3</linkHtml>). Instruct patients to swallow tablets whole and not to crush or chew tablets (<linkHtml href="#s4">2.1</linkHtml>).
+</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="s4">
+                     <id root="680f45f5-0e96-4945-ac0e-246054853ce5"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.1 Recommended Dosage
+</title>
+                     <text>
+                        <paragraph>Initiate treatment of ORGOVYX with a loading dose of 360 mg on the first day and continue treatment with a 120 mg dose taken orally once daily at approximately the same time each day.
+</paragraph>
+                        <paragraph>ORGOVYX can be taken with or without food <content styleCode="italics">[see Clinical Pharmacology (<linkHtml href="#s43">12.3</linkHtml>)]</content>. Instruct patients to swallow tablets whole and not to crush or chew tablets.
+</paragraph>
+                        <paragraph>Advise patients to take a missed dose of ORGOVYX as soon as they remember. If the dose was missed by more than 12 hours, patients should not take the missed dose and resume with the next scheduled dose.
+</paragraph>
+                        <paragraph>If treatment with ORGOVYX is interrupted for greater than 7 days, restart ORGOVYX with a loading dose of 360 mg on the first day, and continue with a dose of 120 mg once daily.
+</paragraph>
+                        <paragraph>In patients treated with GnRH receptor agonists and antagonists for prostate cancer, treatment is usually continued upon development of nonmetastatic or metastatic castration-resistant prostate cancer.
+</paragraph>
+                     </text>
+                     <effectiveTime value="20241031"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s5">
+                     <id root="558ce404-8816-4348-a759-d093ebbd6b03"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.2 Dosage Modifications for P-gp Inhibitors
+</title>
+                     <text>
+                        <paragraph>Avoid co-administration of ORGOVYX with oral P-gp inhibitors. If co-administration is unavoidable, take ORGOVYX first and separate dosing by at least 6 hours <content styleCode="italics">[</content>
+                           <content styleCode="italics">see Drug Interactions (<linkHtml href="#s18">7.1</linkHtml>) and Clinical Pharmacology (<linkHtml href="#s43">12.3</linkHtml>)</content>
+                           <content styleCode="italics">]</content>. Monitor patients for increased adverse reactions.
+</paragraph>
+                        <paragraph>Treatment with ORGOVYX may be interrupted for up to two weeks if a short course of treatment with a P-gp inhibitor is required. Resume ORGOVYX after the P-gp inhibitor is discontinued. If treatment with ORGOVYX is interrupted for greater than 7 days, restart ORGOVYX with a loading dose of 360 mg on the first day and continue with a dose of 120 mg once daily. 
+</paragraph>
+                     </text>
+                     <effectiveTime value="20251010"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s6">
+                     <id root="8050f18d-d1c3-44aa-a3e8-5d434ac47d07"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.3 Dosage Modifications for Combined P-gp and Strong CYP3A Inducers
+</title>
+                     <text>
+                        <paragraph>Avoid co-administration of ORGOVYX with combined P-gp and strong CYP3A inducers. If co-administration is unavoidable, increase the ORGOVYX dose to 240 mg once daily. After discontinuation of the combined P-gp and strong CYP3A inducer, resume the recommended ORGOVYX dose of 120 mg once daily <content styleCode="italics">[see Drug Interactions (<linkHtml href="#s18">7.1</linkHtml>)</content> and <content styleCode="italics">Clinical Pharmacology (<linkHtml href="#s43">12.3</linkHtml>)]</content>.
+</paragraph>
+                     </text>
+                     <effectiveTime value="20251010"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s7">
+               <id root="415f5dc8-4f1e-4bd8-a144-0daff32fe101"/>
+               <code code="43678-2" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE FORMS &amp; STRENGTHS SECTION"/>
+               <title>3  DOSAGE FORMS AND STRENGTHS
+</title>
+               <text>
+                  <paragraph>Tablets: 120 mg, light red, almond-shaped, film-coated, and debossed with “R” on one side and “120” on the other side.
+</paragraph>
+               </text>
+               <effectiveTime value="20241031"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered" styleCode="Disc">
+                           <item>Tablets: 120 mg (<linkHtml href="#s7">3</linkHtml>).
+</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="s8">
+               <id root="c943afa4-2bec-44f8-86f8-931009d5e5b1"/>
+               <code code="34070-3" codeSystem="2.16.840.1.113883.6.1" displayName="CONTRAINDICATIONS SECTION"/>
+               <title>4  CONTRAINDICATIONS
+</title>
+               <text>
+                  <paragraph>ORGOVYX is contraindicated in patients with severe hypersensitivity to relugolix or to any of the product components.
+</paragraph>
+               </text>
+               <effectiveTime value="20241031"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Known severe hypersensitivity to relugolix or to any of the product components (<linkHtml href="#s8">4</linkHtml>).
+</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="s9">
+               <id root="9b2ee2e4-f548-49a6-9ab3-a6425af9ebb0"/>
+               <code code="43685-7" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS AND PRECAUTIONS SECTION"/>
+               <title>5  WARNINGS AND PRECAUTIONS
+</title>
+               <effectiveTime value="20251010"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered" styleCode="Disc">
+                           <item>QT/QTc Interval Prolongation: Androgen deprivation therapy may prolong the QT interval (<linkHtml href="#s10">5.1</linkHtml>).
+</item>
+                           <item>Hypersensitivity: ORGOVYX can cause hypersensitivity reactions, including angioedema. Withhold ORGOVYX in patients who experience symptoms of hypersensitivity. Discontinue ORGOVYX for severe hypersensitivity reactions and manage as clinically indicated (<linkHtml href="#s11">5.2</linkHtml>).
+</item>
+                           <item>Embryo-Fetal Toxicity: ORGOVYX can cause fetal harm. Advise males with female partners of reproductive potential to use effective contraception (<linkHtml href="#s12">5.3</linkHtml>, <linkHtml href="#s22">8.1</linkHtml>, <linkHtml href="#s30">8.3</linkHtml>).
+</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="s10">
+                     <id root="7f65ee0e-a9b8-4b8f-aa76-2666a6e3fbfc"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.1  QT/QTc Interval Prolongation
+</title>
+                     <text>
+                        <paragraph>Androgen deprivation therapy, such as ORGOVYX, may prolong the QT/QTc interval. Providers should consider whether the benefits of androgen deprivation therapy outweigh the potential risks in patients with congenital long QT syndrome, congestive heart failure, or frequent electrolyte abnormalities and in patients taking drugs known to prolong the QT interval. Electrolyte abnormalities should be corrected. Consider periodic monitoring of electrocardiograms and electrolytes <content styleCode="italics">[see Clinical Pharmacology (<linkHtml href="#s40">12.2</linkHtml>)].</content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20251010"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s11">
+                     <id root="efb0f862-2b64-4933-8ea9-5dbb4c848ce2"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.2  Hypersensitivity Reactions
+</title>
+                     <text>
+                        <paragraph>ORGOVYX is contraindicated in patients with severe hypersensitivity to relugolix or any of the product components <content styleCode="italics">[see Contraindications (<linkHtml href="#s8">4</linkHtml>)]</content>. Hypersensitivity reactions, including pharyngeal edema and other serious cases of angioedema, have been reported postmarketing in patients treated with ORGOVYX. 
+</paragraph>
+                        <paragraph>In HERO, patients treated with relugolix reported angioedema (0.2%) <content styleCode="italics">[see Clinical Trials Experience (<linkHtml href="#s15">6.1</linkHtml>)]</content>.
+</paragraph>
+                        <paragraph>Advise patients who experience any symptoms of hypersensitivity to temporarily discontinue ORGOVYX and promptly seek medical care.
+</paragraph>
+                        <paragraph>Discontinue ORGOVYX for severe hypersensitivity reactions and manage as clinically indicated.
+</paragraph>
+                     </text>
+                     <effectiveTime value="20251010"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s12">
+                     <id root="44b56f2b-df42-4169-852c-9af876fe21e2"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.3  Embryo-Fetal Toxicity
+</title>
+                     <text>
+                        <paragraph>The safety and efficacy of ORGOVYX have not been established in females. Based on findings in animals and mechanism of action, ORGOVYX can cause fetal harm and loss of pregnancy when administered to a pregnant female. In an animal reproduction study, oral administration of relugolix to pregnant rabbits during the period of organogenesis caused embryo-fetal lethality at maternal exposures that were 0.3 times the human exposure at the recommended dose of 120 mg daily based on area under the curve (AUC). Advise males with female partners of reproductive potential to use effective contraception during treatment and for 2 weeks after the last dose of ORGOVYX <content styleCode="italics">[see Use in Specific Populations (<linkHtml href="#s22">8.1</linkHtml>, <linkHtml href="#s30">8.3</linkHtml>) and Clinical Pharmacology (<linkHtml href="#s39">12.1</linkHtml>)]</content>.
+</paragraph>
+                     </text>
+                     <effectiveTime value="20241031"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s13">
+                     <id root="e00d96fe-d0a4-4209-959e-cd269e5245a2"/>
+                     <code code="34075-2" codeSystem="2.16.840.1.113883.6.1" displayName="LABORATORY TESTS SECTION"/>
+                     <title>5.4  Laboratory Testing
+</title>
+                     <text>
+                        <paragraph>Therapy with ORGOVYX results in suppression of the pituitary gonadal system. Results of diagnostic tests of the pituitary gonadotropic and gonadal functions conducted during and after ORGOVYX may be affected. The therapeutic effect of ORGOVYX should be monitored by measuring serum concentrations of prostate specific antigen (PSA) periodically. If PSA increases, serum concentrations of testosterone should be measured.
+</paragraph>
+                     </text>
+                     <effectiveTime value="20241031"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s14">
+               <id root="23028dfa-c7e4-4f4d-ab33-fcfcaf2fd3d5"/>
+               <code code="34084-4" codeSystem="2.16.840.1.113883.6.1" displayName="ADVERSE REACTIONS SECTION"/>
+               <title>6  ADVERSE REACTIONS
+</title>
+               <text>
+                  <paragraph>The following clinically significant adverse reactions are described elsewhere in the labeling:
+</paragraph>
+                  <list listType="unordered" styleCode="Disc">
+                     <item>QT/QTc Interval Prolongation <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#s10">5.1</linkHtml>)]</content>.
+</item>
+                  </list>
+               </text>
+               <effectiveTime value="20251010"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>The most common adverse reactions (≥ 10%) and laboratory abnormalities (≥ 15%) were hot flush, glucose increased, triglycerides increased, musculoskeletal pain, hemoglobin decreased, alanine aminotransferase (ALT) increased, fatigue, aspartate aminotransferase (AST) increased, constipation, and diarrhea (<linkHtml href="#s15">6.1</linkHtml>).
+</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">To report SUSPECTED ADVERSE REACTIONS, contact Sumitomo Pharma America, at 1-833-696-8268 or FDA at 1-800-FDA-1088 or </content>
+                           <content styleCode="bold underline">www.fda.gov/medwatch</content>
+                           <content styleCode="bold">.</content>
+                        </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="s15">
+                     <id root="b8f55c85-ed9d-4679-b527-6107be167c8c"/>
+                     <code code="90374-0" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL TRIALS EXPERIENCE SECTION"/>
+                     <title>6.1  Clinical Trials Experience
+</title>
+                     <text>
+                        <paragraph>Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice.
+</paragraph>
+                        <paragraph>The safety of ORGOVYX was evaluated in HERO, a randomized (2:1), open-label, clinical study in patients with advanced prostate cancer <content styleCode="italics">[see Clinical Studies (<linkHtml href="#s62">14</linkHtml>)]</content>. Patients received orally administered ORGOVYX as a loading dose of 360 mg on the first day followed by 120 mg taken orally once daily (n = 622) or received leuprolide acetate administered by depot injection at doses of 22.5 mg (n = 264) or 11.25 mg (n = 44) per local guidelines every 12 weeks (n = 308). Leuprolide acetate 11.25 mg is a dosing regimen that is not recommended for this indication in the US. Among patients who received ORGOVYX, 91% were exposed for at least 48 weeks. Ninety-nine (16%) patients received concomitant radiotherapy and 17 (3%) patients received concomitant enzalutamide with ORGOVYX.
+</paragraph>
+                        <paragraph>Serious adverse reactions occurred in 12% of patients receiving ORGOVYX. Serious adverse reactions in ≥ 0.5% of patients included myocardial infarction (0.8%), acute kidney injury (0.6%), arrhythmia (0.6%), hemorrhage (0.6%), and urinary tract infection (0.5%). Fatal adverse reactions occurred in 0.8% of patients receiving ORGOVYX including metastatic lung cancer (0.3%), myocardial infarction (0.3%), and acute kidney injury (0.2%). Fatal and non-fatal myocardial infarction and stroke were reported in 2.7% of patients receiving ORGOVYX.
+</paragraph>
+                        <paragraph>Permanent discontinuation of ORGOVYX due to an adverse reaction occurred in 3.5% of patients. Adverse reactions which resulted in permanent discontinuation of ORGOVYX in ≥ 0.3 % of patients included atrioventricular block (0.3%), cardiac failure (0.3%), hemorrhage (0.3%), increased transaminases (0.3%), abdominal pain (0.3%), and pneumonia (0.3%).
+</paragraph>
+                        <paragraph>Dosage interruptions of ORGOVYX due to an adverse reaction occurred in 2.7% of patients. Adverse reactions which required dosage interruption in ≥ 0.3% of patients included fracture (0.3%).
+</paragraph>
+                        <paragraph>The most common adverse reactions (≥ 10%) and laboratory abnormalities (≥ 15%) were hot flush (54%), glucose increased (44%), triglycerides increased (35%), musculoskeletal pain (30%), hemoglobin decreased (28%), alanine aminotransferase increased (ALT) (27%), fatigue (26%), aspartate aminotransferase increased (AST) (18%), constipation (12%), and diarrhea (12%).
+</paragraph>
+                        <paragraph>
+                           <linkHtml href="#t1">Table 1</linkHtml> summarizes the adverse reactions in HERO.
+</paragraph>
+                        <table ID="t1" width="100%">
+                           <caption>Table 1: Adverse Reactions ( ≥ 10%) of Patients with Advanced Prostate Cancer Who Received ORGOVYX in HERO
+</caption>
+                           <col width="45.020%" align="left"/>
+                           <col width="13.780%" align="left"/>
+                           <col width="13.500%" align="left"/>
+                           <col width="13.400%" align="left"/>
+                           <col width="14.300%" align="left"/>
+                           <tfoot>
+                              <tr>
+                                 <td colspan="5" align="left" valign="top">
+                                    <paragraph styleCode="footnote">
+                                       <sup>a</sup> Includes arthralgia, back pain, pain in extremity, musculoskeletal pain, myalgia, bone pain, neck pain, arthritis, musculoskeletal stiffness, non-cardiac chest pain, musculoskeletal chest pain, spinal pain, and musculoskeletal discomfort.
+</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td colspan="5" align="left" valign="top">
+                                    <paragraph styleCode="footnote">
+                                       <sup>b</sup> Includes fatigue and asthenia.
+</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td colspan="5" align="left" valign="top">
+                                    <paragraph styleCode="footnote">
+                                       <sup>c</sup> Includes diarrhea and colitis.
+</paragraph>
+                                 </td>
+                              </tr>
+                           </tfoot>
+                           <tbody>
+                              <tr>
+                                 <td rowspan="2" align="center" valign="middle" styleCode="Toprule Botrule Lrule Rrule">
+                                    <content styleCode="bold">Adverse Reaction</content>
+                                 </td>
+                                 <td colspan="2" align="center" valign="bottom" styleCode="Toprule Botrule Rrule">
+                                    <content styleCode="bold">ORGOVYX <br/>N = 622</content>
+                                 </td>
+                                 <td colspan="2" align="center" valign="bottom" styleCode="Toprule Botrule Rrule">
+                                    <content styleCode="bold">Leuprolide Acetate</content>
+                                    <br/>
+                                    <content styleCode="bold">N = 308</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">
+                                    <content styleCode="bold">All Grades</content>
+                                    <br/>
+                                    <content styleCode="bold">(%)</content>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">
+                                    <content styleCode="bold">Grade 3-4</content>
+                                    <br/>
+                                    <content styleCode="bold">(%)</content>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">
+                                    <content styleCode="bold">All Grades</content>
+                                    <br/>
+                                    <content styleCode="bold">(%)</content>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">
+                                    <content styleCode="bold">Grade 3-4</content>
+                                    <br/>
+                                    <content styleCode="bold">(%)</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">
+                                    <content styleCode="bold">Vascular disorders</content>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule"/>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule"/>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule"/>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule"/>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">       Hot flush
+</td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">54
+</td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">0.6
+</td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">52
+</td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">0
+</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">
+                                    <content styleCode="bold">Musculoskeletal and connective tissue disorders</content>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule"/>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule"/>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule"/>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule"/>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">       Musculoskeletal pain<sup>a</sup>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">30
+</td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">1.1
+</td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">29
+</td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">1.6
+</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">
+                                    <content styleCode="bold">General</content>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule"/>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule"/>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule"/>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule"/>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">       Fatigue<sup>b</sup>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">26
+</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">0.3
+</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">24
+</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">0
+</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">
+                                    <content styleCode="bold">Gastrointestinal disorders</content>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule"/>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule"/>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule"/>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule"/>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">       Diarrhea<sup>c</sup>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">12
+</td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">0.2
+</td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">7
+</td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">0
+</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">       Constipation
+</td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">12
+</td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">0
+</td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">10
+</td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">0
+</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>Clinically relevant adverse reactions in &lt; 10% of patients who received ORGOVYX included increased weight, insomnia, gynecomastia, hyperhidrosis, depression, decreased libido, and angioedema.
+</paragraph>
+                        <paragraph>
+                           <linkHtml href="#t2">Table 2</linkHtml> summarizes the laboratory abnormalities in HERO.
+</paragraph>
+                        <table ID="t2" width="100%">
+                           <caption>Table 2: Select Laboratory Abnormalities ( ≥ 15%) That Worsened from Baseline in Patients with Advanced Prostate Cancer Who Received ORGOVYX in HERO
+</caption>
+                           <col width="22.244%" align="left"/>
+                           <col width="19.384%" align="left"/>
+                           <col width="20.004%" align="left"/>
+                           <col width="16.923%" align="left"/>
+                           <col width="21.444%" align="left"/>
+                           <thead>
+                              <tr>
+                                 <th rowspan="2" align="center" valign="middle" styleCode="Toprule Botrule Lrule Rrule">
+                                    <content styleCode="bold">Laboratory Test</content>
+                                 </th>
+                                 <th colspan="2" align="center" valign="middle" styleCode="Toprule Botrule Rrule">
+                                    <content styleCode="bold">ORGOVYX</content>
+                                    <content styleCode="bold">
+                                       <sup>a</sup>
+                                    </content>
+                                 </th>
+                                 <th colspan="2" align="center" valign="middle" styleCode="Toprule Botrule Rrule">
+                                    <content styleCode="bold">Leuprolide Acetate</content>
+                                    <content styleCode="bold">
+                                       <sup>a</sup>
+                                    </content>
+                                 </th>
+                              </tr>
+                              <tr>
+                                 <th align="center" valign="middle" styleCode="Botrule Rrule">
+                                    <content styleCode="bold">All Grades</content>
+                                    <br/>
+                                    <content styleCode="bold">(%)</content>
+                                 </th>
+                                 <th align="center" valign="middle" styleCode="Botrule Rrule">
+                                    <content styleCode="bold">Grade 3-4</content>
+                                    <br/>
+                                    <content styleCode="bold">(%)</content>
+                                 </th>
+                                 <th align="center" valign="middle" styleCode="Botrule Rrule">
+                                    <content styleCode="bold">All Grades</content>
+                                    <br/>
+                                    <content styleCode="bold">(%)</content>
+                                 </th>
+                                 <th align="center" valign="middle" styleCode="Botrule Rrule">
+                                    <content styleCode="bold">Grade 3-4</content>
+                                    <br/>
+                                    <content styleCode="bold">(%)</content>
+                                 </th>
+                              </tr>
+                           </thead>
+                           <tfoot>
+                              <tr>
+                                 <td colspan="5" align="left" valign="top">
+                                    <paragraph styleCode="footnote">
+                                       <sup>a</sup> The denominator used to calculate the rate varied from 611 to 619 in the ORGOVYX arm and from 301 to 306 in the leuprolide arm based on the number of patients with a baseline value and at least one post-treatment value.
+</paragraph>
+                                 </td>
+                              </tr>
+                           </tfoot>
+                           <tbody>
+                              <tr>
+                                 <td align="left" valign="middle" styleCode="Botrule Lrule Rrule">
+                                    <content styleCode="bold">Chemistry</content>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule"/>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule"/>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule"/>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule"/>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="middle" styleCode="Botrule Lrule Rrule">       Glucose increased
+</td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">44
+</td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">2.9
+</td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">54
+</td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">6
+</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="middle" styleCode="Botrule Lrule Rrule">       Triglycerides increased
+</td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">35
+</td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">2
+</td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">36
+</td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">0.7
+</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="middle" styleCode="Botrule Lrule Rrule">       ALT increased
+</td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">27
+</td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">0.3
+</td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">28
+</td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">0
+</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="middle" styleCode="Botrule Lrule Rrule">
+                                    <content styleCode="bold">       </content>AST increased
+</td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">18
+</td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">0
+</td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">19
+</td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">0.3
+</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="middle" styleCode="Botrule Lrule Rrule">
+                                    <content styleCode="bold">Hematology</content>
+                                 </td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule"/>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule"/>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule"/>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule"/>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="middle" styleCode="Botrule Lrule Rrule">       Hemoglobin decreased
+</td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">28
+</td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">0.5
+</td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">29
+</td>
+                                 <td align="center" valign="middle" styleCode="Botrule Rrule">0.7
+</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </text>
+                     <effectiveTime value="20251010"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s16">
+                     <id root="0619edf5-8dff-4d42-b898-a8d3f30351c4"/>
+                     <code code="90375-7" codeSystem="2.16.840.1.113883.6.1" displayName="POSTMARKETING EXPERIENCE SECTION"/>
+                     <title>6.2  Postmarketing Experience
+</title>
+                     <text>
+                        <paragraph>The following adverse reactions have been identified during post-approval use of ORGOVYX. Because these reactions are reported voluntarily from a population of uncertain size, it is not always possible to reliably estimate their frequency or establish a causal relationship to drug exposure.
+</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Immune system disorders:</content> hypersensitivity, including angioedema and urticaria.
+</paragraph>
+                     </text>
+                     <effectiveTime value="20241031"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s17">
+               <id root="490c4348-c3fe-4ad0-855c-43e4263b371e"/>
+               <code code="34073-7" codeSystem="2.16.840.1.113883.6.1" displayName="DRUG INTERACTIONS SECTION"/>
+               <title>7  DRUG INTERACTIONS
+</title>
+               <effectiveTime value="20251010"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>P-gp Inhibitors: Avoid co-administration. If unavoidable, take ORGOVYX first, separate dosing by at least 6 hours, and monitor patients more frequently for adverse reactions (<linkHtml href="#s5">2.2</linkHtml>, <linkHtml href="#s18">7.1</linkHtml>).
+</paragraph>
+                        <paragraph>Combined P-gp and Strong CYP3A Inducers: Avoid co-administration. If unavoidable, increase the ORGOVYX dose to 240 mg once daily (<linkHtml href="#s6">2.3</linkHtml>, <linkHtml href="#s18">7.1</linkHtml>).
+</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="s18">
+                     <id root="b0623bda-1018-43df-8bd4-f11be9f7bba5"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>7.1  Effect of Other Drugs on ORGOVYX
+</title>
+                     <effectiveTime value="20251010"/>
+                     <component>
+                        <section ID="s19">
+                           <id root="3c74536c-96a7-4c52-9cce-9be159d8db80"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">P-gp Inhibitors</content>
+                              </paragraph>
+                              <paragraph>Relugolix is a P-gp substrate. Co-administration of ORGOVYX with an oral P-gp inhibitor increases relugolix exposure <content styleCode="italics">[see Clinical Pharmacology (<linkHtml href="#s43">12.3</linkHtml>)],</content> which may increase the risk of adverse reactions associated with ORGOVYX.
+</paragraph>
+                              <paragraph>Avoid co-administration of ORGOVYX with oral P-gp inhibitors.
+</paragraph>
+                              <paragraph>If co-administration with an oral P-gp inhibitor cannot be avoided, take ORGOVYX first and separate dosing by at least 6 hours. Monitor patients for increased adverse reactions <content styleCode="italics">[see Dosage and Administration (<linkHtml href="#s5">2.2</linkHtml>)]</content>.
+</paragraph>
+                              <paragraph> Treatment with ORGOVYX may be interrupted for up to two weeks if a short course of treatment with a P-gp inhibitor is required. Resume ORGOVYX after the P-gp inhibitor is discontinued. If treatment with ORGOVYX is interrupted for greater than 7 days, restart ORGOVYX with a loading dose of 360 mg on the first day and continue with a dose of 120 mg once daily. 
+</paragraph>
+                           </text>
+                           <effectiveTime value="20251010"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s20">
+                           <id root="1336ad60-6da0-4b6b-bb14-b6c71722482b"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Combined P-gp and Strong CYP3A Inducers</content>
+                              </paragraph>
+                              <paragraph>Relugolix is a P-gp and CYP3A substrate. Co-administration of ORGOVYX with a combined P-gp and strong CYP3A inducer decreases relugolix exposure, which may reduce the effects of ORGOVYX <content styleCode="italics">[see Clinical Pharmacology (<linkHtml href="#s43">12.3</linkHtml>)].</content>
+                              </paragraph>
+                              <paragraph>Avoid co-administration of ORGOVYX with combined P-gp and strong CYP3A inducers.
+</paragraph>
+                              <paragraph>If co-administration cannot be avoided, increase the ORGOVYX dose. After discontinuation of the combined P-gp and strong CYP3A inducer, resume ORGOVYX once daily at the same dose <content styleCode="italics">[see Dosage and Administration (<linkHtml href="#s6">2.3</linkHtml>)]</content>.
+</paragraph>
+                           </text>
+                           <effectiveTime value="20251010"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s21">
+               <id root="86867ea2-87f4-49f7-9209-67232e3155ff"/>
+               <code code="43684-0" codeSystem="2.16.840.1.113883.6.1" displayName="USE IN SPECIFIC POPULATIONS SECTION"/>
+               <title>8  USE IN SPECIFIC POPULATIONS
+</title>
+               <effectiveTime value="20251010"/>
+               <component>
+                  <section ID="s22">
+                     <id root="5c8ef2ef-57aa-498e-b861-e074c1f3ba5d"/>
+                     <code code="42228-7" codeSystem="2.16.840.1.113883.6.1" displayName="PREGNANCY SECTION"/>
+                     <title>8.1  Pregnancy
+</title>
+                     <effectiveTime value="20251010"/>
+                     <component>
+                        <section ID="s23">
+                           <id root="6409664e-948f-4f8d-a9b9-26c83aa55fb4"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Risk Summary</content>
+                              </paragraph>
+                              <paragraph>The safety and efficacy of ORGOVYX have not been established in females. Based on findings in animals and mechanism of action, ORGOVYX can cause fetal harm and loss of pregnancy when administered to a pregnant female <content styleCode="italics">[see Clinical Pharmacology (<linkHtml href="#s39">12.1</linkHtml>)]</content>. There are no human data on the use of ORGOVYX in pregnant females to inform the drug-associated risk. In an animal reproduction study, oral administration of relugolix to pregnant rabbits during organogenesis caused embryo-fetal lethality at maternal exposures that were 0.3 times the human exposure at the recommended dose of 120 mg daily based on AUC (<content styleCode="italics">see <linkHtml href="#s24">Data</linkHtml>
+                                 </content>). Advise patients of the potential risk to the fetus.
+</paragraph>
+                           </text>
+                           <effectiveTime value="20251010"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s24">
+                           <id root="cc5e06df-73a6-4ce2-a384-c2d752b79b78"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Data</content>
+                              </paragraph>
+                           </text>
+                           <effectiveTime value="20241031"/>
+                           <component>
+                              <section ID="s25">
+                                 <id root="6f1ebeed-493e-45de-8321-fb633e9f5bce"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <text>
+                                    <paragraph>
+                                       <content styleCode="italics">Animal Data</content>
+                                    </paragraph>
+                                    <paragraph>In an embryo-fetal development study, oral administration of relugolix to pregnant rabbits during the period of organogenesis resulted in abortion, total litter loss, or decreased number of live fetuses at a dose of 9 mg/kg/day (approximately 0.3 times the human exposure at the recommended dose of 120 mg daily based on AUC).
+</paragraph>
+                                 </text>
+                                 <effectiveTime value="20241031"/>
+                              </section>
+                           </component>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s26">
+                     <id root="37287b2b-7642-4168-9858-6f5c69a024dc"/>
+                     <code code="77290-5" codeSystem="2.16.840.1.113883.6.1" displayName="LACTATION SECTION"/>
+                     <title>8.2  Lactation
+</title>
+                     <effectiveTime value="20251010"/>
+                     <component>
+                        <section ID="s27">
+                           <id root="6793a762-674a-4066-93d4-0f09367fda75"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Risk Summary</content>
+                              </paragraph>
+                              <paragraph>The safety and efficacy of ORGOVYX have not been established in females.
+</paragraph>
+                              <paragraph>Relugolix was detected in human breast milk (<content styleCode="italics">see <linkHtml href="#s28">Data</linkHtml>
+                                 </content>). There are no data on the effects of relugolix or its metabolites on the breastfed child, or the effects on milk production.
+</paragraph>
+                           </text>
+                           <effectiveTime value="20251010"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s28">
+                           <id root="d4e60823-2f3f-4979-b8dc-eaff0c6de64c"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Data</content>
+                              </paragraph>
+                              <paragraph>In a milk-only lactation study in 8 healthy adult lactating women, the mean total amount of relugolix recovered in human breast milk over the first 24 hours was 0.003 mg and over 120 hours (5 days) was 0.004 mg following a single, oral, maternal dose of 40 mg. The mean calculated daily infant dose was 0.0006 mg/kg/day using 0.003 mg (the amount recovered in human breast milk over the first 24 hours). The relative infant dose was 0.1% of the maternal weight-adjusted dose of 40 mg. 
+										</paragraph>
+                           </text>
+                           <effectiveTime value="20251010"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s30">
+                     <id root="74c41cc5-adef-46f1-b0a9-8e508cb0dffa"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>8.3  Females and Males of Reproductive Potential
+</title>
+                     <effectiveTime value="20241031"/>
+                     <component>
+                        <section ID="s31">
+                           <id root="28c9b5da-8924-4164-b329-177dedce9777"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Contraception</content>
+                              </paragraph>
+                           </text>
+                           <effectiveTime value="20241031"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s32">
+                           <id root="d86f8dab-913b-4b9e-93d0-f6c154a4cfed"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="italics">Males</content>
+                              </paragraph>
+                              <paragraph>Based on findings in animals and mechanism of action, advise male patients with female partners of reproductive potential to use effective contraception during treatment and for 2 weeks after the last dose of ORGOVYX <content styleCode="italics">[see Use in Specific Populations (<linkHtml href="#s22">8.1</linkHtml>)].</content>
+                              </paragraph>
+                           </text>
+                           <effectiveTime value="20241031"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s33">
+                           <id root="1481933d-ef10-40b7-a4b6-17ff6688073c"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Infertility</content>
+                              </paragraph>
+                           </text>
+                           <effectiveTime value="20241031"/>
+                           <component>
+                              <section ID="s34">
+                                 <id root="b21610f5-7635-4f84-9e58-e168ccf4f6a7"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <text>
+                                    <paragraph>
+                                       <content styleCode="italics">Males</content>
+                                    </paragraph>
+                                    <paragraph>Based on findings in animals and mechanism of action, ORGOVYX may impair fertility in males of reproductive potential <content styleCode="italics">[see Clinical Pharmacology (<linkHtml href="#s39">12.1</linkHtml>) and Nonclinical Toxicology (<linkHtml href="#s60">13.1</linkHtml>)].</content>
+                                    </paragraph>
+                                 </text>
+                                 <effectiveTime value="20241031"/>
+                              </section>
+                           </component>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s35">
+                     <id root="f5687d1b-20a1-418d-ab4d-92e09ca1f398"/>
+                     <code code="34081-0" codeSystem="2.16.840.1.113883.6.1" displayName="PEDIATRIC USE SECTION"/>
+                     <title>8.4  Pediatric Use
+</title>
+                     <text>
+                        <paragraph>The safety and efficacy of ORGOVYX in pediatric patients have not been established.
+</paragraph>
+                     </text>
+                     <effectiveTime value="20241031"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s36">
+                     <id root="28dec1c3-bb2b-4b32-a463-9c3c34f1ec33"/>
+                     <code code="34082-8" codeSystem="2.16.840.1.113883.6.1" displayName="GERIATRIC USE SECTION"/>
+                     <title>8.5  Geriatric Use
+</title>
+                     <text>
+                        <paragraph>Of the 622 patients who received ORGOVYX in the HERO study, 81% were 65 years of age or older, while 35% were 75 years of age or older. No overall differences in safety or effectiveness were observed between these subjects and younger subjects. There was no clinically relevant impact of age on the pharmacokinetics of ORGOVYX or testosterone response based on population pharmacokinetic and pharmacokinetic/pharmacodynamic analyses in men 45 to 91 years of age.
+</paragraph>
+                     </text>
+                     <effectiveTime value="20241031"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s37">
+               <id root="07118e0e-b80f-4bd2-aa26-05924fca2e38"/>
+               <code code="34089-3" codeSystem="2.16.840.1.113883.6.1" displayName="DESCRIPTION SECTION"/>
+               <title>11  DESCRIPTION
+</title>
+               <text>
+                  <paragraph>Relugolix is a nonpeptide small molecule, GnRH receptor antagonist. The chemical name is N-(4-{1-[(2,6-difluorophenyl)methyl]-5-[(dimethylamino)methyl]-3-(6-methoxypyridazin-3-yl)-2,4-dioxo-1,2,3,4-tetrahydrothieno[2,3-d]pyrimidin-6-yl}phenyl)-N'-methoxyurea.
+</paragraph>
+                  <paragraph>The molecular weight is 623.63 daltons and the molecular formula is C<sub>29</sub>H<sub>27</sub>F<sub>2</sub>N<sub>7</sub>O<sub>5</sub>S. The structural formula is:
+</paragraph>
+                  <paragraph>
+                     <renderMultiMedia ID="f01" referencedObject="mm01"/>
+                  </paragraph>
+                  <paragraph>Relugolix is a white to off-white to slightly yellow solid with a solubility of 0.04 mg per mL in water at 25°C.
+</paragraph>
+                  <paragraph>ORGOVYX is provided as film-coated tablets for oral administration. Each tablet contains 120 mg of relugolix. The inactive ingredients are mannitol, sodium starch glycolate, hydroxypropyl cellulose, magnesium stearate, hypromellose, titanium dioxide, ferric oxide red, and carnauba wax.
+</paragraph>
+               </text>
+               <effectiveTime value="20251010"/>
+               <component>
+                  <observationMedia ID="mm01">
+                     <text>Structural Formula
+</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="org01-0002-01.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s38">
+               <id root="9720df7c-cc6b-440d-b8a4-60acc55d5e31"/>
+               <code code="34090-1" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+               <title>12  CLINICAL PHARMACOLOGY
+</title>
+               <effectiveTime value="20241031"/>
+               <component>
+                  <section ID="s39">
+                     <id root="be7fae55-8d1d-4d7a-b9ee-848e80ea8398"/>
+                     <code code="43679-0" codeSystem="2.16.840.1.113883.6.1" displayName="MECHANISM OF ACTION SECTION"/>
+                     <title>12.1 Mechanism of Action
+</title>
+                     <text>
+                        <paragraph>Relugolix is a nonpeptide GnRH receptor antagonist that competitively binds to pituitary GnRH receptors, thereby, reducing the release of luteinizing hormone (LH) and follicle-stimulating hormone (FSH), and consequently testosterone.
+</paragraph>
+                     </text>
+                     <effectiveTime value="20241031"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s40">
+                     <id root="6d20cb92-eef0-42ba-af1f-8a9331f38a57"/>
+                     <code code="43681-6" codeSystem="2.16.840.1.113883.6.1" displayName="PHARMACODYNAMICS SECTION"/>
+                     <title>12.2  Pharmacodynamics
+</title>
+                     <effectiveTime value="20251010"/>
+                     <component>
+                        <section ID="s41">
+                           <id root="846f35b3-a53a-4851-b5b9-40394e05e646"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Pituitary and Gonadal Hormones</content>
+                              </paragraph>
+                              <paragraph>Relugolix reduced LH, FSH (<linkHtml href="#fig1">Figure 1</linkHtml>), and testosterone concentrations after oral administration of the recommended loading dose of 360 mg and a 120 mg dose once daily.
+</paragraph>
+                              <paragraph>Out of 622 patients, 56% had testosterone concentrations at castrate levels (&lt; 50 ng/dL) by the first sampling timepoint at Day 4, and 97% maintained castrate levels of testosterone through 48 weeks. In a substudy of 137 patients who did not receive subsequent androgen deprivation therapy for at least 90 days after discontinuation of relugolix, the cumulative incidence rate of achieving testosterone concentrations above the lower limit of the normal range (&gt; 280 ng/dL) or baseline at 90 days was 55% <content styleCode="italics">[see Clinical Studies (<linkHtml href="#s62">14</linkHtml>)]</content>.
+</paragraph>
+                              <paragraph ID="fig1">
+                                 <content styleCode="bold">Figure 1: Mean (± 95% CI) Follicle-Stimulating Hormone and Luteinizing Hormone Concentrations over Time in HERO</content>
+                              </paragraph>
+                              <paragraph>
+                                 <renderMultiMedia ID="f02" referencedObject="mm02"/>
+                              </paragraph>
+                           </text>
+                           <effectiveTime value="20251010"/>
+                           <component>
+                              <observationMedia ID="mm02">
+                                 <text>Figure 1
+</text>
+                                 <value xsi:type="ED" mediaType="image/jpeg">
+                                    <reference value="org01-0002-02.jpg"/>
+                                 </value>
+                              </observationMedia>
+                           </component>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s42">
+                           <id root="75083480-76bc-4bdf-aebb-50d56953b52a"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Cardiac Electrophysiology</content>
+                              </paragraph>
+                              <paragraph>At a single 60 mg or 360 mg relugolix dose (0.17 or 1 times the recommended loading dose, respectively), clinically significant QTc interval prolongation was not observed. 
+</paragraph>
+                           </text>
+                           <effectiveTime value="20251010"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s43">
+                     <id root="802e951d-5de9-4d1a-824d-2230ece22438"/>
+                     <code code="43682-4" codeSystem="2.16.840.1.113883.6.1" displayName="PHARMACOKINETICS SECTION"/>
+                     <title>12.3  Pharmacokinetics
+</title>
+                     <text>
+                        <paragraph>After administration of single doses ranging from 60 mg to 360 mg (0.17 to 1 times the recommended loading dose), total systemic exposure (AUC) and the maximum concentration (C<sub>max</sub>) of relugolix increases in an approximately dose proportional manner. After administration of multiple doses of relugolix once daily, the AUC of relugolix increases in an approximately dose proportional manner while the C<sub>max</sub> increase is greater than dose proportional for doses from 20 mg to 180 mg (0.17 to 1.5 times the recommended daily dose).
+</paragraph>
+                        <paragraph>After administration of a single 360 mg loading dose, the mean (± standard deviation [± SD]) AUC and C<sub>max</sub> of relugolix are 985 (± 742) ng.hr/mL and 215 (± 184) ng/mL, respectively. After administration of 120 mg once daily, the mean (± SD) AUC and C<sub>max</sub> of relugolix at steady-state are 407 (± 168) ng.hr/mL and 70 (± 65) ng/mL, respectively. The accumulation of relugolix upon once daily administration is approximately 2-fold.
+</paragraph>
+                     </text>
+                     <effectiveTime value="20251010"/>
+                     <component>
+                        <section ID="s44">
+                           <id root="05b20e29-d6a3-4c0f-ae96-0ac978339dc6"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Absorption</content>
+                              </paragraph>
+                              <paragraph>Relugolix is a substrate for intestinal P-gp. The mean (CV%) absolute bioavailability of relugolix is 12% (62%). The median (min, max) time to maximum concentration (T<sub>max</sub>) of relugolix is 2.25 (0.5, 5.0) hours.
+</paragraph>
+                           </text>
+                           <effectiveTime value="20251010"/>
+                           <component>
+                              <section ID="s45">
+                                 <id root="78b6d379-8448-4dc3-9747-5351981b6abb"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <text>
+                                    <paragraph>
+                                       <content styleCode="italics">Effect of Food</content>
+                                    </paragraph>
+                                    <paragraph>No clinically significant differences in the pharmacokinetics of relugolix were observed following administration of a high-calorie, high-fat meal (approximately 800 to 1000 calories with 500, 220, and 124 from fat, carbohydrate, and protein, respectively).
+</paragraph>
+                                 </text>
+                                 <effectiveTime value="20251010"/>
+                              </section>
+                           </component>
+                           <component>
+                              <section ID="s46">
+                                 <id root="f8157403-522f-484b-8a5a-9d2d00959d68"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <text>
+                                    <paragraph>
+                                       <content styleCode="italics">Distribution</content>
+                                    </paragraph>
+                                    <paragraph>Plasma protein binding of relugolix is 68 to 71%, primarily to albumin and to a lesser extent to α<sub>1</sub>-acid glycoprotein. The mean blood-to-plasma ratio is 0.78.
+</paragraph>
+                                 </text>
+                                 <effectiveTime value="20241031"/>
+                              </section>
+                           </component>
+                           <component>
+                              <section ID="s47">
+                                 <id root="be7b421f-492f-4d97-8c0a-525dc95e8b96"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <text>
+                                    <paragraph>
+                                       <content styleCode="italics">Elimination</content>
+                                    </paragraph>
+                                    <paragraph>The mean effective half-life of relugolix is 25 hours and the mean (CV%) terminal elimination half-life is 61 (11%) hours. The mean (CV%) total clearance of relugolix is 29 (15%) L/h and the renal clearance is 8 L/h.
+</paragraph>
+                                 </text>
+                                 <effectiveTime value="20251010"/>
+                              </section>
+                           </component>
+                           <component>
+                              <section ID="s48">
+                                 <id root="15e1652b-7c3d-4ff8-9da4-9849a4544b4c"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <text>
+                                    <paragraph>
+                                       <content styleCode="italics">Metabolism</content>
+                                    </paragraph>
+                                    <paragraph>Relugolix is metabolized primarily by CYP3A and to a lesser extent by CYP2C8.
+</paragraph>
+                                 </text>
+                                 <effectiveTime value="20251010"/>
+                              </section>
+                           </component>
+                           <component>
+                              <section ID="s49">
+                                 <id root="c29ed1a7-39a9-4d8f-ab7f-4d571aa1c96c"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <text>
+                                    <paragraph>
+                                       <content styleCode="italics">Excretion</content>
+                                    </paragraph>
+                                    <paragraph>After oral administration of a single 80 mg radiolabeled dose of relugolix, approximately 81% of the radioactivity was recovered in feces with 4.2% as unchanged and 4.1% in urine with 2.2% as unchanged.
+</paragraph>
+                                 </text>
+                                 <effectiveTime value="20241031"/>
+                              </section>
+                           </component>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s50">
+                           <id root="1a5a182b-7ce9-4b0b-afd2-5b0f5cb507d0"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Specific Populations</content>
+                              </paragraph>
+                              <paragraph>No clinically significant differences in the pharmacokinetics of relugolix were observed based on age (45 to 91 years), race/ethnicity (Asian [19%], White [71%], Black/African American [6%]), body weight (41 to 193 kg), mild to severe renal impairment (creatinine clearance [CLcr] 15 to 89 mL/min, as estimated by the Cockcroft-Gault equation), or mild to moderate hepatic impairment (Child-Pugh A or B). The effect of end-stage renal disease with or without hemodialysis or severe hepatic impairment (Child-Pugh C) on the pharmacokinetics of relugolix has not been evaluated.
+</paragraph>
+                           </text>
+                           <effectiveTime value="20251010"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s51">
+                           <id root="8f8b61db-4f64-466d-987f-fcdd57bc934b"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Drug Interactions Studies</content>
+                              </paragraph>
+                           </text>
+                           <effectiveTime value="20241031"/>
+                           <component>
+                              <section ID="s52">
+                                 <id root="04d3ba24-6066-403b-89c3-d39a4ecc43a4"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <text>
+                                    <paragraph>
+                                       <content styleCode="italics">Clinical Studies</content>
+                                    </paragraph>
+                                 </text>
+                                 <effectiveTime value="20241031"/>
+                                 <component>
+                                    <section ID="s53">
+                                       <id root="7e7cdfaa-ca50-428f-86d0-c5a6fab69c4c"/>
+                                       <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                       <text>
+                                          <paragraph>
+                                             <content styleCode="italics">Combined P-gp and Moderate CYP3A Inhibitors:</content> Co-administration with erythromycin (P-gp and moderate CYP3A inhibitor) increased the AUC and C<sub>max</sub> of relugolix by 3.5- and 2.9-fold respectively.
+</paragraph>
+                                       </text>
+                                       <effectiveTime value="20241031"/>
+                                    </section>
+                                 </component>
+                                 <component>
+                                    <section ID="s54">
+                                       <id root="f2caba8d-be2f-48d9-af31-8aec975d60ee"/>
+                                       <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                       <text>
+                                          <paragraph>
+                                             <content styleCode="italics">Combined P-gp and Strong CYP3A Inducers:</content> Co-administration of relugolix with rifampin (P-gp and strong CYP3A inducer) decreased the AUC and C<sub>max</sub> of relugolix by 55% and 23%, respectively.
+</paragraph>
+                                       </text>
+                                       <effectiveTime value="20241031"/>
+                                    </section>
+                                 </component>
+                                 <component>
+                                    <section ID="s55">
+                                       <id root="b4a01187-b195-4f63-9f75-0fe3883e999d"/>
+                                       <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                       <text>
+                                          <paragraph>
+                                             <content styleCode="italics">Other Drugs:</content> No clinically significant differences in the pharmacokinetics of relugolix were observed when co-administered with voriconazole (strong CYP3A inhibitor), atorvastatin, enzalutamide, or acid-reducing agents. No clinically significant differences in the pharmacokinetics of midazolam (sensitive CYP3A substrate) or rosuvastatin (BCRP substrate), or dabigatran etexilate (P-gp substrate) were observed upon co-administration with relugolix.
+</paragraph>
+                                       </text>
+                                       <effectiveTime value="20241031"/>
+                                    </section>
+                                 </component>
+                              </section>
+                           </component>
+                           <component>
+                              <section ID="s56">
+                                 <id root="c9cc5247-0ef0-4d2b-92b9-33d44d30ee55"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <text>
+                                    <paragraph>
+                                       <content styleCode="italics">In Vitro Studies</content>
+                                    </paragraph>
+                                 </text>
+                                 <effectiveTime value="20251010"/>
+                                 <component>
+                                    <section ID="s57">
+                                       <id root="ecb5e438-8be2-4fee-ab1c-98ae3b375563"/>
+                                       <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                       <text>
+                                          <paragraph>
+                                             <content styleCode="italics">Cytochrome P450 (CYP) Enzymes:</content> Relugolix is not an inhibitor of CYP1A2, CYP2B6, CYP2C8, CYP2C9, CYP2C19, CYP2D6, or CYP3A4. Relugolix is an inducer of CYP3A and CYP2B6, but not an inducer of CYP1A2.
+</paragraph>
+                                       </text>
+                                       <effectiveTime value="20251010"/>
+                                    </section>
+                                 </component>
+                                 <component>
+                                    <section ID="s58">
+                                       <id root="e6a87dd5-4d5c-4d9d-9f59-f84bcf80c790"/>
+                                       <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                       <text>
+                                          <paragraph>
+                                             <content styleCode="italics">Transporter Systems:</content> Relugolix is a substrate of P-gp, but not a substrate of BCRP. Relugolix is an inhibitor of BCRP and P-gp, but not an inhibitor of OATP1B1, OATP1B3, OATP2B1, OAT1, OAT3, OCT2, MATE1, MATE2-K, or BSEP.
+</paragraph>
+                                       </text>
+                                       <effectiveTime value="20241031"/>
+                                    </section>
+                                 </component>
+                              </section>
+                           </component>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s59">
+               <id root="343d9553-86b0-408d-a826-1730bcf0334f"/>
+               <code code="43680-8" codeSystem="2.16.840.1.113883.6.1" displayName="NONCLINICAL TOXICOLOGY SECTION"/>
+               <title>13  NONCLINICAL TOXICOLOGY
+</title>
+               <effectiveTime value="20241031"/>
+               <component>
+                  <section ID="s60">
+                     <id root="86f9f0ab-3820-44bb-ac88-229844d14f6b"/>
+                     <code code="34083-6" codeSystem="2.16.840.1.113883.6.1" displayName="CARCINOGENESIS &amp; MUTAGENESIS &amp; IMPAIRMENT OF FERTILITY SECTION"/>
+                     <title>13.1  Carcinogenesis, Mutagenesis, Impairment of Fertility
+</title>
+                     <text>
+                        <paragraph>Two-year carcinogenicity studies were conducted in mice at oral relugolix doses up to 100 mg/kg/day and in rats at doses up to 600 mg/kg/day. Relugolix was not carcinogenic in mice or rats at exposures up to approximately 75 or 224 times, respectively, the human exposure at the recommended dose of 120 mg daily based on AUC.
+</paragraph>
+                        <paragraph>Relugolix was not mutagenic in the in vitro bacterial reverse mutation (Ames) assay or clastogenic in the in vitro chromosomal aberration assay in Chinese hamster lung cells or the in vivo rat bone marrow micronucleus assay.
+</paragraph>
+                        <paragraph>In human GnRH-receptor knock-in male mice, oral administration of relugolix decreased prostate and seminal vesicle weights at doses ≥ 3 mg/kg twice daily for 28 days. The effects of relugolix were reversible, except for testis weight, which did not fully recover within 28 days after drug withdrawal. In a 39-week repeat-dose toxicity study in monkeys, there were no significant effects on male reproductive organs at oral relugolix doses up to 50 mg/kg/day (approximately 53 times the human exposure at the recommended dose of 120 mg daily based on AUC).
+</paragraph>
+                     </text>
+                     <effectiveTime value="20241031"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s61">
+                     <id root="19b202ee-cf48-4688-a16d-b1f099e5de3e"/>
+                     <code code="34091-9" codeSystem="2.16.840.1.113883.6.1" displayName="ANIMAL PHARMACOLOGY &amp; OR TOXICOLOGY SECTION"/>
+                     <title>13.2  Animal Toxicology and/or Pharmacology
+</title>
+                     <text>
+                        <paragraph>Phospholipidosis (intracellular phospholipid accumulation) was observed in multiple organs and tissues (e.g., liver, pancreas, spleen, kidney, lymph nodes, lung, bone marrow, gastrointestinal tract or testes) after repeated oral administration of relugolix in rats and monkeys. In a rat 26-week toxicity study, phospholipidosis was observed at doses ≥ 100 mg/kg (approximately 18 times the human exposure at the recommended dose based on AUC). In a monkey 39-week toxicity study, this effect was observed at doses ≥ 1.5 mg/kg (approximately 0.6 times the human exposure at the recommended dose based on AUC) and demonstrated evidence of reversibility after cessation of treatment. The significance of this finding in humans is unknown.
+</paragraph>
+                     </text>
+                     <effectiveTime value="20241031"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s62">
+               <id root="5f778500-f07d-48c7-b4db-2b9bdad260b2"/>
+               <code code="34092-7" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL STUDIES SECTION"/>
+               <title>14  CLINICAL STUDIES
+</title>
+               <effectiveTime value="20251010"/>
+               <component>
+                  <section ID="s63">
+                     <id root="36cb99ef-e8eb-4e6d-8240-d0be50a921cd"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">HERO Study</content>
+                        </paragraph>
+                        <paragraph>The safety and efficacy of ORGOVYX was evaluated in HERO (NCT03085095), a randomized, open label study in men with advanced prostate cancer requiring at least 1 year of androgen deprivation therapy and defined as biochemical (PSA) or clinical relapse following local primary intervention, newly diagnosed castration-sensitive metastatic disease, or advanced localized disease.
+</paragraph>
+                        <paragraph>A total of 934 patients were randomized to receive ORGOVYX or leuprolide in a 2:1 ratio for 48 weeks:
+</paragraph>
+                        <list listType="ordered">
+                           <item>
+                              <caption>a)
+</caption>ORGOVYX at a loading dose of 360 mg on the first day followed by daily doses of 120 mg orally.
+</item>
+                           <item>
+                              <caption>b)
+</caption>Leuprolide acetate 22.5 mg injection (or 11.25 mg in Japan and Taiwan) subcutaneously every 3 months. Leuprolide acetate 11.25 mg is a dosage regimen that is not recommended for this indication in the US.
+</item>
+                        </list>
+                        <paragraph>Serum testosterone concentrations were measured at screening; on Days 1, 4, 8, 15, and 29 in the first month; then monthly until the end of the study.
+</paragraph>
+                        <paragraph>The population (N = 930) across both treatment groups had a median age of 71 years (range 47 to 97 years). The ethnic/racial distribution was 68% White, 21% Asian, 4.9% Black, and 5% other. Disease stage was distributed as follows: 32% metastatic (M1), 31% locally advanced (T3/4 NX M0 or any T N1 M0), 28% localized (T1 or T2 N0 M0), and 10% not classifiable. The median testosterone concentration at baseline across the treatment groups was 408 ng/dL.
+</paragraph>
+                        <paragraph>The major efficacy outcome measure was medical castration rate defined as achieving and maintaining serum testosterone suppression to castrate levels (&lt; 50 ng/dL) by Day 29 through 48 weeks of treatment. Other endpoints included castration rates on Day 4 and 15 and castration rates with testosterone &lt; 20 ng/dL at Day 15.
+</paragraph>
+                        <paragraph>The efficacy results are shown in <linkHtml href="#t3">Table 3</linkHtml> and the time course of percent change from baseline in testosterone suppression by ORGOVYX and leuprolide during the 48 week treatment period are shown in <linkHtml href="#fig2">Figure 2</linkHtml>.
+</paragraph>
+                        <table ID="t3" width="100%">
+                           <caption>Table 3: Medical Castration Rates (Testosterone Concentrations &lt; 50 ng/dL) from Day 29 through Week 48 in HERO
+</caption>
+                           <col width="42.133%" align="left"/>
+                           <col width="28.933%" align="left"/>
+                           <col width="28.933%" align="left"/>
+                           <tfoot>
+                              <tr>
+                                 <td colspan="3" align="left" valign="top">
+                                    <paragraph styleCode="footnote">
+                                       <sup>a</sup> 11.25 mg is a dosage regimen that is not recommended for this indication in the US. The castration rate of the subgroup of patients receiving 22.5 mg leuprolide (n = 264) was 88.0% (95% CI: 83.4%, 91.4%).
+</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td colspan="3" align="left" valign="top">
+                                    <paragraph styleCode="footnote">
+                                       <sup>b</sup> Two patients in each arm did not receive the study treatment and were not included.
+</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td colspan="3" align="left" valign="top">
+                                    <paragraph styleCode="footnote">
+                                       <sup>c</sup> Kaplan-Meier estimates within group.
+</paragraph>
+                                 </td>
+                              </tr>
+                           </tfoot>
+                           <tbody>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Toprule Botrule Lrule Rrule"/>
+                                 <td align="center" valign="bottom" styleCode="Toprule Botrule Rrule">
+                                    <content styleCode="bold">ORGOVYX<br/>360/120 mg</content>
+                                    <br/>
+                                    <content styleCode="bold">(N = 622)</content>
+                                    <content styleCode="bold">
+                                       <sup>b</sup>
+                                    </content>
+                                 </td>
+                                 <td align="center" valign="bottom" styleCode="Toprule Botrule Rrule">
+                                    <content styleCode="bold">Leuprolide Acetate<br/>22.5 or 11.25 mg</content>
+                                    <content styleCode="bold">
+                                       <sup>a</sup>
+                                    </content>
+                                    <br/>
+                                    <content styleCode="bold">(N = 308)</content>
+                                    <content styleCode="bold">
+                                       <sup>b</sup>
+                                    </content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">Castration Rate (95% CI)<sup>c</sup>
+                                 </td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">96.7%<br/>(94.9%, 97.9%)
+</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">88.8%<br/>(84.6%, 91.8%)
+</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph ID="fig2">
+                           <content styleCode="bold">Figure 2: Mean (95% CI) Percent Change from Baseline in Testosterone Concentrations from Baseline to Week 49 by Treatment Group in HERO</content>
+                        </paragraph>
+                        <paragraph>
+                           <renderMultiMedia ID="f03" referencedObject="mm03"/>
+                        </paragraph>
+                        <paragraph>The percentages of patients who attained the medical castration levels of testosterone &lt; 50 ng/dL and &lt; 20 ng/dL within the first 29 days of treatment are summarized in <linkHtml href="#t4">Table 4</linkHtml> and the cumulative incidences of time to testosterone &lt; 50 ng/dL or &lt; 20 ng/dL are shown in <linkHtml href="#fig3">Figure 3</linkHtml>.
+</paragraph>
+                        <table ID="t4" width="100%">
+                           <caption>Table 4: Percentage of Patients Attaining Testosterone Decreases within the First 29 Days in HERO<sup>a</sup>
+                           </caption>
+                           <col width="32.166%" align="left"/>
+                           <col width="19.404%" align="left"/>
+                           <col width="16.143%" align="left"/>
+                           <col width="16.143%" align="left"/>
+                           <col width="16.143%" align="left"/>
+                           <thead>
+                              <tr>
+                                 <th rowspan="2" align="left" valign="bottom" styleCode="Toprule Botrule Lrule Rrule"/>
+                                 <th colspan="2" align="center" valign="bottom" styleCode="Toprule Botrule Rrule">
+                                    <content styleCode="bold">Testosterone &lt; 50 ng/dL</content>
+                                 </th>
+                                 <th colspan="2" align="center" valign="top" styleCode="Toprule Botrule Rrule">
+                                    <content styleCode="bold">Testosterone &lt; 20 ng/dL</content>
+                                 </th>
+                              </tr>
+                              <tr>
+                                 <th align="center" valign="bottom" styleCode="Botrule Rrule">
+                                    <content styleCode="bold">ORGOVYX<br/>(N = 622)</content>
+                                 </th>
+                                 <th align="center" valign="bottom" styleCode="Botrule Rrule">
+                                    <content styleCode="bold">Leuprolide Acetate<br/>(N = 308)</content>
+                                 </th>
+                                 <th align="center" valign="bottom" styleCode="Botrule Rrule">
+                                    <content styleCode="bold">ORGOVYX<br/>(N = 622)</content>
+                                 </th>
+                                 <th align="center" valign="bottom" styleCode="Botrule Rrule">
+                                    <content styleCode="bold">Leuprolide Acetate<br/>(N = 308)</content>
+                                 </th>
+                              </tr>
+                           </thead>
+                           <tfoot>
+                              <tr>
+                                 <td colspan="5" align="left" valign="top">
+                                    <paragraph styleCode="footnote">
+                                       <sup>a</sup> Kaplan-Meier estimates within group.
+</paragraph>
+                                 </td>
+                              </tr>
+                           </tfoot>
+                           <tbody>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">Day 4
+</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">56%
+</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">0%
+</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">7%
+</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">0%
+</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">Day 8
+</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">91%
+</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">0%
+</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">27%
+</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">0%
+</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">Day 15
+</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">99%
+</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">12%
+</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">78%
+</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">1%
+</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" valign="top" styleCode="Botrule Lrule Rrule">Day 29
+</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">99%
+</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">82%
+</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">95%
+</td>
+                                 <td align="center" valign="top" styleCode="Botrule Rrule">57%
+</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph ID="fig3">
+                           <content styleCode="bold">Figure 3: Cumulative Incidence of Time to Testosterone &lt; 50 ng/dL and &lt; 20 ng/dL in HERO</content>
+                        </paragraph>
+                        <paragraph>
+                           <renderMultiMedia ID="f04" referencedObject="mm04"/>
+                        </paragraph>
+                        <paragraph>
+                           <renderMultiMedia ID="f05" referencedObject="mm05"/>
+                        </paragraph>
+                        <paragraph>In the clinical trial, PSA levels were monitored and were lowered on average by 65% two weeks after administration of ORGOVYX, 83% after 4 weeks, 92% after 3 months and remained suppressed throughout the 48 weeks of treatment. These PSA results should be interpreted with caution because of the heterogeneity of the patient population studied. No evidence has shown that the rapidity of PSA decline is related to a clinical benefit.
+</paragraph>
+                        <paragraph>A substudy was conducted in 137 patients who did not receive subsequent androgen deprivation therapy for at least 90 days after discontinuation of ORGOVYX. Based on Kaplan-Meier analyses, 55% of patients achieved testosterone levels above the lower limit of the normal range (&gt; 280 ng/dL) or baseline at 90 days after discontinuation of ORGOVYX.
+</paragraph>
+                     </text>
+                     <effectiveTime value="20251010"/>
+                     <component>
+                        <observationMedia ID="mm03">
+                           <text>Figure 2
+</text>
+                           <value xsi:type="ED" mediaType="image/jpeg">
+                              <reference value="org01-0002-03.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                     <component>
+                        <observationMedia ID="mm04">
+                           <text>Figure 3
+</text>
+                           <value xsi:type="ED" mediaType="image/jpeg">
+                              <reference value="org01-0002-04.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                     <component>
+                        <observationMedia ID="mm05">
+                           <text>Figure 3
+</text>
+                           <value xsi:type="ED" mediaType="image/jpeg">
+                              <reference value="org01-0002-05.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s64">
+               <id root="4859d84d-5d1b-4546-8c99-21bede40006f"/>
+               <code code="34069-5" codeSystem="2.16.840.1.113883.6.1" displayName="HOW SUPPLIED SECTION"/>
+               <title>16  HOW SUPPLIED/STORAGE AND HANDLING
+</title>
+               <effectiveTime value="20241031"/>
+               <component>
+                  <section ID="s65">
+                     <id root="d3bfaf1e-29d4-459a-862b-e01bf0e1b796"/>
+                     <code code="34069-5" codeSystem="2.16.840.1.113883.6.1" displayName="HOW SUPPLIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">How Supplied</content>
+                        </paragraph>
+                        <paragraph>The 120 mg tablets are film-coated, light red, almond shaped, and debossed with “R” on one side and “120” on the other side and are supplied in two configurations, bottles and blister packs. Each bottle (NDC 72974-120-01) contains 30 tablets and a desiccant and is closed with a child resistant induction seal cap. The blister cards contain nine tablets packaged in a carton (NDC 72974-120-02). Each ORGOVYX tablet contains 120 mg of relugolix.
+</paragraph>
+                     </text>
+                     <effectiveTime value="20241031"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s66">
+                     <id root="f6d1773a-1203-4ba8-9d0b-6f709b03a47b"/>
+                     <code code="44425-7" codeSystem="2.16.840.1.113883.6.1" displayName="STORAGE AND HANDLING SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Storage and Handling</content>
+                        </paragraph>
+                        <list listType="unordered" styleCode="Disc">
+                           <item>Store ORGOVYX at room temperature. Do not store above 30°C (86°F).
+</item>
+                           <item>Dispense to patients in original container only.
+</item>
+                           <item>For bottles, keep container tightly closed after first opening.
+</item>
+                           <item>Keep out of reach of children.
+</item>
+                        </list>
+                     </text>
+                     <effectiveTime value="20241031"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s67">
+               <id root="2e80c497-658c-444a-9901-289808af15cb"/>
+               <code code="34076-0" codeSystem="2.16.840.1.113883.6.1" displayName="INFORMATION FOR PATIENTS SECTION"/>
+               <title>17  PATIENT COUNSELING INFORMATION
+</title>
+               <text>
+                  <paragraph>Advise the patient to read the FDA-approved patient labeling (Patient Information).
+</paragraph>
+               </text>
+               <effectiveTime value="20241031"/>
+               <component>
+                  <section ID="s68">
+                     <id root="a047314f-5b3b-4da1-b9c4-a95b8f2ed29d"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">QT/QTc Interval Prolongation</content>
+                        </paragraph>
+                        <list listType="unordered" styleCode="Disc">
+                           <item>Advise patients that androgen deprivation therapy treatment with ORGOVYX may prolong the QT interval. Inform patients of the signs and symptoms of QT prolongation. Advise patients to contact their healthcare provider immediately for signs or symptoms of QT prolongation <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#s10">5.1</linkHtml>)]</content>.
+</item>
+                        </list>
+                     </text>
+                     <effectiveTime value="20241031"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s69">
+                     <id root="7e9ac628-b7e3-4d94-928e-dbff748460d5"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Hypersensitivity</content>
+                        </paragraph>
+                        <list listType="unordered" styleCode="Disc">
+                           <item>Inform patients that if they have experienced severe hypersensitivity with relugolix or to any of the product components, ORGOVYX is contraindicated <content styleCode="italics">[see Contraindications (<linkHtml href="#s8">4</linkHtml>)]</content>.
+</item>
+                           <item>Inform patients that ORGOVYX can cause severe hypersensitivity reactions that include angioedema <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#s11">5.2</linkHtml>)].</content>
+                           </item>
+                           <item>Advise patients who experience hypersensitivity symptoms to discontinue ORGOVYX and promptly contact their healthcare provider.
+</item>
+                        </list>
+                     </text>
+                     <effectiveTime value="20241031"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s70">
+                     <id root="c312e1dd-1eec-4d6b-b71d-2ceb3670a90f"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Androgen Deprivation</content>
+                        </paragraph>
+                        <list listType="unordered" styleCode="Disc">
+                           <item>Inform patients about adverse reactions related to androgen deprivation therapy with ORGOVYX, including hot flashes, flushing of the skin, increased weight, decreased sex drive, and difficulties with erectile function <content styleCode="italics">[see Adverse Reactions (<linkHtml href="#s15">6.1</linkHtml>)]</content>.
+</item>
+                        </list>
+                     </text>
+                     <effectiveTime value="20241031"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s71">
+                     <id root="70b5f023-5337-41e7-b980-a56985e613a9"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Embryo-Fetal Toxicity</content>
+                        </paragraph>
+                        <list listType="unordered" styleCode="Disc">
+                           <item>Inform patients that ORGOVYX can be harmful to a developing fetus and can cause loss of pregnancy.
+</item>
+                           <item>Advise male patients with female partners of reproductive potential to use effective contraception during treatment and for 2 weeks after the last dose of ORGOVYX <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#s12">5.3</linkHtml>) and Use in Specific Populations (<linkHtml href="#s22">8.1</linkHtml>, <linkHtml href="#s30">8.3</linkHtml>)].</content>
+                           </item>
+                        </list>
+                     </text>
+                     <effectiveTime value="20241031"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s72">
+                     <id root="21fa9181-0d1b-4b8d-834d-bafda50172a6"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Infertility</content>
+                        </paragraph>
+                        <list listType="unordered" styleCode="Disc">
+                           <item>Inform patients that ORGOVYX may cause infertility <content styleCode="italics">[see Use in Specific Populations (<linkHtml href="#s30">8.3</linkHtml>)]</content>.
+</item>
+                        </list>
+                     </text>
+                     <effectiveTime value="20241031"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s73">
+                     <id root="99ea378c-a7c3-4814-9944-a928ab9bd9d8"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Drug Disposal</content>
+                        </paragraph>
+                        <list listType="unordered" styleCode="Disc">
+                           <item>Advise patients to dispose of unused medication via a take-back option if available. Otherwise, advise to follow FDA instructions for disposing medication in the household trash, <content styleCode="underline">www.fda.gov/drugdisposal</content> and NOT to flush down the toilet.
+</item>
+                        </list>
+                        <paragraph>Manufactured for Sumitomo Pharma America, Inc., Marlborough, MA 01752
+</paragraph>
+                        <paragraph>214621-MS-006
+</paragraph>
+                     </text>
+                     <effectiveTime value="20251010"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s74">
+               <id root="eb57fbbd-cbc6-4d76-8c5f-30803ed29847"/>
+               <code code="42230-3" codeSystem="2.16.840.1.113883.6.1" displayName="SPL PATIENT PACKAGE INSERT SECTION"/>
+               <text>
+                  <table width="100%">
+                     <col width="50.000%" align="left"/>
+                     <col width="50.000%" align="left"/>
+                     <tfoot>
+                        <tr>
+                           <td align="left" valign="top">
+                              <paragraph styleCode="footnote">This Patient Information has been approved by the U.S. Food and Drug Administration.
+</paragraph>
+                           </td>
+                           <td align="right" valign="top">
+                              <paragraph styleCode="footnote">Revised:  08/2023
+</paragraph>
+                           </td>
+                        </tr>
+                     </tfoot>
+                     <tbody>
+                        <tr>
+                           <td colspan="2" align="center" valign="top" styleCode="Toprule Botrule Lrule Rrule">
+                              <content styleCode="bold">PATIENT INFORMATION</content>
+                              <br/>ORGOVYX (or-GO-vix)<br/>(relugolix)<br/>Tablets
+</td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" align="left" valign="top" styleCode="Botrule Lrule Rrule">
+                              <content styleCode="bold">What is ORGOVYX?</content>
+                              <br/>ORGOVYX is a prescription medicine used in adults for the treatment of advanced prostate cancer.<br/>It is not known if ORGOVYX is safe or effective in females.<br/>It is not known if ORGOVYX is safe or effective in children.
+</td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" align="left" valign="top" styleCode="Botrule Lrule Rrule">
+                              <content styleCode="bold">Do not take ORGOVYX if you</content> have had a severe allergic reaction to relugolix or any of the ingredients in ORGOVYX. See the end of this Patient Information for a complete list of the ingredients in ORGOVYX.
+</td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" align="left" valign="top" styleCode="Lrule Rrule">
+                              <content styleCode="bold">Before taking ORGOVYX, tell your healthcare provider about all of your medical conditions, including if you:</content>
+                              <br/>
+                              <list listType="unordered" styleCode="Disc">
+                                 <item>have any heart problems, including a condition called long QT syndrome.
+</item>
+                                 <item>are pregnant or plan to become pregnant. ORGOVYX can harm your unborn baby and cause loss of pregnancy (miscarriage).
+</item>
+                                 <item>have a partner who is pregnant or may become pregnant.<list listType="unordered" styleCode="Circle">
+                                       <item>Males who have female partners who are able to become pregnant should use effective birth control (contraception) during treatment with ORGOVYX and for 2 weeks after the last dose of ORGOVYX.
+</item>
+                                    </list>
+                                 </item>
+                                 <item>are breastfeeding or plan to breastfeed. It is not known if ORGOVYX passes into your breast milk.
+</item>
+                              </list>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" align="left" valign="top" styleCode="Botrule Lrule Rrule">
+                              <content styleCode="bold">Tell your healthcare provider about all the medicines you take,</content> including prescription and over-the-counter medicines, vitamins, and herbal supplements. Taking ORGOVYX with certain other medicines can affect how ORGOVYX works or may cause side effects.<br/>You should not start or stop any medicine before you talk with your healthcare provider who prescribed ORGOVYX.<br/>Know the medicines you take. Keep a list of them with you to show to your healthcare provider and pharmacist when you get a new medicine.
+</td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" align="left" valign="top" styleCode="Botrule Lrule Rrule">
+                              <content styleCode="bold">How should I take ORGOVYX?</content>
+                              <br/>
+                              <list listType="unordered" styleCode="Disc">
+                                 <item>Take ORGOVYX exactly as your healthcare provider tells you.
+</item>
+                                 <item>Take 3 ORGOVYX tablets on your first day of treatment. After that, take 1 ORGOVYX tablet each day.
+</item>
+                                 <item>Take ORGOVYX at about the same time each day.
+</item>
+                                 <item>Take ORGOVYX with or without food.
+</item>
+                                 <item>Swallow ORGOVYX tablets whole. Do not crush or chew tablets.
+</item>
+                                 <item>Your healthcare provider may change your dose if needed.
+</item>
+                                 <item>
+                                    <content styleCode="bold">Do not change your dose or stop taking ORGOVYX without talking with your healthcare provider first.</content>
+                                 </item>
+                                 <item>If you miss a dose of ORGOVYX, take it as soon as you remember. If the dose was missed by more than 12 hours, the missed dose should not be taken. Take your next dose at your regular time the next day.
+</item>
+                              </list>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" align="left" valign="top" styleCode="Lrule Rrule">
+                              <content styleCode="bold">What are the possible side effects of ORGOVYX?</content>
+                              <br/>
+                              <content styleCode="bold">ORGOVYX may cause serious side effects, including:</content>
+                              <br/>
+                              <list listType="unordered" styleCode="Disc">
+                                 <item>
+                                    <content styleCode="bold">Changes in the electrical activity of your heart (QT prolongation).</content> Your healthcare provider may check your body salts (electrolytes) and the electrical activity of your heart during treatment with ORGOVYX. Tell your healthcare provider right away if you get any signs or symptoms of QT prolongation, including:<table width="100%" styleCode="Noautorules">
+                                       <col width="38.800%" align="left"/>
+                                       <col width="61.200%" align="left"/>
+                                       <tbody>
+                                          <tr>
+                                             <td align="left" valign="top">
+                                                <list listType="unordered" styleCode="Circle">
+                                                   <item>dizziness
+</item>
+                                                   <item>fainting
+</item>
+                                                </list>
+                                             </td>
+                                             <td align="left" valign="top">
+                                                <list listType="unordered" styleCode="Circle">
+                                                   <item>feeling that your heart is pounding or racing (palpitations)
+</item>
+                                                   <item>chest pain
+</item>
+                                                </list>
+                                             </td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </item>
+                                 <item>
+                                    <content styleCode="bold">Allergic reactions.</content> Stop taking ORGOVYX and tell your healthcare provider or get emergency medical help right away if you get any signs or symptoms of an allergic reaction, including:<table width="100%" styleCode="Noautorules">
+                                       <col width="34.550%" align="left"/>
+                                       <col width="65.450%" align="left"/>
+                                       <tbody>
+                                          <tr>
+                                             <td align="left" valign="top">
+                                                <list listType="unordered" styleCode="Circle">
+                                                   <item>swelling of your face, lips, tongue, throat, or trouble swallowing
+</item>
+                                                </list>
+                                             </td>
+                                             <td align="left" valign="top">
+                                                <list listType="unordered" styleCode="Circle">
+                                                   <item>trouble breathing
+</item>
+                                                   <item>hives (raised bumps), rash, or redness all over your body
+</item>
+                                                </list>
+                                             </td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </item>
+                              </list>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" align="left" valign="top" styleCode="Lrule Rrule">
+                              <content styleCode="bold">The most common side effects of ORGOVYX include:</content>
+                              <br/>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td align="left" valign="top" styleCode="Lrule">
+                              <list listType="unordered" styleCode="Disc">
+                                 <item>hot flushes
+</item>
+                                 <item>increased blood sugar levels
+</item>
+                                 <item>increased blood fat (triglyceride) levels
+</item>
+                                 <item>muscle and joint pain
+</item>
+                                 <item>decreased blood hemoglobin levels
+</item>
+                              </list>
+                           </td>
+                           <td align="left" valign="top" styleCode="Rrule">
+                              <list listType="unordered" styleCode="Disc">
+                                 <item>increased liver enzymes
+</item>
+                                 <item>tiredness
+</item>
+                                 <item>constipation
+</item>
+                                 <item>diarrhea
+</item>
+                              </list>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" align="left" valign="top" styleCode="Botrule Lrule Rrule">Other side effects include weight gain, decreased sex drive, and erectile function problems.<br/>ORGOVYX may cause fertility problems in males, which may affect your ability to father children. Talk to your healthcare provider if this is a concern for you.<br/>These are not all the possible side effects of ORGOVYX.<br/>Call your doctor for medical advice about side effects. You may report side effects to FDA at 1-800-FDA-1088.
+</td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" align="left" valign="top" styleCode="Lrule Rrule">
+                              <content styleCode="bold">How should I store ORGOVYX?</content>
+                              <br/>
+                              <list listType="unordered" styleCode="Disc">
+                                 <item>Store ORGOVYX at room temperature. Do not store ORGOVYX above 86°F (30°C).
+</item>
+                                 <item>Keep the bottle tightly closed after you first open it.
+</item>
+                                 <item>The ORGOVYX bottle contains a desiccant to help keep your medicine dry (protect it from moisture). Do not remove the desiccant from the bottle.
+</item>
+                                 <item>Dispose of unused medicines through community take-back disposal programs when available. If no community take-back disposal program is available go to www.fda.gov/drugdisposal for information on how to dispose of ORGOVYX the right way.
+</item>
+                                 <item>
+                                    <content styleCode="bold">Do not</content> flush ORGOVYX down the toilet.
+</item>
+                              </list>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" align="left" valign="top" styleCode="Botrule Lrule Rrule">
+                              <content styleCode="bold">Keep ORGOVYX and all medicines out of the reach of children.</content>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" align="left" valign="top" styleCode="Botrule Lrule Rrule">
+                              <content styleCode="bold">General information about the safe and effective use of ORGOVYX.</content>
+                              <br/>Medicines are sometimes prescribed for purposes other than those listed in a Patient Information leaflet. Do not use ORGOVYX for a condition for which it was not prescribed. Do not give ORGOVYX to other people, even if they have the same symptoms that you have. It may harm them. You can ask your pharmacist or healthcare provider for information about ORGOVYX that is written for health professionals.
+</td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" align="left" valign="top" styleCode="Botrule Lrule Rrule">
+                              <content styleCode="bold">What are the ingredients in ORGOVYX?</content>
+                              <br/>
+                              <content styleCode="bold">Active ingredient:</content> relugolix<br/>
+                              <content styleCode="bold">Inactive ingredients:</content> mannitol, sodium starch glycolate, hydroxypropyl cellulose, magnesium stearate, hypromellose, titanium dioxide, ferric oxide red, and carnauba wax.<br/>
+                              <content styleCode="bold">Manufactured for:</content> Sumitomo Pharma America, Inc., Marlborough, MA 01752<br/>
+                              <br/>For more information, go to www.orgovyx.com or call 1-833-696-8268.
+</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>214621-MS-005
+</paragraph>
+               </text>
+               <effectiveTime value="20241031"/>
+            </section>
+         </component>
+         <component>
+            <section ID="s75">
+               <id root="23ea7145-8b15-468f-bb3e-b79bd4d95405"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PRINCIPAL DISPLAY PANEL - 120 mg Tablet Bottle Label
+</title>
+               <text>
+                  <paragraph>NDC 72974-120-01<br/> Rx only
+</paragraph>
+                  <paragraph>ORGOVYX<sub>®</sub>
+                     <br/> (relugolix) tablets
+</paragraph>
+                  <paragraph>120 mg
+</paragraph>
+                  <paragraph>30 tablets
+</paragraph>
+                  <renderMultiMedia ID="f06" referencedObject="mm06"/>
+               </text>
+               <effectiveTime value="20251010"/>
+               <component>
+                  <observationMedia ID="mm06">
+                     <text>PRINCIPAL DISPLAY PANEL - 120 mg Tablet Bottle Label
+</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="org01-0002-06.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

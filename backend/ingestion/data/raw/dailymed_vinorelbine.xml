@@ -1,0 +1,2997 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="dfa03517-f452-450c-8eb6-d946c0350248"/>
+   <code code="34391-3" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN PRESCRIPTION DRUG LABEL"/>
+   <title>These highlights do not include all the information needed to use VINORELBINE INJECTION safely and effectively. See full prescribing information for VINORELBINE INJECTION.<br/>
+      <br/>VINORELBINE injection, for intravenous use<br/>Initial U.S. Approval: 1994<br/> 
+</title>
+   <effectiveTime value="20240816"/>
+   <setId root="10a70995-e04d-4044-b1dc-c9aa27460397"/>
+   <versionNumber value="10"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id extension="080579617" root="1.3.6.1.4.1.519.1"/>
+            <name>Sagent Pharmaceuticals</name>
+            <assignedEntity>
+               <assignedOrganization/>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section ID="dcl-dpl">
+               <id root="d6bc202d-1c35-43b6-acae-b211ee03812b"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL PRODUCT DATA ELEMENTS SECTION"/>
+               <effectiveTime value="20240816"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="25021-204" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Vinorelbine</name>
+                        <formCode code="C42945" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INJECTION, SOLUTION"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Vinorelbine</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIM">
+                           <quantity>
+                              <numerator value="10" unit="mg"/>
+                              <denominator value="1" unit="mL"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="253GQW851Q" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>vinorelbine tartrate</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="Q6C979R91Y" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>vinorelbine</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="059QF0KO0R" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>water</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="1" unit="mL"/>
+                              <denominator value="1" unit="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43226" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="VIAL"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="1" unit="1"/>
+                                    <denominator value="1" unit="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="25021-204-01" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20140915"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV" displayName="Type 0: Not a Combination Product"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="5" unit="mL"/>
+                              <denominator value="1" unit="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43226" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="VIAL"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="1" unit="1"/>
+                                    <denominator value="1" unit="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="25021-204-05" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20140915"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV" displayName="Type 0: Not a Combination Product"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20140915"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <approval>
+                           <id extension="ANDA091106" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73584" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38276" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INTRAVENOUS"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="s1">
+               <id root="71b01f5f-57b2-444e-a3ee-7a450e49e7a6"/>
+               <code code="34066-1" codeSystem="2.16.840.1.113883.6.1" displayName="BOXED WARNING SECTION"/>
+               <title>WARNING: MYELOSUPPRESSION
+</title>
+               <text>
+                  <list listType="unordered" styleCode="Disc">
+                     <item>
+                        <content styleCode="bold">Severe myelosuppression resulting in serious infection, septic shock, hospitalization and death can occur
+</content>
+                        <content styleCode="bold italics">[see Warnings and Precautions (<linkHtml href="#s24">5.1</linkHtml>)].</content>
+                     </item>
+                     <item>
+                        <content styleCode="bold">Decrease the dose or withhold vinorelbine in accord with recommended dose modifications
+</content>
+                        <content styleCode="bold italics">[see Dosage and Administration (<linkHtml href="#s8">2.2</linkHtml>)].</content>
+                     </item>
+                  </list>
+               </text>
+               <effectiveTime value="20190723"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>
+                           <content styleCode="bold">WARNING: MYELOSUPPRESSION</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="bold italics">See full prescribing information for complete boxed warning.</content>
+                        </paragraph>
+                        <list listType="unordered" styleCode="Disc">
+                           <item>
+                              <content styleCode="bold">Severe myelosuppression resulting in serious infection, septic shock, and death can occur (<linkHtml href="#s24">5.1</linkHtml>).</content>
+                           </item>
+                           <item>
+                              <content styleCode="bold">Decrease the dose or withhold vinorelbine in accord with recommended dose modifications (<linkHtml href="#s8">2.2</linkHtml>).</content>
+                           </item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="s2">
+               <id root="67ea7c04-d35c-4593-8167-47ba62519fab"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>1 INDICATIONS AND USAGE
+</title>
+               <text>
+                  <paragraph>Vinorelbine Injection is indicated:
+</paragraph>
+                  <list listType="unordered" styleCode="Disc">
+                     <item>In combination with cisplatin for first-line treatment of patients with locally advanced or metastatic non-small cell lung cancer (NSCLC)
+</item>
+                     <item>As a single agent for the treatment of patients with metastatic NSCLC
+</item>
+                  </list>
+               </text>
+               <effectiveTime value="20190723"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Vinorelbine Injection is a vinca alkaloid indicated:
+</paragraph>
+                        <list listType="unordered" styleCode="Disc">
+                           <item>In combination with cisplatin for first-line treatment of patients with locally advanced or metastatic non-small cell lung cancer (NSCLC) (<linkHtml href="#s2">1</linkHtml>)
+</item>
+                           <item>As a single agent for first-line treatment of patients with metastatic NSCLC (<linkHtml href="#s2">1</linkHtml>)
+</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="s3">
+               <id root="7f0e0cc9-cf69-450d-9460-78907b2600dc"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>2 DOSAGE AND ADMINISTRATION
+</title>
+               <effectiveTime value="20230930"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered" styleCode="Disc">
+                           <item>In combination with cisplatin: 25 to 30 mg/m<sup>2</sup> as an intravenous injection or infusion once weekly (<linkHtml href="#s4">2.1</linkHtml>)
+</item>
+                           <item>Single agent: 30 mg/m<sup>2</sup> as intravenously once a week (<linkHtml href="#s4">2.1</linkHtml>)
+</item>
+                           <item>Adjust dose in patients with decreased neutrophil counts or elevated serum total bilirubin (<linkHtml href="#s8">2.2</linkHtml>)
+</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="s4">
+                     <id root="5f7d9928-4bc5-4afa-b0ee-d91794e9dd45"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.1 Recommended Dosage
+</title>
+                     <effectiveTime value="20200403"/>
+                     <component>
+                        <section ID="s5">
+                           <id root="8934064e-d0b9-48f4-a7d1-7bb14699bbba"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">In Combination with Cisplatin 100 mg/m</content>
+                                 <sup>2</sup>
+                              </paragraph>
+                              <list listType="unordered" styleCode="Disc">
+                                 <item>The recommended dosage of Vinorelbine Injection is 25 mg/m<sup>2</sup> administered as an intravenous injection or infusion over 6 to 10 minutes on Days 1, 8, 15 and 22 of a 28-day cycle in combination with cisplatin 100 mg/m<sup>2</sup> on Day 1 only of each 28-day cycle.
+</item>
+                              </list>
+                           </text>
+                           <effectiveTime value="20200403"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s6">
+                           <id root="b419ec8a-9d97-446f-b50c-54fb31faa516"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">In Combination with Cisplatin 120 mg/m</content>
+                                 <sup>2</sup>
+                              </paragraph>
+                              <list listType="unordered" styleCode="Disc">
+                                 <item> The recommended dosage of Vinorelbine Injection is 30 mg/m<sup>2</sup> administered as an intravenous injection or infusion over 6 to 10 minutes once a week in combination with cisplatin 120 mg/m<sup>2</sup> on Days 1 and 29, then every 6 weeks.
+</item>
+                              </list>
+                           </text>
+                           <effectiveTime value="20200403"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s7">
+                           <id root="16a11313-f8c0-4907-8fd8-f2ddfca0b518"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Single Agent</content>
+                              </paragraph>
+                              <list listType="unordered" styleCode="Disc">
+                                 <item>The recommended dosage of Vinorelbine Injection is 30 mg/m<sup>2</sup> administered intravenously over 6 to 10 minutes once a week.
+</item>
+                              </list>
+                           </text>
+                           <effectiveTime value="20200403"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s8">
+                     <id root="ffed330c-ed97-42d3-8ba5-a2defe18d164"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.2 Dosage Modifications
+</title>
+                     <effectiveTime value="20190723"/>
+                     <component>
+                        <section ID="s9">
+                           <id root="a59d3ae3-730b-4d25-b35f-865e7829f106"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Myelosuppression</content>
+                              </paragraph>
+                              <paragraph>Hold or decrease the dose of Vinorelbine Injection in patients with decreased neutrophil counts according to the following schema <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#s24">5.1</linkHtml>)]:</content>
+                              </paragraph>
+                              <table width="100%">
+                                 <col width="50.000%" align="left"/>
+                                 <col width="50.000%" align="left"/>
+                                 <tbody>
+                                    <tr>
+                                       <td align="center" valign="top" styleCode="Toprule Botrule Lrule Rrule">
+                                          <content styleCode="bold">Neutrophils on Day of Treatment (cells/mm</content>
+                                          <content styleCode="bold">
+                                             <sup>3</sup>
+                                          </content>
+                                          <content styleCode="bold">)</content>
+                                       </td>
+                                       <td align="center" valign="top" styleCode="Toprule Botrule Rrule">
+                                          <content styleCode="bold">Percentage of Starting Dose of Vinorelbine Injection</content>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td align="center" valign="top" styleCode="Botrule Lrule Rrule">≥ 1,500
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">100%
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="center" valign="top" styleCode="Botrule Lrule Rrule">1,000 to 1,499
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">50%
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="center" valign="top" styleCode="Botrule Lrule Rrule">&lt; 1,000
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">Do not administer Vinorelbine Injection.<br/>Repeat neutrophil count in one week.<br/>If three consecutive weekly doses are held because<br/>neutrophil count is &lt; 1,000 cells/mm<sup>3</sup>, discontinue Vinorelbine Injection
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td colspan="2" align="center" valign="top" styleCode="Botrule Lrule Rrule">Note: For patients who experience fever and/or sepsis while neutrophil count is &lt; 1,500 cells/mm<sup>3</sup> or had 2 consecutive weekly doses held due to neutropenia, subsequent doses of Vinorelbine Injection should be:
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="center" valign="top" styleCode="Botrule Lrule Rrule">&gt; 1,500
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">75%
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="center" valign="top" styleCode="Botrule Lrule Rrule">1,000 to 1,499
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">37.5%
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="center" valign="top" styleCode="Botrule Lrule Rrule">&lt; 1,000
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">Do not administer Vinorelbine Injection. Repeat neutrophil count in one week.
+</td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </text>
+                           <effectiveTime value="20200403"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s10">
+                           <id root="7194632d-c2da-448b-b7ae-6e6f4cba2364"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Hepatic Impairment/Toxicity</content>
+                              </paragraph>
+                              <paragraph>Reduce Vinorelbine Injection dose in patients with elevated serum total bilirubin concentration according to the following schema <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#s25">5.2</linkHtml>) and Use in Specific Populations (<linkHtml href="#s54">8.6</linkHtml>)]</content>:
+</paragraph>
+                              <table width="100%">
+                                 <col width="50.000%" align="left"/>
+                                 <col width="50.000%" align="left"/>
+                                 <tbody>
+                                    <tr>
+                                       <td align="center" valign="top" styleCode="Toprule Botrule Lrule Rrule">
+                                          <content styleCode="bold">Serum Total Bilirubin Concentration (mg/dl)</content>
+                                       </td>
+                                       <td align="center" valign="top" styleCode="Toprule Botrule Rrule">
+                                          <content styleCode="bold">Percentage of Starting Dose of</content>
+                                          <br/>
+                                          <content styleCode="bold">Vinorelbine Injection</content>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td align="center" valign="top" styleCode="Botrule Lrule Rrule">≤ 2.0
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">100%
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="center" valign="top" styleCode="Botrule Lrule Rrule">2.1 to 3.0
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">50%
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="center" valign="top" styleCode="Botrule Lrule Rrule">&gt; 3.0
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">25%
+</td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </text>
+                           <effectiveTime value="20200403"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s11">
+                           <id root="938af9aa-ba70-44d6-ae34-19d87020217a"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Concurrent Myelosuppression and Hepatic Impairment/Toxicity</content>
+                              </paragraph>
+                              <paragraph>In patients with both myelosuppression and hepatic impairment/toxicity, administer the lower of the doses based on the corresponding starting dose of Vinorelbine Injection determined from the above schemas.
+</paragraph>
+                           </text>
+                           <effectiveTime value="20200403"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s12">
+                           <id root="14248ae0-3ed2-4db9-ba68-7ec4c9946e71"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Neurologic Toxicity</content>
+                              </paragraph>
+                              <paragraph>Discontinue Vinorelbine Injection for Common Terminology Criteria for Adverse Events (CTCAE) Grade 2 or higher peripheral neuropathy or autonomic neuropathy causing constipation <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#s28">5.5</linkHtml>)].</content>
+                              </paragraph>
+                           </text>
+                           <effectiveTime value="20200403"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s13">
+                     <id root="8455f2d2-dc11-462a-99d0-17e88ab387ea"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.3 Preparation and Administration
+</title>
+                     <effectiveTime value="20200403"/>
+                     <component>
+                        <section ID="s14">
+                           <id root="b820b74b-48ab-4fa0-8ff8-ce6036f7e9ba"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Preparation</content>
+                              </paragraph>
+                              <paragraph>Dilute Vinorelbine Injection in an intravenous bag to a concentration between 0.5 mg/mL and 2 mg/mL. Use one of the following recommended solutions for dilution:
+</paragraph>
+                              <list listType="unordered" styleCode="Disc">
+                                 <item>5% Dextrose Injection, USP
+</item>
+                                 <item>0.9% Sodium Chloride Injection, USP
+</item>
+                                 <item>0.45% Sodium Chloride Injection, USP
+</item>
+                                 <item>5% Dextrose and 0.45% Sodium Chloride Injection, USP
+</item>
+                                 <item>Ringer's Injection, USP
+</item>
+                                 <item>Lactated Ringer's Injection, USP
+</item>
+                              </list>
+                           </text>
+                           <effectiveTime value="20200403"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s17">
+                           <id root="16c3ce58-33b2-4da9-b818-8421dcd76d80"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Stability and Storage Conditions of Diluted Solutions</content>
+                              </paragraph>
+                              <paragraph>Diluted Vinorelbine Injection may be used for up to 24 hours under normal room light when stored in polyvinyl chloride bags at 5° to 30°C (41° to 86°F).
+</paragraph>
+                           </text>
+                           <effectiveTime value="20200403"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s18">
+                           <id root="f7bcfe71-e0d0-4e42-903c-ca6617bd24bd"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Administration</content>
+                              </paragraph>
+                              <paragraph>Administer diluted Vinorelbine Injection over 6 to 10 minutes into the side port of a free-flowing intravenous line followed by flushing with at least 75 to 125 mL of one of the solutions.
+</paragraph>
+                              <paragraph>Vinorelbine Injection must only be administered intravenously. It is extremely important that the intravenous needle or catheter be properly positioned before any Vinorelbine Injection is injected.
+</paragraph>
+                              <paragraph>Parenteral drug products should be visually inspected for particulate matter and discoloration prior to administration whenever solution and container permit. If particulate matter is seen, Vinorelbine Injection should not be administered.
+</paragraph>
+                           </text>
+                           <effectiveTime value="20200403"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s19">
+                           <id root="2f2ccc7c-7d92-4c6c-90b2-aee3923ed34d"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Management of Suspected Extravasation</content>
+                              </paragraph>
+                              <list listType="unordered" styleCode="Disc">
+                                 <item>If Vinorelbine Injection leakage into surrounding tissue occurs or is suspected, immediately stop administration of Vinorelbine Injection and initiate appropriate management measures in accordance with institutional policies <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#s27">5.4</linkHtml>)].</content>
+                                 </item>
+                              </list>
+                           </text>
+                           <effectiveTime value="20200403"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s20">
+                     <id root="fc81784e-f6d4-4895-a10e-7051fd146b3a"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.4 Procedures for Proper Handling and Disposal
+</title>
+                     <text>
+                        <paragraph>Vinorelbine Injection is a cytotoxic drug. Follow applicable special handling and disposal procedures<sup>1</sup>.
+</paragraph>
+                        <paragraph>Exercise caution in handling and preparing the solution of Vinorelbine Injection. The use of gloves is recommended. If the solution of Vinorelbine Injection contacts the skin or mucosa, immediately wash the skin or mucosa thoroughly with soap and water.
+</paragraph>
+                        <paragraph>Avoid contamination of the eye with Vinorelbine Injection. If exposure occurs, flush the eyes with water immediately and thoroughly.
+</paragraph>
+                        <paragraph>Discard unused portion.
+</paragraph>
+                     </text>
+                     <effectiveTime value="20200403"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s21">
+               <id root="609a8da3-7a20-4ce6-b811-e94b7d74fa55"/>
+               <code code="43678-2" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE FORMS &amp; STRENGTHS SECTION"/>
+               <title>3 DOSAGE FORMS AND STRENGTHS
+</title>
+               <text>
+                  <paragraph>Vinorelbine Injection, USP: 1 mL (10 mg per 1 mL) and 5 mL (50 mg per 5 mL) clear colorless to pale yellow solution in single-dose vial.
+</paragraph>
+               </text>
+               <effectiveTime value="20200403"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered" styleCode="Disc">
+                           <item>Vinorelbine Injection: 10 mg per 1 mL and 50 mg per 5 mL in single-dose vial (<linkHtml href="#s21">3</linkHtml>)
+</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="s22">
+               <id root="e1f16653-0e3d-4a62-ab7d-c75364fb64c4"/>
+               <code code="34070-3" codeSystem="2.16.840.1.113883.6.1" displayName="CONTRAINDICATIONS SECTION"/>
+               <title>4 CONTRAINDICATIONS
+</title>
+               <text>
+                  <paragraph>None
+</paragraph>
+               </text>
+               <effectiveTime value="20190723"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>None
+</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="s23">
+               <id root="e6060000-0546-4b5f-af6c-26390f54126b"/>
+               <code code="43685-7" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS AND PRECAUTIONS SECTION"/>
+               <title>5 WARNINGS AND PRECAUTIONS
+</title>
+               <effectiveTime value="20190723"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered" styleCode="Disc">
+                           <item>Hepatic Toxicity: Monitor hepatic function prior to initiation and during treatment (<linkHtml href="#s25">5.2</linkHtml>)
+</item>
+                           <item>Severe constipation and bowel obstruction, including necrosis and perforation, occur. Institute a prophylactic bowel regimen to mitigate potential constipation, bowel obstruction and/or paralytic ileus (<linkHtml href="#s26">5.3</linkHtml>)
+</item>
+                           <item>Extravasation can result in severe tissue injury, local tissue necrosis and/or thrombophlebitis. Immediately stop vinorelbine and institute recommended management procedures (<linkHtml href="#s27">5.4</linkHtml>)
+</item>
+                           <item>Neurologic Toxicity: Severe sensory and motor neuropathies occur. Monitor patients for new or worsening signs and symptoms of neuropathy. Discontinue for Grade 2 or greater neuropathy (<linkHtml href="#s28">5.5</linkHtml>)
+</item>
+                           <item>Pulmonary toxicity and respiratory failure occur. Interrupt vinorelbine in patients who develop unexplained dyspnea or have any evidence of pulmonary toxicity. Permanently discontinue for confirmed interstitial pneumonitis or ARDS (<linkHtml href="#s29">5.6</linkHtml>)
+</item>
+                           <item>Embryo-Fetal Toxicity: Can cause fetal harm. Advise females of reproductive potential of potential risk to the fetus and to use effective contraception (<linkHtml href="#s30">5.7</linkHtml>, <linkHtml href="#s39">8.1</linkHtml>, <linkHtml href="#s45">8.3</linkHtml>)
+</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="s24">
+                     <id root="58f446fe-3687-4730-8090-faa4d443ef92"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.1 Myelosuppression
+</title>
+                     <text>
+                        <paragraph>Myelosuppression, manifested by neutropenia, anemia and thrombocytopenia, occur in patients receiving vinorelbine as a single agent and in combination with cisplatin <content styleCode="italics">[see Adverse Reactions (<linkHtml href="#s32">6.1</linkHtml>, <linkHtml href="#s35">6.2</linkHtml>)]</content>. Neutropenia is the major dose-limiting toxicity with vinorelbine. Grade 3-4 neutropenia occurred in 53% of patients treated with vinorelbine at 30 mg/m<sup>2</sup> per week. Dose adjustment due to myelosuppression occurred in 51% of patients (Study 2). In clinical trials with vinorelbine administered at 30 mg/m<sup>2</sup> per week, neutropenia resulted in hospitalizations for pyrexia and/or sepsis in 8% of patients. Death due to sepsis occurred in 1% of patients. Neutropenia nadirs occur between 7 and 10 days after dosing with neutropenia count recovery usually occurring within the following 7 to 14 days.
+</paragraph>
+                        <paragraph>Monitor complete blood counts prior to each dose of vinorelbine. Do not administer vinorelbine to patients with neutrophil counts &lt;1,000 cells/mm<sup>3</sup>. Adjustments in the dosage of vinorelbine should be based on neutrophil counts obtained on the day of treatment <content styleCode="italics">[see Dosage and Administration (<linkHtml href="#s8">2.2</linkHtml>)].</content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20190723"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s25">
+                     <id root="b9771d29-0d14-4d9f-8724-53f3c5cc639f"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.2 Hepatic Toxicity
+</title>
+                     <text>
+                        <paragraph>Drug-induced liver injury manifest by elevated aspartate aminotransferase (AST) and bilirubin occur in patients receiving vinorelbine as a single agent and in combination with cytotoxic agents. Assess hepatic function prior to initiation of vinorelbine and periodically during treatment. Reduce the dose of vinorelbine for patients who develop elevations in total bilirubin
+≥ 2 times upper limit of normal <content styleCode="italics">[see Dosage and Administration (<linkHtml href="#s8">2.2</linkHtml>) and Use in Specific Populations (<linkHtml href="#s54">8.6</linkHtml>)].</content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20190723"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s26">
+                     <id root="e3d8f869-bc06-4ffd-b52b-86fb40ff931e"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.3 Severe Constipation and Bowel Obstruction
+</title>
+                     <text>
+                        <paragraph>Severe and fatal paralytic ileus, constipation, intestinal obstruction, necrosis, and perforation occur in patients receiving vinorelbine. Institute a prophylactic bowel regimen to mitigate potential constipation, bowel obstruction and/or paralytic ileus, considering adequate dietary fiber intake, hydration and routine use of stool softeners.
+</paragraph>
+                     </text>
+                     <effectiveTime value="20190723"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s27">
+                     <id root="ba3bb2f4-3b33-4532-9e5e-3a71b9a978df"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.4 Extravasation and Tissue Injury
+</title>
+                     <text>
+                        <paragraph>Extravasation of vinorelbine can result in severe irritation, local tissue necrosis and/or thrombophlebitis. If signs or symptoms of extravasation occur, immediately stop administration of vinorelbine and institute recommended management procedures <content styleCode="italics">[see Dosage and Administration (<linkHtml href="#s8">2.2</linkHtml>) and Adverse Reactions (<linkHtml href="#s32">6.1</linkHtml>)].</content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20190723"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s28">
+                     <id root="c5fae52d-ef33-43d7-973f-130324115e59"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.5 Neurologic Toxicity
+</title>
+                     <text>
+                        <paragraph>Sensory and motor neuropathies, including severe neuropathies, occur in patients receiving vinorelbine. Monitor patients for new or worsening signs and symptoms of neuropathy, such as paresthesia, hyperesthesia, hyporeflexia and muscle weakness while receiving vinorelbine. Discontinue vinorelbine for CTCAE Grade 2 or greater neuropathy <content styleCode="italics">[see Dosage and Administration (<linkHtml href="#s8">2.2</linkHtml>) and Adverse Reactions (<linkHtml href="#s32">6.1</linkHtml>)].</content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20190723"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s29">
+                     <id root="3f377dad-b3f8-4d3f-bb97-b1aa27dce154"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.6 Pulmonary Toxicity and Respiratory Failure
+</title>
+                     <text>
+                        <paragraph>Pulmonary toxicity, including severe acute bronchospasm, interstitial pneumonitis, acute respiratory distress syndrome (ARDS) occur in patients receiving vinorelbine. Interstitial pneumonitis and ARDS included fatalities. The mean time to onset of interstitial pneumonitis and ARDS after vinorelbine administration was one week (range 3 to 8 days) <content styleCode="italics">[see Adverse Reactions (<linkHtml href="#s32">6.1</linkHtml>)].</content> Interrupt vinorelbine in patients who develop unexplained dyspnea or have any evidence of pulmonary toxicity. Permanently discontinue vinorelbine for confirmed interstitial pneumonitis or ARDS.
+</paragraph>
+                     </text>
+                     <effectiveTime value="20190723"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s30">
+                     <id root="931f3813-9a3f-4415-80e1-6953198d6bc6"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.7 Embryo-Fetal Toxicity
+</title>
+                     <text>
+                        <paragraph>Based on findings from animal studies and its mechanism of action, vinorelbine can cause fetal harm when administered to a pregnant woman. In animal reproduction studies in mice and rabbits, embryo and fetal toxicity were observed with administration of vinorelbine at doses approximately 0.33 and 0.18 times the human therapeutic dose, respectively.
+</paragraph>
+                        <paragraph>Advise pregnant women of the potential risk to a fetus. Advise females of reproductive potential to use effective contraception during treatment with vinorelbine and for 6 months after the final dose. Advise males with female partners of reproductive potential to use effective contraception during treatment with vinorelbine and for 3 months after the final dose <content styleCode="italics">[see Use in Specific Populations (<linkHtml href="#s39">8.1</linkHtml>, <linkHtml href="#s45">8.3</linkHtml>)].</content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20190723"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s31">
+               <id root="b58e0f15-1ca7-4b5d-b32b-379e9f388eca"/>
+               <code code="34084-4" codeSystem="2.16.840.1.113883.6.1" displayName="ADVERSE REACTIONS SECTION"/>
+               <title>6 ADVERSE REACTIONS
+</title>
+               <text>
+                  <paragraph>The following clinically significant adverse reactions are described elsewhere in the labeling:
+</paragraph>
+                  <list listType="unordered" styleCode="Disc">
+                     <item>Myelosuppression <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#s24">5.1</linkHtml>)]</content>
+                     </item>
+                     <item>Hepatic Toxicity <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#s25">5.2</linkHtml>)]</content>
+                     </item>
+                     <item>Severe Constipation and Bowel Obstruction <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#s26">5.3</linkHtml>)]</content>
+                     </item>
+                     <item>Extravasation and Tissue Injury <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#s27">5.4</linkHtml>)]</content>
+                     </item>
+                     <item>Neurologic Toxicity <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#s28">5.5</linkHtml>)]</content>
+                     </item>
+                     <item>Pulmonary Toxicity and Respiratory Failure <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#s29">5.6</linkHtml>)]</content>
+                     </item>
+                  </list>
+               </text>
+               <effectiveTime value="20230930"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Most common adverse reactions (incidence ≥ 20%) are leukopenia, neutropenia, anemia, increased aspartate aminotransferase, nausea, vomiting, constipation, asthenia, injection site reaction and peripheral neuropathy (<linkHtml href="#s32">6.1</linkHtml>)<br/>
+                           <br/>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="bold">To report SUSPECTED ADVERSE REACTIONS, contact Sagent Pharmaceuticals at 1-866-625-1618 or FDA at 1-800-FDA-1088 or </content>
+                           <content styleCode="bold underline">www.fda.gov/medwatch</content>
+                           <content styleCode="bold">.</content>
+                           <br/>
+                           <br/>
+                        </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="s32">
+                     <id root="1856f9b3-7a6b-40d0-b75a-0ae35186fbab"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>6.1 Clinical Trials Experience
+</title>
+                     <text>
+                        <paragraph>Because clinical trials are conducted under varying designs and in different patient populations, the adverse reaction rates reported in one clinical trial may not be easily compared to those rates reported in another clinical trial and may not reflect the rates actually observed in clinical practice.
+</paragraph>
+                     </text>
+                     <effectiveTime value="20190723"/>
+                     <component>
+                        <section ID="s33">
+                           <id root="3fbd34cc-190d-42fb-b0a7-abcb8181b04e"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Single Agent</content>
+                              </paragraph>
+                              <paragraph>The data below reflect exposure to vinorelbine as a single agent administered at a dose of 30 mg/m<sup>2</sup> on a weekly basis to 365 patients enrolled in 3 controlled studies for metastatic NSCLC and advanced breast cancer. The population included 143 patients with previously untreated metastatic NSCLC (Study 3) who received a median of 8 doses of vinorelbine. The patients were aged 32 to 79 (median 61 years), 71% were male, 91% White, 48% had adenocarcinoma histology. The data also reflect exposure to vinorelbine in 222 patients with previously treated advanced breast cancer who received a median of 10 doses of vinorelbine. Vinorelbine is not indicated for the treatment of breast cancer.
+</paragraph>
+                              <paragraph>Selected adverse reactions reported in these studies are provided in <linkHtml href="#t1">Tables 1</linkHtml> and <linkHtml href="#t2">2</linkHtml>. The most common adverse reactions (≥ 20%) of single agent vinorelbine were leukopenia, neutropenia, anemia, increased aspartate aminotransferase (AST), nausea, vomiting, constipation, asthenia, injection site reaction and peripheral neuropathy. The most common (≥ 5%) Grade 3 or 4 adverse reactions were neutropenia, leukopenia, anemia, increased total bilirubin, increased AST, injection site reaction and asthenia.
+</paragraph>
+                              <paragraph>Approximately 49% of patients with NSCLC who were treated with vinorelbine experienced at least one dose reduction due to an adverse reaction.
+</paragraph>
+                              <paragraph>Thirteen percent of patients discontinued vinorelbine due to adverse reactions. The most frequent adverse reactions leading to vinorelbine discontinuation were asthenia, dyspnea, nausea, constipation, anorexia, myasthenia and fever.
+</paragraph>
+                              <table ID="t1" width="100%">
+                                 <caption>Table 1: Hematologic Adverse Reactions Experienced in &gt; 5% of Patients Receiving Vinorelbine<sup>*†</sup>:
+</caption>
+                                 <col width="36.650%" align="left"/>
+                                 <col width="21.225%" align="left"/>
+                                 <col width="21.525%" align="left"/>
+                                 <col width="20.600%" align="left"/>
+                                 <tfoot>
+                                    <tr>
+                                       <td colspan="4" align="left" valign="top">
+                                          <paragraph styleCode="footnote">
+                                             <sup>*</sup>Grade based on modified criteria from the National Cancer Institute version 1.
+</paragraph>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td colspan="4" align="left" valign="top">
+                                          <paragraph styleCode="footnote">
+                                             <sup>†</sup>Patients with NSCLC had not received prior chemotherapy. The majority of the remaining patients had received prior chemotherapy.
+</paragraph>
+                                       </td>
+                                    </tr>
+                                 </tfoot>
+                                 <tbody>
+                                    <tr>
+                                       <td align="justify" valign="top" styleCode="Toprule Botrule Lrule Rrule"/>
+                                       <td align="justify" valign="top" styleCode="Toprule Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Toprule Botrule Rrule">
+                                          <content styleCode="bold">All Patients</content>
+                                          <br/>
+                                          <content styleCode="bold">(N=365)</content>
+                                          <br/>
+                                          <content styleCode="bold">(%)</content>
+                                       </td>
+                                       <td align="center" valign="top" styleCode="Toprule Botrule Rrule">
+                                          <content styleCode="bold">NSCLC</content>
+                                          <br/>
+                                          <content styleCode="bold">(N=143)</content>
+                                          <br/>
+                                          <content styleCode="bold">(%)</content>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td align="justify" valign="top" styleCode="Botrule Lrule Rrule">
+                                          <content styleCode="bold">Laboratory</content>
+                                       </td>
+                                       <td align="left" valign="middle" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule"/>
+                                    </tr>
+                                    <tr>
+                                       <td align="justify" valign="top" styleCode="Botrule Lrule Rrule">     <content styleCode="bold">Hematologic</content>
+                                       </td>
+                                       <td align="left" valign="middle" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule"/>
+                                    </tr>
+                                    <tr>
+                                       <td align="justify" valign="top" styleCode="Lrule Rrule">           Neutropenia
+</td>
+                                       <td align="left" valign="middle" styleCode="Botrule Rrule">&lt; 2,000 cells/mm<sup>3</sup>
+                                       </td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">90
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">80
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="justify" valign="top" styleCode="Botrule Lrule Rrule"/>
+                                       <td align="left" valign="middle" styleCode="Botrule Rrule">&lt; 500 cells/mm<sup>3</sup>
+                                       </td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">36
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">29
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="justify" valign="middle" styleCode="Lrule Rrule">           Leukopenia
+</td>
+                                       <td align="left" valign="middle" styleCode="Botrule Rrule">&lt; 4,000 cells/mm<sup>3</sup>
+                                       </td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">92
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">81
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="justify" valign="top" styleCode="Botrule Lrule Rrule"/>
+                                       <td align="left" valign="middle" styleCode="Botrule Rrule">&lt; 1,000 cells/mm<sup>3</sup>
+                                       </td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">15
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">12
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="justify" valign="middle" styleCode="Botrule Lrule Rrule">           Thrombocytopenia
+</td>
+                                       <td align="left" valign="middle" styleCode="Botrule Rrule">&lt; 100,000 cells/mm<sup>3</sup>
+                                       </td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">5
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">4
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="justify" valign="middle" styleCode="Lrule Rrule">           Anemia
+</td>
+                                       <td align="left" valign="middle" styleCode="Botrule Rrule">&lt; 11 g/dl
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">83
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">77
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="middle" styleCode="Botrule Lrule Rrule"/>
+                                       <td align="left" valign="middle" styleCode="Botrule Rrule">&lt; 8 g/dl
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">9
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">1
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td colspan="2" align="justify" valign="middle" styleCode="Botrule Lrule Rrule">           Hospitalizations due to neutropenic complications
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">9
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">8
+</td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                              <table ID="t2" width="100%">
+                                 <caption>Table 2: Non-hematologic Adverse Reactions Experienced in ≥ 5% of Patients Receiving Vinorelbine<sup>*†</sup>:
+</caption>
+                                 <col width="39.380%" align="left"/>
+                                 <col width="16.340%" align="left"/>
+                                 <col width="15.520%" align="left"/>
+                                 <col width="14.700%" align="left"/>
+                                 <col width="14.060%" align="left"/>
+                                 <tfoot>
+                                    <tr>
+                                       <td colspan="5" align="left" valign="top">
+                                          <paragraph styleCode="footnote">
+                                             <sup>*</sup>Grade based on modified criteria from the National Cancer Institute version 1.
+</paragraph>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td colspan="5" align="left" valign="top">
+                                          <paragraph styleCode="footnote">
+                                             <sup>†</sup>Patients with NSCLC had not received prior chemotherapy. The majority of the remaining patients had received prior chemotherapy.
+</paragraph>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td colspan="5" align="left" valign="top">
+                                          <paragraph styleCode="footnote">
+                                             <sup>‡</sup> Incidence of paresthesia plus hypesthesia.
+</paragraph>
+                                       </td>
+                                    </tr>
+                                 </tfoot>
+                                 <tbody>
+                                    <tr>
+                                       <td rowspan="2" align="justify" valign="top" styleCode="Toprule Botrule Lrule Rrule"/>
+                                       <td colspan="2" align="center" valign="top" styleCode="Toprule Botrule Rrule">
+                                          <content styleCode="bold">All Grades</content>
+                                       </td>
+                                       <td colspan="2" align="center" valign="top" styleCode="Toprule Botrule Rrule">
+                                          <content styleCode="bold">Grade 3-4</content>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">
+                                          <content styleCode="bold">All Patients</content>
+                                          <br/>
+                                          <content styleCode="bold">(%)</content>
+                                       </td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">
+                                          <content styleCode="bold">NSCLC</content>
+                                          <br/>
+                                          <content styleCode="bold">(%)</content>
+                                       </td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">
+                                          <content styleCode="bold">All Patients</content>
+                                          <br/>
+                                          <content styleCode="bold">(%)</content>
+                                       </td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">
+                                          <content styleCode="bold">NSCLC</content>
+                                          <br/>
+                                          <content styleCode="bold">(%)</content>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td align="justify" valign="top" styleCode="Botrule Lrule Rrule">
+                                          <content styleCode="bold">Laboratory</content>
+                                       </td>
+                                       <td align="justify" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="justify" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="justify" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="justify" valign="top" styleCode="Botrule Rrule"/>
+                                    </tr>
+                                    <tr>
+                                       <td align="justify" valign="top" styleCode="Botrule Lrule Rrule">     <content styleCode="bold">Hepatic</content>
+                                       </td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                    </tr>
+                                    <tr>
+                                       <td align="justify" valign="top" styleCode="Botrule Lrule Rrule">     AST increased (N=346)
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">67
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">54
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">6
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">3
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="middle" styleCode="Botrule Lrule Rrule">     Bilirubin increased (N=351)
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">13
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">9
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">7
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">5
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="justify" valign="top" styleCode="Botrule Lrule Rrule">
+                                          <content styleCode="bold">Clinical</content>
+                                       </td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="middle" styleCode="Botrule Lrule Rrule">     Nausea
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">44
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">34
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">2
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">1
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="middle" styleCode="Botrule Lrule Rrule">     Asthenia
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">36
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">27
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">7
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">5
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="middle" styleCode="Botrule Lrule Rrule">     Constipation
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">35
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">29
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">3
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">2
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="middle" styleCode="Botrule Lrule Rrule">     Injection site reaction
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">28
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">38
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">2
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">5
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="middle" styleCode="Botrule Lrule Rrule">     Injection site pain
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">16
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">13
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">2
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">1
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="middle" styleCode="Botrule Lrule Rrule">     Neuropathy peripheral<sup>‡</sup>
+                                       </td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">25
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">20
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">&lt;2
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">1
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="middle" styleCode="Botrule Lrule Rrule">     Vomiting
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">20
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">15
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">2
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">1
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="middle" styleCode="Botrule Lrule Rrule">     Diarrhea
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">17
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">13
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">1
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">1
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="middle" styleCode="Botrule Lrule Rrule">     Alopecia
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">12
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">12
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">≤1
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">1
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="middle" styleCode="Botrule Lrule Rrule">     Phlebitis
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">7
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">10
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">&lt;1
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">1
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="middle" styleCode="Botrule Lrule Rrule">     Dyspnea
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">7
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">3
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">3
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">2
+</td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                              <paragraph>
+                                 <content styleCode="italics">Myelosuppression:</content> In clinical trials, Grade 3-4 neutropenia, anemia and thrombocytopenia occurred in 69%, 9% and 1%, respectively of patients receiving single agent vinorelbine. Neutropenia is the major dose-limiting toxicity.
+</paragraph>
+                              <paragraph>
+                                 <content styleCode="italics">Neurotoxicity:</content> Neurotoxicity was most commonly manifested as constipation, paresthesia, hyperesthesia and hyporeflexia. Grade 3 and 4 neuropathy was observed in 1% of the patients receiving single agent vinorelbine.
+</paragraph>
+                              <paragraph>
+                                 <content styleCode="italics">Injection Site Reactions:</content> Injection site reactions, including erythema, pain at injection site and vein discoloration, occurred in approximately one third of patients; 5% were severe. Phlebitis (chemical phlebitis) along the vein proximal to the site of injection was reported in 10% of patients.
+</paragraph>
+                              <paragraph>
+                                 <content styleCode="italics">Cardiovascular Toxicity:</content> Chest pain occurred in 5% of patients; myocardial infarction occurred in ˂0.1% of patients.
+</paragraph>
+                              <paragraph>
+                                 <content styleCode="italics">Pulmonary Toxicity and Respiratory Failure:</content> Dyspnea (shortness of breath) was reported in 3% of patients; it was severe in 2%. Interstitial pulmonary changes were documented.
+</paragraph>
+                              <paragraph>
+                                 <content styleCode="italics">Other:</content> Hemorrhagic cystitis and the syndrome of inappropriate ADH secretion were each reported in &lt;1% of patients.
+</paragraph>
+                           </text>
+                           <effectiveTime value="20190723"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s34">
+                           <id root="42b2e171-e085-40ba-848c-475024d9f411"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">In Combination with Cisplatin</content>
+                              </paragraph>
+                              <paragraph>
+                                 <linkHtml href="#t3">Table 3</linkHtml> presents the incidence of selected adverse reactions, occurring in ≥10% of vinorelbine treated patients reported in a randomized trial comparing the combination of vinorelbine 25 mg/m<sup>2</sup> administered every week of each 28-day cycle and cisplatin 100 mg/m<sup>2</sup> administered on day 1 of each 28-day cycle versus cisplatin alone at the same dose and schedule in patients with previously untreated NSCLC (Study 1).
+</paragraph>
+                              <paragraph>Patients randomized to vinorelbine plus cisplatin received a median of 3 cycles of treatment and those randomized to cisplatin alone received a median of 2 cycles of treatment. The incidence of Grade 3 and 4 neutropenia was significantly higher in the vinorelbine plus cisplatin arm (82%) compared to the cisplatin alone arm (5%).
+</paragraph>
+                              <paragraph>Thirty-five percent of the eligible patients in the combination arm required treatment discontinuation due to an adverse reaction compared to 19% in the cisplatin alone arm.
+</paragraph>
+                              <paragraph>Four patients in the vinorelbine plus cisplatin arm died of neutropenic sepsis. Seven additional deaths were reported in the combination arm: 2 from cardiac ischemia, 1 cerebrovascular accident, 1 multisystem failure due to an overdose of vinorelbine and 3 from febrile neutropenia.
+</paragraph>
+                              <table ID="t3" width="100%">
+                                 <caption>Table 3: Adverse Reactions Experienced by
+≥ 10% of Patients on Vinorelbine plus Cisplatin versus Single Agent Cisplatin<sup>*</sup>
+                                 </caption>
+                                 <col width="42.649%" align="left"/>
+                                 <col width="14.703%" align="left"/>
+                                 <col width="14.703%" align="left"/>
+                                 <col width="13.883%" align="left"/>
+                                 <col width="14.063%" align="left"/>
+                                 <tfoot>
+                                    <tr>
+                                       <td colspan="5" align="left" valign="top">
+                                          <paragraph styleCode="footnote">
+                                             <sup>*</sup>Graded according to the standard SWOG criteria version 1.
+</paragraph>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td colspan="5" align="left" valign="top">
+                                          <paragraph styleCode="footnote">
+                                             <sup>†</sup>Categorical toxicity grade not specified
+</paragraph>
+                                       </td>
+                                    </tr>
+                                 </tfoot>
+                                 <tbody>
+                                    <tr>
+                                       <td rowspan="2" align="center" valign="top" styleCode="Toprule Botrule Lrule Rrule"/>
+                                       <td colspan="2" align="center" valign="top" styleCode="Toprule Botrule Rrule">
+                                          <content styleCode="bold">Vinorelbine 25mg/m</content>
+                                          <content styleCode="bold">
+                                             <sup>2
+</sup>
+                                          </content>
+                                          <content styleCode="bold">plus</content>
+                                          <br/>
+                                          <content styleCode="bold">Cisplatin 100 mg/m</content>
+                                          <content styleCode="bold">
+                                             <sup>2</sup>
+                                          </content>
+                                          <br/>
+                                          <content styleCode="bold">(N=212)</content>
+                                       </td>
+                                       <td colspan="2" align="center" valign="top" styleCode="Toprule Botrule Rrule">
+                                          <content styleCode="bold">Cisplatin 100 mg/m</content>
+                                          <content styleCode="bold">
+                                             <sup>2</sup>
+                                          </content>
+                                          <br/>
+                                          <br/>
+                                          <content styleCode="bold">(N=210)</content>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">
+                                          <content styleCode="bold">All Grades</content>
+                                          <br/>
+                                          <content styleCode="bold">(%)</content>
+                                       </td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">
+                                          <content styleCode="bold">Grades 3</content>-<content styleCode="bold">4</content>
+                                          <br/>
+                                          <content styleCode="bold">(%)</content>
+                                       </td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">
+                                          <content styleCode="bold">All Grades</content>
+                                          <br/>
+                                          <content styleCode="bold">(%)</content>
+                                       </td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">
+                                          <content styleCode="bold">Grades 3-4</content>
+                                          <br/>
+                                          <content styleCode="bold">(%)</content>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td align="justify" valign="top" styleCode="Botrule Lrule Rrule">
+                                          <content styleCode="bold">Laboratory</content>
+                                       </td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="top" styleCode="Botrule Lrule Rrule">
+                                          <content styleCode="bold">    Hematologic</content>
+                                       </td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="top" styleCode="Botrule Lrule Rrule">    Neutropenia
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">89
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">82
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">26
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">5
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="top" styleCode="Botrule Lrule Rrule">    Anemia
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">89
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">24
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">72
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">&lt;8
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="top" styleCode="Botrule Lrule Rrule">    Leukopenia
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">88
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">58
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">31
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">&lt;1
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="top" styleCode="Botrule Lrule Rrule">    Thrombocytopenia
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">29
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">5
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">21
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">&lt;2
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="top" styleCode="Botrule Lrule Rrule">    Febrile neutropenia<sup>†</sup>
+                                       </td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">N/A
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">11
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">N/A
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">0
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="top" styleCode="Botrule Lrule Rrule">
+                                          <content styleCode="bold">Renal</content>
+                                       </td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="top" styleCode="Botrule Lrule Rrule">    Blood creatinine increased
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">37
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">4
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">28
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">&lt;5
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="justify" valign="top" styleCode="Botrule Lrule Rrule">
+                                          <content styleCode="bold">Clinical</content>
+                                       </td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="top" styleCode="Botrule Lrule Rrule">    Malaise/Fatigue/Lethargy
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">67
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">12
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">49
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">8
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="top" styleCode="Botrule Lrule Rrule">    Vomiting
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">60
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">13
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">60
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">14
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="top" styleCode="Botrule Lrule Rrule">    Nausea
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">58
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">14
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">57
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">12
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="top" styleCode="Botrule Lrule Rrule">    Decreased appetite
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">46
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">0
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">37
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">0
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="top" styleCode="Botrule Lrule Rrule">    Constipation
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">35
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">3
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">16
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">1
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="top" styleCode="Botrule Lrule Rrule">    Alopecia
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">34
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">0
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">14
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">0
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="top" styleCode="Botrule Lrule Rrule">    Weight decreased
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">34
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">1
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">21
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">&lt;1
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="top" styleCode="Botrule Lrule Rrule">    Fever without infection
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">20
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">2
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">4
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">0
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="top" styleCode="Botrule Lrule Rrule">    Hearing impaired
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">18
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">4
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">18
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">&lt;4
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="top" styleCode="Botrule Lrule Rrule">    Injection site reaction
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">17
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">&lt;1
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">1
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">0
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="top" styleCode="Botrule Lrule Rrule">    Diarrhea
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">17
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">&lt;3
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">11
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">&lt;2
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="top" styleCode="Botrule Lrule Rrule">    Paraesthesia
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">17
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">&lt;1
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">10
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">&lt;1
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="top" styleCode="Botrule Lrule Rrule">    Taste alterations
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">17
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">0
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">15
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">0
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="top" styleCode="Botrule Lrule Rrule">    Peripheral numbness
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">11
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">2
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">7
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">&lt;1
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="top" styleCode="Botrule Lrule Rrule">    Myalgia/Arthralgia
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">12
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">&lt;1
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">3
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">&lt;1
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="top" styleCode="Botrule Lrule Rrule">    Phlebitis/Thrombosis/Embolism
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">10
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">3
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">&lt;1
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">&lt;1
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="top" styleCode="Botrule Lrule Rrule">    Weakness
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">12
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">&lt;3
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">7
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">2
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="top" styleCode="Botrule Lrule Rrule">    Infection
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">11
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">&lt;6
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">&lt;1
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">&lt;1
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="top" styleCode="Botrule Lrule Rrule">    Respiratory tract infection
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">10
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">&lt;5
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">3
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">3
+</td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                              <paragraph>
+                                 <linkHtml href="#t4">Table 4</linkHtml> presents the incidence of selected adverse reactions, occurring in ≥10% of vinorelbine treated patients reported in a randomized trial of vinorelbine plus cisplatin, vindesine plus cisplatin and vinorelbine as a single agent in patients with stage III or IV NSCLC who had not received prior chemotherapy. A total of 604 patients received either vinorelbine 30 mg/m<sup>2</sup> every week plus cisplatin 120 mg/m<sup>2</sup> on Day 1 and Day 29, then every 6 weeks thereafter (N=207), vindesine 3 mg/m<sup>2</sup> for 6 weeks, then every other week thereafter plus cisplatin 120 mg/m<sup>2</sup> on Days 1 and Day 29, then every 6 weeks thereafter (N=193) or vinorelbine 30mg/m<sup>2</sup> every week (N=204).
+</paragraph>
+                              <paragraph>Patients randomized to vinorelbine plus cisplatin received a median of 15 weeks of treatment, vindesine plus cisplatin 12 weeks and vinorelbine received 13 weeks. Grade 3 and 4 neutropenia was significantly greater in the vinorelbine plus cisplatin arm (78%) compared to vindesine plus cisplatin (48%) and vinorelbine as a single agent (53%). Neurotoxicity, including peripheral neuropathy and constipation, was reported in 44% (Grade 3-4, 7%) of the patients receiving vinorelbine plus cisplatin, 58% (Grade 3-4, 17%) of the patients receiving vindesine and cisplatin and 44% (Grade 3-4, 8.5%) of the patients receiving vinorelbine as a single agent.
+</paragraph>
+                              <paragraph>Study discontinuation due to an adverse reaction was required in 27, 22 and 10% of the patients randomized to vinorelbine plus cisplatin, vindesine plus cisplatin and cisplatin alone arms, respectively.
+</paragraph>
+                              <table ID="t4" width="100%">
+                                 <caption>Table 4: Adverse Reactions Experienced by
+≥ 10 % of Patients from a Comparative Trial of Vinorelbine Plus Cisplatin versus Vindesine Plus Cisplatin versus Single Agent Vinorelbine<sup>*</sup>
+                                 </caption>
+                                 <col width="25.753%" align="left"/>
+                                 <col width="11.913%" align="left"/>
+                                 <col width="13.041%" align="left"/>
+                                 <col width="11.413%" align="left"/>
+                                 <col width="13.855%" align="left"/>
+                                 <col width="10.856%" align="left"/>
+                                 <col width="13.170%" align="left"/>
+                                 <tfoot>
+                                    <tr>
+                                       <td colspan="7" align="left" valign="top">
+                                          <paragraph styleCode="footnote">
+                                             <sup>*</sup> Grade based on criteria from the World Health Organization (WHO).
+</paragraph>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td colspan="7" align="left" valign="top">
+                                          <paragraph styleCode="footnote">
+                                             <sup>†</sup> N=194 to 207; all patients receiving vinorelbine/cisplatin with laboratory and non-laboratory data.
+</paragraph>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td colspan="7" align="left" valign="top">
+                                          <paragraph styleCode="footnote">
+                                             <sup>‡</sup> N=173 to 192; all patients receiving vindesine/cisplatin with laboratory and non-laboratory data.
+</paragraph>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td colspan="7" align="left" valign="top">
+                                          <paragraph styleCode="footnote">
+                                             <sup>§</sup> N=165 to 201; all patients receiving vinorelbine with laboratory and non-laboratory data.
+</paragraph>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td colspan="7" align="left" valign="top">
+                                          <paragraph styleCode="footnote">
+                                             <sup>¦</sup> Categorical toxicity grade not specified.
+</paragraph>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td colspan="7" align="left" valign="top">
+                                          <paragraph styleCode="footnote">
+                                             <sup>¶</sup> Neurotoxicity includes peripheral neuropathy and constipation.
+</paragraph>
+                                       </td>
+                                    </tr>
+                                 </tfoot>
+                                 <tbody>
+                                    <tr>
+                                       <td align="center" valign="top" styleCode="Toprule Botrule Lrule Rrule"/>
+                                       <td colspan="2" align="center" valign="middle" styleCode="Toprule Botrule Rrule">
+                                          <content styleCode="bold">Vinorelbine/Cisplatin</content>
+                                          <content styleCode="bold">
+                                             <sup>†</sup>
+                                          </content>
+                                       </td>
+                                       <td colspan="2" align="center" valign="middle" styleCode="Toprule Botrule Rrule">
+                                          <content styleCode="bold">Vindesine/Cisplatin</content>
+                                          <sup>‡</sup>
+                                       </td>
+                                       <td colspan="2" align="center" valign="middle" styleCode="Toprule Botrule Rrule">
+                                          <content styleCode="bold">Vinorelbine</content>
+                                          <content styleCode="bold">
+                                             <sup>§</sup>
+                                          </content>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td align="center" valign="top" styleCode="Botrule Lrule Rrule"/>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">
+                                          <content styleCode="bold">All Grades</content>
+                                          <br/>
+                                          <content styleCode="bold">(%)</content>
+                                       </td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">
+                                          <content styleCode="bold">Grades 3-4</content>
+                                          <br/>
+                                          <content styleCode="bold">(%)</content>
+                                       </td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">
+                                          <content styleCode="bold">All Grades</content>
+                                          <br/>
+                                          <content styleCode="bold">(%)</content>
+                                       </td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">
+                                          <content styleCode="bold">Grades 3-4</content>
+                                          <br/>
+                                          <content styleCode="bold">(%)</content>
+                                       </td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">
+                                          <content styleCode="bold">All Grades</content>
+                                          <br/>
+                                          <content styleCode="bold">(%)</content>
+                                       </td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">
+                                          <content styleCode="bold">Grades 3-4</content>
+                                          <br/>
+                                          <content styleCode="bold">(%)</content>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td align="justify" valign="top" styleCode="Botrule Lrule Rrule">
+                                          <content styleCode="bold">Laboratory</content>
+                                       </td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                    </tr>
+                                    <tr>
+                                       <td align="justify" valign="top" styleCode="Botrule Lrule Rrule">   <content styleCode="bold">Hematologic</content>
+                                       </td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="middle" styleCode="Botrule Lrule Rrule">       Neutropenia
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">95
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">78
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">79
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">48
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">85
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">53
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="middle" styleCode="Botrule Lrule Rrule">       Leukopenia
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">94
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">57
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">82
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">27
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">83
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">32
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="middle" styleCode="Botrule Lrule Rrule">       Thrombocytopenia
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">15
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">4
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">10
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">3.5
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">3
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">0
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="top" styleCode="Botrule Lrule Rrule">   <content styleCode="bold">Renal</content>
+                                       </td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="middle" styleCode="Botrule Lrule Rrule">       Blood creatinine increased<sup>¦</sup>
+                                       </td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">46
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">N/A
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">37
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">N/A
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">13
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">N/A
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="justify" valign="top" styleCode="Botrule Lrule Rrule">
+                                          <content styleCode="bold">Clinical</content>
+                                       </td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule"/>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="middle" styleCode="Botrule Lrule Rrule">       Nausea/Vomiting
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">74
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">30
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">72
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">25
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">31
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">2
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="middle" styleCode="Botrule Lrule Rrule">       Alopecia
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">51
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">7.5
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">56
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">14
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">30
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">2
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="middle" styleCode="Botrule Lrule Rrule">       Neurotoxicity<sup>¶</sup>
+                                       </td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">44
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">7
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">58
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">17
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">44
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">8.5
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="middle" styleCode="Botrule Lrule Rrule">       Diarrhea
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">25
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">1.5
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">24
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">1
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">12
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">0.5
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="middle" styleCode="Botrule Lrule Rrule">       Injection site reaction
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">17
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">2.5
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">7
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">0
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">22
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">2
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="left" valign="middle" styleCode="Botrule Lrule Rrule">       Ototoxicity
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">10
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">2
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">14
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">1
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">1
+</td>
+                                       <td align="center" valign="middle" styleCode="Botrule Rrule">0
+</td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </text>
+                           <effectiveTime value="20190723"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s35">
+                     <id root="cd29783b-5d24-42e0-bc46-7952747f6bcc"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>6.2 Postmarketing Experience
+</title>
+                     <text>
+                        <paragraph>The following adverse reactions have been identified during postapproval use of vinorelbine. Because these reactions are reported voluntarily from a population of uncertain size, it is not always possible to reliably estimate their frequency or establish a causal relationship to drug exposure.
+</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Infections:</content> pneumonia
+</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Immune system disorders:</content> anaphylactic reaction, pruritus, urticaria, angioedema
+</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Nervous system disorders:</content> loss of deep tendon reflexes, muscular weakness, gait disturbance, headache
+</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Ear and labyrinth disorders:</content> vestibular disorder, hearing impaired
+</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Cardiac disorders:</content> tachycardia
+</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Respiratory disorders:</content> pulmonary edema
+</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Vascular disorders:</content> pulmonary embolism, deep vein thrombosis, hypertension, hypotension, flushing, vasodilatation
+</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Gastrointestinal disorders:</content> mucosal inflammation, dysphagia, pancreatitis
+</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Skin disorders:</content> generalized cutaneous reactions (rash), palmar-plantar erythrodysesthesia syndrome
+</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Musculoskeletal and connective tissue disorders:</content> jaw pain, myalgia, arthralgia
+</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">General disorders and administration site conditions:</content> injection site rash, urticaria, blistering, sloughing of skin
+</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Injury, poisoning and procedural complications:</content> radiation recall phenomenon, dermatitis, esophagitis
+</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Laboratory abnormalities:</content> electrolyte imbalance including hyponatremia
+</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Other:</content> tumor pain, back pain, abdominal pain
+</paragraph>
+                     </text>
+                     <effectiveTime value="20190723"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s36">
+               <id root="b2976be9-478f-41ad-b355-b3f9c7eb2acc"/>
+               <code code="34073-7" codeSystem="2.16.840.1.113883.6.1" displayName="DRUG INTERACTIONS SECTION"/>
+               <title>7 DRUG INTERACTIONS
+</title>
+               <effectiveTime value="20190723"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered" styleCode="Disc">
+                           <item>Inhibitors of CYP3A4: May cause earlier onset and/or increased severity of adverse reactions (<linkHtml href="#s37">7.1</linkHtml>)
+</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="s37">
+                     <id root="b4da4652-a555-4280-a097-dce3aa0f1c61"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>7.1 CYP3A Inhibitors
+</title>
+                     <text>
+                        <paragraph>Exercise caution in patients concurrently taking drugs known to inhibit CYP3A. Concurrent administration of vinorelbine with a CYP3A inhibitor may cause an earlier onset and/or an increased severity of adverse reactions.
+</paragraph>
+                     </text>
+                     <effectiveTime value="20190723"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s38">
+               <id root="88359cc0-5f44-47bd-9798-22d35a2ef496"/>
+               <code code="43684-0" codeSystem="2.16.840.1.113883.6.1" displayName="USE IN SPECIFIC POPULATIONS SECTION"/>
+               <title>8 USE IN SPECIFIC POPULATIONS
+</title>
+               <effectiveTime value="20190723"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered" styleCode="Disc">
+                           <item>Lactation: Advise not to breastfeed (<linkHtml href="#s43">8.2</linkHtml>)
+</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="s39">
+                     <id root="3fe9dbc7-ef75-47e1-93e5-420e7f838a78"/>
+                     <code code="42228-7" codeSystem="2.16.840.1.113883.6.1" displayName="PREGNANCY SECTION"/>
+                     <title>8.1 Pregnancy
+</title>
+                     <effectiveTime value="20190723"/>
+                     <component>
+                        <section ID="s40">
+                           <id root="c1139c54-9bad-4c63-8b56-7fc779d51556"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Risk Summary</content>
+                              </paragraph>
+                              <paragraph>Based on findings from animal studies and its mechanism of action <content styleCode="italics">[see Clinical Pharmacology (<linkHtml href="#s58">12.1</linkHtml>)]</content>, vinorelbine can cause fetal harm when administered to a pregnant woman. Available human data are insufficient to inform the drug-associated risk of major birth defects, miscarriage, or adverse maternal or fetal outcomes. In animal reproduction studies in mice and rabbits, embryo and fetal toxicity were observed with administration of vinorelbine at doses approximately 0.33 and 0.18 times the human therapeutic dose, respectively <content styleCode="italics">(see <linkHtml href="#s41">Data</linkHtml>)</content>. Advise pregnant women of the potential risk to a fetus.
+</paragraph>
+                              <paragraph>In the U.S. general population, the estimated background risk of major birth defects and miscarriage in clinically recognized pregnancies are 2 to 4% and 15 to 20%, respectively.
+</paragraph>
+                           </text>
+                           <effectiveTime value="20190723"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s41">
+                           <id root="e85fbb6a-a129-4a0b-be27-71645df3decb"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Data</content>
+                              </paragraph>
+                           </text>
+                           <effectiveTime value="20190723"/>
+                           <component>
+                              <section ID="s42">
+                                 <id root="957532c4-35bd-4a1c-aff2-fa163151900b"/>
+                                 <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                                 <text>
+                                    <paragraph>
+                                       <content styleCode="italics">Animal Data</content>
+                                    </paragraph>
+                                    <paragraph>In a mouse embryo-fetal development study, administration of a single dose of vinorelbine at a dose level of 9 mg/m<sup>2</sup> or greater (approximately 0.33 times the recommended human dose based on body surface area) was embryotoxic and fetotoxic. Vinorelbine was embryotoxic and fetotoxic to pregnant rabbits when administered every 6 days during the period of organogenesis at doses of 5.5 mg/m<sup>2</sup> (approximately 0.18 times the recommended human dose based on body surface area) or greater. At doses that did not cause maternal toxicity in either species, vinorelbine administration resulted in reduced fetal weight and delayed ossification.
+</paragraph>
+                                 </text>
+                                 <effectiveTime value="20190723"/>
+                              </section>
+                           </component>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s43">
+                     <id root="a1618102-38f9-465a-a0f0-f3ea85353c9d"/>
+                     <code code="77290-5" codeSystem="2.16.840.1.113883.6.1" displayName="LACTATION SECTION"/>
+                     <title>8.2 Lactation
+</title>
+                     <effectiveTime value="20190723"/>
+                     <component>
+                        <section ID="s44">
+                           <id root="6cd9eb60-0a28-4b94-9a4f-bc59226e23a7"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Risk Summary</content>
+                              </paragraph>
+                              <paragraph>There are no data on the presence of vinorelbine in human milk or its effects on the breastfed infant or on milk production. Because of the potential for serious adverse reactions in breastfed infants from vinorelbine, advise women not to breastfeed during treatment with vinorelbine and for 9 days after the final dose.
+</paragraph>
+                           </text>
+                           <effectiveTime value="20190723"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s45">
+                     <id root="3371638f-c974-4d51-b487-24cacf692920"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>8.3 Females and Males of Reproductive Potential
+</title>
+                     <effectiveTime value="20190723"/>
+                     <component>
+                        <section ID="s46">
+                           <id root="cb4c5a50-4f68-4d24-aec6-c0f5d50079ee"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Pregnancy Testing</content>
+                              </paragraph>
+                              <paragraph>Verify pregnancy status in females of reproductive potential prior to initiating vinorelbine <content styleCode="italics">[see Use in Specific Populations (<linkHtml href="#s39">8.1</linkHtml>)].</content>
+                              </paragraph>
+                           </text>
+                           <effectiveTime value="20190723"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s47">
+                           <id root="4f72465f-e57d-4bab-8c9b-e318ec62a361"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Contraception</content>
+                              </paragraph>
+                           </text>
+                           <effectiveTime value="20190723"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s48">
+                           <id root="31ff5b2d-a520-4035-854e-b5feb50b51fd"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="italics">Females</content>
+                              </paragraph>
+                              <paragraph>Vinorelbine can cause fetal harm when administered to pregnant women <content styleCode="italics">[see Use in Specific Populations (<linkHtml href="#s39">8.1</linkHtml>)]</content>. Advise female patients of reproductive potential to use effective contraception during treatment with vinorelbine and for 6 months after the final dose.
+</paragraph>
+                           </text>
+                           <effectiveTime value="20190723"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s49">
+                           <id root="57b43236-fc46-49d9-ada3-198a1601efa3"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="italics">Males</content>
+                              </paragraph>
+                              <paragraph>Vinorelbine may damage spermatozoa <content styleCode="italics">[see Nonclinical Toxicology (<linkHtml href="#s67">13.1</linkHtml>)].</content> Advise males with female sexual partners of reproductive potential to use effective contraception during treatment with vinorelbine and for 3 months after the final dose.
+</paragraph>
+                           </text>
+                           <effectiveTime value="20190723"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s50">
+                           <id root="dec9e9a3-06f6-49c3-a28e-306097b35557"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Infertility</content>
+                              </paragraph>
+                           </text>
+                           <effectiveTime value="20190723"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s51">
+                           <id root="2bfe5d99-303a-40be-9b25-8af857263c22"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="italics">Males</content>
+                              </paragraph>
+                              <paragraph>Based on animal findings, vinorelbine may impair fertility in males <content styleCode="italics">[see Nonclinical Toxicology (<linkHtml href="#s67">13.1</linkHtml>)].</content>
+                              </paragraph>
+                           </text>
+                           <effectiveTime value="20190723"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s52">
+                     <id root="f87b3efc-c355-44fb-8519-c4bb4606a252"/>
+                     <code code="34081-0" codeSystem="2.16.840.1.113883.6.1" displayName="PEDIATRIC USE SECTION"/>
+                     <title>8.4 Pediatric Use
+</title>
+                     <text>
+                        <paragraph>The safety and effectiveness of vinorelbine in pediatric patients have not been established.
+</paragraph>
+                        <paragraph>Results from a single-arm study of vinorelbine administered at the dose of 33.75 mg/m<sup>2</sup> (for 35 patients) or at the dose of 30 mg/m<sup>2</sup> (for 11 patients) every week for 6 weeks followed by 2 weeks of rest were evaluated (courses of 8 weeks). Forty-six patients age 1 to 25 (median 11 years) with recurrent solid malignant tumors, including rhabdomyosarcoma or undifferentiated sarcoma (N=21 patients), neuroblastoma (N= 4 patients) and central nervous system (CNS) tumors (N=21 patients), were enrolled. The most significant grade 3 or 4 hematological adverse reactions were neutropenia (70%) and anemia (33%). The most significant grade 3 or 4 non-hematological adverse reactions were motor (15%) or cranial (13%) neuropathy, hypoxia (13%) and dyspnea (11%). Objective tumor response was observed in 2 out of 21 patients with rhabdomyosarcoma or undifferentiated sarcoma. No objective tumor response was observed in patients with CNS tumors (N=21) or neuroblastoma (N=4).
+</paragraph>
+                     </text>
+                     <effectiveTime value="20190723"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s53">
+                     <id root="bc8511e0-aba9-4aa6-b7f3-702f3a93ffba"/>
+                     <code code="34082-8" codeSystem="2.16.840.1.113883.6.1" displayName="GERIATRIC USE SECTION"/>
+                     <title>8.5 Geriatric Use
+</title>
+                     <text>
+                        <paragraph>Of the 769 number of patients who received vinorelbine as a single agent and in combination with cisplatin in studies 1, 2 and 3, 247 patients were 65 years of age or older. No overall differences in safety, efficacy and pharmacokinetic parameters were observed between these patients and younger patients <content styleCode="italics">[see Clinical Pharmacology (<linkHtml href="#s59">12.3</linkHtml>)]</content>.
+</paragraph>
+                     </text>
+                     <effectiveTime value="20190723"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s54">
+                     <id root="19c2bdfc-dc5f-4b94-a51c-e9b298cd1795"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>8.6 Hepatic Impairment
+</title>
+                     <text>
+                        <paragraph>The influence of hepatic impairment on the pharmacokinetics of vinorelbine has not been evaluated, but the liver plays an important role in the metabolism of vinorelbine. Elevated AST occurs in &gt;60% of the patients receiving vinorelbine as a single agent (6% Grade 3-4). Therefore, exercise caution in patients with hepatic impairment. Reduce the dose of vinorelbine for patients with elevated serum total bilirubin concentrations <content styleCode="italics">[see Dosage and Administration (<linkHtml href="#s8">2.2</linkHtml>) and Warnings and Precautions (<linkHtml href="#s25">5.2</linkHtml>)]</content>.
+</paragraph>
+                     </text>
+                     <effectiveTime value="20190723"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s55">
+               <id root="02912af0-9a9c-4619-835b-c515075d32e3"/>
+               <code code="34088-5" codeSystem="2.16.840.1.113883.6.1" displayName="OVERDOSAGE SECTION"/>
+               <title>10 OVERDOSAGE
+</title>
+               <text>
+                  <paragraph>There is no known antidote for overdoses of vinorelbine. Overdoses involving quantities up to 10 times the recommended dose (30 mg/m<sup>2</sup>) have been reported. The adverse reactions described were consistent with those listed in the <linkHtml href="#s31">ADVERSE REACTIONS</linkHtml> section, including paralytic ileus, stomatitis and esophagitis. Bone marrow aplasia, sepsis and paresis have also been reported. Fatalities have occurred following overdose of vinorelbine. If overdosage occurs, general supportive measures together with appropriate blood transfusions, growth factors and antibiotics should be instituted as deemed necessary by the physician.
+</paragraph>
+               </text>
+               <effectiveTime value="20190723"/>
+            </section>
+         </component>
+         <component>
+            <section ID="s56">
+               <id root="1a954ba7-6369-4379-a9f7-5cbd405aea63"/>
+               <code code="34089-3" codeSystem="2.16.840.1.113883.6.1" displayName="DESCRIPTION SECTION"/>
+               <title>11 DESCRIPTION
+</title>
+               <text>
+                  <paragraph>Vinorelbine Injection, USP contains vinorelbine, a semi-synthetic vinca alkaloid. The molecular formula for vinorelbine tartrate is C<sub>45</sub>H<sub>54</sub>N<sub>4</sub>O<sub>8</sub>•2C<sub>4</sub>H<sub>6</sub>O<sub>6.</sub> It has a molecular weight of 1079.11. The structural formula is as follows:
+</paragraph>
+                  <renderMultiMedia ID="f01" referencedObject="mm01"/>
+                  <paragraph>Vinorelbine tartrate is a white to light yellow amorphous powder. It is easily soluble in water, very soluble in methanol and practically insoluble in hexane.
+</paragraph>
+                  <paragraph>Vinorelbine Injection, USP is a sterile nonpyrogenic aqueous solution for intravenous use. Each milliliter of solution contains 10 mg vinorelbine (equivalent to 13.85 mg vinorelbine tartrate) in Water for Injection, USP. The pH of Vinorelbine Injection, USP is approximately 3.5.
+</paragraph>
+               </text>
+               <effectiveTime value="20230930"/>
+               <component>
+                  <observationMedia ID="mm01">
+                     <text>Structural Formula
+</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="vin00-0008-01.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s57">
+               <id root="391efa61-72ad-41fc-8781-43422b61671a"/>
+               <code code="34090-1" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+               <title>12 CLINICAL PHARMACOLOGY
+</title>
+               <effectiveTime value="20190723"/>
+               <component>
+                  <section ID="s58">
+                     <id root="c3e37d98-5679-476d-9f81-910702c369e6"/>
+                     <code code="43679-0" codeSystem="2.16.840.1.113883.6.1" displayName="MECHANISM OF ACTION SECTION"/>
+                     <title>12.1 Mechanism of Action
+</title>
+                     <text>
+                        <paragraph>Vinorelbine is a vinca alkaloid that interferes with microtubule assembly. The antitumor activity of vinorelbine is thought to be due primarily to inhibition of mitosis at metaphase through its interaction with tubulin. Vinorelbine may also interfere with: 1) amino acid, cyclic AMP and glutathione metabolism, 2) calmodulin-dependent Ca++-transport ATPase activity, 3) cellular respiration, and 4) nucleic acid and lipid biosynthesis. Vinorelbine inhibited mitotic microtubule formation in intact mouse embryo tectal plates at a concentration of 2 μM inducing a blockade of cells at metaphase, but produced depolymerization of axonal microtubules at a concentration 40 μM, suggesting a modest selectivity of vinorelbine for mitotic microtubules.
+</paragraph>
+                     </text>
+                     <effectiveTime value="20190723"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s59">
+                     <id root="ca819681-8876-4e02-9a4b-280de096b26c"/>
+                     <code code="43682-4" codeSystem="2.16.840.1.113883.6.1" displayName="PHARMACOKINETICS SECTION"/>
+                     <title>12.3 Pharmacokinetics
+</title>
+                     <text>
+                        <paragraph>The pharmacokinetics of vinorelbine were studied in 49 patients who received doses of 30 mg/m<sup>2</sup> administered as 15- to 20-minute constant-rate infusions. Vinorelbine concentrations in plasma decay in a triphasic manner.
+</paragraph>
+                     </text>
+                     <effectiveTime value="20190723"/>
+                     <component>
+                        <section ID="s60">
+                           <id root="d35b9456-6e8e-43c5-a106-9f3a885683f9"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Distribution</content>
+                              </paragraph>
+                              <paragraph>Steady-state volume of distribution (V<sub>SS</sub>) values range from 25.4 to 40.1 L/kg. Vinorelbine demonstrated high binding to human platelets and lymphocytes. The free fraction was approximately 0.11 in human plasma over a concentration range of 234 to 1169 ng/mL. The binding to plasma constituents in cancer patients ranged from 79.6% to 91.2%. Vinorelbine binding was not altered in the presence of cisplatin, fluorouracil, or doxorubicin.
+</paragraph>
+                           </text>
+                           <effectiveTime value="20190723"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s61">
+                           <id root="105868aa-a1e2-4383-9d3f-f0265c1dbcc8"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Elimination</content>
+                              </paragraph>
+                              <paragraph>The terminal phase half-life averages 27.7 to 43.6 hours and the mean plasma clearance ranges from 0.97 to 1.26 L/hr/kg.
+</paragraph>
+                           </text>
+                           <effectiveTime value="20190723"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s62">
+                           <id root="5c8abe2d-acd9-4b73-a960-c74ead66f8a5"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="italics">Metabolism</content>
+                              </paragraph>
+                              <paragraph>Vinorelbine undergoes substantial hepatic elimination in humans, with large amounts recovered in feces. Two metabolites of vinorelbine have been identified in human blood, plasma and urine; vinorelbine N-oxide and deacetylvinorelbine. Deacetylvinorelbine has been demonstrated to be the primary metabolite of vinorelbine in humans and has been shown to possess antitumor activity similar to vinorelbine. Therapeutic doses of vinorelbine (30 mg/m<sup>2</sup>) yield very small, if any, quantifiable levels of either metabolite in blood or urine. The metabolism of vinorelbine is mediated by hepatic CYP3A.
+</paragraph>
+                           </text>
+                           <effectiveTime value="20190723"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s63">
+                           <id root="3f869fc8-e942-45b4-b3a6-6dd063e4909a"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="italics">Excretion</content>
+                              </paragraph>
+                              <paragraph>After intravenous administration of radioactive vinorelbine, approximately 18% and 46% of administered radioactivity was recovered in urine and feces, respectively. In a different study, 10.9%
+± 0.7% of a 30 mg/m<sup>2</sup> intravenous dose was excreted as parent drug in urine.
+</paragraph>
+                           </text>
+                           <effectiveTime value="20190723"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s64">
+                           <id root="f3b9829e-63c3-411d-9bd3-e4f0a6ffb086"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Specific Populations</content>
+                              </paragraph>
+                              <paragraph>Age has no effect on the pharmacokinetics (CL, V<sub>SS</sub> and t<sub>1/2</sub>) of vinorelbine.
+</paragraph>
+                           </text>
+                           <effectiveTime value="20190723"/>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s65">
+                           <id root="e739cc02-27ec-4629-8630-1db34467f224"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Drug Interaction Studies</content>
+                              </paragraph>
+                              <paragraph>The pharmacokinetics of vinorelbine are not influenced by the concurrent administration of cisplatin.
+</paragraph>
+                           </text>
+                           <effectiveTime value="20190723"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s66">
+               <id root="55f1bd6e-0016-410c-935c-863226bc0a5d"/>
+               <code code="43680-8" codeSystem="2.16.840.1.113883.6.1" displayName="NONCLINICAL TOXICOLOGY SECTION"/>
+               <title>13 NONCLINICAL TOXICOLOGY
+</title>
+               <effectiveTime value="20190723"/>
+               <component>
+                  <section ID="s67">
+                     <id root="7e71fbf9-b3db-437b-b7d7-846f246eddb2"/>
+                     <code code="34083-6" codeSystem="2.16.840.1.113883.6.1" displayName="CARCINOGENESIS &amp; MUTAGENESIS &amp; IMPAIRMENT OF FERTILITY SECTION"/>
+                     <title>13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility
+</title>
+                     <text>
+                        <paragraph>The carcinogenic potential of vinorelbine has not been studied. Vinorelbine has been shown to affect chromosome number and possibly structure <content styleCode="italics">in vivo</content> (polyploidy in bone marrow cells from Chinese hamsters and a positive micronucleus test in mice). It was not mutagenic in the Ames test and gave inconclusive results in the mouse lymphoma TK Locus assay.
+</paragraph>
+                        <paragraph>Vinorelbine did not affect fertility to a statistically significant extent when administered to rats on either a once-weekly (9 mg/m<sup>2</sup>, approximately one third the human dose) or alternate-day schedule (4.2 mg/m<sup>2</sup>, approximately 0.14 times the human recommended dose) prior to and during mating. In male rats, administration of vinorelbine twice weekly for 13 or 26 weeks at dose levels of 2.1 and 7.2 mg/m<sup>2</sup> (approximately 0.07 and 0.24 times the recommended human dose), respectively, resulted in decreased spermatogenesis and prostate/seminal vesicle secretion.
+</paragraph>
+                     </text>
+                     <effectiveTime value="20190723"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s68">
+               <id root="f7de1e68-c1fb-4e99-ae77-98a060cde79a"/>
+               <code code="34092-7" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL STUDIES SECTION"/>
+               <title>14 CLINICAL STUDIES
+</title>
+               <effectiveTime value="20200403"/>
+               <component>
+                  <section ID="s69">
+                     <id root="ba365e7a-f259-4042-beb1-637077defd01"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>14.1 Combination Use with Cisplatin
+</title>
+                     <text>
+                        <paragraph>The safety and efficacy of vinorelbine in combination with cisplatin was evaluated in two randomized, multicenter trials.
+</paragraph>
+                     </text>
+                     <effectiveTime value="20190723"/>
+                     <component>
+                        <section ID="s70">
+                           <id root="eb55417a-1006-4615-a531-7808165f4c7f"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Cisplatin 100mg/m</content>
+                                 <sup>2</sup>
+                              </paragraph>
+                              <paragraph>Study 1 was a randomized, multicenter, open-label trial of vinorelbine plus cisplatin and cisplatin alone for the treatment of stage IV or stage IIIb NSCLC in patients with malignant pleural effusion or multiple lesions in more than one lobe of the ipsilateral lung who had not received prior chemotherapy. A total of 432 patients were randomized 1:1 to receive either vinorelbine 25 mg/m<sup>2</sup> on Day 1 then every week of each 28-day cycle plus cisplatin 100 mg/m<sup>2</sup> administered on Day 1 of each 28-day cycle (N=214) or single agent cisplatin 100 mg/m<sup>2</sup> on Day 1 of each 28-day cycle (N=218).
+</paragraph>
+                              <paragraph>Patient demographics and disease characteristics were similar between arms. Of the overall study population, the median age was 64 (range 33 to 84), 66% were male, 80% were White, 92% had stage IV disease and 8% stage IIIB, 53% had adenocarcinoma, 21% squamous cell, 14% large cell histology. The major efficacy outcome measure was overall survival. The efficacy results are presented in <linkHtml href="#t7">Table 7</linkHtml> and <linkHtml href="#fig1">Figure 1</linkHtml>.
+</paragraph>
+                              <table ID="t7" width="100%">
+                                 <caption>Table 7. Efficacy Results (Study 1)
+</caption>
+                                 <col width="43.467%" align="left"/>
+                                 <col width="28.600%" align="left"/>
+                                 <col width="27.933%" align="left"/>
+                                 <tbody>
+                                    <tr>
+                                       <td align="justify" valign="top" styleCode="Toprule Botrule Lrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Toprule Botrule Rrule">Vinorelbine plus Cisplatin<br/>(N=214)
+</td>
+                                       <td align="center" valign="top" styleCode="Toprule Botrule Rrule">Cisplatin<br/>(N=218)
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="justify" valign="top" styleCode="Botrule Lrule Rrule">
+                                          <content styleCode="bold">Overall Survival</content>
+                                       </td>
+                                       <td align="justify" valign="top" styleCode="Botrule Rrule"/>
+                                       <td align="justify" valign="top" styleCode="Botrule Rrule"/>
+                                    </tr>
+                                    <tr>
+                                       <td align="justify" valign="top" styleCode="Botrule Lrule Rrule">Median Survival in months<br/>(95% CI)
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">7.8<br/>(6.9, 9.6)
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">6.2<br/>(5.4, 7.7)
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="justify" valign="top" styleCode="Botrule Lrule Rrule">Unstratified log-rank p-value
+</td>
+                                       <td colspan="2" align="center" valign="top" styleCode="Botrule Rrule">0.01
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="justify" valign="top" styleCode="Lrule Rrule">
+                                          <content styleCode="bold">Overall Response rate</content> (ORR)
+</td>
+                                       <td align="justify" valign="top" styleCode="Rrule"/>
+                                       <td align="justify" valign="top" styleCode="Rrule"/>
+                                    </tr>
+                                    <tr>
+                                       <td align="justify" valign="top" styleCode="Botrule Lrule Rrule">Evaluable patients<br/>ORR (95% CI)
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">N=206<br/>19% (14%, 25%)
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">N=209<br/>8% (5%, 13%)
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="justify" valign="top" styleCode="Botrule Lrule Rrule">Chi-square test p-value
+</td>
+                                       <td colspan="2" align="center" valign="top" styleCode="Botrule Rrule">&lt;0.001
+</td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                              <paragraph ID="fig1" styleCode="MultiMediaCaption">
+                                 <content styleCode="bold">Figure 1: Overall Survival Vinorelbine / Cisplatin versus Single Agent Cisplatin</content>
+                              </paragraph>
+                              <renderMultiMedia ID="f02" referencedObject="mm02"/>
+                           </text>
+                           <effectiveTime value="20230930"/>
+                           <component>
+                              <observationMedia ID="mm02">
+                                 <text>Figure 1
+</text>
+                                 <value xsi:type="ED" mediaType="image/jpeg">
+                                    <reference value="vin00-0008-02.jpg"/>
+                                 </value>
+                              </observationMedia>
+                           </component>
+                        </section>
+                     </component>
+                     <component>
+                        <section ID="s71">
+                           <id root="d9738788-d082-4541-b992-df50fcfa4c4e"/>
+                           <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                           <text>
+                              <paragraph>
+                                 <content styleCode="underline">Cisplatin 120mg/m</content>
+                                 <sup>2</sup>
+                              </paragraph>
+                              <paragraph>Study 2 was a randomized, 3-arm, open-label, multicenter trial of vinorelbine plus cisplatin, vindesine plus cisplatin and vinorelbine as a single agent for the treatment of patients with stage III or IV NSCLC who had not received prior chemotherapy. The study was conducted in Europe. A total of 612 patients were randomized 1:1:1 to receive vinorelbine 30 mg/m<sup>2</sup> every week of a 6-week cycle plus cisplatin 120 mg/m<sup>2</sup> on Day 1 and Day 29, then every 6 weeks thereafter (N=206); and vindesine 3 mg/m<sup>2</sup> for 6 weeks, then every other week thereafter plus cisplatin 120 mg/m<sup>2</sup> on Days 1 and Day 29, then every 6 weeks thereafter (N=200) or vinorelbine 30mg/m<sup>2</sup> every week of a 6-week cycle (N=206). The main efficacy outcome measure was to compare overall survival between vinorelbine plus cisplatin and vindesine plus cisplatin. The other efficacy outcome measure was to compare overall survival in the better of the two combination regimens to that of vinorelbine as a single agent.
+</paragraph>
+                              <paragraph>Patient demographics were in general similar between arms: the median age of the overall population was 60 years (range 30 to 75), 90% were male, 78% had WHO performance status of 0 or 1. Tumor characteristics were in general similar with the exception of histologic subtype of NSCLC. Adenocarcinoma was the histologic subtype in 32% of patients in the vinorelbine plus cisplatin arm, 40% of patients in vindesine plus cisplatin arm and 28% of patients on the vinorelbine arm. Ten percent of the patients had stage IIIA disease, 28% stage IIIB and 50% stage IV. Twelve percent of the patients had received prior surgery or radiotherapy.
+</paragraph>
+                              <paragraph>The efficacy results of Study 2 are presented in <linkHtml href="#t8">Table 8</linkHtml>.
+</paragraph>
+                              <table ID="t8" width="100%">
+                                 <caption>Table 8. Efficacy Results (Study 2)
+</caption>
+                                 <col width="25.000%" align="left"/>
+                                 <col width="25.000%" align="left"/>
+                                 <col width="25.000%" align="left"/>
+                                 <col width="25.000%" align="left"/>
+                                 <tfoot>
+                                    <tr>
+                                       <td colspan="4" align="left" valign="top">
+                                          <paragraph styleCode="footnote">
+                                             <sup>1</sup>n/a = not applicable
+</paragraph>
+                                       </td>
+                                    </tr>
+                                 </tfoot>
+                                 <tbody>
+                                    <tr>
+                                       <td align="justify" valign="top" styleCode="Toprule Botrule Lrule Rrule"/>
+                                       <td align="center" valign="top" styleCode="Toprule Botrule Rrule">Vinorelbine<br/>
+                                          <br/>(N=206)
+</td>
+                                       <td align="center" valign="top" styleCode="Toprule Botrule Rrule">Vinorelbine plus<br/>cisplatin<br/>(N=206)
+</td>
+                                       <td align="center" valign="top" styleCode="Toprule Botrule Rrule">Vindesine plus<br/>cisplatin<br/>(N=200)
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="justify" valign="top" styleCode="Botrule Lrule Rrule">
+                                          <content styleCode="bold">Median survival in</content>
+                                          <br/>
+                                          <content styleCode="bold">months (99.5% CI)</content>
+                                       </td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">7.2<br/>(5.4, 9.1)
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">9.2<br/>(7.4, 11.1)
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">7.4<br/>(6.1, 9.1)
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td rowspan="2" align="justify" valign="top" styleCode="Botrule Lrule Rrule">Unstratified log-rank<br/>p-value
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">n/a<sup>1</sup>
+                                       </td>
+                                       <td colspan="2" align="center" valign="top" styleCode="Botrule Rrule">0.087
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td colspan="2" align="center" valign="top" styleCode="Botrule Rrule">0.05
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">n/a
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td align="justify" valign="top" styleCode="Botrule Lrule Rrule">
+                                          <content styleCode="bold">Overall Response</content> (ORR)<br/>Evaluable Patients<br/>ORR<br/>(95% CI)
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">
+                                          <br/>N=205<br/>14%<br/>(10%, 20%)
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">
+                                          <br/>N=203<br/>28%<br/>(22%, 35%)
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">
+                                          <br/>N=198<br/>19%<br/>(14%, 25%)
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td rowspan="2" align="left" valign="middle" styleCode="Botrule Lrule Rrule">Chi-square test p-value
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">n/a
+</td>
+                                       <td colspan="2" align="center" valign="top" styleCode="Botrule Rrule">0.03
+</td>
+                                    </tr>
+                                    <tr>
+                                       <td colspan="2" align="center" valign="top" styleCode="Botrule Rrule">&lt; 0.001
+</td>
+                                       <td align="center" valign="top" styleCode="Botrule Rrule">n/a
+</td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </text>
+                           <effectiveTime value="20190723"/>
+                        </section>
+                     </component>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s72">
+                     <id root="992c7ed4-4427-461b-9546-4af53708b264"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>14.2 Single Agent
+</title>
+                     <text>
+                        <paragraph>The safety and efficacy of vinorelbine as a single agent was evaluated in one randomized multicenter trial. Study 3 was a randomized, open-label clinical trial of vinorelbine or fluorouracil (FU) plus leucovorin (LV) in patients with Stage IV NSCLC who had not received prior chemotherapy. A total of 211 patients were randomized 2:1 to receive vinorelbine 30 mg/m<sup>2</sup> weekly of an 8-week cycle (N=143) or FU 425 mg/m<sup>2</sup> bolus intravenously plus LV 20 mg/m<sup>2</sup> bolus intravenously daily for 5 days of a 4-weeks cycle (N=68).
+</paragraph>
+                        <paragraph>Patient demographics and disease characteristics were in general similar between arms. In the overall population, the median age was 61 years (range 32 to 83), 74% were male, 88% were White, 46% had adenocarcinoma histology. Fifty percent of the patients had Karnofsky performance status ≥ 90 in the vinorelbine arm compared to 38% in the FU/LV arm.
+</paragraph>
+                        <paragraph>The primary efficacy outcome of the study was overall survival. The median survival time was 30 weeks versus 22 weeks for patients receiving vinorelbine versus FU/LV, respectively (p=0.06). Partial objective responses were observed in 11.1% (95% CI=6.2%, 17.9%) and 3.5% (95% CI=0.4%, 11.9%) of patients who received vinorelbine and FU/LV, respectively.
+</paragraph>
+                     </text>
+                     <effectiveTime value="20190723"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s73">
+               <id root="3f44a342-df70-4b45-9994-45521bffd6aa"/>
+               <code code="34093-5" codeSystem="2.16.840.1.113883.6.1" displayName="REFERENCES SECTION"/>
+               <title>15 REFERENCES
+</title>
+               <text>
+                  <list listType="ordered" styleCode="Arabic">
+                     <item>OSHA. http://www.osha.gov/SLTC/hazardousdrugs/index.html
+</item>
+                  </list>
+               </text>
+               <effectiveTime value="20190723"/>
+            </section>
+         </component>
+         <component>
+            <section ID="s74">
+               <id root="d5017916-72b0-4452-a83a-8140706025d8"/>
+               <code code="34069-5" codeSystem="2.16.840.1.113883.6.1" displayName="HOW SUPPLIED SECTION"/>
+               <title>16 HOW SUPPLIED/STORAGE AND HANDLING
+</title>
+               <text>
+                  <paragraph>Vinorelbine Injection, USP is supplied as follows:
+</paragraph>
+                  <table width="100%" styleCode="Noautorules">
+                     <col width="27.933%" align=" left"/>
+                     <col width="43.300%" align="left"/>
+                     <col width="28.767%" align="left"/>
+                     <tbody>
+                        <tr>
+                           <td align="left" valign="top"/>
+                           <td align="left" valign="top">
+                              <content styleCode="bold">Vinorelbine Injection, USP</content>
+                           </td>
+                           <td align="left" valign="top"/>
+                        </tr>
+                        <tr>
+                           <td align="left" valign="top">
+                              <content styleCode="bold">NDC</content>
+                           </td>
+                           <td align="left" valign="top">
+                              <content styleCode="bold">(10 mg per mL)</content>
+                           </td>
+                           <td align="left" valign="top">
+                              <content styleCode="bold">Package Factor</content>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td align="left" valign="top">25021-204-01
+</td>
+                           <td align="left" valign="top">10 mg per mL Single-Dose Vial
+</td>
+                           <td align="left" valign="top">1 vial per carton
+</td>
+                        </tr>
+                        <tr>
+                           <td align="left" valign="top">25021-204-05
+</td>
+                           <td align="left" valign="top">50 mg per 5 mL Single-Dose Vial
+</td>
+                           <td align="left" valign="top">1 vial per carton
+</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>Vinorelbine Injection, USP is a clear, colorless to pale yellow aqueous solution.
+</paragraph>
+               </text>
+               <effectiveTime value="20200403"/>
+               <component>
+                  <section ID="s75">
+                     <id root="b63a6916-168c-473c-9af8-2c8e6b9eb19f"/>
+                     <code code="44425-7" codeSystem="2.16.840.1.113883.6.1" displayName="STORAGE AND HANDLING SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="bold">Storage Conditions<br/>
+                           </content>Store refrigerated between 2° and 8°C (36° and 46°F).
+</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Do not freeze. <br/>Protect from light.</content> Retain in carton until time of use.<br/>Discard unused portion.
+</paragraph>
+                        <paragraph>Unopened vials of Vinorelbine Injection, USP are stable at 25°C (77°F) for up to 72 hours. Store diluted solutions of Vinorelbine Injection, USP at 5° to 30°C (41° to 86°F) <content styleCode="italics">[see Dosage and Administration (<linkHtml href="#s13">2.3</linkHtml>)]</content>.
+</paragraph>
+                        <paragraph>Vinorelbine Injection, USP is a cytotoxic drug. Follow applicable special handling and disposal procedures.<sup>1</sup>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Sterile, Nonpyrogenic, Preservative-free.  <br/>The container closure is not made with natural rubber latex.</content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20200403"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s76">
+               <id root="ccc0d64e-1e09-4177-9b03-7d9ea3f69e2d"/>
+               <code code="34076-0" codeSystem="2.16.840.1.113883.6.1" displayName="INFORMATION FOR PATIENTS SECTION"/>
+               <title>17 PATIENT COUNSELING INFORMATION
+</title>
+               <effectiveTime value="20230930"/>
+               <component>
+                  <section ID="s77">
+                     <id root="354fcd12-c041-4ba8-b1ce-29e80290169b"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Myelosuppression</content>
+                        </paragraph>
+                        <paragraph>Advise patients to contact a healthcare provider for new onset fever, or symptoms of infection <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#s24">5.1</linkHtml>)].</content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20190723"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s78">
+                     <id root="4db80bdd-1f11-42a1-b083-08fae2f4f5fc"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Constipation and Bowel Obstruction</content>
+                        </paragraph>
+                        <paragraph>Advise patients to follow a diet rich in fibers, drink fluids to stay well hydrated and use stool softeners to avoid constipation. Contact a health care provider for severe constipation, new onset abdominal pain, nausea and vomiting <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#s26">5.3</linkHtml>)].</content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20190723"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s79">
+                     <id root="6825bb0e-2fa1-4215-89d6-f4f09ae4d176"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Neurologic Toxicity</content>
+                        </paragraph>
+                        <paragraph>Advise patients to contact a health care provider for new onset or worsening of numbness, tingling, decrease sensation or muscle weakness <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#s28">5.5</linkHtml>)].</content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20190723"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s80">
+                     <id root="3271f05a-46c2-46ce-96df-c853f7b4062f"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Pulmonary Toxicity</content>
+                        </paragraph>
+                        <paragraph>Advise patients to contact a healthcare provider for new onset or worsening of shortness of breath, cough, wheezing or other new pulmonary symptoms <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#s29">5.6</linkHtml>)].</content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20190723"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s81">
+                     <id root="425edeac-89ce-4bf4-a1d6-719760a2f840"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Embryo-Fetal Toxicity</content>
+                        </paragraph>
+                        <list listType="unordered" styleCode="Disc">
+                           <item>Advise pregnant women of the potential risk to a fetus. Advise females to inform their healthcare provider of a known or suspected pregnancy <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#s30">5.7</linkHtml>) and Use in Specific Populations (<linkHtml href="#s39">8.1</linkHtml>, <linkHtml href="#s45">8.3</linkHtml>)].</content>
+                           </item>
+                           <item>Advise females of reproductive potential to use effective contraception during treatment with Vinorelbine Injection and for 6 months after the final dose <content styleCode="italics">[see Use in Specific Populations (<linkHtml href="#s45">8.3</linkHtml>)].</content>
+                           </item>
+                           <item>Advise males with female partners of reproductive potential to use effective contraception during treatment with Vinorelbine Injection and for 3 months after the final dose <content styleCode="italics">[see Use in Specific Populations (<linkHtml href="#s45">8.3</linkHtml>) and Nonclinical Toxicology (<linkHtml href="#s67">13.1</linkHtml>)].</content>
+                           </item>
+                        </list>
+                     </text>
+                     <effectiveTime value="20200403"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s82">
+                     <id root="c82c3089-ed47-470c-9e11-b4bca8f09902"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Lactation</content>
+                        </paragraph>
+                        <paragraph>Advise women not to breastfeed during treatment with Vinorelbine Injection and for 9 days after the final dose <content styleCode="italics">[see Use in Specific Populations (<linkHtml href="#s43">8.2</linkHtml>)].</content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20200403"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="s83">
+                     <id root="995f62e1-bdbc-41e5-ae5b-e3eda3d8cb5a"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Infertility</content>
+                        </paragraph>
+                        <paragraph>Advise males of reproductive potential that Vinorelbine Injection may impair fertility <content styleCode="italics">[see Use in Specific Populations (<linkHtml href="#s45">8.3</linkHtml>)].</content>
+                        </paragraph>
+                        <paragraph>SAGENT<sup>®</sup>
+                           <br/>Mfd. for SAGENT Pharmaceuticals<br/>Schaumburg, IL 60195 (USA)<br/>Made in China<br/>©2023 Sagent Pharmaceuticals
+</paragraph>
+                        <paragraph>Revised: September 2023
+</paragraph>
+                        <paragraph>SAGENT Pharmaceuticals<sup>®</sup>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20230930"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s84">
+               <id root="355eb522-08fc-4837-95db-ae26e5b24fba"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <text>
+                  <paragraph>PACKAGE LABEL – PRINCIPAL DISPLAY PANEL – Vial Label
+</paragraph>
+                  <paragraph>NDC 25021-204-01
+</paragraph>
+                  <paragraph>VINORELBINE INJECTION, USP
+</paragraph>
+                  <paragraph>10 mg per mL
+</paragraph>
+                  <paragraph>Rx only
+</paragraph>
+                  <paragraph>1 mL Single-Dose Vial
+</paragraph>
+                  <paragraph>Must Be Diluted
+</paragraph>
+                  <paragraph>For Intravenous Use Only
+</paragraph>
+                  <paragraph>Caution: Cytotoxic Agent
+</paragraph>
+                  <renderMultiMedia ID="f03" referencedObject="mm03"/>
+               </text>
+               <effectiveTime value="20230930"/>
+               <component>
+                  <observationMedia ID="mm03">
+                     <text>PACKAGE LABEL – PRINCIPAL DISPLAY PANEL – Vial Label
+</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="vin00-0008-03.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="s85">
+               <id root="247c259e-e349-4358-aaf3-7502f3ba83bb"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <text>
+                  <paragraph>PACKAGE LABEL – PRINCIPAL DISPLAY PANEL – Vial Label
+</paragraph>
+                  <paragraph>NDC 25021-204-05
+</paragraph>
+                  <paragraph>VINORELBINE INJECTION, USP
+</paragraph>
+                  <paragraph>50 mg per 5 mL
+</paragraph>
+                  <paragraph>(10 mg per mL)
+</paragraph>
+                  <paragraph>Rx only
+</paragraph>
+                  <paragraph>5 mL Single-Dose Vial
+</paragraph>
+                  <paragraph>Must Be Diluted
+</paragraph>
+                  <paragraph>For Intravenous Use Only
+</paragraph>
+                  <paragraph>Caution: Cytotoxic Agent
+</paragraph>
+                  <renderMultiMedia ID="f04" referencedObject="mm04"/>
+               </text>
+               <effectiveTime value="20230930"/>
+               <component>
+                  <observationMedia ID="mm04">
+                     <text>PACKAGE LABEL – PRINCIPAL DISPLAY PANEL – Vial Label
+</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="vin00-0008-04.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

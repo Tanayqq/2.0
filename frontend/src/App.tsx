@@ -530,6 +530,23 @@ function SourceCard({
 // ── MAIN APPLICATION COMPONENT ───────────────────────────────────────────────
 export default function App() {
   const [query, setQuery] = useState("");
+  const [selectedMode, setSelectedMode] = useState<string>("DRUG_CHAT");
+  const [countryContext, setCountryContext] = useState<string>("GLOBAL");
+  const [showPatientDrawer, setShowPatientDrawer] = useState<boolean>(false);
+  const [patientProfile, setPatientProfile] = useState<{
+    age?: number;
+    gender?: string;
+    eGFR?: number;
+    comorbidities?: string[];
+    active_medications?: string[];
+  }>({
+    age: 67,
+    gender: "Male",
+    eGFR: 42,
+    comorbidities: ["CKD Stage 3", "Type 2 Diabetes", "Hypertension"],
+    active_medications: ["metformin", "warfarin", "losartan"]
+  });
+
   const [history, setHistory] = useState<{q: string, a: AnswerResponse, status: string}[]>([]);
   const [activeHistoryIndex, setActiveHistoryIndex] = useState<number>(-1);
   const [activeTab, setActiveTab] = useState<"chat" | "dashboard">("chat");
@@ -549,7 +566,6 @@ export default function App() {
 
   // Load sample history on first mount if empty
   useEffect(() => {
-    // Set default initial telemetry
     setMetrics({
       vector: 12,
       rerank: 8,
@@ -564,7 +580,12 @@ export default function App() {
     setLoading(true);
     setError(null);
     try {
-      const response = await queryMedicalAPI(query);
+      const response = await queryMedicalAPI(
+        query, 
+        selectedMode, 
+        countryContext, 
+        showPatientDrawer ? patientProfile : undefined
+      );
       console.log("RAG complete answer response:", response);
       
       const newHistoryItem = { q: query, a: response, status: "200 OK" };

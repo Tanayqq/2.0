@@ -1,0 +1,1980 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="f38ea198-a3dd-aef9-b467-56ecfef1bc39"/>
+   <code code="34391-3" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN PRESCRIPTION DRUG LABEL"/>
+   <title>
+      <content styleCode="bold">These highlights do not include all the information needed to use IBANDRONATE SODIUM TABLETS safely and effectively. </content>
+      <br/>
+      <content styleCode="bold">See full prescribing information for IBANDRONATE SODIUM TABLETS.</content>
+      <br/>
+      <content styleCode="bold"/>
+      <br/>
+      <content styleCode="bold">IBANDRONATE SODIUM tablets, for oral use</content>
+      <br/>
+      <content styleCode="bold">Initial U.S. Approval: 2003 </content>
+   </title>
+   <effectiveTime value="20260216"/>
+   <setId root="f94d9c49-245a-8081-42c4-785113fce498"/>
+   <versionNumber value="24"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id extension="650562841" root="1.3.6.1.4.1.519.1"/>
+            <name>Dr. Reddy's Laboratories Limited</name>
+            <assignedEntity>
+               <assignedOrganization>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id extension="918608162" root="1.3.6.1.4.1.519.1"/>
+                        <name>Dr. Reddy's Laboratories Limited - FTO III</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C25391" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="analysis"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="55111-575" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                     <performance>
+                        <actDefinition>
+                           <code code="C43360" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="manufacture"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="55111-575" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+               </assignedOrganization>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="865b5643-e0f6-8fe7-185e-acfe0df8f261"/>
+               <code code="48780-1" displayName="SPL PRODUCT DATA ELEMENTS SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <effectiveTime value="20260116"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code codeSystem="2.16.840.1.113883.6.69" code="55111-575"/>
+                        <name>Ibandronate sodium</name>
+                        <formCode code="C42998" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TABLET"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Ibandronate sodium</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIM">
+                           <quantity>
+                              <numerator unit="mg" value="150"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="J12U072QL0" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>ibandronate sodium</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="UMD7G2653W" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>IBANDRONIC ACID</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="ETJ7Z6XBU4" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Silicon Dioxide</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="2S7830E561" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CROSPOVIDONE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="M28OL1HH48" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>croscarmellose sodium</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="EWQ57Q8I5X" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>lactose monohydrate</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="OP1R32D61U" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CELLULOSE, MICROCRYSTALLINE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="FZ989GH94E" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>POVIDONE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="7CV7WJK4UI" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>sodium stearyl fumarate</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="3NXW29V3WO" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>HYPROMELLOSES</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="B697894SGQ" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>polyethylene glycol 400</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="15FIX9V2JP" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>titanium dioxide</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="5138Q19F1X" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>AMMONIA</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="XM0M87F357" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>FERROSOFERRIC OXIDE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="6DC9Q167V3" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>PROPYLENE GLYCOL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="46N107B71O" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>shellac</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="1" value="1"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code codeSystem="2.16.840.1.113883.6.69" code="55111-575-11"/>
+                              <formCode code="C43168" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BLISTER PACK"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator unit="1" value="3"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code codeSystem="2.16.840.1.113883.6.69" code="55111-575-03"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20120621"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" displayName="Type 0: Not a Combination Product" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="1" value="3"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code codeSystem="2.16.840.1.113883.6.69" code="55111-575-13"/>
+                              <formCode code="C43168" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BLISTER PACK"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator unit="1" value="1"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code codeSystem="2.16.840.1.113883.6.69" code="55111-575-43"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20211120"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" displayName="Type 0: Not a Combination Product" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20120621"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <approval>
+                           <id extension="ANDA078997" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73584" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code codeSystem="1.0.3166.1.2.3" code="USA"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48325" displayName="WHITE" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CE"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48336" displayName="CAPSULE" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CE"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value value="1" xsi:type="INT"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="13" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic>
+                           <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="ST">R575</value>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+               <component>
+                  <section>
+                     <id root="c533d3d9-44ec-b5d2-761c-23f3c82328ff"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <effectiveTime value="20100513"/>
+                     <component>
+                        <observationMedia ID="MM586636761373">
+                           <text>structure</text>
+                           <value xsi:type="ED" mediaType="image/jpeg">
+                              <reference value="structure.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                     <component>
+                        <observationMedia ID="MM435802266359">
+                           <text>blistercard</text>
+                           <value xsi:type="ED" mediaType="image/jpeg">
+                              <reference value="blistercard.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                     <component>
+                        <observationMedia ID="MM981065877192">
+                           <text>pouch</text>
+                           <value xsi:type="ED" mediaType="image/jpeg">
+                              <reference value="pouch.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                     <component>
+                        <observationMedia ID="MM467352333172">
+                           <text>innercarton</text>
+                           <value xsi:type="ED" mediaType="image/jpeg">
+                              <reference value="innercarton.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                     <component>
+                        <observationMedia ID="MM574054035084">
+                           <text>outercarton</text>
+                           <value xsi:type="ED" mediaType="image/jpeg">
+                              <reference value="outercarton.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                     <component>
+                        <observationMedia ID="MM452546927311">
+                           <text>carton</text>
+                           <value xsi:type="ED" mediaType="image/jpeg">
+                              <reference value="carton.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="_0893390a-b594-50a5-1b6d-4ed5ca6d1d11">
+               <id root="57a0ed2e-7e0f-3802-8917-42ecc17d700d"/>
+               <code code="43683-2" displayName="RECENT MAJOR CHANGES SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>RECENT MAJOR CHANGES SECTION</title>
+               <effectiveTime value="20260216"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Warnings and Precautions, Atypical Fractures Including Femoral Fractures <linkHtml href="#_61412c7b-c578-baf3-99f9-b093b33998c1">(5.5) 10/2025</linkHtml>
+                        </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="INDICATIONS_AND_USAGE">
+               <id root="4c3a8d34-e207-5588-1583-185976173200"/>
+               <code code="34067-9" displayName="INDICATIONS &amp; USAGE SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>1 INDICATIONS AND USAGE</title>
+               <text>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20260116"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Ibandronate sodium tablet is a bisphosphonate indicated for the treatment and prevention of postmenopausal osteoporosis.<linkHtml href="#_1d2e54c1-c0e1-1006-5b8a-b95790aecb38"> (1.1)</linkHtml>
+                        </paragraph>
+                        <paragraph>Limitations of Use</paragraph>
+                        <paragraph>The optimal duration of use has not been determined. For patients at low-risk for fracture, consider drug discontinuation after 3 to 5 years of use. <linkHtml href="#_7fe3470b-a21a-acbd-53f5-f1f1e47493dd">(1.2).</linkHtml> </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="_1d2e54c1-c0e1-1006-5b8a-b95790aecb38">
+                     <id root="e70f2b57-58d0-e012-2035-e64c921be6b1"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>
+                        <content styleCode="bold">1.1 Treatment and Prevention of Postmenopausal Osteoporosis </content>
+                     </title>
+                     <text>
+                        <paragraph>Ibandronate sodium tablets are indicated for the treatment and prevention of osteoporosis in postmenopausal women. Ibandronate sodium tablets increases bone mineral density (BMD) and reduces the incidence of vertebral fractures.</paragraph>
+                     </text>
+                     <effectiveTime value="20260116"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_7fe3470b-a21a-acbd-53f5-f1f1e47493dd">
+                     <id root="3f0a05c8-2e42-ea11-1225-f5d70580257d"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>1.2 Important Limitations of Use </title>
+                     <text>
+                        <paragraph>The optimal duration of use has not been determined. The safety and effectiveness of ibandronate sodium tablets for the treatment of osteoporosis are based on clinical data of three years duration. All patients on bisphosphonate therapy should have the need for continued therapy re-evaluated on a periodic basis. Patients at low-risk for fracture should be considered for drug discontinuation after 3 to 5 years of use. Patients who discontinue therapy should have their risk for fracture re-evaluated periodically.</paragraph>
+                     </text>
+                     <effectiveTime value="20260116"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="DOSAGE_AND_ADMINISTRATION">
+               <id root="b9c3eb30-1d44-20d9-03d3-f6457da9f821"/>
+               <code code="34068-7" displayName="DOSAGE &amp; ADMINISTRATION SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>2 DOSAGE AND ADMINISTRATION</title>
+               <text>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20260116"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list>
+                           <item>Take one 150 mg tablet once monthly on the same day each month <linkHtml href="#_c5c78844-f9a2-7248-ba9d-3c3c5fe53b7c">(2.1)</linkHtml>
+                           </item>
+                           <item>Instruct patient to: <linkHtml href="#_67a024a0-cff9-3681-259d-d8bfa7731366">(2.2)</linkHtml>
+                           </item>
+                           <item>
+                              <list>
+                                 <item>Swallow whole tablet with 6 to 8 oz of plain water only, at least 60 minutes before the first food, beverage, or medication of day. </item>
+                                 <item>Avoid lying down for at least 60 minutes after taking ibandronate sodium tablets. Do not eat, drink (except for water), or take other medication for 60 minutes after taking ibandronate sodium tablets.</item>
+                              </list>
+                           </item>
+                           <item>Take supplemental calcium and vitamin D if dietary intake inadequate <linkHtml href="#_7f559184-4406-7bc2-1c33-a66801050662">(2.3)</linkHtml>
+                           </item>
+                        </list>
+                        <paragraph/>
+                        <paragraph/>
+                        <paragraph/>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="_c5c78844-f9a2-7248-ba9d-3c3c5fe53b7c">
+                     <id root="9f179f4a-3dc6-9829-c194-7cc50a7f5380"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>
+                        <content styleCode="bold">2.1 Dosage Information</content>
+                     </title>
+                     <text>
+                        <paragraph>The dose of ibandronate sodium tablet is one 150 mg tablet taken once monthly on the same date each month. </paragraph>
+                     </text>
+                     <effectiveTime value="20260116"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_67a024a0-cff9-3681-259d-d8bfa7731366">
+                     <id root="7ddc70b1-2823-dbc6-30f2-d659ebdc0ede"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>
+                        <content styleCode="bold">2.2 Important Administration Instructions</content>
+                     </title>
+                     <text>
+                        <paragraph>Instruct Patients to do the following: </paragraph>
+                        <list>
+                           <item>Take ibandronate sodium tablets at least 60 minutes before the first food or drink (other than water) of the day or before taking any oral medication or supplementation, including calcium, antacids, or vitamins to maximize absorption and clinical benefit, (see <content styleCode="bold">Drug Interactions </content>
+                              <content styleCode="bold">
+                                 <linkHtml href="#_b542d4a9-fb76-4d10-dcdc-6ff26d4d1588">[7.1]</linkHtml>
+                              </content>). Avoid the use of water with supplements including mineral water because they may have a higher concentration of calcium. </item>
+                           <item>Swallow ibandronate sodium tablets whole with a full glass of plain water (6 to 8 oz) while standing or sitting in an upright position to reduce the potential for esophageal irritation. Avoid lying down for 60 minutes after taking ibandronate sodium tablets (see <content styleCode="bold">Warnings and Precautions </content>
+                              <content styleCode="bold">
+                                 <linkHtml href="#_b6f91f53-9c65-d06e-22da-186c751a9e29">[5.1]</linkHtml>
+                              </content>). Do not chew or suck the tablet because of a potential for oropharyngeal ulceration. Do not eat, drink anything except plain water, or take other medications for at least 60 minutes after taking ibandronate sodium tablets.<content styleCode="bold"/>
+                           </item>
+                        </list>
+                        <paragraph/>
+                     </text>
+                     <effectiveTime value="20260116"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_7f559184-4406-7bc2-1c33-a66801050662">
+                     <id root="abac9261-5f80-f15f-8aaa-d17a9c67d935"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>
+                        <content styleCode="bold">2.3 Recommendations for Calcium and Vitamin D Supplementation </content>
+                     </title>
+                     <text>
+                        <paragraph>Instruct patients to take supplemental calcium and vitamin D if their dietary intake is inadequate. Avoid the use of calcium supplements within 60 minutes of ibandronate sodium tablets administration because co-administration of ibandronate sodium tablets and calcium may interfere with the absorption of ibandronate sodium (see <content styleCode="bold">Drug Interactions </content>
+                           <content styleCode="bold">
+                              <linkHtml href="#_b542d4a9-fb76-4d10-dcdc-6ff26d4d1588">[7.1]</linkHtml>
+                           </content>).</paragraph>
+                     </text>
+                     <effectiveTime value="20260116"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_00547d95-836a-16b6-f517-1191991835e8">
+                     <id root="daaf5b38-a086-d190-8b39-c08c2a14a955"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>
+                        <content styleCode="bold">2.4 Administration Instructions for Missed Once-Monthly Doses</content>
+                     </title>
+                     <text>
+                        <paragraph>If the once-monthly dose is missed, instruct patients to do the following: </paragraph>
+                        <list>
+                           <item>If the next scheduled ibandronate sodium tablets day is more than 7 days away, take one ibandronate sodium tablet, 150 mg in the morning following the date that it is remembered. </item>
+                           <item>If the next scheduled ibandronate sodium tablets day is only 1 to 7 days away, wait until the subsequent month’s scheduled ibandronate sodium tablets day to take their tablet.  </item>
+                        </list>
+                        <paragraph>For subsequent monthly doses for both of the above scenarios, instruct patients to return to their original schedule by taking one ibandronate sodium tablet, 150 mg every month on their previous chosen day.</paragraph>
+                     </text>
+                     <effectiveTime value="20260116"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="DOSAGE_FORMS_AND_STRENGTHS">
+               <id root="53070159-7590-69a0-d101-5e547518b0f8"/>
+               <code code="43678-2" displayName="DOSAGE FORMS &amp; STRENGTHS SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>3 DOSAGE FORMS AND STRENGTHS</title>
+               <text>
+                  <paragraph>Ibandronate sodium tablets, 150 mg are white, film coated and capsule shaped tablets printed with R575 on one side and plain on other side.</paragraph>
+               </text>
+               <effectiveTime value="20260116"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Tablets: 150 mg </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="CONTRAINDICATIONS">
+               <id root="ba66a5cb-7c46-e111-cc0c-8aa9f9f4a838"/>
+               <code code="34070-3" displayName="CONTRAINDICATIONS SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>4 CONTRAINDICATIONS</title>
+               <text>
+                  <br/>
+                  <paragraph>Ibandronate sodium tablets are contraindicated in patients with the following conditions:</paragraph>
+                  <list>
+                     <item>Abnormalities of the esophagus which delay esophageal emptying such as stricture or achalasia (see <content styleCode="bold">Warnings and Precautions</content>
+                        <content styleCode="bold"/>
+                        <content styleCode="bold">
+                           <linkHtml href="#_b6f91f53-9c65-d06e-22da-186c751a9e29">[5.1]</linkHtml>
+                        </content>
+                        <content styleCode="bold">)</content> </item>
+                     <item>Inability to stand or sit upright for at least 60 minutes (see <content styleCode="bold">Dosage and Administration [2.2], and Warnings and Precautions </content>
+                        <content styleCode="bold">
+                           <linkHtml href="#_b6f91f53-9c65-d06e-22da-186c751a9e29">[5.1]</linkHtml>
+                        </content>
+                        <content styleCode="bold">)</content> </item>
+                     <item>Hypocalcemia (see <content styleCode="bold">Warnings and Precautions </content>
+                        <content styleCode="bold">
+                           <linkHtml href="#_6dccf049-c063-bdfc-fad7-baeacacc21bf">[5.2]</linkHtml>
+                        </content>) </item>
+                     <item>Known hypersensitivity to ibandronate sodium tablets or to any of its excipients. Cases of anaphylaxis have been reported. (see <content styleCode="bold">Adverse Reactions </content>
+                        <content styleCode="bold">
+                           <linkHtml href="#_c35b6935-0195-8cf2-53cf-3f06389d8b09">[6.2]</linkHtml>
+                        </content>). </item>
+                  </list>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20260116"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list>
+                           <item>Abnormalities of the esophagus which delay esophageal emptying such as stricture or achalasia (4, 5.1)</item>
+                           <item>Inability to stand or sit upright for at least 60 minutes (4, 5.1) </item>
+                           <item>Hypocalcemia (4) </item>
+                           <item>Hypersensitivity to ibandronate sodium tablets (4) </item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="WARNINGS_AND_PRECAUTIONS">
+               <id root="79bfed27-2ae9-b1da-b350-180f85a17d58"/>
+               <code code="43685-7" displayName="WARNINGS AND PRECAUTIONS SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>5 WARNINGS AND PRECAUTIONS</title>
+               <text>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20260116"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list>
+                           <item>
+                              <content styleCode="italics">Upper gastrointestinal Adverse Reactions</content> can occur. Instruct patients to follow dosing instructions and discontinue use if new or worsening symptoms occur. <linkHtml href="#_b6f91f53-9c65-d06e-22da-186c751a9e29">(5.1)</linkHtml>
+                           </item>
+                           <item>
+                              <content styleCode="italics">Hypocalcemia</content> may worsen during treatment. Correct hypocalcemia before use. <linkHtml href="#_6dccf049-c063-bdfc-fad7-baeacacc21bf">(5.2) </linkHtml>
+                           </item>
+                           <item>
+                              <content styleCode="italics">Severe Bone, Joint, and Muscle Pain</content> may occur. Consider discontinuing use if symptoms develop. <linkHtml href="#_065ef936-5f6e-ef2e-e44e-f2708c091603">(5.3)</linkHtml>
+                           </item>
+                           <item>
+                              <content styleCode="italics">Osteonecrosis of the Jaw</content> has been reported. <linkHtml href="#_e9bf8313-236f-e495-8a7e-e3f3debcc690">(5.4)</linkHtml>
+                           </item>
+                           <item>
+                              <content styleCode="italics">Atypical Fractures Including Femoral Fractures </content>have been reported. Patients with new thigh or groin pain should be evaluated to rule out a femoral fracture. Risk/benefit of continuing bisphosphonate therapy should be re-evaluated in these patients and interruption of bisphosphonate therapy should be considered <content>
+                                 <linkHtml href="#_61412c7b-c578-baf3-99f9-b093b33998c1">( 5.5 )</linkHtml>
+                              </content>
+                           </item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="_b6f91f53-9c65-d06e-22da-186c751a9e29">
+                     <id root="9b958900-53ee-cba7-5d4d-e25971723da9"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>
+                        <content styleCode="bold">5.1       Upper Gastrointestinal Adverse Reactions</content>
+                     </title>
+                     <text>
+                        <paragraph>Ibandronate sodium, like other bisphosphonates administered orally, may cause local irritation of the upper gastrointestinal mucosa. Because of these possible irritant effects and a potential for worsening of the underlying disease, caution should be used when ibandronate sodium is given to patients with active upper gastrointestinal problems (such as known Barrett’s esophagus, dysphagia, other esophageal diseases, gastritis, duodenitis or ulcers). </paragraph>
+                        <paragraph>Esophageal adverse experiences, such as esophagitis, esophageal ulcers and esophageal erosions, occasionally with bleeding and rarely followed by esophageal stricture or perforation, have been reported in patients receiving treatment with oral bisphosphonates. In some cases, these have been severe and required hospitalization. Physicians should therefore be alert to any signs or symptoms signaling a possible esophageal reaction and patients should be instructed to discontinue ibandronate sodium and seek medical attention if they develop dysphagia, odynophagia, retrosternal pain or new or worsening heartburn. </paragraph>
+                        <paragraph>The risk of severe esophageal adverse experiences appears to be greater in patients who lie down after taking oral bisphosphonates and/or who fail to swallow it with the recommended full glass (6 to 8 oz) of water, and/or who continue to take oral bisphosphonates after developing symptoms suggestive of esophageal irritation. Therefore, it is very important that the full dosing instructions are provided to, and understood by, the patient (see <content styleCode="bold">Dosage and Administration </content>
+                           <content styleCode="bold">
+                              <linkHtml href="#_67a024a0-cff9-3681-259d-d8bfa7731366">[2.2]</linkHtml>
+                           </content>). In patients who cannot comply with dosing instructions due to mental disability, therapy with ibandronate sodium should be used under appropriate supervision. </paragraph>
+                        <paragraph>There have been post-marketing reports of gastric and duodenal ulcers with oral bisphosphonate use, some severe and with complications, although no increased risk was observed in controlled clinical trials. </paragraph>
+                     </text>
+                     <effectiveTime value="20260116"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_6dccf049-c063-bdfc-fad7-baeacacc21bf">
+                     <id root="9f5fb0ab-18b4-08cf-6fd5-7257b80e9adb"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>
+                        <content styleCode="bold">5.2       Hypocalcemia and Mineral Metabolism</content>
+                     </title>
+                     <text>
+                        <paragraph>Hypocalcemia has been reported in patients taking ibandronate sodium. Treat hypocalcemia and other disturbances of bone and mineral metabolism before starting ibandronate sodium therapy. Instruct patients to take supplemental calcium and vitamin D if their dietary intake is inadequate. (see <content styleCode="bold">Dosage and Administration </content>
+                           <content styleCode="bold">
+                              <linkHtml href="#_7f559184-4406-7bc2-1c33-a66801050662">[2.3]</linkHtml>
+                           </content>
+                           <content styleCode="bold">)</content>.</paragraph>
+                     </text>
+                     <effectiveTime value="20260116"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_065ef936-5f6e-ef2e-e44e-f2708c091603">
+                     <id root="082f2223-a1ff-5576-b60e-33b4ede2bb73"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>
+                        <content styleCode="bold">5.3       Musculoskeletal</content>
+                     </title>
+                     <text>
+                        <paragraph>Severe and occasionally incapacitating bone, joint, and/or muscle pain has been reported in patients taking ibandronate sodium and other bisphosphonates (see <content styleCode="bold">Adverse Reactions </content>
+                           <content styleCode="bold">
+                              <linkHtml href="#ADVERSE_REACTIONS">[6]</linkHtml>
+                           </content>). The time to onset of symptoms varied from one day to several months after starting the drug. Most patients had relief of symptoms after stopping. A subset had recurrence of symptoms when rechallenged with the same drug or another bisphosphonate. Consider discontinuing use if severe symptoms develop.</paragraph>
+                     </text>
+                     <effectiveTime value="20260116"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_e9bf8313-236f-e495-8a7e-e3f3debcc690">
+                     <id root="5a79e75f-6c43-2a0b-abbf-3b41e19b3ae0"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>
+                        <content styleCode="bold">5.4       Jaw Osteonecrosis </content>
+                     </title>
+                     <text>
+                        <paragraph>Osteonecrosis of the jaw (ONJ), which can occur spontaneously, is generally associated with tooth extraction and/or local infection with delayed healing, and has been reported in patients taking bisphosphonates, including ibandronate sodium. Known risk factors for osteonecrosis of the jaw include invasive dental procedures (e.g., tooth extraction, dental implants, boney surgery), diagnosis of cancer, concomitant therapies (e.g., chemotherapy, corticosteroids, angiogenesis inhibitors), poor oral hygiene, and co-morbid disorders (e.g., periodontal and/or other pre-existing dental disease, anemia, coagulopathy, infection, ill-fitting dentures). The risk of ONJ may increase with duration of exposure to bisphosphonates. </paragraph>
+                        <paragraph>For patients requiring invasive dental procedures, discontinuation of bisphosphonate treatment may reduce the risk for ONJ. Clinical judgment of the treating physician and/or oral surgeon should guide the management plan of each patient based on individual benefit/risk assessment. </paragraph>
+                        <paragraph>Patients who develop osteonecrosis of the jaw while on bisphosphonate therapy should receive care by an oral surgeon. In these patients, extensive dental surgery to treat ONJ may exacerbate the condition. Discontinuation of bisphosphonate therapy should be considered based on individual benefit/risk assessment.</paragraph>
+                     </text>
+                     <effectiveTime value="20260116"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_61412c7b-c578-baf3-99f9-b093b33998c1">
+                     <id root="af72bd89-0b05-e64c-bac5-f73e467f4b25"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>
+                        <content styleCode="bold">5.5       Atypical Fractures Including Femoral Fractures </content>
+                     </title>
+                     <text>
+                        <paragraph>Atypical, low-energy, or low trauma fractures of the femoral shaft have been reported during treatment with bisphosphonates, including ibandronate sodium in patients with osteoporosis. Atypical femur and other fractures most commonly occur with minimal or no trauma to the affected area. These fractures occurred anywhere in the femoral shaft from just below the lesser trochanter to above the supracondylar flare and are traverse or short oblique in orientation without evidence of comminution. Atypical fractures of other bones have also been reported. They may be bilateral. These fractures can also occur in osteoporotic patients who have not been treated with bisphosphonates. Concomitant treatment with glucocorticoids may also induce these fractures.</paragraph>
+                        <paragraph>Prodromal pain in the affected area, usually presenting as dull, aching thigh pain, weeks to months before a complete fracture occurs was reported by patients.</paragraph>
+                        <paragraph>Any patient with a history of bisphosphonate exposure who presents with thigh or groin pain should be suspected of having an atypical fracture and should be evaluated to rule out an incomplete femur fracture. Bony pain in other locations should also be considered for evaluation of atypical fracture. Patients presenting with an atypical fracture should also be assessed for symptoms and signs of fracture in the contralateral limb. Risk/benefit of continuing  bisphosphonate therapy should be re-evaluated in these patients and interruption of  bisphosphonate therapy should be considered.</paragraph>
+                     </text>
+                     <effectiveTime value="20260116"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_30f238c2-13af-a467-b46f-05f9a44b9f48">
+                     <id root="533a5fca-7920-e21d-582d-864e057cbb34"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>
+                        <content styleCode="bold">5.6       Severe Renal Impairment </content>
+                     </title>
+                     <text>
+                        <paragraph>Ibandronate sodium is not recommended for use in patients with severe renal impairment (creatinine clearance of less than 30 mL/min).</paragraph>
+                     </text>
+                     <effectiveTime value="20260116"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ADVERSE_REACTIONS">
+               <id root="35c63618-7485-da61-6a6c-5060c3a708e7"/>
+               <code code="34084-4" displayName="ADVERSE REACTIONS SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>6 ADVERSE REACTIONS</title>
+               <text>
+                  <paragraph>The following clinically significant adverse drug reactions are described elsewhere in the labeling:</paragraph>
+                  <paragraph>• Upper Gastrointestinal Adverse Reactions <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#_b6f91f53-9c65-d06e-22da-186c751a9e29">5.1</linkHtml>)]</content>
+                  </paragraph>
+                  <paragraph>• Hypocalcemia and Mineral Metabolism <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#_6dccf049-c063-bdfc-fad7-baeacacc21bf">5.2</linkHtml>)]</content>
+                  </paragraph>
+                  <paragraph>• Musculoskeletal<content styleCode="italics"> [see Warnings and Precautions (<linkHtml href="#_065ef936-5f6e-ef2e-e44e-f2708c091603">5.3</linkHtml>)]</content>
+                  </paragraph>
+                  <paragraph>• Jaw Osteonecrosis<content styleCode="italics"> [see Warnings and Precautions (<linkHtml href="#_e9bf8313-236f-e495-8a7e-e3f3debcc690">5.4</linkHtml>)]</content>
+                  </paragraph>
+                  <paragraph>• Atypical Fractures Including Femoral Fractures <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#_61412c7b-c578-baf3-99f9-b093b33998c1">5.5</linkHtml>)]</content>
+                  </paragraph>
+                  <paragraph>• Severe Renal Impairment <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#_30f238c2-13af-a467-b46f-05f9a44b9f48">5.6</linkHtml>)]</content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20260116"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>The most common adverse reactions (greater than 5%) are back pain, dyspepsia, pain in extremity, diarrhea, headache, and myalgia. <linkHtml href="#ADVERSE_REACTIONS">(6) </linkHtml>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="bold">To report SUSPECTED ADVERSE REACTIONS, contact </content>
+                           <content styleCode="bold">Dr. Reddy’s Laboratories Inc. at 1-888-375-3784 </content>
+                           <content styleCode="bold">or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch.</content>
+                        </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="_027b3e59-4415-71b4-97c5-67b3c3c939b7">
+                     <id root="ffc9f037-2ae4-93bd-4a99-94c4d88a772d"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>
+                        <content styleCode="bold">6.1       Clinical Trials Experience </content>
+                     </title>
+                     <text>
+                        <paragraph>Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice. </paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Treatment and Prevention of Postmenopausal Osteoporosis </content>
+                        </paragraph>
+                        <paragraph>Daily DosingThe safety of ibandronate sodium 2.5 mg once daily in the treatment and prevention of postmenopausal osteoporosis was assessed in 3577 patients aged 41 to 82 years. The duration of the trials was 2 to 3 years, with 1134 patients exposed to placebo and 1140 exposed to ibandronate sodium 2.5 mg. Patients with pre-existing gastrointestinal diseaseand concomitant use of non-steroidal anti-inflammatory drugs, proton pump inhibitors and H2 antagonists were included in these clinical trials. All patients received 500 mg calcium plus 400 international units vitamin D supplementation daily.</paragraph>
+                        <paragraph>The incidence of all-cause mortality was 1% in the placebo group and 1.2% in the ibandronate sodium 2.5 mg daily group. The incidence of serious adverse reactions was 20% in the placebo group and 23% in the ibandronate sodium2.5 mg daily group. The percentage of patients who withdrew from treatment due to adverse reactions was approximately 17% in both the ibandronate sodium 2.5 mg daily group and the placebo group. Table 1 lists adverse reactions from the treatment and prevention studies reported in greater than or equal to 2% of patients and more frequently in patients treated daily with ibandronate than patients treated with placebo.</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Table 1 Adverse Reactions Occurring at an Incidence Greater Than or Equal to 2% and in More Patients Treated with Ibandronate Sodium Than in Patients Treated with Placebo Daily in the Osteoporosis Treatment and Prevention Studies</content>
+                        </paragraph>
+                        <table>
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Body System </content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Placebo % (n=1134) </content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Ibandronate Sodium </content>
+                                    <content styleCode="bold">2.5 mg % (n=1140) </content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Body as a Whole </content>
+                                 </td>
+                                 <td>   </td>
+                              </tr>
+                              <tr>
+                                 <td> Back Pain </td>
+                                 <td> 12 </td>
+                                 <td> 14 </td>
+                              </tr>
+                              <tr>
+                                 <td> Pain in Extremity </td>
+                                 <td> 6 </td>
+                                 <td> 8 </td>
+                              </tr>
+                              <tr>
+                                 <td> Asthenia </td>
+                                 <td> 2 </td>
+                                 <td> 4 </td>
+                              </tr>
+                              <tr>
+                                 <td> Allergic Reaction </td>
+                                 <td> 2 </td>
+                                 <td> 3 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Digestive System </content>
+                                 </td>
+                                 <td>   </td>
+                              </tr>
+                              <tr>
+                                 <td> Dyspepsia </td>
+                                 <td> 10 </td>
+                                 <td> 12 </td>
+                              </tr>
+                              <tr>
+                                 <td> Diarrhea </td>
+                                 <td> 5 </td>
+                                 <td> 7 </td>
+                              </tr>
+                              <tr>
+                                 <td> Tooth Disorder </td>
+                                 <td> 2 </td>
+                                 <td> 4 </td>
+                              </tr>
+                              <tr>
+                                 <td> Vomiting </td>
+                                 <td> 2 </td>
+                                 <td> 3 </td>
+                              </tr>
+                              <tr>
+                                 <td> Gastritis </td>
+                                 <td> 2 </td>
+                                 <td> 2 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Musculoskeletal System </content>
+                                 </td>
+                                 <td>   </td>
+                              </tr>
+                              <tr>
+                                 <td> Myalgia </td>
+                                 <td> 5 </td>
+                                 <td> 6 </td>
+                              </tr>
+                              <tr>
+                                 <td> Joint Disorder </td>
+                                 <td> 3 </td>
+                                 <td> 4 </td>
+                              </tr>
+                              <tr>
+                                 <td> Arthritis </td>
+                                 <td> 3 </td>
+                                 <td> 3 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Nervous System </content>
+                                 </td>
+                                 <td>   </td>
+                              </tr>
+                              <tr>
+                                 <td> Headache </td>
+                                 <td> 6 </td>
+                                 <td> 7 </td>
+                              </tr>
+                              <tr>
+                                 <td> Dizziness </td>
+                                 <td> 3 </td>
+                                 <td> 4 </td>
+                              </tr>
+                              <tr>
+                                 <td> Vertigo </td>
+                                 <td> 3 </td>
+                                 <td> 3 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Respiratory System </content>
+                                 </td>
+                                 <td>   </td>
+                              </tr>
+                              <tr>
+                                 <td> Upper Respiratory Infection </td>
+                                 <td> 33 </td>
+                                 <td> 34 </td>
+                              </tr>
+                              <tr>
+                                 <td> Bronchitis </td>
+                                 <td> 7 </td>
+                                 <td> 10 </td>
+                              </tr>
+                              <tr>
+                                 <td> Pneumonia </td>
+                                 <td> 4 </td>
+                                 <td> 6 </td>
+                              </tr>
+                              <tr>
+                                 <td> Pharyngitis </td>
+                                 <td> 2 </td>
+                                 <td> 3 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Urogenital System </content>Urinary Tract Infection </td>
+                                 <td> 4 </td>
+                                 <td> 6 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>
+                           <content styleCode="italics">Gastrointestinal Adverse Reactions</content>
+                        </paragraph>
+                        <paragraph>The incidence of selected gastrointestinal adverse reactions in the placebo and ibandronate sodium 2.5 mg daily groups were: dyspepsia (10% vs. 12%), diarrhea (5% vs. 7%), and abdominal pain (5% vs. 6%).</paragraph>
+                        <paragraph>M<content styleCode="italics">usculoskeletal Adverse Reactions</content>
+                        </paragraph>
+                        <paragraph>The incidence of selected musculoskeletal adverse reactions in the placebo and ibandronate sodium 2.5 mg daily groups were: back pain (12% vs. 14%), arthralgia (14% vs. 14%) and myalgia (5% vs. 6%).</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Ocular Adverse Events</content>
+                        </paragraph>
+                        <paragraph>Reports in the medical literature indicate that bisphosphonates may be associated with ocular inflammation such as iritis and scleritis. In some cases, these events did not resolve until the bisphosphonate was discontinued.</paragraph>
+                        <paragraph>There were no reports of ocular inflammation in studies with ibandronate 2.5 mg daily.</paragraph>
+                        <paragraph>Monthly Dosing </paragraph>
+                        <paragraph>The safety of ibandronate sodium 150 mg once monthly in the treatment of postmenopausal osteoporosis was assessed in a two year trial which enrolled 1,583 patients aged 54 to 81 years, with 395 patients exposed to ibandronate sodium 2.5 mg daily and 396 exposed to ibandronate sodium 150 mg monthly. Patients with active or significant pre-existing gastrointestinal disease were excluded from this trial. Patients with dyspepsia or concomitant use of nonsteroidal anti-inflammatory drugs, proton pump inhibitors and H2 antagonists were included in this study. All patients received 500 mg calcium plus 400 international units vitamin D supplementation daily. </paragraph>
+                        <paragraph>After one year, the incidence of all-cause mortality was 0.3% in both the ibandronate sodium 2.5 mg daily group and the ibandronate sodium 150 mg monthly group. The incidence of serious adverse events was 5% in the ibandronate sodium 2.5 mg daily group and 7% in the ibandronate sodium 150 mg monthly group. The percentage of patients who withdrew from treatment due to adverse events was 9% in the ibandronate sodium 2.5 mg daily group and 8% in the ibandronate sodium 150 mg monthly group. <content styleCode="bold italics">Table 2</content> lists the adverse events reported in greater than or equal to 2% of patients.</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Table 2 Adverse Events with an Incidence of at Least 2% in Patients Treated with the Ibandronate Sodium 2.5 mg Daily or Ibandronate Sodium 150 mg Once-Monthly for Treatment of Postmenopausal Osteoporosis </content>
+                        </paragraph>
+                        <table border="0" cellpadding="0" cellspacing="0">
+                           <tbody>
+                              <tr>
+                                 <td valign="top">    <content styleCode="bold">Body System/Adverse Event</content>
+                                 </td>
+                                 <td valign="top">
+                                    <content styleCode="bold">Ibandronate </content>
+                                    <content styleCode="bold"/>
+                                    <br/>
+                                    <content styleCode="bold">Sodium 2.5 mg Daily</content>
+                                    <br/>
+                                    <content styleCode="bold">% </content>
+                                    <br/>
+                                    <content styleCode="bold">(n=395)</content>
+                                 </td>
+                                 <td valign="top">
+                                    <content styleCode="bold">Ibandronate Sodium </content>
+                                    <content styleCode="bold">150 mg </content>
+                                    <br/>
+                                    <content styleCode="bold">Monthly</content>
+                                    <br/>
+                                    <content styleCode="bold">% </content>
+                                    <br/>
+                                    <content styleCode="bold">(n=396)</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top">
+                                    <content styleCode="bold">Vascular Disorders</content>
+                                    <br/>Hypertension</td>
+                                 <td valign="top"> <br/>7.3</td>
+                                 <td valign="top"> <br/>6.3</td>
+                              </tr>
+                              <tr>
+                                 <td valign="top">
+                                    <content styleCode="bold">Gastrointestinal Disorders</content>
+                                    <br/>Dyspepsia<br/>Nausea <br/>Diarrhea <br/>Constipation<br/>Abdominal Pain<sup>a</sup>
+                                 </td>
+                                 <td valign="top">
+                                    <br/> 7.1<br/>4.8<br/>4.1<br/>2.5<br/>5.3</td>
+                                 <td valign="top"> <br/>5.6<br/>5.1<br/>5.1<br/>4.0<br/>7.8</td>
+                              </tr>
+                              <tr>
+                                 <td valign="top">
+                                    <content styleCode="bold">Musculoskeletal and Connective</content>
+                                    <content styleCode="bold">Tissue Disorders </content>
+                                    <br/>Arthralgia <br/>Back Pain<br/>Pain in Extremity<br/> Localized Osteoarthritis<br/> Myalgia<br/>Muscle Cramp</td>
+                                 <td valign="top">  <br/> 3.5<br/>4.3<br/>1.3<br/>1.3<br/>0.8<br/>2.0</td>
+                                 <td valign="top">   <br/>5.6<br/>4.5<br/>4.0<br/>3.0<br/>2.0<br/>1.8</td>
+                              </tr>
+                              <tr>
+                                 <td valign="top">
+                                    <content styleCode="bold">Infections and Infestations </content>
+                                    <br/>Influenza <br/>Nasopharyngitis <br/>Bronchitis<br/>Urinary Tract Infection<br/>Upper Respiratory Tract Infection</td>
+                                 <td valign="top"> <br/>3.8<br/>4.3<br/>3.5<br/>1.8<br/>2.0</td>
+                                 <td valign="top">
+                                    <br/> 4.0<br/>3.5<br/>2.5<br/>2.3<br/>2.0</td>
+                              </tr>
+                              <tr>
+                                 <td valign="top">
+                                    <content styleCode="bold">Nervous System Disorders</content>
+                                    <br/>Headache<br/>Dizziness</td>
+                                 <td valign="top"> <br/>4.1<br/>1.0</td>
+                                 <td valign="top">
+                                    <br/>3.3<br/>2.3</td>
+                              </tr>
+                              <tr>
+                                 <td valign="top">
+                                    <content styleCode="bold">General Disorders and</content>
+                                    <content styleCode="bold">Administration Site Conditions</content>
+                                    <br/>Influenza-like Illness<sup>b</sup>
+                                 </td>
+                                 <td valign="top">  <br/> 0.8</td>
+                                 <td valign="top">   <br/>3.3</td>
+                              </tr>
+                              <tr>
+                                 <td valign="top">
+                                    <content styleCode="bold">Skin and Subcutaneous Tissue</content>
+                                    <content styleCode="bold">Disorders</content>
+                                    <br/>Rash<sup>c</sup>
+                                 </td>
+                                 <td valign="top">  <br/> 1.3</td>
+                                 <td valign="top">   <br/>2.3</td>
+                              </tr>
+                              <tr>
+                                 <td valign="top">
+                                    <content styleCode="bold">Psychiatric Disorders</content>
+                                    <br/>Insomnia</td>
+                                 <td valign="top"> <br/>0.8</td>
+                                 <td valign="top"> <br/>2.0</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>a Combination of abdominal pain and abdominal pain upper</paragraph>
+                        <paragraph>b Combination of influenza-like illness and acute phase reaction</paragraph>
+                        <paragraph>c Combination of rash pruritic, rash macular, rash papular, rash generalized, rash erythematous, dermatitis, dermatitis allergic, dermatitis medicamentosa, erythema and exanthema </paragraph>
+                        <paragraph>Gastrointestinal Adverse Events </paragraph>
+                        <paragraph>The incidence of adverse events in the ibandronate sodium 2.5 mg daily and ibandronate sodium 150 mg monthly groups were: dyspepsia (7% vs. 6%), diarrhea (4% vs. 5%), and abdominal pain (5% vs. 8%). </paragraph>
+                        <paragraph>Musculoskeletal Adverse Events </paragraph>
+                        <paragraph>The incidence of adverse events in the ibandronate sodium 2.5 mg daily and ibandronate sodium 150 mg monthly groups were: back pain (4% vs. 5%), arthralgia (4% vs. 6%) and myalgia (1% vs. 2%).</paragraph>
+                        <paragraph>Acute Phase Reactions </paragraph>
+                        <paragraph>Symptoms consistent with acute phase reactions have been reported with bisphosphonate use. Over the two years of the study, the overall incidence of acute phase reaction symptoms was 3% in the ibandronate sodium 2.5 mg daily group and 9% in the ibandronate sodium 150 mg monthly group. These incidence rates are based on the reporting of any of 33 acute-phase reaction like symptoms within 3 days of the monthly dosing and lasting 7 days or less. Influenza like illness was reported in no patients in the ibandronate sodium 2.5 mg daily group and 2% in the ibandronate sodium 150 mg monthly group. </paragraph>
+                        <paragraph>Ocular Adverse Events </paragraph>
+                        <paragraph>Two patients who received ibandronate sodium 150 mg once-monthly experienced ocular inflammation, one was a case of uveitis and the other scleritis. </paragraph>
+                        <paragraph>One hundred sixty (160) postmenopausal women without osteoporosis participated in a 1-year, double-blind, placebo-controlled study of ibandronate sodium 150 mg once-monthly for prevention of bone loss. Seventy-seven subjects received ibandronate sodium and 83 subjects received placebo. The overall pattern of adverse events was similar to that previously observed. </paragraph>
+                     </text>
+                     <effectiveTime value="20260116"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_c35b6935-0195-8cf2-53cf-3f06389d8b09">
+                     <id root="69d4a85c-48c9-dfcb-ea5a-a7ef6e6e07e0"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>
+                        <content styleCode="bold">6.2       Postmarketing Experience </content>
+                     </title>
+                     <text>
+                        <paragraph>The following adverse reactions have been identified during postapproval use of ibandronate sodium or bisphosphonate products. Because these reactions are reported voluntarily from a population of uncertain size, it is not always possible to reliably estimate their frequency or establish a causal relationship to drug exposure. </paragraph>
+                        <paragraph>Hypersensitivity</paragraph>
+                        <paragraph>Allergic reactions including anaphylactic reaction/shock; with fatalities, angioedema, bronchospasm, asthma exacerbations,rash, Stevens-Johnson syndrome, erythema muliforme, and dermatitis bullous have been reported  (see <content styleCode="bold">
+                              <linkHtml href="#CONTRAINDICATIONS">Contraindications [4])</linkHtml>
+                           </content>
+                        </paragraph>
+                        <paragraph>Hypocalcemia </paragraph>
+                        <paragraph>Hypocalcemia has been reported in patients treated with ibandronate sodium  (see <content styleCode="bold">
+                              <linkHtml href="#WARNINGS_AND_PRECAUTIONS">Warnings</linkHtml>  <linkHtml href="#WARNINGS_AND_PRECAUTIONS">and Precautions [5.2</linkHtml>]</content>).</paragraph>
+                        <paragraph>Musculoskeletal </paragraph>
+                        <paragraph>Bone, joint, or muscle pain, described as severe or incapacitating, have been reported rarely [see<content styleCode="bold">Warnings and Precautions (<linkHtml href="#_065ef936-5f6e-ef2e-e44e-f2708c091603">5.3</linkHtml>)</content>]; low-energy femoral shaft and subtrochanteric fractures, and atypical fractures of other bones [see <content styleCode="bold">Warnings and Precautions (<linkHtml href="#_61412c7b-c578-baf3-99f9-b093b33998c1">5.5</linkHtml>)].</content>
+                        </paragraph>
+                        <paragraph>Jaw Osteonecrosis</paragraph>
+                        <paragraph>Osteonecrosis of the jaw and other oro-facial sites, including the external auditory canal, have been reported in patients treated with ibandronate sodium (see <content styleCode="bold">
+                              <linkHtml href="#WARNINGS_AND_PRECAUTIONS">Warnings</linkHtml>  <linkHtml href="#WARNINGS_AND_PRECAUTIONS">and Precautions [5.4]</linkHtml>
+                           </content>). </paragraph>
+                     </text>
+                     <effectiveTime value="20260116"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="DRUG_INTERACTIONS">
+               <id root="72b30da4-90ec-eabc-e9ad-287688d50d3e"/>
+               <code code="34073-7" displayName="DRUG INTERACTIONS SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>7 DRUG INTERACTIONS</title>
+               <text>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20260116"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list>
+                           <item>Calcium supplements, antacids and some oral medications may interfere with absorption of ibandronate. Do not take within 60 minutes of dosing <linkHtml href="#_b542d4a9-fb76-4d10-dcdc-6ff26d4d1588">(7.1) </linkHtml>
+                           </item>
+                           <item>Use caution when co-prescribing aspirin/nonsteroidal anti-inflammatory drugs that may worsen gastrointestinal irritation. <linkHtml href="#_2b5c7ffc-c899-9594-a117-3650d9914775">(7.2)</linkHtml>
+                           </item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="_b542d4a9-fb76-4d10-dcdc-6ff26d4d1588">
+                     <id root="83ccc493-aef4-40f1-c6ae-fabf46d38000"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>
+                        <content styleCode="bold">7.1       Calcium Supplements/Antacids</content>
+                     </title>
+                     <text>
+                        <paragraph>Products containing calcium and other multivalent cations (such as aluminum, magnesium, iron) are likely to interfere with absorption of ibandronate sodium.  Therefore, instruct patients to take ibandronate sodium at least 60 minutes before any oral medications, including medications containing multivalent cations (such as antacids, supplements or vitamins). Also, patients should wait at least 60 minutes after dosing before taking any other oral medications (see <content styleCode="bold">Dosage and Administration [</content>
+                           <content styleCode="bold">
+                              <linkHtml href="#_7f559184-4406-7bc2-1c33-a66801050662">2.3</linkHtml>
+                           </content>
+                           <content styleCode="bold">])</content>. </paragraph>
+                     </text>
+                     <effectiveTime value="20260116"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_2b5c7ffc-c899-9594-a117-3650d9914775">
+                     <id root="ca3ae3e7-d983-c1f2-6dea-fd3470748f1c"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>
+                        <content styleCode="bold">7.2       Aspirin/Nonsteroidal Anti-Inflammatory Drugs (NSAIDs) </content>
+                     </title>
+                     <text>
+                        <paragraph>Because aspirin, NSAIDs, and bisphosphonates are all associated with gastrointestinal irritation, caution should be exercised in the concomitant use of aspirin or NSAIDs with ibandronate.</paragraph>
+                        <paragraph/>
+                     </text>
+                     <effectiveTime value="20260116"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_5c63065d-ea1d-7b30-0027-f4c51d5afe72">
+                     <id root="c50ca956-94ab-2921-dcb0-77bcfd5db7fa"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>
+                        <content styleCode="bold">7.3       H2 Blockers </content>
+                     </title>
+                     <text>
+                        <paragraph>In healthy volunteers, co-administration with ranitidine resulted in a 20% increased bioavailability of ibandronate, which was not considered to be clinically relevant (see <content styleCode="bold">Clinical  Pharmacology [12.3]</content>).</paragraph>
+                     </text>
+                     <effectiveTime value="20260116"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_9ed4ac15-4c1c-b6a0-0dab-d08bdd2ebc1c">
+                     <id root="4b3bde80-5b34-6c36-737c-0e4f387290ec"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>
+                        <content styleCode="bold">7.4       Drug/Laboratory Test Interactions </content>
+                     </title>
+                     <text>
+                        <paragraph>Bisphosphonates are known to interfere with the use of bone-imaging agents. Specific studies with ibandronate have not been performed.</paragraph>
+                     </text>
+                     <effectiveTime value="20260116"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="USE_IN_SPECIFIC_POPULATIONS">
+               <id root="84f13a3e-cc8b-7bb0-8de9-b74bc1990b1b"/>
+               <code code="43684-0" displayName="USE IN SPECIFIC POPULATIONS SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>8 USE IN SPECIFIC POPULATIONS</title>
+               <text>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20260116"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Ibandronate sodium is not recommended in patients with severe renal impairment (creatinine clearance less than 30 mL/min). (<linkHtml href="#_30f238c2-13af-a467-b46f-05f9a44b9f48">5.6</linkHtml>, <linkHtml href="#_5a5207b4-ffeb-b977-deaa-a0de13697377">8.6</linkHtml>)</paragraph>
+                        <paragraph>
+                           <content styleCode="bold"/>
+                        </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="PREGNANCY">
+                     <id root="e243bccb-9e67-8e2b-c61c-ebaf333f626f"/>
+                     <code code="42228-7" displayName="PREGNANCY SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>8.1 Pregnancy</title>
+                     <text>
+                        <paragraph>Risk Summary</paragraph>
+                        <paragraph>Ibandronate is not indicated for use in women of reproductive potential. There are no data with ibandronate use in pregnant women to inform any drug-associated risks.</paragraph>
+                        <paragraph>In reproductive toxicity studies in the rat, ibandronate caused post-implantation loss and obstruction of labor with maternal and fetal periparturient mortality at greater than or equal to 3 times human exposure at the recommended 2.5 mg daily oral dose, or at greater than or equal to 1 times human exposure at the recommended 150 mg once-monthly oral dose. In pregnant rats, kidney developmental toxicity occurred in offspring at greater than or equal to 30 times the daily 2.5 mg human dose or at greater than or equal to 9 times the once-monthly 150 mg human dose. In rat reproductive studies, impaired pup neuromuscular development was observed at 45 times the daily 2.5 mg dose and 13 times the once-monthly 150 mg dose. In  reproductive studies in the rabbit, ibandronate caused maternal mortality at greater than or equal to 8 times the daily 2.5 mg dose and greater than or equal to 4 times the once-monthly 150 mg dose (see Data).</paragraph>
+                        <paragraph>Data</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Animal Data</content>
+                        </paragraph>
+                        <paragraph>In female rats given ibandronate at oral doses greater than or equal to 3 times human exposure at therecommended daily oral dose of 2.5 mg or greater than or equal to 1 times human exposure at the recommended once-monthly oral dose of 150 mg beginning 14 days before mating and continuing through lactation, maternal deaths were observed at the time of delivery in all dose groups. Perinatal pup loss in dams given doses producing 45 times human exposure at the recommended daily dose and 13 times human exposure at the recommended once-monthly dose was likely related to maternal dystocia. Calcium supplementation did not completely prevent dystocia and periparturient mortality in any of the treated groups at greater than or equal to 16 times the recommended daily dose and greater than or equal to 4.6 times the recommended once-monthly dose. A low incidence of postimplantation loss was observed in rats treated from 14 days before mating throughout lactation or during gestation, only at doses causing maternal dystocia and periparturient mortality. In pregnant rats dosed orally from gestation day 17 through lactation day 21 (following closure of the hard palate through weaning), maternal toxicity, including dystocia and mortality, fetal perinatal and postnatal mortality, were observed at doses equivalent to human exposure at the recommended daily dose and greater than or equal to 4 times the recommended once-monthly dose. Periparturient mortality has also been observed with other bisphosphonates and appears to be a class effect related to inhibition of skeletal calcium mobilization resulting in hypocalcemia and dystocia.</paragraph>
+                        <paragraph>Exposure of pregnant rats during the period of organogenesis resulted in an increased fetal incidence of RPU (renal pelvis ureter) syndrome at oral doses producing 30 times human exposure at the recommended daily oral dose of 2.5 mg and greater than or equal to 9 times human exposure at the recommended once-monthly oral dose of 150 mg. Impaired pup neuromuscular development (cliff avoidance test) was observed at 45 times human exposure at the daily dose and 13 times the once-monthly dose.</paragraph>
+                        <paragraph>In pregnant rabbits treated orally with ibandronate during gestation at doses greater than or equal to 8 times the recommended human daily oral dose of 2.5 mg and greater than or equal to 4 times the recommended human once-monthly oral dose of 150 mg, dose-related maternal mortality was observed in all treatment groups. The deaths occurred prior to parturition and were associated with lung edema and hemorrhage. No significant fetal anomalies were observed.</paragraph>
+                        <paragraph>Exposure multiples for the rat studies were calculated for the recommended daily oral dose of 2.5 mg or once monthly dose of 150 mg based on area under the curve (AUC) comparison. Exposure multiples for the rabbit study were calculated for the recommended human daily oral dose of 2.5 mg or once-monthly dose of 150 mg based on dose/body surface area comparison. Doses used in pregnant animals were 1, 4, 5, 6, 16, 10, 20, 30, 60 or 100 mg/kg/day in rats, and 1, 4 or 20 mg/kg/day in rabbits.</paragraph>
+                        <paragraph/>
+                     </text>
+                     <effectiveTime value="20260116"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="NURSING_MOTHERS">
+                     <id root="2affcc41-0fe5-0f6f-49b4-08b37faf7d59"/>
+                     <code code="34080-2" displayName="NURSING MOTHERS SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>8.3 Lactation</title>
+                     <text>
+                        <paragraph>Risk Summary</paragraph>
+                        <paragraph>Ibandronate sodium is not indicated for use in women of reproductive potential. There is no information on the presence of ibandronate in human milk, the effects of ibandronate on the breastfed infant, or the effects of ibandronate on milk production. Ibandronate is present in rat milk (see Data).The clinical relevance of these data is unclear.</paragraph>
+                        <paragraph>Data</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Animal Data</content>
+                        </paragraph>
+                        <paragraph>In lactating rats treated with intravenous doses of 0.08 mg/kg, ibandronate was present in breast milk from 2 to 24 hours after dose administration. Concentrations in milk averaged 1.5 times plasma concentrations.</paragraph>
+                     </text>
+                     <effectiveTime value="20260116"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="PEDIATRIC_USE">
+                     <id root="cd9b5efc-5e7b-cb8e-2dac-030b749bad32"/>
+                     <code code="34081-0" displayName="PEDIATRIC USE SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>8.4 Pediatric Use</title>
+                     <text>
+                        <paragraph>Safety and effectiveness in pediatric patients have not been established.</paragraph>
+                     </text>
+                     <effectiveTime value="20260116"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="GERIATRIC_USE">
+                     <id root="0f9c17b0-6c6a-45ff-7b0b-31074cfd9bab"/>
+                     <code code="34082-8" displayName="GERIATRIC USE SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>8.5 Geriatric Use</title>
+                     <text>
+                        <paragraph>Of the patients receiving ibandronate 2.5 mg daily in postmenopausal osteoporosis studies, 52% were over65 years of age, and 10% were over 75 years of age. Of the patients receiving ibandronate sodium 150 mg once-monthly in the postmenopausal osteoporosis 1-year study, 52% were over 65 years of age, and 9% were over 75 years of age. No overall differences in effectiveness or safety were observed between these patients and younger patients but greater sensitivity in some older individuals cannot be ruled out. </paragraph>
+                     </text>
+                     <effectiveTime value="20260116"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_5a5207b4-ffeb-b977-deaa-a0de13697377">
+                     <id root="165e1022-7462-9eea-2a1c-dc169dcb90b7"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>
+                        <content styleCode="bold">8.6 Renal Impairment </content>
+                     </title>
+                     <text>
+                        <paragraph>Ibandronate sodium is not recommended for use in patients with severe renal impairment (creatinine clearance less than 30 mL/min).</paragraph>
+                     </text>
+                     <effectiveTime value="20260116"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="OVERDOSAGE">
+               <id root="2a087e02-79cf-f86b-8f6a-17c7cfb5c972"/>
+               <code code="34088-5" displayName="OVERDOSAGE SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>10 OVERDOSAGE</title>
+               <text>
+                  <paragraph>No specific information is available on the treatment of overdosage of ibandronate sodium. However, based on knowledge of this class of compounds, oral overdosage may result in hypocalcemia, hypophosphatemia, and upper gastrointestinal adverse events, such as upset stomach, dyspepsia, esophagitis, gastritis, or ulcer. Milk or antacids should be given to bind ibandronate sodium. Due to the risk of esophageal irritation, vomiting should not be induced, and the patient should remain fully upright. Dialysis would not be beneficial. </paragraph>
+               </text>
+               <effectiveTime value="20260116"/>
+            </section>
+         </component>
+         <component>
+            <section ID="DESCRIPTION">
+               <id root="63ba53fb-e13f-244f-62d1-6d04f385e487"/>
+               <code code="34089-3" displayName="DESCRIPTION SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>11 DESCRIPTION</title>
+               <text>
+                  <paragraph>Ibandronate sodium is a nitrogen-containing bisphosphonate that inhibits osteoclast-mediated bone  resorption. The chemical name for ibandronate sodium is 3-(N-methyl-N-pentyl) amino-1-hydroxypropane-1,1diphosphonic acid, monosodium salt, with the molecular formula C<sub>9</sub>H<sub>22</sub>NO<sub>7</sub>P<sub>2</sub>Na and a molecular weight of 341. Ibandronate sodium is an off-white to white colored powder. It is sparingly soluble in water. Ibandronate sodium has the following structural formula:</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="MM586636761373"/>
+                  </paragraph>
+                  <paragraph>Ibandronate sodium tablets are available as a white, capsule shaped 150-mg coated tablets for once-monthly oral administration. One 150 mg coated tablet contains 160.33 mg ibandronate sodium, equivalent to 150 mg of ibandronic acid. Ibandronate sodium tablets also contains the following inactive ingredients: colloidal silicon dioxide, crospovidone, croscarmellose sodium, lactose monohydrate, microcrystalline cellulose, povidone, and sodium stearyl fumarate. The tablet coating contains hypromellose, polyethylene glycol 400, and titanium dioxide. Imprinting ink contains: ammonium hydroxide, black iron oxide, propylene glycol and shellac.</paragraph>
+                  <paragraph/>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20260116"/>
+            </section>
+         </component>
+         <component>
+            <section ID="CLINICAL_PHARMACOLOGY">
+               <id root="91995240-4283-be9c-7bdc-5383c36e12dd"/>
+               <code code="34090-1" displayName="CLINICAL PHARMACOLOGY SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>12 CLINICAL PHARMACOLOGY</title>
+               <text>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20260116"/>
+               <component>
+                  <section ID="MECHANISM_OF_ACTION">
+                     <id root="52688a8b-2e20-bcf8-7e22-9666e4371fc3"/>
+                     <code code="43679-0" displayName="MECHANISM OF ACTION SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>12.1 Mechanism of Action</title>
+                     <text>
+                        <paragraph>The action of ibandronate on bone tissue is based on its affinity for hydroxyapatite, which is part of the mineral matrix of bone. Ibandronate inhibits osteoclast activity and reduces bone resorption and turnover. In postmenopausal women, it reduces the elevated rate of bone turnover, leading to, on average, a net gain in bone mass.</paragraph>
+                     </text>
+                     <effectiveTime value="20260116"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="PHARMACODYNAMICS">
+                     <id root="b411f682-d4cc-a9ed-41e2-be3eadb92b51"/>
+                     <code code="43681-6" displayName="PHARMACODYNAMICS SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>12.2 Pharmacodynamics</title>
+                     <text>
+                        <paragraph>Osteoporosis is characterized by decreased bone mass and increased fracture risk, most commonly at the spine, hip, and wrist. The diagnosis can be confirmed by a finding of low bone mass, evidence of fracture on x-ray, a history of osteoporotic fracture, or height loss or kyphosis indicative of vertebral fracture. While osteoporosis occurs in both men and women, it is most common among women following menopause. In healthy humans, bone formation and resorption are closely linked; old bone is resorbed and replaced by newly formed bone. In postmenopausal osteoporosis, bone resorption exceeds bone formation, leading to bone loss and increased risk of fracture. After menopause, the risk of fractures of the spine and hip increases; approximately 40% of 50-year-old women will experience an osteoporosis-related fracture during their remaining lifetimes. </paragraph>
+                        <paragraph>Ibandronate produced biochemical changes indicative of dose-dependent inhibition of bone resorption, including decreases of biochemical markers of bone collagen degradation (such as deoxypyridinoline, and cross-linked C-telopeptide of Type I collagen) in the once-monthly doses from 100 mg to 150 mg in postmenopausal women. </paragraph>
+                        <paragraph> Treatment with 2.5 mg daily ibandronate sodium resulted in decreases in biochemical markers of bone turnover, including urinary C-terminal telopeptide of Type I collagen (uCTX) and serum osteocalcin, to levels similar to those in premenopausal women. Changes in markers of bone formation were observed later than changes in resorption markers, as expected, due to the coupled nature of bone resorption and formation. Treatment with 2.5 mg daily ibandronate sodium decreased levels of uCTX within 1 month of starting treatment and decreased levels of osteocalcin within 3 months. Bone turnover markers reached a nadir of approximately 64% below baseline values by6 months of treatment and remained stable with continued treatment for up to 3 years. Following treatment discontinuation, there is a return to pretreatment baseline rates of elevated bone resorption associated with postmenopausal osteoporosis. </paragraph>
+                        <paragraph>In a 1-year, study comparing once-monthly vs. once-daily oral dosing regimens, the median decrease from baseline in serum CTX values was -76% for patients treated with the 150 mg once-monthly regimen and -67%for patients treated with the 2.5 mg daily regimen. In a 1-year, prevention study comparing ibandronate sodium 150 mg once-monthly to placebo, the median placebo-subtracted decrease in sCTX was -49.8%.</paragraph>
+                     </text>
+                     <effectiveTime value="20260116"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="PHARMACOKINETICS">
+                     <id root="e459bbe7-53e7-b51a-c4c0-ef700f487b56"/>
+                     <code code="43682-4" displayName="PHARMACOKINETICS SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>12.3 Pharmacokinetics</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="bold">Absorption</content>
+                        </paragraph>
+                        <paragraph>The absorption of oral ibandronate occurs in the upper gastrointestinal tract. Plasma concentrations increase in a dose-linear manner up to 50 mg oral intake and increases nonlinearly above this dose. </paragraph>
+                        <paragraph>Following oral dosing, the time to maximum observed plasma ibandronate concentrations ranged from 0.5 to 2 hours (median 1 hour) in fasted healthy postmenopausal women. The mean oral bioavailability of 2.5 mgibandronate was about 0.6% compared to intravenous dosing.The extent of absorption is impaired by food or beverages (other than plain water). The oral bioavailability of ibandronate is reduced by about 90% when ibandronate sodium tablet is administered concomitantly with a standard breakfast in comparison with bioavailability observed in fasted subjects. There is no meaningful reduction in bioavailability when ibandronate is taken at least 60 minutes before a meal. However, both bioavailability and the effect on bone mineral density (BMD) are reduced when food or beverages are taken less than 60 minutes following an ibandronate dose.<content styleCode="bold"/>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Distribution</content>
+                        </paragraph>
+                        <paragraph>After absorption, ibandronate either rapidly binds to bone or is excreted into urine. In humans, the apparent terminal volume of distribution is at least 90 L, and the amount of dose removed from the circulation via the bone is estimated to be 40% to 50% of the circulating dose. In vitro protein binding in human serum was 99.5% to 90.9% over an ibandronate concentration range of 2 to 10 ng/mL in one study and approximately 85.7% over a concentration range of 0.5 to 10 ng/mL in another study.</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Metabolism </content>
+                        </paragraph>
+                        <paragraph>Ibandronate does not undergo hepatic metabolism and does not inhibit the hepatic cytochrome P450 system. Ibandronate is eliminated by renal excretion. Based on a rat study, the ibandronate secretory pathway does not appear to include known acidic or basic transport systems involved in the excretion of other drugs. There is no evidence that ibandronate is metabolized in humans. </paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Elimination</content>
+                           <content styleCode="bold"/>
+                           <content styleCode="bold"/>
+                        </paragraph>
+                        <paragraph>The portion of ibandronate that is not removed from the circulation via bone absorption is eliminated unchanged by the kidney (approximately 50% to 60% of the absorbed dose). Unabsorbed ibandronate is eliminated unchanged in the feces. </paragraph>
+                        <paragraph>The plasma elimination of ibandronate is multiphasic. Its renal clearance and distribution into bone accounts for a rapid and early decline in plasma concentrations, reaching 10% of the Cmax within 3 or 8 hours after intravenous or oral administration, respectively. This is followed by a slower clearance phase as ibandronate redistributes back into the blood from bone. The observed apparent terminal half-life for ibandronate is generally dependent on the dose studied and on assay sensitivity. The observed apparent terminal half-life for the 150 mg ibandronate tablet upon oral administration to healthy postmenopausal women ranges from 37 to 157 hours. </paragraph>
+                        <paragraph>Total clearance of ibandronate is low, with average values in the range 84 to 160 mL/min. Renal clearance (about 60 mL/min in healthy postmenopausal females) accounts for 50% to 60% of total clearance and is related to creatinine clearance. The difference between the apparent total and renal clearances likely reflects bone uptake of the drug. </paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Specific Populations </content>
+                        </paragraph>
+                        <paragraph>Pediatrics </paragraph>
+                        <paragraph>The pharmacokinetics of ibandronate has not been studied in patients less than 18 years of age. </paragraph>
+                        <paragraph>Geriatric </paragraph>
+                        <paragraph>Because ibandronate is not known to be metabolized, the only difference in ibandronate elimination for geriatric patients versus younger patients is expected to relate to progressive age-related changes in renal function. </paragraph>
+                        <paragraph>Gender </paragraph>
+                        <paragraph>The bioavailability and pharmacokinetics of ibandronate are similar in both men and women. </paragraph>
+                        <paragraph>Race</paragraph>
+                        <paragraph>Pharmacokinetic differences due to race have not been studied. </paragraph>
+                        <paragraph>Renal Impairment </paragraph>
+                        <paragraph>Renal clearance of ibandronate in patients with various degrees of renal impairment is linearly related to creatinine clearance (CLcr). </paragraph>
+                        <paragraph>Following a single dose of 0.5 mg ibandronate by intravenous administration, patients with CLcr 40 to 70 mL/min had 55% higher exposure (AUC∞) than the exposure observed in subjects with CLcr greater than 90 mL/min. Patients with CLcr less than 30 mL/min had more than a two-fold increase in exposure compared to the exposure for healthy subjects (see <content styleCode="bold">
+                              <linkHtml href="#DOSAGE_AND_ADMINISTRATION">Dosage</linkHtml>
+                              <linkHtml href="#DOSAGE_AND_ADMINISTRATION">and Administration [2.4</linkHtml>]</content>). </paragraph>
+                        <paragraph>Hepatic Impairment </paragraph>
+                        <paragraph>No studies have been performed to assess the pharmacokinetics of ibandronate in patients with hepatic impairment because ibandronate is not metabolized in the human liver.</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Drug Interaction Studies</content>
+                        </paragraph>
+                        <paragraph>Products containing calcium and other multivalent cations (such as aluminum, magnesium, iron), including milk, food, and antacids are likely to interfere with absorption of ibandronate, which is consistent with findings in animal studies. </paragraph>
+                        <paragraph>H2 Blockers </paragraph>
+                        <paragraph>A pharmacokinetic interaction study in healthy volunteers demonstrated that 75 mg ranitidine (25 mg injected intravenously 90 and 15 minutes before and 30 minutes after ibandronate administration) increased the oral bioavailability of 10 mg ibandronate by about 20%. This degree of increase is not considered to be clinically relevant. <content styleCode="bold"/>
+                           <content styleCode="bold"/>
+                           <content styleCode="bold"/>
+                           <content styleCode="bold"/>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20260116"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="NONCLINICAL_TOXICOLOGY">
+               <id root="fa1af0ad-b9b1-bc36-fd8e-bb22a1631581"/>
+               <code code="43680-8" displayName="NONCLINICAL TOXICOLOGY SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>13 NONCLINICAL TOXICOLOGY</title>
+               <text>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20260116"/>
+               <component>
+                  <section ID="CARCINOGENESIS_AND_MUTAGENESIS_AND_IMPAIRMENT_OF_FERTILITY">
+                     <id root="4d6be256-27ff-fdb6-047c-bbd132dc8cdd"/>
+                     <code code="34083-6" displayName="CARCINOGENESIS &amp; MUTAGENESIS &amp; IMPAIRMENT OF FERTILITY SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="bold">Carcinogenesis </content>
+                        </paragraph>
+                        <paragraph>In a 104-week carcinogenicity study, doses of 3, 7, or 15 mg/kg/day were administered by oral gavage to male and female Wistar rats (systemic exposures up to 12 and 7 times, respectively, human exposure at the recommended daily oral dose of 2.5 mg, and cumulative exposures up to 3.5 and 2 times, respectively, human exposure at the recommended once-monthly oral dose of 150 mg, based on AUC comparison). There were no significant drug-related tumor findings in male or female rats. In a 78-week carcinogenicity study, doses of 5, 20, or 40 mg/kg/day were administered by oral gavage to male and female NMRI mice (exposures up to 475 and 70 times, respectively, human exposure at the recommended daily oral dose of 2.5 mg and cumulative exposures up to 135 and 20 times, respectively, human exposure at the recommended once-monthly oral dose of 150 mg, based on AUC comparison). There were no significant drug-related tumor findings in male or female mice. In a 90-week carcinogenicity study, doses of 5, 20, or 80 mg/kg/day were administered in the drinking water to NMRI mice (cumulative monthly exposures in males and females up to 70 and 115 times, respectively, human exposure at the recommended dose of 150 mg, based on AUC comparison). A dose-related increased incidence of adrenal subcapsular adenoma/carcinoma was observed in female mice, which was statistically significant at 80 mg/kg/day (220 to 400 times human exposure at the recommended daily oral dose of 2.5 mg and115 times human exposure at the recommended once-monthly oral dose of 150 mg, based on AUC comparison). The relevance of these findings to humans is unknown.   </paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Mutagenesis </content> There was no evidence for a mutagenic or clastogenic potential of ibandronate in the following assays: in vitro bacterial mutagenesis assay in Salmonella typhimurium and Escherichia coli (Ames test), mammalian cell mutagenesis assay in Chinese hamster V79 cells, and chromosomal aberration test in human peripheral lymphocytes, each with and without metabolic activation. Ibandronate was not genotoxic in the in vivo mouse micronucleus tests for chromosomal damage. <content styleCode="bold"> </content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Impairment of Fertility </content> In female rats treated from 14 days prior to mating through gestation, decreases in fertility, corpora lutea, and implantation sites were observed at an oral dose of 16 mg/kg/day (45 times human exposure at the recommended daily oral dose of 2.5 mg and 13 times human exposure at the recommended once-monthly oral dose of 150 mg, based on AUC comparison). </paragraph>
+                     </text>
+                     <effectiveTime value="20260116"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_6b6e2a51-f8ff-68b7-c853-4c7e5a9aac84">
+                     <id root="1b5be3f6-abd5-53d2-6c72-4334d6504ac1"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>
+                        <content styleCode="bold">13.2 Animal Pharmacology </content>
+                     </title>
+                     <text>
+                        <paragraph>Animal studies have shown that ibandronate is an inhibitor of osteoclast-mediated bone resorption. In the Schenk assay in growing rats, ibandronate inhibited bone resorption and increased bone volume, based on histologic examination of the tibial metaphyses. There was no evidence of impaired mineralization at the highest dose of 5 mg/kg/day (subcutaneously), which is 1000 times the lowest antiresorptive dose of 0.005 mg/kg/day in this model, and 5000 times the optimal antiresorptive dose of 0.001 mg/kg/day in the aged ovariectomized rat. This indicates that ibandronate sodium tablet administered at therapeutic doses is unlikely to induce osteomalacia. </paragraph>
+                        <paragraph>Long-term daily or once-monthly intermittent administration of ibandronate to ovariectomized rats or monkeys was associated with suppression of bone turnover and increases in bone mass. In both rats and monkeys, vertebral BMD, trabecular density, and biomechanical strength were increased dose-dependently at doses up to 15 times the recommended human daily oral dose of 2.5 mg, or cumulative monthly doses up to 8 times (rat) or 6 times (monkey) the recommended human once-monthly oral dose of 150 mg, based on body surface area (mg/m<sup>2</sup>) or area under curve (AUC) comparison. In monkeys, ibandronate maintained the positive correlation between bone mass and strength at the ulna and femoral neck. New bone formed in the presence of ibandronate had normal histologic structure and did not show mineralization defects. </paragraph>
+                        <paragraph/>
+                     </text>
+                     <effectiveTime value="20260116"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="CLINICAL_STUDIES">
+               <id root="7c796884-e714-6103-b2c1-0137750965dd"/>
+               <code code="34092-7" displayName="CLINICAL STUDIES SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>14 CLINICAL STUDIES</title>
+               <text>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20260116"/>
+               <component>
+                  <section ID="_a5d7d6eb-15b1-cdea-8b7d-c0017e21eaa4">
+                     <id root="e9e204ef-115e-240e-ff7a-03b1c9b5d4b2"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>
+                        <content styleCode="bold">14.1    Treatment of Postmenopausal Osteoporosis </content>
+                     </title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="bold">Daily Dosing</content>
+                        </paragraph>
+                        <paragraph>The effectiveness and safety of ibandronate were demonstrated in a randomized, double-blind, placebo-controlled, multinational study (Treatment Study) of 2,946 women aged 55 to 80 years, who were on average 21 years postmenopause, who had lumbar spine BMD 2 to 5 SD below the premenopausal mean (T-score) in at least one vertebra [L1 to L4], and who had 1 to 4 prevalent vertebral fractures. Ibandronate sodium was evaluated at oral doses of 2.5 mg daily and 20 mg intermittently. The main outcome measure was the occurrence of new radiographically diagnosed vertebral fractures after 3 years of treatment. The diagnosis of an incident vertebral fracture was based on both qualitative diagnosis by the radiologist and quantitative morphometric criterion. The morphometric criterion required the dual occurrence of 2 events: a relative height ratio or relative height reduction in a vertebral body of at least 20%, together with at least a 4 mm absolute decrease in height. All women received 400 international units vitamin D and 500 mg calcium supplementation per day. </paragraph>
+                        <paragraph>Effect on Fracture Incidence </paragraph>
+                        <paragraph>Ibandronate sodium 2.5 mg daily significantly reduced the incidence of new vertebral (primary efficacy measure) and of new and worsening vertebral fractures. Over the course of the 3-year study, the risk for vertebral fracture was 9.6% in the placebo-treated women and 4.7% in the women treated with ibandronate sodium 2.5 mg (p&lt;0.001) (see Table 3).</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Table 3  Effect of I</content>
+                           <content styleCode="bold">bandronate Sodium on the Incidence of Vertebral Fracture in the 3-Year Osteoporosis Treatment Study*</content>.</paragraph>
+                        <paragraph/>
+                        <table border="0" cellpadding="0" cellspacing="0" width="601">
+                           <tbody>
+                              <tr>
+                                 <td rowspan="2" valign="top"> </td>
+                                 <td colspan="4" valign="top">
+                                    <content styleCode="bold">Proportion of Patients with Fracture (%)</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top">
+                                    <content styleCode="bold">Placebo n=975</content>
+                                 </td>
+                                 <td valign="top">
+                                    <content styleCode="bold">Ibandronate </content>
+                                    <br/>
+                                    <content styleCode="bold">2.5 mg</content>
+                                    <br/>
+                                    <content styleCode="bold">Daily </content>
+                                    <br/>
+                                    <content styleCode="bold">n=977</content>
+                                 </td>
+                                 <td valign="top">
+                                    <content styleCode="bold">Absolute Risk Reduction </content>
+                                    <br/>
+                                    <content styleCode="bold">(%)</content>
+                                    <br/>
+                                    <content styleCode="bold">95% CI</content>
+                                 </td>
+                                 <td valign="top">
+                                    <content styleCode="bold">Relative Risk Reduction </content>
+                                    <br/>
+                                    <content styleCode="bold">(%)</content>
+                                    <br/>
+                                    <content styleCode="bold">95% CI</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top">New Vertebral Fracture <br/>0 to 3 Year</td>
+                                 <td valign="top">9.6</td>
+                                 <td valign="top">4.7</td>
+                                 <td valign="top">4.9 <br/>(2.3, 7.4)</td>
+                                 <td valign="top">52 ** <br/>(29, 68)</td>
+                              </tr>
+                              <tr>
+                                 <td valign="top">New and Worsening Vertebral Fracture <br/>0 to 3 Year</td>
+                                 <td valign="top">10.4</td>
+                                 <td valign="top">5.1</td>
+                                 <td valign="top">5.3  <br/>
+                                    <br/>(2.6, 7.9)</td>
+                                 <td valign="top">52  <br/>
+                                    <br/>(30, 67)</td>
+                              </tr>
+                              <tr>
+                                 <td valign="top">Clinical (Symptomatic) Vertebral Fracture <br/>0 to 3 Year</td>
+                                 <td valign="top">5.3</td>
+                                 <td valign="top">2.8</td>
+                                 <td valign="top">2.5  <br/>
+                                    <br/>(0.6, 4.5)</td>
+                                 <td valign="top">49  <br/>
+                                    <br/>(14, 69)</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>*The endpoint value is the value at the study's last time point, 3 years, for all patients who had a fracture identified at that time; otherwise, the last postbaseline value prior to the study's last time point is used. **p=0.0003 vs. placebo</paragraph>
+                        <paragraph>Ibandronate sodium 2.5 mg daily did not reduce the incidence of nonvertebral fractures (secondary efficacy measure). There was a similar number of nonvertebral osteoporotic fractures at 3 years reported in women treated with Ibandronate sodium 2.5 mg daily [9.1%, (95% CI: 7.1%, 11.1%)] and placebo [8.2%, (95% CI: 6.3%, 10.2%)]. The two treatment groups were also similar with regard to the number of fractures reported at the individual nonvertebral sites: pelvis, femur, wrist, forearm, rib, and hip. </paragraph>
+                        <paragraph>Bone Mineral Density (BMD) </paragraph>
+                        <paragraph>Ibandronate significantly increased BMD at the lumbar spine and hip relative to treatment with placebo. In the 3-year osteoporosis treatment study, Ibandronate sodium 2.5 mg daily produced increases in lumbar spine BMD that were progressive over 3 years of treatment and were statistically significant relative to placebo at 6 months and at all later time points. Lumbar spine BMD increased by 6.4% after 3 years of treatment with 2.5 mg daily ibandronate compared with 1.4% in the placebo group. <content styleCode="bold">Table 4</content> displays the significant increases in BMD seen at the lumbar spine, total hip, femoral neck, and trochanter compared to placebo. </paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Table 4  Mean Percent Change in BMD from Baseline to Endpoint in Patients Treated Daily with </content>
+                           <content styleCode="bold"> Ibandronate Sodium</content>
+                           <content styleCode="bold">2.5 mg or Placebo in the 3-Year Osteoporosis Treatment Study*</content>
+                        </paragraph>
+                        <table border="0" cellpadding="0" cellspacing="0">
+                           <tbody>
+                              <tr>
+                                 <td valign="top"> </td>
+                                 <td valign="top">
+                                    <content styleCode="bold">Placebo</content>
+                                 </td>
+                                 <td valign="top">
+                                    <content styleCode="bold"> Ibandronate </content>
+                                    <content styleCode="bold">Sodium 2.5 mg </content>
+                                    <content styleCode="bold">Daily</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td valign="top">Lumbar Spine</td>
+                                 <td valign="top">1.4 <br/>(n=693)</td>
+                                 <td valign="top">6.4 <br/>(n=712)</td>
+                              </tr>
+                              <tr>
+                                 <td valign="top">Total Hip</td>
+                                 <td valign="top">-0.7 <br/>(n=638)</td>
+                                 <td valign="top">3.1 <br/>(n=654)</td>
+                              </tr>
+                              <tr>
+                                 <td valign="top">Femoral Neck</td>
+                                 <td valign="top">-0.7 <br/>(n=683)</td>
+                                 <td valign="top">2.6 <br/>(n=699)</td>
+                              </tr>
+                              <tr>
+                                 <td valign="top">Trochanter</td>
+                                 <td valign="top">0.2 <br/>(n=683)</td>
+                                 <td valign="top">5.3 <br/>(n=699)</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>*The endpoint value is the value at the study's last time point, 3 years, for all patients who had BMD measured at that time; otherwise, the last postbaseline value prior to the study's last time point is used.</paragraph>
+                        <paragraph>Bone Histology </paragraph>
+                        <paragraph>The effects of Ibandronate sodium 2.5 mg daily on bone histology were evaluated in iliac crest biopsies from 16 women after 22 months of treatment and 20 women after 34 months of treatment. </paragraph>
+                        <paragraph>The histological analysis of bone biopsies showed bone of normal quality and no indication of osteomalacia or a mineralization defect. </paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Once-Monthly Dosing</content>
+                        </paragraph>
+                        <paragraph>The effectiveness and safety of ibandronate sodium once-monthly were demonstrated in a randomized, double-blind, multinational, noninferiority trial in 1,602 women aged 54 to 81 years, who were on average 18 years postmenopause, and had L2-L4 lumbar spine BMD T-score below -2.5 SD at baseline. The main outcome measure was the comparison of the percentage change from baseline in lumbar spine BMD after 1 year of treatment with once-monthly ibandronate (100 mg, 150 mg) to daily ibandronate (2.5 mg). All patients received 400 international units vitamin D and 500 mg calcium supplementation per day. </paragraph>
+                        <paragraph> Ibandronate sodium 150 mg once-monthly (n=327) was shown to be noninferior to ibandronate sodium 2.5 mg daily (n=318) in lumbar spine BMD in a 1-year, double-blind, multicenter study of women with postmenopausal osteoporosis. In the primary efficacy analysis (per-protocol population), the mean increases from baseline in lumbar spine BMD at 1 year were 3.86% (95% CI: 3.40%, 4.32%) in the 2.5 mg daily group and 4.85% (95% CI: 4.41%, 5.29%) in the 150 mg once-monthly group; the mean difference between 2.5 mg daily and 150 mg once-monthly was 0.99% (95% CI: 0.38%, 1.60%), which was statistically significant (p=0.002). The results of the intent-to-treat analysis were consistent with the primary efficacy analysis. The 150 mg once-monthly group also had consistently higher BMD increases at the other skeletal sites compared to the 2.5 mg daily group.</paragraph>
+                     </text>
+                     <effectiveTime value="20260116"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_9af8a485-a26c-0a33-85c0-4a596fe0297d">
+                     <id root="b68ef377-9269-fa7a-504d-9f51f657936d"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>
+                        <content styleCode="bold">14.2     Prevention of Postmenopausal Osteoporosis</content>
+                     </title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="bold">Daily Dosing </content>
+                        </paragraph>
+                        <paragraph> The safety and effectiveness of ibandronate sodium 2.5 mg daily for the prevention of postmenopausal osteoporosis were demonstrated in a randomized, double-blind, placebo-controlled 2-year study (Prevention Study) of 653 postmenopausal women without osteoporosis at baseline. Women were aged 41 to 82 years, were on average 8.5 years postmenopause, and had lumbar spine BMD T-scores greater than-2.5. Women were stratified according to time since menopause (1 to 3 years, greater than 3 years) and baseline lumbar spine BMD (T-score: greater than-1, -1 to -2.5). The study compared daily ibandronate sodium at three dose levels (0.5 mg, 1 mg, 2.5 mg) with placebo. All women received 500 mg of supplemental calcium per day.   </paragraph>
+                        <paragraph> The primary efficacy measure was the change in BMD of lumbar spine after 2 years of treatment. Ibandronate sodium 2.5 mg daily resulted in a mean increase in lumbar spine BMD of 3.1% compared with placebo following 2 years of treatment. Increases in BMD were seen at 6 months and at all later time points. Irrespective of the time since menopause or the degree of pre-existing bone loss, treatment with ibandronate resulted in a higher BMD response at the lumbar spine compared with placebo across all four baseline strata [time since menopause (1 to 3 years, greater than 3 years) and baseline lumbar spine BMD (T-score: greater than-1, -1 to -2.5)].     </paragraph>
+                        <paragraph> Compared with placebo, treatment with ibandronate sodium 2.5 mg daily increased BMD of the total hip by 1.8%, the femoral neck by 2%, and the trochanter by 2.1%. <content styleCode="bold"> </content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Once-Monthly Dosing </content>
+                        </paragraph>
+                        <paragraph> The safety and effectiveness of ibandronate sodium 150 mg once-monthly for the prevention of postmenopausal osteoporosis were demonstrated in a randomized, double-blind, placebo-controlled 1-year study (Monthly Prevention Study) of 160 postmenopausal women with low bone mass at baseline (T-score of -1 to -2.5). Women, aged 46 to 60 years, were on average 5.4 years postmenopause. All women received 400 international units of vitamin D and 500 mg calcium supplementation daily.   </paragraph>
+                        <paragraph>The primary efficacy measure was the relative change in BMD at the lumbar spine after 1 year of treatment. Ibandronate sodium 150 mg once-monthly resulted in a mean increase in lumbar spine BMD of 4.12% (95% confidence interval 2.96 to 5.28) compared with placebo following 1 year of treatment (p&lt;0.0001), based on a 3.73% and -0.39% mean change in BMD from baseline in the 150 mg once-monthly ibandronate sodium and placebo treatment groups, respectively. BMD at other skeletal sites was also increased relative to baseline values. </paragraph>
+                     </text>
+                     <effectiveTime value="20260116"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="HOW_SUPPLIED">
+               <id root="f1929f7c-84b6-fda0-6804-459a73a59455"/>
+               <code code="34069-5" displayName="HOW SUPPLIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>16 HOW SUPPLIED/STORAGE AND HANDLING</title>
+               <text>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20260116"/>
+               <component>
+                  <section ID="_3b4627ec-7b74-a944-356f-600f711a5cf4">
+                     <id root="deb5cf3c-7163-7e09-3653-158e9fd9ca4e"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>
+                        <content styleCode="bold">16.1    How Supplied </content>
+                     </title>
+                     <text>
+                        <paragraph>Ibandronate sodium tablets 150 mg are white, film coated and capsule shaped tablets printed with R575 on one side and plain on other side They are supplied in carton of 3 packs containing 1 tablet each. </paragraph>
+                        <paragraph>Carton of 1 blister pack containing 3 tablets (NDC 55111-575-43).</paragraph>
+                        <paragraph>Carton of 3 packs (NDC 55111-575-03), each pack containing 1 tablet (NDC 55111-575-11)</paragraph>
+                     </text>
+                     <effectiveTime value="20260116"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_f785edd7-2c61-c616-6320-98594f0df595">
+                     <id root="c54a68a5-699c-4b02-9c07-b7175a0b4f20"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>
+                        <content styleCode="bold">16.2    Storage and Handling </content>
+                     </title>
+                     <text>
+                        <paragraph>Store at 20°C to 25°C (68°F to 77°F); [see USP Controlled Room Temperature]. </paragraph>
+                     </text>
+                     <effectiveTime value="20260116"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="INFORMATION_FOR_PATIENTS">
+               <id root="7d4a88b3-d95c-47b2-2d76-c948ecee69af"/>
+               <code code="34076-0" displayName="INFORMATION FOR PATIENTS SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>17 PATIENT COUNSELING INFORMATION</title>
+               <text>
+                  <paragraph>“See <content styleCode="bold">FDA-approved patient labeling (Medication Guide)” </content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20260116"/>
+               <component>
+                  <section ID="_aef0b03c-c15f-6794-6c5d-795a9bd0a9a8">
+                     <id root="64e9a34a-153d-8637-d4d2-7456819b5ced"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>
+                        <content styleCode="bold">17.1    Information for Patients </content>
+                     </title>
+                     <text>
+                        <br/>
+                        <paragraph>Instruct patientsshould be instructed to read the Medication Guide carefully before taking ibandronate sodium tablets and to re-read it each time the prescription is renewed because it contains important information the patient should know about ibandronate sodium tablets. The Medication Guide also includes to the dosing instructions in order to maximize absorption and clinical benefit. </paragraph>
+                        <list>
+                           <item> Ibandronate sodium tablets should be taken at least 60 minutes before the first food or drink (other than water) of the day and before taking any oral medication or supplementation including calcium, antacids or vitamins (see <content styleCode="bold">Drug Interactions </content>
+                              <content styleCode="bold">
+                                 <linkHtml href="#_b542d4a9-fb76-4d10-dcdc-6ff26d4d1588">[7.1]</linkHtml>
+                              </content>). </item>
+                           <item>To facilitate delivery to the stomach, and thus reduce the potential for esophageal irritation, ibandronate sodium tablets should be swallowed whole with a full glass of plain water (6 to 8 oz) while the patient is standing or sitting in an upright position. Patients should not lie down for 60 minutes after taking ibandronate sodium tablets. </item>
+                           <item>Patients should not eat, drink anything except for water, or take other medications for 60 minutes after taking ibandronate sodium tablets. </item>
+                           <item>Plain water is the only drink that should be taken with ibandronate sodium tablets. Note that some mineral waters may have a higher concentration of calcium and therefore should not be used. </item>
+                           <item>Patients should not chew or suck the tablet because of a potential for oropharyngeal ulceration. </item>
+                           <item>The ibandronate sodium tablets, 150 mg tablet should be taken on the same date each month (i.e., the patient’s ibandronate sodium day). </item>
+                           <item>The patient must not take two 150 mg tablets within the same week.</item>
+                           <item>If the once-monthly dose is missed, and the patient’s next scheduled ibandronate sodium tablets day is more than 7 days away, the patient should be instructed to take one ibandronate sodium tablets, 150 mg in the morning following the date that it is remembered (see <content styleCode="bold">Dosage and Administration [</content>
+                              <content styleCode="bold">
+                                 <linkHtml href="#_7f559184-4406-7bc2-1c33-a66801050662">2.3]</linkHtml>
+                              </content>). The patient should then return to taking one ibandronate sodium tablets, 150 mg every month in the morning of their chosen day, according to their original schedule. </item>
+                           <item>If the once-monthly dose is missed, and the patient’s next scheduled ibandronate sodium tablets day is only 1 to 7 days away, the patient must wait until the subsequent month’s scheduled ibandronate sodium tablets day to take their tablet. The patient should then return to taking one ibandronate sodium tablet, 150 mg every month in the morning of their chosen day, according to their original schedule. </item>
+                        </list>
+                        <paragraph>Patients should receive supplemental calcium and vitamin D if dietary intake is inadequate. Intake of supplemental calcium and vitamin D should be delayed for at least 60 minutes following oral administration of ibandronate sodium tablets in order to maximize absorption of ibandronate sodium tablets. </paragraph>
+                        <paragraph>Physicians should be alert to signs or symptoms signaling a possible esophageal reaction during therapy, and patients should be instructed to discontinue ibandronate sodium tablets and seek medical attention if they develop symptoms of esophageal irritation such as new or worsening dysphagia, pain on swallowing, retrosternal pain, or heartburn. </paragraph>
+                     </text>
+                     <effectiveTime value="20251027"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="_a0d83731-647b-366e-09ec-99ac8a1325d5">
+               <id root="c3f76dce-8faa-9ccb-49b3-367569d6fc1e"/>
+               <code code="42231-1" displayName="SPL MEDGUIDE SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Medication Guide</content>   </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Ibandronate Sodium Tablets</content>
+                  </paragraph>
+                  <paragraph>(eye-BAN-droe-nate SOE-dee-um) </paragraph>
+                  <paragraph>Read the Medication Guide that comes with ibandronate sodium tablets before you start taking it and each time you get a refill. There may be new information. This Medication Guide does not take the place of talking with your doctor about your medical condition or your treatment. Talk to your doctor if you have any questions about ibandronate sodium tablets.  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">What is the most important information I should know about ibandronate sodium tablets? </content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Ibandronate sodium tablets can cause serious side effects including: </content> </paragraph>
+                  <paragraph>1. Esophagus problems  </paragraph>
+                  <paragraph>2. Low calcium levels in your blood (hypocalcemia) </paragraph>
+                  <paragraph>3. Bone, joint or muscle pain </paragraph>
+                  <paragraph>4. Severe jaw bone problems (osteonecrosis) </paragraph>
+                  <paragraph>5. Unusual breaks in thigh and other bones  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">1. Esophagus problems. </content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Some people who take ibandronate sodium tablets may develop problems in the esophagus (the tube that connects the mouth and the stomach). These problems include irritation, inflammation, or ulcers of the esophagus which may sometimes bleed. </content>
+                  </paragraph>
+                  <paragraph>• <content styleCode="bold">It is important that you take ibandronate sodium tablets exactly as prescribed to help lower your chance of getting esophagus problems (see the section “How should I take ibandronate sodium tablets?”). </content>
+                  </paragraph>
+                  <paragraph>•  <content styleCode="bold">Stop taking ibandronate sodium tablets and call your doctor right away if you get chest pain, new or worsening heartburn, or have trouble or pain when you swallow. </content> </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">2. Low calcium levels in your blood (hypocalcemia). </content>
+                  </paragraph>
+                  <paragraph>Ibandronate sodium tablets may lower the calcium levels in your blood. If you have low blood calcium before you start taking ibandronate sodium tablets, it may get worse during treatment. Your low blood calcium must be treated before you take ibandronate sodium tablets. Most people with low blood calcium levels do not have symptoms, but some people may have symptoms. Call your doctor right away if you have symptoms of low blood calcium such as: </paragraph>
+                  <list listType="unordered">
+                     <item>Spasms, twitches, or cramps in your muscles </item>
+                     <item>Numbness or tingling in your fingers, toes, or around your mouth  <br/>Your doctor may prescribe calcium and vitamin D to help prevent low calcium levels in your blood, while you take ibandronate sodium tablets. Take calcium and vitamin D as your doctor tells you to.<content styleCode="bold"/>    </item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">3. Bone, joint, or muscle pain.</content>
+                  </paragraph>
+                  <paragraph>Some people who take ibandronate sodium tablets develop severe bone, joint, or muscle pain. <content styleCode="bold"> </content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">4. Severe jaw bone problems (osteonecrosis). </content>
+                  </paragraph>
+                  <paragraph>Severe jaw bone problems may happen when you take ibandronate sodium tablets. Your doctor may examine your mouth before you start ibandronate sodium tablets. Your doctor may tell you to see your dentist before you start ibandronate sodium tablets. It is important for you to practice good mouth care during treatment with ibandronate sodium tablets. <content styleCode="bold"> </content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">5. Unusual breaks in thigh and other bones.</content>
+                  </paragraph>
+                  <paragraph>Some people have had unusual breaks in thigh and other bones, when taking ibandronate sodium tablets. A break in the thigh bone can feel like a new pain in your hip, groin, or thigh.People taking ibandronate sodium tablets can also have breaks in other bones.  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Call your doctor right away if you have any of these side effects. </content> <content styleCode="bold"> </content>
+                     <content styleCode="bold"> </content>
+                     <content styleCode="bold"> </content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">What is ibandronate sodium tablet? </content>
+                  </paragraph>
+                  <paragraph>Ibandronate sodium tablet is a prescription medicine used to treat or prevent osteoporosis in women after menopause. Ibandronate sodium tablets helps increase bone mass and helps reduce the chance of having a spinal fracture (break).  </paragraph>
+                  <paragraph>It is not known how long ibandronate sodium tablets works for the treatment and prevention of osteoporosis. You should see your doctor regularly to determine if ibandronate sodium tablet are still right for you.  </paragraph>
+                  <paragraph>It is not known if ibandronate sodium tablets are safe and effective in children.  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Who should not take ibandronate sodium tablets? </content>
+                  </paragraph>
+                  <paragraph>Do not take ibandronate sodium tablets if you: </paragraph>
+                  <list listType="unordered">
+                     <item>Have certain problems with your esophagus, the tube that connects your mouth with your stomach</item>
+                     <item> Cannot stand or sit upright for at least 60 minutes </item>
+                     <item>Have low levels of calcium in your blood </item>
+                     <item>Are allergic to ibandronate sodium tablets or any of its ingredients. A list of ingredients is at the end of this leaflet  </item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">What should I tell my doctor before taking ibandronate sodium tablets? </content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Before you start ibandronate sodium tablets, be sure to talk to your doctor if you: </content>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>Have problems with swallowing </item>
+                     <item>Have stomach or digestive problems </item>
+                     <item>Have low blood calcium </item>
+                     <item>Plan to have dental surgery or teeth removed </item>
+                     <item>Have kidney problems </item>
+                     <item>Have been told you have trouble absorbing minerals in your stomach or intestines (malabsorption syndrome) </item>
+                     <item>Are pregnant, or plan to become pregnant. It is not known if ibandronate sodium tablets can harm your unborn baby. </item>
+                     <item>Are breast-feeding or plan to breast-feed. It is not known if ibandronate sodium passes into your milk and may harm your baby.  </item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">Tell your doctor and dentist about all the medicines you take, </content>including prescription and non-prescription medicines, vitamins, and herbal supplements. Certain medicines may affect how ibandronate sodium tablets works. </paragraph>
+                  <paragraph>Especially tell your doctor if you take: </paragraph>
+                  <list listType="unordered">
+                     <item>antacids </item>
+                     <item>aspirin </item>
+                     <item>Nonsteroidal Anti-Inflammatory (NSAID) medicines  </item>
+                  </list>
+                  <paragraph>Know the medicines you take. Keep a list of them and show it to your doctor and pharmacist each time you get a new medicine.   </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">How should I take ibandronate sodium tablets?</content>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>Take ibandronate sodium tablets exactly as your doctor tells you. </item>
+                     <item>Take 1 ibandronate sodium tablet 150 mg 1 time every month on the same day each month.</item>
+                     <item>
+                        <content styleCode="bold">Ibandronate sodium tablets works only if taken on an empty stomach. </content>
+                     </item>
+                     <item>Take 1 ibandronate sodium tablet, <content styleCode="bold">after </content>you get up for the day and <content styleCode="bold">before </content>taking your first food, drink, or other medicine. </item>
+                     <item>Take ibandronate sodium tablets while you are sitting or standing. </item>
+                     <item>
+                        <content styleCode="bold">Do</content>
+                        <content styleCode="bold">not chew or suck on a tablet of ibandronate sodium  </content>
+                     </item>
+                     <item>Swallow ibandronate sodium tablet with a full glass (6 to 8 oz) of <content styleCode="underline">plain water </content>only. </item>
+                     <item>Do <content styleCode="bold">not </content>take ibandronate sodium tablets with mineral water, coffee, tea, soda, or juice.  </item>
+                  </list>
+                  <paragraph>After swallowing ibandronate sodium tablet, wait at least 60 minutes: </paragraph>
+                  <list listType="unordered">
+                     <item>Before you lie down. You may sit, stand or walk, and do normal activities like reading. </item>
+                     <item>Before you take your first food or drink except for plain water. </item>
+                     <item>Before you take other medicines, including antacids, calcium, and other supplements and vitamins.  </item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">Do not lie down for at least 60 minutes after you take ibandronate sodium tablets and do not eat your first food of the day for at least 60 minutes after you take ibandronate sodium tablets. </content> </paragraph>
+                  <paragraph>If you miss a dose of ibandronate sodium tablets, do not take it later in the day. Call your doctor for instructions.  </paragraph>
+                  <paragraph>If you take too much ibandronate sodium tablets, call your doctor. Do not try to vomit. Do not lie down.  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">What are the possible side effects of ibandronate sodium tablets? </content>
+                  </paragraph>
+                  <paragraph>Ibandronate sodium tablets may cause serious side effects.  </paragraph>
+                  <paragraph>• See <content styleCode="bold">“What is the most important information I should know about ibandronate sodium tablets?” </content> </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">The most common side effects of ibandronate sodium tablets are: </content>
+                  </paragraph>
+                  <list listType="unordered">
+                     <item>Back pain </item>
+                     <item>Heartburn </item>
+                     <item>Stomach area (abdominal) pain </item>
+                     <item>Pain in your arms and legs </item>
+                     <item>Diarrhea </item>
+                     <item>Headache </item>
+                     <item>Muscle pain</item>
+                     <item>Flu-like symptoms  <br/>
+                     </item>
+                  </list>
+                  <paragraph>You may get allergic reactions, such as hives, breathing difficulties, swelling of your face, lips, tongue or throat, or feeling faint.</paragraph>
+                  <paragraph>Tell your doctor if you have any side effect that bothers you or that does not go away. </paragraph>
+                  <paragraph>These are not all the possible side effects of ibandronate sodium tablets. For more information, ask your doctor or pharmacist. </paragraph>
+                  <paragraph>Call your doctor for medical advice about side effects. You may report side effects to FDA at 1-800-FDA-1088. You may also report side effects to Dr. Reddy's at 1-888-375-3784. </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">How do I store ibandronate sodium tablets?</content> </paragraph>
+                  <list listType="unordered">
+                     <item>Store ibandronate sodium tablets at 20°C to 25°C (68°F to 77°F).</item>
+                     <item>Keep ibandronate sodium tablets in a tightly closed container.  </item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">Keep ibandronate sodium tablets and all medicines out of the reach of children. </content>
+                     <content styleCode="bold"> </content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">General information about the safe and effective use of ibandronate sodium tablets. </content>
+                  </paragraph>
+                  <paragraph>Medicines are sometimes prescribed for purposes other than those listed in a Medication Guide. Do not use ibandronate sodium tablets for a condition for which it was not prescribed. Do not give ibandronate sodium tablets to other people, even if they have the same symptoms you have. It may harm them.  </paragraph>
+                  <paragraph>This Medication Guide summarizes the most important information about ibandronate sodium tablets. If you would like more information, talk with your doctor. You can ask your doctor or pharmacist for information about ibandronate sodium tablets that is written for health professionals.  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">What are the ingredients in ibandronate sodium tablets? </content>
+                  </paragraph>
+                  <paragraph>Active ingredient: ibandronate sodium </paragraph>
+                  <paragraph>Inactive ingredients: colloidal silicon dioxide, crospovidone, croscarmellose sodium, lactose monohydrate, microcrystalline cellulose, povidone, and sodium stearyl fumarate. The tablet coating contains hypromellose, polyethylene glycol 400, and titanium dioxide. Imprinting ink contains: ammonium hydroxide, black iron oxide, propylene glycol and shellac.</paragraph>
+                  <paragraph>This Medication Guide has been approved by the U.S. Food and Drug Administration.                                                               </paragraph>
+                  <paragraph/>
+                  <paragraph>R<sub>X</sub> Only</paragraph>
+                  <paragraph>Distributor:</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Dr. Reddy’s Laboratories Inc.,</content>
+                  </paragraph>
+                  <paragraph>Princeton, NJ 08540</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Made in India</content>
+                  </paragraph>
+                  <paragraph>Revised: 02/2026</paragraph>
+                  <paragraph>Dispense with medication guide available at: </paragraph>
+                  <paragraph> www.drreddys.com/medguide/ibandronatetabs.pdf</paragraph>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20260116"/>
+            </section>
+         </component>
+         <component>
+            <section ID="_8e2d0f8f-1590-e613-f337-e769ff2c7b69">
+               <id root="82f00bbc-54e3-8f53-207f-2027e059df7a"/>
+               <code code="51945-4" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>PACKAGE LABEL.PRINCIPAL DISPLAY PANEL SECTION</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Blister Card:</content>
+                  </paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="MM435802266359"/>
+                     <content styleCode="bold"/>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold"/>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph/>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20260116"/>
+            </section>
+         </component>
+         <component>
+            <section ID="_a1968eb5-91ca-cb41-67ec-36f75a732927">
+               <id root="4d685017-1328-cd47-12e0-4c7e4df44e6d"/>
+               <code code="51945-4" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL" codeSystem="2.16.840.1.113883.6.1"/>
+               <title/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Pouch:</content>
+                  </paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="MM981065877192"/>
+                     <content styleCode="bold"/>
+                  </paragraph>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20170120"/>
+            </section>
+         </component>
+         <component>
+            <section ID="_4e35cc6b-21d6-3408-d6f5-3aacdb9c7313">
+               <id root="d5ee844e-dcbd-599a-5c71-61d6e1532696"/>
+               <code code="51945-4" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL" codeSystem="2.16.840.1.113883.6.1"/>
+               <title/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Inner Carton:</content>
+                  </paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="MM467352333172"/>
+                     <content styleCode="bold"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20150420"/>
+            </section>
+         </component>
+         <component>
+            <section ID="_b8ac824d-368c-a8e5-2461-951b968cec8e">
+               <id root="de3c2c9f-4d8d-7c16-3bd8-3f7539b027af"/>
+               <code code="51945-4" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL" codeSystem="2.16.840.1.113883.6.1"/>
+               <title/>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Outer Carton: </content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Unvarnished Area consists of: 2D Barcode, Lot Number, Expiry Date and Serial Number.</content>
+                  </paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="MM574054035084"/>
+                     <content styleCode="bold"/>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold"/>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20150420"/>
+            </section>
+         </component>
+         <component>
+            <section ID="_f198aac1-0ed5-8974-1d59-c891f2448c0a">
+               <id root="74ae4097-6ead-27e7-6514-f36765252689"/>
+               <code code="51945-4" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL" codeSystem="2.16.840.1.113883.6.1"/>
+               <title/>
+               <text>
+                  <paragraph>Carton 3s count (1x3s):</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="MM452546927311"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20251027"/>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

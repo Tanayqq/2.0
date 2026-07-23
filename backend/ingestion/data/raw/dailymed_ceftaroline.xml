@@ -1,0 +1,2297 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:voc="urn:hl7-org:v3/voc" xmlns="urn:hl7-org:v3" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="75fe2ab5-503a-683b-92f1-82800e420be6"/>
+   <code code="34391-3" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN PRESCRIPTION DRUG LABEL"/>
+   <title>
+      <content styleCode="bold">These highlights do not include all the information needed to use CEFTAROLINE FOSAMIL FOR INJECTION safely and effectively. See full prescribing information for CEFTAROLINE FOSAMIL FOR INJECTION.</content>
+      <content styleCode="bold">
+         <br/>
+         <br/>CEFTAROLINE FOSAMIL for injection, for intravenous use</content>
+      <br/>
+      <content styleCode="bold">
+         <br/>Initial U.S. Approval: 2010</content>
+      <br/>
+      <br/>
+      <br/>
+   </title>
+   <effectiveTime value="20260529"/>
+   <setId root="3cee3c08-ed60-06c5-ac49-103b7ad2ef5f"/>
+   <versionNumber value="7"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id extension="845263701" root="1.3.6.1.4.1.519.1"/>
+            <name>Apotex Corp.</name>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="ba3ec4a7-0ec4-e905-2ed1-428a017084b9"/>
+               <code code="48780-1" displayName="SPL PRODUCT DATA ELEMENTS SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <effectiveTime value="20260529"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="60505-6124" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Ceftaroline Fosamil</name>
+                        <formCode code="C42957" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INJECTION, POWDER, LYOPHILIZED, FOR SOLUTION"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Ceftaroline Fosamil</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mg" value="400"/>
+                              <denominator unit="mL" value="20"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="7P6FQA5D21" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Ceftaroline Fosamil</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="H36Z0FHR8K" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>Ceftaroline</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="94ZLA3W45F" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Arginine</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="mL" value="20"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code codeSystem="2.16.840.1.113883.6.69" code="60505-6124-0"/>
+                              <formCode code="C43215" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="VIAL, SINGLE-DOSE"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator unit="1" value="10"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code codeSystem="2.16.840.1.113883.6.69" code="60505-6124-1"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20260212"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic classCode="OBS">
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" displayName="Type 0: Not a Combination Product" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20260212"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <approval>
+                           <id extension="ANDA208075" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73584" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38276" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INTRAVENOUS"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="60505-6125" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Ceftaroline Fosamil</name>
+                        <formCode code="C42957" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INJECTION, POWDER, LYOPHILIZED, FOR SOLUTION"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Ceftaroline Fosamil</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mg" value="600"/>
+                              <denominator unit="mL" value="20"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="7P6FQA5D21" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Ceftaroline Fosamil</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="H36Z0FHR8K" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>Ceftaroline</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="94ZLA3W45F" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>Arginine</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="mL" value="20"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code codeSystem="2.16.840.1.113883.6.69" code="60505-6125-0"/>
+                              <formCode code="C43215" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="VIAL, SINGLE-DOSE"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator unit="1" value="10"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code codeSystem="2.16.840.1.113883.6.69" code="60505-6125-1"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20260212"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic classCode="OBS">
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" displayName="Type 0: Not a Combination Product" codeSystem="2.16.840.1.113883.3.26.1.1" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20260212"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <approval>
+                           <id extension="ANDA208075" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73584" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38276" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INTRAVENOUS"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+               <component>
+                  <section>
+                     <id root="961b6265-625e-441b-8200-436aad7fcdd9"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <effectiveTime value="20150422"/>
+                     <component>
+                        <observationMedia ID="MM171454418035">
+                           <text>structure</text>
+                           <value xsi:type="ED" mediaType="image/jpeg">
+                              <reference value="structure.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                     <component>
+                        <observationMedia ID="MM345853991950">
+                           <text>vial-label-400mg.jpg</text>
+                           <value xsi:type="ED" mediaType="image/jpeg">
+                              <reference value="vial-label-400mg.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                     <component>
+                        <observationMedia ID="MM272358971848">
+                           <text>vial-label-600mg.jpg</text>
+                           <value xsi:type="ED" mediaType="image/jpeg">
+                              <reference value="vial-label-600mg.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                     <component>
+                        <observationMedia ID="MM811268860993">
+                           <text>carton-label-400mg-10s.jpg</text>
+                           <value xsi:type="ED" mediaType="image/jpeg">
+                              <reference value="carton-label-400mg-10s.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                     <component>
+                        <observationMedia ID="MM63614981412">
+                           <text>carton-label-600mg-10s.jpg</text>
+                           <value xsi:type="ED" mediaType="image/jpeg">
+                              <reference value="carton-label-600mg-10s.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                     <component>
+                        <observationMedia ID="MM65226027121">
+                           <text>vial-label-400mg-antibiotic.jpg</text>
+                           <value xsi:type="ED" mediaType="image/jpeg">
+                              <reference value="vial-label-400mg-antibiotic.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                     <component>
+                        <observationMedia ID="MM76701321757">
+                           <text>vial-label-600mg-Antibiotic.jpg</text>
+                           <value xsi:type="ED" mediaType="image/jpeg">
+                              <reference value="vial-label-600mg-Antibiotic.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                     <component>
+                        <observationMedia ID="MM295343454940">
+                           <text>carton-label-400mg-10s-Antibiotic.jpg</text>
+                           <value xsi:type="ED" mediaType="image/jpeg">
+                              <reference value="carton-label-400mg-10s-Antibiotic.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                     <component>
+                        <observationMedia ID="MM405407125777">
+                           <text>carton-label-600mg-10s-antibiotic.jpg</text>
+                           <value xsi:type="ED" mediaType="image/jpeg">
+                              <reference value="carton-label-600mg-10s-antibiotic.jpg"/>
+                           </value>
+                        </observationMedia>
+                     </component>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="_9c9a89b0-2b33-fba6-82a3-cd63914184a0">
+               <id root="ab9f956f-c5ad-f1fd-5e3d-0419766051db"/>
+               <code code="43683-2" displayName="RECENT MAJOR CHANGES SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>RECENT MAJOR CHANGES</title>
+               <effectiveTime value="20250312"/>
+            </section>
+         </component>
+         <component>
+            <section ID="INDICATIONS_AND_USAGE">
+               <id root="5d7dcf2b-fe17-676c-2eb7-18da70858e91"/>
+               <code code="34067-9" displayName="INDICATIONS &amp; USAGE SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>1. INDICATIONS AND USAGE</title>
+               <text>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20211230"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Ceftaroline fosamil for injection<content styleCode="bold"> </content>is a cephalosporin antibacterial indicated in adult and pediatric patients for the treatment of the following infection caused by designated susceptible bacteria: </paragraph>
+                        <list>
+                           <item>
+                              <paragraph>Acute bacterial skin and skin structure infections (ABSSSI) in adult and pediatric patients (at least 34 weeks gestational age and 12 days postnatal age) (<linkHtml href="#_d0b042f6-db9c-aa29-a626-bc99eea754d1">1.1</linkHtml>)</paragraph>
+                           </item>
+                           <item>
+                              <paragraph>Community-acquired bacterial pneumonia (CABP) in adult and pediatric patients 2 months of age and older (<linkHtml href="#_818be714-d513-aa9a-074a-bd971de38562">1.2</linkHtml>)</paragraph>
+                           </item>
+                        </list>
+                        <paragraph>To reduce the development of drug-resistant bacteria and maintain the effectiveness of ceftaroline fosamil for injection and other antibacterial drugs, ceftaroline fosamil for injection should be used only to treat or prevent infections that are proven or strongly suspected to be caused by bacteria. (<linkHtml href="#_7ec15943-a1fb-ede1-f45e-dc46aa112741">1.3</linkHtml>)</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="_d0b042f6-db9c-aa29-a626-bc99eea754d1">
+                     <id root="8aafb4d6-9b16-5b8d-d001-0f54f544d92d"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>1.1 Acute Bacterial Skin and Skin Structure Infections</title>
+                     <text>
+                        <paragraph>Ceftaroline fosamil for injection is indicated in adult and pediatric patients (at least 34 weeks gestational age and 12 days postnatal age) for the treatment of acute bacterial skin and skin structure infections (ABSSSI) caused by susceptible isolates of the following Gram-positive and Gram-negative microorganisms: <content styleCode="italics">Staphylococcus aureus </content>(including methicillin-susceptible and -resistant isolates), <content styleCode="italics">Streptococcus pyogenes</content>,<content styleCode="italics"> Streptococcus agalactiae</content>,<content styleCode="italics"> Escherichia coli</content>, <content styleCode="italics"> Klebsiella pneumoniae, and Klebsiella oxytoca [see Dosage and Administration (2.2) and Use in Specific Populations (<linkHtml href="#PEDIATRIC_USE">8.4</linkHtml>)].  </content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics"/>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20231010"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_818be714-d513-aa9a-074a-bd971de38562">
+                     <id root="40fee462-3727-1536-82da-61f894fc8bcf"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>1.2 Community-Acquired Bacterial Pneumonia</title>
+                     <text>
+                        <paragraph>Ceftaroline fosamil for injection is indicated in adult and pediatric patients 2 months of age and older for the treatment of community-acquired bacterial pneumonia (CABP) caused by susceptible isolates of the following Gram-positive and Gram-negative microorganisms: <content styleCode="italics">Streptococcus pneumoniae</content> (including cases with concurrent bacteremia), <content styleCode="italics">Staphylococcus aureus</content> (methicillin-susceptible isolates only), <content styleCode="italics">Haemophilus influenzae, Klebsiella pneumoniae, Klebsiella oxytoca, </content>and<content styleCode="italics"> Escherichia coli. </content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20160825"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_7ec15943-a1fb-ede1-f45e-dc46aa112741">
+                     <id root="aa119786-cf58-427e-355e-49a5b783afcd"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>1.3 Usage</title>
+                     <text>
+                        <paragraph>To reduce the development of drug-resistant bacteria and maintain the effectiveness of ceftaroline fosamil for injection and other antibacterial drugs, ceftaroline fosamil for injection should be used to treat or prevent infections that are proven or strongly suspected to be caused by susceptible bacteria. Appropriate specimens for microbiological examination should be obtained in order to isolate and identify the causative pathogens and to determine their susceptibility to ceftaroline. When culture and susceptibility information are available, they should be considered in selecting or modifying antibacterial therapy. In the absence of such data, local epidemiology and susceptibility patterns may contribute to the empiric selection of therapy.</paragraph>
+                     </text>
+                     <effectiveTime value="20210420"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="DOSAGE_AND_ADMINISTRATION">
+               <id root="305e8ddd-75d5-a910-60c7-682b0bf19d6f"/>
+               <code code="34068-7" displayName="DOSAGE &amp; ADMINISTRATION SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>2. DOSAGE AND ADMINISTRATION</title>
+               <text>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20250312"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>
+                           <content styleCode="bold">Dosage of Ceftaroline Fosamil for Injection by Indication in Adult and Pediatric Patients (<linkHtml href="#_00197783-f622-7bc1-7c7d-d0b1b264f5b2">2.1</linkHtml>, 2.2)</content>
+                        </paragraph>
+                        <table frame="box" rules="all">
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Indication</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Age Range</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Dosage</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Infusion Time</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Duration</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td rowspan="5"> Acute Bacterial Skin and Skin Structure Infections (ABSSSI) </td>
+                                 <td> 18 years and older </td>
+                                 <td> 600 mg every 12 hours </td>
+                                 <td> 5 to 60 minutes </td>
+                                 <td> 5 to 14 days </td>
+                              </tr>
+                              <tr>
+                                 <td> ≥2 years to &lt;18 years (&gt; 33 kg) </td>
+                                 <td> 400 mg every 8 hours OR 600 mg every 12 hours </td>
+                                 <td> 5 to 60 minutes </td>
+                                 <td> 5 to 14 days </td>
+                              </tr>
+                              <tr>
+                                 <td> ≥2 years to &lt;18 years (≤33kg) </td>
+                                 <td> 12 mg/kg every 8 hours </td>
+                                 <td> 5 to 60 minutes </td>
+                                 <td> 5 to 14 days </td>
+                              </tr>
+                              <tr>
+                                 <td> 2 months to &lt;2 years </td>
+                                 <td> 8 mg/kg every 8 hours </td>
+                                 <td> 5 to 60 minutes </td>
+                                 <td> 5 to 14 days </td>
+                              </tr>
+                              <tr>
+                                 <td> 0* to &lt;2 months </td>
+                                 <td> 6 mg/kg every 8 hours </td>
+                                 <td> 30 to 60 minutes </td>
+                                 <td> 5 to 14 days </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph> *Gestational age 34 weeks and older and postnatal age 12 days and older</paragraph>
+                        <table frame="box" rules="all">
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Indication</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Age Range</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Dosage</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Infusion Time</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Duration</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td rowspan="4">Community Acquired Bacterial Pneumonia (CABP)</td>
+                                 <td>18 years and older</td>
+                                 <td>600 mg every12 hours</td>
+                                 <td>5 to 60 minutes</td>
+                                 <td>5 to 7 days</td>
+                              </tr>
+                              <tr>
+                                 <td>≥2 years to &lt; 18 years (&gt; 33 kg)</td>
+                                 <td>400 mg every 8 hours OR 600 mg every12 hours</td>
+                                 <td>
+                                    <content styleCode="bold"> </content>5 to 60 minutes</td>
+                                 <td>
+                                    <content styleCode="bold"> </content>5 to 14 days</td>
+                              </tr>
+                              <tr>
+                                 <td>≥2 years to &lt; 18 years (≤ 33kg)</td>
+                                 <td>12 mg/kg every8 hours</td>
+                                 <td>5 to 60 minutes</td>
+                                 <td>5 to 14 days</td>
+                              </tr>
+                              <tr>
+                                 <td>2 months to &lt; 2 years</td>
+                                 <td>8 mg/kg every8 hours</td>
+                                 <td>5 to 60 minutes</td>
+                                 <td>5 to 14 days</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <list>
+                           <item>Dosage adjustment is required in adult patients with creatinine clearance (CrCl) &lt;50 mL/min and in End-stage Renal Disease (ESRD) including hemodialysis (<linkHtml href="#_8d7fde9d-f68d-a196-bbef-09d686688107">2.3</linkHtml>)</item>
+                           <item>There is insufficient information to recommend a dosage regimen for pediatric patients with CrCL &lt;50 mL/min/1.73 m<sup>2</sup> (<linkHtml href="#_8d7fde9d-f68d-a196-bbef-09d686688107">2.3</linkHtml>)</item>
+                        </list>
+                        <paragraph/>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="_00197783-f622-7bc1-7c7d-d0b1b264f5b2">
+                     <id root="8bbae90c-53f2-1e9f-ecf9-928144159938"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>2.1 Recommended Dosage in Adult Patients</title>
+                     <text>
+                        <paragraph>The recommended dosage of ceftaroline fosamil for injection is 600 mg administered every 12 hours by intravenous (IV) infusion over 5 to 60 minutes in patients ≥18 years of age. The duration of therapy should be guided by the severity and site of infection and the patient’s clinical and bacteriological progress.</paragraph>
+                        <paragraph>The recommended dosage and administration by infection is described in Table 1.</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Table 1: Dosage of Ceftaroline Fosamil for Injection by <content styleCode="bold">Indication in Adults</content>
+                           </content>
+                        </paragraph>
+                        <table frame="box" rules="all" width="100%">
+                           <tbody align="center">
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">
+                                       <content styleCode="bold">Indication</content>
+                                    </content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Dosage</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Frequency</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Infusion Time </content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Recommended Duration of Treatment</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>Acute Bacterial Skin and Skin Structure Infections (ABSSSI)</td>
+                                 <td>600 mg</td>
+                                 <td>Every 12 hours</td>
+                                 <td>5 to 60 minutes</td>
+                                 <td>5-14 days</td>
+                              </tr>
+                              <tr>
+                                 <td>Community-Acquired Bacterial Pneumonia (CABP)</td>
+                                 <td>600 mg</td>
+                                 <td>Every 12 hours</td>
+                                 <td>5 to 60 minutes</td>
+                                 <td>5-7 days</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </text>
+                     <effectiveTime value="20231101"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_121f5150-e071-1825-4d8f-488fbc1cf7b3">
+                     <id root="ad8d3bcd-2285-3b7e-e620-cd74d4d074f3"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>2.2 Recommended Dosage in Pediatric Patients </title>
+                     <text>
+                        <paragraph> The recommended dosage of ceftaroline fosamil for injection in pediatric patients is based on the age and weight of the child. The duration of therapy should be guided by the severity, site of infection and the patient’s clinical and bacteriological progress.</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Pediatric Patients 2 Months of Age and Older</content>
+                        </paragraph>
+                        <list>
+                           <item>For pediatric patients 2 months of age and older, ceftaroline fosamil for injection is administered every 8 hours by intravenous infusion over 5 to 60 minutes.</item>
+                           <item>Ceftaroline fosamil for injection dosing regimen is dependent on the type of infection (ABSSSI, CABP). See dosing Table 2 below.</item>
+                        </list>
+                        <paragraph>
+                           <content styleCode="bold">Table 2: <content styleCode="bold">
+                                 <content styleCode="bold">Dosage of Ceftaroline Fosamil for Injection by Indication in Pediatric Patients 2 Months of Age and Older</content>
+                              </content>
+                           </content>
+                        </paragraph>
+                        <table frame="border" rules="all">
+                           <tbody align="center">
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Indication</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Age Range</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Dosage and Frequency</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Infusion time</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Recommended Duration of Treatment</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="left" rowspan="3">Acute Bacterial Skin and Skin Structure Infections (ABSSSI) <br/>OR <br/>Community-Acquired Bacterial Pneumonia (CABP)</td>
+                                 <td>2 months to &lt; 2 years</td>
+                                 <td>8 mg/kg every 8 hours</td>
+                                 <td rowspan="3">
+                                    <content styleCode="bold">  </content>5 to 60 minutes</td>
+                                 <td rowspan="3">
+                                    <content styleCode="bold"> </content>5-14 days</td>
+                              </tr>
+                              <tr>
+                                 <td>≥ 2 years to &lt; 18 years (≤ 33 kg)</td>
+                                 <td>12 mg/kg every 8 hours</td>
+                              </tr>
+                              <tr>
+                                 <td>≥ 2 years to &lt; 18 years (&gt; 33 kg)</td>
+                                 <td>400 mg every 8 hours <br/>OR <br/>600 mg every 12 hours</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>
+                           <content styleCode="bold">Pediatric Patients Less Than 2 Months of Age</content>
+                           <content styleCode="bold"> </content>
+                        </paragraph>
+                        <list>
+                           <item>
+                              <paragraph> Ceftaroline fosamil for injection are administered every 8 hours by intravenous infusion over 30 to 60 minutes for patients less than 2 months of age.</paragraph>
+                           </item>
+                           <item>
+                              <paragraph>Ceftaroline fosamil for injection dosing regimen is only recommended for patients with ABSSSI. See dosing Table 3 below.</paragraph>
+                           </item>
+                           <item>
+                              <paragraph>Concentrations of ceftaroline fosamil in the cerebrospinal fluid have not been evaluated<content styleCode="italics"> [see Use in Specific Populations (<linkHtml href="#PEDIATRIC_USE">8.4</linkHtml>)].</content>
+                              </paragraph>
+                           </item>
+                           <item>
+                              <paragraph>There is no information for dosing ceftaroline fosamil for injection in infants less than 34 weeks gestational age and less than 12 days postnatal age.</paragraph>
+                              <paragraph/>
+                           </item>
+                        </list>
+                        <paragraph>
+                           <content styleCode="bold">Table 3: Dosage of <content styleCode="bold">Ceftaroline Fosamil for Injection </content> in Pediatric Patients less Than 2 Months of Age</content>
+                        </paragraph>
+                        <table frame="box" rules="all">
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Indication</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Age Range</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Dosage and Frequency</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Infusion time</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Recommended Duration of Treatment</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td> Acute Bacterial Skin and Skin Structure Infections (ABSSSI) </td>
+                                 <td> 0* to &lt; 2 months</td>
+                                 <td> 6 mg/kg every 8 hours</td>
+                                 <td> 30 to 60 minutes </td>
+                                 <td> 5-14 days</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>*Gestational age 34 weeks and older and postnatal age 12 days and older.</paragraph>
+                        <br/>
+                     </text>
+                     <effectiveTime value="20231101"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_8d7fde9d-f68d-a196-bbef-09d686688107">
+                     <id root="db7c5a47-178e-a5c6-6208-e490af6f7346"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>2.3 Dosage Adjustments in Patients with Renal Impairment</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Adults</content>: No dosage adjustment is required in adult patients with CrCL &gt; 50 mL/min. The dose in adult patients should be adjusted when creatinine clearance (CrCL) is &lt; 50 mL/min as shown below (see Table 4).</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Table 4: Dosage of Ceftaroline Fosamil for Injection in Adult Patients with Renal Impairment</content>
+                        </paragraph>
+                        <table frame="border" rules="all" width="90%">
+                           <tbody align="left">
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Estimated CrCl<sup>a </sup>(mL/min)</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Recommended Dosage Regimen for Ceftaroline Fosamil for Injection</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>&gt; 50</td>
+                                 <td>No dosage adjustment necessary</td>
+                              </tr>
+                              <tr>
+                                 <td>&gt; 30 to ≤ 50</td>
+                                 <td>400 mg IV (over 5 to 60 minutes) every 12 hours</td>
+                              </tr>
+                              <tr>
+                                 <td>≥ 15 to ≤ 30</td>
+                                 <td>300 mg IV (over 5 to 60 minutes) every 12 hours</td>
+                              </tr>
+                              <tr>
+                                 <td>End-stage renal disease, including hemodialysis<sup>b</sup>
+                                 </td>
+                                 <td>200 mg IV (over 5 to 60 minutes) every 12 hours<sup>c</sup>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>
+                           <sup>a</sup>Creatinine clearance (CrCl) estimated using the Cockcroft-Gault formula.<br/>
+                           <sup>b</sup>End-stage renal disease is defined as CrCl &lt; 15 mL/min.<br/>
+                           <sup>c</sup>Ceftaroline fosamil for injection is hemodialyzable; thus, ceftaroline fosamil for injection should be administered after hemodialysis on hemodialysis days.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Pediatrics</content>: No dosage adjustment is required in pediatric patients with CrCL &gt; 50 mL/min/1.73 m<sup>2</sup>, estimated using the Schwartz equation. There is insufficient information to recommend a dosage regimen for pediatric patients with CrCL &lt; 50 mL/min/1.73 m<sup>2</sup>.</paragraph>
+                        <paragraph/>
+                     </text>
+                     <effectiveTime value="20231010"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_0a8bddb0-249d-4311-5520-99dd4b8710a0">
+                     <id root="199531f2-1a61-a056-5145-b9cab1f61dd5"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>2.4 Preparation of Ceftaroline Fosamil for Injection for Administration</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Constitution of Ceftaroline Fosamil for Injection Powder for Injection</content>
+                        </paragraph>
+                        <paragraph>Aseptic technique must be followed in preparing the infusion solution. The contents of ceftaroline fosamil for injection vial should be constituted with 20 mL Sterile Water for Injection, USP; or 0.9% of sodium chloride injection; or 5% of dextrose injection; or lactated ringer’s injection. Constitution time is less than 2 minutes. Mix gently to constitute and check to see that the contents have dissolved completely. The preparation of ceftaroline fosamil for injection solutions is summarized in Table 5. </paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Table 5: Preparation of Ceftaroline Fosamil for Injection for Intravenous Use</content>
+                        </paragraph>
+                        <table border="1" frame="box" rules="all" width="60%">
+                           <tbody align="center">
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Dosage Strength (mg)</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Volume of Diluent To Be Added <br/>(mL)</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Approximate Ceftaroline fosamil Concentration (mg/mL)</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Amount to Be Withdrawn</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>400</td>
+                                 <td>20</td>
+                                 <td>20</td>
+                                 <td>Adults: Total Volume <br/>Pediatric*: Volume based on age and weight</td>
+                              </tr>
+                              <tr>
+                                 <td>600</td>
+                                 <td>20</td>
+                                 <td>30</td>
+                                 <td>Adults: Total Volume <br/>Pediatric*: Volume based on age and weight</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>* The recommended dosage of ceftaroline fosamil for injection is based on the age and weight of the child. See Table 2 </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Dilution of the Constituted Solution of Ceftaroline Fosamil for Injection</content>
+                        </paragraph>
+                        <paragraph>The constituted solution must be further diluted in a range between 50 mL to 250 mL before intravenous infusion into patients. Use the same diluent used for constitution of the powder for this further dilution, unless sterile water for injection was used earlier. If sterile water for injection was used earlier, then appropriate infusion solutions include: 0.9% Sodium Chloride Injection, USP; 5% Dextrose Injection, USP; 2.5% Dextrose Injection, USP, and 0.45% Sodium Chloride Injection, USP; or Lactated Ringer's Injection, USP.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Dilution of the Constituted Solution of Ceftaroline Fosamil for Injection in the 50 mL Infusion Bags Only</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Preparation of 600 mg of ceftaroline fosamil for injection dose in 50 mL infusion bag (for adult patients):</content> Withdraw 20 mL of diluent from the infusion bag. Proceed to inject entire content of the ceftaroline fosamil for injection vial into the bag to provide a total volume of 50 mL. The resultant concentration is approximately 12 mg/mL.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Preparation of 400 mg of ceftaroline fosamil for injection dose in 50 mL infusion bag (for adult patients or pediatric patients weighing &gt; 33 kg):</content> Withdraw 20 mL of diluent from the infusion bag. Proceed to inject entire content of the ceftaroline fosamil for injection vial into the bag to provide a total volume of 50 mL. The resultant concentration is approximately 8 mg/mL.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Preparation of ceftaroline fosamil for injection dose in the infusion bag (for pediatric patients weighing ≤ 33 kg):</content> The amount of solution withdrawn from the constituted ceftaroline fosamil for injection vial for pediatric patients weighing ≤ 33 kg for dilution in the infusion bag will vary according to the weight and age of the child. The infusion solution concentration for administration should not exceed 12 mg/ml ceftaroline fosamil. Discard unused portion.</paragraph>
+                        <paragraph>The color of ceftaroline fosamil for injection infusion solutions ranges from clear, light to dark yellow depending on the concentration and storage conditions. When stored as recommended, the product potency is not affected. Parenteral drug products should be inspected visually for particulate matter and discoloration prior to administration, whenever solution and container permit.</paragraph>
+                        <paragraph>
+                           <content styleCode="bold"/>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20231010"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_871d9b84-2cd9-5670-64b5-beb9c869529f">
+                     <id root="b5569e0b-bca8-e38f-f61f-115d174cb089"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>2.5 Storage of Constituted Solutions</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline"> Stability in Baxter</content>
+                           <sup>®</sup>
+                           <content styleCode="underline"> Mini-Bag Plus</content>
+                           <sup>™</sup>
+                           <content styleCode="underline"/>: Solutions of ceftaroline fosamil for injection in concentrations ranging from 4 to 12 mg/mL in Baxter Mini-Bag Plus containers with 0.9% Sodium Chloride Injection may be stored for up to 6 hours at room temperature or for up to 24 hours at 2ºC to 8ºC (36ºF to 46ºF). Stability testing in the Baxter Mini-Bag Plus has solely been conducted on 50 mL and 100 mL containers (0.9% Sodium Chloride Injection).</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Stability in Infusion Bag</content>: Studies have shown that the constituted solution in the infusion bag should be used within 6 hours when stored at room temperature or within 24 hours when stored under refrigeration at 2ºC to 8ºC (36ºF to 46ºF). </paragraph>
+                     </text>
+                     <effectiveTime value="20210420"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_07f29aa3-cfec-9a20-6c88-f8c40f5a21ed">
+                     <id root="098fc2d9-c3d2-2dc5-ab7f-ffd9a8177349"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>2.6 Drug Compatibilities</title>
+                     <text>
+                        <paragraph>The compatibility of ceftaroline fosamil for injection with other drugs has not been established. Ceftaroline fosamil for injection should not be mixed with or physically added to solutions containing other drugs.</paragraph>
+                     </text>
+                     <effectiveTime value="20160825"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="DOSAGE_FORMS_AND_STRENGTHS">
+               <id root="886114ef-7a9c-21df-a0cd-cf6764b1d860"/>
+               <code code="43678-2" displayName="DOSAGE FORMS &amp; STRENGTHS SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>3. DOSAGE FORMS AND STRENGTHS</title>
+               <text>
+                  <paragraph>For Injection: Ceftaroline fosamil for injection is supplied as 600 mg or 400 mg of sterile ceftaroline fosamil (equivalent to 653 mg and 435 mg, respectively, of ceftaroline fosamil monoacetate) powder in single-dose, 20 mL clear glass vials. The powder is constituted and further diluted for intravenous injection.</paragraph>
+               </text>
+               <effectiveTime value="20211230"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>For Injection: 600 mg or 400 mg of sterile ceftaroline fosamil powder in single-dose 20 mL vials. The powder is constituted and further diluted for intravenous injection. (<linkHtml href="#DOSAGE_FORMS_AND_STRENGTHS">3</linkHtml>) </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="CONTRAINDICATIONS">
+               <id root="bce53dad-ad72-22e7-c435-db8b9768278a"/>
+               <code code="34070-3" displayName="CONTRAINDICATIONS SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>4. CONTRAINDICATIONS</title>
+               <text>
+                  <paragraph>Ceftaroline fosamil for injection is contraindicated in patients with known serious hypersensitivity to ceftaroline or other members of the cephalosporin class. Anaphylaxis has been reported with ceftaroline.</paragraph>
+               </text>
+               <effectiveTime value="20170120"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph/>
+                        <list>
+                           <item>Known serious hypersensitivity to ceftaroline or other members of the cephalosporin class. (<linkHtml href="#CONTRAINDICATIONS">4</linkHtml>)</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="WARNINGS_AND_PRECAUTIONS">
+               <id root="1d074c41-5255-2fdf-636b-af0108140443"/>
+               <code code="43685-7" displayName="WARNINGS AND PRECAUTIONS SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>5. WARNINGS AND PRECAUTIONS</title>
+               <text>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20210421"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph/>
+                        <list>
+                           <item>Serious hypersensitivity (anaphylactic) reactions have been reported with beta-lactam antibacterial drugs, including ceftaroline. If a hypersensitivity reaction occurs, discontinue ceftaroline fosamil for injection. (<linkHtml href="#_84d0264f-aed9-9f97-6d86-e8d5f17149d1">5.1</linkHtml>) </item>
+                           <item>
+                              <content styleCode="italics">Clostridiodes difficile</content>-associated diarrhea (CDAD) has been reported with nearly all systemic antibacterial agents, including ceftaroline fosamil for injection. Evaluate if diarrhea occurs. (<linkHtml href="#_af92405c-3846-fdba-311a-e738f71cefcd">5.2</linkHtml>) </item>
+                           <item>Neurological adverse reactions have been reported in patients treated with cephalosporins, including ceftaroline. If neurological adverse reactions occur, consider discontinuing ceftaroline fosamil for injection or making appropriate dosage adjustments in patients with renal impairment. (<linkHtml href="#_8d7fde9d-f68d-a196-bbef-09d686688107">2.3</linkHtml>, <linkHtml href="#_6fcd3cfd-5483-0d7d-2d6a-e6c3517cd929">5.3</linkHtml>)</item>
+                           <item>Direct Coombs’ test seroconversion has been reported with ceftaroline. If anemia develops during or after therapy, a diagnostic workup for drug- induced hemolytic anemia should be performed and consideration given to discontinuation of ceftaroline fosamil for injection. (<linkHtml href="#_aea3fa46-ac45-b2a7-efe6-8eca1404c5d4">5.4</linkHtml>)</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="_84d0264f-aed9-9f97-6d86-e8d5f17149d1">
+                     <id root="37249f35-9de3-1117-f979-8577c18712d1"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>5.1 Hypersensitivity Reactions</title>
+                     <text>
+                        <paragraph>Serious and occasionally fatal hypersensitivity (anaphylactic) reactions and serious skin reactions have been reported in patients receiving beta-lactam antibacterial drugs. Before therapy with ceftaroline fosamil for injection is instituted, careful inquiry about previous hypersensitivity reactions to other cephalosporins, penicillins, or carbapenems should be made. Maintain clinical supervision if this product is to be given to a penicillin- or other beta-lactam-allergic patient, because cross sensitivity among beta-lactam antibacterial agents has been clearly established.</paragraph>
+                        <paragraph>If an allergic reaction to ceftaroline fosamil for injection occurs, discontinue ceftaroline fosamil for injection and institute appropriate treatment and supportive measures.</paragraph>
+                     </text>
+                     <effectiveTime value="20160825"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_af92405c-3846-fdba-311a-e738f71cefcd">
+                     <id root="a2cce96b-70b3-f370-48c0-059ff161f839"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>5.2 <content styleCode="italics">
+                           <content styleCode="bold"/>
+                        </content>
+                        <content styleCode="italics">Clostridioides difficile -  </content>Associated Diarrhea </title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="italics">Clostridioides</content>
+                           <content styleCode="italics"> difficile</content>-associated diarrhea (CDAD) has been reported for nearly all systemic antibacterial agents, including ceftaroline fosamil for injection, and may range in severity from mild diarrhea to fatal colitis. Treatment with antibacterial agents alters the normal flora of the colon and may permit overgrowth of <content styleCode="italics">C. difficile</content>.<br/>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">C. difficile</content> produces toxins A and B which contribute to the development of CDAD. Hypertoxin-producing strains of <content styleCode="italics">C. difficile</content> cause increased morbidity and mortality, as these infections can be refractory to antimicrobial therapy and may require colectomy. CDAD must be considered in all patients who present with diarrhea following antibiotic use. Careful medical history is necessary because CDAD has been reported to occur more than 2 months after the administration of antibacterial agents.</paragraph>
+                        <paragraph>If CDAD is suspected or confirmed, antibacterials not directed against <content styleCode="italics">C. difficile</content> should be discontinued, if possible. Appropriate fluid and electrolyte management, protein supplementation, antibiotic treatment of <content styleCode="italics">C. difficile</content>, and surgical evaluation should be instituted as clinically indicated <content styleCode="italics">[see Adverse Reactions (<linkHtml href="#_2dabf4db-88f5-4ebf-d01b-8f36efc19007">6.1</linkHtml>)].</content>
+                        </paragraph>
+                        <br/>
+                        <br/>
+                     </text>
+                     <effectiveTime value="20210826"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_6fcd3cfd-5483-0d7d-2d6a-e6c3517cd929">
+                     <id root="ccd97f3a-7a5e-8b92-242f-e68c819c00e2"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>
+                        <content styleCode="none"/>
+                        <content styleCode="none"> 5.3 Neurological Adverse Reactions</content>
+                     </title>
+                     <text>
+                        <paragraph>Neurological adverse reactions have been reported during postmarketing surveillance in patients treated with cephalosporins, including ceftaroline fosamil for injection. These reactions include encephalopathy and seizures <content styleCode="italics"> [see Adverse Reactions (<linkHtml href="#_8d7fde9d-f68d-a196-bbef-09d686688107">6.2</linkHtml>)]</content>. Most cases occurred in patients with renal impairment who did not receive appropriate dosage adjustment. The neurological adverse reactions were reversible and resolved after discontinuation of ceftaroline fosamil for injection or after hemodialysis. If neurological adverse reactions associated with ceftaroline fosamil for injection therapy occur, consider discontinuing ceftaroline fosamil for injection or making appropriate dosage adjustments in patients with renal impairment <content styleCode="italics">[see Dosage and Administration (<linkHtml href="#_e840d33a-000a-361f-a9f2-466ea663ed91">2.3</linkHtml>)]</content>.</paragraph>
+                     </text>
+                     <effectiveTime value="20231014"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_aea3fa46-ac45-b2a7-efe6-8eca1404c5d4">
+                     <id root="c7876d0c-dded-1a66-0257-7b8a023a2f8e"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>5.4 Direct Coombs' Test Seroconversion</title>
+                     <text>
+                        <paragraph>Seroconversion from a negative to a positive direct Coombs’ test result occurred in 120/1,114 (10.8%) of adult patients receiving ceftaroline fosamil for injection and 49/1,116 (4.4%) of patients receiving comparator drugs in the four pooled adult Phase 3 trials.</paragraph>
+                        <paragraph>In the pooled adult Phase 3 CABP trials, 51/520 (9.8%) of ceftaroline fosamil for injection-treated patients compared to 24/534 (4.5%) of ceftriaxone-treated patients seroconverted from a negative to a positive direct Coombs’ test result. No adverse reactions representing hemolytic anemia were reported in any treatment group.</paragraph>
+                        <paragraph>Seroconversion from a negative to a positive direct Coombs’ test result occurred in 42/234 (17.9%) of children receiving ceftaroline fosamil for injection and 3/93 (3.2%) of patients receiving comparator drugs in the three pooled pediatric trials. No adverse reactions representing hemolytic anemia were reported in any treatment group.</paragraph>
+                        <paragraph>If anemia develops during or after treatment with ceftaroline fosamil for injection, drug-induced hemolytic anemia should be considered. Diagnostic studies including a direct Coombs’ test, should be performed. If drug-induced hemolytic anemia is suspected, discontinuation of ceftaroline fosamil for injection should be considered and supportive care should be administered to the patient (i.e. transfusion) if clinically indicated.</paragraph>
+                     </text>
+                     <effectiveTime value="20231010"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_defa62ff-1ddc-fc8e-b3c5-b02cdfa98058">
+                     <id root="bcfe7e84-48c7-05b3-2f81-7e1e20e48157"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>5.5 Development of Drug-Resistant Bacteria</title>
+                     <text>
+                        <paragraph>Prescribing ceftaroline fosamil for injection in the absence of a proven or strongly suspected bacterial infection or a prophylactic indication is unlikely to provide benefit to the patient and increases the risk of the development of drug-resistant bacteria.</paragraph>
+                     </text>
+                     <effectiveTime value="20210420"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ADVERSE_REACTIONS">
+               <id root="80a0663f-5ece-f09d-97b5-c93f607a2e3c"/>
+               <code code="34084-4" displayName="ADVERSE REACTIONS SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>6. ADVERSE REACTIONS</title>
+               <text>
+                  <paragraph>The following serious adverse reactions are described in greater detail in the Warnings and Precautions section</paragraph>
+                  <list>
+                     <item>Hypersensitivity Reactions <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#_84d0264f-aed9-9f97-6d86-e8d5f17149d1">5.1</linkHtml>)]  </content>
+                     </item>
+                     <item>
+                        <content styleCode="italics">Clostridioides difficile</content>-Associated diarrhea <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#_af92405c-3846-fdba-311a-e738f71cefcd">5.2</linkHtml>)]</content>
+                     </item>
+                     <item>Neurological Adverse Reactions<content styleCode="italics"> [see Warnings and Precautions (<linkHtml href="#_6fcd3cfd-5483-0d7d-2d6a-e6c3517cd929">5.3</linkHtml>)]</content>
+                     </item>
+                     <item>Direct Coombs’ Test Seroconversion <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#_aea3fa46-ac45-b2a7-efe6-8eca1404c5d4">5.4</linkHtml>)]  </content>
+                     </item>
+                  </list>
+               </text>
+               <effectiveTime value="20250312"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>The most common adverse reactions occurring in &gt;2 % of adult patients and ≥3% of pediatric patients are diarrhea, nausea, and rash. Additional adverse reactions that occurred in ≥3% of pediatric patients include vomiting and pyrexia. (<linkHtml href="#_2dabf4db-88f5-4ebf-d01b-8f36efc19007">6.1</linkHtml>) </paragraph>
+                        <paragraph>
+                           <content styleCode="bold">To report SUSPECTED ADVERSE REACTIONS, contact Apotex Corp. at 1-800-706-5575 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. </content>
+                        </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="_2dabf4db-88f5-4ebf-d01b-8f36efc19007">
+                     <id root="6edd9929-3244-7606-4348-fb41d425b4a6"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>6.1 Clinical Trials Experience</title>
+                     <text>
+                        <paragraph>Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in clinical trials of a drug cannot be compared directly to rates from clinical trials of another drug and may not reflect rates observed in practice.</paragraph>
+                        <paragraph>
+                           <content styleCode="bold underline">Adult Patients</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="none">Ceftaroline fosamil for injection was evaluated in four controlled comparative Phase 3 clinical trials (two in ABSSSI and two in CABP) which included 1,300 adult patients treated with ceftaroline fosamil for injection (600 mg administered by IV over 1 hour every 12h) and 1,297 patients treated with comparator (vancomycin plus aztreonam or ceftriaxone) for a treatment period up to 21 days. The median age of patients treated with ceftaroline fosamil for injection was 54 years, ranging between 18 and 99 years old. Patients treated with ceftaroline fosamil for injection were predominantly male (63%) and Caucasian (82%).</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Serious Adverse Reactions and Adverse Reactions Leading to Discontinuation</content>
+                        </paragraph>
+                        <paragraph>In the four pooled adult Phase 3 clinical trials, serious adverse reactions (SARs) occurred in 98/1,300 (7.5%) of patients receiving ceftaroline fosamil for injection and 100/1,297 (7.7%) of patients receiving comparator drugs. Treatment discontinuation due to adverse reactions occurred in 35/1,300 (2.7%) of patients receiving ceftaroline fosamil for injection and 48/1,297 (3.7%) of patients receiving comparator drugs with the most common adverse reactions leading to discontinuation being hypersensitivity for both treatment groups at a rate of 0.3% in the ceftaroline fosamil for injection group and 0.5% in comparator group.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Most Common Adverse Reactions</content>
+                        </paragraph>
+                        <paragraph>No adverse reactions occurred in greater than 5% of adult patients receiving ceftaroline fosamil for injection. The most common adverse reactions occurring in &gt; 2% of patients receiving ceftaroline fosamil for injection in the pooled adult phase 3 clinical trials were diarrhea, nausea, and rash.</paragraph>
+                        <paragraph>Table 6 lists adverse reactions occurring in ≥ 2% of patients receiving ceftaroline fosamil for injection in the pooled adult Phase 3 clinical trials.</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Table 6: Adverse Reactions Occurring in ≥ 2% of Patients Receiving Ceftaroline Fosamil for Injection in the Pooled Adult Phase 3 Clinical Trials</content>
+                        </paragraph>
+                        <table frame="box" rules="all">
+                           <tbody align="center">
+                              <tr>
+                                 <td rowspan="2">
+                                    <content styleCode="bold">Adverse Reactions</content>
+                                 </td>
+                                 <td colspan="2">
+                                    <content styleCode="bold">Pooled Phase 3 Clinical Trials (four trials, two in ABSSSI and two in CABP)</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Ceftaroline Fosamil for Injection (N=1,300)</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Pooled Comparators<sup>a</sup> (N=1,297)</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td align="center" colspan="3">
+                                    <content styleCode="none"/>
+                                    <content styleCode="bold">Gastrointestinal Disorders</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>Diarrhea</td>
+                                 <td>5 %</td>
+                                 <td>3 %</td>
+                              </tr>
+                              <tr>
+                                 <td>Nausea</td>
+                                 <td>4 %</td>
+                                 <td>4 %</td>
+                              </tr>
+                              <tr>
+                                 <td>Constipation</td>
+                                 <td>2 %</td>
+                                 <td>2 %</td>
+                              </tr>
+                              <tr>
+                                 <td>Vomiting</td>
+                                 <td>2 %</td>
+                                 <td>2 %</td>
+                              </tr>
+                              <tr>
+                                 <td colspan="3">
+                                    <content styleCode="bold">Laboratory Investigations</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>Increased transaminases</td>
+                                 <td>2%</td>
+                                 <td>3 %</td>
+                              </tr>
+                              <tr>
+                                 <td colspan="3">
+                                    <content styleCode="bold">Metabolism and Nutrition disorders</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>Hypokalemia</td>
+                                 <td>2 %</td>
+                                 <td>3 %</td>
+                              </tr>
+                              <tr>
+                                 <td colspan="3">
+                                    <content styleCode="bold">Skin and Subcutaneous Tissue Disorders</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>Rash</td>
+                                 <td>3%</td>
+                                 <td>2%</td>
+                              </tr>
+                              <tr>
+                                 <td colspan="3">
+                                    <content styleCode="bold">Vascular Disorders</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>Phlebitis</td>
+                                 <td>2%</td>
+                                 <td>1%</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" colspan="3">
+                                    <sup>a </sup>Comparators included vancomycin 1 gram IV every 12h plus aztreonam 1 gram IV every 12h in the Phase 3 ABSSSI trials, and ceftriaxone 1 gram IV every 24h in the Phase 3 CABP trials.</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>
+                           <content styleCode="underline">Other Adverse Reactions Observed During Clinical Trials of Ceftaroline Fosamil for Injection</content>
+                        </paragraph>
+                        <paragraph>Following is a list of additional adverse reactions reported by the 1,740 adult patients who received ceftaroline fosamil for injection in any clinical trial with incidences less than 2%. </paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Blood and lymphatic system disorders -</content>
+                           <content styleCode="none"> Anemia, Eosinophilia, Neutropenia, Thrombocytopenia</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="none"/>
+                           <content styleCode="bold">Cardiac disorders - </content>Bradycardia, Palpitations</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Gastrointestinal disorders - </content>Abdominal pain</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">General disorders and administration site conditions - </content>Pyrexia</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Hepatobiliary disorders - </content>Hepatitis</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Immune system disorders - </content>Hypersensitivity, Anaphylaxis</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Infections and infestations - </content>
+                           <content styleCode="italics">Clostridioides difficile</content> colitis</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Metabolism and nutrition disorders -</content> Hyperglycemia, Hyperkalemia</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Nervous system disorders -</content> Dizziness, Convulsion</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Renal and urinary disorders - </content>Renal failure</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Skin and subcutaneous tissue disorders - </content>Urticaria</paragraph>
+                        <paragraph>
+                           <content styleCode="bold"/>
+                           <content styleCode="bold underline">Pediatric Patients</content>
+                        </paragraph>
+                        <paragraph>Ceftaroline fosamil for injection was evaluated in three clinical trials (one in ABSSSI and two in CABP) which included 257 pediatric patients 2 months to &lt; 18 years of age treated with ceftaroline fosamil for injection, and 102 patients treated with comparator agents for a treatment period up to 21 days. In two trials, one in ABSSSI and one in CABP, the dose was selected to result in exposures comparable to adult exposure with 600 mg administered by IV infusion every 12h. In an additional pediatric trial in complicated CABP the dose was higher. The median age of pediatric patients treated with ceftaroline fosamil for injection was 5 years, ranging from 2 months to &lt; 18 years of age. Patients treated with ceftaroline fosamil for injection were predominantly male (55%) and Caucasian (92%).</paragraph>
+                        <paragraph>A single study enrolled 11 pediatric patients with a gestational age of ≥34 weeks and a postnatal age of 12 days to less than 2 months of age. The safety findings were similar to those observed in adult and pediatric patients 2 months of age and older.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Serious Adverse Reactions and Adverse Reactions Leading to Discontinuation</content>
+                        </paragraph>
+                        <paragraph>In the three pooled pediatric clinical trials, SARs occurred in 10/257 (4%) of patients receiving ceftaroline fosamil for injection and 3/102 (3%) of patients receiving comparator drugs. Treatment discontinuation due to adverse reactions occurred in 10/257 (3.9%) of patients receiving ceftaroline fosamil for injection and 2/102 (2%) of patients receiving comparator drugs with the most common adverse reaction leading to discontinuation being rash in 2/257 (0.8%) of patients treated with ceftaroline fosamil for injection.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Most Common Adverse Reactions</content>
+                        </paragraph>
+                        <paragraph>No adverse reactions occurred in greater than 8% of pediatric patients receiving ceftaroline fosamil for injection. The most common adverse reactions occurring in <content styleCode="none">≥ </content>3% of patients receiving ceftaroline fosamil for injection in the pooled pediatric clinical trials were diarrhea, nausea, vomiting, pyrexia and rash.</paragraph>
+                        <paragraph> Table 7 lists adverse reactions occurring in ≥ 3% of patients receiving ceftaroline fosamil for injection in the pooled pediatric clinical trials.</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Table 7: Adverse Reactions Occurring in ≥ 3% of Patients Receiving Ceftaroline Fosamil for Injection in the Pooled Pediatric Clinical Trials</content>
+                        </paragraph>
+                        <table frame="border" rules="all">
+                           <tbody align="center">
+                              <tr>
+                                 <td rowspan="2"> <content styleCode="bold">Adverse Reactions</content>
+                                 </td>
+                                 <td colspan="2">
+                                    <content styleCode="bold">Pooled Pediatric Clinical Trials (three trials, one in ABSSSI and two in CABP)</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Ceftaroline Fosamil for Injection </content>
+                                    <br/>
+                                    <content styleCode="bold">(N=257)</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Pooled Comparators<sup>a</sup>
+                                    </content>
+                                    <br/>
+                                    <content styleCode="bold">(N=102)</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td colspan="3">
+                                    <content styleCode="bold">Gastrointestinal Disorders</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>Diarrhea</td>
+                                 <td>8 %</td>
+                                 <td>10 %</td>
+                              </tr>
+                              <tr>
+                                 <td>Nausea</td>
+                                 <td>3 %</td>
+                                 <td>1 %</td>
+                              </tr>
+                              <tr>
+                                 <td>Vomiting</td>
+                                 <td>5 %</td>
+                                 <td>12 %</td>
+                              </tr>
+                              <tr>
+                                 <td colspan="3">
+                                    <content styleCode="bold">General and Administrative Site disorders</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>Pyrexia</td>
+                                 <td>3%</td>
+                                 <td>2 %</td>
+                              </tr>
+                              <tr>
+                                 <td colspan="3">
+                                    <content styleCode="bold">Skin and Subcutaneous Tissue Disorders</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>Rash</td>
+                                 <td>7%</td>
+                                 <td>4%</td>
+                              </tr>
+                              <tr>
+                                 <td align="left" colspan="3">
+                                    <sup>a </sup>Comparators included vancomycin or cefazolin with or without aztreonam in the ABSSSI trial and ceftriaxone alone or ceftriaxone plus vancomycin in the CABP trials</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>Following is a list of additional adverse reactions reported by the 257 patients who received ceftaroline fosamil for injection in the pediatric clinical trials with incidences less than 3%.</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Investigations – </content>Alanine aminotransferase increased, Aspartate aminotransferase increased</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Nervous system disorders – </content>Headache</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Skin and subcutaneous tissue disorders - </content>Pruritus</paragraph>
+                        <paragraph/>
+                        <paragraph/>
+                        <paragraph/>
+                        <paragraph/>
+                        <paragraph/>
+                        <paragraph/>
+                        <paragraph/>
+                        <paragraph/>
+                        <paragraph/>
+                        <paragraph/>
+                        <paragraph/>
+                        <paragraph/>
+                        <paragraph/>
+                        <paragraph/>
+                     </text>
+                     <effectiveTime value="20231101"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_e840d33a-000a-361f-a9f2-466ea663ed91">
+                     <id root="e4b8f6c5-19b8-8907-dcb1-d83cf1feea6d"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>6.2 Postmarketing Experience</title>
+                     <text>
+                        <paragraph>The following adverse reactions have been identified during post approval use of ceftaroline fosamil for injection in adult patients. Because these adverse reactions are reported voluntarily from a population of uncertain size, it is not always possible to reliably estimate their frequency or establish a causal relationship to drug exposure.</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">
+                              <content styleCode="bold">Blood and lymphatic system disorders</content>: </content>Agranulocytosis, leukopenia, eosinophilic pneumonia.<content styleCode="bold">
+                              <content styleCode="bold"/>
+                           </content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="bold">
+                              <content styleCode="bold">Nervous system disorders: </content>
+                           </content>Encephalopathy, seizures <content styleCode="italics">[see Warnings and Precautions (5.3)]</content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20210420"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="USE_IN_SPECIFIC_POPULATIONS">
+               <id root="1327e3fa-c87b-ed43-c2f4-9d6a66e20c03"/>
+               <code code="43684-0" displayName="USE IN SPECIFIC POPULATIONS SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>8. USE IN SPECIFIC POPULATIONS</title>
+               <text>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20180725"/>
+               <component>
+                  <section ID="PREGNANCY">
+                     <id root="e1257958-4b4d-f407-fb39-04bd18f3ec10"/>
+                     <code code="42228-7" displayName="PREGNANCY SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>8.1 Pregnancy</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Risk Summary</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="none">There are no adequate studies with ceftaroline fosamil in pregnant women that informed any drug associated risks. Th</content>e background risk of major birth defects and miscarriage for the indicated population is unknown. The background risk of major birth defects is 2 to 4% and of miscarriage is 15 to 20% of clinically recognized pregnancies within the general population.</paragraph>
+                        <paragraph>In developmental toxicity studies conducted in animals, no malformations or other adverse developmental effects were observed in offspring of rats exposed to ceftaroline fosamil at up to 4 times the maximum recommended human dose (MRHD) during the period of organogenesis through lactation. In rabbits exposed to ceftaroline fosamil during organogenesis at levels approximately equal to the MRHD, no drug-induced fetal malformations were observed despite maternal toxicity.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Data</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Animal Data</content>
+                        </paragraph>
+                        <paragraph>Developmental toxicity studies performed with ceftaroline fosamil in rats at IV doses up to 300 mg/kg demonstrated no maternal toxicity and no effects on the fetus. A separate toxicokinetic study showed that ceftaroline exposure in rats (based on AUC) at this dose level was approximately 4 times the exposure in humans given 600 mg every 12 hours. There were no drug-induced malformations in the offspring of rabbits given IV doses of 25, 50, and 100 mg/kg, despite maternal toxicity. Signs of maternal toxicity appeared secondary to the sensitivity of the rabbit gastrointestinal system to broad-spectrum antibacterials and included changes in fecal output in all groups and dose-related reductions in body weight gain and food consumption at &gt; 50 mg/kg; these were associated with an increase in spontaneous abortion at 50 and 100 mg/kg. The highest dose was also associated with maternal moribundity and mortality. An increased incidence of a common rabbit skeletal variation, angulated hyoid alae, was also observed at the maternally toxic doses of 50 and 100 mg/kg. A separate toxicokinetic study showed that ceftaroline exposure in rabbits (based on AUC) was approximately 0.4 times the exposure in humans given 600 mg every 12 hours at 25 mg/kg and 0.7 times the human exposure at 50 mg/kg.</paragraph>
+                        <paragraph>Ceftaroline fosamil did not affect the postnatal development or reproductive performance of the offspring of rats given IV doses up to 450 mg/kg/day. Results from a toxicokinetic study conducted in pregnant rats with doses up to 300 mg/kg suggest that exposure was ≥ 4 times the exposure in humans given 600 mg every 12 hours.</paragraph>
+                     </text>
+                     <effectiveTime value="20210420"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="NURSING_MOTHERS">
+                     <id root="41006fc0-c6ee-242a-328f-b71fa3947d21"/>
+                     <code code="34080-2" displayName="NURSING MOTHERS SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>8.2 Lactation</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Risk Summary</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="none"/>No data is available regarding the presence of ceftaroline in human milk, the effects of ceftaroline on breastfed infants, or the effects on milk production.</paragraph>
+                        <paragraph>
+                           <content styleCode="none"/>The developmental and health benefits of breastfeeding should be considered along with the mother’s clinical need for ceftaroline fosamil and any potential adverse effects on the breastfed child from ceftaroline fosamil or from the underlying maternal condition.<content styleCode="none"/>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20210420"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="PEDIATRIC_USE">
+                     <id root="f4ca965f-6317-e6e3-bea0-baeccec41bb6"/>
+                     <code code="34081-0" displayName="PEDIATRIC USE SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>8.4 Pediatric Use</title>
+                     <text>
+                        <paragraph>The safety and effectiveness of ceftaroline fosamil for injection in the treatment of ABSSSI have been established in pediatric patients (at least 34 weeks gestational age and 12 days postnatal age).   </paragraph>
+                        <paragraph> The safety and effectiveness of ceftaroline fosamil for injection in the treatment of CABP have been established in the age groups 2 months to less than 18 years old.   </paragraph>
+                        <paragraph>Use of ceftaroline fosamil for injection in these age groups is supported by evidence from adequate and well-controlled studies of ceftaroline fosamil for injection in adults with additional pharmacokinetic and safety data in pediatric patients 2 months of age and older with ABSSSI or CABP <content styleCode="italics">[see Clinical Studies (<linkHtml href="#_461868bb-8d92-6ff5-4a6b-9013e9660d4b">14.1</linkHtml> and 14.2)].</content> Use of ceftaroline fosamil for injection in pediatric patients less than 2 months of age was supported by pharmacokinetic and safety data in 11 infants at least 34 weeks gestational age and 12 days postnatal age. In these infants, concentrations of ceftaroline fosamil for injection in the cerebrospinal fluid were not evaluated <content styleCode="italics"> [see Adverse Reactions (<linkHtml href="#_077ef3bd-d2af-f72f-17db-43abfc3b8f0a">6.1</linkHtml>), Clinical Pharmacology (<linkHtml href="#PHARMACOKINETICS">12.3</linkHtml>) and Clinical Studies (<linkHtml href="#_2dabf4db-88f5-4ebf-d01b-8f36efc19007">14.2</linkHtml>)].</content>
+                        </paragraph>
+                        <paragraph>Results from the clinical studies in pediatric patients show that ceftaroline fosamil for injection demonstrated a safety profile that was comparable with treatment of ABSSSI and CABP in adults at the clinical dosages studied.   </paragraph>
+                        <paragraph> Safety and effectiveness of ceftaroline fosamil for injection in pediatric patients less than 34 weeks gestational age and less than 12 days postnatal age for the treatment of ABSSSI have not been established.   </paragraph>
+                        <paragraph> Safety and effectiveness of ceftaroline fosamil for injection in pediatric patients below the age of 2 months for the treatment of CABP have not been established as no data are available.</paragraph>
+                     </text>
+                     <effectiveTime value="20231101"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="GERIATRIC_USE">
+                     <id root="fc468288-564c-b0eb-24e4-87b072d03f0d"/>
+                     <code code="34082-8" displayName="GERIATRIC USE SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>8.5 Geriatric Use</title>
+                     <text>
+                        <paragraph>Of the 1,300 adult patients treated with ceftaroline fosamil for injection in the Phase 3 ABSSSI and CABP trials, 397 (30.5%) were ≥ 65 years of age. The clinical cure rates in the ceftaroline fosamil for injection group (Clinically Evaluable [CE] Population) were similar in patients ≥ 65 years of age compared with patients &lt; 65 years of age in both the ABSSSI and CABP trials.</paragraph>
+                        <paragraph>
+                           <br/>The adverse reaction profiles in patients ≥ 65 years of age and in patients &lt; 65 years of age were similar. The percentage of patients in the ceftaroline fosamil for injection group who had at least one adverse reaction was 52.4% in patients ≥ 65 years of age and 42.8% in patients &lt; 65 years of age for the two indications combined.</paragraph>
+                        <paragraph>Ceftaroline is excreted primarily by the kidney, and the risk of adverse reactions may be greater in patients with impaired renal function. Because elderly patients are more likely to have decreased renal function, care should be taken in dose selection in this age group and it may be useful to monitor renal function. Elderly subjects had greater ceftaroline exposure relative to non-elderly subjects when administered the same single dose of ceftaroline fosamil for injection. However, higher exposure in elderly subjects was mainly attributed to age-related changes in renal function. Dosage adjustment for elderly patients should be based on renal function <content styleCode="italics">[see Dosage and Administration (<linkHtml href="#_8d7fde9d-f68d-a196-bbef-09d686688107">2.2</linkHtml>) and Clinical Pharmacology (<linkHtml href="#PHARMACOKINETICS">12.3</linkHtml>)].</content>
+                        </paragraph>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                     </text>
+                     <effectiveTime value="20231101"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_7f2faaba-dea9-51b6-4acf-0489516a9bb6">
+                     <id root="ba4e4574-c479-af66-bded-08bafd9f9152"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>8.6 Patients with Renal Impairment</title>
+                     <text>
+                        <paragraph>Dosage adjustment is required in adult patients with moderate (CrCl &gt; 30 to ≤ 50 mL/min) or severe (CrCl ≥ 15 to ≤ 30 mL/min) renal impairment and in patients with end-stage renal disease (ESRD – defined as CrCl &lt; 15 mL/min), including patients on hemodialysis (HD). There is insufficient information to recommend a dosage regimen for pediatric patients with CrCl &lt; 50 mL/min <content styleCode="italics">[see Dosage and Administration (<linkHtml href="#_8d7fde9d-f68d-a196-bbef-09d686688107">2.2</linkHtml>) and Clinical Pharmacology (<linkHtml href="#PHARMACOKINETICS">12.3</linkHtml>)]</content>.</paragraph>
+                     </text>
+                     <effectiveTime value="20210420"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="OVERDOSAGE">
+               <id root="74a196fd-3ac3-197d-0da4-563e0c6c57a6"/>
+               <code code="34088-5" displayName="OVERDOSAGE SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>10. OVERDOSAGE</title>
+               <text>
+                  <paragraph>Ceftaroline fosamil for injection overdosage has occurred in patients with renal impairment. Reactions have included neurological sequelae, including encephalopathy <content styleCode="italics"> [see Dosage and Administration (2.3), Warnings and Precautions (<linkHtml href="#_6fcd3cfd-5483-0d7d-2d6a-e6c3517cd929">5.3</linkHtml>) and Adverse Reactions (6.2)]. </content>
+                  </paragraph>
+                  <paragraph>In the event of overdose, ceftaroline fosamil for injection should be discontinued and general supportive treatment given. <br/>Ceftaroline can be removed by hemodialysis. In subjects with ESRD administered 400 mg of ceftaroline fosamil for injection, the mean total recovery of ceftaroline in the dialysate following a 4-hour hemodialysis session started 4 hours after dosing was 76.5 mg (21.6% of the dose). However, no information is available on the use of hemodialysis to treat overdosage <content styleCode="italics">[see Clinical Pharmacology (<linkHtml href="#PHARMACOKINETICS">12.3</linkHtml>)]</content>.</paragraph>
+                  <br/>
+               </text>
+               <effectiveTime value="20250312"/>
+            </section>
+         </component>
+         <component>
+            <section ID="DESCRIPTION">
+               <id root="9ec2568d-71e7-25a6-5238-8b0853361a7b"/>
+               <code code="34089-3" displayName="DESCRIPTION SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>11. DESCRIPTION</title>
+               <text>
+                  <paragraph>Ceftaroline fosamil for injection is a sterile, semi-synthetic, prodrug of the cephalosporin antibacterial class of beta-lactams (β- lactams). Chemically, the prodrug, ceftaroline fosamil monoacetate is (6<content styleCode="italics">R</content>,7<content styleCode="italics">R</content>)-7-{(2<content styleCode="italics">Z</content>)-2-(ethoxyimino)-2-[5-(phosphonoamino)-1,2,4-thiadiazol-3-yl]acetamido}-3-{[4-(1-methylpyridin-1-ium-4- yl)-1,3-thiazol-2-yl]sulfanyl}-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylate monoacetate. Its molecular weight is 744.74. The molecular formula is C<sub>22</sub>H<sub>21</sub>N<sub>8</sub>O<sub>8</sub>PS<sub>4</sub>. CH<sub>3</sub>COOH.</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Figure 1: Chemical structure of ceftaroline fosamil</content>
+                  </paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="MM171454418035"/>
+                  </paragraph>
+                  <paragraph>Ceftaroline fosamil for injection vials contain either 600 mg or 400 mg of anhydrous ceftaroline fosamil (equivalent to 653 mg and 435 mg, respectively, of ceftaroline fosamil monoacetate). The powder for injection is formulated from ceftaroline fosamil monoacetate, a  yellow white to light yellow powder. Each vial of 400 mg of anhydrous ceftaroline fosamil includes inactive ingredient L-arginine 264 mg/vial as buffering agent. Each vial of 600 mg of anhydrous ceftaroline fosamil includes inactive ingredient L-arginine 396 mg/vial as buffering agent. All references to ceftaroline activity are expressed in terms of the prodrug, ceftaroline fosamil. The powder is constituted for IV injection <content styleCode="italics">[see Dosage and Administration (<linkHtml href="#_e766971a-db76-9a4b-f4f5-6e7901daae1c">2.3</linkHtml>)]</content>. The pH of the constituted solution is 4.8 to 6.5.</paragraph>
+               </text>
+               <effectiveTime value="20250312"/>
+            </section>
+         </component>
+         <component>
+            <section ID="CLINICAL_PHARMACOLOGY">
+               <id root="dc510d03-5b4d-cf83-783b-d80a0245d9c1"/>
+               <code code="34090-1" displayName="CLINICAL PHARMACOLOGY SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>12. CLINICAL PHARMACOLOGY</title>
+               <text>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20170120"/>
+               <component>
+                  <section ID="MECHANISM_OF_ACTION">
+                     <id root="55f9518a-9024-2174-1e08-cb478917418b"/>
+                     <code code="43679-0" displayName="MECHANISM OF ACTION SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>12.1 Mechanism of Action</title>
+                     <text>
+                        <paragraph>Ceftaroline is a cephalosporin antibacterial drug <content styleCode="italics">[see Microbiology (<linkHtml href="#_5101546a-8960-43a3-0c6b-8d6f942cab7e">12.4</linkHtml>)]</content>.</paragraph>
+                     </text>
+                     <effectiveTime value="20160825"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="PHARMACODYNAMICS">
+                     <id root="357a6a63-4d54-14e6-6b13-806999fff332"/>
+                     <code code="43681-6" displayName="PHARMACODYNAMICS SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>12.2 Pharmacodynamics</title>
+                     <text>
+                        <paragraph>As with other beta-lactam antimicrobial agents, the time that unbound plasma concentration of ceftaroline exceeds the minimum inhibitory concentration (MIC) of the infecting organism has been shown to best correlate with efficacy in a neutropenic murine thigh infection model with <content styleCode="italics">S. aureus</content> and <content styleCode="italics">S. pneumoniae</content>. <br/>Exposure-response analysis of Phase 2/3 ABSSSI trials supports the recommended dosage regimen of ceftaroline fosamil for injection 600 mg every 12 hours by IV infusion over 1 hour. For Phase 3 CABP trials, an exposure-response relationship could not be identified due to the limited range of ceftaroline exposures in the majority of patients.</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Cardiac Electrophysiology</content>
+                        </paragraph>
+                        <paragraph>In a randomized, positive- and placebo-controlled crossover thorough QTc study, 54 healthy subjects were each administered a single dose of ceftaroline fosamil for injection 1,500 mg, placebo, and a positive control by IV infusion over 1 hour. At the 1,500 mg dose of ceftaroline fosamil for injection, no significant effect on QTc interval was detected at peak plasma concentration or at any other time.</paragraph>
+                        <br/>
+                        <br/>
+                        <br/>
+                     </text>
+                     <effectiveTime value="20231010"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="PHARMACOKINETICS">
+                     <id root="ae850a13-3d36-8d7e-4f78-3e75d26188e0"/>
+                     <code code="43682-4" displayName="PHARMACOKINETICS SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>12.3 Pharmacokinetics</title>
+                     <text>
+                        <paragraph>The mean pharmacokinetic parameters of ceftaroline in healthy adults (n=6) with normal renal function after single and multiple 1-hour IV infusions of 600 mg ceftaroline fosamil administered every 12 hours are summarized in Table 8. Pharmacokinetic parameters were similar for single and multiple dose administration.</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Table 8: Mean (Standard Deviation) Pharmacokinetic Parameters of Ceftaroline IV in Healthy Adults</content>
+                        </paragraph>
+                        <table frame="border" rules="all" width="100%">
+                           <tbody align="center">
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Parameter   </content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Single 600 mg Dose Administered as a 1-Hour Infusion </content>(n=6)<content styleCode="bold">
+                                       <content styleCode="bold"> </content>
+                                    </content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Multiple 600 mg Doses Administered Every 12 Hours as 1-Hour Infusions for 14 Days </content>
+                                    <content styleCode="none">(n=6) </content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">C<sub>max </sub>
+                                       <content styleCode="bold">(mcg/mL)</content>
+                                    </content>
+                                 </td>
+                                 <td> 19.0 (0.71) </td>
+                                 <td> 21.3 (4.10) </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">T<sub>max </sub>
+                                       <content styleCode="bold">(h)</content>
+                                       <sup>a</sup>
+                                    </content>
+                                    <sub/>
+                                 </td>
+                                 <td>
+                                    <content styleCode="none">1</content>.00 <content styleCode="none"> (0.92-1.25) </content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="none">0.92 (0.92-1.08) </content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">AUC (mcg•h/mL)<sup>b</sup>
+                                    </content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="none">56.8 (9.31) </content>
+                                 </td>
+                                 <td> 56.3 (8.90) </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">T<sub>1/2 </sub>
+                                       <content styleCode="bold">(h)</content>
+                                    </content>
+                                    <sub/>
+                                 </td>
+                                 <td> 1.60 (0.38) </td>
+                                 <td> 2.66 (0.40) </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">CL (L/h)</content>
+                                 </td>
+                                 <td> 9.58 (1.85) </td>
+                                 <td> 9.60 (1.40) </td>
+                              </tr>
+                              <tr>
+                                 <td align="left" colspan="3">
+                                    <sup>a</sup> Reported as median (range)<br/>
+                                    <sup>b</sup> AUC<sub>0-∞</sub>, for single-dose administration; AUC<sub>0-tau</sub>, for multiple-dose administration; C<sub>max</sub>, maximum observed concentration; T<sub>max</sub>, time of C<sub>max</sub>; AUC<sub>0-∞</sub>, area under concentration-time curve from time 0 to infinity; AUC<sub>0-tau</sub>, area under concentration-time curve over dosing interval (0-12 hours); T<sub>1/2</sub>, terminal elimination half-life; CL, plasma clearance</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>The C<sub>max</sub> and AUC of ceftaroline increase approximately in proportion to dose within the single dose range of 50 to 1,000 mg. No appreciable accumulation of ceftaroline is observed following multiple IV infusions of 600 mg administered every 12 hours for up to 14 days in healthy adults with normal renal function.</paragraph>
+                        <paragraph>The systemic exposure (AUC), T<sub>1/2</sub>, and clearance of ceftaroline were similar following administration of 600 mg ceftaroline fosamil in a volume of 50 mL to healthy subjects every 8 hours for 5 days as a 5-minute or 60-minute infusion, and the T<sub>max</sub> of ceftaroline occurred about 5 minutes after the end of the ceftaroline fosamil infusion for both infusion durations. The mean (SD) C<sub>max</sub> of ceftaroline was 32.5 (4.82) mcg/mL for the 5-minute infusion duration (n=11) and 17.4 (3.87) mcg/mL for the 60-minute infusion duration (n=12).</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Distribution</content>
+                        </paragraph>
+                        <paragraph>The average binding of ceftaroline to human plasma proteins is approximately 20% and decreases slightly with increasing concentrations over 1 to 50 mcg/mL (14.5 to 28%). The median (range) steady-state volume of distribution of ceftaroline in healthy adult males (n=6) following a single 600 mg IV dose of radiolabeled ceftaroline fosamil was 20.3 L (18.3 to 21.6 L), similar to extracellular fluid volume.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Elimination</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Metabolism </content>
+                        </paragraph>
+                        <paragraph>Ceftaroline fosamil is the water-soluble prodrug of the bioactive ceftaroline. Ceftaroline fosamil is converted into bioactive ceftaroline in plasma by a phosphatase enzyme and concentrations of the prodrug are measurable in plasma primarily during IV infusion. Hydrolysis of the beta-lactam ring of ceftaroline occurs to form the microbiologically inactive, open-ring metabolite ceftaroline M-1. The mean (SD) plasma ceftaroline M-1 to ceftaroline AUC<sub>0-∞ </sub>ratio following a single 600 mg IV infusion of ceftaroline fosamil in healthy adults (n=6) with normal renal function is 28% (3.1%).</paragraph>
+                        <paragraph>When incubated with pooled human liver microsomes, ceftaroline was metabolically stable (&lt; 12% metabolic turnover), indicating that ceftaroline is not a substrate for hepatic CYP450 enzymes.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Excretion</content>
+                        </paragraph>
+                        <paragraph>Ceftaroline and its metabolites are primarily eliminated by the kidneys. Following administration of a single 600 mg IV dose of radiolabeled ceftaroline fosamil to healthy male adults (n=6), approximately 88% of radioactivity was recovered in urine and 6% in feces within 48 hours. Of the radioactivity recovered in urine approximately 64% was excreted as ceftaroline and approximately 2% as ceftaroline M-1. The mean (SD) renal clearance of ceftaroline was 5.56 (0.20) L/h, suggesting that ceftaroline is predominantly eliminated by glomerular filtration.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Specific Populations</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Patients with Renal Impairment </content>
+                        </paragraph>
+                        <paragraph>Following administration of a single 600 mg IV dose of ceftaroline fosamil for injection, the geometric mean AUC<sub>0-∞</sub> of ceftaroline in subjects with mild (CrCl &gt; 50 to ≤ 80 mL/min, n=6) or moderate (CrCl &gt; 30 to ≤ 50 mL/min, n=6) renal impairment was 19% and 52% higher, respectively, compared to healthy subjects with normal renal function (CrCl &gt; 80 mL/min, n=6). Following administration of a single 400 mg IV dose of ceftaroline fosamil for injection, the geometric mean AUC<sub>0-∞</sub> of ceftaroline in subjects with severe (CrCl ≥ 15 to ≤30 mL/min, n=6) renal impairment was 115% higher compared to healthy subjects with normal renal function (CrCl &gt; 80 mL/min, n=6). Dosage adjustment is recommended in patients with moderate and severe renal impairment <content styleCode="italics">[see Dosage and Administration (<linkHtml href="#_8d7fde9d-f68d-a196-bbef-09d686688107">2.2</linkHtml>)]</content>.</paragraph>
+                        <paragraph>A single 400 mg dose of ceftaroline fosamil for injection was administered to subjects with ESRD (n=6) either 4 hours prior to or 1 hour after hemodialysis (HD). The geometric mean ceftaroline AUC<sub>0-∞</sub> following the post-HD infusion was 167% higher compared to healthy subjects with normal renal function (CrCl &gt; 80 mL/min, n=6). The mean recovery of ceftaroline in the dialysate following a 4-hour HD session was 76.5 mg, or 21.6% of the administered dose. Dosage adjustment is recommended in patients with ESRD (defined as CrCL &lt; 15 mL/min), including patients on HD <content styleCode="italics">[see Dosage and Administration (<linkHtml href="#_8d7fde9d-f68d-a196-bbef-09d686688107">2.2</linkHtml>)]</content>.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Patients with Hepatic Impairment </content>
+                        </paragraph>
+                        <paragraph>The pharmacokinetics of ceftaroline in patients with hepatic impairment have not been established. As ceftaroline does not appear to undergo significant hepatic metabolism, the systemic clearance of ceftaroline is not expected to be significantly affected by hepatic impairment.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Geriatric Patients </content>
+                        </paragraph>
+                        <paragraph>Following administration of a single 600 mg IV dose of ceftaroline fosamil for injection to healthy elderly subjects (≥ 65 years of age, n=16), the geometric mean AUC<sub>0-∞</sub> of ceftaroline was ~33% higher compared to healthy young adult subjects (18 to 45 years of age, n=16). The difference in AUC<sub>0-∞</sub> was mainly attributable to age-related changes in renal function. Dosage adjustment for ceftaroline fosamil for injection in elderly patients should be based on renal function <content styleCode="italics">[see Dosage and Administration (<linkHtml href="#_8d7fde9d-f68d-a196-bbef-09d686688107">2.2</linkHtml>)]</content>.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Pediatric Patients</content>
+                        </paragraph>
+                        <paragraph>The pharmacokinetics of ceftaroline were evaluated in adolescent patients (ages 12 to 17, n=7) with normal renal function following administration of a single 8 mg/kg IV dose of ceftaroline fosamil for injection (or 600 mg for subjects weighing &gt; 75 kg). The mean plasma clearance and terminal phase volume of distribution for ceftaroline in adolescent subjects were similar to healthy adults (n=6) with normal renal function in a separate study following administration of a single 600 mg IV dose. However, the mean C<sub>max</sub> and AUC<sub>0-∞</sub> for ceftaroline in adolescent subjects who received a single 8 mg/kg dose were 10% and 23% less than in healthy adult subjects who received a single 600 mg IV dose. The population pharmacokinetic analyses demonstrated that the pharmacokinetics of ceftaroline in pediatric patients from 2 months to &lt; 18 years of age were similar to those in adult patients after accounting for weight and maturational changes. No clinically significant differences in ceftaroline AUC were predicted in patients from 12 days to 2 months postnatal age and with ≥34 weeks of gestational age compared to adults and pediatric patients 2 months of age and older when given the approved recommended dosage for each patient population<content styleCode="italics"> [see Adverse Reactions (<linkHtml href="#ADVERSE_REACTIONS">6</linkHtml>), Use in Specific Populations (8.4) and Clinical Studies (14)].</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Gender</content>
+                        </paragraph>
+                        <paragraph>Following administration of a single 600 mg IV dose of ceftaroline fosamil for injection to healthy elderly males (n=10) and females (n=6) and healthy young adult males (n=6) and females (n=10), the mean C<sub>max</sub> and AUC<sub>0-∞</sub> for ceftaroline were similar between males and females, although there was a trend for higher C<sub>max </sub>(17%) and AUC<sub>0-∞</sub> (6 to 15%) in female subjects. Population pharmacokinetic analysis did not identify any significant differences in ceftaroline AUC<sub>0-tau</sub> based on gender in Phase 2/3 patients with ABSSSI or CABP. No dose adjustment is recommended based on gender.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Race</content>
+                        </paragraph>
+                        <paragraph>A population pharmacokinetic analysis was performed to evaluate the impact of race on the pharmacokinetics of ceftaroline using data from Phase 2/3 adult ABSSSI and CABP trials. No significant differences in ceftaroline AUC<sub>0-tau</sub> was observed across White (n=35), Hispanic (n=34), and Black (n=17) race groups for ABSSSI patients. Patients enrolled in CABP trials were predominantly categorized as White (n=115); thus there were too few patients of other races to draw any conclusions. No dosage adjustment is recommended based on race. </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Drug Interaction</content>
+                           <content styleCode="underline">s Studies</content>
+                        </paragraph>
+                        <paragraph> No clinical drug-drug interaction studies have been conducted with ceftaroline fosamil for injection. There is minimal potential for drug-drug interactions between ceftaroline fosamil for injection and CYP450 substrates, inhibitors, or inducers; drugs known to undergo active renal secretion; and drugs that may alter renal blood flow.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">In vitro</content> studies in human liver microsomes indicate that ceftaroline does not inhibit the major cytochrome P450 isoenzymes CYP1A1, CYP1A2, CYP2A6, CYP2B6, CYP2C8, CYP2C9, CYP2C19, CYP2D6, CYP2E1 and CYP3A4. <content styleCode="italics">In vitro</content> studies in human hepatocytes also demonstrate that ceftaroline and its inactive open-ring metabolite are not inducers of CYP1A2, CYP2B6, CYP2C8, CYP2C9, CYP2C19, or CYP3A4/5. Therefore, ceftaroline fosamil for injection is not expected to inhibit or induce the clearance of drugs that are metabolized by these metabolic pathways in a clinically relevant manner.</paragraph>
+                        <paragraph>Population pharmacokinetic analysis did not identify any clinically relevant differences in ceftaroline exposure (C<sub>max</sub> and AUC<sub>0-tau</sub>) in Phase 2/3 patients with ABSSSI or CABP who were taking concomitant medications that are known inhibitors, inducers, or substrates of the cytochrome P450 system; anionic or cationic drugs known to undergo active renal secretion; and vasodilator or vasoconstrictor drugs that may alter renal blood flow.</paragraph>
+                        <paragraph/>
+                     </text>
+                     <effectiveTime value="20231101"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_5101546a-8960-43a3-0c6b-8d6f942cab7e">
+                     <id root="5cacf2c6-0e36-eab0-8574-c181d0eb8467"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>12.4 Microbiology</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Mechanism of Action</content>
+                        </paragraph>
+                        <paragraph>Ceftaroline is a cephalosporin antibacterial drug with <content styleCode="italics">in vitro</content> activity against Gram-positive and -negative bacteria. The bactericidal action of ceftaroline is mediated through binding to essential penicillin-binding proteins (PBPs). Ceftaroline is bactericidal against <content styleCode="italics">S. aureus</content> due to its affinity for PBP2a and against <content styleCode="italics">Streptococcus pneumoniae</content> due to its affinity for PBP2x.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Resistance </content>
+                        </paragraph>
+                        <paragraph>Ceftaroline is not active against Gram-negative bacteria producing extended spectrum beta-lactamases (ESBLs) from the TEM, SHV or CTX-M families, serine carbapenemases (such as KPC), class B metallo-beta-lactamases, or class C (AmpC cephalosporinases). Although cross-resistance may occur, some isolates resistant to other cephalosporins may be susceptible to ceftaroline.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Interaction with Other Antimicrobials</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">In vitro</content> studies have not demonstrated any antagonism between ceftaroline or other commonly used antibacterial agents (e.g., vancomycin, linezolid, daptomycin, levofloxacin, azithromycin, amikacin, aztreonam, tigecycline, and meropenem). </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Antimicrobial Activity</content>
+                        </paragraph>
+                        <paragraph>Ceftaroline has been shown to be active against most of the following bacteria, both <content styleCode="italics">in vitro</content> and in clinical infections <content styleCode="italics">[see Indications and Usage (<linkHtml href="#INDICATIONS_AND_USAGE">1</linkHtml>)]</content>.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Skin Infections</content>
+                        </paragraph>
+                        <paragraph>Gram-positive Bacteria <br/>
+                           <content styleCode="italics">Staphylococcus aureus</content> (including methicillin-susceptible and -resistant isolates) <br/>
+                           <content styleCode="italics">Streptococcus pyogenes <br/>Streptococcus agalactiae </content>
+                           <br/>
+                        </paragraph>
+                        <paragraph>Gram-negative Bacteria <br/>
+                           <content styleCode="italics">Escherichia coli </content>
+                           <br/>
+                           <content styleCode="italics">Klebsiella pneumoniae <br/>
+                           </content>
+                           <content styleCode="italics">Klebsiella oxytoca</content>
+                           <br/>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Community-Acquired Bacterial Pneumonia (CABP) </content>
+                        </paragraph>
+                        <paragraph>Gram-positive Bacteria <content styleCode="italics">
+                              <br/>Streptococcus pneumoniae <br/>Staphylococcus aureus </content>(methicillin-susceptible isolates only)</paragraph>
+                        <paragraph>Gram-negative Bacteria <br/>
+                           <content styleCode="italics">Haemophilus influenzae <br/>Klebsiella pneumoniae <br/>Klebsiella oxytoca <br/>Escherichia coli</content>
+                        </paragraph>
+                        <paragraph>The following <content styleCode="italics">in vitro</content> data are available, but their clinical significance is unknown. At least 90 percent of the following bacteria exhibit an <content styleCode="italics">in vitro</content> minimum inhibitory concentration (MIC) less than or equal to the susceptible breakpoint for ceftaroline against isolates of similar genus or organism group. However, the efficacy of ceftaroline in treating clinical infections due to these bacteria has not been established in adequate and well-controlled clinical trials.</paragraph>
+                        <paragraph>
+                           <br/>Gram-positive Bacteria<br/>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Streptococcus dysgalactiae</content>
+                        </paragraph>
+                        <paragraph>Gram-negative Bacteria </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Citrobacter koseri <br/>Citrobacter freundii <br/>Enterobacter cloacae <br/>Enterobacter aerogenes <br/>Moraxella catarrhalis <br/>Morganella morganii <br/>Proteus mirabilis <br/>Haemophilus parainfluenzae</content>
+                        </paragraph>
+                        <paragraph> Susceptibility Test Methods</paragraph>
+                        <paragraph>For specific information regarding susceptibility test interpretive criteria and associated test methods and quality control standards recognized by FDA for this drug, please see: https://www.fda.gov/STIC</paragraph>
+                        <paragraph>
+                           <content styleCode="italics"/>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20231015"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="NONCLINICAL_TOXICOLOGY">
+               <id root="ab9afd27-496b-d62d-b776-f8313b2b9448"/>
+               <code code="43680-8" displayName="NONCLINICAL TOXICOLOGY SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>13. NONCLINICAL TOXICOLOGY</title>
+               <text>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20170120"/>
+               <component>
+                  <section ID="CARCINOGENESIS_AND_MUTAGENESIS_AND_IMPAIRMENT_OF_FERTILITY">
+                     <id root="6e1db2d2-f4fb-7509-62cd-5d82e3aa82de"/>
+                     <code code="34083-6" displayName="CARCINOGENESIS &amp; MUTAGENESIS &amp; IMPAIRMENT OF FERTILITY SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility</title>
+                     <text>
+                        <paragraph>Long-term carcinogenicity studies have not been conducted with ceftaroline. Ceftaroline fosamil did not show evidence of mutagenic activity in <content styleCode="italics">in vitro</content> tests that included a bacterial reverse mutation assay and the mouse lymphoma assay. Ceftaroline was not mutagenic in an <content styleCode="italics">in vitro</content> mammalian cell assay. <content styleCode="italics">In vivo</content>, ceftaroline fosamil did not induce unscheduled DNA synthesis in rat hepatocytes and did not induce the formation of micronucleated erythrocytes in mouse or rat bone marrow. Both ceftaroline fosamil and ceftaroline were clastogenic in the absence of metabolic activation in an <content styleCode="italics">in vitro</content> chromosomal aberration assays, but not in the presence of metabolic activation.</paragraph>
+                        <paragraph>IV injection of ceftaroline fosamil had no adverse effects on fertility of male and female rats given up to 450 mg/kg. This is approximately 4-fold higher than the maximum recommended human dose based on body surface area.</paragraph>
+                     </text>
+                     <effectiveTime value="20160825"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="CLINICAL_STUDIES">
+               <id root="1cd0d78e-5e6e-f324-2eab-d335d5d4b39f"/>
+               <code code="34092-7" displayName="CLINICAL STUDIES SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>14. CLINICAL <content styleCode="none">STUDIES</content>
+               </title>
+               <text>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20250312"/>
+               <component>
+                  <section ID="_461868bb-8d92-6ff5-4a6b-9013e9660d4b">
+                     <id root="503fb095-59c9-5e8c-875a-7c34283d42b7"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>14.1 Acute Bacterial Skin and Skin Structure Infections<content styleCode="none"> (ABSSSI)</content>
+                     </title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Adult Patients</content>
+                        </paragraph>
+                        <paragraph>A total of 1,396 adults with clinically documented complicated skin and skin structure infection were enrolled in two identical randomized, multi-center, multinational, double-blind, non-inferiority trials (Trials 1 and 2) comparing ceftaroline fosamil for injection (600 mg administered IV over 1 hour every 12 hours) to vancomycin plus aztreonam (1 g vancomycin administered IV over 1 hour followed by 1 g aztreonam administered IV over 1 hour every 12 hours). Treatment duration was 5 to 14 days. A switch to oral therapy was not allowed. The Modified Intent-to-Treat (MITT) population included all patients who received any amount of study drug according to their randomized treatment group. The Clinically Evaluable (CE) population included patients in the MITT population who demonstrated sufficient adherence to the protocol. <br/>To evaluate the treatment effect of ceftaroline, an analysis was conducted in 797 patients with ABSSSI (such as deep/extensive cellulitis or a wound infection [surgical or traumatic]) for whom the treatment effect of antibacterials may be supported by historical evidence. This analysis evaluated responder rates based on achieving both cessation of lesion spread and absence of fever on Study Day 3 in the following subgroup of patients: <br/>Patients with lesion size ≥ 75 cm<sup>2</sup> and having one of the following infection types:</paragraph>
+                        <list>
+                           <item>Major abscess with ≥ 5 cm of surrounding erythema</item>
+                           <item>Wound infection</item>
+                           <item>Deep/extensive cellulitis </item>
+                        </list>
+                        <paragraph>The results of this analysis are shown in Table 9.<linkHtml href="#_7ec15943-a1fb-ede1-f45e-dc46aa112741"/>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Table 9: Clinical Responders at Study Day 3 from Two Adult Phase 3 ABSSSI Trials</content>
+                        </paragraph>
+                        <table frame="border" rules="all" width="120%">
+                           <tbody>
+                              <tr>
+                                 <td> </td>
+                                 <td>
+                                    <content styleCode="bold">Ceftaroline Fosamil for Injection </content>
+                                    <br/>
+                                    <content styleCode="bold">n/N (%)</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Vancomycin/ Aztreonam </content>
+                                    <br/>
+                                    <content styleCode="bold">n/N (%)</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Treatment Difference (2-sided 95% CI)</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">ABSSSI Trial 1</content>
+                                 </td>
+                                 <td>148/200 (74.0)</td>
+                                 <td>135/209 (64.6)</td>
+                                 <td>9.4 (0.4, 18.2)</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">ABSSSI Trial 2</content>
+                                 </td>
+                                 <td>148/200 (74.0)</td>
+                                 <td>128/188 (68.1)</td>
+                                 <td>5.9 (-3.1, 14.9)</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>The protocol-specified analyses included clinical cure rates at the Test of Cure (TOC) (visit 8 to 15 days after the end of therapy) in the co-primary CE and MITT populations (Table 10) and clinical cure rates at TOC by pathogen in the Microbiologically Evaluable (ME) population (Table 11). However, there are insufficient historical data to establish the magnitude of drug effect for antibacterial drugs compared with placebo at a TOC time point. Therefore, comparisons of ceftaroline fosamil for injection to vancomycin plus aztreonam based on clinical response rates at TOC cannot be utilized to establish non-inferiority.<linkHtml href="#_7ec15943-a1fb-ede1-f45e-dc46aa112741"/>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Table 10: Clinical Cure Rates at TOC from Two Adult Phase 3 ABSSSI Trials</content>
+                        </paragraph>
+                        <table frame="box" rules="all">
+                           <tbody align="center">
+                              <tr>
+                                 <td>   </td>
+                                 <td>
+                                    <content styleCode="bold">Ceftaroline Fosamil for Injection</content>
+                                    <content styleCode="bold">n/N</content>
+                                    <content styleCode="bold"> </content>
+                                    <content styleCode="bold">(%)</content>
+                                    <content styleCode="bold"/>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Vancomycin/ Aztreonam</content>
+                                    <content styleCode="bold">n/N (%)</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Treatment</content>
+                                    <content styleCode="bold">Difference</content>
+                                    <content styleCode="bold">(2-sided 95% CI)</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Trial 1</content>
+                                 </td>
+                                 <td>   </td>
+                                 <td>   </td>
+                                 <td>   </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">CE</content>
+                                 </td>
+                                 <td> 288/316 (91.1) </td>
+                                 <td> 280/300 (93.3) </td>
+                                 <td> -2.2 (-6.6, 2.1) </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">MITT</content>
+                                 </td>
+                                 <td> 304/351 (86.6) </td>
+                                 <td> 297/347 (85.6) </td>
+                                 <td> 1.0 (-4.2, 6.2) </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Trial 2</content>
+                                 </td>
+                                 <td>   </td>
+                                 <td>   </td>
+                                 <td>   </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">CE</content>
+                                 </td>
+                                 <td> 271/294 (92.2) </td>
+                                 <td> 269/292 (92.1) </td>
+                                 <td> 0.1 (-4.4., 4.5) </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">MITT</content>
+                                 </td>
+                                 <td> 291/342 (85.1) </td>
+                                 <td> 289/338 (85.5) </td>
+                                 <td> -0.4 (-5.8, 5.0) </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>
+                           <content styleCode="bold">Table 11: Clinical Cure Rates at TOC by Pathogen from Two Adult Integrated Phase 3 ABSSSI Trials</content>
+                        </paragraph>
+                        <table frame="box" rules="all">
+                           <tbody>
+                              <tr>
+                                 <td>   </td>
+                                 <td>
+                                    <content styleCode="bold">Ceftaroline Fosamil for Injection</content>
+                                    <content styleCode="bold">n/N</content>
+                                    <content styleCode="bold">(%)</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Vancomycin/Aztreonam </content>
+                                    <content styleCode="bold">n/N (%)</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Gram-positive:</content> MSSA (methicillin-susceptible)  MRSA (methicillin-resistant) </td>
+                                 <td>
+                                    <content styleCode="bold"> </content> 212/228 (93.0%) 142/152 (93.4%) </td>
+                                 <td>
+                                    <content styleCode="bold"> </content> 225/238 (94.5%) 115/122 (94.3%) </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="italics"> Streptococcus pyogenes</content>
+                                 </td>
+                                 <td> 56/56 (100%) </td>
+                                 <td> 56/58 (96.6%) </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="italics"> Streptococcus agalactiae</content>
+                                 </td>
+                                 <td> 21/22 (95.5%) </td>
+                                 <td> 18/18 (100%) </td>
+                              </tr>
+                              <tr>
+                                 <td>   </td>
+                                 <td>   </td>
+                                 <td>   </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Gram-negative:</content> Escherichia coli </td>
+                                 <td>
+                                    <content styleCode="bold"> </content> 20/21 (95.2%) </td>
+                                 <td>
+                                    <content styleCode="bold"> </content> 19/21 (90.5%) </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="italics"> Klebsiella pneumoniae</content>
+                                 </td>
+                                 <td> 17/18 (94.4%) </td>
+                                 <td> 13/14 (92.9%) </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="italics"> Klebsiella oxytoca</content>
+                                 </td>
+                                 <td> 10/12 (83.3%) </td>
+                                 <td> 6/6 (100%) </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>Of the 693 patients in the MITT population in the ceftaroline fosamil for injection arm in the two ABSSSI trials, 20 patients had baseline <content styleCode="italics">S. aureus</content> bacteremia (nine MRSA and eleven MSSA). Thirteen of these twenty patients (65%) were clinical responders for ABSSSI at Study Day 3 and 18/20 (90%) were considered clinical success for ABSSSI at TOC.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Pediatric Patients</content>
+                        </paragraph>
+                        <paragraph>The ABSSSI pediatric trial was a randomized, parallel-group, active controlled trial in pediatric patients 2 months to &lt; 18 years of age.</paragraph>
+                        <paragraph>A total of 163 children from 2 months to &lt; 18 years of age with clinically documented ABSSSI were enrolled in a randomized, multi-center, multinational, parallel group, active controlled trial comparing ceftaroline fosamil for injection to vancomycin or cefazolin (each with optional aztreonam). Treatment duration was 5 to 14 days. A switch to oral therapy with either cephalexin, clindamycin, or linezolid after Study Day 3 was allowed. The Modified Intent-to-Treat (MITT) population included all patients who received any amount of study drug according to their randomized treatment group.</paragraph>
+                        <paragraph>The primary objective was to evaluate the safety and tolerability of ceftaroline fosamil for injection. The study was not powered for comparative inferential efficacy analysis, and no efficacy endpoint was identified as primary.</paragraph>
+                        <paragraph>To evaluate the treatment effect of ceftaroline fosamil for injection, an analysis was conducted in 159 patients with ABSSSI in the MITT population. This analysis evaluated responder rates based on achieving both cessation of lesion spread and absence of fever on Study Day 3.</paragraph>
+                        <paragraph>The clinical response at Study Day 3 was 80.4% (86/107) for the ceftaroline group and 75% (39/52) for the comparator group, with a treatment difference of 5.4% (95% CI of –7.8, 20.3).</paragraph>
+                        <paragraph>Clinical cure rates at test of cure visit (8 to 15 days after the end of therapy) for the ABSSSI pediatric trial were 94.4% (101/107) for ceftaroline fosamil for injection and 86.5% (45/52) for the comparator, with a treatment difference of 7.9 (95% CI –1.2, 20.2). Indeterminate outcomes occurred at rates of 5.6% (6/107) for the ceftaroline group and 11.5% (6/52) for the comparator group, and rates of clinical failure were 0% (0/107) for the ceftaroline group and 1.9% (1/52) for the comparator group.</paragraph>
+                        <paragraph> The safety and effectiveness of ceftaroline fosamil for injection were evaluated in a single study that enrolled 11 pediatric patients with a gestational age of ≥34 weeks and a postnatal age of 12 days to less than 2 months of age with known or suspected infections. The majority of patients (8 of 11) received 6 mg/kg ceftaroline fosamil for injection every 8 hours as an intravenous (IV) infusion over 60 minutes. </paragraph>
+                        <paragraph/>
+                        <paragraph/>
+                     </text>
+                     <effectiveTime value="20250612"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="_077ef3bd-d2af-f72f-17db-43abfc3b8f0a">
+                     <id root="0edd1341-266a-4727-853d-c9b943cbb59b"/>
+                     <code code="42229-5" displayName="SPL UNCLASSIFIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+                     <title>14.2 Community-Acquired Bacterial Pneumonia <content styleCode="none">(CABP)</content>
+                     </title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Adult Patients</content>
+                        </paragraph>
+                        <paragraph>A total of 1,231 adults with a diagnosis of CABP were enrolled in two randomized, multi-center, multinational, double-blind, non-inferiority trials (Trials 1 and 2) comparing ceftaroline fosamil for injection (600 mg administered IV over 1 hour every 12 hours) with ceftriaxone (1 g ceftriaxone administered IV over 30 minutes every 24 hours). In both treatment groups of CABP Trial 1, two doses of oral clarithromycin (500 mg every 12 hours), were administered as adjunctive therapy starting on Study Day 1. No adjunctive macrolide therapy was used in CABP Trial 2. Patients with known or suspected MRSA were excluded from both trials. Patients with new or progressive pulmonary infiltrate(s) on chest radiography and signs and symptoms consistent with CABP with the need for hospitalization and IV therapy were enrolled in the trials. Treatment duration was 5 to 7 days. A switch to oral therapy was not allowed. Among all subjects who received any amount of study drug in the two CABP trials, the 30-day all-cause mortality rates were 11/609 (1.8%) for the ceftaroline fosamil for injection group vs. 12/610 (2%) for the ceftriaxone group, and the difference in mortality rates was not statistically significant.</paragraph>
+                        <paragraph>To evaluate the treatment effect of ceftaroline, an analysis was conducted in CABP patients for whom the treatment effect of antibacterials may be supported by historical evidence. The analysis endpoint required subjects to meet sign and symptom criteria at Day 4 of therapy: a responder had to both (a) be in stable condition, based on temperature, heart rate, respiratory rate, blood pressure, oxygen saturation, and mental status; <sup/>(b) show improvement from baseline on at least one symptom of cough, dyspnea, pleuritic chest pain, or sputum production, while not worsening on any of these four symptoms. The analysis used a microbiological intent-to-treat population (mITT population) containing only subjects with a confirmed bacterial pathogen at baseline. Results for this analysis are presented in Table 12.</paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Table 12: Response Rates at Study Day 4 (72 to 96 hours) from Two Adult Phase 3 CABP Trials</content>
+                        </paragraph>
+                        <table frame="border" rules="all" width="120%">
+                           <tbody>
+                              <tr>
+                                 <td> </td>
+                                 <td>
+                                    <content styleCode="bold">Ceftaroline Fosamil <content styleCode="bold">for Injection</content>
+                                    </content>
+                                    <br/>
+                                    <content styleCode="bold">n/N (%)</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Ceftriaxone n/N (%)</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Treatment Difference (2-sided 95% CI)</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">CABP Trial 1</content>
+                                 </td>
+                                 <td>48/69 (69.6%)</td>
+                                 <td>42/72 (58.3%)</td>
+                                 <td>11.2 (-4.6,26.5)</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">CABP Trial 2</content>
+                                 </td>
+                                 <td>58/84 (69.0%)</td>
+                                 <td>51/83 (61.4%)</td>
+                                 <td>7.6 (-6.8,21.8)</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>The protocol-specified analyses included clinical cure rates at the TOC (8 to 15 days after the end of therapy) in the co-primary Modified Intent-to-Treat Efficacy (MITTE) and CE populations (Table 13) and clinical cure rates at TOC by pathogen in the Microbiologically Evaluable (ME) population (Table 14). However, there are insufficient historical data to establish the magnitude of drug effect for antibacterials drugs compared with placebo at a TOC time point. Therefore, comparisons of ceftaroline fosamil for injection to ceftriaxone based on clinical response rates at TOC cannot be utilized to establish non-inferiority. Neither trial established that ceftaroline fosamil for injection was statistically superior to ceftriaxone in terms of clinical response rates. The MITTE population included all patients who received any amount of study drug according to their randomized treatment group and were in PORT (Pneumonia Outcomes Research Team) Risk Class III or IV. The CE population included patients in the MITTE population who demonstrated sufficient adherence to the protocol.<linkHtml href="#_7ec15943-a1fb-ede1-f45e-dc46aa112741"/>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="bold">Table 13: Clinical Cure Rates at TOC from Two Adult Phase 3 CABP Trials</content>
+                        </paragraph>
+                        <table frame="border" rules="all" width="120%">
+                           <tbody>
+                              <tr>
+                                 <td> </td>
+                                 <td>
+                                    <content styleCode="bold">Ceftaroline Fosamil <content styleCode="bold">for Injection </content>
+                                    </content>
+                                    <br/>
+                                    <content styleCode="bold">n/N (%)</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Ceftriaxone n/N (%)</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Treatment Difference (2-sided 95% CI)</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">CABP Trial 1</content>
+                                 </td>
+                                 <td> </td>
+                                 <td> </td>
+                                 <td> </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">CE</content>
+                                 </td>
+                                 <td>194/224 (86.6%)</td>
+                                 <td>183/234 (78.2%)</td>
+                                 <td>8.4 (1.4, 15.4)</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">MITTE</content>
+                                 </td>
+                                 <td>244/291 (83.8%)</td>
+                                 <td>233/300 (77.7%)</td>
+                                 <td>6.2 (-0.2, 12.6)</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">CABP Trial 2</content>
+                                 </td>
+                                 <td> </td>
+                                 <td> </td>
+                                 <td> </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">CE</content>
+                                 </td>
+                                 <td>191/232 (82.3%)</td>
+                                 <td>165/214 (77.1%)</td>
+                                 <td>5.2 (-2.2, 12.8)</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">MITTE</content>
+                                 </td>
+                                 <td>231/284 (81.3%)</td>
+                                 <td>203/269 (75.5%)</td>
+                                 <td>5.9 (-1.0, 12.8)</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>
+                           <content styleCode="bold">Table 14: Clinical Cure Rates at TOC by Pathogen from Two Adult Integrated Phase 3 CABP Trials</content>
+                        </paragraph>
+                        <table frame="box" rules="all" width="65%">
+                           <tbody>
+                              <tr>
+                                 <td> </td>
+                                 <td>
+                                    <content styleCode="bold">Ceftaroline Fosamil <content styleCode="bold">for Injection </content>
+                                    </content>
+                                    <br/>
+                                    <content styleCode="bold">n/N (%)</content>
+                                 </td>
+                                 <td>
+                                    <content styleCode="bold">Ceftriaxone n/N (%)</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Gram-positive: </content>
+                                    <br/>
+                                    <content styleCode="italics">Streptococcus pneumoniae</content>
+                                 </td>
+                                 <td>
+                                    <br/>54/63 (85.7%)</td>
+                                 <td>
+                                    <br/>41/59 (69.5%)</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="italics">Staphylococcus aureus</content> (methicillin-susceptible isolates only) </td>
+                                 <td>18/25 (72.0%)</td>
+                                 <td>14/25 (56.0%)</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="bold">Gram-negative: </content>
+                                 </td>
+                                 <td/>
+                                 <td/>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="italics">Haemophilus influenzae</content>
+                                 </td>
+                                 <td>15/18 (83.3%)</td>
+                                 <td>17/20 (85.0%)</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="italics">Klebsiella pneumoniae</content>
+                                 </td>
+                                 <td>12/12 (100%)</td>
+                                 <td>10/12 (83.3%)</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="italics">Klebsiella oxytoca</content>
+                                 </td>
+                                 <td>5/6 (83.3%)</td>
+                                 <td>7/8 (87.5%)</td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <content styleCode="italics">Escherichia coli</content>
+                                 </td>
+                                 <td>10/12 (83.3%)</td>
+                                 <td>9/12 (75.0%)</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>
+                           <content styleCode="underline">Pediatric Patients</content>
+                        </paragraph>
+                        <paragraph>The CABP pediatric trial was a randomized, parallel-group, active controlled trial in pediatric patients 2 months to &lt; 18 years of age.</paragraph>
+                        <paragraph>A total of 161 children with a diagnosis of CABP were enrolled in a randomized, multi-center, multinational, active controlled trial comparing ceftaroline fosamil for injection with ceftriaxone. Patients with new or progressive pulmonary infiltrate(s) on chest radiography and signs and symptoms consistent with CABP including acute onset or worsening symptoms of cough, tachypnea, sputum production, grunting, chest pain, cyanosis, or increased work of breathing with the need for hospitalization and IV therapy were enrolled in the trial. Treatment duration was 5 to 14 days. A switch to oral therapy with amoxicillin clavulanate was allowed on Study Day 4.</paragraph>
+                        <paragraph>The primary objective was to evaluate the safety and tolerability of ceftaroline fosamil for injection. The study was not powered for comparative inferential efficacy analysis, and no efficacy endpoint was identified as primary.</paragraph>
+                        <paragraph>To evaluate the treatment effect of ceftaroline fosamil for injection, an analysis was conducted in 143 patients with CABP in the MITT population. This analysis evaluated responder rates at Study Day 4 based on achieving improvement in at least 2 out of 7 symptoms (cough, dyspnea, chest pain, sputum production, chills, feeling of warmth / feverish and exercise intolerance or lethargy) and have worsening in none of these symptoms.</paragraph>
+                        <paragraph>The clinical response at Study Day 4 was 69.2% (74/107) for ceftaroline fosamil for injection and 66.7% (24/36) for the comparator, with a treatment difference of 2.5% (95% CI of –13.9, 20.9).</paragraph>
+                        <paragraph> Clinical cure rates at test of cure were 87.9% (94/107) for ceftaroline fosamil for injection and 88.9% (32/36) for the comparator, with a treatment difference of -1 (95% CI –11.5, 14.1).</paragraph>
+                        <paragraph/>
+                        <paragraph/>
+                     </text>
+                     <effectiveTime value="20231101"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="HOW_SUPPLIED">
+               <id root="c52d5e20-ab5c-e330-2a10-68507379b344"/>
+               <code code="34069-5" displayName="HOW SUPPLIED SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>16. HOW SUPPLIED/STORAGE AND HANDLING</title>
+               <text>
+                  <paragraph>Ceftaroline Fosamil for Injection is supplied in single-dose, clear glass vials containing:</paragraph>
+                  <list>
+                     <item>400 mg - individual vial (NDC 60505-6124-0) and carton containing 10 vials (NDC 60505-6124-1) </item>
+                     <item>600 mg - individual vial (NDC 60505-6125-0) and carton containing 10 vials (NDC 60505-6125-1) </item>
+                  </list>
+                  <paragraph>Ceftaroline fosamil for injection vials (unreconstituted) should be stored at 25°C (77°F); excursions permitted to 15ºC to 30ºC (59°F to 86°F) [See USP Controlled Room Temperature].</paragraph>
+               </text>
+               <effectiveTime value="20211230"/>
+            </section>
+         </component>
+         <component>
+            <section ID="INFORMATION_FOR_PATIENTS">
+               <id root="6d8086a9-9bc7-76c6-7fc4-3c85e36d2c63"/>
+               <code code="34076-0" displayName="INFORMATION FOR PATIENTS SECTION" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>17. PATIENT COUNSELING INFORMATION</title>
+               <text>
+                  <list>
+                     <item>Advise patients that allergic reactions, including serious allergic reactions, could occur and that serious reactions require immediate treatment. They should inform their healthcare provider about any previous hypersensitivity reactions to ceftaroline fosamil for injection, other beta-lactams (including cephalosporins) or other allergens. </item>
+                     <item>Advise patients that neurological adverse reactions could occur with ceftaroline fosamil for injection use. Instruct patients or their caregivers to inform their healthcare provider at once of any neurological signs and symptoms, including encephalopathy (disturbance of consciousness including somnolence, lethargy, confusion, and slow thinking), and seizures for immediate treatment, dosage adjustment, or discontinuation of ceftaroline fosamil for injection. </item>
+                     <item>Patients should be counseled that antibacterial drugs including ceftaroline fosamil for injection should only be used to treat bacterial infections. They do not treat viral infections (e.g., the common cold). When ceftaroline fosamil for injection is prescribed to treat a bacterial infection, patients should be told that although it is common to feel better early in the course of therapy, the medication should be taken exactly as directed. Skipping doses or not completing the full course of therapy may (1) decrease the effectiveness of the immediate treatment and (2) increase the likelihood that bacteria will develop resistance and will not be treatable by ceftaroline fosamil for injection or other antibacterial drugs in the future.</item>
+                     <item>Advise patients that diarrhea is a common problem caused by antibacterial drugs, including ceftaroline fosamil for injection and usually resolves when the drug is discontinued. Sometimes, frequent watery or bloody diarrhea may occur and may be a sign of a more serious intestinal infection. If severe watery or bloody diarrhea develops, patients should contact their healthcare provider.</item>
+                  </list>
+                  <paragraph>
+                     <content styleCode="bold">Ceftaroline Fosamil for Injection</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">400 mg and 600 mg</content>
+                  </paragraph>
+                  <table rules="none" width="60%">
+                     <tbody>
+                        <tr>
+                           <td>
+                              <content styleCode="bold">Manufactured by:</content>
+                           </td>
+                           <td>
+                              <content styleCode="bold">Manufactured for:</content>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td> Qilu Pharmaceutical Co., Ltd. </td>
+                           <td> Apotex Corp. </td>
+                        </tr>
+                        <tr>
+                           <td> High Tech Zone </td>
+                           <td> Weston, Florida </td>
+                        </tr>
+                        <tr>
+                           <td> Jinan, 250101, China </td>
+                           <td>USA, 33326 </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table frame="void">
+                     <tbody>
+                        <tr>
+                           <th align="left">Manufactured by:</th>
+                        </tr>
+                        <tr>
+                           <td>QILU Antibiotics Pharmaceutical Co., Ltd.</td>
+                        </tr>
+                        <tr>
+                           <td>Jinan, 250105, China</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>All registered trademarks in this document are the property of their respective owners. </paragraph>
+                  <paragraph>Revised: March 2026</paragraph>
+                  <paragraph>Rev. 1</paragraph>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20260312"/>
+            </section>
+         </component>
+         <component>
+            <section ID="_70a3e52a-a2eb-53d9-e578-493545f2ca16">
+               <id root="0cadc6d6-5c49-af1f-87f6-6dc2d6af758f"/>
+               <code code="51945-4" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>PACKAGE LABEL PRINCIPAL DISPLAY PANEL SECTION</title>
+               <text>
+                  <paragraph>Representative sample of labeling (see <linkHtml href="#HOW_SUPPLIED">HOW SUPPLIED</linkHtml> section for complete listing): </paragraph>
+                  <paragraph>PRINCIPAL DISPLAY PANEL - 400 mg/vial - Vial Label</paragraph>
+                  <paragraph>APOTEX CORP., NDC No. 60505-6124-0</paragraph>
+                  <paragraph>Ceftaroline Fosamil for Injection </paragraph>
+                  <paragraph>400 mg/vial</paragraph>
+                  <paragraph>Rx Only </paragraph>
+                  <paragraph>High Tech Zone</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="MM345853991950"/> Antibiotic Site<renderMultiMedia referencedObject="MM65226027121"/>
+                  </paragraph>
+                  <paragraph/>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20260529"/>
+            </section>
+         </component>
+         <component>
+            <section ID="_70f3778b-6fb4-2f87-6dab-0f50965acf29">
+               <id root="e94574eb-51ac-1d86-37f4-8ff76c072575"/>
+               <code code="51945-4" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>PACKAGE LABEL PRINCIPAL DISPLAY PANEL SECTION</title>
+               <text>
+                  <paragraph>Representative sample of labeling (see HOW SUPPLIED section for complete listing): </paragraph>
+                  <paragraph>PRINCIPAL DISPLAY PANEL - 400 mg/vial - Carton Label</paragraph>
+                  <paragraph>APOTEX CORP., NDC No. 60505-6124-1</paragraph>
+                  <paragraph>Ceftaroline Fosamil for Injection </paragraph>
+                  <paragraph>400 mg/vial</paragraph>
+                  <paragraph>Rx Only </paragraph>
+                  <paragraph>High Tech Zone</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="MM811268860993"/> Antibiotic Site</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="MM295343454940"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20260331"/>
+            </section>
+         </component>
+         <component>
+            <section ID="_f0a86fed-8322-3b64-c778-39eaa03ce077">
+               <id root="a948bd9d-210a-9d29-029b-bfc861043427"/>
+               <code code="51945-4" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>PACKAGE LABEL PRINCIPAL DISPLAY PANEL SECTION</title>
+               <text>
+                  <paragraph>Representative sample of labeling (see HOW SUPPLIED section for complete listing): </paragraph>
+                  <paragraph>PRINCIPAL DISPLAY PANEL - 600 mg/vial - Vial Label</paragraph>
+                  <paragraph>APOTEX CORP., </paragraph>
+                  <paragraph>NDC No. 60505-6125-0</paragraph>
+                  <paragraph>Ceftaroline Fosamil for Injection </paragraph>
+                  <paragraph>600 mg/vial</paragraph>
+                  <paragraph>Rx Only </paragraph>
+                  <paragraph>High Tech Zone</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="MM272358971848"/> Antibiotic Site</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="MM76701321757"/>
+                  </paragraph>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20260331"/>
+            </section>
+         </component>
+         <component>
+            <section ID="_08fd0bed-bd2d-fd59-a948-99c3a459dee8">
+               <id root="57117e30-9ace-278c-9e91-bba226fa1f31"/>
+               <code code="51945-4" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL" codeSystem="2.16.840.1.113883.6.1"/>
+               <title>PACKAGE LABEL PRINCIPAL DISPLAY PANEL SECTION</title>
+               <text>
+                  <paragraph>Representative sample of labeling (see HOW SUPPLIED section for complete listing): </paragraph>
+                  <paragraph>PRINCIPAL DISPLAY PANEL - 600 mg/vial - Carton Label</paragraph>
+                  <paragraph>APOTEX CORP., </paragraph>
+                  <paragraph>NDC No. 60505-6125-1</paragraph>
+                  <paragraph>Ceftaroline Fosamil for Injection </paragraph>
+                  <paragraph>600 mg/vial</paragraph>
+                  <paragraph>Rx Only </paragraph>
+                  <paragraph>High Tech Zone</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="MM63614981412"/>
+                  </paragraph>
+                  <paragraph>Antibiotic Site</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="MM405407125777"/>
+                  </paragraph>
+                  <paragraph/>
+               </text>
+               <effectiveTime value="20260331"/>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

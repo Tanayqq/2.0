@@ -1,0 +1,1591 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="09213604-f576-4578-ad34-92b448e3c782"/>
+   <code code="34391-3" codeSystem="2.16.840.1.113883.6.1" displayName="Human Prescription Drug Label"/>
+   <title>These highlights do not include all the information needed to use HALOPERIDOL DECANOATE INJECTION safely and effectively. See full prescribing information for HALOPERIDOL DECANOATE INJECTION. <br/> HALOPERIDOL DECANOATE injection, for intramuscular use<br/> Initial U.S. Approval: 1986<br/>
+   </title>
+   <effectiveTime value="20260714"/>
+   <setId root="1a0e38cb-fd9f-4962-9f81-5c0023ca6b4c"/>
+   <versionNumber value="15"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id root="1.3.6.1.4.1.519.1" extension="918601238"/>
+            <name>Gland Pharma Limited</name>
+            <assignedEntity>
+               <assignedOrganization>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id extension="918601238" root="1.3.6.1.4.1.519.1"/>
+                        <name>GLAND PHARMA LIMITED</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C25391" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANALYSIS"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="68083-137" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                     <performance>
+                        <actDefinition>
+                           <code code="C25391" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANALYSIS"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="68083-138" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                     <performance>
+                        <actDefinition>
+                           <code code="C84732" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="LABEL"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="68083-137" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                     <performance>
+                        <actDefinition>
+                           <code code="C84732" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="LABEL"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="68083-138" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                     <performance>
+                        <actDefinition>
+                           <code code="C43360" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="MANUFACTURE"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="68083-137" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                     <performance>
+                        <actDefinition>
+                           <code code="C43360" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="MANUFACTURE"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="68083-138" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                     <performance>
+                        <actDefinition>
+                           <code code="C84731" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="PACK"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="68083-137" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                     <performance>
+                        <actDefinition>
+                           <code code="C84731" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="PACK"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="68083-138" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+               </assignedOrganization>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="0f9d5284-8802-4960-be6e-ae05a6b0733b"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL PRODUCT DATA ELEMENTS SECTION"/>
+               <effectiveTime value="20260714"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="68083-137" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Haloperidol Decanoate<suffix/>
+                        </name>
+                        <formCode code="C42946" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INJECTION"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Haloperidol Decanoate</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIM">
+                           <quantity>
+                              <numerator value="50" unit="mg"/>
+                              <denominator value="1" unit="mL"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="AC20PJ4101" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>HALOPERIDOL DECANOATE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="J6292F8L3D" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>HALOPERIDOL</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <quantity>
+                              <numerator value="12" unit="mg"/>
+                              <denominator value="1" unit="mL"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="LKG8494WBH" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>BENZYL ALCOHOL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="QX10HYY4QV" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SESAME OIL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="1" unit="mL"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C43226" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="VIAL"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="10" unit="1"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="68083-137-10" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20170116"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="5" unit="mL"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C43226" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="VIAL"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="1" unit="1"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="68083-137-02" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20170116"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="ANDA205241" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73584" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20170116"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C28161" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INTRAMUSCULAR"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="68083-138" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Haloperidol Decanoate<suffix/>
+                        </name>
+                        <formCode code="C42946" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INJECTION"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>Haloperidol Decanoate</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIM">
+                           <quantity>
+                              <numerator value="100" unit="mg"/>
+                              <denominator value="1" unit="mL"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="AC20PJ4101" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>HALOPERIDOL DECANOATE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="J6292F8L3D" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>HALOPERIDOL</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <quantity>
+                              <numerator value="12" unit="mg"/>
+                              <denominator value="1" unit="mL"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="LKG8494WBH" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>BENZYL ALCOHOL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="QX10HYY4QV" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>SESAME OIL</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator value="1" unit="mL"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C43226" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="VIAL"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="10" unit="1"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="68083-138-10" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20170116"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                        <asContent>
+                           <quantity>
+                              <numerator value="5" unit="mL"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code/>
+                              <formCode code="C43226" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="VIAL"/>
+                              <asContent>
+                                 <quantity>
+                                    <numerator value="1" unit="1"/>
+                                    <denominator value="1"/>
+                                 </quantity>
+                                 <containerPackagedProduct>
+                                    <code code="68083-138-02" codeSystem="2.16.840.1.113883.6.69"/>
+                                    <formCode code="C43182" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="CARTON"/>
+                                 </containerPackagedProduct>
+                                 <subjectOf>
+                                    <marketingAct>
+                                       <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                       <statusCode code="active"/>
+                                       <effectiveTime>
+                                          <low value="20170116"/>
+                                       </effectiveTime>
+                                    </marketingAct>
+                                 </subjectOf>
+                              </asContent>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="ANDA205241" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73584" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANDA"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20170116"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C28161" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="INTRAMUSCULAR"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="Section_0">
+               <id root="c2c2b75a-c31b-4e36-94d1-8c6a9299f05c"/>
+               <code code="34066-1" codeSystem="2.16.840.1.113883.6.1" displayName="BOXED WARNING SECTION"/>
+               <title>WARNING: INCREASED MORTALITY IN ELDERLY PATIENTS WITH DEMENTIA-RELATED PSYCHOSIS</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">Elderly patients with dementia-related psychosis treated with antipsychotic drugs are at an increased risk of death. Haloperidol decanoate injection is not approved for the treatment of patients with dementia-related psychosis<content styleCode="italics"> [see Warnings and Precautions (<linkHtml href="#Section_5.1">5.1</linkHtml>)].</content>
+                     </content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20260714"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>WARNING: INCREASED MORTALITY IN ELDERLY PATIENTS WITH DEMENTIA-RELATED PSYCHOSIS<br/>
+                           <content styleCode="italics">See full prescribing information for complete boxed warning.<br/>
+                           </content>Elderly patients with dementia-related psychosis treated with antipsychotic drugs are at an increased risk of death. Haloperidol decanoate injection is not approved for the treatment of patients with dementia-related psychosis (<linkHtml href="#Section_5.1">5.1</linkHtml>).</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="Section_1">
+               <id root="0d47a1ee-c383-4c1b-b94a-ee5b140a2fcd"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>1 INDICATIONS AND USAGE</title>
+               <text>
+                  <paragraph>Haloperidol decanoate injection is indicated for the treatment of schizophrenia in adults who were previously taking a stable dosage of an immediate-release oral haloperidol product. </paragraph>
+               </text>
+               <effectiveTime value="20260714"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Haloperidol decanoate injection is a typical antipsychotic indicated for the treatment of schizophrenia in adults who were previously taking a stable dosage of an immediate-release oral haloperidol product </paragraph>
+                        <br/>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="Section_2">
+               <id root="1dcf97bc-a116-4a95-9002-733beb8708f0"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>2 DOSAGE AND ADMINISTRATION</title>
+               <effectiveTime value="20260714"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>• Administer haloperidol decanoate by deep intramuscular injection every 4 weeks by a healthcare provider. <content styleCode="bold">Do not administer intravenously</content> (<linkHtml href="#Section_2.1">2.1</linkHtml>). <br/> • For the recommended dosage, including the first recommended dose and the maintenance dosage, see the Dosage and Administration section (<linkHtml href="#Section_2.1">2.1</linkHtml>). <br/> • If schizophrenia symptoms worsen during dosage modification of haloperidol decanoate injection, consider administering an immediate-release oral haloperidol product in addition to haloperidol decanoate injection therapy (<linkHtml href="#Section_2.2">2.2</linkHtml>).</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="Section_2.1">
+                     <id root="6e0456d7-8c4b-454b-abdd-bbb384fd1310"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="Spl Unclassified Section"/>
+                     <title>2.1 Recommended Dosage and Administration</title>
+                     <text>
+                        <paragraph>Administer haloperidol decanoate by deep intramuscular injection every 4 weeks by a health care professional. <content styleCode="bold">Do not administer haloperidol decanoate injection intravenously. </content>
+                           <br/>
+                           <br/> When injecting haloperidol decanoate, use a 21-gauge needle. The maximum volume per injection site is 3 mL.</paragraph>
+                        <br/>
+                        <paragraph>Table 1 below describes the recommended dosage for haloperidol decanoate. The maximum recommended initial dose is 100 mg. If the calculated first recommended dose of haloperidol decanoate is greater than 100 mg, then administer two deep intramuscular injections as follows: <br/>
+                           <br/> • 100 mg on the first day <br/> • Remainder of the amount 3 to 7 days later.<br/>
+                           <br/>
+                           <content styleCode="bold">Table 1: Haloperidol decanoate Recommended Dosage</content>
+                        </paragraph>
+                        <table cellspacing="0" cellpadding="0" border="0">
+                           <tbody>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" valign="middle">
+                                    <content styleCode="bold">Population</content>
+                                    <br/>
+                                 </td>
+                                 <td styleCode="Rrule" valign="middle">
+                                    <content styleCode="bold">First Recommended Dose</content>
+                                 </td>
+                                 <td styleCode="Rrule" valign="middle">
+                                    <content styleCode="bold">Maintenance Dosage<sup>1</sup>
+                                    </content>
+                                 </td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" valign="middle">Adult patients less than 65 years old stabilized on ≤ 10 mg of daily immediate-release oral haloperidol with normal hepatic function.</td>
+                                 <td styleCode="Rrule" valign="middle">10 to 15 times previous daily dose of immediate-release oral haloperidol.</td>
+                                 <td styleCode="Rrule" rowspan="2" valign="middle">10 to 15 times previous daily dose of immediate-release oral haloperidol administered every 4 weeks. <br/>
+                                    <br/>             The dosage may be increased by increments of 50 mg or less every 4 weeks until an optimal therapeutic effect is obtained. <br/>
+                                    <br/>             The typical effective dosage range is between 50 and 200 mg every 4 weeks.<br/>
+                                    <br/> </td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" valign="middle">Adult patients less than 65 years old stabilized on ≤ 10 mg of daily immediate-release oral haloperidol with hepatic impairment<br/>             OR<br/>             Adult patients 65 years and older</td>
+                                 <td styleCode="Rrule" valign="middle">10 to 15 times previous daily dose of immediate-release oral haloperidol. Consider starting at the low end of the dosing range <content styleCode="italics">[see Use in Specific Populations (8.5, 8.6) and Clinical Pharmacology (12.3)].</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule Rrule" valign="middle">Adult patients less than 65 years old stabilized on &gt;10 mg of daily immediate-release oral haloperidol</td>
+                                 <td styleCode="Rrule" valign="middle">10 to 20 times previous daily dose of immediate-release oral haloperidol</td>
+                                 <td styleCode="Rrule" valign="middle">10 to 15 times previous daily dose of immediate-release oral haloperidol administered every 4 weeks. The dosage may be increased by increments of 50 mg or less every 4 weeks until an optimal therapeutic effect is obtained.</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>
+                           <sup>1</sup> Clinical experience with haloperidol decanoate at a dosage greater than 450 mg every 4 weeks has been limited.<br/>
+                           <br/>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20260714"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="Section_2.2">
+                     <id root="aec1a028-b166-4292-8f6d-f5151e71bc39"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="Spl Unclassified Section"/>
+                     <title>2.2 Recommended Supplemental Immediate-release Oral Haloperidol Therapy</title>
+                     <text>
+                        <paragraph>If schizophrenia symptoms worsen during dosage modification of haloperidol decanoate, consider administering an immediate-release oral haloperidol product in addition to haloperidol decanoate therapy. </paragraph>
+                     </text>
+                     <effectiveTime value="20260714"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="Section_3">
+               <id root="c73fa55a-1e34-4898-8773-71c3f3e19780"/>
+               <code code="43678-2" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE FORMS &amp; STRENGTHS SECTION"/>
+               <title>3 DOSAGE FORMS AND STRENGTHS</title>
+               <text>
+                  <paragraph>• Haloperidol decanoate injection, 50 mg/mL is a clear colorless/pink to yellow amber oily liquid, free from visible foreign material, in a single-dose vial. <br/> • Haloperidol decanoate injection, 250 mg/5 mL is a clear colorless/pink to yellow amber oily liquid, free from visible foreign material, in a multiple-dose vial. <br/> • Haloperidol decanoate injection, 100 mg/mL is a clear colorless/pink to yellow amber oily liquid, free from visible foreign material, in a single-dose vial.<br/> • Haloperidol decanoate injection, 500 mg/5 mL is a clear colorless/pink to yellow amber oily liquid, free from visible foreign material, in a multiple-dose vial. </paragraph>
+                  <br/>
+                  <br/>
+               </text>
+               <effectiveTime value="20260714"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>• Haloperidol decanoate injection, 50 mg/mL in single-dose vials (<linkHtml href="#Section_3">3</linkHtml>). <br/> • Haloperidol decanoate injection, 250 mg/5 mL in multiple-dose vials (<linkHtml href="#Section_3">3</linkHtml>).<br/> • Haloperidol decanoate injection, 100 mg/mL in single-dose vials (<linkHtml href="#Section_3">3</linkHtml>). <br/> • Haloperidol decanoate injection, 500 mg/5 mL in multiple-dose vials (<linkHtml href="#Section_3">3</linkHtml>).</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="Section_4">
+               <id root="1a3393d1-a53c-4e77-8e65-fa0ccc4c7629"/>
+               <code code="34070-3" codeSystem="2.16.840.1.113883.6.1" displayName="CONTRAINDICATIONS SECTION"/>
+               <title>4 CONTRAINDICATIONS</title>
+               <text>
+                  <paragraph>Haloperidol decanoate injection is contraindicated in patients with: <br/>
+                     <br/> • Severe toxic central nervous system depression or comatose states from any cause. <br/> • Known hypersensitivity to haloperidol or any components of haloperidol decanoate injection. Hypersensitivity reactions, including anaphylactic reactions and angioedema, have been reported in patients treated with haloperidol <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#Section_5.9">5.9</linkHtml>) and Adverse Reactions (<linkHtml href="#Section_6.2">6.2</linkHtml>)].</content> <br/> • Parkinson’s disease<content styleCode="italics"> [see Warnings and Precautions (<linkHtml href="#Section_5.7">5.7</linkHtml>)]. </content>
+                     <br/> • Dementia with Lewy bodies<content styleCode="italics"> [see Warnings and Precautions (<linkHtml href="#Section_5.7">5.7</linkHtml>)].</content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20260714"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>• Severe toxic central nervous system depression or comatose states from any cause (<linkHtml href="#Section_4">4</linkHtml>). <br/> • Known hypersensitivity to haloperidol or any components of haloperidol decanoate injection (<linkHtml href="#Section_4">4</linkHtml>). <br/> • Parkinson’s disease (<linkHtml href="#Section_4">4</linkHtml>, <linkHtml href="#Section_5.7">5.7</linkHtml>, <linkHtml href="#Section_6.1">6.1</linkHtml>). <br/> • Dementia with Lewy bodies (<linkHtml href="#Section_4">4</linkHtml>, <linkHtml href="#Section_5.7">5.7</linkHtml>).</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="Section_5">
+               <id root="8c879c53-f12d-4e86-af9b-17d9b1939fd2"/>
+               <code code="43685-7" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS AND PRECAUTIONS SECTION"/>
+               <title>5 WARNINGS AND PRECAUTIONS</title>
+               <effectiveTime value="20260714"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>• <content styleCode="italics">Sudden Death, Torsades de Pointes (TdP), and QTc Interval Prolongation</content>: Avoid use of haloperidol decanoate in patients who are at risk of developing TdP. Avoid concomitant use of haloperidol decanoate with drugs that may increase risk of QTc interval prolongation or increase haloperidol exposure. Obtain ECG and serum electrolytes at baseline and during treatment as clinically indicated (<linkHtml href="#Section_5.2">5.2</linkHtml>).<br/> • <content styleCode="italics">Tachycardia and Hypotension:</content> Monitor orthostatic vital signs (<linkHtml href="#Section_5.3">5.3</linkHtml>). <br/> • <content styleCode="italics">Cerebrovascular Adverse Reactions Including Stroke in Elderly Patients with Dementia-Related Psychosis:</content> Use with caution in patients with schizophrenia who have risk factors for cerebrovascular adverse reactions (<linkHtml href="#Section_5.4">5.4</linkHtml>). <br/> • <content styleCode="italics">Tardive Dyskinesia</content>: Discontinue treatment if clinically appropriate (<linkHtml href="#Section_5.5">5.5</linkHtml>). <br/> • <content styleCode="italics">Neuroleptic Malignant Syndrome (NMS)</content>: Immediately discontinue and monitor closely (<linkHtml href="#Section_5.6">5.6</linkHtml>). <br/> • <content styleCode="italics">Seizures</content>: Haloperidol decanoate is generally not recommended in patients receiving antiseizure drugs or who have a history of seizures or EEG abnormalities. If clinically, indicated, maintain patients taking haloperidol decanoate on adequate antiseizure therapy (<linkHtml href="#Section_5.8">5.8</linkHtml>). <br/> • <content styleCode="italics">Potential for Cognitive and Motor Impairment:</content> Advise patients to not drive a motor vehicle or operate hazardous machinery until they are reasonably certain haloperidol decanoate does not impair their cognitive and motor functions (<linkHtml href="#Section_5.11">5.11</linkHtml>). <br/> • <content styleCode="italics">Risk of Encephalopathic Syndrome with Concomitant Use of Lithium</content>: Monitor closely for early signs of neurological toxicity and discontinue haloperidol decanoate if such signs appear (<linkHtml href="#Section_5.12">5.12</linkHtml>). <br/> • <content styleCode="italics">Leukopenia, Neutropenia, and Agranulocytosis</content>: Perform complete blood counts (CBC) in patients with pre-existing low white blood cell count (WBC) or history of leukopenia or neutropenia. Consider discontinuing haloperidol decanoate if clinically significant decline in WBC occurs in absence of other causative factors. Discontinue haloperidol decanoate in patients with clinically significant neutropenia or an absolute neutrophile count of &lt;1,000/mm<sup>3</sup> (<linkHtml href="#Section_5.13">5.13</linkHtml>).<br/> • <content styleCode="italics">Hyperprolactinemia: </content>Elevated prolactin levels may occur during acute and chronic use (<linkHtml href="#Section_5.14">5.14</linkHtml>).</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="Section_5.1">
+                     <id root="2bf3739e-64f4-43a5-9662-4e1669e10c28"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="Spl Unclassified Section"/>
+                     <title>5.1 Increased Mortality in Elderly Patients with Dementia-Related Psychosis</title>
+                     <text>
+                        <paragraph>Elderly patients with dementia-related psychosis treated with antipsychotic drugs are at an increased risk of death. In an analysis of 17 placebo-controlled trials (modal duration of 10 weeks), largely in patients taking atypical antipsychotic drugs, the risk of death in antipsychotic drug-treated patients was 1.6 to 1.7 times the risk of death in placebo-treated patients. Over the course of a typical 10-week controlled trial, the incidence of death in antipsychotic drug-treated patients was about 4.5%, compared to an incidence of about 2.6% in placebo-treated patients. Although the causes of death were varied, most of the deaths appeared to be either cardiovascular (e.g., heart failure, sudden death) or infectious (e.g., pneumonia) in nature. <br/>
+                           <br/> Haloperidol decanoate is not approved for the treatment of patients with dementia-related psychosis <content styleCode="italics">[see Indications and Usage (<linkHtml href="#Section_1">1</linkHtml>)].</content>
+                        </paragraph>
+                        <br/>
+                     </text>
+                     <effectiveTime value="20260714"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="Section_5.2">
+                     <id root="fcde4c6d-12ee-4452-b7b2-f8011d449392"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="Spl Unclassified Section"/>
+                     <title>5.2 Sudden Death, Torsades de Pointes, and QTc Interval  Prolongation</title>
+                     <text>
+                        <paragraph>Cases of sudden death, torsades de pointes (TdP) and QTc interval prolongation have been reported in haloperidol-treated patients <content styleCode="italics">[see Adverse Reactions (<linkHtml href="#Section_6.1">6.1</linkHtml>, <linkHtml href="#Section_6.2">6.2</linkHtml>)].</content> Cases have been reported even in the absence of predisposing factors. Higher than recommended haloperidol dosages were associated with a higher risk of TdP and QTc interval prolongation. <br/>
+                           <br/> Avoid use of haloperidol decanoate in patients who are at significant risk of developing TdP including those with congenital long QT syndrome, uncontrolled or significant cardiac disease, recent myocardial infarction, ischemic cardiomyopathy, unstable angina, bradyarrhythmias, uncontrolled hypertension, high degree atrioventricular block, severe aortic stenosis, or uncontrolled hypothyroidism. Avoid the concomitant use of haloperidol decanoate with drugs that may increase the risk of the QTc interval prolongation or increase haloperidol exposure. Assess the QTc interval via an ECG at baseline, and during treatment as clinically indicated. Obtain serum electrolytes (including potassium, calcium, phosphorus, and magnesium) at baseline and during treatment as clinically indicated, and correct electrolyte abnormalities. </paragraph>
+                     </text>
+                     <effectiveTime value="20260714"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="Section_5.3">
+                     <id root="a36606b6-5c73-4224-9e04-39ece9e4034c"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="Spl Unclassified Section"/>
+                     <title>5.3 Tachycardia and Hypotension</title>
+                     <text>
+                        <paragraph>Tachycardia and hypotension (including orthostatic hypotension) have been reported in patients treated with haloperidol <content styleCode="italics">[see Adverse Reactions (<linkHtml href="#Section_6.1">6.1</linkHtml>)].</content> Orthostatic vital signs should be monitored in patients who are at risk for hypotension (e.g., geriatric patients, patients with dehydration, hypovolemia, and concomitantly treated with antihypertensive medications), patients with known cardiovascular disease (history of myocardial infarction, ischemic heart disease, heart failure, or conduction abnormalities), and patients with cerebrovascular disease. <br/>
+                           <br/> Should hypotension occur and a vasopressor be required, epinephrine must not be used since haloperidol decanoate may block its vasopressor activity, and paradoxically lower blood pressure. Instead, metaraminol, phenylephrine or norepinephrine should be used.</paragraph>
+                     </text>
+                     <effectiveTime value="20260714"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="Section_5.4">
+                     <id root="48d2fcef-908c-411e-8c7f-8fe5296d60ff"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="Spl Unclassified Section"/>
+                     <title>5.4 Cerebrovascular Adverse Reactions Including Stroke in Elderly Patients with Dementia-Related Psychosis</title>
+                     <text>
+                        <paragraph>In placebo-controlled trials, elderly patients with dementia-related psychosis treated with antipsychotics had an increased risk of cerebrovascular adverse reactions (e.g., stroke, transient ischemic attack) including fatalities, compared to those treated with placebo. The mechanism for this increased risk is not known. <br/>
+                           <br/> Haloperidol decanoate is not approved for the treatment of patients with dementia-related psychosis. Haloperidol decanoate should be used with caution in patients with schizophrenia who have risk factors for cerebrovascular adverse reactions. </paragraph>
+                        <br/>
+                     </text>
+                     <effectiveTime value="20260714"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="Section_5.5">
+                     <id root="b03702e3-9413-4d69-a8d2-16888bf191fe"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="Spl Unclassified Section"/>
+                     <title>5.5 Tardive Dyskinesia</title>
+                     <text>
+                        <paragraph>Tardive dyskinesia (TD) may develop in patients treated with antipsychotic drugs, including haloperidol decanoate <content styleCode="italics">[see Adverse Reactions (<linkHtml href="#Section_6.1">6.1</linkHtml>)].</content> TD can develop after a relatively brief treatment period at low dosages and may also occur after discontinuation of treatment. If antipsychotic treatment is discontinued, TD may partially or completely remit. Antipsychotic treatment, however, may suppress or partially suppress the signs and symptoms of TD and may mask the underlying process. The effect that symptomatic suppression has upon the long-term course of TD is unknown. <br/>
+                           <br/> The TD risk in patients treated with antipsychotic drugs appears to be highest among the elderly, especially elderly women, but it is not possible to predict, which patients are likely to develop TD. The TD risk and the likelihood that TD will become irreversible increase with the duration of antipsychotic drug treatment and the cumulative dosage. <br/>
+                           <br/> In patients who require chronic antipsychotic treatment, use the lowest dosage and the shortest duration of treatment that produces a satisfactory clinical response. Periodically reassess the need for continued treatment. If signs and symptoms of TD appear in haloperidol decanoate-treated patients, consider drug discontinuation. However, some patients may require haloperidol decanoate treatment despite the presence of TD. </paragraph>
+                        <br/>
+                     </text>
+                     <effectiveTime value="20260714"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="Section_5.6">
+                     <id root="56d79edb-07d9-4b6c-8e1b-9a132f37c54a"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="Spl Unclassified Section"/>
+                     <title>5.6 Neuroleptic Malignant Syndrome</title>
+                     <text>
+                        <paragraph>Neuroleptic Malignant Syndrome (NMS), a potentially fatal symptom complex, has been reported in association with the use of antipsychotic drugs<content styleCode="italics"> [see Adverse Reactions (<linkHtml href="#Section_6.1">6.1</linkHtml>)].</content> Clinical manifestations of NMS are hyperpyrexia, muscle rigidity, delirium, and autonomic instability, and additional signs may include elevated creatine phosphokinase, myoglobinuria (rhabdomyolysis), and acute renal failure. <br/>
+                           <br/> If NMS is suspected, immediately discontinue haloperidol decanoate and provide intensive symptomatic treatment and monitoring. </paragraph>
+                     </text>
+                     <effectiveTime value="20260714"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="Section_5.7">
+                     <id root="b91969af-32fc-4188-9cf2-2467ca815c64"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="Spl Unclassified Section"/>
+                     <title>5.7 Neurological Adverse Reactions in Patients with Parkinson’s Disease or Dementia with Lewy Bodies</title>
+                     <text>
+                        <paragraph>Patients with Parkinson’s disease or Dementia with Lewy bodies may experience increased sensitivity to haloperidol. Manifestations of this increased sensitivity include severe extrapyramidal symptoms (e.g., tremor, rigidity, bradykinesia), confusion, sedation, and falls. Haloperidol decanoate is contraindicated in patients with Dementia with Lewy bodies and in patients with Parkinson’s disease. </paragraph>
+                     </text>
+                     <effectiveTime value="20260714"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="Section_5.8">
+                     <id root="620e2a84-4c67-49ff-9b82-cf8b7cbe729f"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="Spl Unclassified Section"/>
+                     <title>5.8 Seizures</title>
+                     <text>
+                        <paragraph>Haloperidol decanoate may lower the seizure threshold. Haloperidol decanoate is generally not recommended in patients receiving antiseizure drugs or have a history of seizures or EEG abnormalities. If clinically indicated, maintain patients taking haloperidol decanoate on adequate antiseizure therapy. </paragraph>
+                     </text>
+                     <effectiveTime value="20260714"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="Section_5.9">
+                     <id root="9d043e36-1777-4f09-bfd5-5038912e4796"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="Spl Unclassified Section"/>
+                     <title>5.9 Hypersensitivity Reactions</title>
+                     <text>
+                        <paragraph>There have been postmarketing reports of hypersensitivity reactions with haloperidol including anaphylactic reaction, angioedema, dermatitis exfoliative, hypersensitivity vasculitis, rash, urticaria, face edema, laryngeal edema, bronchospasm, and laryngospasm <content styleCode="italics">[see Adverse Reactions (<linkHtml href="#Section_6.2">6.2</linkHtml>)].</content>
+                           <br/>
+                           <br/> Haloperidol decanoate injection is contraindicated in patients with known hypersensitivity to haloperidol or any components of haloperidol decanoate injection. </paragraph>
+                     </text>
+                     <effectiveTime value="20260714"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="Section_5.10">
+                     <id root="ddb9003b-b47f-4462-ba3f-bffd79d6a278"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="Spl Unclassified Section"/>
+                     <title>5.10 Falls</title>
+                     <text>
+                        <paragraph>Antipsychotics, including haloperidol decanoate, may cause somnolence, orthostatic hypotension, motor instability and sensory abnormality, which may lead to falls and, consequently, fractures and other injuries. <br/>
+                           <br/> If patients have a condition (or take concomitant drugs) that could exacerbate these effects, complete fall risk assessments when initiating haloperidol decanoate treatment and periodically during long-term treatment. </paragraph>
+                     </text>
+                     <effectiveTime value="20260714"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="Section_5.11">
+                     <id root="a2ad0d5e-0ab7-4d76-88a0-735d38210fc3"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="Spl Unclassified Section"/>
+                     <title>5.11 Potential for Cognitive and Motor Impairment</title>
+                     <text>
+                        <paragraph>Haloperidol decanoate may impair judgement, thinking, or motor skills. Inform patients of the risk and advise them to not drive a motor vehicle or operate hazardous machinery until they are reasonably certain that treatment with haloperidol decanoate does not impair their cognitive and motor functions. </paragraph>
+                     </text>
+                     <effectiveTime value="20260714"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="Section_5.12">
+                     <id root="c6e6b4bb-1868-4fcf-9100-fa38c5c64a76"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="Spl Unclassified Section"/>
+                     <title>5.12 Risk of Encephalopathic Syndrome with Concomitant Use of Lithium</title>
+                     <text>
+                        <paragraph>An encephalopathic syndrome, characterized by weakness, lethargy, fever, tremulousness, confusion, extrapyramidal symptoms, leukocytosis, and elevated serum enzymes (AST, ALT, GGT, alkaline phosphatase, CK, and LDH), BUN, and fasting blood sugar, followed by irreversible brain damage has occurred in a few patients treated with concomitant haloperidol and lithium. <br/>
+                           <br/> Monitor patients who concomitantly use haloperidol decanoate and lithium closely for early signs of neurological toxicity, and discontinue haloperidol decanoate or both haloperidol decanoate and lithium promptly if such signs appear. </paragraph>
+                     </text>
+                     <effectiveTime value="20260714"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="Section_5.13">
+                     <id root="536ff72f-f86a-4776-a88d-b52f2ef1426f"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="Spl Unclassified Section"/>
+                     <title>5.13 Leukopenia, Neutropenia, and Agranulocytosis</title>
+                     <text>
+                        <paragraph>Leukopenia, neutropenia and agranulocytosis (including fatal cases) have been reported during treatment with antipsychotic drugs, including haloperidol decanoate <content styleCode="italics">[see Adverse Reactions (<linkHtml href="#Section_6.2">6.2</linkHtml>)]. </content>
+                           <br/>
+                           <br/> Possible risk factors for antipsychotic drug-associated leukopenia and neutropenia include pre-existing low WBC and history of drug-induced leukopenia and neutropenia. <br/>
+                           <br/> Perform frequent complete blood count (CBC) monitoring during the first few months of haloperidol decanoate therapy in patients with a history of a clinically significant low WBC, drug-induced leukopenia or neutropenia. Consider discontinuing haloperidol decanoate in patients who have a clinically significant decline in their WBC in the absence of other causative factors. Discontinue haloperidol decanoate in patients with clinically significant neutropenia or an absolute neutrophil count of &lt;1,000/mm<sup>3</sup> and monitor closely until the neutropenia resolves.</paragraph>
+                     </text>
+                     <effectiveTime value="20260714"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="Section_5.14">
+                     <id root="51400803-9c09-4d81-b0e2-15b59a431ab8"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="Spl Unclassified Section"/>
+                     <title>5.14 Hyperprolactinemia</title>
+                     <text>
+                        <paragraph>Antipsychotic drugs elevate prolactin levels during acute and chronic use and may result in galactorrhea, amenorrhea, gynecomastia, and impotence which have been reported with antipsychotic drugs <content styleCode="italics">[see Adverse Reactions (<linkHtml href="#Section_6.1">6.1</linkHtml>, <linkHtml href="#Section_6.2">6.2</linkHtml>) and Use in Specific Populations (<linkHtml href="#Section_8.3">8.3</linkHtml>)]. </content>
+                           <br/>
+                           <br/> Published epidemiologic studies have shown inconsistent results regarding the potential association between hyperprolactinemia and breast cancer <content styleCode="italics">[see Nonclinical Toxicology (<linkHtml href="#Section_13.1">13.1</linkHtml>)]. </content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20260714"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="Section_5.15">
+                     <id root="bb148379-7200-4326-9f97-bde5d6037a2a"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="Spl Unclassified Section"/>
+                     <title>5.15 Risk of Severe Neurotoxicity in Patients with Thyrotoxicosis</title>
+                     <text>
+                        <paragraph>Severe neurotoxicity (rigidity, inability to walk or talk) may occur in patients with thyrotoxicosis who are also receiving antipsychotic drugs, including haloperidol decanoate. </paragraph>
+                     </text>
+                     <effectiveTime value="20260714"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="Section_6">
+               <id root="655a9c80-370d-4f2d-998e-cdc5c0fa2dc6"/>
+               <code code="34084-4" codeSystem="2.16.840.1.113883.6.1" displayName="ADVERSE REACTIONS SECTION"/>
+               <title>6 ADVERSE REACTIONS</title>
+               <text>
+                  <paragraph>The following adverse reactions are discussed in more detail in other sections of the labeling: <br/>
+                     <br/> • Sudden Death, Torsades de Pointes, and QTc Interval Prolongation <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#Section_5.2">5.2</linkHtml>)] </content>
+                     <br/> • Tachycardia and Hypotension <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#Section_5.3">5.3</linkHtml>)] </content>
+                     <br/> • Tardive Dyskinesia <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#Section_5.5">5.5</linkHtml>)] </content>
+                     <br/> • Neuroleptic Malignant Syndrome <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#Section_5.6">5.6</linkHtml>)] </content>
+                     <br/> • Seizures <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#Section_5.8">5.8</linkHtml>)] </content>
+                     <br/> • Hypersensitivity Reactions <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#Section_5.9">5.9</linkHtml>)]</content>
+                     <br/> • Leukopenia, Neutropenia, and Agranulocytosis<content styleCode="italics"> [see Warnings and Precautions (<linkHtml href="#Section_5.13">5.13</linkHtml>)] </content>
+                     <br/> • Hyperprolactinemia <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#Section_5.14">5.14</linkHtml>)] </content>
+                     <br/> • Risk of Severe Neurotoxicity in Patients with Thyrotoxicosis<content styleCode="italics"> [see Warnings and Precautions (<linkHtml href="#Section_5.15">5.15</linkHtml>)] </content>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20260714"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>The most common adverse reactions (incidence ≥5%) were oculogyric crisis and parkinsonism (<linkHtml href="#Section_6.1">6.1</linkHtml>). <br/>
+                           <br/>
+                           <content styleCode="bold">To report SUSPECTED ADVERSE REACTIONS, contact Gland Pharma at 866-770-7144 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. </content>
+                        </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="Section_6.1">
+                     <id root="c4c00c5c-3731-4719-8373-6a333b446c12"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="Spl Unclassified Section"/>
+                     <title>6.1 Clinical Trials Experience</title>
+                     <text>
+                        <paragraph>Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice. <br/>
+                           <br/>
+                           <content styleCode="underline">Adverse Reactions Identified in Clinical Trials with Haloperidol Decanoate<br/>
+                           </content>
+                           <br/> The data described below reflect exposure to 15 mg to 500 mg (1.7 times the maximum recommended dosage) of haloperidol decanoate monthly in 13 clinical trials of 410 adult patients with schizophrenia or an unapproved condition. These clinical trials comprised of: <br/>
+                           <br/> • 1 double-blind, active comparator-controlled trial with fluphenazine decanoate (Trial 1).<br/> • 2 trials comparing haloperidol decanoate injection to oral haloperidol (Trials 2 and 3). <br/> • 9 open-label trials. <br/> • 1 dose-response trial. <br/>
+                           <br/> The most common adverse reactions that occurred in ≥5% of haloperidol decanoate-treated patients in Trial 1 were Parkinsonism and oculogyric crisis. <br/>
+                           <br/> Adverse reactions that occurred in ≥1% of haloperidol decanoate-treated patients in Trial 1 are shown in Table 2. Trial 1 was not designed to evaluate meaningful comparisons of the incidence of adverse reactions in the haloperidol decanoate and fluphenazine decanoate treatment groups. <br/>
+                           <br/>
+                           <content styleCode="bold">Table 2: Adverse Reactions that Occurred in ≥1% of Haloperidol Decanoate-treated Patients and Fluphenazine Decanoate-treated Patients in Trial 1<sup>a</sup>
+                           </content>
+                        </paragraph>
+                        <br/>
+                        <table cellspacing="0" cellpadding="0" border="0">
+                           <tbody>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" valign="middle"> </td>
+                                 <td styleCode="Rrule" align="center" valign="middle">
+                                    <br/>
+                                    <content styleCode="bold">Haloperidol Decanoate </content>
+                                    <br/>
+                                    <content styleCode="bold">(n=36)</content>
+                                 </td>
+                                 <td styleCode="Rrule" align="center" valign="middle">
+                                    <br/>
+                                    <content styleCode="bold">Fluphenazine decanoate </content>
+                                    <br/>
+                                    <content styleCode="bold">(n=36)</content>
+                                 </td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" valign="middle">Extrapyramidal disorder: </td>
+                                 <td styleCode="Rrule" valign="middle"> </td>
+                                 <td styleCode="Rrule" valign="middle"> </td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" valign="middle">     Parkinsonism</td>
+                                 <td styleCode="Rrule" valign="middle"> 31%</td>
+                                 <td styleCode="Rrule" valign="middle"> 44%</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" valign="middle">     Oculogyric crisis</td>
+                                 <td styleCode="Rrule" valign="middle"> 6%</td>
+                                 <td styleCode="Rrule" valign="middle"> 0%</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" valign="middle">     Akinesia</td>
+                                 <td styleCode="Rrule" valign="middle"> 3%</td>
+                                 <td styleCode="Rrule" valign="middle"> 22%</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" valign="middle">     Akathisia</td>
+                                 <td styleCode="Rrule" valign="middle"> 3%</td>
+                                 <td styleCode="Rrule" valign="middle"> 14%</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" valign="middle">     Tremor</td>
+                                 <td styleCode="Rrule" valign="middle"> 3%</td>
+                                 <td styleCode="Rrule" valign="middle"> 0%</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" valign="middle">Abdominal pain</td>
+                                 <td styleCode="Rrule" valign="middle"> 3%</td>
+                                 <td styleCode="Rrule" valign="middle"> 0%</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" valign="middle">Headache</td>
+                                 <td styleCode="Rrule" valign="middle"> 3%</td>
+                                 <td styleCode="Rrule" valign="middle"> 0%</td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule Rrule" colspan="3" valign="middle"> <sup>a</sup> The study was not designed to evaluate meaningful comparisons of the incidence of adverse reactions in the haloperidol decanoate and the fluphenazine decanoate treatment groups.</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <br/>
+                        <paragraph>Less common adverse reactions (&lt;1%) that occurred in Trial 1 and other adverse reactions that occurred in Trials 2 and 3, and open-label and dose-response clinical trials of haloperidol decanoate are listed below. <br/>
+                           <br/> • <content styleCode="italics">Cardiac Disorders: </content>Tachycardia <br/> • <content styleCode="italics">Endocrine Disorders:</content> Hyperprolactinemia <br/> • <content styleCode="italics">Eye Disorders:</content> Vision blurred <br/> • <content styleCode="italics">Gastrointestinal Disorders:</content> Constipation, Dry mouth, Salivary hypersecretion <br/> • <content styleCode="italics">General Disorders and Administration Site Conditions</content>: Weight increased, Injection site reaction <br/> • <content styleCode="italics">Musculoskeletal and Connective Tissue Disorders</content>: Muscle rigidity <br/> • <content styleCode="italics">Nervous System Disorders:</content> Dyskinesia, Dystonia, Cogwheel rigidity, Hypertonia, Masked facies, Sedation, Somnolence <br/> • <content styleCode="italics">Reproductive System Disorders</content>: Erectile dysfunction<br/>
+                           <br/>
+                           <content styleCode="underline">Adverse Reactions Identified in Clinical Trials with Immediate-Release Haloperidol Products </content>
+                           <br/> Based on clinical trials with immediate-release haloperidol products that included 1,579 patients, the following adverse reactions were reported: <br/>
+                           <br/> • <content styleCode="italics">Musculoskeletal and Connective Tissue Disorders:</content> Torticollis, Trismus, Muscle twitching <br/> • <content styleCode="italics">Nervous System Disorders: </content>Neuroleptic malignant syndrome, Tardive dyskinesia, Bradykinesia, Hyperkinesia, Hypokinesia, Dizziness, Nystagmus<br/> • <content styleCode="italics">Psychiatric Disorders</content>: Loss of libido, Restlessness <br/> • <content styleCode="italics">Reproductive System and Breast Disorders:</content> Amenorrhea, Galactorrhea, Dysmenorrhea, Menorrhagia, Breast discomfort <br/> • <content styleCode="italics">Skin and Subcutaneous Tissue Disorders:</content> Acneiform skin reactions <br/> • <content styleCode="italics">Vascular Disorders:</content> Hypotension, Orthostatic hypotension </paragraph>
+                        <br/>
+                     </text>
+                     <effectiveTime value="20260714"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="Section_6.2">
+                     <id root="d1af2aac-b7aa-4a63-9dd8-385b5a6f221c"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="Spl Unclassified Section"/>
+                     <title>6.2 Postmarketing Experience</title>
+                     <text>
+                        <paragraph>The following adverse reactions have been identified during post-approval use of haloperidol, including haloperidol decanoate injection. Because these reactions are reported voluntarily from a population of uncertain size, it is not always possible to reliably estimate their frequency or establish a causal relationship to drug exposure. <br/>
+                           <br/> • <content styleCode="italics">Blood and Lymphatic System Disorders</content>: Pancytopenia, Agranulocytosis, Thrombocytopenia, Leukopenia, Neutropenia <br/> • <content styleCode="italics">Cardiac Disorders</content>: Ventricular fibrillation, Torsade de pointes, Ventricular tachycardia, Extrasystoles, QTc interval prolongation <br/> • <content styleCode="italics">Endocrine Disorders</content>: Inappropriate antidiuretic hormone secretion <br/> • <content styleCode="italics">Gastrointestinal Disorders</content>: Vomiting, Nausea <br/> • <content styleCode="italics">General Disorders and Administration Site Conditions</content>: Sudden death, Face edema, Edema, Hyperthermia, Hypothermia, Injection site abscess, Weight decreased <br/> • <content styleCode="italics">Hepatobiliary Disorders</content>: Acute hepatic failure, Hepatitis, Cholestasis, Jaundice, Liver function test abnormal <br/> • <content styleCode="italics">Immune System Disorders:</content> Anaphylactic reaction, Hypersensitivity <br/> • <content styleCode="italics">Metabolic and Nutritional Disorders:</content> Hypoglycemia <br/> • <content styleCode="italics">Musculoskeletal and Connective Tissue Disorders</content>: Rhabdomyolysis <br/> • <content styleCode="italics">Nervous System Disorders:</content> Convulsion, Opisthotonus, Tardive dystonia <br/> • <content styleCode="italics">Pregnancy, Puerperium and Perinatal Conditions: </content>Neonatal drug withdrawal syndrome <br/> • <content styleCode="italics">Psychiatric Disorders:</content> Agitation, Confusional state, Depression, Insomnia <br/> • <content styleCode="italics">Renal and Urinary Disorders</content>: Urinary retention <br/> • <content styleCode="italics">Reproductive System and Breast Disorders: </content>Priapism, Gynecomastia <br/> • <content styleCode="italics">Respiratory, Thoracic and Mediastinal Disorders</content>: Laryngeal edema, Bronchospasm, Laryngospasm, Dyspnea<br/> • <content styleCode="italics">Skin and Subcutaneous Tissue Disorders: </content>Angioedema, Dermatitis exfoliative, Hypersensitivity vasculitis, Photosensitivity reaction, Urticaria, Pruritus, Rash, Hyperhidrosis</paragraph>
+                     </text>
+                     <effectiveTime value="20260714"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="Section_7">
+               <id root="d28c96b7-349a-4ede-a29f-7549823b30be"/>
+               <code code="34073-7" codeSystem="2.16.840.1.113883.6.1" displayName="DRUG INTERACTIONS SECTION"/>
+               <title>7 DRUG INTERACTIONS</title>
+               <effectiveTime value="20260714"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>• <content styleCode="italics">Drugs that Prolong QTc Interval:</content> Avoid concomitant use with haloperidol decanoate (<linkHtml href="#Section_7.1">7.1</linkHtml>).<br/> • See full prescribing information for additional clinically significant drug interactions with haloperidol decanoate (<linkHtml href="#Section_7.2">7.2</linkHtml>). </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="Section_7.1">
+                     <id root="3ebf6cf8-df9a-4e0a-8974-f9d6ba07c0c0"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="Spl Unclassified Section"/>
+                     <title>7.1 Drugs that Prolong the QTc Interval</title>
+                     <text>
+                        <paragraph>Avoid concomitant use of haloperidol decanoate with other drugs with a known potential to prolong the QTc interval. If concomitant use cannot be avoided<content styleCode="italics"> [see Warnings and Precautions (<linkHtml href="#Section_5.2">5.2</linkHtml>)]:</content>
+                           <br/>
+                           <br/> • Obtain ECGs when initiating and during concomitant use as clinically indicated. <br/> • Obtain serum electrolytes (including potassium, calcium, phosphorus, and magnesium) when initiating and during concomitant use as clinically indicated. <br/>
+                           <br/> QTc interval prolongation has been observed with haloperidol decanoate treatment. Concomitant use of haloperidol decanoate with other products that prolong the QTc interval may result in a greater increase in the QTc interval, and adverse reactions associated with QTc interval prolongation, including torsade de pointes, other serious arrythmias, and sudden death <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#Section_5.2">5.2</linkHtml>)].</content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20260714"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="Section_7.2">
+                     <id root="aaf84ecb-5542-4bab-91be-cec346b8786a"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="Spl Unclassified Section"/>
+                     <title>7.2 Other Clinically Significant Drug Interactions</title>
+                     <text>
+                        <paragraph>Table 3 describes other clinically significant drug interactions of haloperidol decanoate.<br/>
+                           <br/>
+                           <content styleCode="bold">Table 3: Other Clinically Significant Drugs Interactions<sup>1</sup>
+                           </content>
+                        </paragraph>
+                        <br/>
+                        <table cellspacing="0" cellpadding="0" border="0">
+                           <tbody>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" colspan="2" valign="middle">
+                                    <content styleCode="bold">CNS Depressants</content> </td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" valign="middle"> Clinical Impact</td>
+                                 <td styleCode="Rrule" valign="middle"> Haloperidol may potentiate CNS depressants.</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" valign="middle"> Prevention or Management</td>
+                                 <td styleCode="Rrule" valign="middle"> Avoid concomitant use of haloperidol decanoate with CNS depressants such as anesthetics, opioids, and alcohol.</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" colspan="2" valign="middle"> <content styleCode="bold">CYP3A4 and/or CYP2D6 Inhibitors</content>
+                                 </td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" valign="middle"> Clinical Impact</td>
+                                 <td styleCode="Rrule" valign="middle"> CYP3A4 and/or CYP2D6 inhibitors increase haloperidol exposure (haloperidol is a CYP3A4 and CYP2D6 substrate) <content styleCode="italics">[see Clinical Pharmacology (<linkHtml href="#Section_12.3">12.3</linkHtml>)].</content> Concomitant use of haloperidol decanoate and CYP3A4 and/or CYP2D6 inhibitors may increase the risk of haloperidol-associated adverse reactions.</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" valign="middle"> Prevention or Management</td>
+                                 <td styleCode="Rrule" valign="middle"> Monitor for signs or symptoms of increased or prolonged pharmacologic effects of haloperidol. Decrease the dosage of haloperidol decanoate as clinically necessary.</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" colspan="2" valign="middle"> <content styleCode="bold">CYP3A4 Inducers</content>
+                                 </td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" valign="middle"> Clinical Impact</td>
+                                 <td styleCode="Rrule" valign="middle"> CYP3A4 inducers decrease haloperidol exposure (haloperidol is a CYP3A4 substrate) <content styleCode="italics">[see Clinical Pharmacology (<linkHtml href="#Section_12.3">12.3</linkHtml>)].</content> Concomitant use of haloperidol decanoate with CYP3A4 inducers may reduce the effectiveness of haloperidol decanoate.</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" valign="middle"> Prevention or Management</td>
+                                 <td styleCode="Rrule" valign="middle"> Monitor patients and if necessary, increase the dosage of haloperidol decanoate.</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" colspan="2" valign="middle"> <content styleCode="bold">CYP2D6 Substrates</content>
+                                 </td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" valign="middle"> Clinical Impact</td>
+                                 <td styleCode="Rrule" valign="middle"> Haloperidol is a CYP2D6 inhibitor. Plasma concentrations of CYP2D6 substrates may increase when they are concomitantly administered with haloperidol decanoate.</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" valign="middle"> Prevention or Management</td>
+                                 <td styleCode="Rrule" valign="middle"> Monitor plasma concentrations of the CYP2D6 substrate, if possible. Consider reducing the dosage of the CYP2D6 substrate, if necessary. Refer to the Prescribing Information of the CYP2D6 substrate.</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" colspan="2" valign="middle"> <content styleCode="bold">Dopaminergic Drugs</content>
+                                 </td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" valign="middle"> Clinical Impact</td>
+                                 <td styleCode="Rrule" valign="middle"> Haloperidol may antagonize the effects of levodopa, dopamine agonists, and other drugs intended to increase dopamine levels.</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" valign="middle"> Prevention or Management</td>
+                                 <td styleCode="Rrule" valign="middle"> Haloperidol decanoate is contraindicated in patients with Parkinson’s disease and dementia with Lewy bodies. For conditions other than Parkinson’s disease and dementia with Lewy bodies, when possible, avoid concomitant use of haloperidol decanoate with dopaminergic drugs <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#Section_5.7">5.7</linkHtml>)].</content>
+                                 </td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" colspan="2" valign="middle"> <content styleCode="bold">Anticholinergic Drugs</content>
+                                 </td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" valign="middle"> Clinical Impact</td>
+                                 <td styleCode="Rrule" valign="middle"> The healthcare provider should keep in mind the possible increase in intraocular pressure when anticholinergic drugs are administered concomitantly with haloperidol decanoate.</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" valign="middle"> Prevention or Management</td>
+                                 <td styleCode="Rrule" valign="middle"> Monitor and manage patients as clinically appropriate.</td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" colspan="2" valign="middle"> <content styleCode="bold">Lithium</content>
+                                 </td>
+                              </tr>
+                              <tr styleCode="Botrule">
+                                 <td styleCode="Lrule Rrule" valign="middle"> Clinical Impact</td>
+                                 <td styleCode="Rrule" valign="middle"> Concomitant use of haloperidol decanoate with lithium may cause an encephalopathic syndrome followed by irreversible brain damage <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#Section_5.12">5.12</linkHtml>)].</content>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Lrule Rrule" valign="middle"> Prevention or Management</td>
+                                 <td styleCode="Rrule" valign="middle"> Monitor patients who concomitantly use haloperidol decanoate with lithium closely for early signs of neurological toxicity, and discontinue haloperidol decanoate or both haloperidol decanoate and lithium promptly if such signs appear.</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <br/>
+                        <paragraph>
+                           <sup>1</sup> See <content styleCode="italics">www.fda.gov/CYPandTransporterInteractingDrugs</content> for examples of CYP3A4 and/or CYP2D6 inhibitors, CYP3A4 inducers, and CYP2D6 substrates.</paragraph>
+                     </text>
+                     <effectiveTime value="20260714"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="Section_8">
+               <id root="9848c2ca-ae17-4119-bec2-0bad279b30b1"/>
+               <code code="43684-0" codeSystem="2.16.840.1.113883.6.1" displayName="USE IN SPECIFIC POPULATIONS SECTION"/>
+               <title>8 USE IN SPECIFIC POPULATIONS</title>
+               <effectiveTime value="20260714"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>• <content styleCode="italics">Pregnancy</content>: Neonates exposed to haloperidol decanoate during the third trimester of pregnancy may develop extrapyramidal and/or withdrawal symptoms (agitation, hypertonia, hypotonia, tremor, somnolence, respiratory distress, and decreased feeding) (<linkHtml href="#Section_8.1">8.1</linkHtml>). <br/> • <content styleCode="italics">Lactation</content>: Monitor breastfed infants for excessive sedation, irritability, poor feeding, abnormal muscle movements, and tremors (<linkHtml href="#Section_8.2">8.2</linkHtml>).</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="Section_8.1">
+                     <id root="6c65d7c3-f318-4312-a4e8-956e87a848e5"/>
+                     <code code="42228-7" codeSystem="2.16.840.1.113883.6.1" displayName="PREGNANCY SECTION"/>
+                     <title>8.1 Pregnancy</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Risk Summary</content> <br/> Available data from published epidemiologic studies of pregnant patients exposed to haloperidol have not established a drug-associated risk of major birth defects or miscarriage. Case reports of limb malformations in neonates have been reported in haloperidol-treated mothers; however, causal relationships were not established in these cases. There are risks to the pregnant patient from untreated schizophrenia, including increased risk of relapse, hospitalization, and suicide (<content styleCode="italics">see Clinical Considerations</content>). Haloperidol decanoate should be used during pregnancy only if the potential benefit justifies the potential risk to the fetus.<br/>
+                           <br/> Neonates exposed to antipsychotic drugs during the third trimester of pregnancy are at risk for extrapyramidal and/or withdrawal symptoms (agitation, hypertonia, hypotonia, tremor, somnolence, respiratory distress, and decreased feeding) following delivery (<content styleCode="italics">see Clinical Considerations</content>). <br/>
+                           <br/> The estimated background risk of major birth defects and miscarriage in patients with schizophrenia is unknown. All pregnancies have a background risk of birth defect, loss, or other adverse outcomes. In the U.S. general population, the estimated background risk of major birth defects and miscarriage in clinically recognized pregnancies is 2 to 4% and 15 to 20%, respectively.<br/>
+                           <br/>
+                           <content styleCode="underline">Clinical </content>
+                           <content styleCode="underline">Considerations</content> <br/>
+                           <content styleCode="italics">Disease-associated Maternal and/or Embryo/Fetal Risk: </content>There is risk to the pregnant patient from untreated schizophrenia, including increased risk of schizophrenia relapse, hospitalization, and suicide. Schizophrenia is associated with increased adverse perinatal outcomes, including preterm birth. It is not known if this is a direct result of the illness or other comorbid factors. </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Fetal/Neonatal Adverse Reactions</content>: Extrapyramidal and/or withdrawal symptoms, including agitation, hypertonia, hypotonia, tremor, somnolence, respiratory distress and decreased feeding have been reported in neonates who were exposed to antipsychotic drugs during the third trimester of pregnancy. Transient neonatal dyskinesia has also been reported. Some neonates recovered within hours or days without specific treatment; others required prolonged hospitalization. Monitor neonates for extrapyramidal, withdrawal, and dyskinesia symptoms and manage symptoms appropriately. <br/>
+                           <br/>
+                           <content styleCode="underline">Data</content> <br/>
+                           <content styleCode="italics">Animal Data:</content> <br/> Rats or rabbits administered oral haloperidol at doses of 0.5 to 7.5 mg/kg (approximately 0.2 to 7 times the maximum recommended human oral dose (MRHD) of 20 mg/day based on mg/m<sup>2</sup> body surface area) showed an increase in incidence of resorption, reduced fertility, delayed delivery, and pup mortality. No fetal abnormalities were observed at these doses in rats or rabbits. Cleft palate has been observed in mice administered oral haloperidol at a dose of 0.5 mg/kg, which is approximately 0.1 times the oral MRHD based on mg/m<sup>2</sup> body surface area. </paragraph>
+                        <br/>
+                     </text>
+                     <effectiveTime value="20260714"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="Section_8.2">
+                     <id root="53eee7a0-64da-4cef-abff-447b10e229b5"/>
+                     <code code="77290-5" codeSystem="2.16.840.1.113883.6.1" displayName="LACTATION SECTION"/>
+                     <title>8.2 Lactation</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Risk Summary </content>
+                           <br/> Literature reports suggest that haloperidol is detected in human milk of haloperidol-treated mothers with a relative infant dose ranging from 2% to 12%. Haloperidol has also been detected in the plasma and urine of breastfed infants. There has been a report of lethargy, poor feeding, and slowing of motor movements in an infant exposed to haloperidol through human milk. Haloperidol may increase prolactin levels in some patients which can lead to galactorrhea. <br/>
+                           <br/> Monitor infants exposed to haloperidol decanoate via human milk for excessive sedation, irritability, poor feeding, and extrapyramidal symptoms (tremors and abnormal muscle movements). <br/>
+                           <br/> The developmental and health benefits of breastfeeding should be considered along with the mother’s clinical need for haloperidol decanoate and any potential adverse effects on the breastfed child from haloperidol decanoate or from the mother’s underlying condition.</paragraph>
+                        <br/>
+                     </text>
+                     <effectiveTime value="20260714"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="Section_8.3">
+                     <id root="bda7cd88-f1f4-4f9a-83ce-f3aa454afb7a"/>
+                     <code code="77291-3" codeSystem="2.16.840.1.113883.6.1" displayName="FEMALES &amp; MALES OF REPRODUCTIVE POTENTIAL SECTION"/>
+                     <title>8.3 Females and Males of Reproductive Potential</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Infertility </content>
+                           <br/>
+                           <content styleCode="italics">Females</content>: Based on the pharmacologic action of haloperidol (D2 receptor antagonism), treatment with haloperidol decanoate may result in an increase in serum prolactin levels, which may lead to a reduction in fertility in females of reproductive potential. <br/>
+                           <br/>
+                           <content styleCode="italics">Males</content>: Based on animal studies, male fertility may be impaired by treatment with haloperidol<content styleCode="italics"> [see Nonclinical Toxicology (<linkHtml href="#Section_13.1">13.1</linkHtml>)]. </content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20260714"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="Section_8.4">
+                     <id root="93d4d801-02d5-4f57-91e8-886f96da17ad"/>
+                     <code code="34081-0" codeSystem="2.16.840.1.113883.6.1" displayName="PEDIATRIC USE SECTION"/>
+                     <title>8.4 Pediatric Use</title>
+                     <text>
+                        <paragraph>Safety and effectiveness of haloperidol decanoate have not been established in pediatric patients. </paragraph>
+                     </text>
+                     <effectiveTime value="20260714"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="Section_8.5">
+                     <id root="4a59e7a4-5ca0-4715-9882-2c8573bef766"/>
+                     <code code="34082-8" codeSystem="2.16.840.1.113883.6.1" displayName="GERIATRIC USE SECTION"/>
+                     <title>8.5 Geriatric Use</title>
+                     <text>
+                        <paragraph>Clinical studies of haloperidol decanoate did not include sufficient numbers of patients 65 years of age and older to determine whether they respond differently from younger adult patients. <br/>
+                           <br/> The exposure of haloperidol may be higher in geriatric patients compared to young adult patients. Results from small clinical studies suggest a lower clearance and a longer elimination half-life of haloperidol in geriatric patients<content styleCode="italics"> [see Clinical Pharmacology (<linkHtml href="#Section_12.3">12.3</linkHtml>)].</content> Consider starting at the low end of the recommended dosing range for the first haloperidol decanoate dose in geriatric patients<content styleCode="italics"> [see Dosage and Administration (<linkHtml href="#Section_2.1">2.1</linkHtml>)].</content>
+                           <br/>
+                           <br/> Antipsychotic drugs increase the risk of death in elderly patients with dementia-related psychosis. Haloperidol decanoate is not approved for the treatment of patients with dementia-related psychosis <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#Section_5.1">5.1</linkHtml>)]. </content>
+                           <br/>
+                           <br/> Elderly patients with dementia-related psychosis treated with antipsychotics had an increased risk of cerebrovascular adverse reactions (e.g., stroke, transient ischemic attack) including fatalities, compared to those treated with placebo <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#Section_5.4">5.4</linkHtml>)].</content> <br/>
+                           <br/> Antipsychotic drugs increase the risk of tardive dyskinesia and this risk appears to be highest among the elderly, particularly elderly women<content styleCode="italics"> [see Warnings and Precautions (<linkHtml href="#Section_5.5">5.5</linkHtml>)]. </content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20260714"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="Section_8.6">
+                     <id root="f3fb729b-da75-4b2d-82a3-5a208869c3bd"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="Spl Unclassified Section"/>
+                     <title>8.6 Hepatic Impairment</title>
+                     <text>
+                        <paragraph>Haloperidol is extensively metabolized in the liver, therefore, haloperidol concentrations may be higher in patients with hepatic impairment compared to patients with normal hepatic function. In patients with hepatic impairment, consider starting at the low end of the recommended dosing range for the first haloperidol decanoate dose <content styleCode="italics">[see Dosage and Administration (<linkHtml href="#Section_2.1">2.1</linkHtml>)]. </content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20260714"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="Section_10">
+               <id root="d72fdca9-8707-49c7-8117-3710008e6ea8"/>
+               <code code="34088-5" codeSystem="2.16.840.1.113883.6.1" displayName="OVERDOSAGE SECTION"/>
+               <title>10 OVERDOSAGE</title>
+               <text>
+                  <paragraph>Reported overdose signs and symptoms are those resulting from an exaggeration of the drug’s known pharmacologic effects (e.g., drowsiness and sedation, tachycardia and hypotension) and adverse reactions, the most prominent of which would be: 1) severe extrapyramidal symptoms, 2) hypotension, or 3) sedation. Patients may appear comatose with respiratory depression and hypotension which could be severe enough to produce a shock-like state. Extrapyramidal reactions may be manifested by muscular weakness or rigidity and a generalized or localized tremor, as demonstrated by the akinetic or agitans types, respectively. The risk of QTc interval prolongation and torsade de pointes should be considered<content styleCode="italics"> [see Adverse Reactions (<linkHtml href="#Section_6.2">6.2</linkHtml>)].</content>
+                     <br/>
+                     <br/>
+                     <content styleCode="underline">Management of Overdose </content>
+                     <br/> There is no specific antidote for a haloperidol overdose. <br/> • Should hypotension occur and a vasopressor be required, epinephrine must not be used since haloperidol decanoate may block its vasopressor activity, and paradoxical further lowering of the blood pressure may occur. Instead, metaraminol, phenylephrine or norepinephrine should be used. <br/> • In case of severe extrapyramidal reactions, antiparkinson drugs should be administered, and should be continued for several weeks, and then withdrawn gradually as extrapyramidal symptoms may emerge if discontinued abruptly. <br/> • Monitor ECG and vital signs for signs of QTc interval prolongation or dysrhythmias and continue monitoring until the dysrhythmias resolve and the haloperidol-induced QTc interval prolongation resolves. <br/> • Dialysis is not recommended in the treatment of overdose because it removes only very small amounts of haloperidol.<br/>
+                     <br/> Consider contacting the Poison Help line (1-800-222-1222) or a medical toxicologist for additional overdose management recommendations. </paragraph>
+                  <br/>
+               </text>
+               <effectiveTime value="20260714"/>
+            </section>
+         </component>
+         <component>
+            <section ID="Section_11">
+               <id root="01435812-a842-41c0-be94-0590adade9ab"/>
+               <code code="34089-3" codeSystem="2.16.840.1.113883.6.1" displayName="DESCRIPTION SECTION"/>
+               <title>11 DESCRIPTION</title>
+               <text>
+                  <paragraph>Haloperidol decanoate, USP is the decanoate ester of haloperidol, for intramuscular use. Haloperidol is a typical antipsychotic. The structural formula of haloperidol decanoate, USP is 4-(4-chlorophenyl)-1-[4-(4-fluorophenyl)-4-oxobutyl] piperidin-4-yl decanoate:</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="MM1"/>
+                  </paragraph>
+                  <paragraph>The molecular formula is C<sub>31</sub>H<sub>41</sub>ClFNO<sub>3</sub> and has a molecular weight of 530.12. Haloperidol decanoate, USP is almost insoluble in water (0.01 mg/mL) but is soluble in most organic solvents. <br/> Each mL of haloperidol decanoate injection contains: <br/> • 50 mg of haloperidol (present as 70.52 mg of haloperidol decanoate, USP) in a sesame oil vehicle, with 1.2% (w/v) benzyl alcohol as a preservative. <br/> • 100 mg of haloperidol (present as 141.04 mg of haloperidol decanoate, USP) in a sesame oil vehicle, with 1.2% (w/v) benzyl alcohol as a preservative.</paragraph>
+               </text>
+               <effectiveTime value="20260714"/>
+               <component>
+                  <observationMedia ID="MM1">
+                     <text>haloperidol-spl-structure</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="haloperidol-spl-structure.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="Section_12">
+               <id root="c9c6db26-8e19-4496-95b3-7edeeaab4074"/>
+               <code code="34090-1" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+               <title>12 CLINICAL PHARMACOLOGY</title>
+               <effectiveTime value="20260714"/>
+               <component>
+                  <section ID="Section_12.1">
+                     <id root="da99aa2e-bffc-4cda-a88a-c178d775b3a6"/>
+                     <code code="43679-0" codeSystem="2.16.840.1.113883.6.1" displayName="MECHANISM OF ACTION SECTION"/>
+                     <title>12.1 Mechanism of Action</title>
+                     <text>
+                        <paragraph>The mechanism of action of haloperidol decanoate for the treatment of schizophrenia in adults is unclear. However, its effect in schizophrenia could be mediated through its activity as an antagonist at central dopamine type 2 receptors. Haloperidol also binds to alpha-1 adrenergic receptors, but with lower affinity, and displays minimal binding to muscarinic cholinergic and histaminergic (H<sub>1</sub>) receptors. </paragraph>
+                     </text>
+                     <effectiveTime value="20260714"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="Section_12.2">
+                     <id root="339ba1f4-ceb1-455e-b648-372f60488f0f"/>
+                     <code code="43681-6" codeSystem="2.16.840.1.113883.6.1" displayName="PHARMACODYNAMICS SECTION"/>
+                     <title>12.2 Pharmacodynamics</title>
+                     <text>
+                        <paragraph>The exposure-response relationship and time course of pharmacodynamic response for the safety and effectiveness of haloperidol have not been fully characterized. </paragraph>
+                     </text>
+                     <effectiveTime value="20260714"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="Section_12.3">
+                     <id root="1f60f267-3df5-4d42-9876-2412db2da0a5"/>
+                     <code code="43682-4" codeSystem="2.16.840.1.113883.6.1" displayName="PHARMACOKINETICS SECTION"/>
+                     <title>12.3 Pharmacokinetics</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Absorption </content>
+                           <br/> The plasma concentrations of haloperidol gradually rise, reaching a peak at about 6 days after the haloperidol decanoate injection, and fall thereafter, with an apparent half-life of about 3 weeks. Steady state plasma concentrations of haloperidol are achieved within 2 to 4 months in patients receiving monthly haloperidol decanoate injections.<br/>
+                           <br/> The relationship between the haloperidol decanoate dosage and plasma haloperidol concentration is roughly linear for dosages below 450 mg (1.5 times the maximum recommended dosage <content styleCode="italics">[see Dosage and Administration (<linkHtml href="#Section_2.1">2.1</linkHtml>)]</content>; however, the pharmacokinetics of haloperidol following intramuscular injections can be quite variable between patients.<br/>
+                           <br/>
+                           <content styleCode="underline">Elimination </content>
+                           <br/>
+                           <content styleCode="italics">Metabolism</content>: Haloperidol is metabolized by several routes. The major pathways are glucuronidation and ketone reduction. The cytochrome P450 enzyme system is also involved, particularly CYP3A4 and, to a lesser extent, CYP2D6. <br/>
+                           <br/>
+                           <content styleCode="italics">Excretion</content>: <br/> Less than 3% of administered haloperidol is eliminated unchanged in the urine. The apparent half-life of haloperidol following intramuscular injection of haloperidol decanoate is about 3 weeks. <br/>
+                           <br/>
+                           <content styleCode="underline">Specific Populations</content> <br/>
+                           <content styleCode="italics">Patients with Hepatic Impairment </content>
+                           <br/> Studies in patients with hepatic impairment have not been conducted. Haloperidol is extensively metabolized in the liver, therefore, haloperidol concentrations may be higher in patients with hepatic impairment compared to patients with normal hepatic function<content styleCode="italics"> [see Use in Specific Populations (<linkHtml href="#Section_8.6">8.6</linkHtml>)]. </content>
+                        </paragraph>
+                        <br/>
+                        <paragraph>
+                           <content styleCode="italics">Geriatric Patients </content>
+                           <br/> Haloperidol plasma concentrations in geriatric patients were higher than in younger adult patients when administered the same dosage. Results from small clinical studies suggest a lower clearance and a longer elimination half-life of haloperidol in geriatric patients. The results are within the observed variability in haloperidol pharmacokinetics <content styleCode="italics">[see Use in Specific Populations (<linkHtml href="#Section_8.5">8.5</linkHtml>)].</content>
+                           <br/>
+                           <br/>
+                           <content styleCode="italics">Patients with Renal Impairment </content>
+                           <br/> Studies in patients with renal impairment have not been conducted. <br/>
+                           <br/>
+                           <content styleCode="underline">Drug Interaction Studies </content>
+                           <br/>
+                           <content styleCode="italics">Ketoconazole and Paroxetine</content> <br/> The haloperidol plasma concentrations increased when ketoconazole (400 mg/day, strong CYP3A4 inhibitor) and paroxetine (20 mg/day, strong CYP2D6 inhibitor) were concomitantly administered with haloperidol <content styleCode="italics">[see Drug Interactions (<linkHtml href="#Section_7.2">7.2</linkHtml>)]. </content>
+                           <br/>
+                           <br/>
+                           <content styleCode="italics">Valproate:</content> Sodium valproate, a drug known to inhibit glucuronidation, does not affect haloperidol plasma concentrations. <br/>
+                           <br/>
+                           <content styleCode="italics">Rifampin</content>: In a study with 12 patients with schizophrenia, concomitant administration of oral haloperidol and rifampin, a strong CYP3A4 inducer, resulted in decreased plasma haloperidol concentrations by a mean of 70% and increased mean scores on the Brief Psychiatric Rating Scale from baseline. In five other patients with schizophrenia treated with oral haloperidol and rifampin, discontinuation of rifampin resulted in a mean 3.3-fold increase in haloperidol concentrations <content styleCode="italics">[see Drug Interactions (<linkHtml href="#Section_7.2">7.2</linkHtml>)]. </content>
+                           <br/>
+                           <br/>
+                           <content styleCode="italics">Carbamazepine</content>: In a study with 11 patients with schizophrenia, concomitant administration of haloperidol and increasing doses of carbamazepine, a CYP3A4 strong inducer, resulted in decreased haloperidol plasma concentrations in a linear manner with increasing carbamazepine concentrations <content styleCode="italics">[see Drug Interactions (<linkHtml href="#Section_7.2">7.2</linkHtml>)].</content>
+                           <br/>
+                           <br/>
+                           <content styleCode="italics">Effect of Haloperidol on Other Drugs </content>
+                           <br/> Haloperidol is an inhibitor of CYP2D6. Plasma concentrations of CYP2D6 substrates may increase when they are concomitantly administered with haloperidol<content styleCode="italics"> [see Drug Interactions (<linkHtml href="#Section_7.2">7.2</linkHtml>)]. </content>
+                        </paragraph>
+                     </text>
+                     <effectiveTime value="20260714"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="Section_13">
+               <id root="327a0535-b840-4970-871d-6a02f87343fc"/>
+               <code code="43680-8" codeSystem="2.16.840.1.113883.6.1" displayName="NONCLINICAL TOXICOLOGY SECTION"/>
+               <title>13 NONCLINICAL TOXICOLOGY</title>
+               <effectiveTime value="20260714"/>
+               <component>
+                  <section ID="Section_13.1">
+                     <id root="bb701a9d-9324-4de5-8cbb-044d36adbcbe"/>
+                     <code code="34083-6" codeSystem="2.16.840.1.113883.6.1" displayName="CARCINOGENESIS &amp; MUTAGENESIS &amp; IMPAIRMENT OF FERTILITY SECTION"/>
+                     <title>13.1 Carcinogenesis, Mutagenesis, and Impairment of Fertility</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Carcinogenesis </content>
+                           <br/> Carcinogenicity studies using oral haloperidol were conducted in Wistar rats (dosed at up to 5 mg/kg daily for 24 months) and in Albino Swiss mice (dosed at up to 5 mg/kg daily for 18 months). <br/>
+                           <br/> • In the rat study, survival was reduced in all haloperidol dose groups, decreasing the number of rats at risk for developing tumors. However, a relatively greater number of rats survived to the end of the study in the high dose haloperidol male and female groups. These haloperidol-treated rats at doses up to approximately 2.5 times the maximum recommended human oral dose (MRHD) of haloperidol of 20 mg/day based on mg/m<sup>2</sup> body surface area did not have a greater incidence of tumors than control-treated rats.<br/>
+                           <br/> • In female mice, there was a statistically significant increase in mammary gland neoplasia and total tumor incidence at haloperidol doses approximately 0.3 and 1.2 times the oral MRHD based on mg/m<sup>2</sup> body surface area and there was statistically significant increase in pituitary gland neoplasia at approximately 1.2 times the oral MRHD. In male mice, no statistically significant differences in incidences of total tumors or specific tumor types were noted. <br/>
+                           <br/> Tissue culture experiments indicate that approximately one-third of human breast cancers are prolactin dependent <content styleCode="italics">in vitro</content>, a factor of potential importance if the prescription of these drugs is contemplated in a patient with a previously detected breast cancer. An increase in mammary neoplasms has been found in rodents after chronic administration of antipsychotic drugs<content styleCode="italics"> [see Warnings and Precautions (<linkHtml href="#Section_5.14">5.14</linkHtml>)]. </content>
+                           <br/>
+                           <br/>
+                           <content styleCode="underline">Mutagenesis </content>
+                           <br/> No mutagenic potential of haloperidol decanoate was found in the Ames Salmonella assay. Negative or inconsistent positive findings have been obtained in <content styleCode="italics">in vitro</content> and <content styleCode="italics">in vivo</content> studies of effects of haloperidol on chromosome structure and number. The available cytogenetic evidence is considered too inconsistent to be conclusive. <br/>
+                           <br/>
+                           <content styleCode="underline">Impairment of Fertility <br/>
+                           </content>Haloperidol was orally administered to male rats at doses of 0.5, 2.5, and 15 mg/kg/day (approximately 0.2 to 7 times the oral MRHD based on mg/m<sup>2</sup> body surface area) for 63 days prior to mating with untreated females. Decreases in mating performance and fertility, as well as markedly decreased motor activity, was observed at seven times the oral MRHD based on mg/m<sup>2</sup> body surface area. The NOAEL of 2.5 mg/kg/day is approximately equal to the oral MRHD based on mg/m<sup>2</sup> body surface area. </paragraph>
+                     </text>
+                     <effectiveTime value="20260714"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="Section_16">
+               <id root="3ed0d757-c5b3-45bd-9fae-e76e67b7af41"/>
+               <code code="34069-5" codeSystem="2.16.840.1.113883.6.1" displayName="HOW SUPPLIED SECTION"/>
+               <title>16 HOW SUPPLIED/STORAGE AND HANDLING</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="underline">How Supplied </content>
+                     <br/> Haloperidol decanoate injection is a clear colorless/pink to yellow amber oily liquid, free from visible foreign material and available as: <br/> • Haloperidol 50 mg/mL (present as haloperidol decanoate, USP) </paragraph>
+                  <table cellspacing="0" cellpadding="0" border="0">
+                     <tbody>
+                        <tr styleCode="Botrule">
+                           <td styleCode="Lrule Rrule" valign="middle">
+                              <content styleCode="bold">NDC </content>
+                           </td>
+                           <td styleCode="Rrule" valign="middle">
+                              <content styleCode="bold"> Haloperidol Decanoate Injection (50 mg/mL)</content>
+                           </td>
+                           <td styleCode="Rrule" valign="middle">
+                              <content styleCode="bold">Package Factor</content> </td>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td styleCode="Lrule Rrule" valign="middle"> 68083-137-10</td>
+                           <td styleCode="Rrule" valign="middle"> 50 mg/mL Single-Dose Vial</td>
+                           <td styleCode="Rrule" valign="middle"> 10 vials per carton</td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Lrule Rrule" valign="middle"> 68083-137-02 </td>
+                           <td styleCode="Rrule" valign="middle"> 250 mg/5 mL (50 mg/mL) Multiple-Dose Vial</td>
+                           <td styleCode="Rrule" valign="middle"> 1 vial per carton</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph> • Haloperidol 100 mg/mL (present as haloperidol decanoate, USP) </paragraph>
+                  <table cellspacing="0" cellpadding="0" border="0">
+                     <tbody>
+                        <tr styleCode="Botrule">
+                           <td styleCode="Lrule Rrule" valign="middle">
+                              <content styleCode="bold">NDC </content>
+                           </td>
+                           <td styleCode="Rrule" valign="middle">
+                              <content styleCode="bold"> Haloperidol Decanoate Injection (100 mg/mL)</content>
+                           </td>
+                           <td styleCode="Rrule" valign="middle">
+                              <content styleCode="bold"> Package Factor</content>
+                           </td>
+                        </tr>
+                        <tr styleCode="Botrule">
+                           <td styleCode="Lrule Rrule" valign="middle"> 68083-138-10 </td>
+                           <td styleCode="Rrule" valign="middle"> 100 mg/mL Single-Dose Vial</td>
+                           <td styleCode="Rrule" valign="middle"> 10 vials per carton</td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Lrule Rrule" valign="middle"> 68083-138-02</td>
+                           <td styleCode="Rrule" valign="middle"> 500 mg/5 mL (100 mg/mL) Multiple-Dose Vial</td>
+                           <td styleCode="Rrule" valign="middle"> 1 vial per carton</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <paragraph>
+                     <br/>
+                     <content styleCode="underline">Storage and Handling</content> <br/> Store at 20° to 25°C (68° to 77°F). Do not refrigerate or freeze. Protect from light. Discard unused portion. <br/>
+                     <br/> Keep in carton until empty. <br/> Keep out of reach of children. <br/> Sterile, Nonpyrogenic. <br/> The container closure is not made with natural rubber latex.</paragraph>
+                  <br/>
+               </text>
+               <effectiveTime value="20260714"/>
+            </section>
+         </component>
+         <component>
+            <section ID="Section_17">
+               <id root="8da53ff1-6f35-45ce-986e-34d9657ab367"/>
+               <code code="34076-0" codeSystem="2.16.840.1.113883.6.1" displayName="INFORMATION FOR PATIENTS SECTION"/>
+               <title>17 PATIENT COUNSELING INFORMATION</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="underline">
+                        <content styleCode="italics"/>Sudden Death, Torsades de Pointes, and QTc Interval Prolongation <br/>
+                     </content>Inform patients that there have been reports of sudden death, torsades de Pointes, and QTc interval prolongation in haloperidol-treated patients. Advise patients or caregivers to seek immediate medical attention if they suspect or develop signs or symptoms associated with the clinical consequences of QTc interval prolongation <content styleCode="italics"> [see Warnings and Precautions (<linkHtml href="#Section_5.2">5.2</linkHtml>)]. </content>
+                     <br/>
+                     <br/>
+                     <content styleCode="underline">Tardive Dyskinesia</content>
+                     <br/> Inform patients that tardive dyskinesia (TD) may develop with haloperidol decanoate injection. Counsel patients on the signs and symptoms of tardive dyskinesia and to contact their healthcare provider if these abnormal movements occur <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#Section_5.5">5.5</linkHtml>)].</content>
+                     <br/>
+                     <br/>
+                     <content styleCode="underline">Neuroleptic Malignant Syndrome</content> <br/> Counsel patients about a potentially fatal adverse reaction, Neuroleptic Malignant Syndrome (NMS), that has been reported with administration of antipsychotic drugs. Advise patients, family members, or caregivers to contact the health care provider or to report to the emergency room if they experience signs and symptoms of NMS <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#Section_5.6">5.6</linkHtml>)].<br/>
+                     </content>
+                     <br/>
+                     <content styleCode="underline">Hypersensitivity Reactions </content>
+                     <br/> Inform patients of the potential risk of hypersensitivity reactions. Advise patients to stop taking haloperidol decanoate injection and seek immediate attention if signs or symptoms of a hypersensitivity reaction occur <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#Section_5.9">5.9</linkHtml>)]. </content>
+                     <br/>
+                     <br/>
+                     <content styleCode="underline">Falls </content>
+                     <br/> Inform patients that haloperidol decanoate injection can cause somnolence, orthostatic hypotension, motor instability and sensory abnormality that may lead to falls. Advise patients to notify their healthcare provider if any of these symptoms occur <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#Section_5.10">5.10</linkHtml>)]. </content>
+                     <br/>
+                     <br/>
+                     <content styleCode="underline">Potential for Cognitive and Motor Impairment </content>
+                     <br/> Inform patients of the risk and advise them to not drive a motor vehicle or operate hazardous machinery until they are reasonably certain that treatment with haloperidol decanoate injection does not impair their cognitive and motor functions<content styleCode="italics"> [see Warnings and Precautions (<linkHtml href="#Section_5.11">5.11</linkHtml>)]. </content>
+                     <br/>
+                     <br/>
+                     <content styleCode="underline">Leukopenia/Neutropenia </content>
+                     <br/> Advise patients with a pre-existing low WBC or a history of drug induced leukopenia or neutropenia that they should have their CBC monitored while taking haloperidol decanoate injection <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#Section_5.13">5.13</linkHtml>)]. </content>
+                     <br/>
+                     <br/>
+                     <content styleCode="underline">Hyperprolactinemia </content>
+                     <br/> Counsel patients on signs and symptoms of hyperprolactinemia that may be associated with chronic use of haloperidol decanoate injection. Advise the patients to seek medical attention if they experience any of the following: amenorrhea, galactorrhea, erectile dysfunction or gynecomastia <content styleCode="italics">[see Warnings and Precautions (<linkHtml href="#Section_5.14">5.14</linkHtml>)]. </content>
+                     <br/>
+                     <br/>
+                     <content styleCode="underline">Pregnancy </content>
+                     <br/> Advise pregnant patients to notify their health care provider if they become pregnant or intend to become pregnant during treatment with haloperidol decanoate injection. Advise patients that haloperidol decanoate exposure during the third trimester of pregnancy may cause adverse effects in the neonate, including agitation, hypertonia, hypotonia, tremor, somnolence, respiratory distress, and decreased feeding <content styleCode="italics">[see Use in Specific Populations (<linkHtml href="#Section_8.1">8.1</linkHtml>)]. </content>
+                     <br/>
+                     <br/>
+                     <content styleCode="underline">Lactation </content>
+                     <br/> Advise breastfeeding patients using haloperidol decanoate injection to monitor infants for excess sedation, irritability, poor feeding, and extrapyramidal symptoms (tremors and abnormal muscle movements) and to seek medical care if they notice these signs <content styleCode="italics">[see Use in Specific Populations (<linkHtml href="#Section_8.2">8.2</linkHtml>)]. </content>
+                     <br/>
+                     <br/>
+                     <content styleCode="underline">Infertility</content>
+                     <br/> Advise females and males of reproductive potential that haloperidol decanoate injection may impair fertility due to an increase in serum prolactin levels <content styleCode="italics">[see Use in Specific Populations (<linkHtml href="#Section_8.3">8.3</linkHtml>)].</content>
+                     <br/>
+                     <br/>
+                     <content styleCode="underline">Drug Interactions <br/>
+                     </content>Advise patients to inform their health care provider before starting or discontinuing a prescription drug, nonprescription drug, or supplement<content styleCode="italics"> [see Warnings and Precautions (<linkHtml href="#Section_5.2">5.2</linkHtml>) and Drug Interactions (<linkHtml href="#Section_7">7</linkHtml>)]. </content>
+                  </paragraph>
+                  <br/>
+                  <paragraph>Brands listed are the trademarks of their respective owners.</paragraph>
+                  <br/>
+                  <paragraph> Manufactured by: <br/>
+                     <content styleCode="bold">
+                        <renderMultiMedia referencedObject="MM2"/>Gland Pharma Limited </content>
+                     <br/> D.P.Pally, Dundigal Post, <br/> Hyderabad - 500 043, India. <br/>
+                     <br/> Revised: 07/2026<br/>
+                     <br/> </paragraph>
+                  <br/>
+               </text>
+               <effectiveTime value="20260714"/>
+               <component>
+                  <observationMedia ID="MM2">
+                     <text>haloperidol-gland-logo</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="haloperidol-gland-logo.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="Section_19">
+               <id root="65817810-e4c7-45ee-97c2-b9cdcca6eedc"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PACKAGE LABEL.PRINCIPAL DISPLAY PANEL- 50 mg/mL</title>
+               <text>
+                  <paragraph>NDC 68083-<content styleCode="bold">137</content>-10          10 x 1 mL Single-Dose Vials<br/>
+                     <content styleCode="bold">Haloperidol Decanoate Injection </content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">50 mg/mL*</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">For Intramuscular Use Only</content>
+                     <br/> Sterile          Rx only</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="MM3"/>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold"> </content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">PACKAGE LABEL.PRINCIPAL DISPLAY PANEL - 100 mg/mL</content>
+                  </paragraph>
+                  <paragraph>NDC 68083-<content styleCode="bold">138</content>-10          10 x 1 mL Single-Dose Vials</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Haloperidol </content>
+                     <content styleCode="bold">Decanoate Injection</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">100 mg/mL*</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">For Intramuscular </content>
+                     <content styleCode="bold">Use Only</content>
+                  </paragraph>
+                  <paragraph>Sterile        Rx only</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="MM4"/>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold"> </content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">PACKAGE LABEL.PRINCIPAL DISPLAY PANEL - 250 mg/5 mL</content>
+                  </paragraph>
+                  <paragraph>NDC 68083-<content styleCode="bold">137</content>-02</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Haloperidol </content>
+                     <content styleCode="bold">Decanoate </content>Injection</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">25</content>
+                     <content styleCode="bold">0 mg/5 mL*</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">(50 mg/mL</content>
+                     <content styleCode="bold">)</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">For Intramuscular </content>
+                     <content styleCode="bold">Use Only</content>
+                  </paragraph>
+                  <paragraph>1 x 5 mL Multiple-Dose Vial</paragraph>
+                  <paragraph>Sterile        Rx only</paragraph>
+                  <br/>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="MM5"/>
+                  </paragraph>
+                  <paragraph>   <content styleCode="bold">PACKAGE LABEL.PRINCIPAL DISPLAY PANEL - 500 mg/5 mL</content>
+                  </paragraph>
+                  <br/>
+                  <paragraph>NDC 68083-<content styleCode="bold">138</content>-02</paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Haloperidol Decanoate Injection<br/> 500 mg/5 mL*<br/> (100 mg/mL)</content>
+                     <br/>
+                     <content styleCode="bold">For Intramuscular Use Only</content>
+                     <br/> 1 x 5 mL Multiple-Dose Vial<br/> Sterile       Rx only</paragraph>
+                  <paragraph>
+                     <renderMultiMedia referencedObject="MM6"/>
+                  </paragraph>
+               </text>
+               <effectiveTime value="20260714"/>
+               <component>
+                  <observationMedia ID="MM3">
+                     <text>haloperidol-spl-50-mg-carton</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="haloperidol-spl-50-mg-carton.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM4">
+                     <text>haloperidol-spl-100-mg-carton</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="haloperidol-spl-100-mg-carton.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM5">
+                     <text>haloperidol-spl-250-mg-carton</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="haloperidol-spl-250-mg-carton.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+               <component>
+                  <observationMedia ID="MM6">
+                     <text>haloperidol-spl-500-mg-carton</text>
+                     <value xsi:type="ED" mediaType="image/jpeg">
+                        <reference value="haloperidol-spl-500-mg-carton.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

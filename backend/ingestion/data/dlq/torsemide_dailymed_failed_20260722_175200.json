@@ -1,0 +1,21 @@
+{
+  "error_reason": "Parser returned zero sections — likely corrupt or unreachable label",
+  "failed_at": "2026-07-22T17:52:00.455396Z",
+  "document": {
+    "drug": "Torsemide",
+    "generic_name": "Torsemide",
+    "source": "DailyMed",
+    "source_url": null,
+    "authority": null,
+    "authority_version": null,
+    "drug_revision": null,
+    "country": "US",
+    "version": "3",
+    "effective_date": "2026-06-24",
+    "revision": "41725aa0-b518-4104-9ae3-feed16490c44",
+    "ingested_at": "2026-07-22T17:52:00.449761Z",
+    "retrieved_on": null,
+    "sections": [],
+    "synonyms": []
+  }
+}

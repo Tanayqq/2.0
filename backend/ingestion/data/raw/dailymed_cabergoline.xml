@@ -1,0 +1,1829 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="https://www.accessdata.fda.gov/spl/stylesheet/spl.xsl" type="text/xsl"?>
+<document xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 https://www.accessdata.fda.gov/spl/schema/spl.xsd">
+   <id root="03f16695-e1cd-4d6b-9205-b3d5bf1b7c6c"/>
+   <code code="34391-3" codeSystem="2.16.840.1.113883.6.1" displayName="HUMAN PRESCRIPTION DRUG LABEL"/>
+   <title>These highlights do not include all the information needed to use CABERGOLINE safely and effectively. See full prescribing information for CABERGOLINE. <br/>
+      <br/>CABERGOLINE tablets, for oral use <br/>Initial U.S. Approval: 1996</title>
+   <effectiveTime value="20260630"/>
+   <setId root="e497366b-a124-4d7f-bd45-a883c392d4bb"/>
+   <versionNumber value="12"/>
+   <author>
+      <time/>
+      <assignedEntity>
+         <representedOrganization>
+            <id extension="059295980" root="1.3.6.1.4.1.519.1"/>
+            <name>Mylan Pharmaceuticals Inc.</name>
+            <assignedEntity>
+               <assignedOrganization>
+                  <id extension="113480771" root="1.3.6.1.4.1.519.1"/>
+                  <name>Pfizer Inc</name>
+                  <assignedEntity>
+                     <assignedOrganization>
+                        <id extension="458521908" root="1.3.6.1.4.1.519.1"/>
+                        <name>Pfizer Italia S.r.l.</name>
+                     </assignedOrganization>
+                     <performance>
+                        <actDefinition>
+                           <code code="C25391" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ANALYSIS"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="59762-1005" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                     <performance>
+                        <actDefinition>
+                           <code code="C84732" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="LABEL"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="59762-1005" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                     <performance>
+                        <actDefinition>
+                           <code code="C43360" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="MANUFACTURE"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="59762-1005" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                     <performance>
+                        <actDefinition>
+                           <code code="C84731" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="PACK"/>
+                           <product>
+                              <manufacturedProduct classCode="MANU">
+                                 <manufacturedMaterialKind>
+                                    <code code="59762-1005" codeSystem="2.16.840.1.113883.6.69"/>
+                                 </manufacturedMaterialKind>
+                              </manufacturedProduct>
+                           </product>
+                        </actDefinition>
+                     </performance>
+                  </assignedEntity>
+               </assignedOrganization>
+            </assignedEntity>
+         </representedOrganization>
+      </assignedEntity>
+   </author>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <id root="08d4a53a-635c-4b49-81d6-246abed63e63"/>
+               <code code="48780-1" codeSystem="2.16.840.1.113883.6.1" displayName="SPL product data elements section"/>
+               <effectiveTime value="20221128"/>
+               <subject>
+                  <manufacturedProduct>
+                     <manufacturedProduct>
+                        <code code="59762-1005" codeSystem="2.16.840.1.113883.6.69"/>
+                        <name>Cabergoline</name>
+                        <formCode code="C42998" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="TABLET"/>
+                        <asEntityWithGeneric>
+                           <genericMedicine>
+                              <name>cabergoline</name>
+                           </genericMedicine>
+                        </asEntityWithGeneric>
+                        <ingredient classCode="ACTIB">
+                           <quantity>
+                              <numerator unit="mg" value="0.5"/>
+                              <denominator unit="1" value="1"/>
+                           </quantity>
+                           <ingredientSubstance>
+                              <code code="LL60K9J05T" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>CABERGOLINE</name>
+                              <activeMoiety>
+                                 <activeMoiety>
+                                    <code code="LL60K9J05T" codeSystem="2.16.840.1.113883.4.9"/>
+                                    <name>CABERGOLINE</name>
+                                 </activeMoiety>
+                              </activeMoiety>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="GMW67QNF9C" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>LEUCINE</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <ingredient classCode="IACT">
+                           <ingredientSubstance>
+                              <code code="J2B2A4N98G" codeSystem="2.16.840.1.113883.4.9"/>
+                              <name>LACTOSE, UNSPECIFIED FORM</name>
+                           </ingredientSubstance>
+                        </ingredient>
+                        <asContent>
+                           <quantity>
+                              <numerator unit="1" value="8"/>
+                              <denominator value="1"/>
+                           </quantity>
+                           <containerPackagedProduct>
+                              <code code="59762-1005-1" codeSystem="2.16.840.1.113883.6.69"/>
+                              <formCode code="C43169" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="BOTTLE"/>
+                           </containerPackagedProduct>
+                           <subjectOf>
+                              <characteristic>
+                                 <code code="SPLCMBPRDTP" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                                 <value code="C112160" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Type 0: Not a Combination Product" xsi:type="CV"/>
+                              </characteristic>
+                           </subjectOf>
+                           <subjectOf>
+                              <marketingAct>
+                                 <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                                 <statusCode code="active"/>
+                                 <effectiveTime>
+                                    <low value="20140922"/>
+                                 </effectiveTime>
+                              </marketingAct>
+                           </subjectOf>
+                        </asContent>
+                     </manufacturedProduct>
+                     <subjectOf>
+                        <approval>
+                           <id extension="NDA020664" root="2.16.840.1.113883.3.150"/>
+                           <code code="C73605" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="NDA AUTHORIZED GENERIC"/>
+                           <author>
+                              <territorialAuthority>
+                                 <territory>
+                                    <code code="USA" codeSystem="2.16.840.1.113883.5.28"/>
+                                 </territory>
+                              </territorialAuthority>
+                           </author>
+                        </approval>
+                     </subjectOf>
+                     <subjectOf>
+                        <marketingAct>
+                           <code code="C53292" codeSystem="2.16.840.1.113883.3.26.1.1"/>
+                           <statusCode code="active"/>
+                           <effectiveTime>
+                              <low value="20140922"/>
+                           </effectiveTime>
+                        </marketingAct>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLCOLOR" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48325" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="WHITE" xsi:type="CE">
+                              <originalText/>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSCORE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value value="2" xsi:type="INT"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSHAPE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value code="C48345" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="OVAL" xsi:type="CE">
+                              <originalText>CAPSULE</originalText>
+                           </value>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLSIZE" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value unit="mm" value="8" xsi:type="PQ"/>
+                        </characteristic>
+                     </subjectOf>
+                     <subjectOf>
+                        <characteristic classCode="OBS">
+                           <code code="SPLIMPRINT" codeSystem="2.16.840.1.113883.1.11.19255"/>
+                           <value xsi:type="ST">P;U;700</value>
+                        </characteristic>
+                     </subjectOf>
+                     <consumedIn>
+                        <substanceAdministration>
+                           <routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="ORAL"/>
+                        </substanceAdministration>
+                     </consumedIn>
+                  </manufacturedProduct>
+               </subject>
+            </section>
+         </component>
+         <component>
+            <section ID="S1">
+               <id root="f27a1084-755a-4f71-a7b5-e3c81fb62bf1"/>
+               <code code="34067-9" codeSystem="2.16.840.1.113883.6.1" displayName="INDICATIONS &amp; USAGE SECTION"/>
+               <title>1 INDICATIONS AND USAGE</title>
+               <text>
+                  <paragraph>CABERGOLINE is an ergot derivative indicated for the treatment of hyperprolactinemic disorders, either idiopathic or due to pituitary adenomas in adults.</paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Limitations of Use</content>
+                  </paragraph>
+                  <paragraph>Avoid use of CABERGOLINE for the inhibition or suppression of postpartum physiologic lactation because of the risk of serious adverse reactions <content styleCode="italics">[see <linkHtml href="#S5.4">Warnings and Precautions (5.4)</linkHtml>]</content>.</paragraph>
+               </text>
+               <effectiveTime value="20260618"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>CABERGOLINE is an ergot derivative indicated for the treatment of hyperprolactinemic disorders, either idiopathic or due to pituitary adenomas in adults. (<linkHtml href="#S1">1</linkHtml>)<br/>
+                           <content styleCode="underline">
+                              <br/>Limitations of Use<br/>
+                              <br/>
+                           </content>Avoid use of CABERGOLINE for the inhibition or suppression of postpartum physiologic lactation because of the risk of serious adverse reactions. (<linkHtml href="#S5.4">5.4</linkHtml>)</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="S2">
+               <id root="13bfb530-cab0-4d24-9bf8-703d64d8cba5"/>
+               <code code="34068-7" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE &amp; ADMINISTRATION SECTION"/>
+               <title>2 DOSAGE AND ADMINISTRATION</title>
+               <effectiveTime value="20250421"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered">
+                           <item>
+                              <caption>•</caption>Before initiating CABERGOLINE evaluate for valvular heart disease, including with an echocardiogram. If valvular disease is detected, do not administer CABERGOLINE. (<linkHtml href="#S2.1">2.1</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>Recommended starting dosage of CABERGOLINE is 0.25 mg orally twice weekly. (<linkHtml href="#ID_05df34fe-9b48-4425-8cea-a0e744ab33f5">2.2</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>Titrate CABERGOLINE to achieve normal serum prolactin levels by increasing CABERGOLINE by 0.25 mg orally twice weekly at intervals of no less than 4 weeks. (<linkHtml href="#ID_05df34fe-9b48-4425-8cea-a0e744ab33f5">2.2</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>Maximum recommended dosage is 1 mg orally, twice weekly. (<linkHtml href="#ID_05df34fe-9b48-4425-8cea-a0e744ab33f5">2.2</linkHtml>)</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="S2.1">
+                     <id root="b68a336f-96c1-4e62-bc4d-1091142951cd"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.1 Recommended Evaluation Before Initiating CABERGOLINE</title>
+                     <text>
+                        <paragraph>Before initiating CABERGOLINE evaluate for valvular heart disease, including with an echocardiogram. If valvular disease is detected, do not administer CABERGOLINE <content styleCode="italics">[see <linkHtml href="#S4">Contraindications (4)</linkHtml> and <linkHtml href="#S5.1">Warnings and Precautions (5.1)</linkHtml>]</content>.</paragraph>
+                     </text>
+                     <effectiveTime value="20250421"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_05df34fe-9b48-4425-8cea-a0e744ab33f5">
+                     <id root="e5001a5d-5305-4531-8149-82e55e4f5ed9"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>2.2 Recommended Dosage </title>
+                     <text>
+                        <paragraph>The recommended starting dosage of CABERGOLINE is 0.25 mg orally twice weekly. Titrate CABERGOLINE to achieve normal serum prolactin levels by increasing CABERGOLINE by 0.25 mg orally twice weekly at intervals of no less than 4 weeks. The maximum recommended dosage is 1 mg orally, twice weekly <content styleCode="italics">[see <linkHtml href="#S5.2">Warnings and Precautions (5.2)</linkHtml>]</content>. Administer CABERGOLINE with or without food <content styleCode="italics">[see <linkHtml href="#S12.3">Clinical Pharmacology (12.3)</linkHtml>]</content>.</paragraph>
+                        <paragraph>If CABERGOLINE is discontinued, monitor the serum prolactin level periodically to determine whether CABERGOLINE should be reinstituted.</paragraph>
+                     </text>
+                     <effectiveTime value="20250421"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S3">
+               <id root="be12ad85-0c27-4e9a-81d8-ca2d57dc2e85"/>
+               <code code="43678-2" codeSystem="2.16.840.1.113883.6.1" displayName="DOSAGE FORMS &amp; STRENGTHS SECTION"/>
+               <title>3 DOSAGE FORMS AND STRENGTHS</title>
+               <text>
+                  <paragraph>Tablets: 0.5 mg, white, with functional score, oblong scored on one side with the letter P and the letter U on either side of the breakline, engraved with the number 700 on the opposite side.</paragraph>
+               </text>
+               <effectiveTime value="20250421"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>Tablets: 0.5 mg, white, with functional score. (<linkHtml href="#S3">3</linkHtml>)</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="S4">
+               <id root="03b26fe8-0c70-454f-8b8d-89923a7d3777"/>
+               <code code="34070-3" codeSystem="2.16.840.1.113883.6.1" displayName="CONTRAINDICATIONS SECTION"/>
+               <title>4 CONTRAINDICATIONS</title>
+               <text>
+                  <paragraph>CABERGOLINE is contraindicated in patients with:</paragraph>
+                  <list listType="unordered">
+                     <item>
+                        <caption>•</caption>Uncontrolled hypertension.</item>
+                     <item>
+                        <caption>•</caption>Known hypersensitivity to ergot derivatives.</item>
+                     <item>
+                        <caption>•</caption>History of cardiac valvular disorders, as suggested by anatomical evidence of valvulopathy of any valve, determined by pre-treatment evaluation including echocardiographic demonstration of valve leaflet thickening, valve restriction, or mixed valve restriction-stenosis, or history of pericardial fibrosis <content styleCode="italics">[see <linkHtml href="#S5.1">Warnings and Precautions (5.1)</linkHtml>]</content>.</item>
+                     <item>
+                        <caption>•</caption>History of pleural, pulmonary, or retroperitoneal fibrotic disorders <content styleCode="italics">[see <linkHtml href="#S5.2">Warnings and Precautions (5.2)</linkHtml>]</content>.</item>
+                  </list>
+               </text>
+               <effectiveTime value="20250421"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered">
+                           <item>
+                              <caption>•</caption>Uncontrolled hypertension. (<linkHtml href="#S4">4</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>Known hypersensitivity to ergot derivatives. (<linkHtml href="#S4">4</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>History of cardiac valvular disorders, or pericardial fibrosis. (<linkHtml href="#S5.1">5.1</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>History of pleural, pulmonary, or retroperitoneal fibrotic disorders. (<linkHtml href="#S5.2">5.2</linkHtml>)</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="S5">
+               <id root="93aecd5d-6967-4450-a85f-e810b9ef5452"/>
+               <code code="43685-7" codeSystem="2.16.840.1.113883.6.1" displayName="WARNINGS AND PRECAUTIONS SECTION"/>
+               <title>5 WARNINGS AND PRECAUTIONS</title>
+               <effectiveTime value="20260618"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <list listType="unordered">
+                           <item>
+                              <caption>•</caption>
+                              <content styleCode="underline">Cardiac Valvulopathy and Pericardial Fibrosis</content>: Before initiating CABERGOLINE, perform a cardiovascular evaluation, including echocardiogram, to evaluate for valvular disease. During CABERGOLINE treatment, monitor for the development of valvulopathy with a cardiac echocardiogram at intervals of 6 to 12 months or as clinically indicated and monitor for chest pain and signs and symptoms of heart failure (if heart failure occurs, exclude valvular fibrosis and pericarditis). Consider additional clinical and diagnostic monitoring at baseline and as necessary during CABERGOLINE treatment. Use CABERGOLINE in patients treated with other drugs associated with valvulopathy only if the potential benefit of CABERGOLINE outweighs the risk. Discontinue CABERGOLINE if the patient has a new diagnosis of valvular regurgitation, valvular restriction, valve leaflet thickening, or pericarditis. (<linkHtml href="#S5.1">5.1</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>
+                              <content styleCode="underline">Pleural, Pulmonary and Retroperitoneal Fibrosis</content>: During CABERGOLINE treatment monitor for signs and symptoms of progressive fibrosis, (e.g., pleuro-pulmonary disease, renal impairment, ureteral/abdominal vascular obstruction). Consider clinical and diagnostic monitoring for pleural, pulmonary, and retroperitoneal fibrosis at baseline and as necessary during CABERGOLINE treatment. If pleural, pericardial, retroperitoneal, or pulmonary fibrosis occur, discontinue CABERGOLINE. (<linkHtml href="#S5.2">5.2</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>
+                              <content styleCode="underline">Orthostatic Hypotension</content>: Check blood pressure at baseline and during treatment with CABERGOLINE and monitor for orthostatic hypotension. (<linkHtml href="#S5.3">5.3</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>
+                              <content styleCode="underline">Risks with Use of CABERGOLINE for Postpartum Lactation Inhibition or Suppression</content>: Avoid use of CABERGOLINE for the inhibition or suppression of physiologic lactation. Use of bromocriptine, another dopamine agonist for this unapproved use has been associated with cases of hypertension, stroke, myocardial infarction, seizures, and death. (<linkHtml href="#S5.4">5.4</linkHtml>)</item>
+                           <item>
+                              <caption>•</caption>
+                              <content styleCode="underline">Impulse Control Disorders and Compulsive Behaviors</content>: Specifically ask patients about the development of new or increased gambling urges, sexual urges, uncontrolled spending, or other urges while being treated with CABERGOLINE. Consider dosage reduction or stopping CABERGOLINE if a patient develops such urges while taking CABERGOLINE. (<linkHtml href="#S5.5">5.5</linkHtml>)</item>
+                        </list>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="S5.1">
+                     <id root="a45889fc-1b0c-4685-bd52-9aa0a2c01edb"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.1 Cardiac Valvulopathy and Pericardial Fibrosis</title>
+                     <text>
+                        <paragraph>Before initiating CABERGOLINE, perform a cardiovascular evaluation, including with an echocardiogram, to evaluate for valvular disease. CABERGOLINE is contraindicated in the presence of valvular disease or pericardial fibrosis <content styleCode="italics">[see <linkHtml href="#S4">Contraindications (4)</linkHtml>]</content>.</paragraph>
+                        <paragraph>Cases of valvular and pericardial fibrosis have often manifested as heart failure. Following CABERGOLINE treatment initiation, monitor for the development of valvulopathy with a cardiac echocardiogram at intervals of 6 to 12 months or as clinically indicated with new onset edema, cardiac murmur, dyspnea, or heart failure. During CABERGOLINE treatment, monitor for chest pain and signs and symptoms of heart failure and if heart failure occurs, valvular fibrosis and pericarditis should be excluded. Consider clinical and diagnostic monitoring such as erythrocyte sedimentation rate, serum creatinine measurements, chest-x- ray, and other investigations and cardiac imaging at baseline and as necessary while patients are treated with during CABERGOLINE treatment. Use CABERGOLINE in patients treated with other drugs associated with valvulopathy only if the potential benefit of CABERGOLINE outweighs the risk. </paragraph>
+                        <paragraph>Discontinue CABERGOLINE if the patient has a new diagnosis of valvular regurgitation, valvular restriction, valve leaflet thickening, or pericarditis.</paragraph>
+                        <paragraph>Postmarketing cases of cardiac valvulopathy have been reported in patients who received CABERGOLINE. These cases have generally occurred during administration of high doses of CABERGOLINE (&gt;2 mg/day) for the treatment of Parkinson’s disease (PD) (CABERGOLINE is not approved for the treatment of PD). Cases of cardiac valvulopathy have also been reported in patients who received lower dosages of CABERGOLINE for the treatment of hyperprolactinemic disorders. In a 12-year, multi-country retrospective cohort study, the use of CABERGOLINE for PD was associated with an increased risk of cardiac valvular regurgitation (CVR). Compared to non-ergot-derived dopamine agonists and levodopa, CVR with CABERGOLINE use had an incidence rate per 10,000 person years of 68 (95% CI: 37, 115) versus 10 (95% CI: 5, 19) for non-ergot dopamine agonists and 11 (95% CI: 7, 17) for levodopa.</paragraph>
+                     </text>
+                     <effectiveTime value="20260618"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S5.2">
+                     <id root="fe3a0f1d-c1f9-45b5-8fd8-bcce7519ea24"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.2 Pleural, Pulmonary and Retroperitoneal Fibrosis</title>
+                     <text>
+                        <paragraph>CABERGOLINE is contraindicated in patients with a history of pleural, pulmonary, or retroperitoneal fibrosis. During CABERGOLINE treatment monitor for signs and symptoms of progressive fibrosis, including:</paragraph>
+                        <list listType="unordered">
+                           <item>
+                              <caption>•</caption>Pleuro-pulmonary disease (e.g., dyspnea, shortness of breath, persistent cough, chest pain).</item>
+                           <item>
+                              <caption>•</caption>Renal impairment or ureteral/abdominal vascular obstruction (e.g., pain in the loin/flank, lower limb edema, abdominal masses or tenderness that may indicate retroperitoneal fibrosis).</item>
+                        </list>
+                        <paragraph>Consider clinical and diagnostic monitoring for pleural, pulmonary, and retroperitoneal fibrosis such as with erythrocyte sedimentation rate, serum creatinine measurements, chest-x-ray, and other investigations at baseline and as necessary during CABERGOLINE treatment. If pleural, pericardial, retroperitoneal, or pulmonary fibrosis occur, discontinue CABERGOLINE.</paragraph>
+                        <paragraph>Postmarketing cases of pleural, pulmonary, and retroperitoneal fibrosis have been reported following CABERGOLINE administration. Some reports were in patients previously treated with other ergotinic dopamine agonists. CABERGOLINE-treated patients who developed a pleural effusion or pulmonary fibrosis and subsequently discontinued CABERGOLINE had improvement of their pulmonary symptoms.</paragraph>
+                     </text>
+                     <effectiveTime value="20250925"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S5.3">
+                     <id root="2b4b3155-e807-45d6-b3a4-61e738208a76"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.3 Orthostatic Hypotension</title>
+                     <text>
+                        <paragraph>Check blood pressure at baseline and during treatment with CABERGOLINE and monitor for orthostatic hypotension. Warn patients about the risk of orthostatic hypotension and precautions to take when rising from a supine or sitting position. Instruct patients to report dizziness or lightheadedness with changes in position to their healthcare provider.</paragraph>
+                        <paragraph>CABERGOLINE can cause orthostatic hypotension <content styleCode="italics">[see <linkHtml href="#S6.1">Adverse Reactions (6.1)</linkHtml>]</content>. In a 4-week, placebo-controlled trial in patients with hyperprolactinemic disorders, the percentage of CABERGOLINE-treated patients and placebo-treated patients who developed orthostatic hypotension was 4% and 0%, respectively <content styleCode="italics">[see <linkHtml href="#S6.1">Adverse Reactions (6.1)</linkHtml>]</content>. The risk of orthostatic hypotension is greater in CABERGOLINE-treated patients when taking concomitant drugs that lower blood pressure.</paragraph>
+                     </text>
+                     <effectiveTime value="20250925"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S5.4">
+                     <id root="07aad5b6-53ab-489a-a5ed-2fee89519571"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.4 Risks with Use of CABERGOLINE for Postpartum Lactation Inhibition or Suppression</title>
+                     <text>
+                        <paragraph>Avoid use of CABERGOLINE for the inhibition or suppression of postpartum physiologic lactation because of the risk of serious adverse reactions. Use of bromocriptine, another dopamine agonist for this unapproved use has been associated with cases of hypertension, stroke, myocardial infarction seizures, and death.</paragraph>
+                     </text>
+                     <effectiveTime value="20260618"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S5.5">
+                     <id root="9d95c0a4-afdd-4779-8622-ecf87e44da9c"/>
+                     <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+                     <title>5.5 Impulse Control Disorders and Compulsive Behaviors</title>
+                     <text>
+                        <paragraph>Because patients may not recognize impulse control and compulsive behaviors as abnormal, it is important for health care providers to specifically ask patients about the development of new or increased gambling urges, sexual urges, uncontrolled spending, or other urges while being treated with CABERGOLINE. Consider dosage reduction or stopping CABERGOLINE if a patient develops such urges while taking CABERGOLINE.</paragraph>
+                        <paragraph>Patients can experience intense urges to gamble or to spend money, increased sexual urges, binge eating, and/or other intense urges, and the inability to control these urges while taking one or more drugs that increase central dopaminergic tone, including CABERGOLINE. In some cases, these urges were reported to have stopped when the dosage was reduced, or the drug was stopped. </paragraph>
+                     </text>
+                     <effectiveTime value="20250925"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S6">
+               <id root="35c09d6e-cc35-407d-958d-c59ab7131b6c"/>
+               <code code="34084-4" codeSystem="2.16.840.1.113883.6.1" displayName="ADVERSE REACTIONS SECTION"/>
+               <title>6 ADVERSE REACTIONS</title>
+               <text>
+                  <paragraph>The following clinically significant adverse reactions are described elsewhere in the labeling:</paragraph>
+                  <list listType="unordered">
+                     <item>
+                        <caption>•</caption>Cardiac Valvulopathy and Pericardial Fibrosis <content styleCode="italics">[see <linkHtml href="#S5.1">Warnings and Precautions (5.1)</linkHtml>]</content>.</item>
+                     <item>
+                        <caption>•</caption>Pleural, Retroperitoneal, and Pulmonary Fibrosis <content styleCode="italics">[see <linkHtml href="#S5.2">Warnings and Precautions (5.2)</linkHtml>]</content>.</item>
+                     <item>
+                        <caption>•</caption>Orthostatic Hypotension <content styleCode="italics">[see <linkHtml href="#S5.3">Warnings and Precautions (5.3)</linkHtml>]</content>.</item>
+                     <item>
+                        <caption>•</caption>Impulse Control Disorders and Compulsive Behaviors <content styleCode="italics">[see <linkHtml href="#S5.5">Warnings and Precautions (5.5)</linkHtml>]</content>.</item>
+                  </list>
+               </text>
+               <effectiveTime value="20260618"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>The most common adverse reactions (incidence &gt;10%) are nausea, headache, and dizziness. (<linkHtml href="#S6">6</linkHtml>)<br/>
+                           <br/>
+                           <content styleCode="bold">To report SUSPECTED ADVERSE REACTIONS, contact Viatris at 1-877-446-3679 (1‑877‑4‑INFO‑RX) or FDA at 1-800-FDA-1088 or <content styleCode="italics">
+                                 <linkHtml href="http://www.fda.gov/medwatch">www.fda.gov/medwatch</linkHtml>
+                              </content>. </content>
+                        </paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="S6.1">
+                     <id root="cac19f19-6598-4c39-925a-aad9cf3d46a2"/>
+                     <code code="90374-0" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL TRIALS EXPERIENCE SECTION"/>
+                     <title>6.1 Clinical Trials Experience</title>
+                     <text>
+                        <paragraph>Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice.</paragraph>
+                        <paragraph>The safety of CABERGOLINE has been evaluated in more than 900 patients with hyperprolactinemic disorders. In a 4-week, double-blind, placebo-controlled trial (CABERGOLINE vs. placebo) <content styleCode="italics">[see <linkHtml href="#S14">Clinical Studies (14)</linkHtml>]</content>, the incidence of the most common adverse reactions during the placebo-controlled trial in patients with hyperprolactinemic disorders is presented in Table 1.</paragraph>
+                        <table ID="_RefID0ETKAC" cellpadding="0pt" width="99.94%">
+                           <caption>Table 1. Adverse Reactions (n (%))<footnote ID="_Ref193897941">Adverse reactions that occurred ≥1% in the CABERGOLINE group and frequency more than that reported in the placebo group. </footnote> During the 4-Week, Double-Blind, Placebo-Controlled Trial in Hyperprolactinemic Females</caption>
+                           <col width="46%"/>
+                           <col width="26%"/>
+                           <col width="27%"/>
+                           <tbody>
+                              <tr>
+                                 <td styleCode="Rrule Botrule Lrule Toprule " valign="top"/>
+                                 <td align="center" styleCode="Rrule Botrule Lrule Toprule " valign="top">
+                                    <paragraph>
+                                       <content styleCode="bold">CABERGOLINE</content>
+                                    </paragraph>
+                                    <paragraph>
+                                       <content styleCode="bold">(n=168)</content>
+                                    </paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Botrule Lrule Toprule " valign="top">
+                                    <paragraph>
+                                       <content styleCode="bold">Placebo</content>
+                                    </paragraph>
+                                    <paragraph>
+                                       <content styleCode="bold">(n=20)</content>
+                                    </paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph> Nausea</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>45 (27%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>4 (20%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph> Headache</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>43 (26%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>5 (25%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph> Dizziness</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>25 (15%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>1 (5%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph> Constipation</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>16 (10%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>0%</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph> Fatigue</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>12 (7%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>0%</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph> Postural hypotension</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>6 (4%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>0%</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph> Dyspepsia</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>4 (2%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>0%</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph> Vomiting</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>4 (2%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>0%</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph> Nervousness</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>4 (2%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>0%</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph> Vertigo</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>2 (1%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>0%</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph> Paresthesia</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>2 (1%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>0%</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph> Breast pain</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>2 (1%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>0%</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="top">
+                                    <paragraph> Dysmenorrhea</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>2 (1%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>0%</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Botrule Lrule Toprule " valign="top">
+                                    <paragraph> Abnormal vision</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Botrule Lrule Toprule " valign="top">
+                                    <paragraph>2 (1%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Botrule Lrule Toprule " valign="top">
+                                    <paragraph>0%</paragraph>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>In the 8-week, double-blind period of the comparative trial with bromocriptine, 2% (4/221) of CABERGOLINE-treated patients (0.5 mg twice weekly) discontinued treatment because of an adverse event and 6% (14/231) of bromocriptine-treated patients (at a dose of 2.5 mg twice daily) discontinued treatment because of an adverse event. The most common reasons for CABERGOLINE discontinuation were headache, nausea, and vomiting (3, 2, and 2 patients, respectively). The incidence of the most common adverse events during the double-blind period of the comparative trial with bromocriptine is presented in Table 2.</paragraph>
+                        <table width="100%">
+                           <caption>Table 2. Adverse Events<footnote ID="_Ref193984305">Adverse events reported ≥1% in the CABERGOLINE group. Abbreviation: n=number of patients.</footnote> During the 8-Week, Double-Blind Period of the Comparative Trial in Hyperprolactinemic Females</caption>
+                           <col width="42%"/>
+                           <col width="26%"/>
+                           <col width="32%"/>
+                           <tbody>
+                              <tr>
+                                 <td styleCode="Rrule Botrule Lrule Toprule " valign="bottom"/>
+                                 <td align="center" styleCode="Rrule Botrule Lrule Toprule " valign="top">
+                                    <paragraph>
+                                       <content styleCode="bold">CABERGOLINE</content>
+                                    </paragraph>
+                                    <paragraph>
+                                       <content styleCode="bold">(n=221)</content>
+                                    </paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Botrule Lrule Toprule " valign="top">
+                                    <paragraph>
+                                       <content styleCode="bold">Bromocriptine</content>
+                                    </paragraph>
+                                    <paragraph>
+                                       <content styleCode="bold">(n=231)</content>
+                                    </paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Nausea</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>63 (29%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>100 (43%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Headache</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>58 (26%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>62 (27%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Dizziness</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>38 (17%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>42 (18%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Constipation</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>15 (7%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>21 (9%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Asthenia</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>13 (6%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>15 (6%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Abdominal pain</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>12 (5%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>19 (8%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Dyspepsia</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>11 (5%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>16 (7%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Fatigue</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>10 (5%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>18 (8%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Vertigo</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>9 (4%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>10 (4%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Vomiting</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>9 (4%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>16 (7%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Depression</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>7 (3%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>5 (2%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Hot flashes</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>6 (3%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>3 (1%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Breast pain</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>5 (2%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>8 (3%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Dry mouth</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>5 (2%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>2 (1%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Paresthesia</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>5 (2%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>6 (3%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Somnolence</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>5 (2%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>5 (2%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Diarrhea</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>4 (2%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>7 (3%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Flatulence</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>4 (2%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>3 (1%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Pain</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>4 (2%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>6 (3%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Acne</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>3 (1%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>0%</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Anorexia</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>3 (1%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>3 (1%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Anxiety</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>3 (1%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>3 (1%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Hypotension</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>3 (1%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>4 (2%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Insomnia</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>3 (1%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>2 (1%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Syncope</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>3 (1%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>3 (1%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Abnormal vision</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>2 (1%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>2 (1%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Arthralgia</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>2 (1%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>0%</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Dependent edema</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>2 (1%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>1 (&lt;1%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Dysmenorrhea</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>2 (1%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>1 (&lt;1%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Impaired concentration</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>2 (1%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>1 (&lt;1%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Influenza-like symptoms</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>2 (1%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>0%</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Malaise</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>2 (1%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>0%</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Nervousness</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>2 (1%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>5 (2%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Palpitation</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>2 (1%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>5 (2%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Periorbital edema</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>2 (1%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>2 (1%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Peripheral edema</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>2 (1%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>1 (&lt;1%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Pruritus</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>2 (1%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>1 (&lt;1%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Rhinitis</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>2 (1%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>9 (4%)</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Lrule Botrule " valign="bottom">
+                                    <paragraph> Throat irritation</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>2 (1%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                                    <paragraph>0%</paragraph>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td styleCode="Rrule Botrule Lrule Toprule " valign="bottom">
+                                    <paragraph> Toothache</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Botrule Lrule Toprule " valign="top">
+                                    <paragraph>2 (1%)</paragraph>
+                                 </td>
+                                 <td align="center" styleCode="Rrule Botrule Lrule Toprule " valign="top">
+                                    <paragraph>0%</paragraph>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        <paragraph>Events that were reported at an incidence of &lt;1% in the clinical studies follow:</paragraph>
+                        <list listType="unordered">
+                           <item>
+                              <caption>•</caption>
+                              <content styleCode="underline">Body As a Whole:</content> facial edema, influenza-like symptoms, malaise </item>
+                           <item>
+                              <caption>•</caption>
+                              <content styleCode="underline">Cardiovascular System:</content> hypotension, syncope, palpitations </item>
+                           <item>
+                              <caption>•</caption>
+                              <content styleCode="underline">Digestive System:</content> dry mouth, flatulence, diarrhea, anorexia </item>
+                           <item>
+                              <caption>•</caption>
+                              <content styleCode="underline">Metabolic and Nutritional System:</content> weight loss, weight gain</item>
+                           <item>
+                              <caption>•</caption>
+                              <content styleCode="underline">Nervous System:</content> somnolence, nervousness, paresthesia, insomnia, anxiety </item>
+                           <item>
+                              <caption>•</caption>
+                              <content styleCode="underline">Respiratory System:</content> nasal stuffiness, epistaxis </item>
+                           <item>
+                              <caption>•</caption>
+                              <content styleCode="underline">Skin and Appendages:</content> acne, pruritus</item>
+                           <item>
+                              <caption>•</caption>
+                              <content styleCode="underline">Special Senses:</content> abnormal vision</item>
+                           <item>
+                              <caption>•</caption>
+                              <content styleCode="underline">Urogenital System:</content> dysmenorrhea, increased libido</item>
+                        </list>
+                     </text>
+                     <effectiveTime value="20250421"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S6.2">
+                     <id root="771a6786-ee08-432e-8758-21c2f21df26b"/>
+                     <code code="90375-7" codeSystem="2.16.840.1.113883.6.1" displayName="POSTMARKETING EXPERIENCE SECTION"/>
+                     <title>6.2 Postmarketing Experience</title>
+                     <text>
+                        <paragraph>The following adverse reactions have been identified during post-approval use of CABERGOLINE. Because these reactions are reported voluntarily from a population of uncertain size, it is not always possible to reliably estimate their frequency or establish a causal relationship to drug exposure.</paragraph>
+                        <list listType="unordered">
+                           <item>
+                              <caption>•</caption>
+                              <content styleCode="underline">Psychiatric:</content> impulse control disorders and compulsive behaviors including, hypersexuality, increased libido, pathological gambling; psychotic disorder, aggression</item>
+                           <item>
+                              <caption>•</caption>
+                              <content styleCode="underline">Skin and subcutaneous:</content> alopecia</item>
+                        </list>
+                     </text>
+                     <effectiveTime value="20250421"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S7">
+               <id root="3fe3b98c-6202-4c94-b745-bccd00270aab"/>
+               <code code="34073-7" codeSystem="2.16.840.1.113883.6.1" displayName="DRUG INTERACTIONS SECTION"/>
+               <title>7 DRUG INTERACTIONS</title>
+               <text>
+                  <paragraph>CABERGOLINE, a dopamine receptor agonist, is not recommended for concomitant use with D2-antagonists, such as phenothiazines, butyrophenones, thioxanthenes, or metoclopramide.</paragraph>
+               </text>
+               <effectiveTime value="20250421"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>CABERGOLINE, a dopamine receptor agonist, is not recommended for concomitant use with D2-antagonists, such as phenothiazines, butyrophenones, thioxanthenes, or metoclopramide. (<linkHtml href="#S7">7</linkHtml>)</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+            </section>
+         </component>
+         <component>
+            <section ID="S8">
+               <id root="c44da6ca-00eb-4a0f-b779-7e4b73f9c469"/>
+               <code code="43684-0" codeSystem="2.16.840.1.113883.6.1" displayName="USE IN SPECIFIC POPULATIONS SECTION"/>
+               <title>8 USE IN SPECIFIC POPULATIONS</title>
+               <effectiveTime value="20250421"/>
+               <excerpt>
+                  <highlight>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Pregnancy</content>: If conception occurs during CABERGOLINE therapy, discontinue CABERGOLINE if the risks to the mother or fetus outweigh the benefits to the mother. (<linkHtml href="#S8.1">8.1</linkHtml>)</paragraph>
+                     </text>
+                  </highlight>
+               </excerpt>
+               <component>
+                  <section ID="S8.1">
+                     <id root="a3e925f5-4faf-4307-aed7-a9f71c0ded30"/>
+                     <code code="42228-7" codeSystem="2.16.840.1.113883.6.1" displayName="PREGNANCY SECTION"/>
+                     <title>8.1 Pregnancy</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Risk Summary</content>
+                        </paragraph>
+                        <paragraph>If conception occurs during CABERGOLINE therapy, discontinue CABERGOLINE if the risks to the mother or fetus outweigh the benefits to the mother. There are risks to the mother associated with the use of CABERGOLINE (<content styleCode="italics">see <linkHtml href="#refclinicalconsiderations">Clinical Considerations</linkHtml>
+                           </content>).</paragraph>
+                        <paragraph>The estimated background risk of major birth defects and miscarriage in patients with hyperprolactinemic disorders, either idiopathic or due to pituitary adenomas is unknown. All pregnancies have a risk of birth defect, loss, or other adverse outcomes. In the U.S. general population, the estimated background risk of major birth defects and miscarriage in clinically recognized pregnancies is 2% to 4% and 15% to 20%, respectively.</paragraph>
+                        <paragraph ID="refclinicalconsiderations">
+                           <content styleCode="underline">Clinical Considerations</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Maternal Adverse Reactions:</content> In general, avoid use of dopamine agonists, including CABERGOLINE, during pregnancy and the postpartum period. The risks of CABERGOLINE use increase in pregnant females with pregnancy-induced hypertension, preeclampsia, and eclampsia.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Data</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Human Data:</content> Published case reports have not reported a clear association with CABERGOLINE and major birth defects, miscarriage, or adverse fetal outcomes when CABERGOLINE was used during early pregnancy. However, these case reports cannot definitely establish the absence of CABERGOLINE-associated risk.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Animal Data:</content> Embryo-fetal development studies have been performed with cabergoline administered by oral gavage in mice, rats, and rabbits:</paragraph>
+                        <list listType="unordered">
+                           <item>
+                              <caption>•</caption>There were no teratogenic effects in the presence of maternal toxicity in mice given cabergoline at doses up to 8 mg/kg/day (approximately 55 times the maximum recommended human dose based on body surface area) during the period of organogenesis.</item>
+                           <item>
+                              <caption>•</caption>A dose of 0.012 mg/kg/day (approximately 0.14 times the maximum recommended human dose) administered during the period of organogenesis in rats caused an increase in post-implantation loss. This finding is likely due to the role of prolactin in implantation in rats and is not thought to be relevant to humans. </item>
+                           <item>
+                              <caption>•</caption>At doses of 0.5 mg/kg/day (approximately 19 times the maximum recommended human dose) administered during the period of organogenesis in rabbits, cabergoline caused maternal toxicity characterized by a loss of body weight and decreased food consumption. Doses of 4 mg/kg/day (approximately 150 times the maximum recommended human dose) administered during the period of organogenesis in the rabbit caused an increased occurrence of various malformations. However, in another study in rabbits, no treatment-related malformations or embryofetal toxicity were observed at doses up to 8 mg/kg/day (approximately 300 times the maximum recommended human dose).</item>
+                        </list>
+                     </text>
+                     <effectiveTime value="20250421"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S8.2">
+                     <id root="85a93950-3053-4b64-9753-8a6a6cbca1de"/>
+                     <code code="77290-5" codeSystem="2.16.840.1.113883.6.1" displayName="LACTATION SECTION"/>
+                     <title>8.2 Lactation</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Risk Summary</content>
+                        </paragraph>
+                        <paragraph>CABERGOLINE is not recommended in postpartum women who are breastfeeding or who are planning to breastfeed. Avoid use of CABERGOLINE for the inhibition or suppression of physiologic lactation <content styleCode="italics">[see <linkHtml href="#S1">Indications and Usage (1)</linkHtml> and <linkHtml href="#S5.4">Warnings and Precautions (5.4)</linkHtml>]</content>.</paragraph>
+                     </text>
+                     <effectiveTime value="20250421"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S8.4">
+                     <id root="c7a55dfd-10fd-4a42-a81d-abf90b23ced1"/>
+                     <code code="34081-0" codeSystem="2.16.840.1.113883.6.1" displayName="PEDIATRIC USE SECTION"/>
+                     <title>8.4 Pediatric Use</title>
+                     <text>
+                        <paragraph>Safety and effectiveness of CABERGOLINE in pediatric patients have not been established.</paragraph>
+                     </text>
+                     <effectiveTime value="20250421"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S8.5">
+                     <id root="dae5f33a-ce3c-4944-87e7-4c779520923a"/>
+                     <code code="34082-8" codeSystem="2.16.840.1.113883.6.1" displayName="GERIATRIC USE SECTION"/>
+                     <title>8.5 Geriatric Use</title>
+                     <text>
+                        <paragraph>Clinical studies of CABERGOLINE did not include sufficient numbers of patients 65 years of age and older to determine whether they respond differently from younger adult patients.</paragraph>
+                     </text>
+                     <effectiveTime value="20250421"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="ID_4e11aa55-d2b4-4627-9505-32f8989e6050">
+                     <id root="2aadc5fc-a2eb-41d3-a3ae-83c2b5f8a38e"/>
+                     <code code="88829-7" codeSystem="2.16.840.1.113883.6.1" displayName="HEPATIC IMPAIRMENT SUBSECTION"/>
+                     <title>8.6 Hepatic Impairment </title>
+                     <text>
+                        <paragraph>The use of CABERGOLINE in patients with severe hepatic impairment (HI) (Child-Pugh C) is not recommended. When using CABERGOLINE in patients with moderate HI (Child-Pugh B) increase monitoring of CABERGOLINE-associated adverse reactions. The recommendations for use of CABERGOLINE in patients with mild HI (Child Pugh A) is the same as those with normal hepatic function.</paragraph>
+                        <paragraph>Patients with moderate or severe HI had increased cabergoline exposure <content styleCode="italics">[see <linkHtml href="#S12.3">Clinical Pharmacology (12.3)</linkHtml>]</content>, which may increase the risk of CABERGOLINE-associated adverse reactions.</paragraph>
+                     </text>
+                     <effectiveTime value="20250421"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S10">
+               <id root="efd33ace-2cc9-4d23-b257-75a7827cad48"/>
+               <code code="34088-5" codeSystem="2.16.840.1.113883.6.1" displayName="OVERDOSAGE SECTION"/>
+               <title>10 OVERDOSAGE</title>
+               <text>
+                  <paragraph>Take measures to support blood pressure, if necessary. Consider contacting the Poison Help line (1-800-222-1222) or a medical toxicologist for additional overdose management recommendations.</paragraph>
+               </text>
+               <effectiveTime value="20250421"/>
+            </section>
+         </component>
+         <component>
+            <section ID="S11">
+               <id root="76e7aa97-81d0-45cf-9fcb-3b0f86957d06"/>
+               <code code="34089-3" codeSystem="2.16.840.1.113883.6.1" displayName="DESCRIPTION SECTION"/>
+               <title>11 DESCRIPTION</title>
+               <text>
+                  <paragraph>Cabergoline is an ergot derivative and dopamine receptor agonist. The chemical name for cabergoline is 1-[(6-allylergolin-8ß-yl)-carbonyl]-1-[3-(dimethylamino) propyl]-3-ethylurea. Its empirical formula is C<sub>26</sub>H<sub>37</sub>N<sub>5</sub>O<sub>2</sub>, and its molecular weight is 451.62. The structural formula is as follows</paragraph>
+                  <renderMultiMedia ID="id-1077052417" referencedObject="ID_169fdd07-0ff7-4902-83f8-7631696c7b1b"/>
+                  <paragraph>Cabergoline is a white powder soluble in ethyl alcohol, chloroform, and N, N-dimethylformamide (DMF); slightly soluble in 0.1N hydrochloric acid; very slightly soluble in n-hexane; and insoluble in water.</paragraph>
+                  <paragraph>CABERGOLINE tablets, for oral administration, contain 0.5 mg of cabergoline and the inactive ingredients of leucine, USP, and lactose, NF.</paragraph>
+               </text>
+               <effectiveTime value="20250421"/>
+               <component>
+                  <observationMedia ID="ID_169fdd07-0ff7-4902-83f8-7631696c7b1b">
+                     <text>Structural formula</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="cabergoline-01.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S12">
+               <id root="daa61ad2-a8aa-4336-bee4-032eede827c1"/>
+               <code code="34090-1" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL PHARMACOLOGY SECTION"/>
+               <title>12 CLINICAL PHARMACOLOGY</title>
+               <effectiveTime value="20250421"/>
+               <component>
+                  <section ID="S12.1">
+                     <id root="f853f0fc-81e9-46d1-9bad-550bb141b530"/>
+                     <code code="43679-0" codeSystem="2.16.840.1.113883.6.1" displayName="MECHANISM OF ACTION SECTION"/>
+                     <title>12.1 Mechanism of Action</title>
+                     <text>
+                        <paragraph>Cabergoline is an ergot derivative and dopamine receptor agonist with a high affinity for D2 receptors. Results of <content styleCode="italics">in vitro</content> studies demonstrate that cabergoline exerts a direct inhibitory effect on the secretion of prolactin by rat pituitary lactotrophs. Cabergoline decreased serum prolactin levels in reserpinized rats. Receptor-binding studies indicate that cabergoline has low affinity for dopamine D1, α1- and α2-adrenergic, and 5-HT1- and 5-HT2-serotonin receptors.</paragraph>
+                     </text>
+                     <effectiveTime value="20250421"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S12.2">
+                     <id root="e8ccf918-dbbe-4f50-b59b-7b6c039d6650"/>
+                     <code code="43681-6" codeSystem="2.16.840.1.113883.6.1" displayName="PHARMACODYNAMICS SECTION"/>
+                     <title>12.2 Pharmacodynamics</title>
+                     <text>
+                        <paragraph>The exposure-response relationship and time course of pharmacodynamic response for the safety and effectiveness of CABERGOLINE have not been fully characterized.</paragraph>
+                     </text>
+                     <effectiveTime value="20250421"/>
+                  </section>
+               </component>
+               <component>
+                  <section ID="S12.3">
+                     <id root="7e5dbb27-b65b-4fdc-8a35-f4e42f7bad4a"/>
+                     <code code="43682-4" codeSystem="2.16.840.1.113883.6.1" displayName="PHARMACOKINETICS SECTION"/>
+                     <title>12.3 Pharmacokinetics</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Absorption</content>
+                        </paragraph>
+                        <paragraph>The time to reach maximum cabergoline plasma concentration was 2 to 3 hours after single oral doses of 0.5 mg to 1.5 mg (1.5 times the maximum recommended dose) of CABERGOLINE in healthy subjects. Following dosing of CABERGOLINE between 0.5 mg to 7 mg (7 times the maximum recommended dose), cabergoline plasma levels appeared to be dose-proportional. The absolute bioavailability of cabergoline is unknown. A significant fraction of the administered dose undergoes a first-pass effect.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Effect of Food:</content> High-fat food did not alter the pharmacokinetics of cabergoline <content styleCode="italics">[see <linkHtml href="#ID_05df34fe-9b48-4425-8cea-a0e744ab33f5">Dosage and Administration (2.2)</linkHtml>]</content>.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Distribution</content>
+                        </paragraph>
+                        <paragraph>Protein binding of cabergoline was 40% to 42%.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Elimination</content>
+                        </paragraph>
+                        <paragraph>The elimination half-life of cabergoline estimated from urinary data of 12 healthy subjects ranged between 63 to 69 hours.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Metabolism:</content> Cabergoline is extensively metabolized, predominately via hydrolysis of the acylurea bond or the urea moiety. Hydrolysis of the acylurea or urea moiety abolishes the prolactin-lowering effect of cabergoline, and major metabolites identified thus far do not contribute to the therapeutic effect.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Excretion:</content> After oral dosing of radioactive cabergoline to 5 healthy volunteers, approximately 22% and 60% of the dose was excreted within 20 days in the urine and feces, respectively. Less than 4% of the dose was excreted unchanged in the urine. Nonrenal and renal clearances for cabergoline are about 3.2 L/min and 0.08 L/min, respectively. Urinary excretion in hyperprolactinemic patients was similar. </paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Specific Populations</content>
+                        </paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Patients with Hepatic Impairment:</content>
+                        </paragraph>
+                        <paragraph>In a pharmacokinetic hepatic impairment (HI) study <content styleCode="italics">[see <linkHtml href="#ID_4e11aa55-d2b4-4627-9505-32f8989e6050">Use in Specific Populations (8.6)</linkHtml>]</content>:</paragraph>
+                        <list listType="unordered">
+                           <item>
+                              <caption>•</caption>In 4 CABERGOLINE-treated patients with mild HI (Child-Pugh A), no effect on mean area under the cabergoline plasma concentration-time curve (AUC) was observed.</item>
+                           <item>
+                              <caption>•</caption>In 4 CABERGOLINE-treated patients with moderate HI (Child-Pugh B) there was a 1.5-fold increase in mean cabergoline AUC.</item>
+                           <item>
+                              <caption>•</caption>In 4 CABERGOLINE-treated patients with severe HI (Child-Pugh C) there was a 5.6-fold increase in the mean cabergoline AUC.</item>
+                        </list>
+                        <paragraph>
+                           <content styleCode="italics">Male and Female Patients:</content> Males aged 20 to 34 years were shown to have had higher C<sub>max</sub> than females aged 20 to 27 years) while males aged 66 to 75 years had lower C<sub>max</sub> compared to females aged 66 to 74 years. The clinical significance of the findings is unknown.</paragraph>
+                        <paragraph>
+                           <content styleCode="italics">Patients with Renal Impairment:</content> The pharmacokinetics of cabergoline were not altered in 12 patients with moderate-to-severe renal impairment as assessed by creatinine clearance.</paragraph>
+                     </text>
+                     <effectiveTime value="20250421"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S13">
+               <id root="ea51576c-cccc-4a11-afdc-7b8c85514bf4"/>
+               <code code="43680-8" codeSystem="2.16.840.1.113883.6.1" displayName="NONCLINICAL TOXICOLOGY SECTION"/>
+               <title>13 NONCLINICAL TOXICOLOGY</title>
+               <effectiveTime value="20250421"/>
+               <component>
+                  <section ID="S13.1">
+                     <id root="79bea1cd-9e19-458e-9731-0cf0be8a38b3"/>
+                     <code code="34083-6" codeSystem="2.16.840.1.113883.6.1" displayName="CARCINOGENESIS &amp; MUTAGENESIS &amp; IMPAIRMENT OF FERTILITY SECTION"/>
+                     <title>13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility</title>
+                     <text>
+                        <paragraph>
+                           <content styleCode="underline">Carcinogenesis</content>
+                        </paragraph>
+                        <paragraph>Carcinogenicity studies were conducted in mice and rats with cabergoline given by gavage at doses up to 0.98 mg/kg/day and 0.32 mg/kg/day, respectively. These doses are 7 times and 4 times the maximum recommended human dose calculated on a body surface area basis using total mg/m<sup>2</sup>/week in rodents and mg/m<sup>2</sup>/week for a 50 kg human.</paragraph>
+                        <paragraph>There was a slight increase in the incidence of cervical and uterine leiomyomas and uterine leiomyosarcomas in mice. In rats, there was a slight increase in malignant tumors of the cervix and uterus and interstitial cell adenomas. The occurrence of tumors in female rodents may be related to the prolonged suppression of prolactin secretion because prolactin is needed in rodents for the maintenance of the corpus luteum. In the absence of prolactin, the estrogen/progesterone ratio is increased, thereby increasing the risk for uterine tumors. In male rodents, the decrease in serum prolactin levels was associated with an increase in serum luteinizing hormone, which is thought to be a compensatory effect to maintain testicular steroid synthesis. Since these hormonal mechanisms are thought to be species-specific, the relevance of these tumors to humans is not known.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Mutagenesis</content>
+                        </paragraph>
+                        <paragraph>The mutagenic potential of cabergoline was evaluated and found to be negative in a battery of <content styleCode="italics">in vitro</content> tests. These tests included the bacterial mutation (Ames) test with <content styleCode="italics">Salmonella typhimurium</content>, the gene mutation assay with <content styleCode="italics">Schizosaccharomyces pombe P</content>
+                           <sub>1</sub> and V79 Chinese hamster cells, DNA damage and repair in <content styleCode="italics">Saccharomyces cerevisiae D</content>
+                           <sub>4</sub>, and chromosomal aberrations in human lymphocytes. Cabergoline was also negative in the bone marrow micronucleus test in the mouse.</paragraph>
+                        <paragraph>
+                           <content styleCode="underline">Impairment of Fertility</content>
+                        </paragraph>
+                        <paragraph>In female rats, a daily cabergoline dose of 0.003 mg/kg for 2 weeks prior to mating and throughout the mating period inhibited conception. This dose represents approximately 0.04 times the maximum recommended human dose calculated on a body surface area basis using total mg/m<sup>2</sup>/week in rats and mg/m<sup>2</sup>/week for a 50 kg human. This finding is likely due to the role of prolactin in implantation in rats and is not thought to be relevant to humans.</paragraph>
+                     </text>
+                     <effectiveTime value="20250421"/>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="S14">
+               <id root="f042a917-0689-466a-a9d5-82c5cc77d136"/>
+               <code code="34092-7" codeSystem="2.16.840.1.113883.6.1" displayName="CLINICAL STUDIES SECTION"/>
+               <title>14 CLINICAL STUDIES</title>
+               <text>
+                  <paragraph>The prolactin-lowering efficacy of CABERGOLINE was demonstrated in 647 females with hyperprolactinemic disorders (including 55% microprolactinomas, 7% macroprolactinomas, 3% empty sella syndromes, and 3% idiopathic) in two randomized, double-blind, studies: one 4-week placebo-controlled dose-response study with an 12-month open-label extension (Study 1) and one 8-week active comparator study comparing CABERGOLINE and bromocriptine with 16-week open extension (Study 2). </paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Study 1: 4-Week Placebo-Controlled Dose-Response Study</content>
+                  </paragraph>
+                  <paragraph>Study 1 enrolled 188 non-pregnant, hyperprolactinemic females (these patients had a prolactin level &gt;20 ng/ml (the upper normal reference limit)) with the following hyperprolactinemic etiologies: macroprolactinoma (60%, n=113), idiopathic (36%, n=67) and another etiology (4%, n=8). Patients had a mean age of 32 years (range, 16-46 years of age), 99% were White (n=186), 0.5% were Asian (n=1) and 0.5% were another race (n=1). Patients were randomized one of the following five oral treatments given twice weekly for four weeks (for the CABERGOLINE groups, the first week the CABERGOLINE dosage was lower to reduce the risk of hypotensive reactions):</paragraph>
+                  <list listType="unordered">
+                     <item>
+                        <caption>•</caption>Group 1: placebo twice weekly (n=20),</item>
+                     <item>
+                        <caption>•</caption>Group 2: 0.0625 mg of CABERGOLINE twice weekly for the first week followed by 0.125 mg twice weekly for the next three weeks (n=42)-this dosage is not recommended because this dosage was not effective and results from this group are not presented below <content styleCode="italics">[see <linkHtml href="#ID_05df34fe-9b48-4425-8cea-a0e744ab33f5">Dosage and Administration (2.2)</linkHtml>]</content>,</item>
+                     <item>
+                        <caption>•</caption>Group 3: 0.25 mg of CABERGOLINE twice weekly for the first week followed 0.5 mg twice weekly for the next three weeks (n=42), </item>
+                     <item>
+                        <caption>•</caption>Group 4: 0.375 mg of CABERGOLINE twice weekly for the first week followed 0.75 mg twice weekly for the next three weeks (n=42), and</item>
+                     <item>
+                        <caption>•</caption>Group 5: 0.5 mg of CABERGOLINE twice weekly for the first week followed 1 mg twice weekly for the next three weeks 0.75 mg, (n=42).</item>
+                  </list>
+                  <paragraph>In Study 1, the endpoint was the percentage of patients who achieved a normal serum prolactin level (&lt;20 ng/dL) at the end of the 4-week treatment period. At 4-weeks, 0%, 76%, 74% and 95% of patients in the placebo group (group 1), group 3, group 4, and group 5, achieved normal serum prolactin levels, respectively (p &lt;0.0001 across all the CABERGOLINE groups vs. placebo).</paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Study 2: 8-Week Active Comparator Study</content>
+                  </paragraph>
+                  <paragraph>Study 2 was an 8-week, randomized, double-blind active-control study that compared CABERGOLINE (n=223) with bromocriptine (n=236) for the treatment of hyperprolactinemic amenorrhea. In this study, patients had a mean age of 31 years (range 16 – 46 years of age). Patients were randomized to oral CABERGOLINE 0.5 mg twice weekly or oral bromocriptine 2.5 mg twice daily for eight weeks (there was an attrition rate respectively of 46% and 43%, in the CABERGOLINE and bromocriptine groups, respectively). Endpoints included percentage of patients who achieved the following at 8 weeks:</paragraph>
+                  <list listType="unordered">
+                     <item>
+                        <caption>•</caption>A normal serum prolactin level (&lt;20 ng/dL) </item>
+                     <item>
+                        <caption>•</caption>Restoration of menses</item>
+                     <item>
+                        <caption>•</caption>Disappearance of galactorrhea</item>
+                  </list>
+                  <paragraph>In Study 2, at 8 weeks, CABERGOLINE-treated and bromocriptine-treated patients had a normal serum prolactin level (77% and 59%, respectively), restoration of menses (77% and 70% respectively), and disappearance of galactorrhea, (73% and 56%, respectively).</paragraph>
+                  <paragraph>The durability of the efficacy of CABERGOLINE beyond 24 months of therapy has not been established.</paragraph>
+               </text>
+               <effectiveTime value="20250421"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_059D7D09-52B4-49AE-862C-9AE4603528DD">
+               <id root="a0ecc230-308e-4e12-8e80-986a1d5cc4ad"/>
+               <code code="34069-5" codeSystem="2.16.840.1.113883.6.1" displayName="HOW SUPPLIED SECTION"/>
+               <title>16 HOW SUPPLIED/STORAGE AND HANDLING </title>
+               <text>
+                  <paragraph>CABERGOLINE tablets are white, scored, oblong, with functional score on one side with the letter P and the letter U on either side of the breakline, engraved with the number 700 on the opposite side and they are available in the following configuration: 0.5 mg strength, 8-count bottle, and NDC number 59762-1005-1.</paragraph>
+                  <paragraph>Store at controlled room temperature 20°C to 25°C (68°F to 77°F) [see USP]. Store the tablets in the original container.</paragraph>
+               </text>
+               <effectiveTime value="20250421"/>
+            </section>
+         </component>
+         <component>
+            <section ID="S17">
+               <id root="3fac7955-a558-4e24-8568-681ff9bb920f"/>
+               <code code="34076-0" codeSystem="2.16.840.1.113883.6.1" displayName="INFORMATION FOR PATIENTS SECTION"/>
+               <title>17 PATIENT COUNSELING INFORMATION</title>
+               <text>
+                  <paragraph>Advise the patient to read the FDA-approved patient labeling (Patient Information).</paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Fibrotic Conditions</content>
+                  </paragraph>
+                  <paragraph>There is a risk of cardiac valvulopathy, and pericardial, pleural, pulmonary, and retroperitoneal fibrosis with CABERGOLINE treatment. Advise patients to notify their healthcare provider if they develop shortness of breath, chest pain, persistent cough, difficulty with breathing when lying down, or swelling in their extremities <content styleCode="italics">[see <linkHtml href="#S5.1">Warnings and Precautions (5.1)</linkHtml>]</content>.</paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Orthostatic Hypotension</content>
+                  </paragraph>
+                  <paragraph>Warn patients about the risk of orthostatic hypotension and instruct patients to rise slowly from a supine or sitting position. Advise patients to notify their healthcare provider if they develop dizziness or lightheadedness <content styleCode="italics">[see <linkHtml href="#S5.3">Warnings and Precautions (5.3)</linkHtml>]</content>.</paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Impulse Control Disorders and Compulsive Behaviors</content>
+                  </paragraph>
+                  <paragraph>Patients should be alerted to the possibility that patients may experience intense urges to spend money uncontrollably, intense urges to gamble, increased sexual urges, and other intense urges and the inability to control these urges while taking CABERGOLINE. Advise patients to inform their health care provider if they develop new or increased uncontrolled spending, gambling urges, sexual urges, or other urges while being treated with CABERGOLINE <content styleCode="italics">[see <linkHtml href="#S5.5">Warnings and Precautions (5.5)</linkHtml>]</content>.</paragraph>
+                  <paragraph>
+                     <content styleCode="underline">Pregnancy</content>
+                  </paragraph>
+                  <paragraph>Advise patients to notify their health care provider if they suspect they are pregnant, become pregnant, or intend to become pregnant during therapy. A pregnancy test should be done if there is any suspicion of pregnancy and continuation of CABERGOLINE treatment should be discussed with their health care provider <content styleCode="italics">[see <linkHtml href="#S8.1">Use in Specific Populations (8.1)</linkHtml>]</content>.</paragraph>
+               </text>
+               <effectiveTime value="20250421"/>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_4c435dac-064c-4960-94a2-81c0e7d39475">
+               <id root="dd3353fb-7146-4969-a3e4-fcd3f9d29498"/>
+               <code code="42229-5" codeSystem="2.16.840.1.113883.6.1" displayName="SPL UNCLASSIFIED SECTION"/>
+               <text>
+                  <renderMultiMedia ID="id542488058" referencedObject="ID_72dccb37-a7e3-48b5-8b75-a1a2bb82e5f4"/>
+                  <paragraph>LAB-0304-11.0</paragraph>
+               </text>
+               <effectiveTime value="20260618"/>
+               <component>
+                  <observationMedia ID="ID_72dccb37-a7e3-48b5-8b75-a1a2bb82e5f4">
+                     <text>Logo</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="cabergoline-02.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_81fa9721-a990-4273-ad46-34d08c146546">
+               <id root="4faec67d-4975-43b1-9c22-2426d879fa46"/>
+               <code code="42230-3" codeSystem="2.16.840.1.113883.6.1" displayName="SPL PATIENT PACKAGE INSERT SECTION"/>
+               <title>   </title>
+               <text>
+                  <table width="100%">
+                     <col width="33%"/>
+                     <col width="33%"/>
+                     <col width="33%"/>
+                     <tfoot>
+                        <tr>
+                           <td align="left" colspan="3" valign="top">This Patient Information has been approved by the U.S. Food and Drug Administration     Revised: 06/2026</td>
+                        </tr>
+                     </tfoot>
+                     <tbody>
+                        <tr>
+                           <td align="center" colspan="3" styleCode="Rrule Botrule Lrule Toprule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">PATIENT INFORMATION</content>
+                              </paragraph>
+                              <paragraph>
+                                 <content styleCode="bold">CABERGOLINE (ka-BER-goe-leen)</content>
+                              </paragraph>
+                              <paragraph>
+                                 <content styleCode="bold">(cabergoline) tablets</content>
+                              </paragraph>
+                              <paragraph>
+                                 <content styleCode="bold">for oral use</content>
+                              </paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="3" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">What is CABERGOLINE?</content>
+                              </paragraph>
+                              <paragraph>CABERGOLINE is a prescription medicine used to treat a condition called hyperprolactinemia (increased levels of prolactin) in adults.</paragraph>
+                              <paragraph>CABERGOLINE is not for use to prevent or suppress breastfeeding after having given birth (postpartum lactation).</paragraph>
+                              <paragraph>It is not known if CABERGOLINE is safe and effective in children.</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="3" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">Who should not take CABERGOLINE?</content>
+                              </paragraph>
+                              <paragraph>
+                                 <content styleCode="bold">Do not take CABERGOLINE if you:</content>
+                              </paragraph>
+                              <list listType="unordered">
+                                 <item>
+                                    <caption>•</caption>have uncontrolled high blood pressure.</item>
+                                 <item>
+                                    <caption>•</caption>are allergic to medicines called ergot derivatives.</item>
+                                 <item>
+                                    <caption>•</caption>have a history of heart valve disorders.</item>
+                                 <item>
+                                    <caption>•</caption>have a history of fibrosis in your heart, chest, lungs or abdomen.</item>
+                              </list>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="3" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">Before taking CABERGOLINE, tell your health care provider about all of your medical conditions, including if you:</content>
+                              </paragraph>
+                              <list listType="unordered">
+                                 <item>
+                                    <caption>•</caption>have heart problems.</item>
+                                 <item>
+                                    <caption>•</caption>have low blood pressure.</item>
+                                 <item>
+                                    <caption>•</caption>have liver problems.</item>
+                                 <item>
+                                    <caption>•</caption>are pregnant or plan to become pregnant. It is not known if CABERGOLINE will harm your unborn baby. Tell your health care provider if you become pregnant or think you are pregnant during treatment with CABERGOLINE. A pregnancy test should be done if you think you may be pregnant. You and your health care provider should discuss whether to continue treatment with CABERGOLINE.</item>
+                                 <item>
+                                    <caption>•</caption>are breastfeeding or plan to breastfeed. Talk to your health care provider about the best way to feed your baby if you take CABERGOLINE. <content styleCode="bold">Do not breastfeed during treatment while taking CABERGOLINE.</content>
+                                 </item>
+                                 <item>
+                                    <caption>•</caption>
+                                    <content styleCode="bold">Tell your health care provider about all the medicines you take,</content> including prescription and over-the-counter medicines, vitamins, and herbal supplements. CABERGOLINE may affect the way other medicines work, and other medicines may affect the way CABERGOLINE works.</item>
+                              </list>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="3" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">How should I take CABERGOLINE?</content>
+                              </paragraph>
+                              <list listType="unordered">
+                                 <item>
+                                    <caption>•</caption>Take CABERGOLINE exactly how your health care provider tells you to take it.</item>
+                                 <item>
+                                    <caption>•</caption>Your health care provider should check for heart valve problems before starting treatment with CABERGOLINE.</item>
+                                 <item>
+                                    <caption>•</caption>Take CABERGOLINE by mouth 2 times weekly or as directed by your health care provider.</item>
+                                 <item>
+                                    <caption>•</caption>Take CABERGOLINE with or without food.</item>
+                                 <item>
+                                    <caption>•</caption>Your health care provider should check your prolactin levels about every 4 weeks initially, and periodically thereafter, and may change your dose if needed.</item>
+                              </list>
+                              <paragraph>If you take too much CABERGOLINE, call your Poison Help line at 1-800-222-1222 or go to the nearest hospital emergency room right away.</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="3" styleCode="Rrule Lrule Toprule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">What are the possible side effects of CABERGOLINE?</content>
+                              </paragraph>
+                              <paragraph>CABERGOLINE can cause serious side effects, including: </paragraph>
+                              <list listType="unordered">
+                                 <item>
+                                    <caption>•</caption>
+                                    <content styleCode="bold">Heart valve problems and fibrosis (scarring).</content> CABERGOLINE can cause heart valve problems and fibrosis in the heart, chest, lungs or areas of the stomach (abdomen). Call your health care provider right away if you get any of the following signs or symptoms of heart valve problems and fibrosis:<list listType="unordered">
+                                       <item>
+                                          <caption>•</caption>shortness of breath</item>
+                                       <item>
+                                          <caption>•</caption>chest pain</item>
+                                       <item>
+                                          <caption>•</caption>persistent cough</item>
+                                       <item>
+                                          <caption>•</caption>difficulty with breathing when lying down</item>
+                                       <item>
+                                          <caption>•</caption>swelling in the arms or legs</item>
+                                       <item>
+                                          <caption>•</caption>pain in the side (flank)</item>
+                                       <item>
+                                          <caption>•</caption>lump or tenderness in abdomen</item>
+                                    </list>
+                                 </item>
+                                 <item>
+                                    <caption>•</caption>
+                                    <content styleCode="bold">Decreased blood pressure (orthostatic hypotension).</content> You may feel dizzy or lightheaded when you rise too quickly from a sitting or lying position. Talk to your health care provider if you have dizziness or lightheadedness.</item>
+                                 <item>
+                                    <caption>•</caption>
+                                    <content styleCode="bold">Unusual and uncontrollable (compulsive) urges.</content> Some people taking CABERGOLINE have had unusual strong urges to gamble and gambling that cannot be controlled (compulsive gambling), and other compulsive urges including sexual urges, shopping, and eating or binge eating. Talk to your health care provider if you notice that you are having new or unusual strong urges or behaviors. </item>
+                              </list>
+                              <paragraph>
+                                 <content styleCode="bold">The most common side effects of CABERGOLINE include:</content>
+                              </paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td styleCode="Lrule " valign="top">
+                              <paragraph>  ○ nausea</paragraph>
+                           </td>
+                           <td valign="top">
+                              <paragraph>  ○ headache</paragraph>
+                           </td>
+                           <td styleCode="Rrule " valign="top">
+                              <paragraph>  ○ dizziness</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="3" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>These are not all the possible side effects of CABERGOLINE. For more information, ask your health care provider including your pharmacist. Call your health care provider for medical advice about side effects. You may report side effects to FDA at 1-800-FDA-1088.</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="3" styleCode="Rrule Lrule Toprule Botrule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">How should I store CABERGOLINE?</content>
+                              </paragraph>
+                              <list listType="unordered">
+                                 <item>
+                                    <caption>•</caption>Store CABERGOLINE at room temperature between (20°C to 25°C) 68°F to 77°F in the original container.</item>
+                              </list>
+                              <paragraph>Keep CABERGOLINE and all medicines out of the reach of children.</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="3" styleCode="Rrule Lrule Botrule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">General Information about the safe and effective use of CABERGOLINE.</content>
+                              </paragraph>
+                              <paragraph>Medicines are sometimes prescribed for purposes other than those listed in a Patient Information Leaflet. Do not use CABERGOLINE for a condition for which it was not prescribed. Do not give CABERGOLINE to other people, even if they have the same symptoms you have. It may harm them. You can ask your health care provider, including your pharmacist, for information that is written for health care providers.</paragraph>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="3" styleCode="Rrule Botrule Lrule Toprule " valign="top">
+                              <paragraph>
+                                 <content styleCode="bold">What are the ingredients in CABERGOLINE?</content>
+                              </paragraph>
+                              <paragraph>
+                                 <content styleCode="bold">Active ingredient:</content> cabergoline.<br/>
+                                 <content styleCode="bold">Inactive ingredients:</content> leucine, USP and lactose, NF.<br/>
+                                 <br/>
+                              </paragraph>
+                              <renderMultiMedia ID="id256261751" referencedObject="ID_6675c13c-5f91-48ca-94d8-63d9170825df"/>
+                              <paragraph>
+                                 <br/>For more information, call Viatris at 1-877-446-3679 (1-877-4-INFO-RX).<br/>LAB-1617-3.0</paragraph>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </text>
+               <effectiveTime value="20260618"/>
+               <component>
+                  <observationMedia ID="ID_6675c13c-5f91-48ca-94d8-63d9170825df">
+                     <text>Logo</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="cabergoline-03.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_133e34ad-439e-4d0e-80b7-142f67463e49">
+               <id root="a6f47861-0e1d-4be5-a6ec-5611ef15f188"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PRINCIPAL DISPLAY PANEL - 8 Tablet Bottle Label</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">NDC</content> 59762-1005-1<br/>
+                     <content styleCode="bold">8 Tablets</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">GREENSTONE<sup>®</sup> BRAND</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">cabergoline</content>
+                     <br/>
+                     <content styleCode="bold">tablets</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">0.5 mg</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Rx</content> only</paragraph>
+                  <renderMultiMedia ID="id1095" referencedObject="MM3"/>
+               </text>
+               <effectiveTime value="20250421"/>
+               <component>
+                  <observationMedia ID="MM3">
+                     <text>PRINCIPAL DISPLAY PANEL - 8 Tablet Bottle Label</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="cabergoline-04.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section ID="ID_2ed5b266-9028-4b88-af3f-3e934244929f">
+               <id root="c650c633-9fbc-4cfc-a81d-6002108c1f03"/>
+               <code code="51945-4" codeSystem="2.16.840.1.113883.6.1" displayName="PACKAGE LABEL.PRINCIPAL DISPLAY PANEL"/>
+               <title>PRINCIPAL DISPLAY PANEL - 8 Tablet Bottle Carton</title>
+               <text>
+                  <paragraph>
+                     <content styleCode="bold">NDC</content> 59762-1005-1<br/>
+                     <content styleCode="bold">8 Tablets</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">GREENSTONE<sup>®</sup> BRAND</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">cabergoline</content>
+                     <br/>
+                     <content styleCode="bold">tablets</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">0.5 mg</content>
+                  </paragraph>
+                  <paragraph>
+                     <content styleCode="bold">Rx</content> only</paragraph>
+                  <renderMultiMedia ID="id1123" referencedObject="MM4"/>
+               </text>
+               <effectiveTime value="20250421"/>
+               <component>
+                  <observationMedia ID="MM4">
+                     <text>PRINCIPAL DISPLAY PANEL - 8 Tablet Bottle Carton</text>
+                     <value mediaType="image/jpeg" xsi:type="ED">
+                        <reference value="cabergoline-05.jpg"/>
+                     </value>
+                  </observationMedia>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</document>

@@ -1,0 +1,21 @@
+{
+  "error_reason": "Parser returned zero sections — likely corrupt or unreachable label",
+  "failed_at": "2026-07-21T13:28:06.248248Z",
+  "document": {
+    "drug": "Carbimazole",
+    "generic_name": "Carbimazole",
+    "source": "DailyMed",
+    "source_url": null,
+    "authority": null,
+    "authority_version": null,
+    "drug_revision": null,
+    "country": "US",
+    "version": "1",
+    "effective_date": "2025-07-28",
+    "revision": "a6d39e3f-e46a-45ec-9fce-aca5ff418770",
+    "ingested_at": "2026-07-21T13:28:06.247727Z",
+    "retrieved_on": null,
+    "sections": [],
+    "synonyms": []
+  }
+}
