@@ -257,6 +257,21 @@ class QdrantAdapter(VectorDatabaseProtocol):
         except Exception:
             return []
 
+    def search_collection(self, collection_name: str, query_vector: List[float], top_k: int = 5) -> List[ReferenceDocument]:
+        """
+        Searches a specific target collection in Qdrant (e.g. disease_corpus, disease_guidelines, primary_literature, drug_interactions).
+        """
+        try:
+            res = self.client.query_points(
+                collection_name=collection_name,
+                query=query_vector,
+                limit=top_k
+            )
+            return self._map_results(res.points)
+        except Exception as e:
+            return []
+
+
     def _map_results(self, search_result) -> List[ReferenceDocument]:
         documents = []
         for hit in search_result:
@@ -270,4 +285,5 @@ class QdrantAdapter(VectorDatabaseProtocol):
             )
             documents.append(doc)
         return documents
+
 

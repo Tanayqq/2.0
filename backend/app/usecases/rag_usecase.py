@@ -345,6 +345,23 @@ class ProcessClinicalQueryUseCase:
         dense_vec = self.embedding.embed_query(query.question)
         sparse_vec = self.embedding.embed_sparse(query.question)
         
+        # If no single drug was detected (e.g. Disease Chat, Guideline RAG, Primary Literature), query routed collections directly
+        if not drugs_to_fetch:
+            from app.usecases.intent_router import IntentRouter
+            routed = IntentRouter.route_query(query.question, country_context=query.country_context, mode_override=query.mode)
+            target_cols = routed.get("target_collections", ["disease_corpus", "disease_guidelines"])
+            for col in target_cols:
+                if hasattr(self.vector_db, 'search_collection'):
+                    col_docs = self.vector_db.search_collection(col, dense_vec, top_k=5)
+                    for cdoc in col_docs:
+                        cdoc.cross_encoder_score = cdoc.score or 0.88
+                        auth = cdoc.metadata.get("authority", "ADA")
+                        cdoc.metadata["authority_rank"] = AUTHORITY_RANK.get(auth, 95)
+                        cdoc.metadata["retrieval_mode"] = "MULTI_COLLECTION_RAG"
+                        cdoc.metadata["drug_name"] = query.question.strip()
+                        cdoc.metadata["section"] = cdoc.metadata.get("section", "indications")
+                        final_docs.append(cdoc)
+
         for drug in drugs_to_fetch:
             section_statuses[drug] = {}
             for sec in sections_to_fetch:
@@ -443,6 +460,24 @@ class ProcessClinicalQueryUseCase:
                     doc.metadata["authority_rank"] = AUTHORITY_RANK.get(auth, 99)
                     doc.metadata["retrieval_mode"] = "EXACT_SECTION"
                     final_docs.append(doc)
+
+        # Multi-Collection Router Fallback: If no single-drug label chunks were fetched, query routed collections (disease_corpus, disease_guidelines, primary_literature, drug_interactions, drug_labels_india)
+        if not final_docs:
+            from app.usecases.intent_router import IntentRouter
+            routed = IntentRouter.route_query(query.question)
+            target_cols = routed.get("target_collections", ["openfda_labels"])
+            
+            for col in target_cols:
+                if hasattr(self.vector_db, 'search_collection'):
+                    col_docs = self.vector_db.search_collection(col, dense_vec, top_k=5)
+                    for cdoc in col_docs:
+                        cdoc.cross_encoder_score = cdoc.score or 0.88
+                        auth = cdoc.metadata.get("authority", "ADA")
+                        cdoc.metadata["authority_rank"] = AUTHORITY_RANK.get(auth, 95)
+                        cdoc.metadata["retrieval_mode"] = "MULTI_COLLECTION_RAG"
+                        cdoc.metadata["drug_name"] = query.question.strip()
+                        cdoc.metadata["section"] = cdoc.metadata.get("section", "indications")
+                        final_docs.append(cdoc)
 
         # Deduplicate final_docs by UUID
         seen_uuids = set()
