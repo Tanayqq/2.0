@@ -354,7 +354,8 @@ class ProcessClinicalQueryUseCase:
                 if hasattr(self.vector_db, 'search_collection'):
                     col_docs = self.vector_db.search_collection(col, dense_vec, top_k=5)
                     for cdoc in col_docs:
-                        cdoc.cross_encoder_score = cdoc.score or 0.88
+                        cdoc.score = cdoc.score or 0.85
+                        cdoc.cross_encoder_score = 0.95
                         auth = cdoc.metadata.get("authority", "ADA")
                         cdoc.metadata["authority_rank"] = AUTHORITY_RANK.get(auth, 95)
                         cdoc.metadata["retrieval_mode"] = "MULTI_COLLECTION_RAG"
