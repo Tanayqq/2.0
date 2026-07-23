@@ -259,16 +259,28 @@ class QdrantAdapter(VectorDatabaseProtocol):
 
     def search_collection(self, collection_name: str, query_vector: List[float], top_k: int = 5) -> List[ReferenceDocument]:
         """
-        Searches a specific target collection in Qdrant (e.g. disease_corpus, disease_guidelines, primary_literature, drug_interactions).
+        Searches a specific target collection in Qdrant with backward compatibility fallback.
         """
         try:
-            res = self.client.query_points(
+            if hasattr(self.client, 'query_points'):
+                try:
+                    res = self.client.query_points(
+                        collection_name=collection_name,
+                        query=query_vector,
+                        limit=top_k
+                    )
+                    return self._map_results(res.points)
+                except Exception:
+                    pass
+            
+            res = self.client.search(
                 collection_name=collection_name,
-                query=query_vector,
+                query_vector=query_vector,
                 limit=top_k
             )
-            return self._map_results(res.points)
+            return self._map_results(res)
         except Exception as e:
+            logger.error("search_collection_failed", collection=collection_name, error=str(e))
             return []
 
 
