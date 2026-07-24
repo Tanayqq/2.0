@@ -756,21 +756,22 @@ CRITICAL RULES:
    [Pathophysiology, definition, clinical presentation, complications from documents. Use the disease name as heading, NOT any drug name.]
 
    #### Dosing & Administration
-   [Recommended treatments, drug dosing, first-line therapy, step therapy from guideline documents. List specific drug names and doses.]
+   [Recommended treatments, drug dosing, first-line therapy, step therapy from documents. List specific drug names and doses. Extract dosing guidance from any document containing dose or administration instructions.]
 
    #### Contraindications
-   [Specific drug contraindications, absolute contraindications, and avoidance criteria from guideline documents.]
+   [Specific drug contraindications, absolute contraindications, and avoidance criteria from documents.]
 
    #### Warnings
-   [Red flag symptoms, dose-limiting toxicities, special population warnings from guideline documents. Write "Not found in available sources." if no warning text exists.]
+   [Red flag symptoms, dose-limiting toxicities, special population warnings from documents. Write "Not found in available sources." if no warning text exists.]
 
    #### Co-Administration Risks
-   [Drug-drug interactions, combination risks, drugs to avoid in this condition from guideline or interaction documents.]
+   [Drug-drug interactions, combination risks, drugs to avoid in this condition from documents.]
 
 4. DO NOT output any drug name as the ### heading — only the disease/condition name.
 5. NEVER output "DOCUMENT 1" or "Source:" labels.
 6. Extract from ALL documents provided, mapping each fact to the best matching section above.
 7. NO REPETITION. State each factual sentence or clinical recommendation EXACTLY ONCE. Never repeat the same sentence or phrase in a loop.
+8. MULTI-DRUG & SCENARIO DOSING: In scenario queries, if dosing guidelines or tables exist anywhere in context for ANY of the drugs (e.g. Allopurinol, Dapagliflozin), extract and summarize them under #### Dosing & Administration. Only write "Not found in available sources." if zero dosing facts exist.
 """
         else:
             return f"""Context:
