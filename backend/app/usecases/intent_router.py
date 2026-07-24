@@ -12,13 +12,13 @@ class IntentRouter:
     the targeted Qdrant vector collections to query.
     """
     MODE_COLLECTIONS: Dict[ClinicalChatMode, List[str]] = {
-        "DRUG_CHAT": ["drug_labels_us", "openfda_labels"],
+        "DRUG_CHAT": ["openfda_labels", "drug_labels_india"],
         "DISEASE_CHAT": ["disease_corpus", "disease_guidelines"],
         "SYMPTOM_CHAT": ["disease_corpus", "openfda_labels"],
-        "PATIENT_SCENARIO": ["drug_labels_us", "drug_interactions", "disease_guidelines"],
-        "COMPARISON": ["drug_labels_us", "openfda_labels"],
+        "PATIENT_SCENARIO": ["openfda_labels", "drug_interactions", "disease_guidelines"],
+        "COMPARISON": ["openfda_labels", "drug_labels_india"],
         "INTERACTION_CHECK": ["drug_interactions", "openfda_labels"],
-        "MEDICAL_REP": ["drug_labels_us", "openfda_labels", "drug_regulatory"],
+        "MEDICAL_REP": ["drug_labels_india", "openfda_labels"],
         "CLINICAL_GUIDELINE": ["disease_guidelines", "disease_corpus"],
         "RESEARCH_LITERATURE": ["primary_literature", "openfda_labels"]
     }
