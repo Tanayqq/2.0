@@ -468,15 +468,15 @@ class ProcessClinicalQueryUseCase:
                         }
                     retrieval_trace.append(step_trace)
 
-                # Guaranteed 4-Category Fill: Fetch all available chunks for the drug so all 4 UI cards populate
-                if hasattr(self.vector_db, 'scroll_by_drug_all'):
-                    all_drug_docs = self.vector_db.scroll_by_drug_all(drug, limit=15)
-                    for doc in all_drug_docs:
-                        doc.cross_encoder_score = 0.95
-                        auth = doc.metadata.get("authority", "DailyMed")
-                        doc.metadata["authority_rank"] = AUTHORITY_RANK.get(auth, 99)
-                        doc.metadata["retrieval_mode"] = "EXACT_SECTION"
-                        final_docs.append(doc)
+                    # Guaranteed 4-Category Fill: Fetch all available chunks for the drug so all 4 UI cards populate
+                    if hasattr(self.vector_db, 'scroll_by_drug_all'):
+                        all_drug_docs = self.vector_db.scroll_by_drug_all(drug, limit=15)
+                        for doc in all_drug_docs:
+                            doc.cross_encoder_score = 0.95
+                            auth = doc.metadata.get("authority", "DailyMed")
+                            doc.metadata["authority_rank"] = AUTHORITY_RANK.get(auth, 99)
+                            doc.metadata["retrieval_mode"] = "EXACT_SECTION"
+                            final_docs.append(doc)
 
         # Multi-Collection Router Fallback: If no single-drug label chunks were fetched, query routed collections (disease_corpus, disease_guidelines, primary_literature, drug_interactions, drug_labels_india)
         if not final_docs:
