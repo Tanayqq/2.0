@@ -121,7 +121,69 @@ DISEASE_DATA = [
             "3. Non-Steroidal Anti-Inflammatory Drugs (NSAIDs): Contraindicated in moderate-to-severe CKD (eGFR < 45 mL/min) due to acute hemodynamically mediated decline in renal function."
         ),
         "section": "clinical_guideline"
-    }
+    },
+    {
+        "title": "ACC/AHA 2024 Guideline for the Management of Heart Failure (HFrEF)",
+        "disease": "Heart Failure with Reduced Ejection Fraction (HFrEF)",
+        "authority": "ACC/AHA",
+        "category": "disease_guidelines",
+        "content": """ACC/AHA 2024 Heart Failure Guidelines (HFrEF, LVEF <= 40%):
+Guideline-Directed Medical Therapy (GDMT) 'Fantastic Four' pillars:
+1. ARNI (Sacubitril/Valsartan Entresto): Preferred over ACEi/ARB to reduce morbidity and mortality (PARADIGM-HF). Requires 36h ACEi washout.
+2. Evidence-based Beta-Blocker: Bisoprolol, Carvedilol, or Metoprolol Succinate extended-release.
+3. Mineralocorticoid Receptor Antagonist (MRA): Spironolactone 12.5-25mg daily or Eplerenone. Monitor K+ and sCr.
+4. SGLT2 Inhibitor: Dapagliflozin 10mg or Empagliflozin 10mg daily regardless of diabetes status (DAPA-HF, EMPEROR-Reduced).
+Diuretics: Loop diuretics (Furosemide, Torsemide) as needed for fluid overload symptoms.""",
+        "section": "clinical_guideline"
+    },
+    {
+        "title": "ACC/AHA 2024 Clinical Practice Guideline for Management of High Blood Pressure",
+        "disease": "Hypertension",
+        "authority": "ACC/AHA",
+        "category": "disease_guidelines",
+        "content": """ACC/AHA 2024 Hypertension Guidelines:
+Classification: Normal <120/<80; Elevated 120-129/<80; Stage 1 HTN 130-139/80-89; Stage 2 HTN >=140/>=90 mmHg.
+First-Line Antihypertensive Classes: Thiazide diuretics (Chlorthalidone, Indapamide, HCTZ), Calcium Channel Blockers (Amlodipine), ACE inhibitors (Lisinopril, Enalapril), or ARBs (Losartan, Telmisartan).
+Stage 2 HTN: Initiate two first-line agents of different classes if BP >20/10 mmHg above goal (e.g., Telmisartan + Amlodipine combination).
+Resistant HTN: BP uncontrolled on 3 full-dose drugs including a diuretic -> Add Spironolactone 25mg daily.""",
+        "section": "clinical_guideline"
+    },
+    {
+        "title": "ESC 2024 Guidelines for Management of Atrial Fibrillation",
+        "disease": "Atrial Fibrillation",
+        "authority": "ESC",
+        "category": "disease_guidelines",
+        "content": """ESC 2024 Atrial Fibrillation Guidelines:
+Stroke Risk Assessment (CHA2DS2-VASc): Score >=2 in males or >=3 in females -> Oral Anticoagulation RECOMMENDED.
+Preferred Anticoagulants: Direct Oral Anticoagulants (DOACs: Apixaban 5mg BID, Rivaroxaban 20mg OD, Dabigatran 150mg BID) preferred over Warfarin due to superior safety profile and lower intracranial hemorrhage risk.
+Rate Control: Beta-blockers (Metoprolol, Bisoprolol) or Non-dihydropyridine CCBs (Diltiazem, Verapamil). Add Digoxin if HFrEF present.
+Rhythm Control: Amiodarone, Flecainide, Dronedarone, or Catheter Ablation.""",
+        "section": "clinical_guideline"
+    },
+    {
+        "title": "IDSA 2024 Guidelines for Community-Acquired Pneumonia (CAP)",
+        "disease": "Community-Acquired Pneumonia",
+        "authority": "IDSA",
+        "category": "disease_guidelines",
+        "content": """IDSA 2024 CAP Guidelines:
+Outpatient Healthy (No comorbidities): Amoxicillin 1g TID OR Doxycycline 100mg BID OR Macrolide (Azithromycin 500mg day 1 then 250mg) if local resistance <25%.
+Outpatient with Comorbidities (Diabetes, CKD, Heart Disease): Combination therapy with Amoxicillin/Clavulanate (Augmentin) 875/125mg BID + Macrolide (Azithromycin) OR Respiratory Fluoroquinolone (Levofloxacin 750mg OD or Moxifloxacin 400mg OD) monotherapy.
+Inpatient Non-Severe: Ceftriaxone 1-2g IV daily + Azithromycin 500mg IV/PO daily OR Respiratory Fluoroquinolone IV.""",
+        "section": "clinical_guideline"
+    },
+    {
+        "title": "NTEP 2024 National Tuberculosis Elimination Program Guidelines (India)",
+        "disease": "Tuberculosis (TB)",
+        "authority": "NTEP / ICMR",
+        "category": "disease_guidelines",
+        "content": """NTEP 2024 Tuberculosis Treatment Guidelines (India / WHO):
+Drug-Susceptible TB Regimen:
+Intensive Phase (2 Months): Isoniazid (H), Rifampicin (R), Pyrazinamide (Z), Ethambutol (E) daily (2HRZE).
+Continuation Phase (4 Months): Isoniazid (H), Rifampicin (R), Ethambutol (E) daily (4HRE).
+Fixed-Dose Combinations (FDCs): Weight-banded daily oral FDC tablets under NTEP.
+Schedule H1 Red Line Warning: All anti-TB drugs require prescription registration under Schedule H1 to prevent drug-resistant MDR-TB development.""",
+        "section": "clinical_guideline"
+    },
 ]
 
 # 2. REAL DRUG-DRUG INTERACTIONS (DDI) DATA
