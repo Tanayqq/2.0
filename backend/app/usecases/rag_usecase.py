@@ -1491,18 +1491,71 @@ Identity Profile (Grounded FDA Label Metadata):
 
         context_str, citations, documents, retrieval_time, confidence, retrieval_stats, citation_map = self._build_context(query)
         
-        # --- MedRef v6.0 Lab Interpretation Engine ---
+        # --- MedRef v6.0 Core Clinical Engines Integration ---
         from app.usecases.lab_interpreter import LabInterpretationEngine
+        from app.usecases.adr_engine import ADREngine
+        from app.usecases.monitoring_engine import ClinicalMonitoringEngine
+        from app.usecases.lab_domain import LabKnowledgeDomain
+        from app.usecases.drug_class_engine import DrugClassEngine
+        from app.usecases.clinical_pathways import ClinicalPathwaysEngine
+
+        engine_insights = []
+
+        # 1. Lab Interpretation
         lab_res = LabInterpretationEngine.interpret(query.question)
         if lab_res and lab_res.get("interpretations"):
-            lab_text = "\n### 🧪 LABORATORY INTERPRETATION & CLINICAL ASSESSMENT\n"
+            lab_text = "### 🧪 LABORATORY INTERPRETATION & CLINICAL ASSESSMENT\n"
             for interp in lab_res["interpretations"]:
                 lab_text += f"- {interp}\n"
             if lab_res.get("critical_alerts"):
                 lab_text += "\n**Critical Clinical Alerts:**\n"
                 for alert in lab_res["critical_alerts"]:
                     lab_text += f"- ⚠️ {alert}\n"
-            context_str = lab_text + "\n" + context_str
+            engine_insights.append(lab_text)
+
+        # 2. Clinical Pathway
+        pathway = ClinicalPathwaysEngine.get_pathway(query.question)
+        if pathway:
+            pw_text = f"### 🗺️ CLINICAL PATHWAY: {pathway['title']}\n"
+            for step in pathway['steps']:
+                pw_text += f"{step}\n"
+            if pathway.get("first_line_therapy"):
+                pw_text += f"\n**First-Line Pharmacotherapy Protocol:** {pathway['first_line_therapy']}\n"
+            engine_insights.append(pw_text)
+
+        # 3. Drug Class Efficacy
+        drug_class_info = DrugClassEngine.get_class_info(query.question)
+        if drug_class_info:
+            cls_text = f"### 💊 PHARMACOLOGICAL CLASS PROFILE: {drug_class_info['class_name']}\n"
+            cls_text += f"**Mechanism:** {drug_class_info['mechanism']}\n"
+            cls_text += f"**Member Drugs:** {', '.join(drug_class_info['member_drugs'])}\n"
+            cls_text += f"**Cardiorenal Benefits:** {drug_class_info['cardiorenal_benefits']}\n"
+            cls_text += f"**Shared Class Warnings:** {', '.join(drug_class_info['shared_warnings'])}\n"
+            engine_insights.append(cls_text)
+
+        # 4. Drug ADR & Monitoring Engine
+        q_words = [w.strip("?,.:;!\"'()[]{}").lower() for w in query.question.split()]
+        for word in q_words:
+            adr_info = ADREngine.get_adr_profile(word)
+            if adr_info:
+                adr_text = f"### ⚠️ ADVERSE EFFECT & BLACK BOX WARNING ENGINE: {word.upper()}\n"
+                adr_text += f"**Boxed Warning:** {adr_info['boxed_warning']}\n"
+                adr_text += f"**Serious ADRs:** {', '.join(adr_info['serious_adrs'])}\n"
+                adr_text += f"**Toxicity Management:** {adr_info['management']}\n"
+                engine_insights.append(adr_text)
+
+            mon_info = ClinicalMonitoringEngine.get_monitoring_protocol(word)
+            if mon_info:
+                mon_text = f"### 📋 CLINICAL MONITORING ENGINE: {word.upper()}\n"
+                mon_text += f"**Baseline Labs Required:** {', '.join(mon_info['baseline'])}\n"
+                mon_text += f"**Routine Interval:** {mon_info['routine_interval']}\n"
+                mon_text += "**Discontinuation / Stop Triggers:**\n"
+                for trigger in mon_info['stop_triggers']:
+                    mon_text += f"  - 🛑 {trigger}\n"
+                engine_insights.append(mon_text)
+
+        if engine_insights:
+            context_str = "\n\n".join(engine_insights) + "\n\n" + context_str
         
         # Build a generic->aliases map from the profile_store cache for grounding validation
         # This lets the validator accept brand-name sentences (e.g. "Novamox 500 mg...") as
