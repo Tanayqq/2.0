@@ -10,3 +10,6 @@ build/
 .gemini/
 scratch/
 backend/qdrant_data/
+
+.vercel
+.env*
