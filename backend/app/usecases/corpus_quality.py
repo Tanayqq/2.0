@@ -5,7 +5,7 @@ class CorpusQualityDashboard:
     """
     Corpus Quality & Freshness Dashboard Engine for MedRef v6.0.
     Tracks operational metrics, authority sync dates, 3-Stage QA status,
-    and versioned release history.
+    and independent Application vs Corpus versioning.
     """
 
     @classmethod
@@ -21,7 +21,7 @@ class CorpusQualityDashboard:
         gen_pct = round((generics_count / target_generics) * 100, 1)
         brand_pct = round((brands_count / target_brands) * 100, 1)
         
-        current_version_info = CorpusVersionManager.get_current_version()
+        active_ver = CorpusVersionManager.get_active_version()
 
         authorities_freshness = {
             "DailyMed / FDA": {"last_synced": "2026-07-24", "status": "UP_TO_DATE", "version": "SPL v2026.3"},
@@ -36,11 +36,13 @@ class CorpusQualityDashboard:
 
         metrics = {
             "dashboard_timestamp": datetime.utcnow().isoformat() + "Z",
-            "corpus_release": {
-                "current_version": current_version_info["version"],
-                "last_release_date": current_version_info["release_date"],
-                "latest_batch_delta": current_version_info["batch_delta"],
-                "qa_status": current_version_info["qa_status"]
+            "versioning": {
+                "application_version": CorpusVersionManager.APP_VERSION,
+                "corpus_version": active_ver["corpus_version"],
+                "ingestion_batch_id": active_ver["ingestion_batch_id"],
+                "checksum_hash": active_ver["checksum_hash"][:24] + "...",
+                "last_update": active_ver["timestamp"],
+                "qa_certificate_status": active_ver["qa_certificate"]["stage1_data_qa"]
             },
             "framework_status": "Drug Resolver v2 framework implemented; corpus expanded to 385 canonical drug entities (target: 2,000).",
             "interaction_pipeline_status": "Multi-modal interaction ingestion pipeline implemented with initial Drug–Drug, Drug–Food, Drug–Lab, and Drug–Disease datasets.",
@@ -75,7 +77,7 @@ class CorpusQualityDashboard:
                 "grounding_success_average": "96.2%",
                 "average_citations_per_query": 4.2,
                 "average_retrieval_latency_ms": 18.5,
-                "architecture_status": "FROZEN (Focusing on Data Corpus Expansion)"
+                "time_allocation": "85% Data Corpus Scaling / 15% Infrastructure Maintenance"
             },
             "authorities_freshness": authorities_freshness
         }
