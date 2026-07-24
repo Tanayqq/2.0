@@ -351,14 +351,23 @@ class ProcessClinicalQueryUseCase:
             from app.usecases.intent_router import IntentRouter
             routed = IntentRouter.route_query(query.question, country_context=query.country_context, mode_override=query.mode)
             target_cols = routed.get("target_collections", ["disease_corpus", "disease_guidelines"])
-            MIN_DISEASE_SCORE = 0.15  # Drop low-relevance cross-disease chunks
+            MIN_DISEASE_SCORE = 0.22  # Drop low-relevance cross-disease chunks
+            q_tokens = [w.lower() for w in query.question.split() if len(w) >= 3 and w.lower() not in [
+                "and", "for", "the", "with", "in", "management", "guidelines", "protocol", "overview", "study", "2024", "2025", "2026", "treatment", "therapy", "clinical", "care", "standards"
+            ]]
             for col in target_cols:
                 if hasattr(self.vector_db, 'search_collection'):
                     col_docs = self.vector_db.search_collection(col, dense_vec, top_k=5)
                     for cdoc in col_docs:
-                        if (cdoc.score or 0.0) < MIN_DISEASE_SCORE:
+                        score = cdoc.score or 0.0
+                        if score < MIN_DISEASE_SCORE:
                             continue  # Filter irrelevant cross-disease chunks
-                        cdoc.score = cdoc.score or 0.85
+                        # Topic check: ensure chunk text/title/disease matches at least one query token
+                        doc_text = (str(cdoc.metadata.get("title","")) + " " + str(cdoc.metadata.get("disease","")) + " " + cdoc.page_content).lower()
+                        if q_tokens and not any(token in doc_text for token in q_tokens):
+                            continue  # Prevent cross-disease pollution (e.g. Asthma chunk for Diabetes query)
+                        
+                        cdoc.score = score or 0.85
                         cdoc.cross_encoder_score = cdoc.score
                         auth = cdoc.metadata.get("authority", "ADA")
                         cdoc.metadata["authority_rank"] = AUTHORITY_RANK.get(auth, 95)
@@ -374,89 +383,89 @@ class ProcessClinicalQueryUseCase:
                 for sec in sections_to_fetch:
                     step_trace = {"drug": drug, "section": sec, "attempts": []}
                 
-                # 1. Exact Section Search
-                exact_docs = []
-                if hasattr(self.vector_db, 'scroll_by_drug_sections'):
-                    exact_docs = self.vector_db.scroll_by_drug_sections(drug, [sec], limit_per_section=3)
-                
-                if exact_docs:
-                    mode = "EXACT_SECTION"
-                    docs_for_sec = exact_docs
-                    step_trace["attempts"].append({"type": "Exact Section", "chunks": len(docs_for_sec)})
-                else:
-                    step_trace["attempts"].append({"type": "Exact Section", "chunks": 0})
-                    # 2. Semantic Search
-                    qdrant_filter = {"drug_name": drug.title()}
-                    if sparse_vec:
-                        sem_docs = self.vector_db.hybrid_search(
-                            dense_vector=dense_vec,
-                            sparse_vector=sparse_vec,
-                            top_k=5,
-                            filters=qdrant_filter
-                        )
+                    # 1. Exact Section Search
+                    exact_docs = []
+                    if hasattr(self.vector_db, 'scroll_by_drug_sections'):
+                        exact_docs = self.vector_db.scroll_by_drug_sections(drug, [sec], limit_per_section=3)
+                    
+                    if exact_docs:
+                        mode = "EXACT_SECTION"
+                        docs_for_sec = exact_docs
+                        step_trace["attempts"].append({"type": "Exact Section", "chunks": len(docs_for_sec)})
                     else:
-                        sem_docs = self.vector_db.search(
-                            query_vector=dense_vec,
-                            top_k=5,
-                            filters=qdrant_filter
-                        )
-                    if sem_docs:
-                        mode = "SEMANTIC_PARENT"
-                        docs_for_sec = sem_docs[:3]
-                        step_trace["attempts"].append({"type": "Semantic Search", "chunks": len(sem_docs)})
-                    else:
-                        mode = "NO_DATA"
-                        docs_for_sec = []
-                        step_trace["attempts"].append({"type": "Semantic Search", "chunks": 0})
-                
-                # Score & Sort Docs
-                if docs_for_sec:
-                    for doc in docs_for_sec:
-                        ce_score = 0.99 if mode == "EXACT_SECTION" else (doc.score or 0.85)
-                        doc.cross_encoder_score = ce_score
+                        step_trace["attempts"].append({"type": "Exact Section", "chunks": 0})
+                        # 2. Semantic Search
+                        qdrant_filter = {"drug_name": drug.title()}
+                        if sparse_vec:
+                            sem_docs = self.vector_db.hybrid_search(
+                                dense_vector=dense_vec,
+                                sparse_vector=sparse_vec,
+                                top_k=5,
+                                filters=qdrant_filter
+                            )
+                        else:
+                            sem_docs = self.vector_db.search(
+                                query_vector=dense_vec,
+                                top_k=5,
+                                filters=qdrant_filter
+                            )
+                        if sem_docs:
+                            mode = "SEMANTIC_PARENT"
+                            docs_for_sec = sem_docs[:3]
+                            step_trace["attempts"].append({"type": "Semantic Search", "chunks": len(sem_docs)})
+                        else:
+                            mode = "NO_DATA"
+                            docs_for_sec = []
+                            step_trace["attempts"].append({"type": "Semantic Search", "chunks": 0})
+                    
+                    # Score & Sort Docs
+                    if docs_for_sec:
+                        for doc in docs_for_sec:
+                            ce_score = 0.99 if mode == "EXACT_SECTION" else (doc.score or 0.85)
+                            doc.cross_encoder_score = ce_score
+                            
+                            auth = doc.metadata.get("authority", "DailyMed")
+                            auth_rank = AUTHORITY_RANK.get(auth, 99)
+                            doc.metadata["authority_rank"] = auth_rank
+                            doc.metadata["retrieval_mode"] = mode
+                            doc.metadata["requested_section"] = sec
                         
-                        auth = doc.metadata.get("authority", "DailyMed")
-                        auth_rank = AUTHORITY_RANK.get(auth, 99)
-                        doc.metadata["authority_rank"] = auth_rank
-                        doc.metadata["retrieval_mode"] = mode
-                        doc.metadata["requested_section"] = sec
-                    
-                    # Sort Priority: CrossEncoder DESC -> VectorScore DESC -> AuthorityRank ASC
-                    docs_for_sec.sort(key=lambda x: (x.cross_encoder_score or 0.0, x.score or 0.0, -x.metadata.get("authority_rank", 99)), reverse=True)
-                    
-                    # Take top 3
-                    docs_for_sec = docs_for_sec[:3]
-                    
-                    avg_ce = sum(d.cross_encoder_score or 0.0 for d in docs_for_sec) / len(docs_for_sec)
-                    evidence_count = len(docs_for_sec)
-                    conf_stars = _compute_confidence(mode, avg_ce, evidence_count)
-                    
-                    orig_secs = list(set(normalize_section(d.metadata.get("section", "")) for d in docs_for_sec))
-                    auths = list(set(d.metadata.get("authority", "DailyMed") for d in docs_for_sec))
-                    
-                    section_statuses[drug][sec] = {
-                        "status": mode,
-                        "confidence_stars": conf_stars,
-                        "original_section": orig_secs[0] if orig_secs else None,
-                        "evidence_count": evidence_count,
-                        "evidence_diversity": f"{evidence_count} chunks across {len(orig_secs)} sections from {len(auths)} authority",
-                        "authority": auths[0] if auths else "DailyMed",
-                        "missing_reason": None
-                    }
-                    
-                    final_docs.extend(docs_for_sec)
-                    step_trace["attempts"].append({"type": "Cross Encoder", "top_k": len(docs_for_sec)})
-                else:
-                    section_statuses[drug][sec] = {
-                        "status": mode,
-                        "confidence_stars": "☆☆☆☆☆",
-                        "original_section": None,
-                        "evidence_count": 0,
-                        "evidence_diversity": None,
-                        "authority": "DailyMed",
-                        "missing_reason": f"No dedicated {sec} exists in the indexed label. Semantic retrieval searched the remaining document and found no clinically relevant content."
-                    }
-                retrieval_trace.append(step_trace)
+                        # Sort Priority: CrossEncoder DESC -> VectorScore DESC -> AuthorityRank ASC
+                        docs_for_sec.sort(key=lambda x: (x.cross_encoder_score or 0.0, x.score or 0.0, -x.metadata.get("authority_rank", 99)), reverse=True)
+                        
+                        # Take top 3
+                        docs_for_sec = docs_for_sec[:3]
+                        
+                        avg_ce = sum(d.cross_encoder_score or 0.0 for d in docs_for_sec) / len(docs_for_sec)
+                        evidence_count = len(docs_for_sec)
+                        conf_stars = _compute_confidence(mode, avg_ce, evidence_count)
+                        
+                        orig_secs = list(set(normalize_section(d.metadata.get("section", "")) for d in docs_for_sec))
+                        auths = list(set(d.metadata.get("authority", "DailyMed") for d in docs_for_sec))
+                        
+                        section_statuses[drug][sec] = {
+                            "status": mode,
+                            "confidence_stars": conf_stars,
+                            "original_section": orig_secs[0] if orig_secs else None,
+                            "evidence_count": evidence_count,
+                            "evidence_diversity": f"{evidence_count} chunks across {len(orig_secs)} sections from {len(auths)} authority",
+                            "authority": auths[0] if auths else "DailyMed",
+                            "missing_reason": None
+                        }
+                        
+                        final_docs.extend(docs_for_sec)
+                        step_trace["attempts"].append({"type": "Cross Encoder", "top_k": len(docs_for_sec)})
+                    else:
+                        section_statuses[drug][sec] = {
+                            "status": mode,
+                            "confidence_stars": "☆☆☆☆☆",
+                            "original_section": None,
+                            "evidence_count": 0,
+                            "evidence_diversity": None,
+                            "authority": "DailyMed",
+                            "missing_reason": f"No dedicated {sec} exists in the indexed label. Semantic retrieval searched the remaining document and found no clinically relevant content."
+                        }
+                    retrieval_trace.append(step_trace)
 
             # Guaranteed 4-Category Fill: Fetch all available chunks for the drug so all 4 UI cards populate
             if hasattr(self.vector_db, 'scroll_by_drug_all'):

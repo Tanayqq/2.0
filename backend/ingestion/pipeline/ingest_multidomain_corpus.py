@@ -15,19 +15,28 @@ from app.core.config import settings
 
 # Initialize Embedding Model & Qdrant Client
 embedding_model = FastEmbedModel()
-qclient = QdrantClient(url=settings.QDRANT_URL, api_key=settings.QDRANT_API_KEY)
+qclient = QdrantClient(url=settings.QDRANT_URL, api_key=settings.QDRANT_API_KEY, prefer_grpc=False, timeout=60.0)
 VECTOR_SIZE = 384
 
 def ensure_collection(collection_name: str):
     try:
         qclient.get_collection(collection_name=collection_name)
         print(f"Collection '{collection_name}' exists.")
-    except Exception:
+    except Exception as e:
+        if "already exists" in str(e).lower():
+            print(f"Collection '{collection_name}' exists.")
+            return
         print(f"Creating collection '{collection_name}'...")
-        qclient.create_collection(
-            collection_name=collection_name,
-            vectors_config=qmodels.VectorParams(size=VECTOR_SIZE, distance=qmodels.Distance.COSINE)
-        )
+        try:
+            qclient.create_collection(
+                collection_name=collection_name,
+                vectors_config=qmodels.VectorParams(size=VECTOR_SIZE, distance=qmodels.Distance.COSINE)
+            )
+        except Exception as inner_e:
+            if "already exists" in str(inner_e).lower():
+                print(f"Collection '{collection_name}' already exists.")
+            else:
+                raise inner_e
 
 # 1. REAL DISEASE GUIDELINES & PATHOPHYSIOLOGY DATA
 DISEASE_DATA = [

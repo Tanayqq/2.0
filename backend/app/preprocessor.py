@@ -14,8 +14,8 @@ def clean_chunk_content(text: str) -> str:
     text = re.sub(r'\bTable\s+\d+\b', '', text, flags=re.IGNORECASE)
     text = re.sub(r'\bFigure\s+\d+\b', '', text, flags=re.IGNORECASE)
 
-    # 3. Remove FDA decimal numbering (e.g. 5.1, 5.2, 6.1, 12.1)
-    text = re.sub(r'\b\d+\.\d+\b', '', text)
+    # 3. Remove FDA decimal section numbering (e.g. 5.1, 5.2, 6.1) while preserving clinical values with units (% mg g mL kg mmol etc)
+    text = re.sub(r'\b\d+\.\d+(?!\s*(?:%|mg|g|mcg|ml|l|mmol|kg|m²|cells|hours|days|weeks|months|years|units))\b', '', text)
 
     # Split into lines to process lists and collapse internal whitespace
     lines = text.split('\n')
