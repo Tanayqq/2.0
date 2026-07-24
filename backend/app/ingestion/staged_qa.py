@@ -30,6 +30,14 @@ class StagedQAPipeline:
         if not section:
             errors.append(f"Stage 1 FAIL: Monograph '{title}' missing section classification tag.")
 
+        # Provenance audit
+        prov = doc.get("provenance")
+        if prov:
+            from app.ingestion.provenance_tracker import DocumentProvenanceTracker
+            valid_prov, prov_err = DocumentProvenanceTracker.audit_provenance(doc)
+            if not valid_prov:
+                errors.append(f"Stage 1 FAIL: Provenance audit failed for '{title}': {prov_err}")
+
         is_valid = len(errors) == 0
         return is_valid, errors
 
