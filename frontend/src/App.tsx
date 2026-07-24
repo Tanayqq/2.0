@@ -1026,8 +1026,8 @@ export default function App() {
                       </span>
                     </div>
 
-                    {/* Drug Equivalents */}
-                    {activeDrug && DRUG_EQUIVALENTS[activeDrug.name.toLowerCase()] && (
+                    {/* Drug Equivalents — only shown for drug-mode queries */}
+                    {activeDrug && !["DISEASE_CHAT","CLINICAL_GUIDELINE","RESEARCH_LITERATURE","SYMPTOM_CHAT","INTERACTION_CHECK","PATIENT_SCENARIO"].includes(selectedMode) && DRUG_EQUIVALENTS[activeDrug.name.toLowerCase()] && (
                       <div className="flex items-center gap-2 text-xs font-mono-dash text-slate-500 bg-[#070b12] p-2 rounded-lg border border-[#1e293b]/40">
                         <span>IN LOCAL EQUIVALENTS:</span>
                         <div className="flex items-center gap-1.5">

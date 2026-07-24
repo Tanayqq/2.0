@@ -351,17 +351,20 @@ class ProcessClinicalQueryUseCase:
             from app.usecases.intent_router import IntentRouter
             routed = IntentRouter.route_query(query.question, country_context=query.country_context, mode_override=query.mode)
             target_cols = routed.get("target_collections", ["disease_corpus", "disease_guidelines"])
+            MIN_DISEASE_SCORE = 0.15  # Drop low-relevance cross-disease chunks
             for col in target_cols:
                 if hasattr(self.vector_db, 'search_collection'):
                     col_docs = self.vector_db.search_collection(col, dense_vec, top_k=5)
                     for cdoc in col_docs:
+                        if (cdoc.score or 0.0) < MIN_DISEASE_SCORE:
+                            continue  # Filter irrelevant cross-disease chunks
                         cdoc.score = cdoc.score or 0.85
-                        cdoc.cross_encoder_score = 0.95
+                        cdoc.cross_encoder_score = cdoc.score
                         auth = cdoc.metadata.get("authority", "ADA")
                         cdoc.metadata["authority_rank"] = AUTHORITY_RANK.get(auth, 95)
                         cdoc.metadata["retrieval_mode"] = "MULTI_COLLECTION_RAG"
-                        cdoc.metadata["drug_name"] = query.question.strip()
-                        cdoc.metadata["section"] = cdoc.metadata.get("section", "indications")
+                        cdoc.metadata["disease_query"] = query.question.strip()  # Preserve original query
+                        cdoc.metadata["section"] = cdoc.metadata.get("section", "clinical_profile")
                         final_docs.append(cdoc)
 
         if not is_non_drug_mode:
@@ -692,9 +695,54 @@ class ProcessClinicalQueryUseCase:
         
         return context_str, citations, final_docs, retrieve_time, confidence, retrieval_stats, citation_map
 
-    def _build_prompt(self, context_str: str, question: str) -> str:
-        return f"""
-Context:
+    def _build_prompt(self, context_str: str, question: str, mode: str = "DRUG_CHAT") -> str:
+        is_disease_mode = mode and mode.upper() in [
+            "DISEASE_CHAT", "CLINICAL_GUIDELINE", "RESEARCH_LITERATURE", "SYMPTOM_CHAT", "INTERACTION_CHECK", "PATIENT_SCENARIO"
+        ]
+        if is_disease_mode:
+            return f"""Context:
+{context_str}
+
+Question: {question}
+
+You are a clinical evidence extraction engine. You extract facts ONLY from the DOCUMENTS provided above.
+You have ZERO medical knowledge of your own. Every word you write must come directly from the documents.
+
+CRITICAL RULES:
+
+1. CITATIONS ARE MANDATORY ON EVERY SENTENCE.
+   After EVERY factual sentence, append the citation number in square brackets.
+   CORRECT: "Type 2 Diabetes is characterized by insulin resistance.[1]"
+   WRONG:   "Type 2 Diabetes is characterized by insulin resistance."
+   A sentence without a citation is INVALID and must not appear.
+
+2. DOCUMENTS ONLY — NO MEMORY, NO KNOWLEDGE.
+   If a section has NO relevant evidence, write EXACTLY:
+     Not found in available sources.
+   Do NOT invent any clinical information from training knowledge.
+
+3. OUTPUT FORMAT — use EXACTLY this structure (replace [Disease/Condition] with the actual topic):
+
+   ### [Disease/Condition]
+
+   #### Clinical Profile Overview
+   [Pathophysiology, definition, clinical presentation, complications — from clinical_profile or clinical_guideline documents]
+
+   #### Dosing & Administration
+   [Recommended treatments, drug dosing, first-line therapy, step therapy — from guideline documents. Extract specific drug names and doses mentioned.]
+
+   #### Contraindications & Warnings
+   [Any drug contraindications, red flag symptoms, avoidance criteria — from guideline documents.]
+
+   #### Co-Administration Risks
+   [Drug-drug interactions, combination risks, drugs to avoid — from guideline or interaction documents.]
+
+4. DO NOT use "Drug Name" as the heading — use the actual disease/condition name from the question.
+5. NEVER output "DOCUMENT 1" or "Source:" labels in your response.
+6. Extract content from ALL documents provided, mapping each fact to the most appropriate section above.
+"""
+        else:
+            return f"""Context:
 {context_str}
 
 Question: {question}
@@ -874,7 +922,7 @@ CRITICAL RULES:
         
     def get_debug_prompt(self, query: MedicalQuery):
         context_str, _, _, _, _, _, _ = self._build_context(query)
-        prompt = self._build_prompt(context_str, query.question)
+        prompt = self._build_prompt(context_str, query.question, mode=getattr(query, 'mode', 'DRUG_CHAT'))
         return {
             "prompt_version": self.prompt_version,
             "provider": settings.ACTIVE_LLM_PROVIDER,
@@ -1202,7 +1250,7 @@ CRITICAL RULES:
 
     def get_debug_trace(self, query: MedicalQuery) -> Dict[str, Any]:
         context_str, citations, documents, retrieval_time, confidence, retrieval_stats, citation_map = self._build_context(query)
-        prompt = self._build_prompt(context_str, query.question)
+        prompt = self._build_prompt(context_str, query.question, mode=getattr(query, 'mode', 'DRUG_CHAT'))
         
         # Build alias map for grounding validation (same as execute())
         _debug_aliases_map: Dict[str, List[str]] = {}
@@ -1447,7 +1495,7 @@ Identity Profile (Grounded FDA Label Metadata):
                 }
             )
             
-        prompt = self._build_prompt(context_str, query.question)
+        prompt = self._build_prompt(context_str, query.question, mode=getattr(query, 'mode', 'DRUG_CHAT'))
         
         logger.info("generating_answer_via_llm", provider=settings.ACTIVE_LLM_PROVIDER, prompt_version=self.prompt_version)
         # --- LLM Generation with Retry ---
