@@ -7,6 +7,32 @@ class DrugNameResolver:
     """
     
     BRAND_TO_GENERIC: Dict[str, str] = {
+        "edarbi": "azilsartan", "inspra": "eplerenone", "corlanor": "ivabradine", "ranexa": "ranolazine",
+        "effient": "prasugrel", "brilinta": "ticagrelor", "angiomax": "bivalirudin", "primacor": "milrinone",
+        "cardene": "nicardipine", "cleviprex": "clevidipine", "trandate": "labetalol", "brevibloc": "esmolol",
+        "minipress": "prazosin", "hytrin": "terazosin", "cardura": "doxazosin", "merrem": "meropenem", "invanz": "ertapenem",
+        "primaxin": "imipenem", "maxipime": "cefepime", "teflaro": "ceftaroline", "zerbaxa": "ceftolozane", "avycaz": "avibactam",
+        "coly-mycin": "colistin", "tygacil": "tigecycline", "cubicin": "daptomycin", "zyvox": "linezolid", "sivextro": "tedizolid",
+        "dalvance": "dalbavancin", "cresemba": "isavuconazole", "nofil": "posaconazole", "meronem": "meropenem", "cifran": "ciprofloxacin",
+        "oflox": "ofloxacin", "zenflox": "ofloxacin", "mahacef": "cefixime", "ceftas": "cefixime", "taxim": "cefotaxime",
+        "taxim-o": "cefixime", "zipod": "cefpodoxime", "goodcef": "cefpodoxime", "macrowin": "azithromycin", "aziwok": "azithromycin",
+        "zocon": "fluconazole", "forcan": "fluconazole", "canditral": "itraconazole", "ityza": "itraconazole", "mounjaro": "tirzepatide",
+        "zepbound": "tirzepatide", "victoza": "liraglutide", "saxenda": "liraglutide", "trulicity": "dulaglutide", "byetta": "exenatide",
+        "invokana": "canagliflozin", "steglatro": "ertugliflozin", "januvia": "sitagliptin", "onglyza": "saxagliptin", "tradjenta": "linagliptin",
+        "nesina": "alogliptin", "actos": "pioglitazone", "avandia": "rosiglitazone", "prio": "pioglitazone", "pioz": "pioglitazone",
+        "arcapta": "indacaterol", "anoro": "umeclidinium", "seebri": "glycopyrrolate", "tudorza": "aclidinium", "alvesco": "ciclesonide",
+        "asmanex": "mometasone", "flovent": "fluticasone", "pulmicort": "budesonide", "singulair": "montelukast", "aciphex": "dexlansoprazole",
+        "aciphex-ez": "rabeprazole", "prazocid": "rabeprazole", "pariet": "rabeprazole", "carafate": "sucralfate", "cytotec": "misoprostol",
+        "linzess": "linaclotide", "emend": "aprepitant", "aloxi": "palonosetron", "kytril": "granisetron", "keytruda": "pembrolizumab",
+        "opdivo": "nivolumab", "tecentriq": "atezolizumab", "imfinzi": "durvalumab", "yervoy": "ipilimumab", "mabthera": "rituximab",
+        "herceptin": "trastuzumab", "avastin": "bevacizumab", "erbitux": "cetuximab", "gleevec": "imatinib", "sprycel": "dasatinib",
+        "tasigna": "nilotinib", "diprivan": "propofol", "precedex": "dexmedetomidine", "ativan": "lorazepam", "ketalar": "ketamine",
+        "nimbex": "cisatracurium", "zemuron": "rocuronium", "bridion": "sugammadex", "keppra": "levetiracetam", "vimpat": "lacosamide",
+        "otezla": "apremilast", "xeljanz": "tofacitinib", "olumiant": "baricitinib", "rinvoq": "upadacitinib", "jyseleca": "filgotinib",
+        "cibinqo": "abrocitinib", "sotyktu": "deucravacitinib", "cosentyx": "secukinumab", "taltz": "ixekizumab", "siliq": "brodalumab",
+        "tremfya": "guselkumab", "ilumya": "tildrakizumab", "skyrizi": "risankizumab", "stelara": "ustekinumab", "entyvio": "vedolizumab",
+        "tysabri": "natalizumab", "zeposia": "ozanimod", "ponvory": "ponesimod", "mayzent": "siponimod", "gilenya": "fingolimod",
+        "lemtrada": "alemtuzumab", "ocrevus": "ocrelizumab", "kesimpta": "ofatumumab", "briumvi": "ublituximab", "mavenclad": "cladribine",
         # Core Brand to Generic Mappings
         "prinivil": "lisinopril",
         "zestril": "lisinopril",
@@ -726,6 +752,7 @@ class DrugNameResolver:
         Scan the query text for drug brand names or generic names.
         Returns the canonical lowercase generic name if found, otherwise None.
         """
+        cls._ensure_initialized()
         if not query_text:
             return None
 
@@ -751,3 +778,6 @@ class DrugNameResolver:
                 return generic
                 
         return None
+
+# Auto-initialize all 500 canonical drugs on module import
+DrugNameResolver._ensure_initialized()
