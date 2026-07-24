@@ -30,6 +30,8 @@ class IntentRouter:
 
         q_lower = question.lower()
 
+        if any(kw in q_lower for kw in ["flow", "dapa-ckd", "trial", "nejm", "lancet", "pubmed", "cochrane", "study shows", "latest evidence", "outcomes"]):
+            return "RESEARCH_LITERATURE"
         if any(kw in q_lower for kw in ["versus", " vs ", "vs.", "compare", "difference between"]):
             return "COMPARISON"
         if any(kw in q_lower for kw in ["interaction", "coadministration", "together", "interact", "combine"]):
@@ -38,8 +40,6 @@ class IntentRouter:
             return "MEDICAL_REP"
         if any(kw in q_lower for kw in ["guideline", "ada 2026", "kdigo", "gold 2026", "gina", "icmr guideline", "ntep"]):
             return "CLINICAL_GUIDELINE"
-        if any(kw in q_lower for kw in ["trial", "nejm", "lancet", "pubmed", "cochrane", "study shows", "latest evidence"]):
-            return "RESEARCH_LITERATURE"
         if any(kw in q_lower for kw in ["fever", "cough", "shortness of breath", "dyspnea", "chest pain", "diarrhea", "rash"]):
             return "SYMPTOM_CHAT"
         if any(kw in q_lower for kw in ["asthma", "copd", "diabetes", "hypertension", "ckd", "stroke", "heart failure"]):

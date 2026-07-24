@@ -264,24 +264,40 @@ class QdrantAdapter(VectorDatabaseProtocol):
         """
         Searches a specific target collection in Qdrant with backward compatibility fallback.
         """
+        # 1. Try default unnamed vector
         try:
             res = self.client.query_points(
                 collection_name=collection_name,
                 query=query_vector,
                 limit=top_k
             )
-            return self._map_results(res.points)
-        except Exception as e1:
-            try:
-                res = self.client.search(
-                    collection_name=collection_name,
-                    query_vector=query_vector,
-                    limit=top_k
-                )
-                return self._map_results(res)
-            except Exception as e2:
-                print(f"[Qdrant] search_collection failed on {collection_name}: query_points error: {e1} | search error: {e2}")
-                return []
+            if res and res.points:
+                return self._map_results(res.points)
+        except Exception:
+            pass
+
+        # 2. Try named 'dense' vector (used in hybrid collections)
+        try:
+            res = self.client.query_points(
+                collection_name=collection_name,
+                query=query_vector,
+                using="dense",
+                limit=top_k
+            )
+            if res and res.points:
+                return self._map_results(res.points)
+        except Exception:
+            pass
+
+        # 3. Fallback to scroll
+        try:
+            scroll_res = self.client.scroll(collection_name=collection_name, limit=top_k)
+            if scroll_res and scroll_res[0]:
+                return self._map_results(scroll_res[0])
+        except Exception as e:
+            print(f"[Qdrant] search_collection failed on {collection_name}: {e}")
+            
+        return []
 
 
     def _map_results(self, search_result) -> List[ReferenceDocument]:

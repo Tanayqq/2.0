@@ -368,11 +368,12 @@ class ProcessClinicalQueryUseCase:
                             continue  # Prevent cross-disease pollution (e.g. Asthma chunk for Diabetes query)
                         
                         cdoc.score = score or 0.85
-                        cdoc.cross_encoder_score = cdoc.score
+                        cdoc.cross_encoder_score = 0.99  # Top priority for intent-routed collections (primary_literature, guidelines, DDIs)
                         auth = cdoc.metadata.get("authority", "ADA")
                         cdoc.metadata["authority_rank"] = AUTHORITY_RANK.get(auth, 95)
                         cdoc.metadata["retrieval_mode"] = "MULTI_COLLECTION_RAG"
-                        cdoc.metadata["drug_name"] = query.question.strip()  # Used by citation source formatter
+                        curr_drug = resolved_drug[0] if (resolved_drug and isinstance(resolved_drug, list)) else (resolved_drug or query.question.strip())
+                        cdoc.metadata["drug_name"] = curr_drug  # Used by citation source formatter
                         cdoc.metadata["disease_query"] = query.question.strip()
                         cdoc.metadata["section"] = cdoc.metadata.get("section", "clinical_profile")
                         final_docs.append(cdoc)
@@ -467,15 +468,15 @@ class ProcessClinicalQueryUseCase:
                         }
                     retrieval_trace.append(step_trace)
 
-            # Guaranteed 4-Category Fill: Fetch all available chunks for the drug so all 4 UI cards populate
-            if hasattr(self.vector_db, 'scroll_by_drug_all'):
-                all_drug_docs = self.vector_db.scroll_by_drug_all(drug, limit=15)
-                for doc in all_drug_docs:
-                    doc.cross_encoder_score = 0.95
-                    auth = doc.metadata.get("authority", "DailyMed")
-                    doc.metadata["authority_rank"] = AUTHORITY_RANK.get(auth, 99)
-                    doc.metadata["retrieval_mode"] = "EXACT_SECTION"
-                    final_docs.append(doc)
+                # Guaranteed 4-Category Fill: Fetch all available chunks for the drug so all 4 UI cards populate
+                if hasattr(self.vector_db, 'scroll_by_drug_all'):
+                    all_drug_docs = self.vector_db.scroll_by_drug_all(drug, limit=15)
+                    for doc in all_drug_docs:
+                        doc.cross_encoder_score = 0.95
+                        auth = doc.metadata.get("authority", "DailyMed")
+                        doc.metadata["authority_rank"] = AUTHORITY_RANK.get(auth, 99)
+                        doc.metadata["retrieval_mode"] = "EXACT_SECTION"
+                        final_docs.append(doc)
 
         # Multi-Collection Router Fallback: If no single-drug label chunks were fetched, query routed collections (disease_corpus, disease_guidelines, primary_literature, drug_interactions, drug_labels_india)
         if not final_docs:
@@ -1409,9 +1410,11 @@ CRITICAL RULES:
         logger.info("processing_query_start", question=query.question, filters=query.filters)
         start_time = time.time()
         
+        is_non_drug_mode = query.mode and query.mode.upper() in ["DISEASE_CHAT", "CLINICAL_GUIDELINE", "RESEARCH_LITERATURE", "SYMPTOM_CHAT", "INTERACTION_CHECK", "PATIENT_SCENARIO"]
+        
         # --- QUERY INTENT CLASSIFICATION & ROUTING ---
         intent = self.classify_intent(query.question)
-        if intent == "identity":
+        if intent == "identity" and not is_non_drug_mode:
             resolved_generic = self.profile_store.get_entity_by_alias(query.question)
             if not resolved_generic:
                 from app.usecases.drug_resolver import DrugNameResolver
@@ -1577,8 +1580,8 @@ Identity Profile (Grounded FDA Label Metadata):
                     attempt=attempt
                 )
         
-        # Dynamically inject structured identity profile into the Clinical Profile Overview section
-        if final_answer_text and retrieval_stats.get("resolved_drug"):
+        # Dynamically inject structured identity profile into the Clinical Profile Overview section (DRUG_CHAT mode only)
+        if final_answer_text and retrieval_stats.get("resolved_drug") and not is_non_drug_mode:
             resolved_generic = retrieval_stats.get("resolved_drug")
             if isinstance(resolved_generic, list):
                 resolved_generic = resolved_generic[0]
