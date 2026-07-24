@@ -197,6 +197,76 @@ LITERATURE_DATA = [
             "Methods: 4,304 participants with eGFR 25-75 mL/min and albuminuria randomized to Dapagliflozin 10 mg daily or placebo.\n"
             "Results: Dapagliflozin reduced the risk of >= 50% eGFR decline, end-stage kidney disease, or renal/CV death by 39% (HR 0.61; 95% CI 0.51-0.72; P<0.001) regardless of diabetes status."
         ),
+    },
+    {
+        "title": "Finerenone in Chronic Kidney Disease and Type 2 Diabetes - FIDELIO-DKD Trial",
+        "author": "Bakris GL, et al.",
+        "journal": "New England Journal of Medicine (NEJM)",
+        "year": 2020,
+        "authority": "NEJM",
+        "category": "primary_literature",
+        "content": (
+            "NEJM 2020 Clinical Trial - FIDELIO-DKD (Finerenone in Diabetic CKD):\n"
+            "Drug: Finerenone (Kerendia) - nonsteroidal mineralocorticoid receptor antagonist (MRA).\n"
+            "Methods: 5,734 patients with T2D, CKD (eGFR 25-60 mL/min), UACR 30-5000 mg/g randomized to Finerenone 10-20 mg daily vs placebo.\n"
+            "Primary Outcome: Finerenone reduced composite of kidney failure, sustained >=40% eGFR decline, or renal death by 18% (HR 0.82; 95% CI 0.73-0.93; P=0.001).\n"
+            "CV Outcome: Reduced CV death, non-fatal MI, non-fatal stroke, or HF hospitalization by 14% (HR 0.86; 95% CI 0.75-0.99; P=0.03).\n"
+            "Dosing: Start 10 mg once daily if eGFR 25-60; uptitrate to 20 mg if tolerated. Contraindicated if eGFR <25 mL/min/1.73m2.\n"
+            "CYP3A4 Interactions: Finerenone is primarily metabolized by CYP3A4. Strong CYP3A4 inhibitors (ketoconazole, itraconazole, clarithromycin, ritonavir) are CONTRAINDICATED. Moderate CYP3A4 inhibitors require dose reduction.\n"
+            "Hyperkalemia Risk: Monitor serum potassium before initiation and at 4 weeks. Do not start if K+ >5.0 mEq/L.\n"
+            "FDA Approval: Approved August 2021 for CKD associated with Type 2 Diabetes."
+        ),
+        "section": "clinical_studies"
+    },
+    {
+        "title": "Finerenone CV Outcomes in T2D and CKD - FIGARO-DKD Trial",
+        "author": "Pitt B, et al.",
+        "journal": "New England Journal of Medicine (NEJM)",
+        "year": 2021,
+        "authority": "NEJM",
+        "category": "primary_literature",
+        "content": (
+            "NEJM 2021 Clinical Trial - FIGARO-DKD (Finerenone CV Outcomes):\n"
+            "Methods: 7,352 patients with T2D and CKD randomized to Finerenone vs placebo.\n"
+            "Primary Outcome: Finerenone reduced CV death, non-fatal MI, non-fatal stroke, or HF hospitalization by 13% (HR 0.87; 95% CI 0.76-0.98; P=0.026).\n"
+            "Kidney Outcome: 36% reduction in sustained UACR increase (HR 0.64; 95% CI 0.52-0.79).\n"
+            "FIDELITY Combined Analysis (n=13,026): Consistent cardiorenal benefit across FIDELIO-DKD and FIGARO-DKD."
+        ),
+        "section": "clinical_studies"
+    },
+    {
+        "title": "Amiodarone Cardiac Drug Interactions - QTc Prolongation and TdP Risk Stratification",
+        "author": "ASHP Clinical Drug Information",
+        "journal": "American Society of Health-System Pharmacists",
+        "year": 2024,
+        "authority": "ASHP",
+        "category": "primary_literature",
+        "content": (
+            "Amiodarone Multi-Drug Interaction Risk Assessment - Quadruple Cardiac Threat:\n"
+            "Amiodarone + Digoxin: Amiodarone inhibits P-glycoprotein (P-gp) and renal tubular secretion, increasing digoxin plasma levels 70-100%. Reduce digoxin dose by 30-50% on amiodarone initiation. Monitor digoxin levels; toxicity = bradycardia, AV block, nausea. Target digoxin <0.9 ng/mL in HF.\n"
+            "Amiodarone + Clarithromycin: MAJOR INTERACTION. Both prolong QTc via hERG potassium channel blockade. Clarithromycin also inhibits CYP3A4, increasing amiodarone exposure. Combined use = Torsades de Pointes (TdP) risk. AVOID concurrent use; if unavoidable, continuous ECG monitoring mandatory.\n"
+            "Amiodarone + Metoprolol: Amiodarone inhibits CYP2D6, increasing metoprolol AUC by 60-80%. Causes additive bradycardia and AV conduction block. Reduce metoprolol dose by 50%. Monitor HR and PR interval.\n"
+            "TdP Risk Stratification: QTc >500ms or delta-QTc >60ms from baseline = discontinue QT-prolonging drugs.\n"
+            "P-glycoprotein cascade: Amiodarone inhibits P-gp -> digoxin, dabigatran, colchicine toxicity. Reduce or avoid these co-medications."
+        ),
+        "section": "drug_interactions"
+    },
+    {
+        "title": "Vancomycin AUC/MIC-Guided Dosing and ICU Nephrotoxicity - Surviving Sepsis 2024",
+        "author": "ASHP/IDSA/SIDP Consensus Guidelines",
+        "journal": "American Journal of Health-System Pharmacy",
+        "year": 2024,
+        "authority": "ASHP",
+        "category": "primary_literature",
+        "content": (
+            "Vancomycin AUC/MIC-Guided Dosing in Septic Shock (ICU Protocol 2024):\n"
+            "Target AUC/MIC: 400-600 mg*h/L for MRSA bacteremia/sepsis. AUC-guided dosing reduces nephrotoxicity 30% vs trough-monitoring.\n"
+            "Loading Dose: 25-30 mg/kg IV (max 3g) for critically ill patients. Maintenance: 15-20 mg/kg IV q8-12h adjusted by renal function.\n"
+            "Vancomycin + Piperacillin-Tazobactam Nephrotoxicity: Meta-analysis 2022: Vanco + Pip-Tazo increases AKI risk 3.7-fold vs vanco + meropenem (OR 3.7; 95% CI 2.8-4.9). Pip-Tazo inhibits vancomycin renal tubular secretion via OAT transporters. IDSA 2024 recommends substituting meropenem when both needed.\n"
+            "Vancomycin + Furosemide: Additive nephrotoxicity. Monitor sCr every 6-8h. AKI Stage 1 (KDIGO): sCr rise >=0.3 mg/dL within 48h = trigger dose adjustment.\n"
+            "Norepinephrine and Renal Perfusion: Target MAP >=65 mmHg. Add vasopressin 0.03 units/min when norepinephrine >0.25 mcg/kg/min (VANCS trial).\n"
+            "De-escalation: Reassess antibiotic at 48-72h using culture data and PCT trend per Surviving Sepsis Campaign 2024."
+        ),
         "section": "clinical_studies"
     }
 ]

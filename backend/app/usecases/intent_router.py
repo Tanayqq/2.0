@@ -30,22 +30,67 @@ class IntentRouter:
 
         q_lower = question.lower()
 
-        if any(kw in q_lower for kw in ["flow", "dapa-ckd", "trial", "nejm", "lancet", "pubmed", "cochrane", "study shows", "latest evidence", "outcomes"]):
+        # --- Research Literature (highest priority: explicit trial names) ---
+        if any(kw in q_lower for kw in [
+            "flow", "dapa-ckd", "fidelio-dkd", "credence", "empa-kidney", "emperor",
+            "declare", "canvas", "leader", "sustain", "rewind", "pioneer",
+            "trial", "rct", "nejm", "lancet", "pubmed", "cochrane",
+            "study shows", "latest evidence", "outcomes", "randomized"
+        ]):
             return "RESEARCH_LITERATURE"
-        if any(kw in q_lower for kw in ["versus", " vs ", "vs.", "compare", "difference between"]):
-            return "COMPARISON"
+
+        # --- Multi-drug interaction: 2+ drug names joined by + or 'and' with risk/interaction context ---
+        import re as _re
+        drug_count = len(_re.findall(r'\b(vancomycin|amiodarone|digoxin|metoprolol|clarithromycin|furosemide|norepinephrine|piperacillin|tazobactam|spironolactone|enalapril|naproxen|warfarin|heparin|aspirin|clopidogrel|rivaroxaban|apixaban|semaglutide|dapagliflozin|empagliflozin|canagliflozin|finerenone|metformin|insulin|lisinopril|amlodipine|atorvastatin|rosuvastatin|losartan|valsartan|omeprazole|pantoprazole|azithromycin|ciprofloxacin|levofloxacin|meropenem|linezolid|daptomycin|cefazolin|ceftriaxone|piperacillin|tazobactam|morphine|fentanyl|midazolam|propofol|rocuronium|succinylcholine)\b', q_lower))
+        if drug_count >= 2 and any(kw in q_lower for kw in [
+            "risk", "interaction", "cascade", "synergy", "concurrent", "coadministration",
+            "together", "combine", "combination", "concomitant", "threat", "potentiation",
+            "nephrotoxicity", "hepatotoxicity", "qtc", "tdp", "bradycardia", "hypotension",
+            "icu", "septic", "shock", "+"
+        ]):
+            return "INTERACTION_CHECK"
+
+        # --- Patient Scenario: age/clinical context BEFORE disease keywords ---
+        if any(kw in q_lower for kw in [
+            "year-old", "year old", "-year-old", "yo ", "yo,",
+            "patient with", "patient on", "patient who",
+            "hba1c", "lvef", "uacr", "egfr", "scr", "creatinine",
+            "ckd stage", "step-therapy", "step therapy", "prioritize",
+            "male patient", "female patient", "55-year", "60-year", "65-year", "70-year",
+            "justify", "cardiorenal", "ada 2025", "kdigo 2024",
+            "on metformin", "on insulin", "on lisinopril"
+        ]):
+            return "PATIENT_SCENARIO"
+
+        # --- Drug Interaction (general) ---
         if any(kw in q_lower for kw in ["interaction", "coadministration", "together", "interact", "combine"]):
             return "INTERACTION_CHECK"
+
+        # --- Comparison ---
+        if any(kw in q_lower for kw in ["versus", " vs ", "vs.", "compare", "difference between"]):
+            return "COMPARISON"
+
+        # --- Medical Rep ---
         if any(kw in q_lower for kw in ["monograph", "competitor", "market position", "sales rep", "detail sheet"]):
             return "MEDICAL_REP"
-        if any(kw in q_lower for kw in ["guideline", "ada 2026", "kdigo", "gold 2026", "gina", "icmr guideline", "ntep"]):
+
+        # --- Clinical Guideline ---
+        if any(kw in q_lower for kw in [
+            "guideline", "ada 2026", "ada 2025", "kdigo", "gold 2026", "gina",
+            "icmr guideline", "ntep", "esc ", "acc/aha", "surviving sepsis"
+        ]):
             return "CLINICAL_GUIDELINE"
+
+        # --- Symptom Chat ---
         if any(kw in q_lower for kw in ["fever", "cough", "shortness of breath", "dyspnea", "chest pain", "diarrhea", "rash"]):
             return "SYMPTOM_CHAT"
-        if any(kw in q_lower for kw in ["asthma", "copd", "diabetes", "hypertension", "ckd", "stroke", "heart failure"]):
+
+        # --- Disease Chat (last, after patient scenario checked) ---
+        if any(kw in q_lower for kw in [
+            "asthma", "copd", "diabetes", "hypertension", "ckd", "stroke",
+            "heart failure", "sepsis", "aki", "ards", "cirrhosis", "nafld"
+        ]):
             return "DISEASE_CHAT"
-        if any(kw in q_lower for kw in ["year old", "yo ", "patient with", "egfr", "ckd stage"]):
-            return "PATIENT_SCENARIO"
 
         return "DRUG_CHAT"
 
