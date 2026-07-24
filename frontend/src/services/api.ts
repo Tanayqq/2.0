@@ -38,6 +38,15 @@ export interface AnswerResponse {
     total_latency_sec?: number;
     provider?: string;
     confidence?: string;
+    retrieval_confidence?: string;
+    retrieval_stats?: {
+      retrieval_latency_sec?: number;
+      retrieved_count?: number;
+      resolved_drug?: string | null;
+      detected_sections?: string[];
+      section_statuses?: Record<string, any>;
+      retrieval_trace?: any[];
+    };
     identity_profile?: any;
     zero_parametric_guard_triggered?: boolean;
     explainability?: any;
@@ -52,6 +61,7 @@ export interface AnswerResponse {
       missing_reason: string | null;
     }>>;
     retrieval_trace?: any[];
+    [key: string]: any;  // Allow additional backend fields without TS errors
   };
 }
 
