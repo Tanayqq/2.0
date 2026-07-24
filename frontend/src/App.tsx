@@ -1,3 +1,4 @@
+// MedRef Clinical Intelligence Platform v5.0
 import React, { useState, useEffect } from "react";
 import { queryMedicalAPI, type AnswerResponse } from "./services/api";
 import { Card, CardContent } from "@/components/ui/card";
