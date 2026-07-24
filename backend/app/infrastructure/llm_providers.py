@@ -21,11 +21,13 @@ class GroqProvider(LLMProviderProtocol):
             try:
                 chat_completion = self.client.chat.completions.create(
                     messages=[
-                        {"role": "system", "content": "You are MedRef, a highly strict Clinical Reference Assistant."},
+                        {"role": "system", "content": "You are MedRef, a highly strict Clinical Reference Assistant. Never repeat sentences in a loop."},
                         {"role": "user", "content": prompt}
                     ],
                     model=self.model_name,
                     temperature=0.0, # Zero hallucination tolerance
+                    frequency_penalty=0.5,
+                    presence_penalty=0.3,
                 )
                 return chat_completion.choices[0].message.content
             except groq.RateLimitError as e:

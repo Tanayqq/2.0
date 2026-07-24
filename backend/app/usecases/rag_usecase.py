@@ -753,6 +753,7 @@ CRITICAL RULES:
 4. DO NOT output any drug name as the ### heading — only the disease/condition name.
 5. NEVER output "DOCUMENT 1" or "Source:" labels.
 6. Extract from ALL documents provided, mapping each fact to the best matching section above.
+7. NO REPETITION. State each factual sentence or clinical recommendation EXACTLY ONCE. Never repeat the same sentence or phrase in a loop.
 """
         else:
             return f"""Context:
@@ -1066,6 +1067,7 @@ CRITICAL RULES:
         
         final_sentences = []
         validation_errors = []
+        seen_sentences = set()
         
         # Helper to tokenize text into keywords
         def get_keywords(text: str):
@@ -1077,6 +1079,18 @@ CRITICAL RULES:
             if not sentence.strip():
                 final_sentences.append(sentence)
                 continue
+
+            # Sentence Deduplication Guard: drop repetitive loop sentences
+            norm_s = regex.sub(r'\[[0-9]+\]', '', sentence).strip().lower()
+            norm_s = regex.sub(r'\s+', ' ', norm_s)
+            if len(norm_s) > 15:
+                if norm_s in seen_sentences:
+                    logger.warning("Duplicate repetitive sentence dropped during post-processing.", sentence=safe_log_str(sentence))
+                    final_sentences.append("")
+                    if idx < len(seps):
+                        seps[idx] = ""
+                    continue
+                seen_sentences.add(norm_s)
                 
             if not regex.search(r'[a-zA-Z]', sentence):
                 final_sentences.append(sentence)
