@@ -363,7 +363,7 @@ class ProcessClinicalQueryUseCase:
                         if score < MIN_DISEASE_SCORE:
                             continue  # Filter irrelevant cross-disease chunks
                         # Topic check: ensure chunk text/title/disease matches at least one query token
-                        doc_text = (str(cdoc.metadata.get("title","")) + " " + str(cdoc.metadata.get("disease","")) + " " + cdoc.page_content).lower()
+                        doc_text = (str(cdoc.metadata.get("title","")) + " " + str(cdoc.metadata.get("disease","")) + " " + getattr(cdoc, "content", getattr(cdoc, "text", ""))).lower()
                         if q_tokens and not any(token in doc_text for token in q_tokens):
                             continue  # Prevent cross-disease pollution (e.g. Asthma chunk for Diabetes query)
                         
