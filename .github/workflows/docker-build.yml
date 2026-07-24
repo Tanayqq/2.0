@@ -1,0 +1,55 @@
+name: Build and Push Docker Images to Docker Hub
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Check Docker Hub Credentials
+        id: check_secrets
+        run: |
+          if [ -n "${{ secrets.DOCKERHUB_USERNAME }}" ] && [ -n "${{ secrets.DOCKERHUB_TOKEN }}" ]; then
+            echo "has_secrets=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_secrets=false" >> $GITHUB_OUTPUT
+            echo "::warning::DOCKERHUB_USERNAME or DOCKERHUB_TOKEN secret is not configured in GitHub Repository Settings."
+          fi
+
+      - name: Log in to Docker Hub
+        if: steps.check_secrets.outputs.has_secrets == 'true'
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and Push Backend Image
+        if: steps.check_secrets.outputs.has_secrets == 'true'
+        uses: docker/build-push-action@v5
+        with:
+          context: ./backend
+          file: ./backend/Dockerfile
+          push: true
+          tags: |
+            tanykr17/medref-backend:latest
+            tanykr17/medref-backend:${{ github.sha }}
+
+      - name: Build and Push Frontend Image
+        if: steps.check_secrets.outputs.has_secrets == 'true'
+        uses: docker/build-push-action@v5
+        with:
+          context: ./frontend
+          file: ./frontend/Dockerfile
+          push: true
+          build-args: |
+            VITE_API_URL=${{ secrets.VITE_API_URL }}
+          tags: |
+            tanykr17/medref-frontend:latest
+            tanykr17/medref-frontend:${{ github.sha }}
