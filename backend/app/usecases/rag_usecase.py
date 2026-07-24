@@ -1819,20 +1819,22 @@ Identity Profile (Grounded FDA Label Metadata):
         )
 
     def get_debug_retrieval(self, query: MedicalQuery) -> Dict[str, Any]:
-        docs, stats = self._search_qdrant(query)
+        context_str, citations, documents, retrieval_time, confidence, retrieval_stats, citation_map = self._build_context(query)
         return {
             "question": query.question,
-            "mode": query.mode,
-            "total_retrieved": len(docs),
+            "mode": getattr(query, 'mode', 'DRUG_CHAT'),
+            "total_retrieved": len(documents),
+            "retrieval_stats": retrieval_stats,
             "chunks": [
                 {
-                    "id": d.id,
-                    "score": d.score,
-                    "authority": d.metadata.get("authority"),
-                    "source": d.source,
-                    "title": d.metadata.get("title"),
-                    "content_snippet": (d.content or "")[:200]
-                } for d in docs
+                    "id": getattr(d, 'id', str(i)),
+                    "score": getattr(d, 'score', 0.0),
+                    "title": getattr(d, 'title', getattr(d, 'payload', {}).get('title', '')),
+                    "authority": getattr(d, 'authority', getattr(d, 'payload', {}).get('authority', '')),
+                    "section": getattr(d, 'section', getattr(d, 'payload', {}).get('section', '')),
+                    "content": getattr(d, 'content', getattr(d, 'payload', {}).get('content', ''))[:300]
+                }
+                for i, d in enumerate(documents)
             ]
         }
 
