@@ -372,10 +372,26 @@ class ProcessClinicalQueryUseCase:
                         auth = cdoc.metadata.get("authority", "ADA")
                         cdoc.metadata["authority_rank"] = AUTHORITY_RANK.get(auth, 95)
                         cdoc.metadata["retrieval_mode"] = "MULTI_COLLECTION_RAG"
-                        curr_drug = resolved_drug[0] if (resolved_drug and isinstance(resolved_drug, list)) else (resolved_drug or query.question.strip())
+                        if query.mode and query.mode.upper() in ["INTERACTION_CHECK", "PATIENT_SCENARIO"]:
+                            curr_drug = query.question.strip()
+                        else:
+                            curr_drug = resolved_drug[0] if (resolved_drug and isinstance(resolved_drug, list)) else (resolved_drug or query.question.strip())
                         cdoc.metadata["drug_name"] = curr_drug  # Used by citation source formatter
                         cdoc.metadata["disease_query"] = query.question.strip()
-                        cdoc.metadata["section"] = cdoc.metadata.get("section", "clinical_profile")
+                        
+                        # Smart section categorization: distribute multi-collection RAG chunks across 4 UI cards
+                        raw_sec = cdoc.metadata.get("section") or cdoc.metadata.get("category") or ""
+                        if not raw_sec or raw_sec in ["clinical_profile", "general", "indications"]:
+                            txt_lower = doc_text.lower()
+                            if any(w in txt_lower for w in ["dose", "dosage", "mg/day", "initial dosage", "starting dose", "titration", "daily dose", "every other day"]):
+                                raw_sec = "dosage_and_administration"
+                            elif any(w in txt_lower for w in ["contraindicated", "black box", "boxed warning", "severe risk", "fatal", "hypersensitive"]):
+                                raw_sec = "contraindications"
+                            elif any(w in txt_lower for w in ["coadministration", "interaction", "concomitant", "synergistic", "combined use"]):
+                                raw_sec = "drug_interactions"
+                            else:
+                                raw_sec = "clinical_profile"
+                        cdoc.metadata["section"] = raw_sec
                         final_docs.append(cdoc)
 
         if not is_non_drug_mode:
