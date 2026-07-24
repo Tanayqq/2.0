@@ -77,7 +77,7 @@ class CorpusQualityDashboard:
                 "grounding_success_average": "96.2%",
                 "average_citations_per_query": 4.2,
                 "average_retrieval_latency_ms": 18.5,
-                "time_allocation": "85% Data Corpus Scaling / 15% Infrastructure Maintenance"
+                "time_allocation": "70% Corpus Scaling / 20% Data Quality Validation / 10% Infrastructure Maintenance"
             },
             "authorities_freshness": authorities_freshness
         }
