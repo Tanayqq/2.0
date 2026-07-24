@@ -1491,6 +1491,19 @@ Identity Profile (Grounded FDA Label Metadata):
 
         context_str, citations, documents, retrieval_time, confidence, retrieval_stats, citation_map = self._build_context(query)
         
+        # --- MedRef v6.0 Lab Interpretation Engine ---
+        from app.usecases.lab_interpreter import LabInterpretationEngine
+        lab_res = LabInterpretationEngine.interpret(query.question)
+        if lab_res and lab_res.get("interpretations"):
+            lab_text = "\n### 🧪 LABORATORY INTERPRETATION & CLINICAL ASSESSMENT\n"
+            for interp in lab_res["interpretations"]:
+                lab_text += f"- {interp}\n"
+            if lab_res.get("critical_alerts"):
+                lab_text += "\n**Critical Clinical Alerts:**\n"
+                for alert in lab_res["critical_alerts"]:
+                    lab_text += f"- ⚠️ {alert}\n"
+            context_str = lab_text + "\n" + context_str
+        
         # Build a generic->aliases map from the profile_store cache for grounding validation
         # This lets the validator accept brand-name sentences (e.g. "Novamox 500 mg...") as
         # grounded in generic-name chunks (e.g. amoxicillin dosage section).
