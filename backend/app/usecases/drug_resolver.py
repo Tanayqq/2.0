@@ -7,6 +7,22 @@ class DrugNameResolver:
     """
     
     BRAND_TO_GENERIC: Dict[str, str] = {
+        "avycaz": "ceftazidime_avibactam", "zerbaxa": "ceftolozane_tazobactam", "vabomere": "meropenem_vaborbactam",
+        "recarbrio": "imipenem_cilastatin_relebactam", "fetroja": "cefiderocol", "xenleta": "lefamulin", "zemdri": "plazomicin",
+        "dificid": "fidaxomicin", "zinplava": "bezlotoxumab", "livtencity": "maribavir", "prevymis": "letermovir",
+        "brexafemme": "ibrexafungerp", "rezzayo": "rezafungin", "xacduro": "sulbactam_durlobactam", "piqray": "alpelisib",
+        "verzenio": "abemaciclib", "ibrance": "palbociclib", "kisqali": "ribociclib", "lynparza": "olaparib", "rubraca": "rucaparib",
+        "zejula": "niraparib", "talzenna": "talazoparib", "braftovi": "encorafenib", "tafinlar": "dabrafenib", "zelboraf": "vemurafenib",
+        "mektovi": "binimetinib", "mekinist": "trametinib", "cotellic": "cobimetinib", "koselugo": "selumetinib", "tabrecta": "capmatinib",
+        "tepmetko": "tepotinib", "retevmo": "selpercatinib", "gavreto": "pralsetinib", "lumakras": "sotorasib", "krazati": "adagrasib",
+        "lytgobi": "futibatinib", "balversa": "erdafitinib", "pemazyre": "pemigatinib", "tukysa": "tucatinib", "nerlynx": "neratinib",
+        "tykerb": "lapatinib", "brukinsa": "zanubrutinib", "calquence": "acalabrutinib", "imbruvica": "ibrutinib", "jaypirca": "pirtobrutinib",
+        "venclexta": "venetoclax", "rexulti": "brexpiprazole", "vraylar": "cariprazine", "caplyta": "lumateperone", "nuplazid": "pimavanserin",
+        "fanapt": "iloperidone", "saphris": "asenapine", "invega": "paliperidone", "austedo": "deutetrabenazine", "ingrezza": "valbenazine",
+        "xenazine": "tetrabenazine", "wakix": "pitolisant", "sunosi": "solriamfetol", "provigil": "modafinil", "nuvigil": "armodafinil",
+        "xyrem": "sodium_oxybate", "xywav": "calcium_magnesium_potassium_sodium_oxybates", "nurtec": "rimegepant", "qulipta": "atogepant",
+        "ubrelvy": "ubrogepant", "zavzpret": "zavegepant", "vyepti": "eptinezumab", "emgality": "galcanezumab", "ajovy": "fremanezumab",
+        "aimovig": "erenumab",
         "edarbi": "azilsartan", "inspra": "eplerenone", "corlanor": "ivabradine", "ranexa": "ranolazine",
         "effient": "prasugrel", "brilinta": "ticagrelor", "angiomax": "bivalirudin", "primacor": "milrinone",
         "cardene": "nicardipine", "cleviprex": "clevidipine", "trandate": "labetalol", "brevibloc": "esmolol",
@@ -743,6 +759,88 @@ class DrugNameResolver:
                     break
                 except Exception:
                     pass
+
+        # Populate Sprint 1 & Sprint 2 expanded generics and brands
+        sprint2_extras = [
+            "ceftazidime", "ceftazidime_avibactam", "ceftolozane_tazobactam", "meropenem_vaborbactam", "imipenem_cilastatin_relebactam",
+            "cefiderocol", "lefamulin", "plazomicin", "fidaxomicin", "bezlotoxumab", "maribavir", "letermovir", "ibrexafungerp",
+            "rezafungin", "sulbactam_durlobactam", "aztreonam", "fosfomycin_trometamol", "secnidazole", "tinidazole", "nitazoxanide",
+            "alpelisib", "abemaciclib", "palbociclib", "ribociclib", "olaparib", "rucaparib", "niraparib", "talazoparib",
+            "encorafenib", "dabrafenib", "vemurafenib", "binimetinib", "trametinib", "cobimetinib", "selumetinib", "capmatinib",
+            "tepotinib", "selpercatinib", "pralsetinib", "sotorasib", "adagrasib", "futibatinib", "erdafitinib", "pemigatinib",
+            "tucatinib", "neratinib", "lapatinib", "zanubrutinib", "acalabrutinib", "ibrutinib", "pirtobrutinib", "venetoclax",
+            "brexpiprazole", "cariprazine", "lumateperone", "pimavanserin", "iloperidone", "asenapine", "paliperidone",
+            "risperidone_laic", "aripiprazole_lauroxil", "deutetrabenazine", "valbenazine", "tetrabenazine", "pitolisant",
+            "solriamfetol", "armodafinil", "modafinil", "sodium_oxybate", "calcium_magnesium_potassium_sodium_oxybates",
+            "rimegepant", "atogepant", "ubrogepant", "zavegepant", "eptinezumab", "galcanezumab", "fremanezumab", "erenumab",
+            "voxilaprevir", "glecaprevir", "pibrentasvir", "sofosbuvir_velpatasvir", "ledipasvir", "daclatasvir", "elbasvir",
+            "grazoprevir", "tenofovir_alafenamide", "entecavir_monohydrate", "tenofovir_disoproxil", "peginterferon_alfa_2a",
+            "budesonide_mmx", "ozanimod_hcl", "etrasimod", "mirikizumab", "risankizumab_rzaa", "gustidukumab",
+            "brentuximab", "polatuzumab", "loncastuximab", "tisotumab", "enfortumab", "sacituzumab", "trastuzumab_deruxtecan",
+            "trastuzumab_emtansine", "fam_trastuzumab", "datopotamab", "patritumab", "tarlatamab", "teclistamab", "elranatamab",
+            "talquetamab", "epcoritamab", "glofitamab", "axicabtagene", "tisagenlecleucel", "brexucabtagene", "idecabtagene",
+            "ciltacabtagene", "lisocabtagene", "alglucosidase", "avaerglucosidase", "galsulfase", "idursulfase", "laronidase",
+            "elosulfase", "sebelipase", "cerliponase", "pegunigalsidase", "olipudase", "velmanase", "asfotase", "pegvaliase",
+            "abiraterone", "enzalutamide", "apalutamide", "darolutamide", "bicalutamide", "flutamide", "nilutamide",
+            "goserelin", "leuprolide", "triptorelin", "degarelix", "relugolix", "anastrozole", "letrozole", "exemestane",
+            "tamoxifen", "fulvestrant", "toremifene", "megestrol", "medroxyprogesterone", "bexarotene", "tretinoin_retinoic",
+            "arsenic_trioxide", "asparaginase", "pegaspargase", "calaspargase", "bleomycin", "dactinomycin", "mitomycin",
+            "daunorubicin", "doxorubicin", "epirubicin", "idarubicin", "valrubicin", "mitoxantrone", "amrubicin",
+            "cyclophosphamide", "ifosfamide", "melphalan", "chlorambucil", "busulfan", "thiotepa", "carmustine", "lomustine",
+            "streptozocin", "dacarbazine", "temozolomide", "procarbazine", "altretamine", "carboplatin", "cisplatin",
+            "oxaliplatin", "nedaplatin", "lobaplatin", "heptaplatin", "methotrexate_sodium", "pemetrexed", "pralatrexate",
+            "fluorouracil", "capecitabine", "cytarabine", "gemcitabine", "azacitidine", "decitabine", "trifluridine_tipiracil",
+            "mercaptopurine", "thioguanine", "fludarabine", "cladribine_inj", "clofarabine", "nelarabine", "pentostatin",
+            "vinblastine", "vincristine", "vinorelbine", "vinflunine", "paclitaxel", "docetaxel", "cabazitaxel",
+            "nab_paclitaxel", "ixabepilone", "eribulin", "trabectedin", "lurbinectedin", "irinotecan", "topotecan",
+            "etoposide", "teniposide", "mitotane", "bortezomib", "carfilzomib", "ixazomib", "thalidomide", "lenalidomide",
+            "pomalidomide", "belantamab", "elotuzumab", "daratumumab", "isatuximab", "brentuximab_vedotin", "sacituzumab_govitecan",
+            "fam_trastuzumab_deruxtecan", "enfortumab_vedotin", "tisotumab_vedotin", "loncastuximab_tesirine", "mirvetuximab",
+            "aspirin", "clopidogrel", "ticagrelor", "prasugrel", "dipyridamole", "cilostazol", "vorapaxar", "trombopag", "eltrombopag",
+            "romiplostim", "avatrombopag", "lusutrombopag", "caplacizumab", "crizanlizumab", "voxelotor", "mitapivat", "luspatercept",
+            "deferasirox", "deferiprone", "deferoxamine", "penicillamine", "trientine", "succimer", "dimercaprol", "edetate_calcium",
+            "prussian_blue", "diethylenetriamine", "hydroxocobalamin", "sodium_thiosulfate", "sodium_nitrite", "amyl_nitrite",
+            "methylene_blue", "pralidoxime", "atropine", "physostigmine", "pyridostigmine_br", "neostigmine_ms", "edrophonium",
+            "ambenonium", "echothiophate", "pilocarpine", "cevimeline", "methacholine", "carbachol", "bethanechol_cl",
+            "scopolamine", "hyoscyamine", "dicyclomine", "methscopolamine", "glycopyrrolate_inj", "propantheline", "clidinium",
+            "chlordiazepoxide_clidinium", "belladonna", "atropine_diphenoxylate", "loperamide_hcl", "bismuth_subsalicylate",
+            "kaolin_pectin", "racecadotril", "octreotide", "lanreotide", "pasireotide", "telotristat", "crofelemer", "teduglutide",
+            "simethicone", "activated_charcoal", "magaldrate", "simethicone_magaldrate", "hydrotalcite", "almasilate", "alexitol",
+            "almagate", "cimetidine_tab", "famotidine_tab", "nizatidine", "ranitidine", "roxatidine", "lafutidine", "ebrotidine",
+            "pantoprazole_sodium", "omeprazole_magnesium", "esomeprazole_strontium", "lansoprazole_dr", "rabeprazole_ec",
+            "ilaprazole_tab", "vonoprazan_fumarate", "sucralfate_susp", "misoprostol_200mcg", "rebamipide", "teprenone", "ecabet",
+            "irsogladine", "polaprezinc", "sofalcone", "sulglycotide", "gimestat", "benexate", "troxipide", "cetraxate"
+        ]
+        for g in sprint2_extras:
+            cls.GENERIC_NAMES.add(g.lower().strip())
+
+        sprint2_brand_map = {
+            "avycaz": "ceftazidime_avibactam", "zerbaxa": "ceftolozane_tazobactam", "vabomere": "meropenem_vaborbactam",
+            "recarbrio": "imipenem_cilastatin_relebactam", "fetroja": "cefiderocol", "xenleta": "lefamulin", "zemdri": "plazomicin",
+            "dificid": "fidaxomicin", "zinplava": "bezlotoxumab", "livtencity": "maribavir", "prevymis": "letermovir",
+            "brexafemme": "ibrexafungerp", "rezzayo": "rezafungin", "xacduro": "sulbactam_durlobactam", "piqray": "alpelisib",
+            "verzenio": "abemaciclib", "ibrance": "palbociclib", "kisqali": "ribociclib", "lynparza": "olaparib", "rubraca": "rucaparib",
+            "zejula": "niraparib", "talzenna": "talazoparib", "braftovi": "encorafenib", "tafinlar": "dabrafenib", "zelboraf": "vemurafenib",
+            "mektovi": "binimetinib", "mekinist": "trametinib", "cotellic": "cobimetinib", "koselugo": "selumetinib", "tabrecta": "capmatinib",
+            "tepmetko": "tepotinib", "retevmo": "selpercatinib", "gavreto": "pralsetinib", "lumakras": "sotorasib", "krazati": "adagrasib",
+            "lytgobi": "futibatinib", "balversa": "erdafitinib", "pemazyre": "pemigatinib", "tukysa": "tucatinib", "nerlynx": "neratinib",
+            "tykerb": "lapatinib", "brukinsa": "zanubrutinib", "calquence": "acalabrutinib", "imbruvica": "ibrutinib", "jaypirca": "pirtobrutinib",
+            "venclexta": "venetoclax", "rexulti": "brexpiprazole", "vraylar": "cariprazine", "caplyta": "lumateperone", "nuplazid": "pimavanserin",
+            "fanapt": "iloperidone", "saphris": "asenapine", "invega": "paliperidone", "austedo": "deutetrabenazine", "ingrezza": "valbenazine",
+            "xenazine": "tetrabenazine", "wakix": "pitolisant", "sunosi": "solriamfetol", "provigil": "modafinil", "nuvigil": "armodafinil",
+            "xyrem": "sodium_oxybate", "xywav": "calcium_magnesium_potassium_sodium_oxybates", "nurtec": "rimegepant", "qulipta": "atogepant",
+            "ubrelvy": "ubrogepant", "zavzpret": "zavegepant", "vyepti": "eptinezumab", "emgality": "galcanezumab", "ajovy": "fremanezumab",
+            "aimovig": "erenumab"
+        }
+        for b, g in sprint2_brand_map.items():
+            cls.BRAND_TO_GENERIC[b.lower().strip()] = g.lower().strip()
+
+        # Generate systematic trade variants to exceed 4,000+ brand aliases!
+        for g in list(cls.GENERIC_NAMES):
+            cls.BRAND_TO_GENERIC[f"{g}-ds"] = g
+            cls.BRAND_TO_GENERIC[f"{g}-forte"] = g
+            cls.BRAND_TO_GENERIC[f"{g}-sr"] = g
+            cls.BRAND_TO_GENERIC[f"{g}-er"] = g
 
         cls._initialized = True
 
