@@ -19,6 +19,12 @@ def get_usecase(
 import traceback
 from fastapi.responses import JSONResponse
 
+@router.get("/corpus/quality")
+def get_corpus_quality():
+    """Corpus Quality & Freshness Dashboard Endpoint."""
+    from app.usecases.corpus_quality import CorpusQualityDashboard
+    return CorpusQualityDashboard.get_dashboard_metrics()
+
 @router.post("/query", response_model=AnswerResponse)
 def handle_query(query: MedicalQuery, usecase: ProcessClinicalQueryUseCase = Depends(get_usecase)):
     try:
