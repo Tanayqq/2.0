@@ -363,7 +363,8 @@ class ProcessClinicalQueryUseCase:
                         auth = cdoc.metadata.get("authority", "ADA")
                         cdoc.metadata["authority_rank"] = AUTHORITY_RANK.get(auth, 95)
                         cdoc.metadata["retrieval_mode"] = "MULTI_COLLECTION_RAG"
-                        cdoc.metadata["disease_query"] = query.question.strip()  # Preserve original query
+                        cdoc.metadata["drug_name"] = query.question.strip()  # Used by citation source formatter
+                        cdoc.metadata["disease_query"] = query.question.strip()
                         cdoc.metadata["section"] = cdoc.metadata.get("section", "clinical_profile")
                         final_docs.append(cdoc)
 
@@ -721,25 +722,28 @@ CRITICAL RULES:
      Not found in available sources.
    Do NOT invent any clinical information from training knowledge.
 
-3. OUTPUT FORMAT — use EXACTLY this structure (replace [Disease/Condition] with the actual topic):
+3. OUTPUT FORMAT — use EXACTLY this structure. Replace [Disease/Condition] with the exact disease name from the Question above (e.g. "Type 2 Diabetes", "Asthma", "Fever"):
 
    ### [Disease/Condition]
 
    #### Clinical Profile Overview
-   [Pathophysiology, definition, clinical presentation, complications — from clinical_profile or clinical_guideline documents]
+   [Pathophysiology, definition, clinical presentation, complications from documents. Use the disease name as heading, NOT any drug name.]
 
    #### Dosing & Administration
-   [Recommended treatments, drug dosing, first-line therapy, step therapy — from guideline documents. Extract specific drug names and doses mentioned.]
+   [Recommended treatments, drug dosing, first-line therapy, step therapy from guideline documents. List specific drug names and doses.]
 
-   #### Contraindications & Warnings
-   [Any drug contraindications, red flag symptoms, avoidance criteria — from guideline documents.]
+   #### Contraindications
+   [Specific drug contraindications, absolute contraindications, and avoidance criteria from guideline documents.]
+
+   #### Warnings
+   [Red flag symptoms, dose-limiting toxicities, special population warnings from guideline documents. Write "Not found in available sources." if no warning text exists.]
 
    #### Co-Administration Risks
-   [Drug-drug interactions, combination risks, drugs to avoid — from guideline or interaction documents.]
+   [Drug-drug interactions, combination risks, drugs to avoid in this condition from guideline or interaction documents.]
 
-4. DO NOT use "Drug Name" as the heading — use the actual disease/condition name from the question.
-5. NEVER output "DOCUMENT 1" or "Source:" labels in your response.
-6. Extract content from ALL documents provided, mapping each fact to the most appropriate section above.
+4. DO NOT output any drug name as the ### heading — only the disease/condition name.
+5. NEVER output "DOCUMENT 1" or "Source:" labels.
+6. Extract from ALL documents provided, mapping each fact to the best matching section above.
 """
         else:
             return f"""Context:

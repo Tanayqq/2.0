@@ -1022,7 +1022,13 @@ export default function App() {
                         </Badge>
                       </div>
                       <span className="text-[10px] text-slate-500 uppercase tracking-wider font-mono-dash block">
-                        Pipeline Standard Reference Profile: {formularyStandard === 'openFDA' ? 'FDA / DailyMed Library' : 'CDSCO Indian Pharmacopoeia'}
+                        Pipeline Standard Reference Profile: {
+                          ["DISEASE_CHAT","CLINICAL_GUIDELINE","RESEARCH_LITERATURE","SYMPTOM_CHAT"].includes(selectedMode)
+                            ? "ADA / ICMR / KDIGO / GINA Clinical Guidelines"
+                            : selectedMode === "INTERACTION_CHECK"
+                            ? "FDA DDI / WHO Safety Authority"
+                            : formularyStandard === 'openFDA' ? 'FDA / DailyMed Library' : 'CDSCO Indian Pharmacopoeia'
+                        }
                       </span>
                     </div>
 
@@ -1241,27 +1247,47 @@ export default function App() {
                   <div className="flex items-center gap-4">
                     <span className="text-slate-500 uppercase tracking-wider font-bold">Pipeline Ingestion Track :</span>
                     <div className="flex items-center gap-2.5">
-                      <span className="flex items-center gap-1 text-slate-300 bg-slate-900 border border-slate-800 px-2 py-0.5 rounded">
-                        <Folder className="h-3 w-3 text-cyan-500" /> openFDA
-                      </span>
-                      <span className="flex items-center gap-1 text-slate-300 bg-slate-900 border border-slate-800 px-2 py-0.5 rounded">
-                        <Folder className="h-3 w-3 text-cyan-500" /> DailyMed
-                      </span>
+                      {["DISEASE_CHAT","CLINICAL_GUIDELINE","RESEARCH_LITERATURE","SYMPTOM_CHAT"].includes(selectedMode) ? (
+                        <>
+                          <span className="flex items-center gap-1 text-slate-300 bg-slate-900 border border-slate-800 px-2 py-0.5 rounded">
+                            <Folder className="h-3 w-3 text-cyan-500" /> ADA / ICMR
+                          </span>
+                          <span className="flex items-center gap-1 text-slate-300 bg-slate-900 border border-slate-800 px-2 py-0.5 rounded">
+                            <Folder className="h-3 w-3 text-cyan-500" /> KDIGO / GINA
+                          </span>
+                        </>
+                      ) : (
+                        <>
+                          <span className="flex items-center gap-1 text-slate-300 bg-slate-900 border border-slate-800 px-2 py-0.5 rounded">
+                            <Folder className="h-3 w-3 text-cyan-500" /> openFDA
+                          </span>
+                          <span className="flex items-center gap-1 text-slate-300 bg-slate-900 border border-slate-800 px-2 py-0.5 rounded">
+                            <Folder className="h-3 w-3 text-cyan-500" /> DailyMed
+                          </span>
+                        </>
+                      )}
                     </div>
                   </div>
 
                   {/* Dynamic Confidence Score Indicator */}
                   {activeItem && (
                     <div className={`px-3 py-1 rounded-full border text-[10px] font-bold ${
-                      (activeItem.a.metadata?.confidence || "High") === "High"
+                      (activeItem.a.metadata?.retrieval_confidence || activeItem.a.metadata?.confidence || "Low").includes("★★★★★") || (activeItem.a.metadata?.retrieval_confidence || "") === "High"
                         ? "text-emerald-400 border-emerald-900/60 bg-emerald-950/20"
-                        : (activeItem.a.metadata?.confidence || "High") === "Medium"
+                        : (activeItem.a.metadata?.retrieval_confidence || activeItem.a.metadata?.confidence || "Low").includes("★★★") || (activeItem.a.metadata?.retrieval_confidence || "") === "Medium"
                         ? "text-yellow-400 border-yellow-900/60 bg-yellow-950/20"
                         : "text-rose-400 border-rose-900/60 bg-rose-950/20"
                     }`}>
                       RAG Pipeline Conf: {
-                        (activeItem.a.metadata?.confidence || "High") === "High" ? "98.4%" : 
-                        (activeItem.a.metadata?.confidence || "High") === "Medium" ? "76.2%" : "35.0%"
+                        (() => {
+                          const conf = activeItem.a.metadata?.retrieval_confidence || activeItem.a.metadata?.confidence || "Low";
+                          if (conf.includes("★★★★★") || conf === "High") return "98.4%";
+                          if (conf.includes("★★★★") || conf === "Medium") return "84.1%";
+                          if (conf.includes("★★★")) return "70.5%";
+                          if (conf.includes("★★")) return "55.2%";
+                          if (conf.includes("★")) return "40.0%";
+                          return "35.0%";
+                        })()
                       }
                     </div>
                   )}
