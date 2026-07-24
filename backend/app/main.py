@@ -41,6 +41,9 @@ async def startup_event():
         embed.embed_query("warmup query")
         vdb = get_vector_db()
         logger.info("prewarming_models_complete")
+        """
+        MedRef Clinical Intelligence API Engine v5.0
+        """
     except Exception as e:
         logger.error("prewarming_models_error", error=str(e))
 
