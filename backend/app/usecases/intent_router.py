@@ -37,7 +37,8 @@ class IntentRouter:
             "kerendia", "finerenone", "jardiance", "empagliflozin", "aceclofenac", "uacr",
             "biotin", "troponin", "streptavidin", "immunoassay"
         ]):
-            if any(kw in q_lower for kw in ["risk", "interaction", "synergy", "potentiation", "zosyn", "piperacillin", "vancomycin", "furosemide", "aceclofenac", "nsaid", "biotin", "troponin", "interfere"]):
+            if any(kw in q_lower for kw in ["risk", "interaction", "synergy", "potentiation", "zosyn", "piperacillin", "vancomycin", "furosemide", "aceclofenac", "nsaid", "biotin", "troponin", "interfere", "entresto", "sacubitril", "washout", "angioedema"]):
+                return "INTERACTION_CHECK"
                 return "INTERACTION_CHECK"
             return "CLINICAL_GUIDELINE"
 

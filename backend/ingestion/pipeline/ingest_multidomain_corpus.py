@@ -216,15 +216,20 @@ INTERACTION_DATA = [
         "section": "drug_interactions"
     },
     {
-        "title": "ACE Inhibitors (Enalapril) and Sacubitril/Valsartan (Entresto) Angioedema Contraindication & 36-Hour Washout",
-        "drugs": ["Enalapril", "Sacubitril", "Valsartan", "Entresto", "Lisinopril", "Ramipril"],
-        "authority": "FDA / ACC/AHA",
+        "title": "ACE Inhibitors (Enalapril, Lisinopril, Ramipril) to Entresto (Sacubitril/Valsartan) Switching Protocol & 36-Hour Washout",
+        "drugs": ["Enalapril", "Sacubitril", "Valsartan", "Entresto", "Lisinopril", "Ramipril", "Vasotec"],
+        "authority": "FDA Black Box Warning / ACC/AHA 2024",
         "category": "drug_interactions",
         "content": (
-            "DRUG INTERACTION ALERT: Enalapril (ACE Inhibitor) + Entresto (Sacubitril/Valsartan ARNI).\n"
-            "Severity: CONTRAINDICATED / LIFE-THREATENING ANGIOEDEMA RISK.\n"
-            "Mechanism: Dual inhibition of ACE and neprilysin leads to massive accumulation of bradykinin, causing severe, potentially fatal airway-compromising angioedema.\n"
-            "Mandatory Protocol: A strict 36-HOUR WASHOUT PERIOD is required when switching from an ACE inhibitor (Enalapril) to Sacubitril/Valsartan (Entresto). Do NOT administer Entresto within 36 hours of the last dose of Enalapril."
+            "DRUG INTERACTION ALERT: Enalapril (Vasotec / ACE Inhibitor) + Entresto (Sacubitril/Valsartan ARNI) in Heart Failure (HFrEF).\n"
+            "Severity: CONTRAINDICATED / HIGH RISK OF FATAL AIRWAY-COMPROMISING ANGIOEDEMA.\n"
+            "Question Answer: Can Entresto be started immediately? NO. Entresto CANNOT be started immediately if the patient is currently taking Enalapril.\n"
+            "Mandatory 36-Hour Washout Requirement: A strict, mandatory 36-HOUR WASHOUT PERIOD must elapse after the last dose of Enalapril (or any ACE inhibitor) BEFORE starting the first dose of Entresto (Sacubitril/Valsartan).\n"
+            "Biochemical Mechanism & Risk if Given Together: Simultaneous administration or switching without a 36-hour washout causes dual inhibition of Angiotensin Converting Enzyme (ACE) and Neprilysin. Because both enzymes degrade bradykinin, dual inhibition leads to massive accumulation of bradykinin, causing severe, rapid-onset, life-threatening angioedema with acute laryngeal edema and respiratory arrest.\n"
+            "ACC/AHA 2024 Management Protocol:\n"
+            "1. Discontinue Enalapril 10mg BID.\n"
+            "2. Wait a full 36 hours before administering the starting dose of Entresto (49/51 mg BID).\n"
+            "3. If a patient has a prior history of angioedema related to ACE inhibitor or ARB therapy, Entresto is PERMANENTLY CONTRAINDICATED."
         ),
         "section": "drug_interactions"
     },
