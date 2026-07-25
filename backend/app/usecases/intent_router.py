@@ -119,9 +119,35 @@ class IntentRouter:
         return "DRUG_CHAT"
 
     @classmethod
+    def calculate_confidence(cls, question: str, mode: ClinicalChatMode, mode_override: Optional[str] = None) -> float:
+        if mode_override:
+            return 1.0
+        q_lower = question.lower().strip()
+        
+        # High confidence triggers
+        if any(kw in q_lower for kw in ["year-old", "yo ", "kdigo", "ada", "sepsis", "interaction", "switch", "guideline", "lvef", "egfr", "auc/mic"]):
+            return 0.98
+        
+        # Moderate confidence for multi-word queries
+        words = q_lower.split()
+        if len(words) >= 4:
+            return 0.90
+        elif len(words) >= 2:
+            return 0.75
+            
+        # Low confidence for single ambiguous words
+        return 0.55
+
+    @classmethod
     def route_query(cls, question: str, country_context: CountryContext = "GLOBAL", mode_override: Optional[str] = None) -> Dict[str, Any]:
         mode = cls.classify_intent(question, mode_override)
+        confidence = cls.calculate_confidence(question, mode, mode_override)
         target_collections = list(cls.MODE_COLLECTIONS.get(mode, ["openfda_labels"]))
+
+        # Low confidence threshold fallback: broaden collections to prevent routing bottlenecks
+        if confidence < 0.60:
+            logger.info("low_intent_confidence_broadening_collections", confidence=confidence, question=question[:50])
+            target_collections = ["openfda_labels", "drug_interactions", "disease_guidelines", "disease_corpus"]
 
         # Country context routing adjustments
         if country_context == "IN":
@@ -132,10 +158,11 @@ class IntentRouter:
 
         target_collections = list(dict.fromkeys(target_collections))
 
-        logger.info("query_routed", mode=mode, country_context=country_context, collections=target_collections)
+        logger.info("query_routed", mode=mode, confidence=confidence, country_context=country_context, collections=target_collections)
 
         return {
             "mode": mode,
+            "intent_confidence": confidence,
             "country_context": country_context,
             "target_collections": target_collections
         }

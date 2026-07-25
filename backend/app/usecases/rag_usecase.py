@@ -1828,8 +1828,12 @@ Identity Profile (Grounded FDA Label Metadata):
             "overall_percentage": int((covered_count / len(all_sections)) * 100) if all_sections else 0
         }
         
+        from app.usecases.intent_router import IntentRouter
+        intent_confidence = IntentRouter.calculate_confidence(query.question, effective_mode, mode_override=query.mode)
+
         retrieval_diagnostics = {
             "intent": effective_mode,
+            "intent_confidence": intent_confidence,
             "collections_searched": retrieval_stats.get("collections_searched", ["openfda_labels", "drug_interactions"]),
             "retrieved_count": retrieval_stats.get("total_retrieved", len(documents)),
             "after_dedupe_count": len(documents),
