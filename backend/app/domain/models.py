@@ -32,7 +32,7 @@ class MedicalQuery(BaseModel):
     question: str
     session_id: Optional[str] = None
     conversation_id: Optional[str] = None
-    mode: Optional[ClinicalChatMode] = "DRUG_CHAT"
+    mode: Optional[ClinicalChatMode] = None
     country_context: Optional[CountryContext] = "GLOBAL"
     patient_profile: Optional[PatientProfile] = None
     filters: Optional[Dict[str, List[str]]] = None
