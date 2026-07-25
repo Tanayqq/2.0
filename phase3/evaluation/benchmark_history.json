@@ -1,0 +1,53 @@
+[
+  {
+    "benchmark_version": "v1.0",
+    "timestamp": "2026-07-08T10:00:00Z",
+    "corpus_version": "v2026.01",
+    "embedding_version": "sentence-transformers/all-MiniLM-L6-v2",
+    "reranker_version": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "prompt_version": "v1.0-standard",
+    "llm_version": "groq/llama-3.3-70b-versatile",
+    "dataset_version": "ClinicalEval-v1.0",
+    "pass_rate": "57.1%",
+    "recall_at_10": 0.5714,
+    "precision_at_10": 0.5714,
+    "mrr": 0.5714,
+    "citation_coverage": 0.5714,
+    "unsupported_claim_rate": 0.0,
+    "total_vector_count": 18000
+  },
+  {
+    "benchmark_version": "v2.0",
+    "timestamp": "2026-07-15T12:00:00Z",
+    "corpus_version": "v2026.05",
+    "embedding_version": "sentence-transformers/all-MiniLM-L6-v2",
+    "reranker_version": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "prompt_version": "v1.5-hybrid",
+    "llm_version": "groq/llama-3.3-70b-versatile",
+    "dataset_version": "ClinicalEval-v2.0",
+    "pass_rate": "71.4%",
+    "recall_at_10": 0.7142,
+    "precision_at_10": 0.7142,
+    "mrr": 0.7142,
+    "citation_coverage": 0.7142,
+    "unsupported_claim_rate": 0.0,
+    "total_vector_count": 20100
+  },
+  {
+    "benchmark_version": "v4.2",
+    "timestamp": "2026-07-26T01:54:00Z",
+    "corpus_version": "v2026.09",
+    "embedding_version": "sentence-transformers/all-MiniLM-L6-v2",
+    "reranker_version": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "prompt_version": "v2.0-hybrid-reranked",
+    "llm_version": "groq/llama-3.3-70b-versatile",
+    "dataset_version": "ClinicalEval-v4.0-L1-L8",
+    "pass_rate": "85.7%",
+    "recall_at_10": 0.8571,
+    "precision_at_10": 0.8571,
+    "mrr": 0.8571,
+    "citation_coverage": 0.8571,
+    "unsupported_claim_rate": 0.0,
+    "total_vector_count": 20578
+  }
+]
