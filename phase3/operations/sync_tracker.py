@@ -10,20 +10,20 @@ from typing import Dict, Any, List
 SYNC_REGISTRY_PATH = os.path.join(os.path.dirname(__file__), "source_sync_registry.json")
 
 DEFAULT_SOURCES: List[Dict[str, Any]] = [
-    {"source_id": "openfda", "name": "openFDA Drug Labels", "authority": "FDA", "version": "2026.1", "publication_date": "2026-01-15", "sync_interval_days": 30, "status": "ACTIVE"},
-    {"source_id": "dailymed", "name": "DailyMed Package Inserts", "authority": "NLM", "version": "2026.1", "publication_date": "2026-01-20", "sync_interval_days": 30, "status": "ACTIVE"},
-    {"source_id": "kdigo", "name": "KDIGO CKD Guidelines", "authority": "KDIGO", "version": "2024.2", "publication_date": "2024-11-10", "sync_interval_days": 90, "status": "ACTIVE"},
-    {"source_id": "ada", "name": "ADA Standards of Care", "authority": "ADA", "version": "2026.1", "publication_date": "2026-01-01", "sync_interval_days": 90, "status": "ACTIVE"},
-    {"source_id": "acc_aha", "name": "ACC/AHA Heart Failure Guidelines", "authority": "ACC/AHA", "version": "2024.1", "publication_date": "2024-05-15", "sync_interval_days": 90, "status": "ACTIVE"},
-    {"source_id": "esc", "name": "ESC Cardiovascular Guidelines", "authority": "ESC", "version": "2024.1", "publication_date": "2024-08-30", "sync_interval_days": 90, "status": "ACTIVE"},
-    {"source_id": "cdsco", "name": "CDSCO India Pharmacopoeia", "authority": "CDSCO", "version": "2025.3", "publication_date": "2025-10-01", "sync_interval_days": 60, "status": "ACTIVE"},
-    {"source_id": "nfi", "name": "National Formulary of India", "authority": "NFI", "version": "2025.1", "publication_date": "2025-06-15", "sync_interval_days": 60, "status": "ACTIVE"},
-    {"source_id": "who", "name": "WHO Essential Medicines List", "authority": "WHO", "version": "2025.2", "publication_date": "2025-09-01", "sync_interval_days": 180, "status": "ACTIVE"},
-    {"source_id": "idsa", "name": "IDSA Antimicrobial Guidelines", "authority": "IDSA", "version": "2024.1", "publication_date": "2024-07-01", "sync_interval_days": 90, "status": "ACTIVE"},
-    {"source_id": "gold", "name": "GOLD COPD Strategy", "authority": "GOLD", "version": "2025.1", "publication_date": "2024-11-20", "sync_interval_days": 90, "status": "ACTIVE"},
-    {"source_id": "gina", "name": "GINA Asthma Strategy", "authority": "GINA", "version": "2025.1", "publication_date": "2025-05-10", "sync_interval_days": 90, "status": "ACTIVE"},
-    {"source_id": "nccn", "name": "NCCN Clinical Practice Guidelines", "authority": "NCCN", "version": "2025.1", "publication_date": "2025-01-10", "sync_interval_days": 90, "status": "ACTIVE"},
-    {"source_id": "rxnorm", "name": "RxNorm Standard Terminology", "authority": "NLM", "version": "2026.01", "publication_date": "2026-01-05", "sync_interval_days": 30, "status": "ACTIVE"}
+    {"source_id": "openfda", "name": "openFDA Drug Labels", "authority": "FDA", "current_version": "2026.1", "latest_version": "2026.1", "publication_date": "2026-01-15", "sync_interval_days": 30, "status": "ACTIVE"},
+    {"source_id": "dailymed", "name": "DailyMed Package Inserts", "authority": "NLM", "current_version": "2026.1", "latest_version": "2026.1", "publication_date": "2026-01-20", "sync_interval_days": 30, "status": "ACTIVE"},
+    {"source_id": "kdigo", "name": "KDIGO CKD Guidelines", "authority": "KDIGO", "current_version": "2024.2", "latest_version": "2024.2", "publication_date": "2024-11-10", "sync_interval_days": 90, "status": "ACTIVE"},
+    {"source_id": "ada", "name": "ADA Standards of Care", "authority": "ADA", "current_version": "2026.1", "latest_version": "2026.1", "publication_date": "2026-01-01", "sync_interval_days": 90, "status": "ACTIVE"},
+    {"source_id": "acc_aha", "name": "ACC/AHA Heart Failure Guidelines", "authority": "ACC/AHA", "current_version": "2024.1", "latest_version": "2024.1", "publication_date": "2024-05-15", "sync_interval_days": 90, "status": "ACTIVE"},
+    {"source_id": "esc", "name": "ESC Cardiovascular Guidelines", "authority": "ESC", "current_version": "2024.1", "latest_version": "2025.1", "publication_date": "2024-08-30", "sync_interval_days": 90, "status": "UPDATE_NEEDED"},
+    {"source_id": "cdsco", "name": "CDSCO India Pharmacopoeia", "authority": "CDSCO", "current_version": "2025.3", "latest_version": "2025.3", "publication_date": "2025-10-01", "sync_interval_days": 60, "status": "ACTIVE"},
+    {"source_id": "nfi", "name": "National Formulary of India", "authority": "NFI", "current_version": "2025.1", "latest_version": "2025.1", "publication_date": "2025-06-15", "sync_interval_days": 60, "status": "ACTIVE"},
+    {"source_id": "who", "name": "WHO Essential Medicines List", "authority": "WHO", "current_version": "2025.2", "latest_version": "2025.2", "publication_date": "2025-09-01", "sync_interval_days": 180, "status": "ACTIVE"},
+    {"source_id": "idsa", "name": "IDSA Antimicrobial Guidelines", "authority": "IDSA", "current_version": "2024.1", "latest_version": "2024.1", "publication_date": "2024-07-01", "sync_interval_days": 90, "status": "ACTIVE"},
+    {"source_id": "gold", "name": "GOLD COPD Strategy", "authority": "GOLD", "current_version": "2025.1", "latest_version": "2025.1", "publication_date": "2024-11-20", "sync_interval_days": 90, "status": "ACTIVE"},
+    {"source_id": "gina", "name": "GINA Asthma Strategy", "authority": "GINA", "current_version": "2025.1", "latest_version": "2025.1", "publication_date": "2025-05-10", "sync_interval_days": 90, "status": "ACTIVE"},
+    {"source_id": "nccn", "name": "NCCN Clinical Practice Guidelines", "authority": "NCCN", "current_version": "2025.1", "latest_version": "2025.1", "publication_date": "2025-01-10", "sync_interval_days": 90, "status": "ACTIVE"},
+    {"source_id": "rxnorm", "name": "RxNorm Standard Terminology", "authority": "NLM", "current_version": "2026.01", "latest_version": "2026.01", "publication_date": "2026-01-05", "sync_interval_days": 30, "status": "ACTIVE"}
 ]
 
 class SourceSyncTracker:

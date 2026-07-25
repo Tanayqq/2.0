@@ -740,6 +740,18 @@ class ProcessClinicalQueryUseCase:
                 "rationale": "Grounded directly in FDA labels and clinical practice guidelines."
             }
 
+        # Calculate Collection Contribution Telemetry
+        collection_counts = {}
+        for doc in final_docs:
+            col = doc.get("collection") or "openfda_labels"
+            collection_counts[col] = collection_counts.get(col, 0) + 1
+
+        total_ret_docs = len(final_docs) or 1
+        collection_contribution_pct = {
+            col: round((count / total_ret_docs) * 100, 1)
+            for col, count in collection_counts.items()
+        }
+
         retrieval_stats = {
             "retrieval_latency_sec": round(retrieve_time, 4),
             "retrieved_count": len(final_docs),
@@ -747,7 +759,8 @@ class ProcessClinicalQueryUseCase:
             "detected_sections": detected_sections,
             "section_statuses": section_statuses,
             "retrieval_trace": retrieval_trace,
-            "explainability": explainability_trust_summary
+            "explainability": explainability_trust_summary,
+            "collection_contribution_pct": collection_contribution_pct
         }
         
         return context_str, citations, final_docs, retrieve_time, confidence, retrieval_stats, citation_map
