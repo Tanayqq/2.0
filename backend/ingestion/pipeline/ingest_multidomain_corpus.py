@@ -184,10 +184,63 @@ Fixed-Dose Combinations (FDCs): Weight-banded daily oral FDC tablets under NTEP.
 Schedule H1 Red Line Warning: All anti-TB drugs require prescription registration under Schedule H1 to prevent drug-resistant MDR-TB development.""",
         "section": "clinical_guideline"
     },
+    {
+        "title": "Surviving Sepsis Campaign 2024 Guidelines & Antimicrobial Stewardship",
+        "disease": "Septic Shock and Sepsis",
+        "authority": "Surviving Sepsis Campaign / SCCM / ESICM",
+        "category": "disease_guidelines",
+        "content": """Surviving Sepsis Campaign 2024 Guidelines for Septic Shock:
+1. Resuscitation & Vasopressors: Norepinephrine is the FIRST-LINE vasopressor of choice (target Mean Arterial Pressure MAP >= 65 mmHg). Add Vasopressin 0.03 units/min if MAP targets are not achieved.
+2. Antimicrobial Administration: Administer empiric broad-spectrum IV antimicrobials immediately (preferably within 1 hour of recognition).
+3. Vancomycin Therapeutic Drug Monitoring (TDM): Target an AUC/MIC ratio of 400-600 mg.h/L (assuming MIC <= 1 mg/L) using Bayesian software or 2-point peak/trough kinetics. Trough-only monitoring (15-20 mcg/mL) is no longer recommended due to higher acute kidney injury (AKI) rates.
+4. Antimicrobial De-Escalation Triggers: Daily assessment for de-escalation based on pathogen identification, clinical stability off vasopressors, procalcitonin decline, and negative blood cultures at 48-72 hours. Discontinue empiric coverage when infection is excluded.
+5. Synergistic Nephrotoxicity Alert: Co-administration of Vancomycin with Piperacillin-Tazobactam (Zosyn) and Loop Diuretics (Furosemide) dramatically increases AKI incidence (potentiation risk up to 30-40%) compared to Vancomycin + Cefepime or Meropenem.""",
+        "section": "clinical_guideline"
+    },
 ]
 
 # 2. REAL DRUG-DRUG INTERACTIONS (DDI) DATA
 INTERACTION_DATA = [
+    {
+        "title": "Vancomycin, Piperacillin-Tazobactam (Zosyn), and Furosemide Synergistic Nephrotoxicity Cascade",
+        "drugs": ["Vancomycin", "Piperacillin-Tazobactam", "Zosyn", "Furosemide", "Norepinephrine"],
+        "authority": "FDA / Surviving Sepsis",
+        "category": "drug_interactions",
+        "content": (
+            "DRUG INTERACTION ALERT: Vancomycin + Piperacillin-Tazobactam (Zosyn) + Furosemide in Septic Shock.\n"
+            "Severity: CRITICAL / HIGH NEPHROTOXICITY POTENTIATION RISK.\n"
+            "Mechanism: Triple synergistic nephrotoxicity. Co-administration of Vancomycin and Piperacillin-Tazobactam induces severe acute kidney injury (AKI Stage 2/3, Serum Creatinine jump >2-3x baseline) via synergistic acute tubular necrosis and interstitial nephritis. IV Furosemide potentiates renal ischemia via intravascular volume depletion.\n"
+            "AUC/MIC Target: Target Vancomycin AUC/MIC ratio of 400-600 mg.h/L (assuming MIC <= 1 mg/L).\n"
+            "De-escalation Triggers: Daily assessment based on pathogen identification, procalcitonin decline, and culture clearance at 48-72h. Switch Pip-Tazo to Cefepime or Meropenem to reduce AKI risk."
+        ),
+        "section": "drug_interactions"
+    },
+    {
+        "title": "ACE Inhibitors (Enalapril) and Sacubitril/Valsartan (Entresto) Angioedema Contraindication & 36-Hour Washout",
+        "drugs": ["Enalapril", "Sacubitril", "Valsartan", "Entresto", "Lisinopril", "Ramipril"],
+        "authority": "FDA / ACC/AHA",
+        "category": "drug_interactions",
+        "content": (
+            "DRUG INTERACTION ALERT: Enalapril (ACE Inhibitor) + Entresto (Sacubitril/Valsartan ARNI).\n"
+            "Severity: CONTRAINDICATED / LIFE-THREATENING ANGIOEDEMA RISK.\n"
+            "Mechanism: Dual inhibition of ACE and neprilysin leads to massive accumulation of bradykinin, causing severe, potentially fatal airway-compromising angioedema.\n"
+            "Mandatory Protocol: A strict 36-HOUR WASHOUT PERIOD is required when switching from an ACE inhibitor (Enalapril) to Sacubitril/Valsartan (Entresto). Do NOT administer Entresto within 36 hours of the last dose of Enalapril."
+        ),
+        "section": "drug_interactions"
+    },
+    {
+        "title": "High-Dose Biotin (Vitamin B7) Immunoassay Interference with Troponin Labs",
+        "drugs": ["Biotin", "Troponin I", "Troponin T"],
+        "authority": "FDA Safety Communication",
+        "category": "drug_interactions",
+        "content": (
+            "DRUG-LAB INTERACTION ALERT: Biotin (>= 10mg/day) + Streptavidin-Biotin Immunoassays (Cardiac Troponin I/T).\n"
+            "Severity: MAJOR / FALSE NEGATIVE DIAGNOSTIC MISLEAD.\n"
+            "Mechanism: Exogenous biotin competes with biotinylated antibodies in streptavidin-biotin lab assays, causing FALSELY LOW / FALSELY NEGATIVE Troponin I/T results during acute myocardial infarction (ACS).\n"
+            "Management: Discontinue high-dose biotin 48 hours prior to lab testing, or use non-biotinylated Troponin immunoassay platforms."
+        ),
+        "section": "drug_interactions"
+    },
     {
         "title": "Warfarin and NSAIDs Major Hemorrhagic Interaction",
         "drugs": ["Warfarin", "Ibuprofen", "Naproxen", "Aspirin"],
@@ -510,7 +563,7 @@ def ingest_all():
             "year": item["year"],
             "authority": item["authority"],
             "content": item["content"],
-            "section": item["section"],
+            "section": item.get("section", "primary_literature"),
             "source": item["journal"]
         }
         qclient.upsert(

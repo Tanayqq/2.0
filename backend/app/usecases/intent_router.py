@@ -17,7 +17,7 @@ class IntentRouter:
         "SYMPTOM_CHAT": ["disease_corpus", "openfda_labels"],
         "PATIENT_SCENARIO": ["openfda_labels", "drug_interactions", "disease_guidelines"],
         "COMPARISON": ["openfda_labels", "drug_labels_india"],
-        "INTERACTION_CHECK": ["drug_interactions", "openfda_labels"],
+        "INTERACTION_CHECK": ["drug_interactions", "disease_guidelines", "openfda_labels"],
         "MEDICAL_REP": ["drug_labels_india", "openfda_labels"],
         "CLINICAL_GUIDELINE": ["disease_guidelines", "disease_corpus"],
         "RESEARCH_LITERATURE": ["primary_literature", "openfda_labels"]
@@ -29,6 +29,15 @@ class IntentRouter:
             return mode_override.upper()  # type: ignore
 
         q_lower = question.lower()
+
+        # --- Explicit Clinical Guideline Requests (Surviving Sepsis, AUC/MIC, KDIGO, GINA, GOLD, ACC/AHA, ESC) ---
+        if any(kw in q_lower for kw in [
+            "surviving sepsis", "sepsis 2024", "auc/mic", "auc-mic", "washout", "angioedema",
+            "kdigo 2024", "ada 2026", "acc/aha 2024", "esc 2024", "gina 2025", "gold 2025"
+        ]):
+            if any(kw in q_lower for kw in ["risk", "interaction", "synergy", "potentiation", "zosyn", "piperacillin", "vancomycin", "furosemide"]):
+                return "INTERACTION_CHECK"
+            return "CLINICAL_GUIDELINE"
 
         # --- Research Literature (highest priority: explicit trial names) ---
         if any(kw in q_lower for kw in [
