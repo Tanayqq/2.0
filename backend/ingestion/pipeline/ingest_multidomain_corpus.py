@@ -242,6 +242,28 @@ INTERACTION_DATA = [
         "section": "drug_interactions"
     },
     {
+        "title": "KDIGO 2024 & ADA 2026 Cardiorenal GDMT (Kerendia, Jardiance, Telmisartan) vs Aceclofenac NSAID Acute Renal Failure Risk",
+        "drugs": ["Finerenone", "Kerendia", "Empagliflozin", "Jardiance", "Telmisartan", "Telma", "Metformin", "Glycomet", "Aceclofenac"],
+        "authority": "KDIGO 2024 / ADA 2026",
+        "category": "drug_interactions",
+        "content": (
+            "KDIGO 2024 & ADA 2026 CARDIORENAL GDMT GUIDELINE RECOMMENDATION:\n"
+            "Patient Profile: Type 2 Diabetes with CKD Stage 3b (eGFR 38 mL/min/1.73m²) and severely increased albuminuria (UACR 450 mg/g).\n"
+            "1. Cardiorenal Protection GDMT Pillars (Class 1A Recommended):\n"
+            "   - SGLT2 Inhibitor (Jardiance / Empagliflozin 10mg OD): Strong Class 1A recommendation for eGFR >=20 mL/min to slow CKD progression and reduce CV death.\n"
+            "   - Non-Steroidal MRA (Kerendia / Finerenone 10-20mg OD): Recommended for T2D + eGFR 25-75 + UACR >30 mg/g on max tolerated RAS inhibitor (FIDELIO-DKD, FIGARO-DKD).\n"
+            "   - ARB (Telma / Telmisartan 40mg OD): Continue max tolerated RAS blockade for renal protection.\n"
+            "   - Metformin (Glycomet-SR 1g OD): Safe to continue as eGFR 38 is above the absolute 30 mL/min discontinuation threshold.\n"
+            "2. NSAID CONTRAINDICATION ALERT (Aceclofenac):\n"
+            "   - Severity: CONTRAINDICATED / HIGH AKI RISK.\n"
+            "   - Aceclofenac (NSAID) causes severe afferent arteriolar vasoconstriction, precipitating acute hemodynamically-mediated renal failure when combined with Telmisartan (efferent vasodilation) and Finerenone. Avoid NSAIDs in eGFR <45 mL/min. Use Acetaminophen / Paracetamol for knee pain.\n"
+            "3. Hyperkalemia & Renal Function Monitoring Protocol:\n"
+            "   - Baseline K+ must be <= 5.0 mEq/L before starting Finerenone.\n"
+            "   - Re-check serum Potassium (K+) and Serum Creatinine (sCr) at 1 to 4 weeks after initiating Finerenone + Telmisartan."
+        ),
+        "section": "drug_interactions"
+    },
+    {
         "title": "High-Dose Biotin (Vitamin B7) Immunoassay Interference with Troponin Labs",
         "drugs": ["Biotin", "Troponin I", "Troponin T"],
         "authority": "FDA Safety Communication",
