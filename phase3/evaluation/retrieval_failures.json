@@ -1,0 +1,48 @@
+[
+  {
+    "case_id": "CARD-001",
+    "category": "Cardiology",
+    "difficulty": "Hard",
+    "question": "65-year-old male with HFrEF (LVEF 28%) and Hypertension on Enalapril 10mg BID is switching to Entresto (Sacubitril/Valsartan). Evaluate mandatory ACEi washout period per ACC/AHA 2024.",
+    "expected_intent": "PATIENT_SCENARIO",
+    "actual_intent": "PATIENT_SCENARIO",
+    "expected_recommendation": null,
+    "failure_reasons": [
+      "Missing required recommendation text in answer"
+    ],
+    "actual_answer": "### Clinical Recommendation & Action Plan\n\nGiven the patient's HFrEF (LVEF 28%) and hypertension on Enalapril 10mg BID, switching to Entresto (Sacubitril/Valsartan) requires a strict 36-hour washout period after the last dose of Enalapril [6, 7]. This is due to the risk of life-threatening angioedema caused by dual inhibition of ACE and neprilysin [6, 7].[1][2] Therefore, the clinical recommendation is to:\n\n- Discontinue Enalapril 10mg BID.[1]\n- Wait a full 36 hours before administering the star",
+    "grounding_status": null,
+    "retrieved_chunk_count": 5
+  },
+  {
+    "case_id": "CARD-002",
+    "category": "Cardiology",
+    "difficulty": "Medium",
+    "question": "72yo AFib patient on Amiodarone 200mg and Digoxin 0.25mg presents with nausea and visual halos. Evaluate P-gp interaction and dose adjustment.",
+    "expected_intent": "INTERACTION_CHECK",
+    "actual_intent": "PATIENT_SCENARIO",
+    "expected_recommendation": null,
+    "failure_reasons": [
+      "Intent mismatch: Expected INTERACTION_CHECK, got PATIENT_SCENARIO",
+      "Missing required recommendation text in answer"
+    ],
+    "actual_answer": "### Clinical Recommendation & Action Plan\n\nGiven the patient's presentation with nausea and visual halos, a critical P-gp interaction is suspected between Amiodarone, Digoxin, and Clarithromycin. The clinical recommendation is to **IMMEDIATELY REDUCE DIGOXIN DOSE BY 50%**[1] and **AVOID CLARITHROMYCIN**[1]. Instead, use Azithromycin or a non-macrolide alternative to minimize the risk of Digoxin toxicity and Torsades de Pointes (TdP)[1].\n\n### Pharmacological Mechanism & Risk Cascade\n\nThe underlyi",
+    "grounding_status": null,
+    "retrieved_chunk_count": 2
+  },
+  {
+    "case_id": "NEPH-001",
+    "category": "Nephrology",
+    "difficulty": "Hard",
+    "question": "71yo female with DKD (eGFR 26 mL/min/1.73m\u00b2) on Metformin 500mg, Empagliflozin 10mg, Finerenone 10mg, and Spironolactone 25mg has serum K+ 5.4 mEq/L. Evaluate Finerenone hold rule and SGLT2i continuation per KDIGO 2024.",
+    "expected_intent": "PATIENT_SCENARIO",
+    "actual_intent": "PATIENT_SCENARIO",
+    "expected_recommendation": null,
+    "failure_reasons": [
+      "Missing required recommendation text in answer"
+    ],
+    "actual_answer": "### Clinical Recommendation & Action Plan\n\nBased on the provided documents, the patient's serum potassium level is 5.4 mEq/L, which is above the recommended baseline threshold for initiating Finerenone[1]. According to the KDIGO 2024 and ADA 2026 guidelines, Finerenone is contraindicated in patients with a baseline potassium level >5.0 mEq/L[1]. The patient is currently on Empagliflozin 10mg, which is a recommended SGLT2 inhibitor for patients with CKD Stage 3b (eGFR 38 mL/min/1.73m\u00b2) and severe",
+    "grounding_status": null,
+    "retrieved_chunk_count": 3
+  }
+]

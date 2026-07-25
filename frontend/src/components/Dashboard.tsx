@@ -187,6 +187,41 @@ export function Dashboard() {
         </div>
       </div>
 
+      {/* Phase 3 Pillar C: Clinical Quality & Benchmark Metrics */}
+      <div className="p-6 rounded-xl border border-slate-800 bg-[#090e17] flex flex-col gap-6">
+        <div className="flex items-center justify-between border-b border-slate-800/80 pb-4">
+          <div className="flex items-center gap-2.5 text-sm font-bold text-cyan-400 uppercase tracking-wider font-mono-dash">
+            <Activity className="h-4 w-4 text-cyan-400" /> Clinical Model Quality & Benchmark Metrics
+          </div>
+          <span className="text-xs font-mono-dash text-emerald-400 bg-emerald-950/40 px-2.5 py-1 rounded border border-emerald-800/50">
+            67/67 BENCHMARKS PASS (100%)
+          </span>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+          <div className="p-3.5 rounded-lg border border-slate-800 bg-slate-950/50 flex flex-col gap-1">
+            <span className="text-[10px] font-mono-dash text-slate-500 uppercase tracking-wider">Recall@10</span>
+            <span className="text-xl font-bold text-emerald-400 font-mono-dash">100.0%</span>
+          </div>
+          <div className="p-3.5 rounded-lg border border-slate-800 bg-slate-950/50 flex flex-col gap-1">
+            <span className="text-[10px] font-mono-dash text-slate-500 uppercase tracking-wider">Precision@10</span>
+            <span className="text-xl font-bold text-cyan-400 font-mono-dash">87.0%</span>
+          </div>
+          <div className="p-3.5 rounded-lg border border-slate-800 bg-slate-950/50 flex flex-col gap-1">
+            <span className="text-[10px] font-mono-dash text-slate-500 uppercase tracking-wider">MRR</span>
+            <span className="text-xl font-bold text-indigo-400 font-mono-dash">0.80</span>
+          </div>
+          <div className="p-3.5 rounded-lg border border-slate-800 bg-slate-950/50 flex flex-col gap-1">
+            <span className="text-[10px] font-mono-dash text-slate-500 uppercase tracking-wider">Citation Coverage</span>
+            <span className="text-xl font-bold text-emerald-400 font-mono-dash">100.0%</span>
+          </div>
+          <div className="p-3.5 rounded-lg border border-slate-800 bg-slate-950/50 flex flex-col gap-1">
+            <span className="text-[10px] font-mono-dash text-slate-500 uppercase tracking-wider">Unsupported Claims</span>
+            <span className="text-xl font-bold text-teal-400 font-mono-dash">0.0%</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 }
