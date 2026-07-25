@@ -16,13 +16,14 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
 from phase3.evaluation.metric_calculator import MetricCalculator
 from phase3.evaluation.failure_logger import FailureLogger
 
-# 20 Specialty Benchmark Dataset Template Matrix
+# 20 Specialty Benchmark Dataset Template Matrix (L1 to L8 Difficulty Scale)
 BENCHMARK_CASES: List[Dict[str, Any]] = [
     # --- CARDIOLOGY ---
     {
         "case_id": "CARD-001",
         "category": "Cardiology",
-        "difficulty": "Hard",
+        "level": "L4", # Complex Guideline
+        "difficulty": "L4: Complex Guideline",
         "question": "65-year-old male with HFrEF (LVEF 28%) and Hypertension on Enalapril 10mg BID is switching to Entresto (Sacubitril/Valsartan). Evaluate mandatory ACEi washout period per ACC/AHA 2024.",
         "expected_intent": ["PATIENT_SCENARIO", "INTERACTION_CHECK"],
         "expected_collections": ["disease_guidelines", "drug_interactions"],
@@ -32,7 +33,8 @@ BENCHMARK_CASES: List[Dict[str, Any]] = [
     {
         "case_id": "CARD-002",
         "category": "Cardiology",
-        "difficulty": "Medium",
+        "level": "L2", # Drug Interaction
+        "difficulty": "L2: Drug Interaction",
         "question": "72yo AFib patient on Amiodarone 200mg and Digoxin 0.25mg presents with nausea and visual halos. Evaluate P-gp interaction and dose adjustment.",
         "expected_intent": ["INTERACTION_CHECK", "PATIENT_SCENARIO"],
         "expected_collections": ["drug_interactions", "openfda_labels"],
@@ -44,7 +46,8 @@ BENCHMARK_CASES: List[Dict[str, Any]] = [
     {
         "case_id": "NEPH-001",
         "category": "Nephrology",
-        "difficulty": "Hard",
+        "level": "L5", # Multi-morbidity
+        "difficulty": "L5: Multi-morbidity",
         "question": "71yo female with DKD (eGFR 26 mL/min/1.73m²) on Metformin 500mg, Empagliflozin 10mg, Finerenone 10mg, and Spironolactone 25mg has serum K+ 5.4 mEq/L. Evaluate Finerenone hold rule and SGLT2i continuation per KDIGO 2024.",
         "expected_intent": ["PATIENT_SCENARIO", "CLINICAL_GUIDELINE"],
         "expected_collections": ["disease_guidelines", "drug_interactions"],
@@ -54,7 +57,8 @@ BENCHMARK_CASES: List[Dict[str, Any]] = [
     {
         "case_id": "NEPH-002",
         "category": "Nephrology",
-        "difficulty": "Hard",
+        "level": "L3", # Renal Dosing
+        "difficulty": "L3: Renal Dosing",
         "question": "Metformin hydrochloride renal discontinuation threshold in severe CKD eGFR < 30 mL/min/1.73m² per ADA 2026.",
         "expected_intent": ["CLINICAL_GUIDELINE", "DRUG_CHAT", "PATIENT_SCENARIO"],
         "expected_collections": ["disease_guidelines", "openfda_labels"],
@@ -66,7 +70,8 @@ BENCHMARK_CASES: List[Dict[str, Any]] = [
     {
         "case_id": "ENDO-001",
         "category": "Endocrinology",
-        "difficulty": "Medium",
+        "level": "L3", # Renal Dosing
+        "difficulty": "L3: Renal Dosing",
         "question": "Sitagliptin 100mg renal dose reduction rules in patients with eGFR < 30 mL/min/1.73m² per ADA 2026 guidelines.",
         "expected_intent": ["CLINICAL_GUIDELINE", "DRUG_CHAT", "PATIENT_SCENARIO"],
         "expected_collections": ["disease_guidelines", "openfda_labels"],
@@ -78,7 +83,8 @@ BENCHMARK_CASES: List[Dict[str, Any]] = [
     {
         "case_id": "EMERG-001",
         "category": "Emergency",
-        "difficulty": "Hard",
+        "level": "L6", # ICU
+        "difficulty": "L6: ICU",
         "question": "Septic shock patient on Norepinephrine, Vancomycin, Zosyn, and Furosemide with Creatinine 0.9 to 2.4. Evaluate AKI synergy and Surviving Sepsis 2024 AUC/MIC target.",
         "expected_intent": ["PATIENT_SCENARIO", "INTERACTION_CHECK"],
         "expected_collections": ["disease_guidelines", "drug_interactions"],
@@ -86,11 +92,12 @@ BENCHMARK_CASES: List[Dict[str, Any]] = [
         "tags": ["Septic Shock", "Vancomycin", "Zosyn", "AKI"]
     },
 
-    # --- LAB INTERPRETATION & RHEUMATOLOGY ---
+    # --- RARE EDGE CASES & LAB INTERPRETATION ---
     {
         "case_id": "RHEUM-001",
         "category": "Rheumatology",
-        "difficulty": "Hard",
+        "level": "L8", # Rare Edge Cases
+        "difficulty": "L8: Rare Edge Cases",
         "question": "Patient on Digoxin and Biotin 10mg daily admits for Troponin lab test. Evaluate Biotin immunoassay interference risk on lab readings.",
         "expected_intent": ["INTERACTION_CHECK", "PATIENT_SCENARIO"],
         "expected_collections": ["drug_interactions", "disease_guidelines"],
@@ -99,17 +106,28 @@ BENCHMARK_CASES: List[Dict[str, Any]] = [
     }
 ]
 
-def run_evaluation_suite():
+def run_evaluation_suite(target_specialty: str = "all"):
     from fastapi.testclient import TestClient
     from app.main import app
 
     client = TestClient(app)
 
+    # Filter by specialty if specified
+    filtered_cases = BENCHMARK_CASES
+    if target_specialty and target_specialty.lower() != "all":
+        filtered_cases = [c for c in BENCHMARK_CASES if c["category"].lower() == target_specialty.lower()]
+        if not filtered_cases:
+            filtered_cases = [c for c in BENCHMARK_CASES if target_specialty.lower() in c["category"].lower()]
+
     print("================================================================================")
     print("      MEDREF PHASE 3 PILLAR B — CLINICAL EVALUATION BENCHMARK SUITE          ")
     print("================================================================================")
-    print(f"Total Benchmark Cases Loaded: {len(BENCHMARK_CASES)}")
-    print("Executing automated 6-metric evaluation across 20 medical specialties...\n")
+    print(f"Target Specialty: {target_specialty.upper()} | Cases Loaded: {len(filtered_cases)}")
+    print("Executing automated 6-metric evaluation...\n")
+
+    if not filtered_cases:
+        print(f"No cases found for specialty: {target_specialty}")
+        return
 
     passed_count = 0
     total_recall = 0.0
@@ -119,14 +137,14 @@ def run_evaluation_suite():
     total_unsupported = 0.0
     total_latency = 0.0
 
-    for case in BENCHMARK_CASES:
+    for case in filtered_cases:
         start_time = time.time()
         res = client.post("/api/v1/query", json={"question": case["question"]})
         exec_latency = time.time() - start_time
         total_latency += exec_latency
 
         if res.status_code != 200:
-            print(f"❌ [{case['case_id']}] FAILED — HTTP {res.status_code}")
+            print(f"[FAIL] [{case['case_id']}] HTTP {res.status_code}")
             FailureLogger.log_failure(case, {}, [f"HTTP {res.status_code} Error"])
             continue
 
@@ -176,8 +194,8 @@ def run_evaluation_suite():
             print(f"[FAIL] [{case['case_id']}] {case['category']} ({case['difficulty']}) | Reasons: {', '.join(reasons)}")
             FailureLogger.log_failure(case, resp_json, reasons)
 
-    n = len(BENCHMARK_CASES)
-    pass_rate = round((passed_count / n) * 100, 1)
+    n = len(filtered_cases)
+    pass_rate = round((passed_count / n) * 100, 1) if n > 0 else 0.0
 
     print("\n================================================================================")
     print("                    PHASE 3 EVALUATION BENCHMARK RESULTS                        ")
@@ -192,4 +210,8 @@ def run_evaluation_suite():
     print("================================================================================\n")
 
 if __name__ == "__main__":
-    run_evaluation_suite()
+    import argparse
+    parser = argparse.ArgumentParser(description="MedRef Phase 3 Benchmark Evaluation Harness")
+    parser.add_argument("--specialty", type=str, default="all", help="Specialty filter (e.g. cardiology, nephrology, all)")
+    args = parser.parse_args()
+    run_evaluation_suite(target_specialty=args.specialty)
