@@ -574,6 +574,7 @@ class ProcessClinicalQueryUseCase:
             "Co-Administration Risks": ["drug_interactions", "adverse_reactions", "cyp_interactions", "monitoring"]
         }
 
+        seen_uuids = set(d.id for d in final_docs)
         if not is_non_drug_mode:
             for drug in drug_order:
                 if drug not in docs_by_drug_category:
