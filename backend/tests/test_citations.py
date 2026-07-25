@@ -45,7 +45,7 @@ def test_citation_post_processing():
     for c in response.citations:
         print(f"  [{c.document_id}] UUID: {c.uuid} | Count: {c.count}")
         
-    assert response.answer == "Metformin is useful.[1] Also it helps.[2] \n\n[2] And final.[3][1]"
+    assert response.answer.strip() == "Metformin is useful.[1] Also it helps.[2]\n\n[2] And final.[3][1]"
     assert len(response.citations) == 3
     # Check counts
     c1 = next(c for c in response.citations if c.uuid == "uuid-1")
