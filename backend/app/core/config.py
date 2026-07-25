@@ -33,6 +33,37 @@ class Settings(BaseSettings):
     CORS_ORIGINS: str = "http://localhost:5173,https://medref-pearl.vercel.app,https://medref.vercel.app,https://*.vercel.app"
     APP_VERSION: str = "1.0.0"
     
+    # Retrieval Authority Weights Configuration
+    RETRIEVAL_WEIGHTS: dict = {
+        "INTERACTION_CHECK": {
+            "drug_interactions": 3.0,
+            "disease_guidelines": 2.4,
+            "openfda_labels": 2.1,
+            "drug_labels_india": 2.0,
+            "primary_literature": 1.8
+        },
+        "CLINICAL_GUIDELINE": {
+            "disease_guidelines": 3.0,
+            "primary_literature": 2.7,
+            "disease_corpus": 2.0,
+            "drug_interactions": 1.8,
+            "openfda_labels": 1.5
+        },
+        "PATIENT_SCENARIO": {
+            "disease_guidelines": 3.0,
+            "drug_interactions": 2.8,
+            "openfda_labels": 2.2,
+            "drug_labels_india": 2.0,
+            "primary_literature": 1.8
+        },
+        "DRUG_CHAT": {
+            "openfda_labels": 3.0,
+            "drug_labels_india": 2.8,
+            "disease_guidelines": 1.5,
+            "drug_interactions": 1.8
+        }
+    }
+    
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
 settings = Settings()

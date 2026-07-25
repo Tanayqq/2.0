@@ -24,21 +24,33 @@ class IntentRouter:
     }
 
     @classmethod
+    def get_collection_weights(cls, mode: str) -> Dict[str, float]:
+        from app.core.config import settings
+        weights_dict = getattr(settings, "RETRIEVAL_WEIGHTS", {})
+        return weights_dict.get(mode.upper(), {
+            "disease_guidelines": 2.0,
+            "drug_interactions": 2.0,
+            "openfda_labels": 1.5,
+            "drug_labels_india": 1.5,
+            "primary_literature": 1.5,
+            "disease_corpus": 1.0
+        })
+
+    @classmethod
     def classify_intent(cls, question: str, mode_override: Optional[str] = None) -> ClinicalChatMode:
         if mode_override and mode_override.upper() in cls.MODE_COLLECTIONS:
             return mode_override.upper()  # type: ignore
 
         q_lower = question.lower()
 
-        # --- Explicit Clinical Guideline Requests & Lab Interference (Surviving Sepsis, AUC/MIC, KDIGO, GINA, GOLD, ACC/AHA, ESC, Biotin) ---
+        # --- Explicit Clinical Guideline Requests & Lab Interference (Surviving Sepsis, AUC/MIC, KDIGO, GINA, GOLD, ACC/AHA, ESC, Biotin, Entresto) ---
         if any(kw in q_lower for kw in [
             "surviving sepsis", "sepsis 2024", "auc/mic", "auc-mic", "washout", "angioedema",
             "kdigo 2024", "ada 2026", "acc/aha 2024", "esc 2024", "gina 2025", "gold 2025",
             "kerendia", "finerenone", "jardiance", "empagliflozin", "aceclofenac", "uacr",
-            "biotin", "troponin", "streptavidin", "immunoassay"
+            "biotin", "troponin", "streptavidin", "immunoassay", "entresto", "sacubitril", "switch"
         ]):
-            if any(kw in q_lower for kw in ["risk", "interaction", "synergy", "potentiation", "zosyn", "piperacillin", "vancomycin", "furosemide", "aceclofenac", "nsaid", "biotin", "troponin", "interfere", "entresto", "sacubitril", "washout", "angioedema"]):
-                return "INTERACTION_CHECK"
+            if any(kw in q_lower for kw in ["risk", "interaction", "synergy", "potentiation", "zosyn", "piperacillin", "vancomycin", "furosemide", "aceclofenac", "nsaid", "biotin", "troponin", "interfere", "entresto", "sacubitril", "washout", "angioedema", "switch", "together", "immediately"]):
                 return "INTERACTION_CHECK"
             return "CLINICAL_GUIDELINE"
 

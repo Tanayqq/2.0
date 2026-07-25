@@ -345,11 +345,13 @@ class ProcessClinicalQueryUseCase:
         dense_vec = self.embedding.embed_query(query.question)
         sparse_vec = self.embedding.embed_sparse(query.question)
         
-        # If mode is non-drug (Disease Chat, Guideline RAG, Primary Literature, Symptom Chat) or no drug resolved, query routed collections directly
-        is_non_drug_mode = query.mode and query.mode.upper() in ["DISEASE_CHAT", "CLINICAL_GUIDELINE", "RESEARCH_LITERATURE", "SYMPTOM_CHAT", "INTERACTION_CHECK", "PATIENT_SCENARIO"]
+        from app.usecases.intent_router import IntentRouter
+        routed = IntentRouter.route_query(query.question, country_context=query.country_context, mode_override=query.mode)
+        effective_mode = query.mode or routed.get("mode", "DRUG_CHAT")
+        
+        # If mode is non-drug (Disease Chat, Guideline RAG, Primary Literature, Symptom Chat, Interaction Check, Patient Scenario) or no drug resolved, query routed collections directly
+        is_non_drug_mode = effective_mode and effective_mode.upper() in ["DISEASE_CHAT", "CLINICAL_GUIDELINE", "RESEARCH_LITERATURE", "SYMPTOM_CHAT", "INTERACTION_CHECK", "PATIENT_SCENARIO"]
         if is_non_drug_mode or not drugs_to_fetch:
-            from app.usecases.intent_router import IntentRouter
-            routed = IntentRouter.route_query(query.question, country_context=query.country_context, mode_override=query.mode)
             target_cols = routed.get("target_collections", ["disease_corpus", "disease_guidelines"])
             MIN_DISEASE_SCORE = 0.22  # Drop low-relevance cross-disease chunks
             q_tokens = [w.lower() for w in query.question.split() if len(w) >= 3 and w.lower() not in [
@@ -367,8 +369,10 @@ class ProcessClinicalQueryUseCase:
                         if q_tokens and not any(token in doc_text for token in q_tokens):
                             continue  # Prevent cross-disease pollution (e.g. Asthma chunk for Diabetes query)
                         
-                        cdoc.score = score or 0.85
-                        cdoc.cross_encoder_score = 0.99  # Top priority for intent-routed collections (primary_literature, guidelines, DDIs)
+                        collection_weights = IntentRouter.get_collection_weights(effective_mode)
+                        col_weight = collection_weights.get(col, 1.5)
+                        cdoc.score = (score or 0.85) * col_weight
+                        cdoc.cross_encoder_score = 0.99 * col_weight  # Weighted priority based on config
                         auth = cdoc.metadata.get("authority", "ADA")
                         cdoc.metadata["authority_rank"] = AUTHORITY_RANK.get(auth, 95)
                         cdoc.metadata["retrieval_mode"] = "MULTI_COLLECTION_RAG"
@@ -575,22 +579,23 @@ class ProcessClinicalQueryUseCase:
             "Co-Administration Risks": ["drug_interactions", "adverse_reactions", "cyp_interactions", "monitoring"]
         }
 
-        for drug in drug_order:
-            if drug not in docs_by_drug_category:
-                docs_by_drug_category[drug] = {}
-            for cat in ALL_UI_CATEGORIES:
-                if len(docs_by_drug_category[drug].get(cat, [])) == 0:
-                    sec_list = CATEGORY_SECTIONS_FALLBACK.get(cat, [])
-                    fallback_docs = self.vector_db.scroll_by_drug_sections(drug, sec_list, limit_per_section=2)
-                    if fallback_docs:
-                        for fdoc in fallback_docs:
-                            fdoc.cross_encoder_score = 0.90
-                            fdoc.metadata["authority_rank"] = AUTHORITY_RANK.get(fdoc.metadata.get("authority", "DailyMed"), 99)
-                            fdoc.metadata["retrieval_mode"] = "EXACT_SECTION"
-                            if fdoc.id not in seen_uuids:
-                                seen_uuids.add(fdoc.id)
-                                final_docs.append(fdoc)
-                                docs_by_drug_category[drug].setdefault(cat, []).append(fdoc)
+        if not is_non_drug_mode:
+            for drug in drug_order:
+                if drug not in docs_by_drug_category:
+                    docs_by_drug_category[drug] = {}
+                for cat in ALL_UI_CATEGORIES:
+                    if len(docs_by_drug_category[drug].get(cat, [])) == 0:
+                        sec_list = CATEGORY_SECTIONS_FALLBACK.get(cat, [])
+                        fallback_docs = self.vector_db.scroll_by_drug_sections(drug, sec_list, limit_per_section=2)
+                        if fallback_docs:
+                            for fdoc in fallback_docs:
+                                fdoc.cross_encoder_score = 0.90
+                                fdoc.metadata["authority_rank"] = AUTHORITY_RANK.get(fdoc.metadata.get("authority", "DailyMed"), 99)
+                                fdoc.metadata["retrieval_mode"] = "EXACT_SECTION"
+                                if fdoc.id not in seen_uuids:
+                                    seen_uuids.add(fdoc.id)
+                                    final_docs.append(fdoc)
+                                    docs_by_drug_category[drug].setdefault(cat, []).append(fdoc)
 
         # Re-log per-drug per-category chunk counts after fallback fill
         for drug in drug_order:
@@ -723,9 +728,36 @@ class ProcessClinicalQueryUseCase:
         return context_str, citations, final_docs, retrieve_time, confidence, retrieval_stats, citation_map
 
     def _build_prompt(self, context_str: str, question: str, mode: str = "DRUG_CHAT") -> str:
-        is_disease_mode = mode and mode.upper() in [
-            "DISEASE_CHAT", "CLINICAL_GUIDELINE", "RESEARCH_LITERATURE", "SYMPTOM_CHAT", "INTERACTION_CHECK", "PATIENT_SCENARIO"
-        ]
+        is_scenario_mode = mode and mode.upper() in ["INTERACTION_CHECK", "PATIENT_SCENARIO", "CLINICAL_GUIDELINE"]
+        is_disease_mode = mode and mode.upper() in ["DISEASE_CHAT", "RESEARCH_LITERATURE", "SYMPTOM_CHAT"]
+        
+        if is_scenario_mode:
+            return f"""Context:
+{context_str}
+
+Question: {question}
+
+You are a board-certified clinical AI assistant and evidence extraction engine. Provide a structured clinical assessment based strictly on the provided documents.
+
+CRITICAL INSTRUCTIONS:
+1. MANDATORY CITATIONS: Append citation numbers in square brackets [1], [2] after EVERY factual claim or clinical recommendation.
+2. ADAPTIVE SCENARIO STRUCTURE: Organize your response under these clear headers (only include sections supported by the context; DO NOT write 'Not found in available sources'):
+
+### Clinical Recommendation & Action Plan
+- Provide a direct, unambiguous answer to the prompt (e.g. mandatory 36-hour washout, contraindications, recommended dose adjustments, or GDMT pillars).
+
+### Pharmacological Mechanism & Risk Cascade
+- Explain the underlying biochemical mechanism (e.g. dual P-gp efflux blockade, ACE+neprilysin bradykinin surge, NSAID afferent vasoconstriction, immunoassay interference).
+
+### Guideline-Directed Management (GDMT) & Evidence
+- Summarize guidelines (KDIGO 2024, ACC/AHA 2024, ESC 2024, ADA 2026, Surviving Sepsis 2024) and trial evidence cited in the context.
+
+### Required Monitoring & Safety Protocols
+- Detail mandatory lab checks, serum drug levels, baseline parameters, and safety monitoring rules.
+
+3. STRICT GROUNDING: Every claim MUST be supported by the provided context. Omit any section that lacks supporting evidence instead of printing empty placeholders.
+"""
+
         if is_disease_mode:
             return f"""Context:
 {context_str}
@@ -733,22 +765,17 @@ class ProcessClinicalQueryUseCase:
 Question: {question}
 
 You are a clinical evidence extraction engine. You extract facts ONLY from the DOCUMENTS provided above.
-You have ZERO medical knowledge of your own. Every word you write must come directly from the documents.
 
 CRITICAL RULES:
 
 1. CITATIONS ARE MANDATORY ON EVERY SENTENCE.
-   After EVERY factual sentence, append the citation number in square brackets.
-   CORRECT: "Type 2 Diabetes is characterized by insulin resistance.[1]"
-   WRONG:   "Type 2 Diabetes is characterized by insulin resistance."
+   After EVERY factual sentence, append the citation number in square brackets [1], [2].
    A sentence without a citation is INVALID and must not appear.
 
-2. DOCUMENTS ONLY — NO MEMORY, NO KNOWLEDGE.
-   If a section has NO relevant evidence, write EXACTLY:
-     Not found in available sources.
-   Do NOT invent any clinical information from training knowledge.
+2. ADAPTIVE FORMATTING - OMIT EMPTY SECTIONS:
+   Only output sections for which evidence is present in the context. Do NOT print 'Not found in available sources'.
 
-3. OUTPUT FORMAT — use EXACTLY this structure. Replace [Disease/Condition] with the exact disease name from the Question above (e.g. "Type 2 Diabetes", "Asthma", "Fever"):
+3. OUTPUT FORMAT - use EXACTLY this structure. Replace [Disease/Condition] with the exact disease name from the Question above (e.g. "Type 2 Diabetes", "Asthma", "Fever"):
 
    ### [Disease/Condition]
 
@@ -762,7 +789,7 @@ CRITICAL RULES:
    [Specific drug contraindications, absolute contraindications, and avoidance criteria from documents.]
 
    #### Warnings
-   [Red flag symptoms, dose-limiting toxicities, special population warnings from documents. Write "Not found in available sources." if no warning text exists.]
+   [Red flag symptoms, dose-limiting toxicities, special population warnings from documents.]
 
    #### Co-Administration Risks
    [Drug-drug interactions, combination risks, drugs to avoid in this condition from documents.]
@@ -771,7 +798,6 @@ CRITICAL RULES:
 5. NEVER output "DOCUMENT 1" or "Source:" labels.
 6. Extract from ALL documents provided, mapping each fact to the best matching section above.
 7. NO REPETITION. State each factual sentence or clinical recommendation EXACTLY ONCE. Never repeat the same sentence or phrase in a loop.
-8. MULTI-DRUG & SCENARIO DOSING: In scenario queries, if dosing guidelines or tables exist anywhere in context for ANY of the drugs (e.g. Allopurinol, Dapagliflozin), extract and summarize them under #### Dosing & Administration. Only write "Not found in available sources." if zero dosing facts exist.
 """
         else:
             return f"""Context:
@@ -1235,6 +1261,37 @@ CRITICAL RULES:
             if i < len(seps):
                 processed_answer += seps[i]
         
+        # --- Clean empty section placeholders and dangling headers ---
+        lines = processed_answer.splitlines()
+        clean_lines = []
+        for line in lines:
+            if "not found in available sources" in line.lower():
+                continue
+            clean_lines.append(line)
+            
+        # Strip dangling headers with no content under them
+        final_lines = []
+        for i, line in enumerate(clean_lines):
+            line_str = line.strip()
+            if line_str.startswith("#"):
+                # Check if next non-empty line is another header or EOF
+                next_is_content = False
+                for j in range(i + 1, len(clean_lines)):
+                    nxt = clean_lines[j].strip()
+                    if nxt:
+                        if not nxt.startswith("#"):
+                            next_is_content = True
+                        break
+                if not next_is_content:
+                    continue
+            final_lines.append(line)
+            
+        processed_answer = "\n".join(final_lines).strip()
+        
+        # Build list of citations actually present in the final validated text
+        used_citation_ids = sorted(list(set(regex.findall(r'\[([0-9]+)\]', processed_answer))), key=lambda x: int(x))
+        final_citations = [citation_map.entries[cid] for cid in used_citation_ids if cid in citation_map.entries]
+        
         # Safety net: if "remove" mode stripped everything, fall back to original answer
         if not processed_answer.strip() and answer_text.strip():
             logger.warning(
@@ -1608,7 +1665,9 @@ Identity Profile (Grounded FDA Label Metadata):
                 }
             )
             
-        prompt = self._build_prompt(context_str, query.question, mode=getattr(query, 'mode', 'DRUG_CHAT'))
+        from app.usecases.intent_router import IntentRouter
+        effective_mode = query.mode or IntentRouter.route_query(query.question, country_context=query.country_context).get("mode", "DRUG_CHAT")
+        prompt = self._build_prompt(context_str, query.question, mode=effective_mode)
         
         logger.info("generating_answer_via_llm", provider=settings.ACTIVE_LLM_PROVIDER, prompt_version=self.prompt_version)
         # --- LLM Generation with Retry ---
