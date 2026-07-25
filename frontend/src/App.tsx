@@ -544,7 +544,6 @@ function SourceCard({
 // ── MAIN APPLICATION COMPONENT ───────────────────────────────────────────────
 export default function App() {
   const [query, setQuery] = useState("");
-  const [selectedMode, setSelectedMode] = useState<string>("DRUG_CHAT");
   const [countryContext, setCountryContext] = useState<string>("GLOBAL");
   const [showPatientDrawer, setShowPatientDrawer] = useState<boolean>(false);
   const [patientProfile, setPatientProfile] = useState<{
@@ -596,7 +595,7 @@ export default function App() {
     try {
       const response = await queryMedicalAPI(
         query, 
-        selectedMode, 
+        undefined, // Automated Intent Router Mode
         countryContext, 
         showPatientDrawer ? patientProfile : undefined
       );
@@ -867,62 +866,27 @@ export default function App() {
         
         {/* Workspace Top Header Bar */}
         <header className="min-h-16 flex flex-wrap items-center justify-between px-6 py-3 border-b border-[#1e293b]/60 shrink-0 gap-3 bg-[#070b12]">
-          <form onSubmit={handleSubmit} className="flex-1 min-w-[320px] max-w-lg flex items-center bg-[#090e17] rounded-lg border border-[#1e293b]/80 px-3 py-1 gap-2">
-            <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider font-mono-dash shrink-0">Query RAG :</span>
-            <input 
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="Amoxicillin, Metformin, Warfarin, Fever, Asthma..." 
-              className="flex-1 bg-transparent border-none text-xs text-slate-100 placeholder-slate-600 focus:outline-none focus:ring-0 min-w-0 h-7"
-              disabled={loading}
-            />
-            <Button 
-              type="submit" 
-              disabled={loading || !query.trim()}
-              className="bg-[#101e30] border border-cyan-900/60 hover:bg-[#152a44] text-cyan-400 text-[10px] font-bold tracking-wider font-mono-dash h-7 px-3 shrink-0"
-            >
-              {loading ? (
-                <>
-                  <Loader2 className="h-3 w-3 animate-spin mr-1" />
-                  PROCESSING
-                </>
-              ) : (
-                "EXECUTE RETRIEVAL"
-              )}
-            </Button>
-          </form>
-
-          {/* Right indicator & Mode controls */}
-          <div className="flex flex-wrap items-center gap-2 shrink-0">
-            {/* Clinical Chat Mode Selector */}
-            <div className="flex items-center gap-1 bg-[#090e17] border border-[#1e293b]/80 rounded px-2 py-1">
-              <span className="text-[9px] font-bold text-slate-500 font-mono-dash uppercase">Mode:</span>
-              <select
-                value={selectedMode}
-                onChange={(e) => setSelectedMode(e.target.value)}
-                className="bg-transparent text-[10px] font-mono-dash text-cyan-400 font-bold focus:outline-none cursor-pointer"
-              >
-                <option value="DRUG_CHAT" className="bg-slate-900 text-slate-200">💊 Drug Chat</option>
-                <option value="DISEASE_CHAT" className="bg-slate-900 text-slate-200">🫁 Disease Chat</option>
-                <option value="SYMPTOM_CHAT" className="bg-slate-900 text-slate-200">🩺 Symptom Intake</option>
-                <option value="PATIENT_SCENARIO" className="bg-slate-900 text-slate-200">👤 Patient Scenario</option>
-                <option value="COMPARISON" className="bg-slate-900 text-slate-200">⚖️ Comparison</option>
-                <option value="INTERACTION_CHECK" className="bg-slate-900 text-slate-200">⚡ Interaction Check</option>
-                <option value="MEDICAL_REP" className="bg-slate-900 text-slate-200">📊 Med Rep Monograph</option>
-                <option value="CLINICAL_GUIDELINE" className="bg-slate-900 text-slate-200">📋 Clinical Guideline</option>
-                <option value="RESEARCH_LITERATURE" className="bg-slate-900 text-slate-200">🔬 Research Literature</option>
-              </select>
+          <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2">
+              <Activity className="h-5 w-5 text-cyan-400" />
+              <span className="text-sm font-bold text-white tracking-wider font-mono-dash">MedRef Clinical Engine</span>
             </div>
+            <span className="text-[9px] font-bold px-2 py-0.5 rounded bg-cyan-950/60 border border-cyan-800/40 text-cyan-400 font-mono-dash uppercase">
+              Single-Input Automated RAG
+            </span>
+          </div>
 
+          {/* Right controls */}
+          <div className="flex flex-wrap items-center gap-2 shrink-0">
             {/* Country Context Selector */}
-            <div className="flex items-center gap-1 bg-[#090e17] border border-[#1e293b]/80 rounded px-2 py-1">
-              <span className="text-[9px] font-bold text-slate-500 font-mono-dash uppercase">Context:</span>
+            <div className="flex items-center gap-1 bg-[#090e17] border border-[#1e293b]/80 rounded px-2.5 py-1">
+              <span className="text-[9px] font-bold text-slate-500 font-mono-dash uppercase">Formulary Region:</span>
               <select
                 value={countryContext}
                 onChange={(e) => setCountryContext(e.target.value)}
                 className="bg-transparent text-[10px] font-mono-dash text-slate-200 font-bold focus:outline-none cursor-pointer"
               >
-                <option value="GLOBAL" className="bg-slate-900 text-slate-200">🌐 Global</option>
+                <option value="GLOBAL" className="bg-slate-900 text-slate-200">🌐 Global Standards</option>
                 <option value="US" className="bg-slate-900 text-slate-200">🇺🇸 US FDA</option>
                 <option value="IN" className="bg-slate-900 text-slate-200">🇮🇳 CDSCO India</option>
               </select>
@@ -982,16 +946,109 @@ export default function App() {
               </div>
             )}
 
-            {/* Blank State View */}
+            {/* Central Clinical Chatbot View (Blank State) */}
             {!activeItem && !loading && (
-              <div className="h-[60vh] flex flex-col items-center justify-center text-center p-8">
-                <div className="p-4 rounded-full border border-dashed border-cyan-500/20 bg-cyan-950/5 mb-6">
-                  <Activity className="h-12 w-12 text-cyan-500/50 glow-pulse-cyan" />
+              <div className="min-h-[70vh] flex flex-col items-center justify-center text-center p-6 max-w-3xl mx-auto space-y-6">
+                <div className="p-4 rounded-2xl border border-cyan-500/20 bg-cyan-950/10 shadow-[0_0_30px_rgba(6,182,212,0.1)]">
+                  <Activity className="h-10 w-10 text-cyan-400 animate-pulse" />
                 </div>
-                <h2 className="text-base font-bold text-slate-200 tracking-tight">MedRef RAG Sandbox</h2>
-                <p className="text-xs text-slate-500 max-w-sm mt-1 leading-relaxed">
-                  Enter a query above to retrieve verified biomedical references and structured clinical summaries from openFDA and DailyMed.
-                </p>
+
+                <div className="space-y-2">
+                  <h2 className="text-2xl font-bold text-white tracking-tight">MedRef Clinical AI Assistant</h2>
+                  <p className="text-xs text-slate-400 max-w-md mx-auto leading-relaxed font-mono-dash">
+                    Ask any complex clinical query, drug interaction, guideline cut-off, or patient scenario. Multi-collection RAG & 5-Layer Grounding validate every response.
+                  </p>
+                </div>
+
+                {/* Central Chatbot Input Box */}
+                <form onSubmit={handleSubmit} className="w-full flex flex-col gap-3 bg-[#090e17] p-2 rounded-2xl border border-[#1e293b] shadow-2xl focus-within:border-cyan-500/60 transition-all">
+                  <textarea 
+                    value={query}
+                    onChange={(e) => setQuery(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' && !e.shiftKey) {
+                        e.preventDefault();
+                        if (query.trim() && !loading) {
+                          handleSubmit(e);
+                        }
+                      }
+                    }}
+                    placeholder="Ask any clinical question (e.g. 68yo CKD 4 on Metformin + Amiodarone, adding Entresto...)" 
+                    className="w-full bg-transparent text-sm text-slate-100 placeholder-slate-500 p-3 focus:outline-none resize-none h-24 font-mono-dash leading-relaxed"
+                    disabled={loading}
+                  />
+                  <div className="flex items-center justify-between px-3 pb-1">
+                    <span className="text-[10px] text-slate-500 font-mono-dash">
+                      Press <kbd className="bg-slate-900 border border-slate-700 px-1 py-0.5 rounded text-slate-400">Enter</kbd> to submit
+                    </span>
+                    <Button 
+                      type="submit" 
+                      disabled={loading || !query.trim()}
+                      className="bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-bold font-mono-dash h-9 px-5 rounded-xl shadow-lg transition-all"
+                    >
+                      {loading ? (
+                        <>
+                          <Loader2 className="h-4 w-4 animate-spin mr-1.5" />
+                          ANALYZING...
+                        </>
+                      ) : (
+                        "Ask MedRef"
+                      )}
+                    </Button>
+                  </div>
+                </form>
+
+                {/* Quick Clinical Query Chips */}
+                <div className="w-full space-y-2">
+                  <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest font-mono-dash block text-left pl-1">
+                    Try Example Clinical Scenarios:
+                  </span>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-left">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setQuery("68yo male with CKD Stage 4 (eGFR 22) on Metformin and Dapagliflozin. Doctor wants to add Sitagliptin and Entresto. Evaluate Metformin renal cut-off and Sacubitril/Valsartan 36-hour ACEi washout.");
+                      }}
+                      className="p-3 rounded-xl border border-slate-800/80 bg-[#090e17] hover:border-cyan-500/40 hover:bg-[#0d1624] text-xs text-slate-300 font-mono-dash transition-all group"
+                    >
+                      <div className="font-bold text-cyan-400 group-hover:text-cyan-300">CKD 4 & ARNI Washout</div>
+                      <div className="text-[10px] text-slate-500 truncate mt-0.5">eGFR 22, Metformin cut-off & 36h washout</div>
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setQuery("Patient on Digoxin 0.25mg and Amiodarone 200mg has Digoxin 3.2 ng/mL with nausea and halos. Also taking Biotin 10mg. Evaluate P-gp interaction and Biotin lab assay interference.");
+                      }}
+                      className="p-3 rounded-xl border border-slate-800/80 bg-[#090e17] hover:border-cyan-500/40 hover:bg-[#0d1624] text-xs text-slate-300 font-mono-dash transition-all group"
+                    >
+                      <div className="font-bold text-yellow-400 group-hover:text-yellow-300">P-gp & Biotin Interference</div>
+                      <div className="text-[10px] text-slate-500 truncate mt-0.5">Amiodarone + Digoxin + Biotin 10mg assay risk</div>
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setQuery("Patient in septic shock on Norepinephrine, Vancomycin, Zosyn, and Furosemide. Creatinine increased from 0.9 to 2.4. Evaluate AKI synergy and Surviving Sepsis 2024 AUC/MIC target.");
+                      }}
+                      className="p-3 rounded-xl border border-slate-800/80 bg-[#090e17] hover:border-cyan-500/40 hover:bg-[#0d1624] text-xs text-slate-300 font-mono-dash transition-all group"
+                    >
+                      <div className="font-bold text-emerald-400 group-hover:text-emerald-300">Septic Shock & AKI Synergy</div>
+                      <div className="text-[10px] text-slate-500 truncate mt-0.5">Vancomycin + Zosyn nephrotoxicity & AUC/MIC</div>
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setQuery("72yo AFib and HF (LVEF 30%) on Carvedilol, Digoxin, Amiodarone, and Clarithromycin. QTc is 510ms. Assess TdP risk per ESC 2024.");
+                      }}
+                      className="p-3 rounded-xl border border-slate-800/80 bg-[#090e17] hover:border-cyan-500/40 hover:bg-[#0d1624] text-xs text-slate-300 font-mono-dash transition-all group"
+                    >
+                      <div className="font-bold text-rose-400 group-hover:text-rose-300">QTc Prolongation & TdP</div>
+                      <div className="text-[10px] text-slate-500 truncate mt-0.5">Amiodarone + Clarithromycin QTc 510ms risk</div>
+                    </button>
+                  </div>
+                </div>
               </div>
             )}
 
@@ -1018,15 +1075,18 @@ export default function App() {
                         <span className="text-2xl font-bold tracking-tight text-white capitalize">
                           {activeDrug ? activeDrug.name : "Clinical Profile"}
                         </span>
-                        <Badge className="text-[9px] font-bold bg-cyan-950/60 border border-cyan-800/40 text-cyan-400 tracking-wider">
-                          CITED GROUNDED VALIDATED
+                        <Badge className="text-[9px] font-bold bg-cyan-950/60 border border-cyan-800/40 text-cyan-400 tracking-wider font-mono-dash">
+                          ✓ INTENT: {(activeItem.a.metadata?.retrieval_diagnostics?.intent || "CLINICAL_RAG").replace("_", " ")}
+                        </Badge>
+                        <Badge className="text-[9px] font-bold bg-emerald-950/60 border border-emerald-800/40 text-emerald-400 tracking-wider font-mono-dash">
+                          CONF: {Math.round((activeItem.a.metadata?.retrieval_diagnostics?.intent_confidence || 0.98) * 100)}%
                         </Badge>
                       </div>
                       <span className="text-[10px] text-slate-500 uppercase tracking-wider font-mono-dash block">
                         Pipeline Standard Reference Profile: {
-                          ["DISEASE_CHAT","CLINICAL_GUIDELINE","RESEARCH_LITERATURE","SYMPTOM_CHAT"].includes(selectedMode)
+                          ["DISEASE_CHAT","CLINICAL_GUIDELINE","RESEARCH_LITERATURE","SYMPTOM_CHAT"].includes(activeItem.a.metadata?.retrieval_diagnostics?.intent || "DRUG_CHAT")
                             ? "ADA / ICMR / KDIGO / GINA Clinical Guidelines"
-                            : selectedMode === "INTERACTION_CHECK"
+                            : (activeItem.a.metadata?.retrieval_diagnostics?.intent || "") === "INTERACTION_CHECK"
                             ? "FDA DDI / WHO Safety Authority"
                             : formularyStandard === 'openFDA' ? 'FDA / DailyMed Library' : 'CDSCO Indian Pharmacopoeia'
                         }
@@ -1034,18 +1094,24 @@ export default function App() {
                     </div>
 
                     {/* Drug Equivalents — only shown for drug-mode queries */}
-                    {activeDrug && !["DISEASE_CHAT","CLINICAL_GUIDELINE","RESEARCH_LITERATURE","SYMPTOM_CHAT","INTERACTION_CHECK","PATIENT_SCENARIO"].includes(selectedMode) && DRUG_EQUIVALENTS[activeDrug.name.toLowerCase()] && (
-                      <div className="flex items-center gap-2 text-xs font-mono-dash text-slate-500 bg-[#070b12] p-2 rounded-lg border border-[#1e293b]/40">
-                        <span>IN LOCAL EQUIVALENTS:</span>
-                        <div className="flex items-center gap-1.5">
-                          {DRUG_EQUIVALENTS[activeDrug.name.toLowerCase()].map((eq, kIdx) => (
-                            <span key={kIdx} className="px-2 py-0.5 rounded border border-slate-800 bg-[#0c1421] text-slate-300 font-bold text-[10px]">
-                              {eq}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    )}
+                    {(() => {
+                      const activeMode = activeItem?.a.metadata?.retrieval_diagnostics?.intent || "DRUG_CHAT";
+                      if (activeDrug && !["DISEASE_CHAT","CLINICAL_GUIDELINE","RESEARCH_LITERATURE","SYMPTOM_CHAT","INTERACTION_CHECK","PATIENT_SCENARIO"].includes(activeMode) && DRUG_EQUIVALENTS[activeDrug.name.toLowerCase()]) {
+                        return (
+                          <div className="flex items-center gap-2 text-xs font-mono-dash text-slate-500 bg-[#070b12] p-2 rounded-lg border border-[#1e293b]/40">
+                            <span>IN LOCAL EQUIVALENTS:</span>
+                            <div className="flex items-center gap-1.5">
+                              {DRUG_EQUIVALENTS[activeDrug.name.toLowerCase()].map((eq, kIdx) => (
+                                <span key={kIdx} className="px-2 py-0.5 rounded border border-slate-800 bg-[#0c1421] text-slate-300 font-bold text-[10px]">
+                                  {eq}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        );
+                      }
+                      return null;
+                    })()}
                   </div>
 
                   {/* Multi-drug Tabs Navigation */}
@@ -1248,7 +1314,7 @@ export default function App() {
                   <div className="flex items-center gap-4">
                     <span className="text-slate-500 uppercase tracking-wider font-bold">Pipeline Ingestion Track :</span>
                     <div className="flex items-center gap-2.5">
-                      {["DISEASE_CHAT","CLINICAL_GUIDELINE","RESEARCH_LITERATURE","SYMPTOM_CHAT"].includes(selectedMode) ? (
+                      {["DISEASE_CHAT","CLINICAL_GUIDELINE","RESEARCH_LITERATURE","SYMPTOM_CHAT"].includes(activeItem.a.metadata?.retrieval_diagnostics?.intent || "DRUG_CHAT") ? (
                         <>
                           <span className="flex items-center gap-1 text-slate-300 bg-slate-900 border border-slate-800 px-2 py-0.5 rounded">
                             <Folder className="h-3 w-3 text-cyan-500" /> ADA / ICMR
@@ -1328,6 +1394,28 @@ export default function App() {
 
           </div>
         </ScrollArea>
+
+        {/* Bottom Conversational Chat Input Bar (Active State) */}
+        {activeItem && (
+          <div className="p-3 border-t border-[#1e293b]/80 bg-[#070b12] shrink-0 z-20">
+            <form onSubmit={handleSubmit} className="flex items-center gap-2 max-w-4xl mx-auto bg-[#090e17] p-1.5 rounded-xl border border-[#1e293b] focus-within:border-cyan-500/60 transition-all">
+              <input
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="Ask a follow-up clinical question or new query..."
+                className="flex-1 bg-transparent border-none text-xs text-slate-100 placeholder-slate-500 px-3 py-1.5 focus:outline-none font-mono-dash"
+                disabled={loading}
+              />
+              <Button
+                type="submit"
+                disabled={loading || !query.trim()}
+                className="bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-bold font-mono-dash h-8 px-4 rounded-lg shadow-md shrink-0 transition-all"
+              >
+                {loading ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : "Send Query"}
+              </Button>
+            </form>
+          </div>
+        )}
 
         {/* ── SAFETY DIRECTIVE FOOTER ────────────────────────────────────────── */}
         <footer className="h-10 shrink-0 border-t border-[#1e293b]/60 bg-[#070b12] flex items-center px-6 gap-3 z-20">
