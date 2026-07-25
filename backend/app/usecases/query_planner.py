@@ -36,8 +36,15 @@ class QueryPlanner:
         # 1. Base Sub-Query (original prompt)
         sub_queries.append(SubQuery(query_text=question, target_category="general", priority=1.0))
         
-        # 2. Intent-Based Decomposition
-        if mode in ["INTERACTION_CHECK", "PATIENT_SCENARIO"]:
+        # 2. Conditional Intent-Based Decomposition (Only for complex prompts)
+        complexity_triggers = [
+            "adding", "switch", "patient with", "year-old", "yo ", "ckd", "egfr", 
+            "creatinine", "uacr", "septic", "shock", "lvef", "afib", "atrial fibrillation",
+            "taking", "receiving", "concurrent", "co-administration", "combination"
+        ]
+        is_complex = any(trigger in q_lower for trigger in complexity_triggers)
+        
+        if is_complex and mode in ["INTERACTION_CHECK", "PATIENT_SCENARIO"]:
             # Sub-Query for Drug-Drug Interactions & Risks
             sub_queries.append(SubQuery(
                 query_text=f"{question} drug interactions adverse risks toxicity",
@@ -61,7 +68,7 @@ class QueryPlanner:
                     priority=1.1
                 ))
 
-        elif mode == "CLINICAL_GUIDELINE":
+        elif is_complex and mode == "CLINICAL_GUIDELINE":
             sub_queries.append(SubQuery(
                 query_text=f"{question} clinical practice guidelines management consensus",
                 target_category="disease_guidelines",

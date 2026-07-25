@@ -53,6 +53,7 @@ class Citation(BaseModel):
     similarity: Optional[float] = None
     count: int = 1
     citation_number: Optional[int] = None
+    citation_confidence: Optional[str] = "MEDIUM" # HIGH (Guidelines), MEDIUM (Labels), LOW (Literature)
 
 class ReferenceDocument(BaseModel):
     id: str

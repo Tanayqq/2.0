@@ -681,6 +681,14 @@ class ProcessClinicalQueryUseCase:
                             similarity=round(doc.score or 0.0, 4)
                         )
                         
+                        doc_auth = (doc.metadata.get("authority") or "DailyMed").upper()
+                        if any(g in doc_auth for g in ["KDIGO", "ADA", "ACC", "AHA", "ESC", "SURVIVING SEPSIS"]):
+                            cit_conf = "HIGH"
+                        elif any(l in doc_auth for l in ["FDA", "DAILYMED", "CDSCO", "NFI", "ASHP"]):
+                            cit_conf = "MEDIUM"
+                        else:
+                            cit_conf = "LOW"
+
                         # Add to citations list
                         citations.append(Citation(
                             document_id=citation_id,
@@ -689,8 +697,10 @@ class ProcessClinicalQueryUseCase:
                             uuid=doc.id,
                             drug=drug,
                             section=section_raw,
+                            authority=doc.metadata.get("authority", "DailyMed"),
                             similarity=round(doc.score or 0.0, 4),
-                            count=0
+                            count=0,
+                            citation_confidence=cit_conf
                         ))
                     
                 drug_str += cat_str
@@ -1818,7 +1828,18 @@ Identity Profile (Grounded FDA Label Metadata):
             "overall_percentage": int((covered_count / len(all_sections)) * 100) if all_sections else 0
         }
         
+        retrieval_diagnostics = {
+            "intent": effective_mode,
+            "collections_searched": retrieval_stats.get("collections_searched", ["openfda_labels", "drug_interactions"]),
+            "retrieved_count": retrieval_stats.get("total_retrieved", len(documents)),
+            "after_dedupe_count": len(documents),
+            "after_rerank_count": min(len(documents), settings.MAX_CONTEXT_CHUNKS),
+            "context_tokens": len(prompt) // 4,
+            "grounding_status": "PASS" if not final_validation_errors else "PASS_WITH_WARNINGS"
+        }
+        
         metadata = {
+            "retrieval_diagnostics": retrieval_diagnostics,
             "section_status": retrieval_stats.get("section_statuses", {}),
             "retrieval_trace": retrieval_stats.get("retrieval_trace", []),
             "clinical_coverage": clinical_coverage,

@@ -30,6 +30,19 @@ class EvidenceFusionEngine:
     """
     
     @classmethod
+    def deduplicate_before_rerank(cls, docs: List[Any]) -> List[Any]:
+        """Fast pre-rerank deduplication to prevent scoring duplicate chunks."""
+        if not docs:
+            return []
+        seen_texts: Dict[str, Any] = {}
+        for doc in docs:
+            raw_text = getattr(doc, "content", getattr(doc, "text", "")).strip()
+            norm_text = re.sub(r'\s+', ' ', raw_text.lower()[:200])
+            if norm_text not in seen_texts:
+                seen_texts[norm_text] = doc
+        return list(seen_texts.values())
+
+    @classmethod
     def fuse_evidence(cls, docs: List[Any]) -> List[Any]:
         if not docs:
             return []
