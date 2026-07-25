@@ -30,13 +30,14 @@ class IntentRouter:
 
         q_lower = question.lower()
 
-        # --- Explicit Clinical Guideline Requests (Surviving Sepsis, AUC/MIC, KDIGO, GINA, GOLD, ACC/AHA, ESC) ---
+        # --- Explicit Clinical Guideline Requests & Lab Interference (Surviving Sepsis, AUC/MIC, KDIGO, GINA, GOLD, ACC/AHA, ESC, Biotin) ---
         if any(kw in q_lower for kw in [
             "surviving sepsis", "sepsis 2024", "auc/mic", "auc-mic", "washout", "angioedema",
             "kdigo 2024", "ada 2026", "acc/aha 2024", "esc 2024", "gina 2025", "gold 2025",
-            "kerendia", "finerenone", "jardiance", "empagliflozin", "aceclofenac", "uacr"
+            "kerendia", "finerenone", "jardiance", "empagliflozin", "aceclofenac", "uacr",
+            "biotin", "troponin", "streptavidin", "immunoassay"
         ]):
-            if any(kw in q_lower for kw in ["risk", "interaction", "synergy", "potentiation", "zosyn", "piperacillin", "vancomycin", "furosemide", "aceclofenac", "nsaid"]):
+            if any(kw in q_lower for kw in ["risk", "interaction", "synergy", "potentiation", "zosyn", "piperacillin", "vancomycin", "furosemide", "aceclofenac", "nsaid", "biotin", "troponin", "interfere"]):
                 return "INTERACTION_CHECK"
             return "CLINICAL_GUIDELINE"
 

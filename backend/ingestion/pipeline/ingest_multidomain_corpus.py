@@ -264,15 +264,19 @@ INTERACTION_DATA = [
         "section": "drug_interactions"
     },
     {
-        "title": "High-Dose Biotin (Vitamin B7) Immunoassay Interference with Troponin Labs",
-        "drugs": ["Biotin", "Troponin I", "Troponin T"],
-        "authority": "FDA Safety Communication",
+        "title": "High-Dose Biotin (Vitamin B7) Immunoassay Interference with Cardiac Troponin I/T Labs",
+        "drugs": ["Biotin", "Troponin I", "Troponin T", "Streptavidin"],
+        "authority": "FDA Safety Communication / NEJM",
         "category": "drug_interactions",
         "content": (
-            "DRUG-LAB INTERACTION ALERT: Biotin (>= 10mg/day) + Streptavidin-Biotin Immunoassays (Cardiac Troponin I/T).\n"
-            "Severity: MAJOR / FALSE NEGATIVE DIAGNOSTIC MISLEAD.\n"
-            "Mechanism: Exogenous biotin competes with biotinylated antibodies in streptavidin-biotin lab assays, causing FALSELY LOW / FALSELY NEGATIVE Troponin I/T results during acute myocardial infarction (ACS).\n"
-            "Management: Discontinue high-dose biotin 48 hours prior to lab testing, or use non-biotinylated Troponin immunoassay platforms."
+            "DRUG-LAB INTERACTION ALERT: Biotin (>= 10mg/day) + Streptavidin-Biotin Immunoassays (Cardiac Troponin I / Troponin T).\n"
+            "Severity: CRITICAL / HIGH DIAGNOSTIC MISLEAD HAZARD (FALSE NEGATIVE TROPONIN).\n"
+            "Clinical Alert: A 'Normal' Troponin I reading (e.g. 0.01 ng/mL) in a patient with ST depression on ECG taking Biotin (10mg daily) is DANGEROUSLY UNRELIABLE and represents a FALSE NEGATIVE masking acute myocardial infarction (AMI).\n"
+            "Biochemical Mechanism: High-dose exogenous biotin competes with biotinylated antibodies for binding sites on streptavidin-coated magnetic microparticles. In sandwich immunoassay formats (used for Cardiac Troponin I and Troponin T), excess free biotin prevents antibody-antigen complex capture, producing FALSELY LOW or FALSELY NORMAL Troponin results.\n"
+            "Management & Interpretation Protocol:\n"
+            "1. Do NOT rule out Acute Coronary Syndrome (ACS) based on a normal Troponin reading in a patient taking Biotin with ischemic ECG changes (ST depression/T wave inversion).\n"
+            "2. Discontinue Biotin for at least 48 HOURS prior to repeating streptavidin-biotin lab assays.\n"
+            "3. Use alternative non-biotinylated Troponin immunoassay platforms (e.g. electrochemiluminescence or mass spectrometry) for immediate emergency diagnostic evaluation."
         ),
         "section": "drug_interactions"
     },
