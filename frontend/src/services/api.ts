@@ -69,23 +69,27 @@ export const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:80
 
 export const queryMedicalAPI = async (
   question: string,
-  mode: string = "DRUG_CHAT",
+  mode?: string,
   country_context: string = "GLOBAL",
   patient_profile?: PatientProfilePayload,
   conversation_id?: string
 ): Promise<AnswerResponse> => {
+  const payload: Record<string, any> = {
+    question,
+    country_context,
+    patient_profile,
+    conversation_id
+  };
+  if (mode) {
+    payload.mode = mode;
+  }
+
   const response = await fetch(`${API_BASE_URL}/query`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({
-      question,
-      mode,
-      country_context,
-      patient_profile,
-      conversation_id
-    }),
+    body: JSON.stringify(payload),
   });
 
   if (!response.ok) {
