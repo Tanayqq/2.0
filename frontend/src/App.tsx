@@ -1208,6 +1208,43 @@ export default function App() {
                             citations={activeCitations} 
                             cardIndex={activeHistoryIndex} 
                           />
+
+                          {/* Phase 4 Interactive Clinician Feedback Bar */}
+                          <div className="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-slate-800/80 font-mono-dash text-xs">
+                            <span className="text-slate-400 text-[11px] font-bold">Was this recommendation clinically accurate?</span>
+                            <div className="flex items-center gap-2">
+                              <Button 
+                                size="sm" 
+                                variant="outline" 
+                                className="h-7 text-[10px] bg-slate-900 border-slate-800 hover:bg-emerald-950 hover:text-emerald-300 text-slate-300"
+                                onClick={() => {
+                                  alert("Thank you! Feedback recorded: Helpful");
+                                }}
+                              >
+                                👍 Helpful
+                              </Button>
+                              <Button 
+                                size="sm" 
+                                variant="outline" 
+                                className="h-7 text-[10px] bg-slate-900 border-slate-800 hover:bg-amber-950 hover:text-amber-300 text-slate-300"
+                                onClick={() => {
+                                  alert("Feedback recorded: Needs Citation");
+                                }}
+                              >
+                                ⚠️ Needs Citation
+                              </Button>
+                              <Button 
+                                size="sm" 
+                                variant="outline" 
+                                className="h-7 text-[10px] bg-slate-900 border-slate-800 hover:bg-red-950 hover:text-red-300 text-slate-300"
+                                onClick={() => {
+                                  alert("Feedback recorded: Incorrect");
+                                }}
+                              >
+                                ❌ Incorrect
+                              </Button>
+                            </div>
+                          </div>
                         </CardContent>
                       </Card>
                     ) : (

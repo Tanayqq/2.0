@@ -25,6 +25,34 @@ def get_corpus_quality():
     from app.usecases.corpus_quality import CorpusQualityDashboard
     return CorpusQualityDashboard.get_dashboard_metrics()
 
+@router.post("/feedback")
+def submit_feedback(payload: dict):
+    """Phase 4 Clinician Feedback Collection Endpoint."""
+    sys_path_p4 = os.path.join(os.path.dirname(__file__), "..", "..", "..", "phase4", "feedback")
+    import sys
+    if sys_path_p4 not in sys.path:
+        sys.path.insert(0, sys_path_p4)
+    from feedback_engine import ClinicianFeedbackEngine
+    
+    return ClinicianFeedbackEngine.record_feedback(
+        query_text=payload.get("query_text", ""),
+        request_id=payload.get("request_id", "REQ-001"),
+        rating=payload.get("rating", "Helpful"),
+        feedback_type=payload.get("feedback_type", "General"),
+        comments=payload.get("comments", "")
+    )
+
+@router.get("/feedback/analytics")
+def get_feedback_analytics():
+    """Phase 4 Clinician Feedback Analytics Endpoint."""
+    sys_path_p4 = os.path.join(os.path.dirname(__file__), "..", "..", "..", "phase4", "feedback")
+    import sys
+    if sys_path_p4 not in sys.path:
+        sys.path.insert(0, sys_path_p4)
+    from feedback_engine import ClinicianFeedbackEngine
+    
+    return ClinicianFeedbackEngine.get_feedback_analytics()
+
 @router.post("/query", response_model=AnswerResponse)
 def handle_query(query: MedicalQuery, usecase: ProcessClinicalQueryUseCase = Depends(get_usecase)):
     try:
