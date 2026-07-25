@@ -15,9 +15,9 @@ class IntentRouter:
         "DRUG_CHAT": ["openfda_labels", "drug_labels_india"],
         "DISEASE_CHAT": ["disease_corpus", "disease_guidelines"],
         "SYMPTOM_CHAT": ["disease_corpus", "openfda_labels"],
-        "PATIENT_SCENARIO": ["openfda_labels", "drug_interactions", "disease_guidelines"],
+        "PATIENT_SCENARIO": ["openfda_labels", "drug_interactions", "disease_guidelines", "drug_labels_india"],
         "COMPARISON": ["openfda_labels", "drug_labels_india"],
-        "INTERACTION_CHECK": ["drug_interactions", "disease_guidelines", "openfda_labels"],
+        "INTERACTION_CHECK": ["drug_interactions", "disease_guidelines", "drug_labels_india", "openfda_labels"],
         "MEDICAL_REP": ["drug_labels_india", "openfda_labels"],
         "CLINICAL_GUIDELINE": ["disease_guidelines", "disease_corpus"],
         "RESEARCH_LITERATURE": ["primary_literature", "openfda_labels"]

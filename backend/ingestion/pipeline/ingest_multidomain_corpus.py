@@ -229,6 +229,19 @@ INTERACTION_DATA = [
         "section": "drug_interactions"
     },
     {
+        "title": "Digoxin (Lanoxin), Clarithromycin (Claribid), and Amiodarone (Cordarone) Dual P-gp Inhibition & Lethal Toxicity Cascade",
+        "drugs": ["Digoxin", "Lanoxin", "Clarithromycin", "Claribid", "Amiodarone", "Cordarone", "Carvedilol", "Cardivas"],
+        "authority": "FDA / ESC 2024",
+        "category": "drug_interactions",
+        "content": (
+            "DRUG INTERACTION ALERT: Digoxin (Lanoxin) + Clarithromycin (Claribid) + Amiodarone (Cordarone) + Carvedilol (Cardivas).\n"
+            "Severity: CRITICAL / HIGH TOXICITY & LETHAL ARRHYTHMIA RISK.\n"
+            "Mechanism: Dual P-glycoprotein (P-gp) efflux blockade. Clarithromycin and Amiodarone strongly inhibit P-gp intestinal and renal tubular excretion, causing a 100-200% surge in serum Digoxin levels (Digoxin Toxicity: nausea, visual halo, fatal AV block, ventricular tachycardia). Concomitant Amiodarone + Clarithromycin causes additive QTc interval prolongation (>500 ms) and Torsades de Pointes (TdP) risk.\n"
+            "ESC 2024 Management: Reduce Digoxin dose by 50% immediately when initiating Amiodarone. Avoid Clarithromycin; use Azithromycin or non-macrolide alternative. Monitor ECG for QTc > 500 ms and serum Digoxin trough (target 0.5-0.9 ng/mL for Heart Failure)."
+        ),
+        "section": "drug_interactions"
+    },
+    {
         "title": "High-Dose Biotin (Vitamin B7) Immunoassay Interference with Troponin Labs",
         "drugs": ["Biotin", "Troponin I", "Troponin T"],
         "authority": "FDA Safety Communication",
