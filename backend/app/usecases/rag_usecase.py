@@ -1279,13 +1279,20 @@ CRITICAL RULES:
         final_lines = []
         for i, line in enumerate(clean_lines):
             line_str = line.strip()
+            # Clean dangling standalone list numbers (e.g. "1. 2. 3." or "1.")
+            cleaned_num = regex.sub(r'^(?:[0-9]+\.[\s]*)+$', '', line_str).strip()
+            if not cleaned_num and line_str:
+                continue
+            line = cleaned_num if cleaned_num else line
+
             if line_str.startswith("#"):
                 # Check if next non-empty line is another header or EOF
                 next_is_content = False
                 for j in range(i + 1, len(clean_lines)):
                     nxt = clean_lines[j].strip()
-                    if nxt:
-                        if not nxt.startswith("#"):
+                    nxt_num = regex.sub(r'^(?:[0-9]+\.[\s]*)+$', '', nxt).strip()
+                    if nxt_num:
+                        if not nxt_num.startswith("#"):
                             next_is_content = True
                         break
                 if not next_is_content:
