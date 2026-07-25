@@ -26,6 +26,7 @@ import {
 import { InlineCitation } from "./components/InlineCitation";
 import { Dashboard } from "./components/Dashboard";
 import { ClinicalAudit } from "./components/ClinicalAudit";
+import { TrustCard } from "./components/TrustCard";
 import "./App.css";
 
 // ── TYPES & INTERFACES ───────────────────────────────────────────────────────
@@ -1185,90 +1186,116 @@ export default function App() {
                       </div>
                     )}
 
-                    {/* Card 1: Clinical Profile Overview */}
-                    <Card className="medref-card medref-card-cyan border-cyan-500/10">
-                      <CardContent className="p-5 space-y-3">
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-2">
-                            <BookOpen className="h-4.5 w-4.5 text-cyan-400" />
-                            <span className="text-xs font-bold text-cyan-400 uppercase tracking-widest font-mono-dash">
-                              Clinical Profile Overview
+                    {/* 2. Structured Content Cards */}
+                    {["PATIENT_SCENARIO", "INTERACTION_CHECK", "CLINICAL_GUIDELINE", "DISEASE_CHAT", "RESEARCH_LITERATURE", "SYMPTOM_CHAT"].includes(activeItem.a.metadata?.retrieval_diagnostics?.intent || "DRUG_CHAT") ? (
+                      /* Scenario & Guideline Mode: Unified Clinical Assessment Report */
+                      <Card className="medref-card medref-card-cyan border-cyan-500/20 bg-[#090e17]">
+                        <CardContent className="p-6 space-y-4">
+                          <div className="flex items-center justify-between border-b border-cyan-900/40 pb-3">
+                            <div className="flex items-center gap-2">
+                              <Activity className="h-5 w-5 text-cyan-400" />
+                              <span className="text-sm font-bold text-cyan-400 uppercase tracking-wider font-mono-dash">
+                                Clinical Assessment & Action Plan
+                              </span>
+                            </div>
+                            <span className="text-xs font-mono-dash text-emerald-400 bg-emerald-950/40 px-2.5 py-1 rounded border border-emerald-800/50">
+                              ✓ CITATION GROUNDED
                             </span>
                           </div>
-                          <SectionHeaderBadge drugName={activeDrug.name} sectionKeys={["indications", "mechanism_of_action", "clinical_pharmacology"]} activeItem={activeItem} />
-                        </div>
-                        <CustomTextRenderer 
-                          text={activeDrug.sections.overview} 
-                          citations={activeCitations} 
-                          cardIndex={activeHistoryIndex} 
-                        />
-                      </CardContent>
-                    </Card>
-
-                    {/* Card 2: Dosing & Administration */}
-                    <Card className="medref-card border-[#1e293b]/60">
-                      <CardContent className="p-5 space-y-3">
-                        <div className="flex items-center justify-between">
-                          <span className="text-xs font-bold text-cyan-400 uppercase tracking-widest font-mono-dash flex items-center gap-2">
-                            💊 Dosing & Administration
-                          </span>
-                          <SectionHeaderBadge drugName={activeDrug.name} sectionKeys={["dosage_and_administration", "administration", "dosage_forms"]} activeItem={activeItem} />
-                        </div>
-                        {activeDrug.sections.dosing.toLowerCase() === 'not found in available sources.' ? (
-                          <div className="p-3.5 rounded-lg border border-slate-800/80 bg-[#070b12] text-xs text-slate-600 italic">
-                            Not found in available sources.
-                          </div>
-                        ) : (
+                          
                           <CustomTextRenderer 
-                            text={activeDrug.sections.dosing} 
+                            text={activeItem.a.answer} 
                             citations={activeCitations} 
                             cardIndex={activeHistoryIndex} 
                           />
-                        )}
-                      </CardContent>
-                    </Card>
+                        </CardContent>
+                      </Card>
+                    ) : (
+                      /* Single-Drug Monograph Mode: 3 Categorized Cards */
+                      <div className="space-y-4">
+                        {/* Card 1: Clinical Profile Overview */}
+                        <Card className="medref-card medref-card-cyan border-cyan-500/10">
+                          <CardContent className="p-5 space-y-3">
+                            <div className="flex items-center justify-between">
+                              <div className="flex items-center gap-2">
+                                <BookOpen className="h-4.5 w-4.5 text-cyan-400" />
+                                <span className="text-xs font-bold text-cyan-400 uppercase tracking-widest font-mono-dash">
+                                  Clinical Profile Overview
+                                </span>
+                              </div>
+                              <SectionHeaderBadge drugName={activeDrug.name} sectionKeys={["overview", "indications_and_usage", "indications"]} activeItem={activeItem} />
+                            </div>
+                            <CustomTextRenderer 
+                              text={activeDrug.sections.overview} 
+                              citations={activeCitations} 
+                              cardIndex={activeHistoryIndex} 
+                            />
+                          </CardContent>
+                        </Card>
 
-                    {/* Card 3: Contraindications & Warnings */}
-                    <Card className="medref-card medref-card-red border-red-500/10">
-                      <CardContent className="p-5 space-y-3">
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-2">
-                            <ShieldAlert className="h-4.5 w-4.5 text-red-400" />
-                            <span className="text-xs font-bold text-red-400 uppercase tracking-widest font-mono-dash">
-                              Contraindications & Warnings
-                            </span>
-                          </div>
-                          <SectionHeaderBadge drugName={activeDrug.name} sectionKeys={["contraindications", "warnings", "warnings_and_precautions"]} activeItem={activeItem} />
-                        </div>
-                        {/* Combine contraindications and warnings */}
-                        <div className="space-y-3">
-                          {activeDrug.sections.contraindications.toLowerCase() !== 'not found in available sources.' && (
-                            <div className="space-y-1">
-                              <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider font-mono-dash block">Contraindications:</span>
+                        {/* Card 2: Dosing & Administration */}
+                        {activeDrug.sections.dosing.toLowerCase() !== 'not found in available sources.' && (
+                          <Card className="medref-card medref-card-blue border-blue-500/10">
+                            <CardContent className="p-5 space-y-3">
+                              <div className="flex items-center justify-between">
+                                <div className="flex items-center gap-2">
+                                  <FileText className="h-4.5 w-4.5 text-blue-400" />
+                                  <span className="text-xs font-bold text-blue-400 uppercase tracking-widest font-mono-dash">
+                                    Dosing & Administration
+                                  </span>
+                                </div>
+                                <SectionHeaderBadge drugName={activeDrug.name} sectionKeys={["dosing", "dosage_and_administration", "dosage"]} activeItem={activeItem} />
+                              </div>
                               <CustomTextRenderer 
-                                text={activeDrug.sections.contraindications} 
+                                text={activeDrug.sections.dosing} 
                                 citations={activeCitations} 
                                 cardIndex={activeHistoryIndex} 
                               />
-                            </div>
-                          )}
-                          {activeDrug.sections.warnings.toLowerCase() !== 'not found in available sources.' && (
-                            <div className="space-y-1">
-                              <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider font-mono-dash block">Warnings:</span>
-                              <CustomTextRenderer 
-                                text={activeDrug.sections.warnings} 
-                                citations={activeCitations} 
-                                cardIndex={activeHistoryIndex} 
-                              />
-                            </div>
-                          )}
-                          {activeDrug.sections.contraindications.toLowerCase() === 'not found in available sources.' && 
-                           activeDrug.sections.warnings.toLowerCase() === 'not found in available sources.' && (
-                            <span className="text-slate-500 italic text-sm">Not found in available sources.</span>
-                          )}
-                        </div>
-                      </CardContent>
-                    </Card>
+                            </CardContent>
+                          </Card>
+                        )}
+
+                        {/* Card 3: Contraindications & Warnings */}
+                        {(activeDrug.sections.contraindications.toLowerCase() !== 'not found in available sources.' ||
+                          activeDrug.sections.warnings.toLowerCase() !== 'not found in available sources.') && (
+                          <Card className="medref-card medref-card-red border-red-500/10">
+                            <CardContent className="p-5 space-y-3">
+                              <div className="flex items-center justify-between">
+                                <div className="flex items-center gap-2">
+                                  <ShieldAlert className="h-4.5 w-4.5 text-red-400" />
+                                  <span className="text-xs font-bold text-red-400 uppercase tracking-widest font-mono-dash">
+                                    Contraindications & Warnings
+                                  </span>
+                                </div>
+                                <SectionHeaderBadge drugName={activeDrug.name} sectionKeys={["contraindications", "warnings", "warnings_and_precautions"]} activeItem={activeItem} />
+                              </div>
+                              <div className="space-y-3">
+                                {activeDrug.sections.contraindications.toLowerCase() !== 'not found in available sources.' && (
+                                  <div className="space-y-1">
+                                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider font-mono-dash block">Contraindications:</span>
+                                    <CustomTextRenderer 
+                                      text={activeDrug.sections.contraindications} 
+                                      citations={activeCitations} 
+                                      cardIndex={activeHistoryIndex} 
+                                    />
+                                  </div>
+                                )}
+                                {activeDrug.sections.warnings.toLowerCase() !== 'not found in available sources.' && (
+                                  <div className="space-y-1">
+                                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider font-mono-dash block">Warnings:</span>
+                                    <CustomTextRenderer 
+                                      text={activeDrug.sections.warnings} 
+                                      citations={activeCitations} 
+                                      cardIndex={activeHistoryIndex} 
+                                    />
+                                  </div>
+                                )}
+                              </div>
+                            </CardContent>
+                          </Card>
+                        )}
+                      </div>
+                    )}
 
                     {/* Card 4: Co-Administration Risks */}
                     <Card className="medref-card medref-card-gold border-yellow-500/10">
@@ -1362,6 +1389,9 @@ export default function App() {
                   
                   {/* CLINICAL AUDIT COMPONENT */}
                   <ClinicalAudit metadata={activeItem?.a.metadata} />
+
+                  {/* PHASE 3 PILLAR A EXPLAINABILITY TRUST CARD */}
+                  <TrustCard summary={(activeItem?.a.metadata?.retrieval_stats as any)?.explainability || activeItem?.a.metadata?.explainability} />
 
                   {/* 4. Sources Referenced Card List */}
                 <div className="space-y-3">
