@@ -43,7 +43,19 @@ class IntentRouter:
 
         q_lower = question.lower()
 
-        # --- Explicit Clinical Guideline Requests & Lab Interference (Surviving Sepsis, AUC/MIC, KDIGO, GINA, GOLD, ACC/AHA, ESC, Biotin, Entresto) ---
+        # --- 1. Patient Scenario (highest priority for clinical cases with demographics / patient context) ---
+        if any(kw in q_lower for kw in [
+            "year-old", "year old", "-year-old", "yo ", "yo,",
+            "patient with", "patient on", "patient who", "currently on", "wants to add",
+            "hba1c", "lvef", "uacr", "egfr", "scr", "creatinine",
+            "ckd stage", "step-therapy", "step therapy", "prioritize",
+            "male patient", "female patient", "55-year", "60-year", "65-year", "68-year", "70-year",
+            "justify", "cardiorenal", "ada 2025", "kdigo 2024",
+            "on metformin", "on insulin", "on lisinopril"
+        ]):
+            return "PATIENT_SCENARIO"
+
+        # --- 2. Explicit Clinical Guideline Requests & Lab Interference ---
         if any(kw in q_lower for kw in [
             "surviving sepsis", "sepsis 2024", "auc/mic", "auc-mic", "washout", "angioedema",
             "kdigo 2024", "ada 2026", "acc/aha 2024", "esc 2024", "gina 2025", "gold 2025",
