@@ -743,7 +743,7 @@ class ProcessClinicalQueryUseCase:
         # Calculate Collection Contribution Telemetry
         collection_counts = {}
         for doc in final_docs:
-            col = doc.get("collection") or "openfda_labels"
+            col = getattr(doc, "collection", None) or "openfda_labels"
             collection_counts[col] = collection_counts.get(col, 0) + 1
 
         total_ret_docs = len(final_docs) or 1
