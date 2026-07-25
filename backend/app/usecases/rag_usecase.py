@@ -516,14 +516,9 @@ class ProcessClinicalQueryUseCase:
                         cdoc.metadata["section"] = cdoc.metadata.get("section", "indications")
                         final_docs.append(cdoc)
 
-        # Deduplicate final_docs by UUID
-        seen_uuids = set()
-        deduped_final_docs = []
-        for doc in final_docs:
-            if doc.id not in seen_uuids:
-                seen_uuids.add(doc.id)
-                deduped_final_docs.append(doc)
-        final_docs = deduped_final_docs
+        # Evidence Fusion Engine: Deduplicate passages & resolve authority priorities
+        from app.usecases.evidence_fusion import EvidenceFusionEngine
+        final_docs = EvidenceFusionEngine.fuse_evidence(final_docs)
         
         retrieve_time = time.time() - start_retrieve
         # 7. Assign sequential citation IDs and build STRUCTURED context (grouped by Drug → Section)
@@ -1348,6 +1343,11 @@ CRITICAL RULES:
                     c_copy.count = counts[new_id]
                     final_citations.append(c_copy)
                     
+        # Run 5-Layer Propositional Grounding Validator
+        from app.usecases.propositional_grounding_validator import PropositionalGroundingValidator
+        prop_val = PropositionalGroundingValidator.validate_response(processed_answer, list(citation_map.entries.values()))
+        logger.info("propositional_grounding_audit", is_valid=prop_val.is_valid, layer_scores=prop_val.layer_scores, audit_logs=prop_val.audit_logs)
+
         return processed_answer, final_citations, remapping, validation_errors
 
     def get_debug_trace(self, query: MedicalQuery) -> Dict[str, Any]:
