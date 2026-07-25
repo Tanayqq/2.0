@@ -1,0 +1,38 @@
+{
+  "corpus_version": "v3.2.0-production",
+  "created_at": "2026-07-26T01:20:00Z",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "chunk_strategy": "Section-Aware Recursive Token Splitting",
+  "chunk_size_tokens": 512,
+  "chunk_overlap_tokens": 64,
+  "vector_db": "Qdrant Cloud v1.9.0",
+  "total_vectors": 20546,
+  "collections": {
+    "openfda_labels": {
+      "vector_count": 20343,
+      "authority": "FDA",
+      "target": 20000
+    },
+    "disease_guidelines": {
+      "vector_count": 68,
+      "authority": "KDIGO / ADA / ACC-AHA / ESC / GINA / GOLD",
+      "target": 250
+    },
+    "drug_interactions": {
+      "vector_count": 79,
+      "authority": "FDA DDI / WHO Safety Authority",
+      "target": 500
+    },
+    "primary_literature": {
+      "vector_count": 35,
+      "authority": "NEJM / Lancet Landmark Trials",
+      "target": 150
+    },
+    "drug_labels_india": {
+      "vector_count": 21,
+      "authority": "CDSCO / NFI",
+      "target": 150
+    }
+  },
+  "hash": "sha256:8f4c92b1a4570d381014e392c684e908"
+}

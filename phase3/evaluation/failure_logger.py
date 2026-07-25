@@ -10,7 +10,23 @@ FAILURES_FILE_PATH = os.path.join(os.path.dirname(__file__), "retrieval_failures
 
 class FailureLogger:
     @staticmethod
+    def classify_failure(reasons: List[str]) -> str:
+        text = " ".join(reasons).lower()
+        if "intent mismatch" in text:
+            return "WRONG_INTENT"
+        if "citation coverage below" in text or "missing citation" in text:
+            return "CITATION_FAILURE"
+        if "grounding" in text or "unsupported" in text:
+            return "GROUNDING_FAILURE"
+        if "missing required recommendation" in text or "recommendation mismatch" in text:
+            return "POOR_RETRIEVAL"
+        if "http" in text:
+            return "HTTP_ERROR"
+        return "LLM_FORMATTING"
+
+    @staticmethod
     def log_failure(case_data: Dict[str, Any], actual_response: Dict[str, Any], failure_reasons: List[str]):
+        failure_type = FailureLogger.classify_failure(failure_reasons)
         failure_record = {
             "case_id": case_data.get("case_id"),
             "category": case_data.get("category"),
@@ -18,7 +34,7 @@ class FailureLogger:
             "question": case_data.get("question"),
             "expected_intent": case_data.get("expected_intent"),
             "actual_intent": actual_response.get("metadata", {}).get("retrieval_diagnostics", {}).get("intent"),
-            "expected_recommendation": case_data.get("expected_recommendation"),
+            "failure_type": failure_type,
             "failure_reasons": failure_reasons,
             "actual_answer": actual_response.get("answer", "")[:500],
             "grounding_status": actual_response.get("metadata", {}).get("grounding_status"),

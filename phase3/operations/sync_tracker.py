@@ -28,29 +28,63 @@ DEFAULT_SOURCES: List[Dict[str, Any]] = [
 
 class SourceSyncTracker:
     @staticmethod
+    def calculate_freshness(registry: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        today = datetime.now()
+        enriched = []
+        for entry in registry:
+            last_sync_str = entry.get("last_sync", today.strftime("%Y-%m-%d"))
+            try:
+                last_dt = datetime.strptime(last_sync_str, "%Y-%m-%d")
+                delta_days = (today - last_dt).days
+            except Exception:
+                delta_days = 0
+
+            if delta_days == 0:
+                freshness_label = "Updated today"
+            elif delta_days == 1:
+                freshness_label = "Updated yesterday"
+            else:
+                freshness_label = f"Updated {delta_days} days ago"
+
+            interval = entry.get("sync_interval_days", 30)
+            if delta_days <= interval:
+                freshness_status = "FRESH"
+            elif delta_days <= interval * 2:
+                freshness_status = "WARNING"
+            else:
+                freshness_status = "OUTDATED"
+
+            item = dict(entry)
+            item["freshness_label"] = freshness_label
+            item["freshness_status"] = freshness_status
+            item["days_since_sync"] = delta_days
+            enriched.append(item)
+        return enriched
+
+    @staticmethod
     def get_sync_registry() -> List[Dict[str, Any]]:
+        registry = []
         if os.path.exists(SYNC_REGISTRY_PATH):
             try:
                 with open(SYNC_REGISTRY_PATH, "r", encoding="utf-8") as f:
-                    return json.load(f)
+                    registry = json.load(f)
             except Exception:
                 pass
 
-        # Initialize default registry
-        now_str = datetime.now().strftime("%Y-%m-%d")
-        registry = []
-        for src in DEFAULT_SOURCES:
-            interval = src.get("sync_interval_days", 30)
-            next_sync = (datetime.now() + timedelta(days=interval)).strftime("%Y-%m-%d")
-            entry = dict(src)
-            entry["last_sync"] = now_str
-            entry["next_sync"] = next_sync
-            registry.append(entry)
+        if not registry:
+            now_str = datetime.now().strftime("%Y-%m-%d")
+            for src in DEFAULT_SOURCES:
+                interval = src.get("sync_interval_days", 30)
+                next_sync = (datetime.now() + timedelta(days=interval)).strftime("%Y-%m-%d")
+                entry = dict(src)
+                entry["last_sync"] = now_str
+                entry["next_sync"] = next_sync
+                registry.append(entry)
 
-        with open(SYNC_REGISTRY_PATH, "w", encoding="utf-8") as f:
-            json.dump(registry, f, indent=2)
+            with open(SYNC_REGISTRY_PATH, "w", encoding="utf-8") as f:
+                json.dump(registry, f, indent=2)
 
-        return registry
+        return SourceSyncTracker.calculate_freshness(registry)
 
     @staticmethod
     def update_source_sync(source_id: str, new_version: str = None, status: str = "ACTIVE") -> Dict[str, Any]:

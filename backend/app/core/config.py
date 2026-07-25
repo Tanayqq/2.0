@@ -64,6 +64,20 @@ class Settings(BaseSettings):
         }
     }
     
-    model_config = SettingsConfigDict(env_file=".env", extra="ignore")
+    # Target Collection Sizes Configuration
+    TARGET_COLLECTION_SIZES: dict = {
+        "drug_interactions": 500,
+        "disease_guidelines": 250,
+        "primary_literature": 150,
+        "drug_labels_india": 150,
+        "disease_corpus": 150,
+        "openfda_labels": 20000
+    }
+
+    model_config = SettingsConfigDict(
+        env_file=".env",
+        env_file_encoding="utf-8",
+        extra="ignore"
+    )
 
 settings = Settings()
