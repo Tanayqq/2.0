@@ -1,6 +1,6 @@
 # MedRef v5.0 Active Task Status
 
-## 1. Frozen Architecture Subsystems (Zero Code Changes)
+## 1. Core Architecture Subsystems (Frozen Architecture + Active Prompt/Generation Tuning)
 - [x] RAG Core Engine (`ProcessClinicalQueryUseCase`)
 - [x] Automated Intent Router (`IntentRouter`)
 - [x] Hybrid Vector Retrieval (`QdrantClient`)
@@ -12,8 +12,15 @@
 - [x] L1–L8 Benchmark Harness (`clinical_eval_suite.py`)
 - [x] Clinician Feedback & Security (`feedback_engine.py` & `phi_sanitizer.py`)
 
-## 2. Active Focus: Data Quality & Clinical Validation
-- [ ] Priority Knowledge Ingestion (Cardiology, Nephrology, Endocrinology, ICU)
-- [ ] L1–L8 Benchmark Execution & Gap Diagnostics (`error_dashboard.py`)
-- [ ] Phase 4.5 External Clinician Validation (100–200 Cases with Doctors & Pharmacists)
-- [ ] Public Beta Readiness
+## 2. Active Clinical & Generation Improvements Executed
+- [x] P0: Frontend Empty Section Hider (Wrapped Card 4 Co-Administration Risks in `App.tsx`)
+- [x] P0: Medication-State Awareness Filter (Injected Active Medication rules into prompt)
+- [x] P0: Self-Consistency Contradiction Guard (Auto-corrects "Start X" for active meds to "Continue X")
+- [x] P0: Guideline Contamination Filter (Prevents Sepsis/Diabetes leak into AFib/CKD)
+- [x] P0: Clinical Recommendation Prioritization (Ordered Dangers -> DDI -> Renal -> Monitoring)
+- [x] P0: Mechanism Accuracy Guard (Finerenone hyperkalemia & Amiodarone P-gp rules)
+
+## 3. Ongoing Work
+- [ ] Broaden Benchmark Suite across 20 specialties
+- [ ] Optimize LLM Generation Latency (Token Streaming & TTFT < 1.2s)
+- [ ] Initiate Phase 4.5 Multi-Specialty Clinician Panel Review
