@@ -103,6 +103,56 @@ BENCHMARK_CASES: List[Dict[str, Any]] = [
         "expected_collections": ["drug_interactions", "disease_guidelines"],
         "expected_recommendations": ["biotin", "troponin"],
         "tags": ["Biotin", "Troponin", "Immunoassay", "Interference"]
+    },
+
+    # --- PULMONOLOGY & ASTHMA / COPD ---
+    {
+        "case_id": "PULM-001",
+        "category": "Pulmonology",
+        "level": "L4", # Complex Guideline
+        "difficulty": "L4: Complex Guideline",
+        "question": "Severe COPD patient with post-bronchodilator FEV1 42% predicted (GOLD 3 Group E) and blood eosinophils 320 cells/µL. Evaluate triple therapy escalation per GOLD 2025.",
+        "expected_intent": ["CLINICAL_GUIDELINE", "PATIENT_SCENARIO"],
+        "expected_collections": ["disease_guidelines", "disease_corpus"],
+        "expected_recommendations": ["copd", "gold", "fev1"],
+        "tags": ["COPD", "GOLD 2025", "LAMA", "LABA", "ICS"]
+    },
+    {
+        "case_id": "PULM-002",
+        "category": "Pulmonology",
+        "level": "L4", # Complex Guideline
+        "difficulty": "L4: Complex Guideline",
+        "question": "Asthma patient requiring step 3 maintenance therapy per GINA 2025 Track 1. Evaluate preferred reliever and maintenance combination.",
+        "expected_intent": ["CLINICAL_GUIDELINE", "PATIENT_SCENARIO"],
+        "expected_collections": ["disease_guidelines", "disease_corpus"],
+        "expected_recommendations": ["gina", "formoterol", "ics"],
+        "tags": ["Asthma", "GINA 2025", "Formoterol", "ICS"]
+    },
+
+    # --- INFECTIOUS DISEASE & ANTIMICROBIAL STEWARDSHIP ---
+    {
+        "case_id": "INFECT-001",
+        "category": "Infectious Disease",
+        "level": "L4", # Complex Guideline
+        "difficulty": "L4: Complex Guideline",
+        "question": "68-year-old male with Community-Acquired Pneumonia (CURB-65 score 3) admitted to ICU. Evaluate empiric antibiotic regimen per IDSA/ATS guidelines.",
+        "expected_intent": ["CLINICAL_GUIDELINE", "PATIENT_SCENARIO"],
+        "expected_collections": ["disease_guidelines", "disease_corpus"],
+        "expected_recommendations": ["curb", "pneumonia", "idsa"],
+        "tags": ["CAP", "CURB-65", "IDSA", "ICU"]
+    },
+
+    # --- COMPLEX POLYPHARMACY (L7) ---
+    {
+        "case_id": "POLY-001",
+        "category": "Cardiology",
+        "level": "L7", # Polypharmacy
+        "difficulty": "L7: Polypharmacy",
+        "question": "78-year-old diabetic female on Warfarin 5mg, Aceclofenac 100mg, Metformin 1g, Atorvastatin 40mg, and Clarithromycin 500mg. Evaluate bleeding and rhabdomyolysis risks.",
+        "expected_intent": ["INTERACTION_CHECK", "PATIENT_SCENARIO"],
+        "expected_collections": ["drug_interactions", "disease_guidelines"],
+        "expected_recommendations": ["warfarin", "clarithromycin", "rhabdomyolysis"],
+        "tags": ["Polypharmacy", "Warfarin", "CYP3A4", "Bleeding"]
     }
 ]
 
