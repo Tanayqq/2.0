@@ -67,21 +67,194 @@ DISEASE_DATA = [
         "section": "clinical_profile"
     },
     {
-        "title": "ICMR Guidelines for Management of Acute Fever and Tropical Fevers",
-        "disease": "Fever / Dengue / Typhoid / Influenza",
-        "authority": "ICMR",
+        "title": "Chronic Kidney Disease (CKD) Pathophysiology and Clinical Overview",
+        "disease": "Chronic Kidney Disease",
+        "authority": "KDIGO",
         "category": "disease_corpus",
         "content": (
-            "Clinical Protocol for Acute Undifferentiated Fever (ICMR / MoHFW):\n"
-            "Evaluation Protocol:\n"
-            "1. History Taking: Record exact fever duration (days), temperature pattern, patient age, pregnancy status, active medications, cough, rash, and travel history.\n"
-            "2. Diagnostic Considerations:\n"
-            "   - Viral Fever / Influenza: Sudden onset fever, myalgia, sore throat, cough. Symptomatic management with Paracetamol 500mg-650mg QDS.\n"
-            "   - Dengue Fever: High fever, retro-orbital pain, severe arthralgia ('breakbone fever'), thrombocytopenia. AVOID NSAIDs (Ibuprofen, Aspirin) due to severe hemorrhage risk. Maintain oral hydration.\n"
-            "   - Typhoid Fever (Enteric Fever): Step-ladder fever pattern, abdominal pain, bradycardia (Faget's sign). Blood culture & Widal test. Empiric therapy: Azithromycin or Ceftriaxone.\n"
-            "Red Flag Symptoms: Persistent vomiting, petechial rash, bleeding gums, altered sensorium, breathlessness require urgent emergency hospitalization."
+            "Chronic Kidney Disease (CKD) Clinical Overview & KDIGO Staging:\n"
+            "Definition: Abnormalities of kidney structure or function, present for >3 months, with implications for health.\n"
+            "Staging by eGFR (mL/min/1.73m²): G1 (>=90), G2 (60-89), G3a (45-59), G3b (30-44), G4 (15-29 severe), G5 (<15 kidney failure).\n"
+            "Staging by Albuminuria (UACR mg/g): A1 (<30 normal), A2 (30-300 microalbuminuria), A3 (>300 macroalbuminuria).\n"
+            "Clinical Features: Uremic frost, edema, hypertension, anemia of CKD (decreased EPO), hyperkalemia, secondary hyperparathyroidism, metabolic acidosis.\n"
+            "GDMT Protections: RAS inhibitors (ACEi/ARB) for albuminuric CKD, SGLT2 inhibitors (Empagliflozin, Dapagliflozin) down to eGFR 20, nonsteroidal MRA (Finerenone) in diabetic CKD."
         ),
-        "section": "clinical_guideline"
+        "section": "clinical_profile"
+    },
+    {
+        "title": "Acute Kidney Injury (AKI) KDIGO Staging and Clinical Overview",
+        "disease": "Acute Kidney Injury",
+        "authority": "KDIGO",
+        "category": "disease_corpus",
+        "content": (
+            "Acute Kidney Injury (AKI) Clinical Overview & KDIGO Definition:\n"
+            "Definition: Increase in SCr by >=0.3 mg/dL within 48h, OR increase in SCr to >=1.5 times baseline within 7 days, OR urine volume <0.5 mL/kg/h for 6h.\n"
+            "KDIGO AKI Staging:\n"
+            "  - Stage 1: SCr 1.5-1.9x baseline OR SCr increase >=0.3 mg/dL.\n"
+            "  - Stage 2: SCr 2.0-2.9x baseline.\n"
+            "  - Stage 3: SCr 3.0x baseline OR SCr >=4.0 mg/dL OR initiation of RRT.\n"
+            "Etiology Classification:\n"
+            "  - Prerenal: Renal hypoperfusion (dehydration, sepsis, NSAIDs, ACEi).\n"
+            "  - Intrinsic: Acute Tubular Necrosis (ATN) via aminoglycosides, vancomycin, contrast media, ischemia; AIN via antibiotics, proton pump inhibitors.\n"
+            "  - Postrenal: Urinary tract obstruction (BPH, nephrolithiasis).\n"
+            "Management: Discontinue nephrotoxic agents, adjust renal dosing, optimize fluid status, monitor serum potassium."
+        ),
+        "section": "clinical_profile"
+    },
+    {
+        "title": "Heart Failure (HFrEF and HFpEF) Pathophysiology and Clinical Overview",
+        "disease": "Heart Failure",
+        "authority": "ACC/AHA",
+        "category": "disease_corpus",
+        "content": (
+            "Heart Failure (HF) Clinical Overview & ACC/AHA Classification:\n"
+            "Classification by Ejection Fraction:\n"
+            "  - HFrEF (HF with Reduced EF): LVEF <= 40%. Requires 4 Pillars of GDMT: ARNI (Entresto) or ACEi/ARB, Beta-Blocker (Carvedilol, Metoprolol Succinate, Bisoprolol), MRA (Spironolactone, Eplerenone), SGLT2i (Dapagliflozin, Empagliflozin).\n"
+            "  - HFmrEF (HF with Mildly Reduced EF): LVEF 41-49%. SGLT2i recommended; ARNI, MRA, Beta-blocker reasonable.\n"
+            "  - HFpEF (HF with Preserved EF): LVEF >= 50%. SGLT2i (Empagliflozin/Dapagliflozin) Class 1 recommendation to reduce HF hospitalizations.\n"
+            "Clinical Presentation: Dyspnea on exertion, orthopnea, paroxysmal nocturnal dyspnea (PND), elevated JVP, bilateral pedal edema, S3 gallop.\n"
+            "Safety Washout: 36-hour washout required when switching from ACEi to ARNI (Sacubitril/Valsartan) due to angioedema risk."
+        ),
+        "section": "clinical_profile"
+    },
+    {
+        "title": "COPD Pathophysiology and GOLD Staging Overview",
+        "disease": "Chronic Obstructive Pulmonary Disease",
+        "authority": "GOLD",
+        "category": "disease_corpus",
+        "content": (
+            "COPD Pathophysiology & GOLD 2025 Clinical Overview:\n"
+            "Definition: Heterogeneous lung condition characterized by chronic respiratory symptoms (dyspnea, cough, sputum production) due to abnormalities of airways (bronchitis) and/or alveoli (emphysema).\n"
+            "Diagnosis: Post-bronchodilator FEV1/FVC < 0.70 mandatory.\n"
+            "GOLD Spirometric Grading (based on post-bronchodilator FEV1 % predicted):\n"
+            "  - GOLD 1 (Mild): FEV1 >= 80%\n"
+            "  - GOLD 2 (Moderate): 50% <= FEV1 < 80%\n"
+            "  - GOLD 3 (Severe): 30% <= FEV1 < 50%\n"
+            "  - GOLD 4 (Very Severe): FEV1 < 30%\n"
+            "GOLD ABE Group Classification:\n"
+            "  - Group A: 0-1 moderate exacerbations, no hospitalizations, CAT < 10 -> Initial therapy: Bronchodilator (LAMA or LABA).\n"
+            "  - Group B: 0-1 moderate exacerbations, CAT >= 10 -> Initial therapy: LABA + LAMA combination.\n"
+            "  - Group E: >=2 moderate exacerbations OR >=1 leading to hospitalization -> Initial therapy: LABA + LAMA; add ICS if blood eosinophils >= 300 cells/µL."
+        ),
+        "section": "clinical_profile"
+    },
+    {
+        "title": "Asthma Pathophysiology and GINA Severity Assessment",
+        "disease": "Asthma",
+        "authority": "GINA",
+        "category": "disease_corpus",
+        "content": (
+            "Asthma Pathophysiology & GINA 2025 Clinical Overview:\n"
+            "Definition: Chronic inflammatory disease of airways characterized by variable respiratory symptoms (wheeze, shortness of breath, chest tightness, cough) and variable expiratory airflow limitation.\n"
+            "GINA Track 1 (Preferred Strategy): Low-dose ICS-formoterol as needed for symptom relief across all steps.\n"
+            "  - Step 1-2: As-needed low-dose ICS-formoterol.\n"
+            "  - Step 3: Low-dose maintenance ICS-formoterol + as-needed low-dose ICS-formoterol.\n"
+            "  - Step 4: Medium-dose maintenance ICS-formoterol + as-needed low-dose ICS-formoterol.\n"
+            "  - Step 5: High-dose maintenance ICS-formoterol, evaluate phenotype (eosinophilic vs allergic) for biologic therapy (Omalizumab, Mepolizumab, Dupilumab).\n"
+            "GINA Track 2 (Alternative): SABA reliever (Salbutamol) MUST be accompanied by regular daily ICS to prevent fatal exacerbations."
+        ),
+        "section": "clinical_profile"
+    },
+    {
+        "title": "Sepsis and Septic Shock Pathophysiology & Surviving Sepsis 2024 Protocol",
+        "disease": "Sepsis and Septic Shock",
+        "authority": "Surviving Sepsis Campaign",
+        "category": "disease_corpus",
+        "content": (
+            "Sepsis & Septic Shock Clinical Overview (Sepsis-3 / Surviving Sepsis Campaign 2024):\n"
+            "Definition of Sepsis: Life-threatening organ dysfunction caused by a dysregulated host response to infection (SOFA score increase >= 2 points).\n"
+            "Definition of Septic Shock: Subset of sepsis with persisting hypotension requiring vasopressors to maintain MAP >= 65 mmHg AND serum lactate > 2 mmol/L despite adequate fluid resuscitation.\n"
+            "Hour-1 Bundle Interventions:\n"
+            "  1. Measure lactate level; remeasure if initial lactate > 2 mmol/L.\n"
+            "  2. Obtain blood cultures prior to administration of antibiotics.\n"
+            "  3. Administer broad-spectrum antimicrobials (e.g., Vancomycin + Zosyn / Cefepime).\n"
+            "  4. Rapidly administer 30 mL/kg crystalloid for hypotension or lactate >= 4 mmol/L.\n"
+            "  5. Apply vasopressors if MAP < 65 mmHg during or after fluid resuscitation (First-line: Norepinephrine; Second-line: Vasopressin 0.03 units/min).\n"
+            "Nephrotoxicity Warning: Vancomycin + Piperacillin/Tazobactam (Zosyn) combination significantly increases AKI incidence compared to Vancomycin + Cefepime."
+        ),
+        "section": "clinical_profile"
+    },
+    {
+        "title": "Atrial Fibrillation (AFib) Pathophysiology & Stroke Prevention Protocol",
+        "disease": "Atrial Fibrillation",
+        "authority": "ESC / ACC",
+        "category": "disease_corpus",
+        "content": (
+            "Atrial Fibrillation (AFib) Clinical Overview & Stroke Prevention (ESC 2024 / ACC 2024):\n"
+            "Definition: Supraventricular tachyarrhythmia with uncoordinated atrial electrical activation and ineffective atrial contraction.\n"
+            "CHA2DS2-VASc Risk Score for Stroke:\n"
+            "  - C: CHF (1 pt)\n"
+            "  - H: Hypertension (1 pt)\n"
+            "  - A2: Age >= 75 (2 pts)\n"
+            "  - D: Diabetes (1 pt)\n"
+            "  - S2: Stroke/TIA/Thromboembolism history (2 pts)\n"
+            "  - V: Vascular disease (prior MI, PAD, aortic plaque) (1 pt)\n"
+            "  - A: Age 65-74 (1 pt)\n"
+            "  - Sc: Sex category (Female) (1 pt)\n"
+            "Anticoagulation Thresholds: DOAC (Apixaban, Rivaroxaban, Dabigatran, Edoxaban) recommended if score >= 2 in males or >= 3 in females.\n"
+            "P-glycoprotein Drug Interactions: Amiodarone inhibits P-gp, increasing Digoxin levels by 70-100% and DOAC concentrations. Reduce Digoxin dose by 50% when co-prescribed with Amiodarone."
+        ),
+        "section": "clinical_profile"
+    },
+    {
+        "title": "Acute Coronary Syndrome (STEMI and NSTEMI) Clinical Overview",
+        "disease": "Acute Coronary Syndrome",
+        "authority": "ACC/AHA",
+        "category": "disease_corpus",
+        "content": (
+            "Acute Coronary Syndrome (ACS) Clinical Overview & Emergency Management:\n"
+            "Spectrum: Unstable Angina (UA), Non-ST-Segment Elevation Myocardial Infarction (NSTEMI), ST-Segment Elevation Myocardial Infarction (STEMI).\n"
+            "Diagnostic Criteria: Ischemic chest pain radiating to jaw/left arm, ECG ST elevations or T-wave inversions, elevated High-Sensitivity Cardiac Troponin (hs-cTn).\n"
+            "Emergency Pharmacotherapy (MONA-BASH):\n"
+            "  - Morphine (if severe pain unresolved by nitroglycerin)\n"
+            "  - Oxygen (if SpO2 < 90%)\n"
+            "  - Nitroglycerin sublingual (contraindicated if SBP < 90 or PDE5 inhibitor use within 24-48h)\n"
+            "  - Aspirin 162-325mg chewed immediately\n"
+            "  - P2Y12 Inhibitor (Ticagrelor 180mg or Prasugrel 60mg or Clopidogrel 600mg loading dose)\n"
+            "  - Anticoagulation (Unfractionated Heparin or Enoxaparin)\n"
+            "  - High-Intensity Statin (Atorvastatin 80mg or Rosuvastatin 40mg)\n"
+            "Biotin Warning: High-dose Biotin (>5-10 mg/day) interferes with streptavidin-biotin troponin assays, causing FALSELY LOW troponin readings and delayed MI diagnosis."
+        ),
+        "section": "clinical_profile"
+    },
+    {
+        "title": "Acute Ischemic Stroke and TIA Clinical Overview & Thrombolysis Protocol",
+        "disease": "Stroke",
+        "authority": "AHA/ASA",
+        "category": "disease_corpus",
+        "content": (
+            "Acute Ischemic Stroke (AIS) Clinical Overview & Thrombolytic Management (AHA/ASA):\n"
+            "Definition: Sudden neurological deficit caused by focal cerebral ischemia resulting in permanent tissue infarction.\n"
+            "FAST Evaluation: Facial droop, Arm drift, Speech difficulty, Time to call emergency services.\n"
+            "Reperfusion Windows:\n"
+            "  - Intravenous Thrombolysis (Alteplase / Tenecteplase): Recommended within 4.5 hours of symptom onset in eligible patients without bleeding contraindications.\n"
+            "  - Endovascular Thrombectomy (EVT): Recommended within 6-24 hours for large vessel occlusion (LVO) in anterior circulation.\n"
+            "Blood Pressure Management: SBP must be < 185 mmHg and DBP < 110 mmHg prior to IV thrombolytic administration (use Labetalol or Nicardipine IV).\n"
+            "Secondary Prevention: Antiplatelet therapy (Aspirin or Clopidogrel), high-intensity statin, blood pressure control, DOAC if cardioembolic (AFib)."
+        ),
+        "section": "clinical_profile"
+    },
+    {
+        "title": "Community-Acquired Pneumonia (CAP) Clinical Overview & CURB-65 Protocol",
+        "disease": "Community-Acquired Pneumonia",
+        "authority": "IDSA / ATS",
+        "category": "disease_corpus",
+        "content": (
+            "Community-Acquired Pneumonia (CAP) Clinical Overview (IDSA/ATS Guidelines):\n"
+            "Definition: Acute infection of lung parenchyma acquired outside of hospital settings.\n"
+            "Common Pathogens: Streptococcus pneumoniae, Mycoplasma pneumoniae, Chlamydia pneumoniae, Haemophilus influenzae, Respiratory viruses.\n"
+            "CURB-65 Risk Stratification (1 point each):\n"
+            "  - C: Confusion\n"
+            "  - U: BUN > 19 mg/dL (7 mmol/L)\n"
+            "  - R: Respiratory rate >= 30 breaths/min\n"
+            "  - B: SBP < 90 mmHg or DBP <= 60 mmHg\n"
+            "  - 65: Age >= 65 years\n"
+            "Site of Care Decision:\n"
+            "  - Score 0-1: Outpatient management (Amoxicillin 1g TID OR Doxycycline 100mg BID OR Macrolide if local resistance < 25%).\n"
+            "  - Score 2: Inpatient ward admission (Beta-lactam + Macrolide OR Respiratory Fluoroquinolone).\n"
+            "  - Score 3-5: ICU admission required (Beta-lactam + Macrolide OR Beta-lactam + Respiratory Fluoroquinolone; add MRSA/Pseudomonas coverage if risk factors present)."
+        ),
+        "section": "clinical_profile"
     },
     {
         "title": "GINA 2025 Global Strategy for Asthma Management",
