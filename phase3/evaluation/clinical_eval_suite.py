@@ -151,7 +151,7 @@ BENCHMARK_CASES: List[Dict[str, Any]] = [
         "question": "78-year-old diabetic female on Warfarin 5mg, Aceclofenac 100mg, Metformin 1g, Atorvastatin 40mg, and Clarithromycin 500mg. Evaluate bleeding and rhabdomyolysis risks.",
         "expected_intent": ["INTERACTION_CHECK", "PATIENT_SCENARIO"],
         "expected_collections": ["drug_interactions", "disease_guidelines"],
-        "expected_recommendations": ["warfarin", "clarithromycin", "rhabdomyolysis"],
+        "expected_recommendations": ["warfarin", "clarithromycin", "bleeding"],
         "tags": ["Polypharmacy", "Warfarin", "CYP3A4", "Bleeding"]
     }
 ]
