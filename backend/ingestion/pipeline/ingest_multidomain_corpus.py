@@ -442,6 +442,23 @@ INTERACTION_DATA = [
         "section": "drug_interactions"
     },
     {
+        "title": "Atorvastatin, Clarithromycin, Warfarin, and Aceclofenac CYP3A4 Rhabdomyolysis & Bleeding Risk Cascade",
+        "drugs": ["Atorvastatin", "Clarithromycin", "Warfarin", "Aceclofenac", "Metformin"],
+        "authority": "FDA Black Box Warning / ASHP",
+        "category": "drug_interactions",
+        "content": (
+            "DRUG INTERACTION ALERT: Atorvastatin + Clarithromycin + Warfarin + Aceclofenac.\n"
+            "Severity: CRITICAL / HIGH RHABDOMYOLYSIS & FATAL HEMORRHAGE RISK.\n"
+            "1. Atorvastatin + Clarithromycin Rhabdomyolysis Risk:\n"
+            "   - Mechanism: Clarithromycin is a potent CYP3A4 inhibitor that blocks hepatic metabolism of Atorvastatin, resulting in a 4-5 fold increase in plasma Atorvastatin AUC and peak concentration.\n"
+            "   - Toxicity: Severe rhabdomyolysis, acute myopathy, myoglobinuria, and acute renal failure. Suspend Atorvastatin during Clarithromycin antibiotic therapy or switch to Azithromycin.\n"
+            "2. Warfarin + Aceclofenac + Clarithromycin Bleeding Risk:\n"
+            "   - Mechanism: Aceclofenac (NSAID) inhibits platelet aggregation and causes gastric mucosal erosions. Clarithromycin inhibits Warfarin CYP2C9 metabolism. Combined administration causes major gastrointestinal hemorrhage and acute elevation of INR.\n"
+            "   - Management: Avoid Aceclofenac; use Paracetamol for analgesia. Monitor INR closely and temporarily hold or reduce Warfarin during antibiotic therapy."
+        ),
+        "section": "drug_interactions"
+    },
+    {
         "title": "High-Dose Biotin (Vitamin B7) Immunoassay Interference with Cardiac Troponin I/T Labs",
         "drugs": ["Biotin", "Troponin I", "Troponin T", "Streptavidin"],
         "authority": "FDA Safety Communication / NEJM",

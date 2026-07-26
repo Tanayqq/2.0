@@ -1052,7 +1052,8 @@ CRITICAL RULES:
         answer_text: str, 
         citations: List[Citation], 
         citation_map: CitationMap,
-        drug_aliases_map: Dict[str, List[str]] = None
+        drug_aliases_map: Dict[str, List[str]] = None,
+        question_text: str = ""
     ) -> Tuple[str, List[Citation], Dict[str, str], List[str]]:
         import re as regex
         
@@ -1147,6 +1148,8 @@ CRITICAL RULES:
                 line = regex.sub(pat, '', line, flags=regex.IGNORECASE)
             
             cleaned_lines.append(line)
+        answer_text = '\n'.join(cleaned_lines)
+
         # 4.5 Self-Consistency & Contradiction Guard
         # Correct "Finerenone decreases potassium" to "Finerenone increases serum potassium"
         answer_text = regex.sub(
@@ -1157,9 +1160,9 @@ CRITICAL RULES:
         )
         
         # Correct "Start [Drug]" to "Continue [Drug]" if patient is already taking it
-        active_med_indicators = ["already taking", "currently on", "taking"]
+        active_med_indicators = ["already taking", "currently on", "taking", "on "]
         for med in ["empagliflozin", "dapagliflozin", "metformin", "sitagliptin", "finerenone", "spironolactone"]:
-            if any(ind in question.lower() for ind in active_med_indicators) and med in question.lower():
+            if question_text and any(ind in question_text.lower() for ind in active_med_indicators) and med in question_text.lower():
                 answer_text = regex.sub(
                     rf'\b(?:start|initiate|consider initiating)\s+{med}\b',
                     f"continue {med} (monitor eGFR and potassium)",
@@ -1789,7 +1792,7 @@ Identity Profile (Grounded FDA Label Metadata):
             # Post-process & validate
             citations_copy = [c.model_copy() for c in citations]
             processed_answer, processed_citations, remapping, validation_errors = self._post_process_and_validate(
-                answer_text, citations_copy, citation_map, drug_aliases_map=drug_aliases_map
+                answer_text, citations_copy, citation_map, drug_aliases_map=drug_aliases_map, question_text=query.question
             )
             
             if coverage >= 0.95 or attempt == max_attempts:

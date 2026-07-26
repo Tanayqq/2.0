@@ -2,47 +2,201 @@
   {
     "case_id": "CARD-001",
     "category": "Cardiology",
-    "difficulty": "Hard",
+    "difficulty": "L4: Complex Guideline",
     "question": "65-year-old male with HFrEF (LVEF 28%) and Hypertension on Enalapril 10mg BID is switching to Entresto (Sacubitril/Valsartan). Evaluate mandatory ACEi washout period per ACC/AHA 2024.",
-    "expected_intent": "PATIENT_SCENARIO",
-    "actual_intent": "PATIENT_SCENARIO",
-    "expected_recommendation": null,
-    "failure_reasons": [
-      "Missing required recommendation text in answer"
+    "expected_intent": [
+      "PATIENT_SCENARIO",
+      "INTERACTION_CHECK"
     ],
-    "actual_answer": "### Clinical Recommendation & Action Plan\n\nGiven the patient's HFrEF (LVEF 28%) and hypertension on Enalapril 10mg BID, switching to Entresto (Sacubitril/Valsartan) requires a strict 36-hour washout period after the last dose of Enalapril [6, 7]. This is due to the risk of life-threatening angioedema caused by dual inhibition of ACE and neprilysin [6, 7].[1][2] Therefore, the clinical recommendation is to:\n\n- Discontinue Enalapril 10mg BID.[1]\n- Wait a full 36 hours before administering the star",
+    "actual_intent": null,
+    "failure_type": "HTTP_ERROR",
+    "failure_reasons": [
+      "HTTP 500 Error"
+    ],
+    "actual_answer": "",
     "grounding_status": null,
-    "retrieved_chunk_count": 5
+    "retrieved_chunk_count": 0
   },
   {
     "case_id": "CARD-002",
     "category": "Cardiology",
-    "difficulty": "Medium",
+    "difficulty": "L2: Drug Interaction",
     "question": "72yo AFib patient on Amiodarone 200mg and Digoxin 0.25mg presents with nausea and visual halos. Evaluate P-gp interaction and dose adjustment.",
-    "expected_intent": "INTERACTION_CHECK",
-    "actual_intent": "PATIENT_SCENARIO",
-    "expected_recommendation": null,
-    "failure_reasons": [
-      "Intent mismatch: Expected INTERACTION_CHECK, got PATIENT_SCENARIO",
-      "Missing required recommendation text in answer"
+    "expected_intent": [
+      "INTERACTION_CHECK",
+      "PATIENT_SCENARIO"
     ],
-    "actual_answer": "### Clinical Recommendation & Action Plan\n\nGiven the patient's presentation with nausea and visual halos, a critical P-gp interaction is suspected between Amiodarone, Digoxin, and Clarithromycin. The clinical recommendation is to **IMMEDIATELY REDUCE DIGOXIN DOSE BY 50%**[1] and **AVOID CLARITHROMYCIN**[1]. Instead, use Azithromycin or a non-macrolide alternative to minimize the risk of Digoxin toxicity and Torsades de Pointes (TdP)[1].\n\n### Pharmacological Mechanism & Risk Cascade\n\nThe underlyi",
+    "actual_intent": null,
+    "failure_type": "HTTP_ERROR",
+    "failure_reasons": [
+      "HTTP 500 Error"
+    ],
+    "actual_answer": "",
     "grounding_status": null,
-    "retrieved_chunk_count": 2
+    "retrieved_chunk_count": 0
   },
   {
     "case_id": "NEPH-001",
     "category": "Nephrology",
-    "difficulty": "Hard",
+    "difficulty": "L5: Multi-morbidity",
     "question": "71yo female with DKD (eGFR 26 mL/min/1.73m\u00b2) on Metformin 500mg, Empagliflozin 10mg, Finerenone 10mg, and Spironolactone 25mg has serum K+ 5.4 mEq/L. Evaluate Finerenone hold rule and SGLT2i continuation per KDIGO 2024.",
-    "expected_intent": "PATIENT_SCENARIO",
+    "expected_intent": [
+      "PATIENT_SCENARIO",
+      "CLINICAL_GUIDELINE"
+    ],
+    "actual_intent": null,
+    "failure_type": "HTTP_ERROR",
+    "failure_reasons": [
+      "HTTP 500 Error"
+    ],
+    "actual_answer": "",
+    "grounding_status": null,
+    "retrieved_chunk_count": 0
+  },
+  {
+    "case_id": "NEPH-002",
+    "category": "Nephrology",
+    "difficulty": "L3: Renal Dosing",
+    "question": "Metformin hydrochloride renal discontinuation threshold in severe CKD eGFR < 30 mL/min/1.73m\u00b2 per ADA 2026.",
+    "expected_intent": [
+      "CLINICAL_GUIDELINE",
+      "DRUG_CHAT",
+      "PATIENT_SCENARIO"
+    ],
+    "actual_intent": null,
+    "failure_type": "HTTP_ERROR",
+    "failure_reasons": [
+      "HTTP 500 Error"
+    ],
+    "actual_answer": "",
+    "grounding_status": null,
+    "retrieved_chunk_count": 0
+  },
+  {
+    "case_id": "ENDO-001",
+    "category": "Endocrinology",
+    "difficulty": "L3: Renal Dosing",
+    "question": "Sitagliptin 100mg renal dose reduction rules in patients with eGFR < 30 mL/min/1.73m\u00b2 per ADA 2026 guidelines.",
+    "expected_intent": [
+      "CLINICAL_GUIDELINE",
+      "DRUG_CHAT",
+      "PATIENT_SCENARIO"
+    ],
+    "actual_intent": null,
+    "failure_type": "HTTP_ERROR",
+    "failure_reasons": [
+      "HTTP 500 Error"
+    ],
+    "actual_answer": "",
+    "grounding_status": null,
+    "retrieved_chunk_count": 0
+  },
+  {
+    "case_id": "EMERG-001",
+    "category": "Emergency",
+    "difficulty": "L6: ICU",
+    "question": "Septic shock patient on Norepinephrine, Vancomycin, Zosyn, and Furosemide with Creatinine 0.9 to 2.4. Evaluate AKI synergy and Surviving Sepsis 2024 AUC/MIC target.",
+    "expected_intent": [
+      "PATIENT_SCENARIO",
+      "INTERACTION_CHECK"
+    ],
+    "actual_intent": null,
+    "failure_type": "HTTP_ERROR",
+    "failure_reasons": [
+      "HTTP 500 Error"
+    ],
+    "actual_answer": "",
+    "grounding_status": null,
+    "retrieved_chunk_count": 0
+  },
+  {
+    "case_id": "RHEUM-001",
+    "category": "Rheumatology",
+    "difficulty": "L8: Rare Edge Cases",
+    "question": "Patient on Digoxin and Biotin 10mg daily admits for Troponin lab test. Evaluate Biotin immunoassay interference risk on lab readings.",
+    "expected_intent": [
+      "INTERACTION_CHECK",
+      "PATIENT_SCENARIO"
+    ],
+    "actual_intent": null,
+    "failure_type": "HTTP_ERROR",
+    "failure_reasons": [
+      "HTTP 500 Error"
+    ],
+    "actual_answer": "",
+    "grounding_status": null,
+    "retrieved_chunk_count": 0
+  },
+  {
+    "case_id": "PULM-001",
+    "category": "Pulmonology",
+    "difficulty": "L4: Complex Guideline",
+    "question": "Severe COPD patient with post-bronchodilator FEV1 42% predicted (GOLD 3 Group E) and blood eosinophils 320 cells/\u00b5L. Evaluate triple therapy escalation per GOLD 2025.",
+    "expected_intent": [
+      "CLINICAL_GUIDELINE",
+      "PATIENT_SCENARIO"
+    ],
+    "actual_intent": null,
+    "failure_type": "HTTP_ERROR",
+    "failure_reasons": [
+      "HTTP 500 Error"
+    ],
+    "actual_answer": "",
+    "grounding_status": null,
+    "retrieved_chunk_count": 0
+  },
+  {
+    "case_id": "PULM-002",
+    "category": "Pulmonology",
+    "difficulty": "L4: Complex Guideline",
+    "question": "Asthma patient requiring step 3 maintenance therapy per GINA 2025 Track 1. Evaluate preferred reliever and maintenance combination.",
+    "expected_intent": [
+      "CLINICAL_GUIDELINE",
+      "PATIENT_SCENARIO"
+    ],
+    "actual_intent": null,
+    "failure_type": "HTTP_ERROR",
+    "failure_reasons": [
+      "HTTP 500 Error"
+    ],
+    "actual_answer": "",
+    "grounding_status": null,
+    "retrieved_chunk_count": 0
+  },
+  {
+    "case_id": "INFECT-001",
+    "category": "Infectious Disease",
+    "difficulty": "L4: Complex Guideline",
+    "question": "68-year-old male with Community-Acquired Pneumonia (CURB-65 score 3) admitted to ICU. Evaluate empiric antibiotic regimen per IDSA/ATS guidelines.",
+    "expected_intent": [
+      "CLINICAL_GUIDELINE",
+      "PATIENT_SCENARIO"
+    ],
+    "actual_intent": null,
+    "failure_type": "HTTP_ERROR",
+    "failure_reasons": [
+      "HTTP 500 Error"
+    ],
+    "actual_answer": "",
+    "grounding_status": null,
+    "retrieved_chunk_count": 0
+  },
+  {
+    "case_id": "POLY-001",
+    "category": "Cardiology",
+    "difficulty": "L7: Polypharmacy",
+    "question": "78-year-old diabetic female on Warfarin 5mg, Aceclofenac 100mg, Metformin 1g, Atorvastatin 40mg, and Clarithromycin 500mg. Evaluate bleeding and rhabdomyolysis risks.",
+    "expected_intent": [
+      "INTERACTION_CHECK",
+      "PATIENT_SCENARIO"
+    ],
     "actual_intent": "PATIENT_SCENARIO",
-    "expected_recommendation": null,
+    "failure_type": "POOR_RETRIEVAL",
     "failure_reasons": [
       "Missing required recommendation text in answer"
     ],
-    "actual_answer": "### Clinical Recommendation & Action Plan\n\nBased on the provided documents, the patient's serum potassium level is 5.4 mEq/L, which is above the recommended baseline threshold for initiating Finerenone[1]. According to the KDIGO 2024 and ADA 2026 guidelines, Finerenone is contraindicated in patients with a baseline potassium level >5.0 mEq/L[1]. The patient is currently on Empagliflozin 10mg, which is a recommended SGLT2 inhibitor for patients with CKD Stage 3b (eGFR 38 mL/min/1.73m\u00b2) and severe",
+    "actual_answer": "### Clinical Recommendation & Action Plan\n\n**Immediate Danger: Contraindication & Black Box Warning**\n\nGiven the patient's active medications, we have a critical interaction between Warfarin and Aceclofenac. The FDA Black Box Warning and ASHP[1] guidelines indicate that the combination of Warfarin and Aceclofenac increases the risk of major gastrointestinal hemorrhage and acute elevation of INR. **Drug-Drug Interaction & Washout Requirement**\n\nThe patient is also taking Clarithromycin, which inh",
     "grounding_status": null,
-    "retrieved_chunk_count": 3
+    "retrieved_chunk_count": 6
   }
 ]
