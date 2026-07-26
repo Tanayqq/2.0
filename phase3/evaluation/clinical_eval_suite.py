@@ -153,6 +153,17 @@ BENCHMARK_CASES: List[Dict[str, Any]] = [
         "expected_collections": ["drug_interactions", "disease_guidelines"],
         "expected_recommendations": ["warfarin", "clarithromycin", "bleeding"],
         "tags": ["Polypharmacy", "Warfarin", "CYP3A4", "Bleeding"]
+    },
+    {
+        "case_id": "POLY-002",
+        "category": "Cardiology",
+        "level": "L7", # Polypharmacy
+        "difficulty": "L7: Polypharmacy",
+        "question": "72-year-old male on Warfarin, Clarithromycin, Atorvastatin, Amiodarone, Digoxin, Spironolactone, Metformin, and Empagliflozin with eGFR 24 mL/min and K+ 5.8 mEq/L. Evaluate every medication individually. Do not omit any medication. Produce exactly one action (Continue, Hold, Stop, or Adjust Dose) for each drug.",
+        "expected_intent": ["INTERACTION_CHECK", "PATIENT_SCENARIO"],
+        "expected_collections": ["drug_interactions", "disease_guidelines"],
+        "expected_recommendations": ["digoxin", "amiodarone", "spironolactone", "metformin", "warfarin"],
+        "tags": ["Polypharmacy", "Digoxin", "Amiodarone", "Spironolactone", "Exhaustive Evaluation"]
     }
 ]
 
