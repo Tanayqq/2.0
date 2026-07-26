@@ -781,23 +781,41 @@ Question: {question}
 
 You are a board-certified clinical AI assistant and evidence extraction engine. Provide a structured clinical assessment based strictly on the provided documents.
 
-CRITICAL INSTRUCTIONS:
-1. MANDATORY CITATIONS: Append citation numbers in square brackets [1], [2] after EVERY factual claim or clinical recommendation.
-2. ADAPTIVE SCENARIO STRUCTURE: Organize your response under these clear headers (only include sections supported by the context; DO NOT write 'Not found in available sources'):
+CRITICAL CLINICAL REASONING RULES:
+
+1. MEDICATION-STATE AWARENESS (CRITICAL):
+   Inspect the patient's active medications in the Question carefully.
+   - If the patient is ALREADY TAKING a medication (e.g. Empagliflozin, Metformin, Digoxin, Finerenone), DO NOT say 'Start', 'Initiate', or 'Consider initiating' that drug!
+   - Instead, explicitly state whether to CONTINUE, HOLD, ADJUST DOSE, or DISCONTINUE based on eGFR, serum potassium, or drug interactions.
+   - Differentiate clearly: ALREADY TAKING vs. SHOULD INITIATE vs. SHOULD HOLD/DISCONTINUE vs. CONTRAINDICATED.
+
+2. GUIDELINE CONTAMINATION FILTER:
+   Use ONLY guidelines relevant to the clinical question. Do NOT cite or inject unrelated guidelines (e.g., do NOT mention Surviving Sepsis for AFib/CKD queries, or Diabetes guidelines for non-diabetic queries).
+
+3. CLINICAL PRIORITIZATION ORDER:
+   Organize recommendations in strict clinician priority order:
+   - 🚨 1. Immediate Dangers, Black Box Warnings & Contraindications
+   - 💊 2. Drug-Drug Interactions & Washout Requirements
+   - 🧪 3. Renal Dosing, eGFR Cut-offs & Hold Rules
+   - 📋 4. Required Monitoring (Labs, Electrolytes, Serum Levels)
+
+4. MANDATORY CITATIONS:
+   Append citation numbers in square brackets [1], [2] after EVERY factual claim or clinical recommendation.
+
+5. ADAPTIVE STRUCTURE (OMIT EMPTY SECTIONS):
+   Organize response under these headers (only include supported sections; DO NOT write 'Not found in available sources'):
 
 ### Clinical Recommendation & Action Plan
-- Provide a direct, unambiguous answer to the prompt (e.g. mandatory 36-hour washout, contraindications, recommended dose adjustments, or GDMT pillars).
+- Provide a direct, prioritized answer respecting active medication state (Continue vs Hold vs Discontinue vs Initiate).
 
 ### Pharmacological Mechanism & Risk Cascade
-- Explain the underlying biochemical mechanism (e.g. dual P-gp efflux blockade, ACE+neprilysin bradykinin surge, NSAID afferent vasoconstriction, immunoassay interference).
+- Explain the underlying biochemical mechanism accurately from the evidence (e.g. Finerenone increases serum potassium; Amiodarone inhibits P-gp increasing Digoxin levels).
 
 ### Guideline-Directed Management (GDMT) & Evidence
-- Summarize guidelines (KDIGO 2024, ACC/AHA 2024, ESC 2024, ADA 2026, Surviving Sepsis 2024) and trial evidence cited in the context.
+- Summarize relevant guidelines (KDIGO 2024, ACC/AHA 2024, ESC 2024, ADA 2026) cited in the context.
 
 ### Required Monitoring & Safety Protocols
-- Detail mandatory lab checks, serum drug levels, baseline parameters, and safety monitoring rules.
-
-3. STRICT GROUNDING: Every claim MUST be supported by the provided context. Omit any section that lacks supporting evidence instead of printing empty placeholders.
+- Detail mandatory lab checks, serum potassium/creatinine monitoring, and safety protocols.
 """
 
         if is_disease_mode:
@@ -1129,7 +1147,25 @@ CRITICAL RULES:
                 line = regex.sub(pat, '', line, flags=regex.IGNORECASE)
             
             cleaned_lines.append(line)
-        answer_text = '\n'.join(cleaned_lines)
+        # 4.5 Self-Consistency & Contradiction Guard
+        # Correct "Finerenone decreases potassium" to "Finerenone increases serum potassium"
+        answer_text = regex.sub(
+            r'finerenone\s+(?:decreases|lowers|reduces)\s+(?:serum\s+)?potassium',
+            'Finerenone increases serum potassium (hyperkalemia risk)',
+            answer_text,
+            flags=regex.IGNORECASE
+        )
+        
+        # Correct "Start [Drug]" to "Continue [Drug]" if patient is already taking it
+        active_med_indicators = ["already taking", "currently on", "taking"]
+        for med in ["empagliflozin", "dapagliflozin", "metformin", "sitagliptin", "finerenone", "spironolactone"]:
+            if any(ind in question.lower() for ind in active_med_indicators) and med in question.lower():
+                answer_text = regex.sub(
+                    rf'\b(?:start|initiate|consider initiating)\s+{med}\b',
+                    f"continue {med} (monitor eGFR and potassium)",
+                    answer_text,
+                    flags=regex.IGNORECASE
+                )
         
         # 5. Split answer into sentences for grounding & auto-citation injection, preserving whitespace and formatting
         boundary_pattern_re = regex.compile(r'[.!?](?:\[[0-9]+\]|\[Unsupported Citation Removed\])?(?=\s|$)')

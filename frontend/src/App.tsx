@@ -1335,24 +1335,26 @@ export default function App() {
                     )}
 
                     {/* Card 4: Co-Administration Risks */}
-                    <Card className="medref-card medref-card-gold border-yellow-500/10">
-                      <CardContent className="p-5 space-y-3">
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-2">
-                            <AlertTriangle className="h-4.5 w-4.5 text-yellow-500" />
-                            <span className="text-xs font-bold text-yellow-500 uppercase tracking-widest font-mono-dash">
-                              Co-Administration Risks
-                            </span>
+                    {activeDrug.sections.interactions.toLowerCase() !== 'not found in available sources.' && (
+                      <Card className="medref-card medref-card-gold border-yellow-500/10">
+                        <CardContent className="p-5 space-y-3">
+                          <div className="flex items-center justify-between">
+                            <div className="flex items-center gap-2">
+                              <AlertTriangle className="h-4.5 w-4.5 text-yellow-500" />
+                              <span className="text-xs font-bold text-yellow-500 uppercase tracking-widest font-mono-dash">
+                                Co-Administration Risks
+                              </span>
+                            </div>
+                            <SectionHeaderBadge drugName={activeDrug.name} sectionKeys={["drug_interactions", "cyp_interactions"]} activeItem={activeItem} />
                           </div>
-                          <SectionHeaderBadge drugName={activeDrug.name} sectionKeys={["drug_interactions", "cyp_interactions"]} activeItem={activeItem} />
-                        </div>
-                        <CustomTextRenderer 
-                          text={activeDrug.sections.interactions} 
-                          citations={activeCitations} 
-                          cardIndex={activeHistoryIndex} 
-                        />
-                      </CardContent>
-                    </Card>
+                          <CustomTextRenderer 
+                            text={activeDrug.sections.interactions} 
+                            citations={activeCitations} 
+                            cardIndex={activeHistoryIndex} 
+                          />
+                        </CardContent>
+                      </Card>
+                    )}
                     
                   </div>
                 )}
