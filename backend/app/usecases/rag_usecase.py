@@ -779,55 +779,74 @@ class ProcessClinicalQueryUseCase:
 
 Question: {question}
 
-You are a board-certified clinical AI assistant and evidence extraction engine. Provide a structured clinical assessment based strictly on the provided documents.
+You are MedRef, a clinical retrieval-augmented decision support assistant.
+Your ONLY responsibility is to synthesize recommendations from the retrieved evidence.
+NEVER invent facts. NEVER infer guidelines that are not retrieved. NEVER recommend medications that are not listed in the patient's medication list.
+If evidence is insufficient, explicitly state: "Insufficient evidence available in retrieved sources." instead of guessing.
 
-CRITICAL CLINICAL REASONING RULES:
+----------------------------------------------------
+PRIORITY RULE #1: PATIENT-SPECIFIC OVERRIDES
+----------------------------------------------------
+Patient-specific information ALWAYS overrides generic guideline examples.
+Never copy laboratory values from retrieved documents.
+Only use the patient's supplied: laboratory values, medication list, diagnoses, age, renal function, electrolyte values, vital signs.
 
-1. EXHAUSTIVE MEDICATION EVALUATION (DO NOT OMIT ANY DRUG):
-   You MUST evaluate EVERY single medication mentioned in the Question!
-   - If the patient is taking 8 medications (e.g. Warfarin, Clarithromycin, Atorvastatin, Amiodarone, Digoxin, Spironolactone, Metformin, Empagliflozin), you MUST provide a distinct action recommendation (Continue, Hold, Discontinue, or Adjust Dose) for ALL 8 drugs!
-   - NEVER omit major interactions like Digoxin + Amiodarone! (Amiodarone inhibits P-gp, increasing serum Digoxin concentrations by 70-100%, causing severe bradycardia / AV block risk. Reduce Digoxin dose by 50% immediately and monitor trough levels [0.5-0.9 ng/mL]).
+----------------------------------------------------
+PRIORITY RULE #2: MEDICATION COMPLETENESS
+----------------------------------------------------
+You MUST evaluate EVERY medication individually.
+For EVERY medication listed by the user, produce EXACTLY ONE action.
+Allowed actions: CONTINUE, HOLD, STOP, REDUCE DOSE, INCREASE DOSE.
+Never omit a medication.
 
-2. MEDICATION-STATE & PATIENT-SPECIFIC ADAPTATION:
-   Inspect the patient's actual active medications and lab values in the Question carefully.
-   - Use ONLY the patient's actual labs (e.g. eGFR 24 mL/min, K+ 5.8 mEq/L). DO NOT copy example lab numbers (e.g. eGFR 38, UACR 450) from retrieved chunks!
-   - Do NOT mention unprescribed medications (e.g. do NOT say 'Avoid Aceclofenac' or 'Re-check with Telmisartan' if the patient is NOT taking Aceclofenac or Telmisartan)!
-   - Differentiate clearly: ALREADY TAKING vs. SHOULD INITIATE vs. SHOULD HOLD/DISCONTINUE vs. CONTRAINDICATED.
+----------------------------------------------------
+MEDICATION STATE AWARENESS
+----------------------------------------------------
+If a medication is already prescribed:
+NEVER say "Start", "Initiate", or "Begin"!
+Instead determine whether to: Continue, Hold, Stop, Reduce dose, Increase dose.
 
-3. SINGLE UNCONTRADICTORY ACTION PER MEDICATION:
-   For each drug, provide EXACTLY ONE coherent action recommendation.
-   - Example for high K+ (5.8 mEq/L): 'HOLD Finerenone / Spironolactone now because serum potassium is 5.8 mEq/L (>5.0 mEq/L safety threshold). Reassess after potassium normalizes.'
-   - DO NOT state 'DISCONTINUE' and then later state 'Consider initiating MRA' for the same drug!
+----------------------------------------------------
+DUPLICATE PREVENTION & GUIDELINE CONTAMINATION FILTER
+----------------------------------------------------
+Each medication may appear ONLY ONCE inside Medication Review.
+Only use guidelines relevant to the patient's diseases. Never insert recommendations from unrelated specialties (e.g. Sepsis, Asthma, COPD, Stroke unless patient has those diseases).
 
-4. ACCURATE PHARMACOLOGICAL MECHANISMS:
-   Ensure mechanism statements accurately reflect pharmacology from the evidence:
-   - Finerenone & Spironolactone are mineralocorticoid receptor antagonists (MRAs) that block aldosterone binding in the distal tubule, decreasing potassium excretion and risking hyperkalemia (DO NOT say ENaC inhibition).
-   - Amiodarone & Clarithromycin inhibit P-glycoprotein (P-gp), significantly increasing serum Digoxin levels and toxicity risk.
+----------------------------------------------------
+CITATION & COVERAGE RULES
+----------------------------------------------------
+Every clinical recommendation MUST have at least one supporting citation in square brackets [1], [2].
+List every clinically significant drug interaction. Review every medication for renal and electrolyte issues.
 
-5. CLINICAL PRIORITIZATION ORDER:
-   Organize recommendations in strict clinician priority order:
-   - 🚨 1. Immediate Dangers, Black Box Warnings & Contraindications
-   - 💊 2. Drug-Drug Interactions & Washout Requirements
-   - 🧪 3. Renal Dosing, eGFR Cut-offs & Hold Rules
-   - 📋 4. Required Monitoring (Labs, Electrolytes, Serum Levels)
+----------------------------------------------------
+MANDATORY OUTPUT FORMAT
+----------------------------------------------------
+You MUST output using this EXACT structure:
 
-6. MANDATORY CITATIONS:
-   Append citation numbers in square brackets [1], [2] after EVERY factual claim or clinical recommendation.
+### 1. Immediate Life-Threatening Problems
+[Rank only the highest priority clinical hazards/dangers, or state 'None identified in context.']
 
-7. ADAPTIVE STRUCTURE (OMIT EMPTY SECTIONS):
-   Organize response under these headers (only include supported sections; DO NOT write 'Not found in available sources'):
+### 2. Medication-by-Medication Review
+| Medication | Action | Reason | Citation |
+[Include EXACTLY ONE row for EVERY medication listed in the prompt. Allowed actions: CONTINUE, HOLD, STOP, REDUCE DOSE, INCREASE DOSE.]
 
-### Clinical Recommendation & Action Plan
-- Provide an exhaustive, drug-by-drug action plan (Continue vs Hold vs Discontinue vs Adjust Dose) for EVERY drug in the query.
+### 3. Major Drug Interactions
+[List every clinically significant drug interaction evaluated from the context.]
 
-### Pharmacological Mechanism & Risk Cascade
-- Explain the underlying biochemical mechanisms accurately from the evidence.
+### 4. Renal Dosing Issues
+[Renal contraindications, dose adjustments based on eGFR.]
 
-### Guideline-Directed Management (GDMT) & Evidence
-- Summarize relevant guidelines (KDIGO 2024, ACC/AHA 2024, ESC 2024, ADA 2026) cited in the context.
+### 5. Electrolyte Issues
+[Review medications affecting Potassium, Sodium, Magnesium, Creatinine.]
 
-### Required Monitoring & Safety Protocols
-- Detail mandatory lab checks, serum potassium/creatinine monitoring, and safety protocols.
+### 6. Guideline Recommendations
+[Only guidelines relevant to the patient's active conditions.]
+
+### 7. Required Monitoring
+[Specific laboratory and clinical monitoring.]
+
+### 8. Overall Clinical Summary
+[Concise executive synthesis.]
 """
 
         if is_disease_mode:
@@ -1173,7 +1192,7 @@ CRITICAL RULES:
         
         # Correct "Start [Drug]" to "Continue [Drug]" if patient is already taking it
         active_med_indicators = ["already taking", "currently on", "taking", "on "]
-        for med in ["empagliflozin", "dapagliflozin", "metformin", "sitagliptin", "finerenone", "spironolactone"]:
+        for med in ["empagliflozin", "dapagliflozin", "metformin", "sitagliptin", "finerenone", "spironolactone", "warfarin", "clarithromycin", "atorvastatin", "amiodarone", "digoxin"]:
             if question_text and any(ind in question_text.lower() for ind in active_med_indicators) and med in question_text.lower():
                 answer_text = regex.sub(
                     rf'\b(?:start|initiate|consider initiating)\s+{med}\b',
@@ -1454,6 +1473,34 @@ CRITICAL RULES:
         logger.info("propositional_grounding_audit", is_valid=prop_val.is_valid, layer_scores=prop_val.layer_scores, audit_logs=prop_val.audit_logs)
 
         return processed_answer, final_citations, remapping, validation_errors
+
+    def _validate_medication_completeness(self, question_text: str, answer_text: str) -> Tuple[bool, List[str], List[str]]:
+        """
+        Programmatic Post-Generation Validation:
+        Extracts patient medications from prompt and compares against decision output in answer text.
+        Returns: (is_complete, missing_drugs, extra_unprescribed_drugs)
+        """
+        known_drugs = [
+            "warfarin", "clarithromycin", "atorvastatin", "amiodarone", "digoxin", 
+            "spironolactone", "metformin", "empagliflozin", "dapagliflozin", "finerenone",
+            "enalapril", "lisinopril", "ramipril", "entresto", "sacubitril", "valsartan",
+            "aceclofenac", "furosemide", "vancomycin", "piperacillin", "tazobactam", "zosyn",
+            "biotin", "sitagliptin", "losartan", "telmisartan", "apixaban", "rivaroxaban"
+        ]
+        
+        q_lower = question_text.lower()
+        patient_drugs = [d for d in known_drugs if d in q_lower]
+        
+        a_lower = answer_text.lower()
+        output_drugs = [d for d in known_drugs if d in a_lower]
+        
+        missing = [d for d in patient_drugs if d not in output_drugs]
+        
+        whitelist = {"paracetamol", "acetaminophen", "sacubitril", "valsartan", "entresto"}
+        extra = [d for d in output_drugs if d not in patient_drugs and d not in whitelist]
+        
+        is_complete = len(missing) == 0
+        return is_complete, missing, extra
 
     def get_debug_trace(self, query: MedicalQuery) -> Dict[str, Any]:
         context_str, citations, documents, retrieval_time, confidence, retrieval_stats, citation_map = self._build_context(query)
@@ -1806,6 +1853,16 @@ Identity Profile (Grounded FDA Label Metadata):
             processed_answer, processed_citations, remapping, validation_errors = self._post_process_and_validate(
                 answer_text, citations_copy, citation_map, drug_aliases_map=drug_aliases_map, question_text=query.question
             )
+            
+            # Programmatic Post-Generation Medication Completeness Validation
+            is_complete, missing_drugs, extra_drugs = self._validate_medication_completeness(query.question, processed_answer)
+            if missing_drugs:
+                err_msg = f"Programmatic Validation Warning: Omitted prescribed medications: {', '.join(missing_drugs)}"
+                validation_errors.append(err_msg)
+                logger.warning("medication_completeness_failed", attempt=attempt, missing_drugs=missing_drugs)
+                if attempt < max_attempts:
+                    prompt += f"\n\n[CRITICAL POST-GENERATION VALIDATION FAILURE]: Your previous attempt omitted these prescribed medications: {', '.join(missing_drugs)}. You MUST evaluate EVERY drug in the prompt and include a row for each in Section 2 table!"
+                    continue
             
             if coverage >= 0.95 or attempt == max_attempts:
                 final_answer_text = processed_answer
