@@ -781,6 +781,23 @@ class ProcessClinicalQueryUseCase:
                 rule_directives += f" - {med}: Action = {info['action']} | Clinical Reason = {info['reason']}\n"
             rule_directives += "\nCRITICAL DIRECTIVE: In Section 2 table, you MUST use the EXACT Action calculated above for each drug. Synthesize the narrative explanation and citation from retrieved context.\n"
 
+        if rule_decisions and rule_decisions.get("major_interactions"):
+            rule_directives += "\n----------------------------------------------------\nMANDATORY DRUG INTERACTIONS (Section 3)\n----------------------------------------------------\n"
+            rule_directives += "You MUST list ALL of the following interactions in Section 3. Do NOT omit any:\n"
+            for ix in rule_decisions["major_interactions"]:
+                rule_directives += f" - [{ix['severity']}] {ix['pair']}: {ix['mechanism']}\n"
+
+        if rule_decisions and rule_decisions.get("mandatory_monitoring"):
+            rule_directives += "\n----------------------------------------------------\nMANDATORY MONITORING PARAMETERS (Section 7)\n----------------------------------------------------\n"
+            rule_directives += "You MUST include ALL of the following monitoring items in Section 7:\n"
+            for m in rule_decisions["mandatory_monitoring"]:
+                rule_directives += f" - {m}\n"
+
+        if rule_decisions and rule_decisions.get("immediate_dangers"):
+            rule_directives += "\n----------------------------------------------------\nIMMEDIATE LIFE-THREATENING HAZARDS (Section 1)\n----------------------------------------------------\n"
+            for d in rule_decisions["immediate_dangers"]:
+                rule_directives += f" ⚠️ {d}\n"
+
         if is_scenario_mode:
             return f"""Context:
 {context_str}
@@ -1321,9 +1338,46 @@ CRITICAL RULES:
                             overlap = sentence_kws.intersection(chunk_kws)
                             overlap_ratio = len(overlap) / len(sentence_kws)
                             
+                        # --- Drug-Entity Cross-Check (P0: False Grounding Detection) ---
+                        # If the sentence is about a specific drug but the citation chunk belongs to
+                        # a completely different drug with no alias relationship, this is FALSE GROUNDING.
+                        # E.g. "Empagliflozin → CONTINUE" cited by a Riociguat chunk is false grounding.
+                        chunk_drug = drug_generic  # already lowercased
+                        chunk_drug_aliases = set([chunk_drug] + [a.lower() for a in _alias_augment.get(chunk_drug, [])])
+                        
+                        # Extract drugs mentioned in the sentence from our known drug list
+                        known_clinical_drugs = [
+                            "warfarin", "clarithromycin", "atorvastatin", "amiodarone", "digoxin",
+                            "spironolactone", "metformin", "empagliflozin", "dapagliflozin", "finerenone",
+                            "sacubitril", "valsartan", "entresto", "furosemide", "metoprolol",
+                            "enalapril", "lisinopril", "ramipril", "aceclofenac", "vancomycin",
+                            "piperacillin", "tazobactam", "sitagliptin", "losartan", "telmisartan",
+                            "apixaban", "rivaroxaban", "bisoprolol", "carvedilol", "eplerenone",
+                            "canagliflozin", "rosuvastatin", "simvastatin"
+                        ]
+                        sentence_drugs = {d for d in known_clinical_drugs if d in clean_sentence_text.lower()}
+                        
+                        # False grounding: sentence mentions specific drugs but chunk drug is absent
+                        # Only apply when: sentence has at least one drug mention AND chunk drug is known
+                        # AND chunk drug is not in sentence drugs AND no alias match
+                        is_false_grounding = False
+                        if (sentence_drugs and chunk_drug and 
+                                chunk_drug not in sentence_drugs and
+                                not chunk_drug_aliases.intersection(sentence_drugs)):
+                            # Give partial pass if overlap_ratio is strong (chunk may still be relevant topic-wise)
+                            if overlap_ratio < 0.25:
+                                is_false_grounding = True
+                        
                         # Enforce strict grounding threshold
-                        if settings.STRICT_CITATION_VALIDATION_ACTION == "none" or overlap_ratio >= 0.35:
+                        if is_false_grounding:
+                            standard_citation = "[Unsupported Citation Removed]"
+                            validation_errors.append(
+                                f"False grounding [{cit_num}]: sentence about {sentence_drugs} "
+                                f"cited chunk for drug '{chunk_drug}' (overlap {round(overlap_ratio, 2)})"
+                            )
+                        elif settings.STRICT_CITATION_VALIDATION_ACTION == "none" or overlap_ratio >= 0.35:
                             standard_citation = f"[{cit_num}]"
+
                         else:
                             standard_citation = "[Unsupported Citation Removed]"
                             validation_errors.append(
