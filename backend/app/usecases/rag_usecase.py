@@ -769,10 +769,18 @@ class ProcessClinicalQueryUseCase:
         
         return context_str, citations, final_docs, retrieve_time, confidence, retrieval_stats, citation_map
 
-    def _build_prompt(self, context_str: str, question: str, mode: str = "DRUG_CHAT") -> str:
+    def _build_prompt(self, context_str: str, question: str, mode: str = "DRUG_CHAT", rule_decisions: Dict[str, Any] = None) -> str:
         is_scenario_mode = mode and mode.upper() in ["INTERACTION_CHECK", "PATIENT_SCENARIO", "CLINICAL_GUIDELINE"]
         is_disease_mode = mode and mode.upper() in ["DISEASE_CHAT", "RESEARCH_LITERATURE", "SYMPTOM_CHAT"]
         
+        rule_directives = ""
+        if rule_decisions and rule_decisions.get("decisions"):
+            rule_directives = "\n----------------------------------------------------\nDETERMINISTIC CLINICAL RULE ENGINE CALCULATIONS\n----------------------------------------------------\n"
+            rule_directives += "The backend Clinical Rule Engine has calculated mandatory medication decisions based on patient labs/interactions:\n"
+            for med, info in rule_decisions["decisions"].items():
+                rule_directives += f" - {med}: Action = {info['action']} | Clinical Reason = {info['reason']}\n"
+            rule_directives += "\nCRITICAL DIRECTIVE: In Section 2 table, you MUST use the EXACT Action calculated above for each drug. Synthesize the narrative explanation and citation from retrieved context.\n"
+
         if is_scenario_mode:
             return f"""Context:
 {context_str}
@@ -784,6 +792,7 @@ Your ONLY responsibility is to synthesize recommendations from the retrieved evi
 NEVER invent facts. NEVER infer guidelines that are not retrieved. NEVER recommend medications that are not listed in the patient's medication list.
 If evidence is insufficient, explicitly state: "Insufficient evidence available in retrieved sources." instead of guessing.
 
+{rule_directives}
 ----------------------------------------------------
 PRIORITY RULE #1: PATIENT-SPECIFIC OVERRIDES
 ----------------------------------------------------
@@ -1255,6 +1264,22 @@ CRITICAL RULES:
             # Skip validation for structural elements and 'not found' placeholders
             s_clean = sentence.strip().lower()
             if "not found in available sources" in s_clean or s_clean.startswith('#') or (s_clean.startswith('**') and s_clean.endswith('**')):
+                final_sentences.append(sentence)
+                continue
+
+            # Skip strict keyword-overlap validation for markdown table rows — these are structured
+            # clinical decisions (from the deterministic Rule Engine) and section summary lines.
+            # The sentence splitter frequently breaks mid-row at periods inside cells, so we detect
+            # ANY fragment containing pipe characters as belonging to a table.
+            stripped_clean = sentence.strip()
+            is_table_row = '|' in stripped_clean
+            is_section_summary = any(
+                phrase in s_clean for phrase in [
+                    "overall clinical summary", "renal dosing issues", "electrolyte issues",
+                    "required monitoring", "major drug interactions", "immediate life-threatening"
+                ]
+            )
+            if is_table_row or is_section_summary:
                 final_sentences.append(sentence)
                 continue
             
@@ -1818,8 +1843,17 @@ Identity Profile (Grounded FDA Label Metadata):
             )
             
         from app.usecases.intent_router import IntentRouter
+        from app.usecases.clinical_rule_engine import ClinicalRuleEngine
+        
         effective_mode = query.mode or IntentRouter.route_query(query.question, country_context=query.country_context).get("mode", "DRUG_CHAT")
-        prompt = self._build_prompt(context_str, query.question, mode=effective_mode)
+        detected_drugs_list = retrieval_stats.get("resolved_drug") or []
+        if isinstance(detected_drugs_list, str):
+            detected_drugs_list = [detected_drugs_list]
+        elif not isinstance(detected_drugs_list, list):
+            detected_drugs_list = []
+        rule_decisions = ClinicalRuleEngine.evaluate_patient_medications(query.question, detected_drugs_list)
+        
+        prompt = self._build_prompt(context_str, query.question, mode=effective_mode, rule_decisions=rule_decisions)
         
         logger.info("generating_answer_via_llm", provider=settings.ACTIVE_LLM_PROVIDER, prompt_version=self.prompt_version)
         # --- LLM Generation with Retry ---
