@@ -501,7 +501,7 @@ class ProcessClinicalQueryUseCase:
                             doc.metadata["requested_section"] = sec
                         
                         # Sort Priority: CrossEncoder DESC -> VectorScore DESC -> AuthorityRank ASC
-                        docs_for_sec.sort(key=lambda x: (x.cross_encoder_score or 0.0, x.score or 0.0, -x.metadata.get("authority_rank", 99)), reverse=True)
+                        docs_for_sec.sort(key=lambda x: (x.cross_encoder_score or 0.0, x.score or 0.0, -(x.metadata.get("authority_rank") or 99)), reverse=True)
                         
                         # Take top 3
                         docs_for_sec = docs_for_sec[:3]
@@ -934,6 +934,21 @@ class ProcessClinicalQueryUseCase:
             for d in rule_decisions["immediate_dangers"]:
                 rule_directives += f" ⚠️ {d}\n"
 
+        # Pre-format Deterministic Markdown Blocks for Section 3 and Section 7
+        major_interactions_md = ""
+        if rule_decisions and rule_decisions.get("major_interactions"):
+            for ix in rule_decisions["major_interactions"]:
+                major_interactions_md += f"* **{ix['pair']}** ({ix['severity']}): {ix['mechanism']}\n"
+        else:
+            major_interactions_md = "None identified in context."
+
+        mandatory_monitoring_md = ""
+        if rule_decisions and rule_decisions.get("mandatory_monitoring"):
+            for m in rule_decisions["mandatory_monitoring"]:
+                mandatory_monitoring_md += f"* {m}\n"
+        else:
+            mandatory_monitoring_md = "Routine clinical monitoring as clinically indicated."
+
         if is_scenario_mode:
             return f"""Context:
 {context_str}
@@ -993,7 +1008,7 @@ You MUST output using this EXACT structure:
 [Include EXACTLY ONE row for EVERY medication listed in the prompt. Allowed actions: CONTINUE, HOLD, STOP, REDUCE DOSE, INCREASE DOSE.]
 
 ### 3. Major Drug Interactions
-[List ALL mandatory drug interactions evaluated in the prompt directives above. For each interaction pair, output a bullet point detailing severity, mechanism, and citation.]
+{major_interactions_md}
 
 ### 4. Renal Dosing Issues
 [Renal contraindications, dose adjustments based on eGFR.]
@@ -1005,7 +1020,7 @@ You MUST output using this EXACT structure:
 [Synthesize GDMT cardiorenal guidelines relevant to active conditions. If no specific guideline chunks exist, state: 'Class 1A GDMT recommendations apply for HFrEF/CKD cardiorenal management per ACC/AHA 2024 & KDIGO 2024.']
 
 ### 7. Required Monitoring
-[List ALL 11 mandatory clinical monitoring parameters provided in the prompt directives above as individual bullet points. Do NOT omit any.]
+{mandatory_monitoring_md}
 
 ### 8. Overall Clinical Summary
 [Concise executive synthesis.]
@@ -1428,7 +1443,7 @@ CRITICAL RULES:
             is_section_summary = any(
                 phrase in s_clean for phrase in [
                     "overall clinical summary", "renal dosing issues", "electrolyte issues",
-                    "required monitoring", "major drug interactions", "immediate life-threatening"
+                    "required monitoring", "mandatory monitoring", "major drug interactions", "immediate life-threatening"
                 ]
             )
             if is_table_row or is_section_summary:
