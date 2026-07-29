@@ -1,14 +1,14 @@
 """
 MedRef LLM Providers Module
 Integrates Groq, Gemini, and MedGemma providers behind the common LLMProviderProtocol interface.
-Enforces the centralized Conversation Validation Layer before every API request to guarantee
+Enforces the centralized ConversationPipeline preprocessing gatekeeper before every API request to guarantee
 no invalid conversation payload (such as ending with a model turn) reaches downstream LLM services.
 """
 
 from typing import List, Dict, Any, Optional
 from groq import Groq
 from app.domain.interfaces import LLMProviderProtocol
-from app.infrastructure.conversation_validator import ConversationValidator
+from app.infrastructure.conversation_pipeline import ConversationPipeline, PipelineResult
 
 
 class GroqProvider(LLMProviderProtocol):
@@ -27,13 +27,14 @@ class GroqProvider(LLMProviderProtocol):
         ]
         return self.generate_chat(messages)
 
-    def generate_chat(self, messages: List[Dict[str, str]]) -> str:
+    def generate_chat(self, messages: List[Dict[str, str]], session_id: Optional[str] = None) -> str:
         import time
         import re
         import groq
 
-        # Centralized Conversation Validation Gatekeeper
-        sanitized_messages = ConversationValidator.validate_and_sanitize(messages, target_provider="groq")
+        # Centralized Conversation Pipeline Processing Gatekeeper
+        pipeline_res: PipelineResult = ConversationPipeline.process(messages, provider="groq", session_id=session_id)
+        sanitized_messages = pipeline_res.processed_messages
 
         retries = 0
         max_retries = 8
@@ -96,9 +97,10 @@ class GeminiProvider(LLMProviderProtocol):
         ]
         return self.generate_chat(messages)
 
-    def generate_chat(self, messages: List[Dict[str, str]]) -> str:
-        # Centralized Conversation Validation Gatekeeper for Gemini
-        sanitized_messages = ConversationValidator.validate_and_sanitize(messages, target_provider="gemini")
+    def generate_chat(self, messages: List[Dict[str, str]], session_id: Optional[str] = None) -> str:
+        # Centralized Conversation Pipeline Processing Gatekeeper for Gemini
+        pipeline_res: PipelineResult = ConversationPipeline.process(messages, provider="gemini", session_id=session_id)
+        sanitized_messages = pipeline_res.processed_messages
 
         # Format messages for Gemini SDK (contents format)
         gemini_contents = []
