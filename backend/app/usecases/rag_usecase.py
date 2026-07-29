@@ -349,11 +349,16 @@ class ProcessClinicalQueryUseCase:
         routed = IntentRouter.route_query(query.question, country_context=query.country_context, mode_override=query.mode)
         effective_mode = query.mode or routed.get("mode", "DRUG_CHAT")
         
-        # If mode is non-drug (Disease Chat, Guideline RAG, Primary Literature, Symptom Chat, Interaction Check, Patient Scenario) or no drug resolved, query routed collections directly
+        # Determine if this is a non-drug mode (scenario, guideline, disease, etc.)
         is_non_drug_mode = effective_mode and effective_mode.upper() in ["DISEASE_CHAT", "CLINICAL_GUIDELINE", "RESEARCH_LITERATURE", "SYMPTOM_CHAT", "INTERACTION_CHECK", "PATIENT_SCENARIO"]
-        if is_non_drug_mode or not drugs_to_fetch:
+        
+        if not is_non_drug_mode:
+            pass  # Will be handled below in per-drug retrieval
+        elif is_non_drug_mode and drugs_to_fetch:
+            # PATIENT_SCENARIO / INTERACTION_CHECK with detected drugs:
+            # First do collection-level retrieval for guidelines/disease context
             target_cols = routed.get("target_collections", ["disease_corpus", "disease_guidelines"])
-            MIN_DISEASE_SCORE = 0.22  # Drop low-relevance cross-disease chunks
+            MIN_DISEASE_SCORE = 0.22
             q_tokens = [w.lower() for w in query.question.split() if len(w) >= 3 and w.lower() not in [
                 "and", "for", "the", "with", "in", "management", "guidelines", "protocol", "overview", "study", "2024", "2025", "2026", "treatment", "therapy", "clinical", "care", "standards"
             ]]
@@ -363,16 +368,15 @@ class ProcessClinicalQueryUseCase:
                     for cdoc in col_docs:
                         score = cdoc.score or 0.0
                         if score < MIN_DISEASE_SCORE:
-                            continue  # Filter irrelevant cross-disease chunks
-                        # Topic check: ensure chunk text/title/disease matches at least one query token
+                            continue
                         doc_text = (str(cdoc.metadata.get("title","")) + " " + str(cdoc.metadata.get("disease","")) + " " + getattr(cdoc, "content", getattr(cdoc, "text", ""))).lower()
                         if q_tokens and not any(token in doc_text for token in q_tokens):
-                            continue  # Prevent cross-disease pollution (e.g. Asthma chunk for Diabetes query)
+                            continue
                         
                         collection_weights = IntentRouter.get_collection_weights(effective_mode)
                         col_weight = collection_weights.get(col, 1.5)
                         cdoc.score = (score or 0.85) * col_weight
-                        cdoc.cross_encoder_score = 0.99 * col_weight  # Weighted priority based on config
+                        cdoc.cross_encoder_score = 0.99 * col_weight
                         auth = cdoc.metadata.get("authority", "ADA")
                         cdoc.metadata["authority_rank"] = AUTHORITY_RANK.get(auth, 95)
                         cdoc.metadata["retrieval_mode"] = "MULTI_COLLECTION_RAG"
@@ -380,10 +384,9 @@ class ProcessClinicalQueryUseCase:
                             curr_drug = query.question.strip()
                         else:
                             curr_drug = resolved_drug[0] if (resolved_drug and isinstance(resolved_drug, list)) else (resolved_drug or query.question.strip())
-                        cdoc.metadata["drug_name"] = curr_drug  # Used by citation source formatter
+                        cdoc.metadata["drug_name"] = curr_drug
                         cdoc.metadata["disease_query"] = query.question.strip()
                         
-                        # Smart section categorization: distribute multi-collection RAG chunks across 4 UI cards
                         raw_sec = cdoc.metadata.get("section") or cdoc.metadata.get("category") or ""
                         if not raw_sec or raw_sec in ["clinical_profile", "general", "indications"]:
                             txt_lower = doc_text.lower()
@@ -398,7 +401,53 @@ class ProcessClinicalQueryUseCase:
                         cdoc.metadata["section"] = raw_sec
                         final_docs.append(cdoc)
 
-        if not is_non_drug_mode:
+        elif is_non_drug_mode:
+            # Pure disease/symptom/guideline query without drugs
+            target_cols = routed.get("target_collections", ["disease_corpus", "disease_guidelines"])
+            MIN_DISEASE_SCORE = 0.22
+            q_tokens = [w.lower() for w in query.question.split() if len(w) >= 3 and w.lower() not in [
+                "and", "for", "the", "with", "in", "management", "guidelines", "protocol", "overview", "study", "2024", "2025", "2026", "treatment", "therapy", "clinical", "care", "standards"
+            ]]
+            for col in target_cols:
+                if hasattr(self.vector_db, 'search_collection'):
+                    col_docs = self.vector_db.search_collection(col, dense_vec, top_k=5)
+                    for cdoc in col_docs:
+                        score = cdoc.score or 0.0
+                        if score < MIN_DISEASE_SCORE:
+                            continue
+                        doc_text = (str(cdoc.metadata.get("title","")) + " " + str(cdoc.metadata.get("disease","")) + " " + getattr(cdoc, "content", getattr(cdoc, "text", ""))).lower()
+                        if q_tokens and not any(token in doc_text for token in q_tokens):
+                            continue
+                        
+                        collection_weights = IntentRouter.get_collection_weights(effective_mode)
+                        col_weight = collection_weights.get(col, 1.5)
+                        cdoc.score = (score or 0.85) * col_weight
+                        cdoc.cross_encoder_score = 0.99 * col_weight
+                        auth = cdoc.metadata.get("authority", "ADA")
+                        cdoc.metadata["authority_rank"] = AUTHORITY_RANK.get(auth, 95)
+                        cdoc.metadata["retrieval_mode"] = "MULTI_COLLECTION_RAG"
+                        cdoc.metadata["drug_name"] = query.question.strip()
+                        cdoc.metadata["disease_query"] = query.question.strip()
+                        
+                        raw_sec = cdoc.metadata.get("section") or cdoc.metadata.get("category") or ""
+                        if not raw_sec or raw_sec in ["clinical_profile", "general", "indications"]:
+                            txt_lower = doc_text.lower()
+                            if any(w in txt_lower for w in ["dose", "dosage", "mg/day", "initial dosage", "starting dose", "titration", "daily dose", "every other day"]):
+                                raw_sec = "dosage_and_administration"
+                            elif any(w in txt_lower for w in ["contraindicated", "black box", "boxed warning", "severe risk", "fatal", "hypersensitive"]):
+                                raw_sec = "contraindications"
+                            elif any(w in txt_lower for w in ["coadministration", "interaction", "concomitant", "synergistic", "combined use"]):
+                                raw_sec = "drug_interactions"
+                            else:
+                                raw_sec = "clinical_profile"
+                        cdoc.metadata["section"] = raw_sec
+                        final_docs.append(cdoc)
+
+        # --- Per-Drug Entity-Filtered Retrieval ---
+        # For PATIENT_SCENARIO + drugs: run per-drug retrieval EVEN in scenario mode
+        # This ensures each medication gets entity-matched chunks, not just semantic neighbours
+        if drugs_to_fetch:
+
             for drug in drugs_to_fetch:
                 section_statuses[drug] = {}
                 for sec in sections_to_fetch:
@@ -516,6 +565,70 @@ class ProcessClinicalQueryUseCase:
                         cdoc.metadata["section"] = cdoc.metadata.get("section", "indications")
                         final_docs.append(cdoc)
 
+        # --- Source Diversity Cap ---
+        # Prevent any single drug from dominating the context window.
+        # Cap is adaptive: fewer chunks per drug when more drugs are present,
+        # to stay within Groq's 6000 TPM limit.
+        num_drugs = len(drugs_to_fetch) if drugs_to_fetch else 1
+        if num_drugs >= 8:
+            MAX_CHUNKS_PER_DRUG = 2  # 8+ drugs → 16 chunks max → ~4000 tokens
+        elif num_drugs >= 5:
+            MAX_CHUNKS_PER_DRUG = 3  # 5-7 drugs → 15-21 chunks → ~5000 tokens
+        elif num_drugs >= 3:
+            MAX_CHUNKS_PER_DRUG = 4  # 3-4 drugs → 12-16 chunks
+        else:
+            MAX_CHUNKS_PER_DRUG = 5  # 1-2 drugs → full context
+        if drugs_to_fetch and len(drugs_to_fetch) > 1:
+            drug_chunk_counts: Dict[str, int] = {}
+            diversity_filtered_docs = []
+            for doc in final_docs:
+                doc_drug = (doc.metadata.get("drug_name") or doc.metadata.get("drug") or "").strip().lower()
+                drug_chunk_counts[doc_drug] = drug_chunk_counts.get(doc_drug, 0) + 1
+                if drug_chunk_counts[doc_drug] <= MAX_CHUNKS_PER_DRUG:
+                    diversity_filtered_docs.append(doc)
+                else:
+                    logger.info("source_diversity_cap_applied", drug=doc_drug, dropped_chunk_id=doc.id)
+            final_docs = diversity_filtered_docs
+
+        # --- Evidence Coverage Validator ---
+        # Before sending to LLM, verify each detected drug has at least 1 supporting chunk.
+        # If a drug has NO evidence, trigger targeted per-drug retrieval to fill the gap.
+        if drugs_to_fetch:
+            covered_drugs = set()
+            for doc in final_docs:
+                doc_drug = (doc.metadata.get("drug_name") or doc.metadata.get("drug") or "").strip().lower()
+                covered_drugs.add(doc_drug)
+            
+            missing_evidence_drugs = [d for d in drugs_to_fetch if d.lower() not in covered_drugs]
+            
+            if missing_evidence_drugs:
+                logger.info("evidence_coverage_gap_detected", missing_drugs=missing_evidence_drugs)
+                for gap_drug in missing_evidence_drugs:
+                    # Targeted retrieval for the specific drug
+                    qdrant_filter = {"drug_name": gap_drug.title()}
+                    if sparse_vec:
+                        gap_docs = self.vector_db.hybrid_search(
+                            dense_vector=dense_vec,
+                            sparse_vector=sparse_vec,
+                            top_k=3,
+                            filters=qdrant_filter
+                        )
+                    else:
+                        gap_docs = self.vector_db.search(
+                            query_vector=dense_vec,
+                            top_k=3,
+                            filters=qdrant_filter
+                        )
+                    if gap_docs:
+                        for gdoc in gap_docs[:2]:  # Take top 2 to stay within budget
+                            gdoc.cross_encoder_score = 0.90
+                            gdoc.metadata["authority_rank"] = AUTHORITY_RANK.get(gdoc.metadata.get("authority", "DailyMed"), 99)
+                            gdoc.metadata["retrieval_mode"] = "EVIDENCE_COVERAGE_FILL"
+                            final_docs.append(gdoc)
+                        logger.info("evidence_coverage_filled", drug=gap_drug, chunks_added=len(gap_docs[:2]))
+                    else:
+                        logger.warning("evidence_coverage_unfillable", drug=gap_drug)
+
         # Evidence Fusion Engine: Deduplicate passages & resolve authority priorities
         from app.usecases.evidence_fusion import EvidenceFusionEngine
         final_docs = EvidenceFusionEngine.fuse_evidence(final_docs)
@@ -609,8 +722,14 @@ class ProcessClinicalQueryUseCase:
         )
         
         # Build structured context string (with strict size limit to stay under Groq rate limits)
+        # Adaptive limit: reduce context window for polypharmacy to prevent TPM overflow
         context_str = ""
-        max_char_limit = 12000
+        if num_drugs >= 8:
+            max_char_limit = 8000   # ~2000 tokens headroom for 8-drug prompt + rules
+        elif num_drugs >= 5:
+            max_char_limit = 10000
+        else:
+            max_char_limit = 12000
         
         for drug in drug_order:
             if len(context_str) >= max_char_limit:
