@@ -36,39 +36,62 @@ class GroqProvider(LLMProviderProtocol):
         pipeline_res: PipelineResult = ConversationPipeline.process(messages, provider="groq", session_id=session_id)
         sanitized_messages = pipeline_res.processed_messages
 
-        retries = 0
-        max_retries = 8
-        while retries < max_retries:
-            try:
-                chat_completion = self.client.chat.completions.create(
-                    messages=sanitized_messages,
-                    model=self.model_name,
-                    temperature=0.0,  # Zero hallucination tolerance
-                    frequency_penalty=0.5,
-                    presence_penalty=0.3,
-                )
-                return chat_completion.choices[0].message.content
-            except groq.RateLimitError as e:
-                wait_time = 35.0
-                msg = str(e)
-                match = re.search(r"try again in\s*([0-9.]+)", msg, re.IGNORECASE)
-                if match:
-                    wait_time = max(10.0, float(match.group(1)) + 1.0)
-                
-                if wait_time > 10.0:
-                    raise RuntimeError(f"Groq API rate limit reached. Please try again in {int(wait_time)} seconds.")
-                
-                print(f"\n[RateLimit] Groq API rate limit reached. Waiting for {wait_time:.2f} seconds before retrying (Attempt {retries+1}/{max_retries})...")
-                time.sleep(wait_time)
-                retries += 1
-            except Exception as e:
-                msg = str(e)
-                if "rate limit" in msg.lower() or "429" in msg:
-                    raise RuntimeError(f"Groq API rate limit reached: {msg}. Please try again later.")
-                else:
-                    raise e
+        # Model cascade order for rate limit failover
+        models_to_try = [self.model_name, "llama-3.1-8b-instant", "mixtral-8x7b-32768"]
+        models_to_try = list(dict.fromkeys(models_to_try))
+
+        last_exception = None
+
+        for model_choice in models_to_try:
+            retries = 0
+            max_retries = 3
+            while retries < max_retries:
+                try:
+                    chat_completion = self.client.chat.completions.create(
+                        messages=sanitized_messages,
+                        model=model_choice,
+                        temperature=0.0,  # Zero hallucination tolerance
+                        frequency_penalty=0.5,
+                        presence_penalty=0.3,
+                    )
+                    return chat_completion.choices[0].message.content
+                except groq.RateLimitError as e:
+                    last_exception = e
+                    msg = str(e)
+                    wait_time = 5.0
+                    match = re.search(r"try again in\s*([0-9.]+)", msg, re.IGNORECASE)
+                    if match:
+                        wait_time = float(match.group(1))
                     
-        raise RuntimeError("Groq API rate limit retries exhausted.")
+                    # If wait time is manageable (<= 8s), wait and retry same model
+                    if wait_time <= 8.0:
+                        print(f"\n[RateLimit] Groq model '{model_choice}' rate limited. Waiting {wait_time:.2f}s before retry...")
+                        time.sleep(wait_time + 0.5)
+                        retries += 1
+                    else:
+                        # Otherwise break loop and cascade immediately to next model in list
+                        print(f"\n[RateLimit Failover] Model '{model_choice}' wait time ({wait_time:.1f}s) too high. Cascading to next model...")
+                        break
+                except Exception as e:
+                    last_exception = e
+                    msg = str(e)
+                    if "rate limit" in msg.lower() or "429" in msg:
+                        break
+                    else:
+                        raise e
+
+        # If all Groq models exhausted, attempt Gemini failover if key exists
+        import os
+        gemini_key = os.getenv("GEMINI_API_KEY", os.getenv("GOOGLE_API_KEY", ""))
+        if gemini_key:
+            try:
+                print("\n[RateLimit Failover] All Groq models rate limited. Failing over to Google Gemini Provider...")
+                gemini_provider = GeminiProvider(api_key=gemini_key)
+                return gemini_provider.generate_chat(messages, session_id=session_id)
+            except Exception as gem_err:
+                print(f"[RateLimit Failover Error] Gemini failover failed: {gem_err}")
+
+        raise RuntimeError(f"Groq API rate limit reached across models. Details: {last_exception}")
 
 
 class GeminiProvider(LLMProviderProtocol):
