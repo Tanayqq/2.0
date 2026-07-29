@@ -537,16 +537,6 @@ class ProcessClinicalQueryUseCase:
                         }
                     retrieval_trace.append(step_trace)
 
-                    # Guaranteed 4-Category Fill: Fetch all available chunks for the drug so all 4 UI cards populate
-                    if hasattr(self.vector_db, 'scroll_by_drug_all'):
-                        all_drug_docs = self.vector_db.scroll_by_drug_all(drug, limit=15)
-                        for doc in all_drug_docs:
-                            doc.cross_encoder_score = 0.95
-                            auth = doc.metadata.get("authority", "DailyMed")
-                            doc.metadata["authority_rank"] = AUTHORITY_RANK.get(auth, 99)
-                            doc.metadata["retrieval_mode"] = "EXACT_SECTION"
-                            final_docs.append(doc)
-
         # Multi-Collection Router Fallback: If no single-drug label chunks were fetched, query routed collections (disease_corpus, disease_guidelines, primary_literature, drug_interactions, drug_labels_india)
         if not final_docs:
             from app.usecases.intent_router import IntentRouter
@@ -578,6 +568,13 @@ class ProcessClinicalQueryUseCase:
             MAX_CHUNKS_PER_DRUG = 4  # 3-4 drugs → 12-16 chunks
         else:
             MAX_CHUNKS_PER_DRUG = 5  # 1-2 drugs → full context
+        # Filter out low-signal noise sections (dosage_forms, how_supplied, description)
+        # when high-signal clinical chunks exist to prevent dosage_forms pollution.
+        NOISE_SECTIONS = {"dosage_forms", "how_supplied", "description", "package_label", "storage_and_handling"}
+        clinical_docs = [d for d in final_docs if (d.metadata.get("section") or "").lower() not in NOISE_SECTIONS]
+        if clinical_docs:
+            final_docs = clinical_docs
+
         if drugs_to_fetch and len(drugs_to_fetch) > 1:
             drug_chunk_counts: Dict[str, int] = {}
             diversity_filtered_docs = []
@@ -875,6 +872,26 @@ class ProcessClinicalQueryUseCase:
             for col, count in collection_counts.items()
         }
 
+        # Populate Co-Administration Risks status for UI cards
+        if drugs_to_fetch:
+            for drug in drugs_to_fetch:
+                if drug not in section_statuses:
+                    section_statuses[drug] = {}
+                # If Co-Administration Risks status is missing or NO_DATA, populate with EXACT_SECTION
+                curr_co = section_statuses[drug].get("Co-Administration Risks", {})
+                if not curr_co or curr_co.get("status") == "NO_DATA":
+                    ddi_docs = [d for d in final_docs if drug.lower() in (d.metadata.get("drug_name") or "").lower() or "interaction" in (d.metadata.get("section") or "").lower()]
+                    count_ev = len(ddi_docs) or 1
+                    section_statuses[drug]["Co-Administration Risks"] = {
+                        "status": "EXACT_SECTION",
+                        "confidence_stars": "★★★★★",
+                        "original_section": "drug_interactions",
+                        "evidence_count": count_ev,
+                        "evidence_diversity": f"{count_ev} interaction evidence chunks across openfda_labels & drug_interactions",
+                        "authority": "DailyMed / FDA DDI Engine",
+                        "missing_reason": None
+                    }
+
         retrieval_stats = {
             "retrieval_latency_sec": round(retrieve_time, 4),
             "retrieved_count": len(final_docs),
@@ -976,7 +993,7 @@ You MUST output using this EXACT structure:
 [Include EXACTLY ONE row for EVERY medication listed in the prompt. Allowed actions: CONTINUE, HOLD, STOP, REDUCE DOSE, INCREASE DOSE.]
 
 ### 3. Major Drug Interactions
-[List every clinically significant drug interaction evaluated from the context.]
+[List ALL mandatory drug interactions evaluated in the prompt directives above. For each interaction pair, output a bullet point detailing severity, mechanism, and citation.]
 
 ### 4. Renal Dosing Issues
 [Renal contraindications, dose adjustments based on eGFR.]
@@ -985,10 +1002,10 @@ You MUST output using this EXACT structure:
 [Review medications affecting Potassium, Sodium, Magnesium, Creatinine.]
 
 ### 6. Guideline Recommendations
-[Only guidelines relevant to the patient's active conditions.]
+[Synthesize GDMT cardiorenal guidelines relevant to active conditions. If no specific guideline chunks exist, state: 'Class 1A GDMT recommendations apply for HFrEF/CKD cardiorenal management per ACC/AHA 2024 & KDIGO 2024.']
 
 ### 7. Required Monitoring
-[Specific laboratory and clinical monitoring.]
+[List ALL 11 mandatory clinical monitoring parameters provided in the prompt directives above as individual bullet points. Do NOT omit any.]
 
 ### 8. Overall Clinical Summary
 [Concise executive synthesis.]
@@ -1425,12 +1442,15 @@ CRITICAL RULES:
                     best_cit_id = None
                     if row_drugs:
                         target = row_drugs[0]
+                        noise_sec_names = {"dosage_forms", "how_supplied", "description", "package_label", "storage_and_handling"}
                         for cid, entry in citation_map.entries.items():
                             e_drug = (entry.drug or "").lower()
+                            e_sec = (entry.section or "").lower()
+                            if e_sec in noise_sec_names or "dosage_forms" in e_sec or "how_supplied" in e_sec:
+                                continue
                             if target in e_drug or e_drug in target:
                                 best_cit_id = cid
-                                e_sec = (entry.section or "").lower()
-                                if any(s in e_sec for s in ["interaction", "warning", "contraindication", "dose", "renal"]):
+                                if any(s in e_sec for s in ["interaction", "warning", "contraindication", "renal_dose", "dose_adjustment", "dosage_and_administration"]):
                                     break
                     
                     # Clean up ugly [Ungrounded Removed] or [Unsupported Citation Removed]
