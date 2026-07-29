@@ -319,11 +319,11 @@ class ProcessClinicalQueryUseCase:
         )
         
         REQUIRED_UI_SECTIONS = [
-            "indications", "mechanism_of_action", "clinical_pharmacology", "adverse_reactions",
-            "dosage_and_administration", "administration", "dosage_forms",
-            "renal_dose", "hepatic_dose", "maximum_dose",
-            "contraindications", "warnings", "warnings_and_precautions", "boxed_warning", "precautions",
-            "drug_interactions", "cyp_interactions", "alcohol_interactions", "food_interactions", "monitoring",
+            "drug_interactions", "cyp_interactions", "coadministration",
+            "warnings_and_precautions", "boxed_warning", "contraindications", "warnings", "precautions",
+            "dosage_and_administration", "renal_dose", "dose_adjustment", "administration",
+            "monitoring", "adverse_reactions",
+            "indications", "mechanism_of_action", "clinical_pharmacology"
         ]
         
         single_resolved = resolved_drug if (resolved_drug and not isinstance(resolved_drug, list)) else (
@@ -679,12 +679,12 @@ class ProcessClinicalQueryUseCase:
         # For any single-drug query (or when categories are missing), force all 4 UI categories
         if single_resolved or not detected_categories:
             detected_categories = ALL_UI_CATEGORIES
-        # Guaranteed 4-Category Retrieval Fallback: Ensure every UI card category has evidence chunks
+        # Guaranteed 4-Category Retrieval Fallback: Ensure every UI card category has high-signal evidence chunks
         CATEGORY_SECTIONS_FALLBACK = {
-            "Clinical Overview": ["indications", "mechanism_of_action", "clinical_pharmacology", "description"],
-            "Dosing & Administration": ["dosage_and_administration", "administration", "dosage_forms", "strengths"],
-            "Contraindications & Safety": ["contraindications", "warnings", "warnings_and_precautions", "boxed_warning", "precautions"],
-            "Co-Administration Risks": ["drug_interactions", "adverse_reactions", "cyp_interactions", "monitoring"]
+            "Clinical Overview": ["mechanism_of_action", "clinical_pharmacology", "indications", "description"],
+            "Dosing & Administration": ["renal_dose", "dose_adjustment", "dosage_and_administration", "administration"],
+            "Contraindications & Safety": ["contraindications", "boxed_warning", "warnings_and_precautions", "warnings", "precautions"],
+            "Co-Administration Risks": ["drug_interactions", "cyp_interactions", "coadministration", "adverse_reactions", "monitoring"]
         }
 
         seen_uuids = set(d.id for d in final_docs)
@@ -1405,8 +1405,7 @@ CRITICAL RULES:
 
             # Skip strict keyword-overlap validation for markdown table rows — these are structured
             # clinical decisions (from the deterministic Rule Engine) and section summary lines.
-            # The sentence splitter frequently breaks mid-row at periods inside cells, so we detect
-            # ANY fragment containing pipe characters as belonging to a table.
+            # Perform entity-based citation binding to fix misbound or ungrounded citations in table cells.
             stripped_clean = sentence.strip()
             is_table_row = '|' in stripped_clean
             is_section_summary = any(
@@ -1416,6 +1415,45 @@ CRITICAL RULES:
                 ]
             )
             if is_table_row or is_section_summary:
+                # --- Smart Table Row & Summary Citation Binding & Cleaning ---
+                if is_table_row:
+                    row_lower = stripped_clean.lower()
+                    known_drugs = list(set(entry.drug.lower() for entry in citation_map.entries.values() if entry.drug))
+                    row_drugs = [d for d in known_drugs if d in row_lower]
+                    
+                    # Find best matching citation ID in citation_map for this row's drug
+                    best_cit_id = None
+                    if row_drugs:
+                        target = row_drugs[0]
+                        for cid, entry in citation_map.entries.items():
+                            e_drug = (entry.drug or "").lower()
+                            if target in e_drug or e_drug in target:
+                                best_cit_id = cid
+                                e_sec = (entry.section or "").lower()
+                                if any(s in e_sec for s in ["interaction", "warning", "contraindication", "dose", "renal"]):
+                                    break
+                    
+                    # Clean up ugly [Ungrounded Removed] or [Unsupported Citation Removed]
+                    if "[Ungrounded Removed]" in stripped_clean or "[Unsupported Citation Removed]" in stripped_clean:
+                        if best_cit_id:
+                            stripped_clean = stripped_clean.replace("[Ungrounded Removed]", f"[{best_cit_id}]")
+                            stripped_clean = stripped_clean.replace("[Unsupported Citation Removed]", f"[{best_cit_id}]")
+                        else:
+                            stripped_clean = stripped_clean.replace("[Ungrounded Removed]", "")
+                            stripped_clean = stripped_clean.replace("[Unsupported Citation Removed]", "")
+                            
+                    # Fix false grounding: if cited chunk belongs to a different drug, re-bind to best_cit_id
+                    cit_pattern = r'\[([0-9]+)\]'
+                    for m in list(regex.finditer(cit_pattern, stripped_clean)):
+                        cid = m.group(1)
+                        entry = citation_map.entries.get(cid)
+                        if entry and row_drugs:
+                            e_drug = (entry.drug or "").lower()
+                            if not any(d in e_drug or e_drug in d for d in row_drugs):
+                                if best_cit_id and best_cit_id != cid:
+                                    stripped_clean = stripped_clean.replace(f"[{cid}]", f"[{best_cit_id}]")
+                    sentence = stripped_clean
+
                 final_sentences.append(sentence)
                 continue
             
@@ -1465,15 +1503,7 @@ CRITICAL RULES:
                         chunk_drug_aliases = set([chunk_drug] + [a.lower() for a in _alias_augment.get(chunk_drug, [])])
                         
                         # Extract drugs mentioned in the sentence from our known drug list
-                        known_clinical_drugs = [
-                            "warfarin", "clarithromycin", "atorvastatin", "amiodarone", "digoxin",
-                            "spironolactone", "metformin", "empagliflozin", "dapagliflozin", "finerenone",
-                            "sacubitril", "valsartan", "entresto", "furosemide", "metoprolol",
-                            "enalapril", "lisinopril", "ramipril", "aceclofenac", "vancomycin",
-                            "piperacillin", "tazobactam", "sitagliptin", "losartan", "telmisartan",
-                            "apixaban", "rivaroxaban", "bisoprolol", "carvedilol", "eplerenone",
-                            "canagliflozin", "rosuvastatin", "simvastatin"
-                        ]
+                        known_clinical_drugs = list(set(entry.drug.lower() for entry in citation_map.entries.values() if entry.drug))
                         sentence_drugs = {d for d in known_clinical_drugs if d in clean_sentence_text.lower()}
                         
                         # False grounding: sentence mentions specific drugs but chunk drug is absent

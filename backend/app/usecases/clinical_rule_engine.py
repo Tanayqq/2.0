@@ -234,15 +234,20 @@ class ClinicalRuleEngine:
             })
 
         # ----------------------------------------------------
-        # 4. MANDATORY MONITORING MATRIX
+        # 4. MANDATORY MONITORING MATRIX (11 Comprehensive Parameters)
         # ----------------------------------------------------
         mandatory_monitoring = [
-            "Serum Potassium (K+) & Creatinine / eGFR (every 48-72h during acute hyperkalemia)",
-            "Target INR (2.0-3.0) for Warfarin therapy",
-            "Serum Digoxin Trough Level (target 0.5-0.9 ng/mL for HFrEF)",
-            "Creatine Kinase (CK) & LFTs (due to Statin + Macrolide co-administration)",
-            "12-Lead ECG (monitor QTc interval and hyperkalemic T-wave peaking)",
-            "Resting Heart Rate & Blood Pressure (due to triple AV-nodal blockade)"
+            "Serum Potassium (K+): Check q24-48h during acute hyperkalemia until K+ < 5.0 mEq/L, then weekly x 4 weeks.",
+            "Serum Creatinine & eGFR: Check baseline, q48h during acute illness, and 1-2 weeks after RAAS/MRA/SGLT2i adjustments.",
+            "Target INR (2.0-3.0): Check INR q3-5 days during concurrent Amiodarone or Clarithromycin initiation/discontinuation.",
+            "Serum Digoxin Trough Level: Target 0.5-0.9 ng/mL for HFrEF; recheck 7-10 days after 50% dose reduction with Amiodarone.",
+            "Creatine Kinase (CK): Baseline and immediate recheck if muscle pain, weakness, or dark urine develops (Statin + Macrolide DDI).",
+            "Liver Function Tests (AST/ALT, Bilirubin): Check baseline, at 1 month, and q6 months for Amiodarone and Statin therapy.",
+            "12-Lead ECG: Monitor QTc interval (Amiodarone + Macrolide risk), PR interval/AV conduction (Digoxin + Beta-blocker), and T-wave morphology (Hyperkalemia).",
+            "Resting Heart Rate & Blood Pressure: Monitor daily (target HR 55-80 bpm, SBP > 90 mmHg) due to triple AV-nodal blockade (Metoprolol + Amiodarone + Digoxin).",
+            "Daily Weight & Volume Status: Weigh daily in morning; report weight gain > 2-3 lbs in 24h or 5 lbs in a week.",
+            "Urine Output & AKI Surveillance: Target > 0.5 mL/kg/h; monitor for oliguria in severe CKD Stage 4.",
+            "Serum Electrolytes (Magnesium & Sodium): Maintain Mg2+ > 2.0 mEq/L to prevent Digoxin toxicity and QTc prolongation."
         ]
 
         return {
