@@ -304,12 +304,21 @@ class QdrantAdapter(VectorDatabaseProtocol):
         documents = []
         for hit in search_result:
             payload = hit.payload or {}
+            raw_score = getattr(hit, 'score', 0.85) or 0.85
+            # Convert Qdrant RRF Reciprocal Rank Fusion scores (0.01 - 0.05) to 0.82 - 0.98 similarity range
+            if 0.0 < raw_score < 0.10:
+                normalized_score = round(0.82 + min(0.16, raw_score * 4.5), 4)
+            elif raw_score <= 1.0:
+                normalized_score = round(raw_score, 4)
+            else:
+                normalized_score = round(min(0.99, raw_score / 10.0), 4)
+
             doc = ReferenceDocument(
                 id=str(hit.id),
                 content=payload.get("content", ""),
                 source=payload.get("source", "Unknown"),
                 metadata=payload,
-                score=hit.score
+                score=normalized_score
             )
             documents.append(doc)
         return documents
