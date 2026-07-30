@@ -1926,22 +1926,23 @@ CRITICAL RULES:
                 citation_map=citation_map.to_dict()
             )
             
-            # Post-process and validate
-            citations_copy = [c.model_copy() for c in citations]
-            post_processed_answer, final_citations, remapping, validation_errors = self._post_process_and_validate(
-                raw_answer, citations_copy, citation_map, drug_aliases_map=_debug_aliases_map
-            )
-            
-            # Apply deterministic post-processing sanitizer for patient scenarios
+            # Apply deterministic post-processing sanitizer for patient scenarios FIRST
             rule_decisions_dict = rule_decisions if 'rule_decisions' in locals() else None
             sanitized_answer = self._sanitize_clinical_markdown_response(
-                answer_text=post_processed_answer,
+                answer_text=raw_answer,
                 rule_decisions=rule_decisions_dict,
                 citation_map=citation_map,
-                citations=final_citations,
+                citations=citations,
                 question_text=query.question
             )
-            final_answer = sanitized_answer
+            
+            # Post-process and validate on the sanitized answer
+            citations_copy = [c.model_copy() for c in citations]
+            post_processed_answer, final_citations, remapping, validation_errors = self._post_process_and_validate(
+                sanitized_answer, citations_copy, citation_map, drug_aliases_map=_debug_aliases_map
+            )
+            
+            final_answer = post_processed_answer
             validation_failed_reason = " | ".join(validation_errors) if validation_errors else None
                 
         dim = len(self.embedding.embed_query(query.question))
