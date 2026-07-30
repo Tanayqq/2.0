@@ -1398,11 +1398,23 @@ CRITICAL RULES:
 
             new_sec2 = table_header + "\n".join(table_rows) + "\n\n"
             answer_text = answer_text[:sec2_match.start()] + new_sec2 + answer_text[sec2_match.end():]
+        elif decisions_map and (len(question_text) > 60 or "patient" in question_text.lower() or "male" in question_text.lower() or "female" in question_text.lower()):
+            table_header = "### 2. Medication-by-Medication Review\n| Medication | Action | Reason | Citation |\n|---|---|---|---|\n"
+            table_rows = []
+            for r_key, r_info in decisions_map.items():
+                cit = get_citation_for_drug(r_key)
+                table_rows.append(f"| {r_key} | {r_info['action']} | {r_info['reason']} | {cit} |")
+            new_sec2 = table_header + "\n".join(table_rows) + "\n\n"
+            sec1_m = regex.search(r'(#{3,4}\s*1\.[^\n]*\n[\s\S]*?)(?=\n#{3,4}\s+|\Z)', answer_text, regex.IGNORECASE)
+            if sec1_m:
+                answer_text = answer_text[:sec1_m.end()] + "\n\n" + new_sec2 + answer_text[sec1_m.end():]
+            else:
+                answer_text = new_sec2 + "\n\n" + answer_text
 
         # --------------------------------------------------------------------
         # STEP 2: STAMP UNABRIDGED SECTION 3 MAJOR DRUG INTERACTIONS
         # --------------------------------------------------------------------
-        if rule_decisions and rule_decisions.get("major_interactions"):
+        if rule_decisions and rule_decisions.get("major_interactions") and (len(question_text) > 60 or "patient" in question_text.lower()):
             sec3_header = "### 3. Major Drug Interactions\n\n"
             sec3_body = ""
             for i, ix in enumerate(rule_decisions["major_interactions"], start=1):
@@ -1419,11 +1431,15 @@ CRITICAL RULES:
             sec3_match = sec3_pattern.search(answer_text)
             if sec3_match:
                 answer_text = answer_text[:sec3_match.start()] + new_sec3 + answer_text[sec3_match.end():]
+            else:
+                sec2_m = regex.search(r'(#{3,4}\s*2\.[^\n]*\n[\s\S]*?)(?=\n#{3,4}\s+|\Z)', answer_text, regex.IGNORECASE)
+                if sec2_m:
+                    answer_text = answer_text[:sec2_m.end()] + "\n\n" + new_sec3 + answer_text[sec2_m.end():]
 
         # --------------------------------------------------------------------
         # STEP 3: STAMP COMPLETE 11-PARAMETER SECTION 7 REQUIRED MONITORING
         # --------------------------------------------------------------------
-        if rule_decisions and rule_decisions.get("mandatory_monitoring"):
+        if rule_decisions and rule_decisions.get("mandatory_monitoring") and (len(question_text) > 60 or "patient" in question_text.lower()):
             sec7_header = "### 7. Required Monitoring\n\n"
             sec7_body = ""
             for i, m in enumerate(rule_decisions["mandatory_monitoring"], start=1):
@@ -1440,6 +1456,8 @@ CRITICAL RULES:
             sec7_match = sec7_pattern.search(answer_text)
             if sec7_match:
                 answer_text = answer_text[:sec7_match.start()] + new_sec7 + answer_text[sec7_match.end():]
+            else:
+                answer_text += "\n\n" + new_sec7
 
         # --------------------------------------------------------------------
         # STEP 4: NORMALIZE SECTION TITLES & GUARANTEE SECTION 6 FALLBACK
@@ -1454,8 +1472,8 @@ CRITICAL RULES:
                 answer_text = answer_text[:sec6_match.start()] + guidelines_text + answer_text[sec6_match.end():]
         elif rule_decisions and "### 7. Required Monitoring" in answer_text:
             sec7_idx = answer_text.find("### 7. Required Monitoring")
-            answer_text = answer_text[:sec7_idx] + guidelines_text + answer_text[sec7_idx:]
-
+        # Strip duplicate adjacent headers like "### 1. ### 2." or "### 5. ### 6."
+        answer_text = regex.sub(r'#{3,4}\s*[0-9]+\.\s*(?=#{3,4}\s*[0-9]+\.)', '', answer_text)
         answer_text = regex.sub(r'\n{3,}', '\n\n', answer_text).strip()
         return answer_text
 
