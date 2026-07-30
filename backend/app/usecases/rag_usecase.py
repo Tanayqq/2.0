@@ -1269,7 +1269,7 @@ CRITICAL RULES:
         2. Overrides Section 2 table actions with deterministic Rule Engine calculations.
         3. Stamps unabridged Section 3 Major Drug Interactions list.
         4. Stamps complete 11-parameter Section 7 Required Monitoring list.
-        5. Normalizes section headers and strips empty dangling headings (e.g. '### 6.').
+        5. Normalizes section headers, ensures double newlines before headers, and strips empty optional headings (e.g. '### 6.').
         6. Guarantees non-empty citation tags for every table row.
         """
         import re as regex
@@ -1280,7 +1280,12 @@ CRITICAL RULES:
         decisions_map = rule_decisions.get("decisions", {}) if rule_decisions else {}
 
         # --------------------------------------------------------------------
-        # 1. DEDUPLICATE SECTION 2 MEDICATION TABLE & ENFORCE DETERMINISTIC ACTIONS
+        # STEP 0: ENSURE ALL HEADERS START ON A NEW LINE WITH DOUBLE NEWLINE
+        # --------------------------------------------------------------------
+        answer_text = regex.sub(r'([^\n])(#{3,4}\s*[0-9]+\.)', r'\1\n\n\2', answer_text)
+
+        # --------------------------------------------------------------------
+        # STEP 1: DEDUPLICATE SECTION 2 MEDICATION TABLE & ENFORCE DETERMINISTIC ACTIONS
         # (Fixes Problem 1, Problem 5, Problem 7)
         # --------------------------------------------------------------------
         sec2_pattern = regex.compile(
@@ -1289,41 +1294,36 @@ CRITICAL RULES:
         )
         sec2_match = sec2_pattern.search(answer_text)
 
-        if sec2_match:
+        if sec2_match or decisions_map:
             table_header = "### 2. Medication-by-Medication Review\n| Medication | Action | Reason | Citation |\n|---|---|---|---|\n"
             seen_drugs = set()
             table_rows = []
 
-            # Parse existing LLM table rows if present
-            raw_table_body = sec2_match.group(2)
+            raw_table_body = sec2_match.group(2) if sec2_match else ""
             raw_lines = raw_table_body.split('\n')
 
             for line in raw_lines:
                 stripped = line.strip()
-                if '|' in stripped and not stripped.startswith('|---') and not 'Medication' in stripped:
+                if '|' in stripped and not stripped.startswith('|---') and not stripped.startswith('| ---') and 'Medication' not in stripped:
                     parts = [p.strip() for p in stripped.split('|')]
                     if len(parts) >= 4:
-                        # parts: ['', 'Medication', 'Action', 'Reason', 'Citation', '']
                         med_name = parts[1]
                         action = parts[2]
                         reason = parts[3]
                         cit = parts[4] if len(parts) >= 5 else ""
 
-                        if not med_name or med_name.lower() == 'medication':
+                        if not med_name or med_name == '---' or med_name.lower() == 'medication':
                             continue
 
-                        # Extract clean base drug key for deduplication
                         base_drug_key = regex.sub(r'[\(\)\[\]]', '', med_name).strip().lower()
                         first_word = base_drug_key.split()[0] if base_drug_key else ""
 
-                        # DEDUPLICATION GUARD: Keep ONLY the first row per drug!
                         if first_word in seen_drugs or base_drug_key in seen_drugs:
                             continue
 
                         seen_drugs.add(first_word)
                         seen_drugs.add(base_drug_key)
 
-                        # Match with Rule Engine deterministic decisions
                         matched_rule_key = None
                         for r_key in decisions_map.keys():
                             r_key_lower = r_key.lower()
@@ -1336,7 +1336,6 @@ CRITICAL RULES:
                             action = r_info["action"]
                             reason = r_info["reason"]
 
-                        # Ensure Citation column is NEVER empty (Fixes Problem 5)
                         if not cit or cit in ["[Unsupported Citation Removed]", "[Ungrounded Removed]", "|", ""]:
                             found_cit = None
                             for cid, entry in citation_map.entries.items():
@@ -1348,7 +1347,6 @@ CRITICAL RULES:
 
                         table_rows.append(f"| {med_name} | {action} | {reason} | {cit} |")
 
-            # Guarantee EVERY drug in rule_decisions is present in the table
             for r_key, r_info in decisions_map.items():
                 r_base = r_key.lower().split()[0]
                 if r_base not in seen_drugs:
@@ -1363,10 +1361,17 @@ CRITICAL RULES:
                     table_rows.append(f"| {r_key} | {r_info['action']} | {r_info['reason']} | {cit} |")
 
             new_sec2 = table_header + "\n".join(table_rows) + "\n\n"
-            answer_text = answer_text[:sec2_match.start()] + new_sec2 + answer_text[sec2_match.end():]
+            if sec2_match:
+                answer_text = answer_text[:sec2_match.start()] + new_sec2 + answer_text[sec2_match.end():]
+            elif decisions_map:
+                sec1_match = regex.search(r'#{3,4}\s*1\.[^\n]*\n[\s\S]*?(?=\n#{3,4}\s+|\Z)', answer_text, regex.IGNORECASE)
+                if sec1_match:
+                    answer_text = answer_text[:sec1_match.end()] + "\n\n" + new_sec2 + answer_text[sec1_match.end():]
+                else:
+                    answer_text = new_sec2 + "\n\n" + answer_text
 
         # --------------------------------------------------------------------
-        # 2. STAMP UNABRIDGED SECTION 3 MAJOR DRUG INTERACTIONS
+        # STEP 2: STAMP UNABRIDGED SECTION 3 MAJOR DRUG INTERACTIONS
         # (Fixes Problem 2: Section 3 Incomplete Pairs)
         # --------------------------------------------------------------------
         if rule_decisions and rule_decisions.get("major_interactions"):
@@ -1387,7 +1392,7 @@ CRITICAL RULES:
                 answer_text = answer_text[:sec3_match.start()] + new_sec3 + answer_text[sec3_match.end():]
 
         # --------------------------------------------------------------------
-        # 3. STAMP COMPLETE 11-PARAMETER SECTION 7 REQUIRED MONITORING
+        # STEP 3: STAMP COMPLETE 11-PARAMETER SECTION 7 REQUIRED MONITORING
         # (Fixes Problem 3: Section 7 Incomplete / Only 1 Parameter Survived)
         # --------------------------------------------------------------------
         if rule_decisions and rule_decisions.get("mandatory_monitoring"):
@@ -1408,7 +1413,7 @@ CRITICAL RULES:
                 answer_text = answer_text[:sec7_match.start()] + new_sec7 + answer_text[sec7_match.end():]
 
         # --------------------------------------------------------------------
-        # 4. NORMALIZE SECTION TITLES & REMOVE EMPTY DANGLING HEADERS
+        # STEP 4: NORMALIZE SECTION TITLES & REMOVE EMPTY DANGLING HEADERS
         # (Fixes Problem 4: Empty Section Headings like '### 6.')
         # --------------------------------------------------------------------
         section_titles = {
@@ -1422,24 +1427,42 @@ CRITICAL RULES:
             "8": "Overall Clinical Summary"
         }
 
-        # First, strip any empty header lines like '### 6.' or '### 6' followed immediately by another header or EOF
-        for num in range(1, 9):
-            empty_header_pattern = regex.compile(rf'#{3,4}\s*{num}\.?[^\n]*\n*(?=#{3,4}\s+[0-9]+\.|\Z)', regex.IGNORECASE)
-            matches = list(empty_header_pattern.finditer(answer_text))
-            for match in matches:
-                sub_text = answer_text[match.start():]
-                next_hdr = regex.search(r'\n#{3,4}\s+[0-9]+\.', sub_text)
-                body_content = sub_text[len(match.group(0)):next_hdr.start()] if next_hdr else sub_text[len(match.group(0)):]
-                if not body_content.strip() or body_content.strip().lower() == "not found in available sources.":
-                    if str(num) not in ["1", "3"]: # Keep 1 & 3 mandatory headers
-                        answer_text = answer_text[:match.start()] + answer_text[match.start() + len(match.group(0)):]
-
-        # Normalize remaining valid section titles
+        # Normalize malformed/partial titles first so all titles are uniform
         for num, title in section_titles.items():
-            pattern_malformed = regex.compile(rf'#{3,4}\s*{num}\.[\s\t]*(?=\r?\n|[A-Za-z]|$)', regex.IGNORECASE)
+            pattern_malformed = regex.compile(rf'#{3,4}\s*{num}\.[\s\t]*(?=[A-Za-z]|\r?\n|$)', regex.IGNORECASE)
             answer_text = pattern_malformed.sub(f'### {num}. {title}\n', answer_text)
 
-        answer_text = regex.sub(r'\n{3,}', '\n\n', answer_text).strip()
+        # Parse sections and remove any section whose body is empty (except 1, 2, 3, 7, 8)
+        section_split_pattern = regex.compile(r'(#{3,4}\s*[0-9]+\.\s*[^\n]+)', regex.IGNORECASE)
+        parts = section_split_pattern.split(answer_text)
+
+        cleaned_parts = []
+        i = 0
+        while i < len(parts):
+            part = parts[i]
+            if section_split_pattern.match(part):
+                header = part
+                body = parts[i+1] if i + 1 < len(parts) else ""
+                body_clean = body.strip()
+
+                sec_num = regex.search(r'[0-9]+', header)
+                num_str = sec_num.group(0) if sec_num else ""
+
+                if not body_clean or body_clean.lower() == "not found in available sources.":
+                    if num_str in ["4", "5", "6"]:
+                        # Omit empty optional sections completely!
+                        i += 2
+                        continue
+
+                cleaned_parts.append(header + "\n" + body.strip() + "\n\n")
+                i += 2
+            else:
+                if part.strip():
+                    cleaned_parts.append(part.strip() + "\n\n")
+                i += 1
+
+        answer_text = "".join(cleaned_parts).strip()
+        answer_text = regex.sub(r'\n{3,}', '\n\n', answer_text)
         return answer_text
 
     def _post_process_and_validate(
