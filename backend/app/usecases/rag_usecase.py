@@ -719,14 +719,14 @@ class ProcessClinicalQueryUseCase:
         )
         
         # Build structured context string (with strict size limit to stay under Groq rate limits)
-        # Adaptive limit: reduce context window for polypharmacy to prevent TPM overflow
+        # Adaptive limit: reduce context window to prevent Groq 6,000 TPM rate limit overflow
         context_str = ""
-        if num_drugs >= 8:
-            max_char_limit = 8000   # ~2000 tokens headroom for 8-drug prompt + rules
-        elif num_drugs >= 5:
-            max_char_limit = 10000
+        if num_drugs >= 6 or is_non_drug_mode:
+            max_char_limit = 5500   # ~1400 tokens context headroom for complex scenarios + rules
+        elif num_drugs >= 3:
+            max_char_limit = 6500   # ~1600 tokens context headroom
         else:
-            max_char_limit = 12000
+            max_char_limit = 7500   # ~1800 tokens context headroom
         
         for drug in drug_order:
             if len(context_str) >= max_char_limit:
@@ -2093,6 +2093,12 @@ Identity Profile (Grounded FDA Label Metadata):
         
         prompt = self._build_prompt(context_str, query.question, mode=effective_mode, rule_decisions=rule_decisions)
         
+        # Prompt length safety guard for Groq token limits (~14,000 chars total prompt max)
+        if len(prompt) > 14000:
+            logger.info("prompt_length_exceeded_safety_limit", original_len=len(prompt))
+            compressed_context = context_str[:5500] + "\n\n...[Context truncated to comply with LLM token limits]..."
+            prompt = self._build_prompt(compressed_context, query.question, mode=effective_mode, rule_decisions=rule_decisions)
+
         logger.info("generating_answer_via_llm", provider=settings.ACTIVE_LLM_PROVIDER, prompt_version=self.prompt_version)
         # --- LLM Generation with Retry ---
         max_attempts = 2
@@ -2104,7 +2110,19 @@ Identity Profile (Grounded FDA Label Metadata):
         
         for attempt in range(1, max_attempts + 1):
             start_llm = time.time()
-            answer_text = self.llm.generate(prompt)
+            try:
+                answer_text = self.llm.generate(prompt)
+            except Exception as gen_err:
+                err_str = str(gen_err).lower()
+                if any(k in err_str for k in ["rate limit", "413", "too large", "tpm", "429"]):
+                    logger.warning("llm_generation_token_limit_retry", error=str(gen_err))
+                    # Attempt fallback generation with truncated context
+                    compressed_context = context_str[:4000] + "\n\n...[Context compressed to comply with Groq token limits]..."
+                    fallback_prompt = self._build_prompt(compressed_context, query.question, mode=effective_mode, rule_decisions=rule_decisions)
+                    answer_text = self.llm.generate(fallback_prompt)
+                else:
+                    raise gen_err
+
             llm_time = time.time() - start_llm
             total_llm_time += llm_time
             

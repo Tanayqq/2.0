@@ -37,7 +37,7 @@ class GroqProvider(LLMProviderProtocol):
         sanitized_messages = pipeline_res.processed_messages
 
         # Model cascade order for rate limit failover
-        models_to_try = [self.model_name, "llama-3.1-8b-instant", "mixtral-8x7b-32768"]
+        models_to_try = [self.model_name, "llama-3.1-8b-instant", "llama-3.3-70b-versatile", "llama3-8b-8192"]
         models_to_try = list(dict.fromkeys(models_to_try))
 
         last_exception = None
@@ -45,10 +45,12 @@ class GroqProvider(LLMProviderProtocol):
         for model_choice in models_to_try:
             retries = 0
             max_retries = 3
+            current_messages = [dict(m) for m in sanitized_messages]
+
             while retries < max_retries:
                 try:
                     chat_completion = self.client.chat.completions.create(
-                        messages=sanitized_messages,
+                        messages=current_messages,
                         model=model_choice,
                         temperature=0.0,  # Zero hallucination tolerance
                         frequency_penalty=0.5,
@@ -62,6 +64,16 @@ class GroqProvider(LLMProviderProtocol):
                     match = re.search(r"try again in\s*([0-9.]+)", msg, re.IGNORECASE)
                     if match:
                         wait_time = float(match.group(1))
+
+                    # If token size exceeded (413 / requested > limit)
+                    if "413" in msg or "request too large" in msg.lower() or "limit" in msg.lower():
+                        print(f"\n[Token Limit Exceeded] Compressing message payload for model '{model_choice}'...")
+                        for m in current_messages:
+                            if len(m.get("content", "")) > 4000:
+                                m["content"] = m["content"][:4000] + "\n...[Context compressed to comply with Groq TPM token limits]..."
+                        retries += 1
+                        time.sleep(0.5)
+                        continue
                     
                     # If wait time is manageable (<= 8s), wait and retry same model
                     if wait_time <= 8.0:
@@ -75,7 +87,16 @@ class GroqProvider(LLMProviderProtocol):
                 except Exception as e:
                     last_exception = e
                     msg = str(e)
-                    if "rate limit" in msg.lower() or "429" in msg:
+                    is_token_limit = any(k in msg.lower() for k in ["rate limit", "429", "413", "rate_limit_exceeded", "too large", "tpm"])
+                    if is_token_limit:
+                        if ("413" in msg or "too large" in msg.lower() or "limit" in msg.lower()) and retries == 0:
+                            print(f"\n[Token Limit Exceeded] Compressing payload for model '{model_choice}' after exception...")
+                            for m in current_messages:
+                                if len(m.get("content", "")) > 4000:
+                                    m["content"] = m["content"][:4000] + "\n...[Context compressed to comply with Groq TPM token limits]..."
+                            retries += 1
+                            time.sleep(0.5)
+                            continue
                         break
                     else:
                         raise e
@@ -92,6 +113,7 @@ class GroqProvider(LLMProviderProtocol):
                 print(f"[RateLimit Failover Error] Gemini failover failed: {gem_err}")
 
         raise RuntimeError(f"Groq API rate limit reached across models. Details: {last_exception}")
+
 
 
 class GeminiProvider(LLMProviderProtocol):
