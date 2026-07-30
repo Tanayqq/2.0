@@ -1452,12 +1452,9 @@ CRITICAL RULES:
             sec6_body = sec6_match.group(2).strip()
             if not sec6_body or sec6_body.lower() in ["not found in available sources.", "not found in available sources"]:
                 answer_text = answer_text[:sec6_match.start()] + guidelines_text + answer_text[sec6_match.end():]
-        elif "### 6. Guideline Recommendations" not in answer_text:
+        elif rule_decisions and "### 7. Required Monitoring" in answer_text:
             sec7_idx = answer_text.find("### 7. Required Monitoring")
-            if sec7_idx != -1:
-                answer_text = answer_text[:sec7_idx] + guidelines_text + answer_text[sec7_idx:]
-            else:
-                answer_text += "\n\n" + guidelines_text
+            answer_text = answer_text[:sec7_idx] + guidelines_text + answer_text[sec7_idx:]
 
         answer_text = regex.sub(r'\n{3,}', '\n\n', answer_text).strip()
         return answer_text
