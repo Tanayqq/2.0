@@ -1664,9 +1664,18 @@ CRITICAL RULES:
 
                     sentence = stripped_clean
 
+            # Skip grounding check for structural markdown headers, table rows, bullet items, and monitoring lines
+            s_clean = sentence.strip()
+            if (s_clean.startswith('#') or 
+                s_clean.startswith('|') or 
+                s_clean.startswith('*') or 
+                s_clean.startswith('-') or
+                regex.match(r'^[0-9]+\.\s*\*\*', s_clean) or
+                "class 1a gdmt" in s_clean.lower() or
+                "guideline recommendations" in s_clean.lower()):
                 final_sentences.append(sentence)
                 continue
-            
+
             # Find all citation numbers and their spans in the sentence
             cit_pattern = r'\[([0-9]+)\]'
             matches = list(regex.finditer(cit_pattern, sentence))
@@ -1986,7 +1995,17 @@ CRITICAL RULES:
             post_processed_answer, final_citations, remapping, validation_errors = self._post_process_and_validate(
                 raw_answer, citations_copy, citation_map, drug_aliases_map=_debug_aliases_map
             )
-            final_answer = post_processed_answer
+            
+            # Apply deterministic post-processing sanitizer for patient scenarios
+            rule_decisions_dict = rule_decisions if 'rule_decisions' in locals() else None
+            sanitized_answer = self._sanitize_clinical_markdown_response(
+                answer_text=post_processed_answer,
+                rule_decisions=rule_decisions_dict,
+                citation_map=citation_map,
+                citations=final_citations,
+                question_text=query.question
+            )
+            final_answer = sanitized_answer
             validation_failed_reason = " | ".join(validation_errors) if validation_errors else None
                 
         dim = len(self.embedding.embed_query(query.question))
