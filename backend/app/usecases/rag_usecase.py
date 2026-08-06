@@ -200,6 +200,56 @@ def _balance_by_section(docs: List[Any], requested_sections: List[str], max_tota
                     
     return selected
 
+# ---------------------------------------------------------------------------
+# Drug alias map used for content-based drug detection during retrieval
+# ---------------------------------------------------------------------------
+DRUG_ALIASES: Dict[str, List[str]] = {
+    "empagliflozin": ["jardiance", "empa-reg"],
+    "sacubitril": ["entresto", "lcz696"],
+    "metformin": ["glucophage", "fortamet", "glumetza"],
+    "atorvastatin": ["lipitor"],
+    "digoxin": ["lanoxin", "digitek"],
+    "warfarin": ["coumadin", "jantoven"],
+    "amiodarone": ["cordarone", "pacerone"],
+    "spironolactone": ["aldactone"],
+    "metoprolol": ["lopressor", "toprol"],
+    "clarithromycin": ["biaxin"],
+    "valsartan": ["diovan"],
+    "canagliflozin": ["invokana"],
+    "dapagliflozin": ["farxiga"],
+    "ertugliflozin": ["steglatro"],
+    "finerenone": ["kerendia"],
+    "eplerenone": ["inspra"],
+    "lisinopril": ["prinivil", "zestril"],
+    "losartan": ["cozaar"],
+    "telmisartan": ["micardis"],
+}
+
+# Sections that are deprioritized for citation selection (weak clinical relevance)
+_WEAK_CITATION_SECTIONS = frozenset([
+    "geriatric_use", "pediatric_use", "clinical_trials",
+    "cardiovascular_outcomes_in_adults", "cardiovascular_outcomes",
+    "renal_and_cardiovascular_outcomes", "patient_counseling_information",
+    "how_supplied", "storage_and_handling", "package_label",
+])
+
+def _detect_drug_from_content(text: str, candidate_drugs: List[str] = None) -> str:
+    """
+    Scans chunk text to find the actual drug it discusses.
+    Returns the first matching drug name (lowercase), or empty string.
+    """
+    text_lower = (text or "").lower()
+    search_list = candidate_drugs or list(DRUG_ALIASES.keys())
+    for drug in search_list:
+        d_lower = drug.lower()
+        if d_lower in text_lower:
+            return d_lower
+        for alias in DRUG_ALIASES.get(d_lower, []):
+            if alias in text_lower:
+                return d_lower
+    return ""
+
+
 class ProcessClinicalQueryUseCase:
     def __init__(
         self, 
@@ -380,11 +430,13 @@ class ProcessClinicalQueryUseCase:
                         auth = cdoc.metadata.get("authority", "ADA")
                         cdoc.metadata["authority_rank"] = AUTHORITY_RANK.get(auth, 95)
                         cdoc.metadata["retrieval_mode"] = "MULTI_COLLECTION_RAG"
-                        if query.mode and query.mode.upper() in ["INTERACTION_CHECK", "PATIENT_SCENARIO"]:
-                            curr_drug = query.question.strip()
-                        else:
-                            curr_drug = resolved_drug[0] if (resolved_drug and isinstance(resolved_drug, list)) else (resolved_drug or query.question.strip())
-                        cdoc.metadata["drug_name"] = curr_drug
+                        # CRITICAL FIX: Never stamp the full query string as drug_name.
+                        # Detect the actual drug from chunk content instead.
+                        content_drug = _detect_drug_from_content(
+                            getattr(cdoc, "content", ""),
+                            drugs_to_fetch if drugs_to_fetch else None
+                        )
+                        cdoc.metadata["drug_name"] = content_drug or "General Clinical Evidence"
                         cdoc.metadata["disease_query"] = query.question.strip()
                         
                         raw_sec = cdoc.metadata.get("section") or cdoc.metadata.get("category") or ""
@@ -499,6 +551,11 @@ class ProcessClinicalQueryUseCase:
                             doc.metadata["authority_rank"] = auth_rank
                             doc.metadata["retrieval_mode"] = mode
                             doc.metadata["requested_section"] = sec
+                            # CRITICAL FIX: Always stamp the correct drug from the loop variable.
+                            # This overrides any wrong drug_name from the Qdrant payload
+                            # that leaked through when semantic fallback fired without a filter.
+                            doc.metadata["drug_name"] = drug
+                            doc.metadata["drug"] = drug
                         
                         # Sort Priority: CrossEncoder DESC -> VectorScore DESC -> AuthorityRank ASC
                         docs_for_sec.sort(key=lambda x: (x.cross_encoder_score or 0.0, x.score or 0.0, -(x.metadata.get("authority_rank") or 99)), reverse=True)
@@ -551,29 +608,49 @@ class ProcessClinicalQueryUseCase:
                         auth = cdoc.metadata.get("authority", "ADA")
                         cdoc.metadata["authority_rank"] = AUTHORITY_RANK.get(auth, 95)
                         cdoc.metadata["retrieval_mode"] = "MULTI_COLLECTION_RAG"
-                        cdoc.metadata["drug_name"] = query.question.strip()
+                        # CRITICAL FIX: Detect actual drug from content; never use full query string
+                        content_drug = _detect_drug_from_content(getattr(cdoc, "content", ""), drugs_to_fetch)
+                        cdoc.metadata["drug_name"] = content_drug or "General Clinical Evidence"
                         cdoc.metadata["section"] = cdoc.metadata.get("section", "indications")
                         final_docs.append(cdoc)
 
-        # --- Fix Retrieval Metadata Drug Stamping ---
-        # For multi-drug queries, the generic vector search might fetch a chunk about Spironolactone
-        # but stamp it with the query drug (e.g. Sacubitril). We fix that here.
-        if query.mode and query.mode.upper() == "PATIENT_SCENARIO":
-            known_drugs = ["digoxin", "amiodarone", "warfarin", "clarithromycin", "atorvastatin", "metformin", "sacubitril", "valsartan", "spironolactone", "metoprolol", "empagliflozin", "ertugliflozin", "canagliflozin", "dapagliflozin", "finerenone", "eplerenone", "lisinopril", "losartan", "telmisartan"]
+        # --- Retrieval Validation Gate ---
+        # Since we now stamp drug_name at retrieval time (loop var), the old
+        # PATIENT_SCENARIO re-stamp block is replaced by a hard validation gate.
+        # Any chunk whose metadata drug does not appear in chunk content is either
+        # re-stamped via content scan or discarded to prevent evidence contamination.
+        if drugs_to_fetch:
+            validated_final_docs = []
             for doc in final_docs:
-                doc_text = (doc.content or "").lower()
-                doc_drug = (doc.metadata.get("drug_name") or "").strip()
-                
-                # Re-stamp if the drug label is suspiciously long (e.g. the full prompt leaked) or incorrect
-                if len(doc_drug) > 30 or doc_drug.lower() not in doc_text:
-                    found = False
-                    for known_d in known_drugs:
-                        if known_d in doc_text:
-                            doc.metadata["drug_name"] = known_d.capitalize()
-                            found = True
-                            break
-                    if not found and len(doc_drug) > 30:
-                        doc.metadata["drug_name"] = "General Clinical Evidence"
+                doc_drug = (doc.metadata.get("drug_name") or "").strip().lower()
+                doc_content = (doc.content or "").lower()
+
+                # Skip validation for general/guideline chunks — they have no specific drug
+                if doc_drug in ("", "general clinical evidence"):
+                    validated_final_docs.append(doc)
+                    continue
+
+                # Verify metadata drug appears in chunk text (accounting for brand/generic aliases)
+                aliases = DRUG_ALIASES.get(doc_drug, [])
+                drug_in_text = doc_drug in doc_content or any(a in doc_content for a in aliases)
+
+                if drug_in_text:
+                    validated_final_docs.append(doc)
+                else:
+                    # Content scan: find what drug is actually in this chunk
+                    real_drug = _detect_drug_from_content(doc.content, drugs_to_fetch)
+                    if real_drug:
+                        doc.metadata["drug_name"] = real_drug
+                        doc.metadata["drug"] = real_drug
+                        validated_final_docs.append(doc)
+                        logger.info("chunk_drug_restamped",
+                                    old=doc_drug, new=real_drug, chunk_id=doc.id)
+                    else:
+                        logger.warning("chunk_drug_mismatch_dropped",
+                                       stamped=doc_drug, chunk_id=doc.id,
+                                       content_preview=(doc.content or "")[:80])
+                        # Discard — do not send contaminated chunk to LLM
+            final_docs = validated_final_docs
 
         # --- Source Diversity Cap ---
         # Prevent any single drug from dominating the context window.
@@ -641,6 +718,9 @@ class ProcessClinicalQueryUseCase:
                             gdoc.cross_encoder_score = 0.90
                             gdoc.metadata["authority_rank"] = AUTHORITY_RANK.get(gdoc.metadata.get("authority", "DailyMed"), 99)
                             gdoc.metadata["retrieval_mode"] = "EVIDENCE_COVERAGE_FILL"
+                            # CRITICAL FIX: Stamp correct drug on gap-fill chunks
+                            gdoc.metadata["drug_name"] = gap_drug
+                            gdoc.metadata["drug"] = gap_drug
                             final_docs.append(gdoc)
                         logger.info("evidence_coverage_filled", drug=gap_drug, chunks_added=len(gap_docs[:2]))
                     else:
@@ -1308,19 +1388,20 @@ CRITICAL RULES:
         # We prefer clinically relevant sections AND verify the chunk text actually
         # mentions the drug (guards against metadata/content mismatches).
         drug_citation_map: Dict[str, str] = {}
-        KNOWN_CLINICAL_DRUGS = [
-            "digoxin", "amiodarone", "warfarin", "clarithromycin", "atorvastatin",
-            "metformin", "sacubitril", "valsartan", "spironolactone", "metoprolol",
-            "empagliflozin", "ertugliflozin", "canagliflozin", "dapagliflozin",
-            "finerenone", "eplerenone", "lisinopril", "losartan", "telmisartan",
-        ]
+        KNOWN_CLINICAL_DRUGS_SET = set(DRUG_ALIASES.keys())
 
         if citation_map and citation_map.entries:
             def get_section_priority(sec: str) -> int:
                 sec = (sec or "").lower()
-                if "interaction" in sec: return 3
-                if "warning" in sec or "precaution" in sec or "contraindication" in sec: return 2
-                if "dosage" in sec or "administration" in sec: return 1
+                # Strong clinical evidence sections — high priority
+                if "interaction" in sec: return 5
+                if "warning" in sec or "precaution" in sec or "contraindication" in sec or "boxed" in sec: return 4
+                if "renal" in sec or "hepatic" in sec or "dose_adjustment" in sec: return 3
+                if "dosage" in sec or "administration" in sec: return 2
+                if "mechanism" in sec or "pharmacology" in sec or "indication" in sec: return 1
+                # Weak sections — deprioritized (but still used if nothing better exists)
+                sec_clean = sec.replace(" ", "_")
+                if sec_clean in _WEAK_CITATION_SECTIONS: return -1
                 return 0
 
             sorted_entries = sorted(
@@ -1333,25 +1414,28 @@ CRITICAL RULES:
                 if "no specific instructions" in e_text or "no information provided" in e_text or len(e_text.strip()) < 30:
                     continue
 
-                # Determine the REAL drug this chunk is about by reading the text
-                # If the metadata drug is wrong (e.g. full query string, or mismatched),
-                # override it with the drug that actually appears in the chunk text.
+                # Determine the REAL drug this chunk is about by reading the text.
+                # Always verify — metadata may have been wrong before the validation gate.
                 metadata_drug = (entry.drug or "").lower().strip()
-                real_drug = metadata_drug
-                if len(metadata_drug) > 30 or (metadata_drug and metadata_drug not in e_text):
-                    # Metadata drug doesn't appear in text — find which known drug does
-                    for known_d in KNOWN_CLINICAL_DRUGS:
-                        if known_d in e_text:
-                            real_drug = known_d
-                            break
-                    else:
-                        real_drug = ""  # No match — skip this chunk for citation mapping
+                real_drug = ""
+
+                # Check metadata drug first (it should be correct now after the gate)
+                if metadata_drug and metadata_drug in e_text:
+                    real_drug = metadata_drug
+                elif metadata_drug:
+                    aliases = DRUG_ALIASES.get(metadata_drug, [])
+                    if any(a in e_text for a in aliases):
+                        real_drug = metadata_drug
+
+                # Fall back to content scan if metadata drug not found
+                if not real_drug:
+                    real_drug = _detect_drug_from_content(entry.text)
 
                 if real_drug:
                     first_w = real_drug.split()[0]
                     drug_citation_map[real_drug] = cid
                     drug_citation_map[first_w] = cid
-                    for known_d in KNOWN_CLINICAL_DRUGS:
+                    for known_d in KNOWN_CLINICAL_DRUGS_SET:
                         if known_d in real_drug:
                             drug_citation_map[known_d] = cid
 
@@ -1540,7 +1624,7 @@ CRITICAL RULES:
             if citation_num in valid_ids:
                 standard_citation = f"[{citation_num}]"
             else:
-                standard_citation = "[Unsupported Citation Removed]"
+                standard_citation = "*(Evidence unavailable in retrieved sources.)*"
                 
             new_answer += answer_text[last_idx:start] + standard_citation
             last_idx = end
@@ -1549,23 +1633,20 @@ CRITICAL RULES:
         answer_text = new_answer
 
         # 3. Pull citations immediately adjacent to preceding characters (no whitespace before)
-        answer_text = regex.sub(r'[ \t]+(\[(?:[0-9]+|Unsupported Citation Removed)\])', r'\1', answer_text)
+        answer_text = regex.sub(r'[ \t]+(\[(?:[0-9]+)\])', r'\1', answer_text)
 
         # 4. Merge adjacent bracket sequences and remove duplicates
         def merge_brackets(match):
             brackets = match.group(0)
             nums = regex.findall(r'\[([0-9]+)\]', brackets)
-            unsupported = "[Unsupported Citation Removed]" in brackets
             seen = []
             for n in nums:
                 if n not in seen:
                     seen.append(n)
             result = "".join(f"[{n}]" for n in seen)
-            if unsupported and not result:
-                result = "[Unsupported Citation Removed]"
-            return result
+            return result or ""
 
-        answer_text = regex.sub(r'(?:\[[0-9]+\]|\[Unsupported Citation Removed\])+', merge_brackets, answer_text)
+        answer_text = regex.sub(r'(?:\[[0-9]+\])+', merge_brackets, answer_text)
         
         # Remove LLM-generated debug artifacts like "DOCUMENT 1", "DOCUMENT 2", or "[Warfarin - Drug Interactions - DOCUMENT 1]"
         artifact_patterns = [
@@ -2287,12 +2368,14 @@ Identity Profile (Grounded FDA Label Metadata):
             pass
         
         
-        # Compute Groundedness
-        if final_validation_errors:
-            error_deduction = len(final_validation_errors) * 12
-            groundedness = max(40, 100 - error_deduction)
-        else:
-            groundedness = 100 if final_citations else 0
+        # Compute Groundedness — block-level ratio (grounded blocks / total content blocks)
+        import re as _re
+        _blocks = [b.strip() for b in _re.split(r'\n{2,}', final_answer_text or "") if b.strip()]
+        _content_blocks = [b for b in _blocks if not b.startswith('#')]  # Exclude section headers
+        _total = max(1, len(_content_blocks))
+        _errors = len(final_validation_errors) if final_validation_errors else 0
+        _grounded = max(0, _total - _errors)
+        groundedness = int((_grounded / _total) * 100)
         
         # Build Provenance Block
         provenance_block = []
