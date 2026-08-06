@@ -290,6 +290,58 @@ class ClinicalRuleEngine:
                     "reason": "GDMT RAAS inhibition for CKD and hypertension."
                 }
 
+        # Linezolid
+        if has_drug("linezolid"):
+            if has_drug("fluoxetine") or has_drug("sumatriptan") or has_drug("tramadol") or has_drug("sertraline"):
+                med_decisions["Linezolid"] = {
+                    "action": "HOLD",
+                    "reason": "Reversible non-selective MAO inhibitor: Concurrent use with serotonergic drugs (Fluoxetine, Sumatriptan, Tramadol) causes life-threatening Serotonin Syndrome. Switch antibiotic to Vancomycin or Daptomycin."
+                }
+            else:
+                med_decisions["Linezolid"] = {
+                    "action": "CONTINUE",
+                    "reason": "Oxazolidinone antibacterial. Monitor complete blood count weekly for myelosuppression."
+                }
+
+        # Fluoxetine
+        if has_drug("fluoxetine"):
+            if has_drug("linezolid"):
+                med_decisions["Fluoxetine"] = {
+                    "action": "HOLD",
+                    "reason": "Potent SSRI: Concurrent Linezolid (MAOI) therapy risks severe Serotonin Syndrome (hyperthermia, autonomic instability, clonus). Require 5-week washout before MAOI."
+                }
+            else:
+                med_decisions["Fluoxetine"] = {
+                    "action": "CONTINUE",
+                    "reason": "SSRI therapy for depression. Monitor for drug interactions and suicidal ideation."
+                }
+
+        # Sumatriptan
+        if has_drug("sumatriptan"):
+            if has_drug("linezolid"):
+                med_decisions["Sumatriptan"] = {
+                    "action": "HOLD",
+                    "reason": "Contraindicated with MAO inhibitors like Linezolid due to severe serotonergic vasospastic reaction and Serotonin Syndrome."
+                }
+            else:
+                med_decisions["Sumatriptan"] = {
+                    "action": "CONTINUE",
+                    "reason": "Acute migraine therapy. Use PRN; limit to max 200mg/24 hours."
+                }
+
+        # Tramadol
+        if has_drug("tramadol"):
+            if has_drug("linezolid") or has_drug("fluoxetine"):
+                med_decisions["Tramadol"] = {
+                    "action": "HOLD",
+                    "reason": "Inhibits serotonin reuptake: Concurrent Linezolid (MAOI) or Fluoxetine risks Serotonin Syndrome and lowers seizure threshold. Switch to non-serotonergic analgesic."
+                }
+            else:
+                med_decisions["Tramadol"] = {
+                    "action": "CONTINUE",
+                    "reason": "Analgesic for pain. Use lowest effective dose; monitor for CNS depression."
+                }
+
         # ----------------------------------------------------
         # 3. MAJOR INTERACTION ENGINE MATRIX
         # ----------------------------------------------------
@@ -340,6 +392,24 @@ class ClinicalRuleEngine:
                 "pair": "Dabigatran ↔ Ticagrelor ↔ Aspirin",
                 "severity": "HIGH",
                 "mechanism": "Triple antithrombotic therapy markedly elevates major gastrointestinal and intracranial bleeding risks; limit duration post-PCI."
+            })
+        if has_drug("linezolid") and (has_drug("fluoxetine") or has_drug("sertraline")):
+            major_interactions.append({
+                "pair": "Linezolid ↔ Fluoxetine",
+                "severity": "CRITICAL",
+                "mechanism": "Linezolid non-selective MAO inhibition combined with Fluoxetine SSRI action triggers fatal Serotonin Syndrome (hyperthermia, rigidity, autonomic failure)."
+            })
+        if has_drug("linezolid") and has_drug("sumatriptan"):
+            major_interactions.append({
+                "pair": "Linezolid ↔ Sumatriptan",
+                "severity": "CRITICAL",
+                "mechanism": "Linezolid MAO inhibition impairs Sumatriptan clearance, precipitating severe vasospastic reactions and serotonin toxicity."
+            })
+        if has_drug("linezolid") and has_drug("tramadol"):
+            major_interactions.append({
+                "pair": "Linezolid ↔ Tramadol",
+                "severity": "HIGH",
+                "mechanism": "Dual serotonergic stimulation and MAO inhibition increases risks of Serotonin Syndrome and severe seizure activity."
             })
 
         # ----------------------------------------------------

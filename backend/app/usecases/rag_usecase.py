@@ -223,6 +223,16 @@ DRUG_ALIASES: Dict[str, List[str]] = {
     "lisinopril": ["prinivil", "zestril"],
     "losartan": ["cozaar"],
     "telmisartan": ["micardis"],
+    "linezolid": ["zyvox"],
+    "fluoxetine": ["prozac", "sarafem"],
+    "sumatriptan": ["imitrex", "onzetra"],
+    "tramadol": ["ultram", "conzip"],
+    "simvastatin": ["zocor"],
+    "colchicine": ["colcrys", "mitigare"],
+    "fluconazole": ["diflucan"],
+    "allopurinol": ["zyloprim", "aloprim"],
+    "dabigatran": ["pradaxa"],
+    "ticagrelor": ["brilinta"],
 }
 
 # ---------------------------------------------------------------------------
