@@ -1527,22 +1527,35 @@ CRITICAL RULES:
         decisions_map = rule_decisions.get("decisions", {}) if rule_decisions else {}
 
         # Build exact per-drug citation lookup map: drug_lower -> citation_id
-        # We prefer clinically relevant sections (via _get_section_score)
-        # and index multi-drug chunks under all drugs mentioned in them.
+        # We prefer primary drug label chunks (score +500 boost) over co-mentioned DDI chunks
+        # and strictly EXCLUDE General Clinical Evidence (guideline chunks).
         drug_citation_map: Dict[str, str] = {}
 
         if citation_map and citation_map.entries:
+            def get_entry_score(entry) -> int:
+                base_score = _get_section_score(entry.section)
+                e_drug = (entry.drug or "").lower().strip()
+                # Exclude General Clinical Evidence (guidelines) from drug-specific lookup map
+                if e_drug in ("", "general clinical evidence"):
+                    return -1000
+                # Give +500 boost if chunk text is primarily about the metadata drug
+                e_text = (entry.text or "").lower()
+                if e_drug and e_drug in e_text:
+                    return base_score + 500
+                return base_score
+
             sorted_entries = sorted(
                 citation_map.entries.items(),
-                key=lambda x: _get_section_score(x[1].section)
+                key=lambda x: get_entry_score(x[1])
             )
 
             for cid, entry in sorted_entries:
+                if get_entry_score(entry) < 0:
+                    continue
                 e_text = (entry.text or "").lower()
                 if "no specific instructions" in e_text or "no information provided" in e_text or len(e_text.strip()) < 30:
                     continue
 
-                # Multi-drug indexing: find all drugs mentioned in entry.text or entry.drug
                 metadata_drug = (entry.drug or "").lower().strip()
                 detected_drugs = _detect_all_drugs_in_content(entry.text)
                 if metadata_drug and metadata_drug not in detected_drugs and metadata_drug in e_text:
@@ -1555,23 +1568,29 @@ CRITICAL RULES:
 
         def get_citation_for_drug(drug_name: str) -> str:
             if not drug_name or not citation_map or not citation_map.entries:
-                return "[1]"
+                return ""
 
-            clean_name = regex.sub(r'[\(\)\[\]]', '', drug_name).strip().lower()
-            first_word = clean_name.split()[0] if clean_name else ""
+            # Normalize drug name: replace slashes, hyphens, brackets with spaces
+            clean_name = regex.sub(r'[\(\)\[\]/\-]', ' ', drug_name).strip().lower()
+            tokens = [t for t in clean_name.split() if len(t) >= 3 and t not in ["tablets", "capsules", "extended", "release", "solution"]]
 
+            # Try full clean_name
             if clean_name in drug_citation_map:
                 return f"[{drug_citation_map[clean_name]}]"
-            if first_word in drug_citation_map:
-                return f"[{drug_citation_map[first_word]}]"
 
-            for cid, entry in citation_map.entries.items():
-                e_drug = (entry.drug or "").lower()
-                if e_drug and (e_drug == clean_name or e_drug == first_word):
-                    return f"[{cid}]"
+            # Try individual drug tokens (e.g. "sacubitril", "valsartan" from "Sacubitril/Valsartan")
+            found_cids = []
+            for t in tokens:
+                if t in drug_citation_map:
+                    cid = drug_citation_map[t]
+                    if cid not in found_cids:
+                        found_cids.append(cid)
 
-            # Strict fallback: if no match, return [1]
-            return "[1]"
+            if found_cids:
+                return "".join(f"[{cid}]" for cid in found_cids)
+
+            # Strict policy: NEVER fall back to [1]. Return empty string if no matching drug chunk.
+            return ""
 
         # In patient scenarios, ALWAYS format the 8 sections even if the rule engine found no drugs
         is_patient_scenario = True if "patient" in question_text.lower() or "male" in question_text.lower() or "female" in question_text.lower() else False
@@ -1646,9 +1665,17 @@ CRITICAL RULES:
             elec_bullets.append("- Maintain Mg²⁺ > 2.0 mEq/L to prevent Digoxin toxicity and QTc prolongation.")
             sec5_text = f"### 5. Electrolyte Issues\n" + "\n".join(elec_bullets) + "\n\n"
 
-            # SECTION 6: Guideline Recommendations
-            sac_cit = get_citation_for_drug("Sacubitril")
-            sec6_text = f"### 6. Guideline Recommendations\nClass 1A GDMT recommendations apply for HFrEF/CKD cardiorenal management per ACC/AHA 2024 & KDIGO 2024. {sac_cit}\n\n"
+            # SECTION 6: Guideline Recommendations — target actual guideline chunks (KDIGO/ADA/ACC/AHA)
+            guideline_cid = None
+            if citation_map and citation_map.entries:
+                for cid, entry in citation_map.entries.items():
+                    e_drug = (entry.drug or "").strip()
+                    e_auth = (getattr(entry, "authority", "") or "").upper()
+                    if e_drug == "General Clinical Evidence" or any(g in e_auth for g in ["KDIGO", "ADA", "ACC", "AHA", "ESC"]):
+                        guideline_cid = cid
+                        break
+            guide_cit = f"[{guideline_cid}]" if guideline_cid else ""
+            sec6_text = f"### 6. Guideline Recommendations\nClass 1A GDMT recommendations apply for HFrEF/CKD cardiorenal management per ACC/AHA 2024 & KDIGO 2024. {guide_cit}\n\n"
 
             # SECTION 7: Required Monitoring — header and content on separate lines
             sec7_lines = ["### 7. Required Monitoring", ""]
@@ -1784,37 +1811,54 @@ CRITICAL RULES:
             cleaned_lines.append(line)
         answer_text = '\n'.join(cleaned_lines)
 
-        # 5. Split answer into blocks (paragraphs/tables) for grounding check
-        # Instead of splitting by sentence, we split by block to preserve markdown structures
-        blocks = regex.split(r'\n{2,}', answer_text)
-        
+        # Split answer into lines for line-level grounding validation
+        blocks = [line.strip() for line in answer_text.split('\n') if line.strip()]
         validation_errors = []
-        
+
         def get_keywords(text: str):
             words = regex.findall(r'\b[a-zA-Z]{3,}\b', text.lower())
-            stop_words = {"the", "and", "for", "with", "are", "but", "not", "this", "that", "from", "patients", "treatment", "with", "tablets", "administration"}
+            stop_words = {"the", "and", "for", "with", "are", "but", "not", "this", "that", "from", "patients", "treatment", "tablets", "administration"}
             return {w for w in words if w not in stop_words}
 
         for block in blocks:
-            if not block.strip():
+            s_clean = block.lower()
+            if "not found in available sources" in s_clean or s_clean.startswith('#') or s_clean.startswith('|---|'):
                 continue
-                
-            s_clean = block.strip().lower()
-            if "not found in available sources" in s_clean or s_clean.startswith('#'):
+
+            # Find all citation numbers in the line
+            cit_pattern = r'\[([0-9]+)\]'
+            matches = list(regex.finditer(cit_pattern, block))
+
+            clean_block_text = regex.sub(r'\s*\[(?:[0-9]+)\]', '', block).strip()
+            block_kws = get_keywords(clean_block_text)
+
+            if not block_kws:
                 continue
-                
-            # Structured items (table rows, bullets, numbered lists) are EXEMPT from uncited removal/errors
-            is_structured_rule_item = (
-                '|' in block or 
-                block.strip().startswith('*') or 
-                block.strip().startswith('-') or
-                bool(regex.match(r'^[0-9]+\.', block.strip())) or
-                "class 1a gdmt" in s_clean or
-                "guideline recommendations" in s_clean
-            )
-            
-            if is_structured_rule_item:
-                continue
+
+            if matches:
+                for match in matches:
+                    cit_num = match.group(1)
+                    entry = citation_map.entries.get(cit_num)
+
+                    if not entry:
+                        validation_errors.append(f"Orphan citation [{cit_num}] for line: '{clean_block_text[:80]}...'")
+                    else:
+                        chunk_drug = (entry.drug or "").lower().strip()
+                        chunk_text = (entry.text or "").lower()
+
+                        # Extract drugs mentioned in this line
+                        line_drugs = set(_detect_all_drugs_in_content(clean_block_text))
+
+                        # Check false grounding: line discusses specific drug(s), but cited chunk is about another drug or guidelines
+                        if line_drugs and chunk_drug:
+                            if chunk_drug == "general clinical evidence" and not ("guideline" in s_clean or "gdmt" in s_clean):
+                                validation_errors.append(
+                                    f"False grounding [{cit_num}]: line about {line_drugs} cited guideline chunk"
+                                )
+                            elif chunk_drug not in line_drugs and not any(a in chunk_text for d in line_drugs for a in DRUG_ALIASES.get(d, [])):
+                                validation_errors.append(
+                                    f"False grounding [{cit_num}]: line about {line_drugs} cited chunk for '{chunk_drug}'"
+                                )
 
             # Find all citation numbers in the block
             cit_pattern = r'\[([0-9]+)\]'
