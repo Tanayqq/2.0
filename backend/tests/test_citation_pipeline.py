@@ -219,6 +219,64 @@ def test_evidence_integrity_check():
     assert len(result) == 1
     assert result[0].id == "uuid-1"
 
+def test_scenario_6_multi_drug_citation_binding_and_guideline_separation():
+    """
+    Test 6: Multi-drug scenario validating:
+    - Digoxin cites Digoxin chunk [3], NOT Metformin [2] or KDIGO [1]
+    - Sacubitril/Valsartan cites Sacubitril chunk [4] via token matching
+    - Metoprolol (no chunk) gets NO citation tag, NEVER falls back to [1]
+    - Section 6 Guideline Recommendations cites KDIGO chunk [1]
+    """
+    from app.citation_map import CitationMap
+    cmap = CitationMap()
+    cmap.add_entry(uuid="uuid-1", citation_number="1", source="KDIGO 2024", drug="General Clinical Evidence", section="Guideline Recommendations", text="KDIGO 2024 CKD Management Guidelines")
+    cmap.add_entry(uuid="uuid-2", citation_number="2", source="DailyMed", drug="Metformin", section="Contraindications", text="Metformin is contraindicated in eGFR < 30 mL/min due to lactic acidosis")
+    cmap.add_entry(uuid="uuid-3", citation_number="3", source="DailyMed", drug="Digoxin", section="Drug Interactions", text="Amiodarone inhibits P-gp increasing Digoxin exposure")
+    cmap.add_entry(uuid="uuid-4", citation_number="4", source="DailyMed", drug="Sacubitril", section="Warnings and Precautions", text="Sacubitril/Valsartan requires starting at low dose in severe renal impairment")
+
+    citations = [
+        Citation(document_id="1", source="KDIGO 2024", snippet="KDIGO 2024", uuid="uuid-1", drug="General Clinical Evidence", section="Guideline Recommendations", count=0),
+        Citation(document_id="2", source="DailyMed", snippet="Metformin", uuid="uuid-2", drug="Metformin", section="Contraindications", count=0),
+        Citation(document_id="3", source="DailyMed", snippet="Digoxin", uuid="uuid-3", drug="Digoxin", section="Drug Interactions", count=0),
+        Citation(document_id="4", source="DailyMed", snippet="Sacubitril", uuid="uuid-4", drug="Sacubitril", section="Warnings and Precautions", count=0),
+    ]
+
+    rule_decisions = {
+        "decisions": {
+            "Metformin": {"action": "STOP", "reason": "eGFR 23 < 30"},
+            "Digoxin": {"action": "REDUCE DOSE", "reason": "Amiodarone DDI"},
+            "Sacubitril/Valsartan": {"action": "REDUCE DOSE", "reason": "eGFR 23"},
+            "Metoprolol": {"action": "CONTINUE", "reason": "HFrEF Class 1A GDMT"}
+        },
+        "immediate_dangers": ["Severe Hyperkalemia (K+ 6.2)"],
+        "major_interactions": [{"pair": "Amiodarone ↔ Digoxin", "severity": "CRITICAL", "mechanism": "P-gp inhibition"}],
+        "mandatory_monitoring": ["Serum Potassium (K+): Check q24h"],
+        "labs": {"egfr": 23.0, "potassium": 6.2}
+    }
+
+    sanitized = ProcessClinicalQueryUseCase._sanitize_clinical_markdown_response(
+        answer_text="raw llm answer",
+        rule_decisions=rule_decisions,
+        citation_map=cmap,
+        citations=citations,
+        question_text="65 year old male patient with HFrEF, CKD stage 4 (eGFR 23), potassium 6.2"
+    )
+
+    # 1. Metformin row MUST cite [2]
+    assert "| Metformin | STOP | eGFR 23 < 30 | [2] |" in sanitized
+
+    # 2. Digoxin row MUST cite [3] (NOT [1] or [2])
+    assert "| Digoxin | REDUCE DOSE | Amiodarone DDI | [3] |" in sanitized
+
+    # 3. Sacubitril/Valsartan row MUST cite [4] (token match for Sacubitril)
+    assert "| Sacubitril/Valsartan | REDUCE DOSE | eGFR 23 | [4] |" in sanitized
+
+    # 4. Metoprolol row MUST have empty citation | | (NEVER fall back to [1])
+    assert "| Metoprolol | CONTINUE | HFrEF Class 1A GDMT |  |" in sanitized
+
+    # 5. Section 6 Guideline Recommendations MUST cite KDIGO chunk [1]
+    assert "### 6. Guideline Recommendations\nClass 1A GDMT recommendations apply for HFrEF/CKD cardiorenal management per ACC/AHA 2024 & KDIGO 2024. [1]" in sanitized
+
 if __name__ == "__main__":
     test_scenario_1_one_chunk()
     test_scenario_2_two_chunks()
@@ -229,5 +287,7 @@ if __name__ == "__main__":
     test_content_signature_dedup()
     test_multi_drug_content_detection()
     test_evidence_integrity_check()
+    test_scenario_6_multi_drug_citation_binding_and_guideline_separation()
     print("All pipeline test cases completed successfully!")
+
 
