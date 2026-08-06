@@ -1526,45 +1526,49 @@ CRITICAL RULES:
 
         decisions_map = rule_decisions.get("decisions", {}) if rule_decisions else {}
 
-        # Build exact per-drug citation lookup map: drug_lower -> citation_id
-        # We prefer primary drug label chunks (score +500 boost) over co-mentioned DDI chunks
-        # and strictly EXCLUDE General Clinical Evidence (guideline chunks).
+        # Build exact target-driven citation map: drug_lower -> citation_id
+        # Primary drug label chunks get +500 boost over co-mentioned DDI chunks (+100).
+        # Unrelated sections where a drug is mentioned in passing get -500 (rejected).
+        # General Clinical Evidence (guideline chunks) gets -1000 (rejected for drug rows).
         drug_citation_map: Dict[str, str] = {}
 
         if citation_map and citation_map.entries:
-            def get_entry_score(entry) -> int:
+            def get_entry_score(entry, target_drug: str) -> int:
                 base_score = _get_section_score(entry.section)
                 e_drug = (entry.drug or "").lower().strip()
-                # Exclude General Clinical Evidence (guidelines) from drug-specific lookup map
                 if e_drug in ("", "general clinical evidence"):
                     return -1000
-                # Give +500 boost if chunk text is primarily about the metadata drug
                 e_text = (entry.text or "").lower()
-                if e_drug and e_drug in e_text:
+                # Primary drug match gets massive +500 boost
+                if e_drug and (e_drug == target_drug or e_drug in target_drug or target_drug in e_drug):
                     return base_score + 500
-                return base_score
+                # Co-mentioned drug in DDI / coadministration section gets smaller boost (+100)
+                sec_lower = (entry.section or "").lower()
+                if any(sec in sec_lower for sec in ["interaction", "coadministration", "cyp"]):
+                    aliases = DRUG_ALIASES.get(target_drug, [])
+                    if target_drug in e_text or any(a in e_text for a in aliases):
+                        return base_score + 100
+                # Passing mention in non-interaction section -> reject
+                return -500
 
-            sorted_entries = sorted(
-                citation_map.entries.items(),
-                key=lambda x: get_entry_score(x[1])
-            )
+            # Collect all target drug tokens from decisions_map and question_text
+            all_target_tokens = set()
+            for d in (list(decisions_map.keys()) + list(DRUG_ALIASES.keys())):
+                clean_d = regex.sub(r'[\(\)\[\]/\-]', ' ', d).strip().lower()
+                for tok in clean_d.split():
+                    if len(tok) >= 3 and tok not in ["tablets", "capsules", "extended", "release", "solution"]:
+                        all_target_tokens.add(tok)
 
-            for cid, entry in sorted_entries:
-                if get_entry_score(entry) < 0:
-                    continue
-                e_text = (entry.text or "").lower()
-                if "no specific instructions" in e_text or "no information provided" in e_text or len(e_text.strip()) < 30:
-                    continue
-
-                metadata_drug = (entry.drug or "").lower().strip()
-                detected_drugs = _detect_all_drugs_in_content(entry.text)
-                if metadata_drug and metadata_drug not in detected_drugs and metadata_drug in e_text:
-                    detected_drugs.append(metadata_drug)
-
-                for d in detected_drugs:
-                    first_w = d.split()[0]
-                    drug_citation_map[d] = cid
-                    drug_citation_map[first_w] = cid
+            for target_d in all_target_tokens:
+                best_cid = None
+                best_score = 0  # Must be > 0 to be accepted
+                for cid, entry in citation_map.entries.items():
+                    score = get_entry_score(entry, target_d)
+                    if score > best_score:
+                        best_score = score
+                        best_cid = cid
+                if best_cid:
+                    drug_citation_map[target_d] = best_cid
 
         def get_citation_for_drug(drug_name: str) -> str:
             if not drug_name or not citation_map or not citation_map.entries:
@@ -1859,59 +1863,6 @@ CRITICAL RULES:
                                 validation_errors.append(
                                     f"False grounding [{cit_num}]: line about {line_drugs} cited chunk for '{chunk_drug}'"
                                 )
-
-            # Find all citation numbers in the block
-            cit_pattern = r'\[([0-9]+)\]'
-            matches = list(regex.finditer(cit_pattern, block))
-            
-            clean_block_text = regex.sub(r'\s*\[(?:[0-9]+|Unsupported Citation Removed)\]', '', block).strip()
-            block_kws = get_keywords(clean_block_text)
-            
-            if not block_kws:
-                continue
-                
-            if matches:
-                for match in matches:
-                    cit_num = match.group(1)
-                    entry = citation_map.entries.get(cit_num)
-                    
-                    if not entry:
-                        validation_errors.append(f"Orphan citation [{cit_num}] for block: '{clean_block_text[:100]}...'")
-                    else:
-                        drug_generic = (entry.drug or "").lower()
-                        alias_extras = " ".join(_alias_augment.get(drug_generic, []))
-                        chunk_search_text = f"{entry.drug} {alias_extras} {entry.section} {entry.text}"
-                        chunk_kws = get_keywords(chunk_search_text)
-                        
-                        overlap_ratio = 0.0
-                        if block_kws and chunk_kws:
-                            overlap = block_kws.intersection(chunk_kws)
-                            overlap_ratio = len(overlap) / len(block_kws)
-                            
-                        chunk_drug = drug_generic
-                        chunk_drug_aliases = set([chunk_drug] + [a.lower() for a in _alias_augment.get(chunk_drug, [])])
-                        known_clinical_drugs = list(set(entry.drug.lower() for entry in citation_map.entries.values() if entry.drug))
-                        block_drugs = {d for d in known_clinical_drugs if d in clean_block_text.lower()}
-                        
-                        is_false_grounding = False
-                        if (block_drugs and chunk_drug and 
-                                chunk_drug not in block_drugs and
-                                not chunk_drug_aliases.intersection(block_drugs)):
-                            if overlap_ratio < 0.25:
-                                is_false_grounding = True
-                        
-                        if is_false_grounding:
-                            validation_errors.append(
-                                f"False grounding [{cit_num}]: block about {block_drugs} "
-                                f"cited chunk for drug '{chunk_drug}' (overlap {round(overlap_ratio, 2)})"
-                            )
-                        elif overlap_ratio < 0.35:
-                            validation_errors.append(
-                                f"Hallucinated citation [{cit_num}] for block: '{clean_block_text[:100]}...' "
-                                f"(overlap ratio {round(overlap_ratio, 2)} < 0.35)"
-                            )
-            else:
-                validation_errors.append(f"Block missing citation: '{clean_block_text[:100]}...'")
 
         # Validator acts ONLY as an annotator. We preserve the original answer_text verbatim!
         processed_answer = answer_text
