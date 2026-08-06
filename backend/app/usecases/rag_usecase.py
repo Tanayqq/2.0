@@ -225,13 +225,56 @@ DRUG_ALIASES: Dict[str, List[str]] = {
     "telmisartan": ["micardis"],
 }
 
-# Sections that are deprioritized for citation selection (weak clinical relevance)
-_WEAK_CITATION_SECTIONS = frozenset([
-    "geriatric_use", "pediatric_use", "clinical_trials",
-    "cardiovascular_outcomes_in_adults", "cardiovascular_outcomes",
-    "renal_and_cardiovascular_outcomes", "patient_counseling_information",
-    "how_supplied", "storage_and_handling", "package_label",
-])
+# ---------------------------------------------------------------------------
+# Section priority scores for ranking evidence quality (higher is better)
+# ---------------------------------------------------------------------------
+SECTION_PRIORITY_SCORES: Dict[str, int] = {
+    "drug_interactions": 100,
+    "cyp_interactions": 100,
+    "coadministration": 98,
+    "contraindications": 95,
+    "boxed_warning": 93,
+    "warnings_and_precautions": 90,
+    "warnings": 88,
+    "precautions": 85,
+    "renal_impairment": 85,
+    "hepatic_impairment": 83,
+    "dose_adjustment": 82,
+    "dosage_and_administration": 80,
+    "administration": 78,
+    "renal_dose": 77,
+    "mechanism_of_action": 60,
+    "clinical_pharmacology": 58,
+    "indications": 50,
+    "adverse_reactions": 45,
+    "monitoring": 44,
+    "description": 20,
+    "clinical_trials": 10,
+    "geriatric_use": 5,
+    "pediatric_use": 5,
+    "cardiovascular_outcomes": 3,
+    "cardiovascular_outcomes_in_adults": 3,
+    "patient_counseling_information": 2,
+}
+
+SEMANTIC_MIN_SCORE: float = 0.35
+
+def _get_section_score(section: str) -> int:
+    """Returns numeric priority score for a clinical section."""
+    s = (section or "").lower().replace(" ", "_")
+    if s in SECTION_PRIORITY_SCORES:
+        return SECTION_PRIORITY_SCORES[s]
+    for key, score in SECTION_PRIORITY_SCORES.items():
+        if key in s:
+            return score
+    return 30
+
+def _content_sig(drug: str, section: str, content: str) -> str:
+    """Generates a short hash signature to deduplicate identical drug+section+content chunks."""
+    import hashlib
+    normalized = " ".join((content or "").lower().split())[:300]
+    key = f"{(drug or '').lower()}|{(section or '').lower()}|{normalized}"
+    return hashlib.sha256(key.encode()).hexdigest()[:16]
 
 def _detect_drug_from_content(text: str, candidate_drugs: List[str] = None) -> str:
     """
@@ -248,6 +291,20 @@ def _detect_drug_from_content(text: str, candidate_drugs: List[str] = None) -> s
             if alias in text_lower:
                 return d_lower
     return ""
+
+def _detect_all_drugs_in_content(text: str, candidate_drugs: List[str] = None) -> List[str]:
+    """
+    Scans chunk text and returns ALL matching drug names (lowercase).
+    """
+    text_lower = (text or "").lower()
+    search_list = candidate_drugs or list(DRUG_ALIASES.keys())
+    found = []
+    for drug in search_list:
+        d_lower = drug.lower()
+        if d_lower in text_lower or any(alias in text_lower for alias in DRUG_ALIASES.get(d_lower, [])):
+            if d_lower not in found:
+                found.append(d_lower)
+    return found
 
 
 class ProcessClinicalQueryUseCase:
@@ -532,6 +589,9 @@ class ProcessClinicalQueryUseCase:
                                 filters=qdrant_filter
                             )
                         if sem_docs:
+                            # Apply similarity threshold filter
+                            sem_docs = [d for d in sem_docs if (d.score or 0.0) >= SEMANTIC_MIN_SCORE]
+                        if sem_docs:
                             mode = "SEMANTIC_PARENT"
                             docs_for_sec = sem_docs[:3]
                             step_trace["attempts"].append({"type": "Semantic Search", "chunks": len(sem_docs)})
@@ -614,43 +674,93 @@ class ProcessClinicalQueryUseCase:
                         cdoc.metadata["section"] = cdoc.metadata.get("section", "indications")
                         final_docs.append(cdoc)
 
-        # --- Retrieval Validation Gate ---
-        # Since we now stamp drug_name at retrieval time (loop var), the old
-        # PATIENT_SCENARIO re-stamp block is replaced by a hard validation gate.
-        # Any chunk whose metadata drug does not appear in chunk content is either
-        # re-stamped via content scan or discarded to prevent evidence contamination.
+        # --- Retrieval Validation Gate & Discard-Only Policy ---
+        # Any chunk whose metadata drug does not appear in chunk content is DISCARDED
+        # (never reassigned). Drops trigger targeted retry for missing drugs.
+        # Identical drug+section+content chunks are deduplicated via content signature hash.
+        # Multi-drug chunks are detected and annotated with metadata["drugs"].
+        needs_retry_drugs: set = set()
         if drugs_to_fetch:
             validated_final_docs = []
+            seen_sigs: set = set()
+
             for doc in final_docs:
                 doc_drug = (doc.metadata.get("drug_name") or "").strip().lower()
                 doc_content = (doc.content or "").lower()
+                doc_section = (doc.metadata.get("section") or "").strip()
 
-                # Skip validation for general/guideline chunks — they have no specific drug
+                # General/guideline chunks — keep without drug check
                 if doc_drug in ("", "general clinical evidence"):
                     validated_final_docs.append(doc)
                     continue
 
-                # Verify metadata drug appears in chunk text (accounting for brand/generic aliases)
+                # Verify metadata drug appears in chunk text
                 aliases = DRUG_ALIASES.get(doc_drug, [])
                 drug_in_text = doc_drug in doc_content or any(a in doc_content for a in aliases)
 
                 if drug_in_text:
+                    # Content-hash deduplication
+                    sig = _content_sig(doc_drug, doc_section, doc.content)
+                    if sig in seen_sigs:
+                        logger.info("duplicate_chunk_dropped", drug=doc_drug, sig=sig)
+                        continue
+                    seen_sigs.add(sig)
+
+                    # Multi-drug detection
+                    all_drugs = _detect_all_drugs_in_content(doc.content, drugs_to_fetch)
+                    doc.metadata["drugs"] = all_drugs if all_drugs else [doc_drug]
+
                     validated_final_docs.append(doc)
                 else:
-                    # Content scan: find what drug is actually in this chunk
-                    real_drug = _detect_drug_from_content(doc.content, drugs_to_fetch)
-                    if real_drug:
-                        doc.metadata["drug_name"] = real_drug
-                        doc.metadata["drug"] = real_drug
-                        validated_final_docs.append(doc)
-                        logger.info("chunk_drug_restamped",
-                                    old=doc_drug, new=real_drug, chunk_id=doc.id)
-                    else:
-                        logger.warning("chunk_drug_mismatch_dropped",
-                                       stamped=doc_drug, chunk_id=doc.id,
-                                       content_preview=(doc.content or "")[:80])
-                        # Discard — do not send contaminated chunk to LLM
+                    # DISCARD ONLY — Never reassign to another drug!
+                    logger.warning("chunk_drug_mismatch_discarded",
+                                   stamped=doc_drug, chunk_id=doc.id,
+                                   content_preview=(doc.content or "")[:80])
+                    needs_retry_drugs.add(doc_drug)
+
             final_docs = validated_final_docs
+
+        # --- Retry-on-Drop Logic ---
+        # For any drug whose chunks were dropped or missing, run targeted fallback retrieval
+        if drugs_to_fetch:
+            covered_drugs_after_gate = {
+                (d.metadata.get("drug_name") or "").strip().lower() for d in final_docs
+            }
+            missing_after_gate = [d for d in drugs_to_fetch if d.lower() not in covered_drugs_after_gate]
+            all_retry_targets = list(needs_retry_drugs.union(set(missing_after_gate)))
+
+            RETRY_SECTIONS = ["drug_interactions", "warnings_and_precautions", "contraindications", "dosage_and_administration"]
+            for gap_drug in all_retry_targets:
+                retry_docs = []
+                if hasattr(self.vector_db, 'scroll_by_drug_sections'):
+                    retry_docs = self.vector_db.scroll_by_drug_sections(gap_drug, RETRY_SECTIONS, limit_per_section=2)
+
+                if not retry_docs:
+                    qdrant_filter = {"drug_name": gap_drug.title()}
+                    if sparse_vec:
+                        sem_retry = self.vector_db.hybrid_search(dense_vec, sparse_vec, top_k=5, filters=qdrant_filter)
+                    else:
+                        sem_retry = self.vector_db.search(dense_vec, top_k=5, filters=qdrant_filter)
+                    retry_docs = [d for d in sem_retry if (d.score or 0.0) >= 0.25]
+
+                added_count = 0
+                for rdoc in retry_docs:
+                    rdoc_content = (rdoc.content or "").lower()
+                    aliases = DRUG_ALIASES.get(gap_drug.lower(), [])
+                    if gap_drug.lower() in rdoc_content or any(a in rdoc_content for a in aliases):
+                        rdoc.metadata["drug_name"] = gap_drug
+                        rdoc.metadata["drug"] = gap_drug
+                        rdoc.metadata["retrieval_mode"] = "RETRY_AFTER_DROP"
+                        all_drugs = _detect_all_drugs_in_content(rdoc.content, drugs_to_fetch)
+                        rdoc.metadata["drugs"] = all_drugs if all_drugs else [gap_drug.lower()]
+                        final_docs.append(rdoc)
+                        added_count += 1
+                        if added_count >= 2:
+                            break
+                if added_count > 0:
+                    logger.info("retry_retrieval_succeeded", drug=gap_drug, chunks_added=added_count)
+                else:
+                    logger.warning("retry_retrieval_failed", drug=gap_drug)
 
         # --- Source Diversity Cap ---
         # Prevent any single drug from dominating the context window.
@@ -727,8 +837,12 @@ class ProcessClinicalQueryUseCase:
                         logger.warning("evidence_coverage_unfillable", drug=gap_drug)
 
         # Evidence Fusion Engine: Deduplicate passages & resolve authority priorities
+        # Evidence Fusion Engine: Deduplicate passages & resolve authority priorities
         from app.usecases.evidence_fusion import EvidenceFusionEngine
         final_docs = EvidenceFusionEngine.fuse_evidence(final_docs)
+        
+        # --- Final Evidence Integrity Check (Firewall) ---
+        final_docs = self._evidence_integrity_check(final_docs, drugs_to_fetch)
         
         retrieve_time = time.time() - start_retrieve
         # 7. Assign sequential citation IDs and build STRUCTURED context (grouped by Drug → Section)
@@ -828,44 +942,52 @@ class ProcessClinicalQueryUseCase:
         else:
             max_char_limit = 7500   # ~1800 tokens context headroom
         
+        # Build structured context string (with strict size limit to stay under Groq rate limits)
+        # Separated into Drug-Specific Evidence vs. Clinical Guidelines & Context
+        drug_context_str = ""
+        guideline_context_str = ""
+
+        if num_drugs >= 6 or is_non_drug_mode:
+            max_char_limit = 5500   # ~1400 tokens context headroom for complex scenarios + rules
+        elif num_drugs >= 3:
+            max_char_limit = 6500   # ~1600 tokens context headroom
+        else:
+            max_char_limit = 7500   # ~1800 tokens context headroom
+
         for drug in drug_order:
-            if len(context_str) >= max_char_limit:
+            if len(drug_context_str) >= max_char_limit:
                 break
-                
-            drug_str = ""
-            drug_str += f"{'='*60}\n"
-            drug_str += f"DRUG: {drug}\n"
-            drug_str += f"{'='*60}\n\n"
-            
-            # Always render all 4 UI categories; fall back to doc-present categories only if no drug resolved
+
+            d_str = ""
+            d_str += f"{'='*60}\n"
+            d_str += f"DRUG: {drug}\n"
+            d_str += f"{'='*60}\n\n"
+
             if single_resolved or detected_categories:
                 categories_to_render = detected_categories
             else:
                 categories_to_render = list(docs_by_drug_category.get(drug, {}).keys())
-            
+
             for cat in categories_to_render:
-                if len(context_str) + len(drug_str) >= max_char_limit:
+                if len(drug_context_str) + len(d_str) >= max_char_limit:
                     break
-                    
+
                 cat_str = ""
                 cat_str += f"--- Category: {cat} ---\n\n"
-                
+
                 cat_docs = docs_by_drug_category.get(drug, {}).get(cat, [])
-                
+
                 if not cat_docs:
-                    # No real chunks for this section — LLM will write "Not found in available sources."
                     continue
-                
+
                 for doc in cat_docs:
-                    if len(context_str) + len(drug_str) + len(cat_str) >= max_char_limit:
+                    if len(drug_context_str) + len(d_str) + len(cat_str) >= max_char_limit:
                         break
 
                     cleaned_content = clean_chunk_content(doc.content)
-                    # Filter out empty boilerplate chunks ("No specific instructions, data, or warnings...")
                     if "no specific instructions, data, or warnings" in cleaned_content.lower() or "no information provided" in cleaned_content.lower() or len(cleaned_content.strip()) < 40:
                         continue
-                        
-                    # Re-use existing citation ID if chunk UUID has been cited before
+
                     if doc.id in uuid_to_citation_id:
                         citation_id = uuid_to_citation_id[doc.id]
                         is_new_citation = False
@@ -874,10 +996,9 @@ class ProcessClinicalQueryUseCase:
                         citation_id = str(citation_counter)
                         uuid_to_citation_id[doc.id] = citation_id
                         is_new_citation = True
-                        
+
                     section_raw = doc.metadata.get('section', doc.metadata.get('category', ''))
-                    cleaned_content = clean_chunk_content(doc.content)
-                    
+
                     doc_str = ""
                     doc_str += f"DOCUMENT {citation_id}\n"
                     doc_str += f"Citation Number: [{citation_id}]\n"
@@ -888,11 +1009,10 @@ class ProcessClinicalQueryUseCase:
                         if line.strip():
                             doc_str += f"{line}\n"
                     doc_str += f"\n"
-                    
+
                     cat_str += doc_str
-                    
+
                     if is_new_citation:
-                        # Add to citation map
                         citation_map.add_entry(
                             uuid=doc.id,
                             citation_number=citation_id,
@@ -902,7 +1022,7 @@ class ProcessClinicalQueryUseCase:
                             text=cleaned_content,
                             similarity=round(doc.score or 0.0, 4)
                         )
-                        
+
                         doc_auth = (doc.metadata.get("authority") or "DailyMed").upper()
                         if any(g in doc_auth for g in ["KDIGO", "ADA", "ACC", "AHA", "ESC", "SURVIVING SEPSIS"]):
                             cit_conf = "HIGH"
@@ -911,7 +1031,6 @@ class ProcessClinicalQueryUseCase:
                         else:
                             cit_conf = "LOW"
 
-                        # Add to citations list
                         citations.append(Citation(
                             document_id=citation_id,
                             source=f"{doc.source} – {drug} – {section_raw}",
@@ -924,10 +1043,33 @@ class ProcessClinicalQueryUseCase:
                             count=0,
                             citation_confidence=cit_conf
                         ))
-                    
-                drug_str += cat_str
-            
-            context_str += drug_str + "\n"
+
+                d_str += cat_str
+
+            drug_context_str += d_str + "\n"
+
+        # General / Guideline chunks channel (non-drug specific)
+        guideline_docs = [d for d in final_docs if (d.metadata.get("drug_name") or "").strip().lower() in ("", "general clinical evidence") or d.metadata.get("retrieval_mode") == "MULTI_COLLECTION_RAG"]
+        if guideline_docs:
+            guideline_context_str += f"{'='*60}\n"
+            guideline_context_str += f"CLINICAL GUIDELINES & DISEASE CONTEXT\n"
+            guideline_context_str += f"{'='*60}\n\n"
+            for doc in guideline_docs:
+                if doc.id in uuid_to_citation_id:
+                    cid = uuid_to_citation_id[doc.id]
+                else:
+                    citation_counter += 1
+                    cid = str(citation_counter)
+                    uuid_to_citation_id[doc.id] = cid
+
+                cleaned_content = clean_chunk_content(doc.content)
+                sec_raw = doc.metadata.get('section', doc.metadata.get('category', 'guidelines'))
+                guideline_context_str += f"DOCUMENT {cid}\nCitation Number: [{cid}]\nSource: {doc.source}\nSection: {sec_raw}\nFacts:\n{cleaned_content}\n\n"
+                citation_map.add_entry(uuid=doc.id, citation_number=cid, source=doc.source, drug="General Clinical Evidence", section=sec_raw, text=cleaned_content, similarity=round(doc.score or 0.0, 4))
+
+        context_str = drug_context_str
+        if guideline_context_str:
+            context_str += "\n" + guideline_context_str
             
         # Determine overall retrieval confidence
         if not final_docs:
@@ -1385,28 +1527,14 @@ CRITICAL RULES:
         decisions_map = rule_decisions.get("decisions", {}) if rule_decisions else {}
 
         # Build exact per-drug citation lookup map: drug_lower -> citation_id
-        # We prefer clinically relevant sections AND verify the chunk text actually
-        # mentions the drug (guards against metadata/content mismatches).
+        # We prefer clinically relevant sections (via _get_section_score)
+        # and index multi-drug chunks under all drugs mentioned in them.
         drug_citation_map: Dict[str, str] = {}
-        KNOWN_CLINICAL_DRUGS_SET = set(DRUG_ALIASES.keys())
 
         if citation_map and citation_map.entries:
-            def get_section_priority(sec: str) -> int:
-                sec = (sec or "").lower()
-                # Strong clinical evidence sections — high priority
-                if "interaction" in sec: return 5
-                if "warning" in sec or "precaution" in sec or "contraindication" in sec or "boxed" in sec: return 4
-                if "renal" in sec or "hepatic" in sec or "dose_adjustment" in sec: return 3
-                if "dosage" in sec or "administration" in sec: return 2
-                if "mechanism" in sec or "pharmacology" in sec or "indication" in sec: return 1
-                # Weak sections — deprioritized (but still used if nothing better exists)
-                sec_clean = sec.replace(" ", "_")
-                if sec_clean in _WEAK_CITATION_SECTIONS: return -1
-                return 0
-
             sorted_entries = sorted(
                 citation_map.entries.items(),
-                key=lambda x: get_section_priority(x[1].section)
+                key=lambda x: _get_section_score(x[1].section)
             )
 
             for cid, entry in sorted_entries:
@@ -1414,30 +1542,16 @@ CRITICAL RULES:
                 if "no specific instructions" in e_text or "no information provided" in e_text or len(e_text.strip()) < 30:
                     continue
 
-                # Determine the REAL drug this chunk is about by reading the text.
-                # Always verify — metadata may have been wrong before the validation gate.
+                # Multi-drug indexing: find all drugs mentioned in entry.text or entry.drug
                 metadata_drug = (entry.drug or "").lower().strip()
-                real_drug = ""
+                detected_drugs = _detect_all_drugs_in_content(entry.text)
+                if metadata_drug and metadata_drug not in detected_drugs and metadata_drug in e_text:
+                    detected_drugs.append(metadata_drug)
 
-                # Check metadata drug first (it should be correct now after the gate)
-                if metadata_drug and metadata_drug in e_text:
-                    real_drug = metadata_drug
-                elif metadata_drug:
-                    aliases = DRUG_ALIASES.get(metadata_drug, [])
-                    if any(a in e_text for a in aliases):
-                        real_drug = metadata_drug
-
-                # Fall back to content scan if metadata drug not found
-                if not real_drug:
-                    real_drug = _detect_drug_from_content(entry.text)
-
-                if real_drug:
-                    first_w = real_drug.split()[0]
-                    drug_citation_map[real_drug] = cid
+                for d in detected_drugs:
+                    first_w = d.split()[0]
+                    drug_citation_map[d] = cid
                     drug_citation_map[first_w] = cid
-                    for known_d in KNOWN_CLINICAL_DRUGS_SET:
-                        if known_d in real_drug:
-                            drug_citation_map[known_d] = cid
 
         def get_citation_for_drug(drug_name: str) -> str:
             if not drug_name or not citation_map or not citation_map.entries:
@@ -2027,6 +2141,44 @@ CRITICAL RULES:
         if any(kw in q_lower for kw in identity_keywords):
             return "identity"
         return "clinical"
+
+    @staticmethod
+    def _evidence_integrity_check(docs: List[Any], drugs_to_fetch: List[str]) -> List[Any]:
+        """
+        Final Firewall before LLM prompt assembly.
+        Verifies metadata drug, section, text length, source, and similarity score.
+        Rejects corrupted or ungrounded chunks.
+        """
+        MIN_CONTENT_LEN = 40
+        MIN_SIMILARITY = 0.20
+
+        passed = []
+        for doc in docs:
+            drug = (doc.metadata.get("drug_name") or doc.metadata.get("drug") or "").strip()
+            section = (doc.metadata.get("section") or doc.metadata.get("requested_section") or "").strip()
+            content = (getattr(doc, "content", "") or getattr(doc, "text", "")).strip()
+            score = doc.score or 0.0
+            source = (getattr(doc, "source", "") or "").strip()
+            doc_id = (getattr(doc, "id", "") or "").strip()
+            mode = doc.metadata.get("retrieval_mode", "")
+
+            checks = {
+                "has_drug_or_general": bool(drug),
+                "has_section": bool(section),
+                "has_content": len(content) >= MIN_CONTENT_LEN,
+                "has_source": bool(source),
+                "has_uuid": bool(doc_id),
+                "score_ok": score >= MIN_SIMILARITY or mode in ("EXACT_SECTION", "MULTI_COLLECTION_RAG"),
+            }
+
+            if all(checks.values()):
+                passed.append(doc)
+            else:
+                failed = [k for k, v in checks.items() if not v]
+                logger.warning("evidence_integrity_check_failed",
+                               drug=drug, doc_id=doc_id, failed_checks=failed)
+
+        return passed
 
     def execute(self, query: MedicalQuery) -> AnswerResponse:
         logger.info("processing_query_start", question=query.question, filters=query.filters)

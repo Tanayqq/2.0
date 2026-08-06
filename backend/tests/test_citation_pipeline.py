@@ -187,10 +187,47 @@ def test_scenario_5_source_citation_prevention():
     assert len(response.citations) == 1
     assert_citation_integrity(response)
 
+def test_section_priority_scoring():
+    from app.usecases.rag_usecase import _get_section_score
+    assert _get_section_score("drug_interactions") == 100
+    assert _get_section_score("contraindications") == 95
+    assert _get_section_score("geriatric_use") == 5
+    assert _get_section_score("unknown_section") == 30
+
+def test_content_signature_dedup():
+    from app.usecases.rag_usecase import _content_sig
+    sig1 = _content_sig("Metformin", "Contraindications", "Severe renal impairment eGFR < 30")
+    sig2 = _content_sig("metformin", "contraindications", "Severe renal impairment  eGFR < 30 ")
+    assert sig1 == sig2
+
+def test_multi_drug_content_detection():
+    from app.usecases.rag_usecase import _detect_all_drugs_in_content
+    text = "Co-administration of Amiodarone and Warfarin leads to increased Digoxin level."
+    found = _detect_all_drugs_in_content(text, ["amiodarone", "warfarin", "digoxin", "metformin"])
+    assert set(found) == {"amiodarone", "warfarin", "digoxin"}
+
+def test_evidence_integrity_check():
+    usecase = ProcessClinicalQueryUseCase(None, None, None, None)
+    good_doc = ReferenceDocument(id="uuid-1", content="Valid content meeting min length 40 characters easily", source="DailyMed", metadata={"drug_name": "Metformin", "section": "Contraindications"})
+    good_doc.score = 0.8
+    bad_doc_short = ReferenceDocument(id="uuid-2", content="Short", source="DailyMed", metadata={"drug_name": "Metformin", "section": "Contraindications"})
+    bad_doc_short.score = 0.8
+    bad_doc_no_drug = ReferenceDocument(id="uuid-3", content="Valid content meeting min length 40 characters easily", source="DailyMed", metadata={"section": "Contraindications"})
+    bad_doc_no_drug.score = 0.8
+
+    result = usecase._evidence_integrity_check([good_doc, bad_doc_short, bad_doc_no_drug], ["metformin"])
+    assert len(result) == 1
+    assert result[0].id == "uuid-1"
+
 if __name__ == "__main__":
     test_scenario_1_one_chunk()
     test_scenario_2_two_chunks()
     test_scenario_3_hallucinated_citation()
     test_scenario_4_bibliography_sync()
     test_scenario_5_source_citation_prevention()
+    test_section_priority_scoring()
+    test_content_signature_dedup()
+    test_multi_drug_content_detection()
+    test_evidence_integrity_check()
     print("All pipeline test cases completed successfully!")
+
