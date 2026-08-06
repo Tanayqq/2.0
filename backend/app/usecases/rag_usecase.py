@@ -479,46 +479,57 @@ class ProcessClinicalQueryUseCase:
             q_tokens = [w.lower() for w in query.question.split() if len(w) >= 3 and w.lower() not in [
                 "and", "for", "the", "with", "in", "management", "guidelines", "protocol", "overview", "study", "2024", "2025", "2026", "treatment", "therapy", "clinical", "care", "standards"
             ]]
-            for col in target_cols:
+            from concurrent.futures import ThreadPoolExecutor
+
+            def _search_single_col(col: str) -> List[Any]:
+                col_res = []
                 if hasattr(self.vector_db, 'search_collection'):
-                    col_docs = self.vector_db.search_collection(col, dense_vec, top_k=5)
-                    for cdoc in col_docs:
-                        score = cdoc.score or 0.0
-                        if score < MIN_DISEASE_SCORE:
-                            continue
-                        doc_text = (str(cdoc.metadata.get("title","")) + " " + str(cdoc.metadata.get("disease","")) + " " + getattr(cdoc, "content", getattr(cdoc, "text", ""))).lower()
-                        if q_tokens and not any(token in doc_text for token in q_tokens):
-                            continue
-                        
-                        collection_weights = IntentRouter.get_collection_weights(effective_mode)
-                        col_weight = collection_weights.get(col, 1.5)
-                        cdoc.score = (score or 0.85) * col_weight
-                        cdoc.cross_encoder_score = 0.99 * col_weight
-                        auth = cdoc.metadata.get("authority", "ADA")
-                        cdoc.metadata["authority_rank"] = AUTHORITY_RANK.get(auth, 95)
-                        cdoc.metadata["retrieval_mode"] = "MULTI_COLLECTION_RAG"
-                        # CRITICAL FIX: Never stamp the full query string as drug_name.
-                        # Detect the actual drug from chunk content instead.
-                        content_drug = _detect_drug_from_content(
-                            getattr(cdoc, "content", ""),
-                            drugs_to_fetch if drugs_to_fetch else None
-                        )
-                        cdoc.metadata["drug_name"] = content_drug or "General Clinical Evidence"
-                        cdoc.metadata["disease_query"] = query.question.strip()
-                        
-                        raw_sec = cdoc.metadata.get("section") or cdoc.metadata.get("category") or ""
-                        if not raw_sec or raw_sec in ["clinical_profile", "general", "indications"]:
-                            txt_lower = doc_text.lower()
-                            if any(w in txt_lower for w in ["dose", "dosage", "mg/day", "initial dosage", "starting dose", "titration", "daily dose", "every other day"]):
-                                raw_sec = "dosage_and_administration"
-                            elif any(w in txt_lower for w in ["contraindicated", "black box", "boxed warning", "severe risk", "fatal", "hypersensitive"]):
-                                raw_sec = "contraindications"
-                            elif any(w in txt_lower for w in ["coadministration", "interaction", "concomitant", "synergistic", "combined use"]):
-                                raw_sec = "drug_interactions"
-                            else:
-                                raw_sec = "clinical_profile"
-                        cdoc.metadata["section"] = raw_sec
-                        final_docs.append(cdoc)
+                    try:
+                        col_docs = self.vector_db.search_collection(col, dense_vec, top_k=5)
+                        for cdoc in col_docs:
+                            score = cdoc.score or 0.0
+                            if score < MIN_DISEASE_SCORE:
+                                continue
+                            doc_text = (str(cdoc.metadata.get("title","")) + " " + str(cdoc.metadata.get("disease","")) + " " + getattr(cdoc, "content", getattr(cdoc, "text", ""))).lower()
+                            if q_tokens and not any(token in doc_text for token in q_tokens):
+                                continue
+                            
+                            collection_weights = IntentRouter.get_collection_weights(effective_mode)
+                            col_weight = collection_weights.get(col, 1.5)
+                            cdoc.score = (score or 0.85) * col_weight
+                            cdoc.cross_encoder_score = 0.99 * col_weight
+                            auth = cdoc.metadata.get("authority", "ADA")
+                            cdoc.metadata["authority_rank"] = AUTHORITY_RANK.get(auth, 95)
+                            cdoc.metadata["retrieval_mode"] = "MULTI_COLLECTION_RAG"
+                            content_drug = _detect_drug_from_content(
+                                getattr(cdoc, "content", ""),
+                                drugs_to_fetch if drugs_to_fetch else None
+                            )
+                            cdoc.metadata["drug_name"] = content_drug or "General Clinical Evidence"
+                            cdoc.metadata["disease_query"] = query.question.strip()
+                            
+                            raw_sec = cdoc.metadata.get("section") or cdoc.metadata.get("category") or ""
+                            if not raw_sec or raw_sec in ["clinical_profile", "general", "indications"]:
+                                txt_lower = doc_text.lower()
+                                if any(w in txt_lower for w in ["dose", "dosage", "mg/day", "initial dosage", "starting dose", "titration", "daily dose", "every other day"]):
+                                    raw_sec = "dosage_and_administration"
+                                elif any(w in txt_lower for w in ["contraindicated", "black box", "boxed warning", "severe risk", "fatal", "hypersensitive"]):
+                                    raw_sec = "contraindications"
+                                elif any(w in txt_lower for w in ["coadministration", "interaction", "concomitant", "synergistic", "combined use"]):
+                                    raw_sec = "drug_interactions"
+                                else:
+                                    raw_sec = "clinical_profile"
+                            cdoc.metadata["section"] = raw_sec
+                            col_res.append(cdoc)
+                    except Exception:
+                        pass
+                return col_res
+
+            with ThreadPoolExecutor(max_workers=min(4, len(target_cols))) as executor:
+                col_results = list(executor.map(_search_single_col, target_cols))
+
+            for c_docs in col_results:
+                final_docs.extend(c_docs)
 
         elif is_non_drug_mode:
             # Pure disease/symptom/guideline query without drugs
@@ -562,107 +573,56 @@ class ProcessClinicalQueryUseCase:
                         cdoc.metadata["section"] = raw_sec
                         final_docs.append(cdoc)
 
-        # --- Per-Drug Entity-Filtered Retrieval ---
-        # For PATIENT_SCENARIO + drugs: run per-drug retrieval EVEN in scenario mode
-        # This ensures each medication gets entity-matched chunks, not just semantic neighbours
+        # --- Per-Drug Entity-Filtered Retrieval (Parallelized) ---
+        # Runs parallel single-call section retrieval per medication to eliminate network latency
         if drugs_to_fetch:
+            from concurrent.futures import ThreadPoolExecutor
 
-            for drug in drugs_to_fetch:
-                section_statuses[drug] = {}
-                for sec in sections_to_fetch:
-                    step_trace = {"drug": drug, "section": sec, "attempts": []}
-                
-                    # 1. Exact Section Search
-                    exact_docs = []
-                    if hasattr(self.vector_db, 'scroll_by_drug_sections'):
-                        exact_docs = self.vector_db.scroll_by_drug_sections(drug, [sec], limit_per_section=3)
-                    
-                    if exact_docs:
-                        mode = "EXACT_SECTION"
-                        docs_for_sec = exact_docs
-                        step_trace["attempts"].append({"type": "Exact Section", "chunks": len(docs_for_sec)})
-                    else:
-                        step_trace["attempts"].append({"type": "Exact Section", "chunks": 0})
-                        # 2. Semantic Search
-                        qdrant_filter = {"drug_name": drug.title()}
+            def _fetch_docs_for_drug(drug: str) -> List[Any]:
+                drug_docs = []
+                exact_docs = []
+                if hasattr(self.vector_db, 'scroll_by_drug_all'):
+                    exact_docs = self.vector_db.scroll_by_drug_all(drug, limit=8)
+
+                if exact_docs:
+                    for doc in exact_docs:
+                        doc.cross_encoder_score = 0.99
+                        auth = doc.metadata.get("authority", "DailyMed")
+                        doc.metadata["authority_rank"] = AUTHORITY_RANK.get(auth, 99)
+                        doc.metadata["retrieval_mode"] = "EXACT_SECTION"
+                        doc.metadata["drug_name"] = drug
+                        doc.metadata["drug"] = drug
+                        drug_docs.append(doc)
+                    return drug_docs[:5]
+                else:
+                    qdrant_filter = {"drug_name": drug.title()}
+                    sem_docs = []
+                    try:
                         if sparse_vec:
-                            sem_docs = self.vector_db.hybrid_search(
-                                dense_vector=dense_vec,
-                                sparse_vector=sparse_vec,
-                                top_k=5,
-                                filters=qdrant_filter
-                            )
+                            sem_docs = self.vector_db.hybrid_search(dense_vector=dense_vec, sparse_vector=sparse_vec, top_k=5, filters=qdrant_filter)
                         else:
-                            sem_docs = self.vector_db.search(
-                                query_vector=dense_vec,
-                                top_k=5,
-                                filters=qdrant_filter
-                            )
-                        if sem_docs:
-                            # Apply similarity threshold filter
-                            sem_docs = [d for d in sem_docs if (d.score or 0.0) >= SEMANTIC_MIN_SCORE]
-                        if sem_docs:
-                            mode = "SEMANTIC_PARENT"
-                            docs_for_sec = sem_docs[:3]
-                            step_trace["attempts"].append({"type": "Semantic Search", "chunks": len(sem_docs)})
-                        else:
-                            mode = "NO_DATA"
-                            docs_for_sec = []
-                            step_trace["attempts"].append({"type": "Semantic Search", "chunks": 0})
-                    
-                    # Score & Sort Docs
-                    if docs_for_sec:
-                        for doc in docs_for_sec:
-                            ce_score = 0.99 if mode == "EXACT_SECTION" else (doc.score or 0.85)
-                            doc.cross_encoder_score = ce_score
-                            
-                            auth = doc.metadata.get("authority", "DailyMed")
-                            auth_rank = AUTHORITY_RANK.get(auth, 99)
-                            doc.metadata["authority_rank"] = auth_rank
-                            doc.metadata["retrieval_mode"] = mode
-                            doc.metadata["requested_section"] = sec
-                            # CRITICAL FIX: Always stamp the correct drug from the loop variable.
-                            # This overrides any wrong drug_name from the Qdrant payload
-                            # that leaked through when semantic fallback fired without a filter.
-                            doc.metadata["drug_name"] = drug
-                            doc.metadata["drug"] = drug
-                        
-                        # Sort Priority: CrossEncoder DESC -> VectorScore DESC -> AuthorityRank ASC
-                        docs_for_sec.sort(key=lambda x: (x.cross_encoder_score or 0.0, x.score or 0.0, -(x.metadata.get("authority_rank") or 99)), reverse=True)
-                        
-                        # Take top 3
-                        docs_for_sec = docs_for_sec[:3]
-                        
-                        avg_ce = sum(d.cross_encoder_score or 0.0 for d in docs_for_sec) / len(docs_for_sec)
-                        evidence_count = len(docs_for_sec)
-                        conf_stars = _compute_confidence(mode, avg_ce, evidence_count)
-                        
-                        orig_secs = list(set(normalize_section(d.metadata.get("section", "")) for d in docs_for_sec))
-                        auths = list(set(d.metadata.get("authority", "DailyMed") for d in docs_for_sec))
-                        
-                        section_statuses[drug][sec] = {
-                            "status": mode,
-                            "confidence_stars": conf_stars,
-                            "original_section": orig_secs[0] if orig_secs else None,
-                            "evidence_count": evidence_count,
-                            "evidence_diversity": f"{evidence_count} chunks across {len(orig_secs)} sections from {len(auths)} authority",
-                            "authority": auths[0] if auths else "DailyMed",
-                            "missing_reason": None
-                        }
-                        
-                        final_docs.extend(docs_for_sec)
-                        step_trace["attempts"].append({"type": "Cross Encoder", "top_k": len(docs_for_sec)})
-                    else:
-                        section_statuses[drug][sec] = {
-                            "status": mode,
-                            "confidence_stars": "☆☆☆☆☆",
-                            "original_section": None,
-                            "evidence_count": 0,
-                            "evidence_diversity": None,
-                            "authority": "DailyMed",
-                            "missing_reason": f"No dedicated {sec} exists in the indexed label. Semantic retrieval searched the remaining document and found no clinically relevant content."
-                        }
-                    retrieval_trace.append(step_trace)
+                            sem_docs = self.vector_db.search(query_vector=dense_vec, top_k=5, filters=qdrant_filter)
+                    except Exception:
+                        sem_docs = []
+
+                    sem_docs = [d for d in (sem_docs or []) if (d.score or 0.0) >= SEMANTIC_MIN_SCORE]
+                    for doc in sem_docs[:3]:
+                        doc.cross_encoder_score = doc.score or 0.85
+                        auth = doc.metadata.get("authority", "DailyMed")
+                        doc.metadata["authority_rank"] = AUTHORITY_RANK.get(auth, 99)
+                        doc.metadata["retrieval_mode"] = "SEMANTIC_PARENT"
+                        doc.metadata["drug_name"] = drug
+                        doc.metadata["drug"] = drug
+                        drug_docs.append(doc)
+
+                return drug_docs
+
+            max_threads = min(8, len(drugs_to_fetch))
+            with ThreadPoolExecutor(max_workers=max_threads) as executor:
+                parallel_results = list(executor.map(_fetch_docs_for_drug, drugs_to_fetch))
+
+            for d_docs in parallel_results:
+                final_docs.extend(d_docs)
 
         # Multi-Collection Router Fallback: If no single-drug label chunks were fetched, query routed collections (disease_corpus, disease_guidelines, primary_literature, drug_interactions, drug_labels_india)
         if not final_docs:
@@ -2446,7 +2406,7 @@ Identity Profile (Grounded FDA Label Metadata):
                     prompt += f"\n\n[CRITICAL POST-GENERATION VALIDATION FAILURE]: Your previous attempt omitted these prescribed medications: {', '.join(missing_drugs)}. You MUST evaluate EVERY drug in the prompt and include a row for each in Section 2 table!"
                     continue
             
-            if coverage >= 0.95 or attempt == max_attempts:
+            if coverage >= 0.95 or is_non_drug_mode or attempt == max_attempts:
                 final_answer_text = processed_answer
                 final_citations = processed_citations
                 final_remapping = remapping
