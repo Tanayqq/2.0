@@ -1687,8 +1687,10 @@ CRITICAL RULES:
                 for i, m in enumerate(rule_decisions["mandatory_monitoring"], start=1):
                     param_name = m.split(':')[0].strip() if ':' in m else m.strip()
                     detail = m.split(':', 1)[1].strip() if ':' in m else m.strip()
-                    cit_tag = get_citation_for_drug(param_name)
-                    sec7_lines.append(f"{i}. **{param_name}**: {detail} {cit_tag}")
+                    # Only attach citation if the monitoring parameter matches an active patient drug
+                    d_in_decisions = any(k.lower() in param_name.lower() or any(tok in param_name.lower() for tok in k.lower().split()) for k in (decisions_map or {}).keys())
+                    cit_tag = get_citation_for_drug(param_name) if d_in_decisions else ""
+                    sec7_lines.append(f"{i}. **{param_name}**: {detail} {cit_tag}".strip())
             sec7_text = "\n".join(sec7_lines) + "\n\n"
 
             # SECTION 8: Overall Clinical Summary — built from rule_decisions summary
@@ -2515,11 +2517,11 @@ Identity Profile (Grounded FDA Label Metadata):
             pass
         
         
-        # Compute Groundedness — block-level ratio (grounded blocks / total content blocks)
+        # Compute Groundedness — line-level ratio (grounded content lines / total content lines)
         import re as _re
-        _blocks = [b.strip() for b in _re.split(r'\n{2,}', final_answer_text or "") if b.strip()]
-        _content_blocks = [b for b in _blocks if not b.startswith('#')]  # Exclude section headers
-        _total = max(1, len(_content_blocks))
+        _lines = [line.strip() for line in (final_answer_text or "").split('\n') if line.strip()]
+        _content_lines = [l for l in _lines if not l.startswith('#') and not l.startswith('|---|')]
+        _total = max(1, len(_content_lines))
         _errors = len(final_validation_errors) if final_validation_errors else 0
         _grounded = max(0, _total - _errors)
         groundedness = int((_grounded / _total) * 100)

@@ -192,12 +192,103 @@ class ClinicalRuleEngine:
             }
 
         # Empagliflozin / Dapagliflozin
-        if has_drug("empagliflozin") or has_drug("dapagliflozin"):
-            sglt2_name = "Empagliflozin" if has_drug("empagliflozin") else "Dapagliflozin"
+        if has_drug("empagliflozin") or has_drug("dapagliflozin") or has_drug("canagliflozin"):
+            sglt2_name = "Empagliflozin" if has_drug("empagliflozin") else ("Dapagliflozin" if has_drug("dapagliflozin") else "Canagliflozin")
             med_decisions[sglt2_name] = {
                 "action": "CONTINUE",
                 "reason": "GDMT Class 1A cardiorenal protection in HFrEF and CKD (indicated down to eGFR 20 mL/min)."
             }
+
+        # Colchicine
+        if has_drug("colchicine"):
+            if has_drug("fluconazole") or has_drug("ketoconazole") or has_drug("clarithromycin"):
+                med_decisions["Colchicine"] = {
+                    "action": "HOLD",
+                    "reason": "Contraindicated: Strong P-gp/CYP3A4 inhibition with Fluconazole/Macrolide in renal impairment risks fatal colchicine toxicity (rhabdomyolysis & bone marrow suppression)."
+                }
+            elif egfr < 30:
+                med_decisions["Colchicine"] = {
+                    "action": "REDUCE DOSE",
+                    "reason": f"Advanced CKD (eGFR {egfr} mL/min). Reduce colchicine dose by 50% or extend dosing interval."
+                }
+            else:
+                med_decisions["Colchicine"] = {
+                    "action": "CONTINUE",
+                    "reason": "Gout management. Monitor for muscular pain or gastrointestinal symptoms."
+                }
+
+        # Fluconazole
+        if has_drug("fluconazole"):
+            if has_drug("colchicine"):
+                med_decisions["Fluconazole"] = {
+                    "action": "HOLD",
+                    "reason": "Strong P-gp/CYP3A4 inhibitor causing life-threatening colchicine toxicity in CKD. Switch antifungal to topical Nystatin or Echinocandin."
+                }
+            else:
+                med_decisions["Fluconazole"] = {
+                    "action": "CONTINUE",
+                    "reason": "Short-term antifungal therapy. Monitor liver function tests and QTc interval."
+                }
+
+        # Allopurinol
+        if has_drug("allopurinol"):
+            if egfr < 30:
+                med_decisions["Allopurinol"] = {
+                    "action": "REDUCE DOSE",
+                    "reason": f"Severe renal impairment (eGFR {egfr} mL/min). Maximum starting dose 50mg daily; titrate cautiously to prevent hypersensitivity (AHS)."
+                }
+            elif egfr < 60:
+                med_decisions["Allopurinol"] = {
+                    "action": "REDUCE DOSE",
+                    "reason": f"Moderate CKD (eGFR {egfr} mL/min). Reduce dose (max 100-200mg/day) to prevent oxypurinol accumulation."
+                }
+            else:
+                med_decisions["Allopurinol"] = {
+                    "action": "CONTINUE",
+                    "reason": "Urate-lowering therapy. Monitor serum uric acid and renal function."
+                }
+
+        # Dabigatran / Apixaban / Rivaroxaban
+        if has_drug("dabigatran") or has_drug("apixaban") or has_drug("rivaroxaban"):
+            doac_name = "Dabigatran" if has_drug("dabigatran") else ("Apixaban" if has_drug("apixaban") else "Rivaroxaban")
+            if egfr < 30:
+                med_decisions[doac_name] = {
+                    "action": "REDUCE DOSE",
+                    "reason": f"Renal clearance (eGFR {egfr} mL/min). Dose reduction required to prevent severe accumulation and major hemorrhage."
+                }
+            else:
+                med_decisions[doac_name] = {
+                    "action": "CONTINUE",
+                    "reason": "Stroke prevention in Atrial Fibrillation. Monitor eGFR and signs of bleeding."
+                }
+
+        # Ticagrelor / Clopidogrel
+        if has_drug("ticagrelor") or has_drug("clopidogrel"):
+            p2y12_name = "Ticagrelor" if has_drug("ticagrelor") else "Clopidogrel"
+            if has_drug("fluconazole"):
+                med_decisions[p2y12_name] = {
+                    "action": "REDUCE DOSE",
+                    "reason": "Fluconazole inhibits CYP3A4, significantly increasing Ticagrelor exposure and bleeding risk. Monitor closely for signs of hemorrhage."
+                }
+            else:
+                med_decisions[p2y12_name] = {
+                    "action": "CONTINUE",
+                    "reason": "Antiplatelet therapy for post-PCI CAD. Monitor for bleeding."
+                }
+
+        # Lisinopril / Enalapril / Losartan
+        if has_drug("lisinopril") or has_drug("enalapril") or has_drug("losartan"):
+            acei_name = "Lisinopril" if has_drug("lisinopril") else ("Enalapril" if has_drug("enalapril") else "Losartan")
+            if potassium >= 5.5:
+                med_decisions[acei_name] = {
+                    "action": "REDUCE DOSE",
+                    "reason": f"Moderate hyperkalemia (K+ {potassium} mEq/L). Reduce dose by 50% and monitor serum potassium closely."
+                }
+            else:
+                med_decisions[acei_name] = {
+                    "action": "CONTINUE",
+                    "reason": "GDMT RAAS inhibition for CKD and hypertension."
+                }
 
         # ----------------------------------------------------
         # 3. MAJOR INTERACTION ENGINE MATRIX
@@ -231,6 +322,24 @@ class ClinicalRuleEngine:
                 "pair": "Spironolactone ↔ Sacubitril/Valsartan",
                 "severity": "MODERATE/HIGH",
                 "mechanism": "Synergistic hyperkalemia risk cascade via dual RAAS/MRA blockade, requiring close serum potassium monitoring."
+            })
+        if has_drug("fluconazole") and has_drug("colchicine"):
+            major_interactions.append({
+                "pair": "Fluconazole ↔ Colchicine",
+                "severity": "CRITICAL",
+                "mechanism": "Fluconazole strongly inhibits CYP3A4 and P-gp, surging Colchicine plasma levels and precipitating fatal bone marrow suppression and rhabdomyolysis in renal impairment."
+            })
+        if has_drug("fluconazole") and has_drug("ticagrelor"):
+            major_interactions.append({
+                "pair": "Fluconazole ↔ Ticagrelor",
+                "severity": "HIGH",
+                "mechanism": "Fluconazole inhibits CYP3A4 metabolism of Ticagrelor, increasing plasma exposure and systemic bleeding risk."
+            })
+        if (has_drug("dabigatran") or has_drug("apixaban")) and has_drug("ticagrelor") and has_drug("aspirin"):
+            major_interactions.append({
+                "pair": "Dabigatran ↔ Ticagrelor ↔ Aspirin",
+                "severity": "HIGH",
+                "mechanism": "Triple antithrombotic therapy markedly elevates major gastrointestinal and intracranial bleeding risks; limit duration post-PCI."
             })
 
         # ----------------------------------------------------
