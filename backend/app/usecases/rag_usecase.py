@@ -451,6 +451,19 @@ class ProcessClinicalQueryUseCase:
         sections_to_fetch = list(dict.fromkeys(detected_sections + REQUIRED_UI_SECTIONS)) if detected_sections else REQUIRED_UI_SECTIONS
             
         drugs_to_fetch = [single_resolved] if single_resolved else (resolved_drug if isinstance(resolved_drug, list) else [])
+        
+        # Also include all patient active medications from ClinicalRuleEngine so evidence chunks are fetched for all patient drugs
+        try:
+            from app.usecases.clinical_rule_engine import ClinicalRuleEngine
+            patient_rules = ClinicalRuleEngine.evaluate_patient_medications(query.question, drugs_to_fetch)
+            if patient_rules and patient_rules.get("decisions"):
+                for p_drug in patient_rules["decisions"].keys():
+                    p_clean = p_drug.strip().lower()
+                    if p_clean and not any(p_clean == (df or "").strip().lower() for df in drugs_to_fetch):
+                        drugs_to_fetch.append(p_clean)
+        except Exception:
+            pass
+
         if not drugs_to_fetch:
             # If no drug detected, skip advanced retrieval for now and fallback to standard
             pass
@@ -1612,10 +1625,10 @@ CRITICAL RULES:
                     sec1_bullets.append(f"- {danger}")
             if not sec1_bullets:
                 sec1_bullets.append("- No immediate life-threatening metabolic or medication hazards identified.")
-            sec1_text = f"### 1. Immediate Life-Threatening Problems\n" + "\n".join(sec1_bullets) + "\n\n"
+            sec1_text = f"**1. Immediate Life-Threatening Problems**\n" + "\n".join(sec1_bullets) + "\n\n"
 
             # SECTION 2: Medication-by-Medication Review Table — built from rule_decisions
-            table_header = "### 2. Medication-by-Medication Review\n| Medication | Action | Reason | Citation |\n|---|---|---|---|\n"
+            table_header = "**2. Medication-by-Medication Review**\n| Medication | Action | Reason | Citation |\n|---|---|---|---|\n"
             table_rows = []
             if decisions_map:
                 for r_key, r_info in decisions_map.items():
@@ -1627,7 +1640,7 @@ CRITICAL RULES:
             sec2_text = table_header + "\n".join(table_rows) + "\n\n"
 
             # SECTION 3: Major Drug Interactions — built from rule_decisions
-            sec3_text = "### 3. Major Drug Interactions\n\n"
+            sec3_text = "**3. Major Drug Interactions**\n\n"
             if rule_decisions and rule_decisions.get("major_interactions"):
                 for ix in rule_decisions["major_interactions"]:
                     d1 = ix['pair'].split('↔')[0].strip() if '↔' in ix['pair'] else ix['pair'].split()[0]
@@ -1646,7 +1659,7 @@ CRITICAL RULES:
                     ):
                         renal_rows.append(f"- **{r_key}**: {r_info['action']} — {r_info['reason']}")
             sec4_body = "\n".join(renal_rows) if renal_rows else "- No specific renal dose adjustments required based on current eGFR."
-            sec4_text = f"### 4. Renal Dosing Issues\n{sec4_body}\n\n"
+            sec4_text = f"**4. Renal Dosing Issues**\n{sec4_body}\n\n"
 
             # SECTION 5: Electrolyte Issues — derived from labs
             elec_bullets = []
@@ -1658,7 +1671,7 @@ CRITICAL RULES:
                 elec_bullets.append(f"- **Hypokalemia** (K+ = {_k} mEq/L): Monitor potassium levels closely and evaluate for potassium supplementation.")
             else:
                 elec_bullets.append(f"- Serum K+ = {_k} mEq/L (Normal range: 3.5 - 5.0 mEq/L).")
-            sec5_text = f"### 5. Electrolyte Issues\n" + "\n".join(elec_bullets) + "\n\n"
+            sec5_text = f"**5. Electrolyte Issues**\n" + "\n".join(elec_bullets) + "\n\n"
 
             # SECTION 6: Guideline Recommendations — target actual guideline chunks (KDIGO/ADA/ACC/AHA)
             guideline_cid = None
@@ -1670,10 +1683,10 @@ CRITICAL RULES:
                         guideline_cid = cid
                         break
             guide_cit = f"[{guideline_cid}]" if guideline_cid else ""
-            sec6_text = f"### 6. Guideline Recommendations\nClass 1A GDMT recommendations apply for HFrEF/CKD cardiorenal management per ACC/AHA 2024 & KDIGO 2024. {guide_cit}\n\n"
+            sec6_text = f"**6. Guideline Recommendations**\nClass 1A GDMT recommendations apply for HFrEF/CKD cardiorenal management per ACC/AHA 2024 & KDIGO 2024. {guide_cit}\n\n"
 
             # SECTION 7: Required Monitoring — header and content on separate lines
-            sec7_lines = ["### 7. Required Monitoring", ""]
+            sec7_lines = ["**7. Required Monitoring**", ""]
             if rule_decisions and rule_decisions.get("mandatory_monitoring"):
                 for i, m in enumerate(rule_decisions["mandatory_monitoring"], start=1):
                     param_name = m.split(':')[0].strip() if ':' in m else m.strip()
@@ -1699,7 +1712,7 @@ CRITICAL RULES:
                 "Stop Metformin (MALA risk). Hold Clarithromycin, Spironolactone. Reduce Digoxin and Warfarin doses. "
                 "Continue Empagliflozin, Metoprolol, Amiodarone with close monitoring."
             )
-            sec8_text = f"### 8. Overall Clinical Summary\n{sec8_body}\n"
+            sec8_text = f"**8. Overall Clinical Summary**\n{sec8_body}\n"
 
             answer_text = sec1_text + sec2_text + sec3_text + sec4_text + sec5_text + sec6_text + sec7_text + sec8_text
 

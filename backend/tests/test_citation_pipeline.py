@@ -275,7 +275,7 @@ def test_scenario_6_multi_drug_citation_binding_and_guideline_separation():
     assert "| Metoprolol | CONTINUE | HFrEF Class 1A GDMT |  |" in sanitized
 
     # 5. Section 6 Guideline Recommendations MUST cite KDIGO chunk [1]
-    assert "### 6. Guideline Recommendations\nClass 1A GDMT recommendations apply for HFrEF/CKD cardiorenal management per ACC/AHA 2024 & KDIGO 2024. [1]" in sanitized
+    assert "**6. Guideline Recommendations**\nClass 1A GDMT recommendations apply for HFrEF/CKD cardiorenal management per ACC/AHA 2024 & KDIGO 2024. [1]" in sanitized
 
 if __name__ == "__main__":
     test_scenario_1_one_chunk()
