@@ -1548,12 +1548,16 @@ CRITICAL RULES:
                 sec_lower = (entry.section or "").lower()
                 e_text = (entry.text or "").lower()
 
-                # Hard negative penalty (-2000) for inappropriate sections in adult clinical recommendations
-                inappropriate_sections = ["pediatric_use", "pediatric", "pregnancy", "lactation", "clinical_studies", "how_supplied", "overdose", "overdosage", "toxicity", "poisoning"]
+                # Section-level negative filters
+                inappropriate_sections = [
+                    "pediatric_use", "pediatric", "pregnancy", "lactation", "clinical_studies", "how_supplied", 
+                    "overdosage", "overdose", "poisoning"
+                ]
                 if any(bad_sec in sec_lower for bad_sec in inappropriate_sections):
                     return -2000
 
-                if "spinal" in sec_lower or "epidural" in sec_lower or "spinal" in e_text:
+                # Specific phrase-level negative filters (pregnancy black box / spinal hematoma boxed warning)
+                if any(phrase in e_text for phrase in ["when pregnancy is detected", "discontinue entresto as soon as possible", "spinal/epidural hematoma", "spinal hematoma"]):
                     return -2000
 
                 base_score = _get_section_score(entry.section)
@@ -1568,22 +1572,39 @@ CRITICAL RULES:
                 act_upper = (action or "").upper()
                 reas_lower = (reason or "").lower()
 
-                if act_upper == "CONTINUE" or "gdmt" in reas_lower or "indication" in reas_lower or "rhythm control" in reas_lower:
+                # Drug-specific section affinities
+                if target_drug == "metformin" and act_upper == "STOP":
+                    if any(s in sec_lower for s in ["contraindications", "boxed_warning", "renal_impairment", "warnings_and_precautions"]):
+                        topic_affinity_boost = 1000
+                    elif "drug_interactions" in sec_lower:
+                        topic_affinity_boost = -500
+                elif target_drug == "digoxin" and act_upper == "REDUCE DOSE":
+                    if any(s in sec_lower for s in ["drug_interactions", "cyp_interactions", "dosage_and_administration"]):
+                        topic_affinity_boost = 1000
+                elif target_drug in ["empagliflozin", "furosemide"] and act_upper == "CONTINUE":
                     if any(s in sec_lower for s in ["indications", "clinical_pharmacology", "mechanism_of_action", "dosage_and_administration"]):
-                        topic_affinity_boost = 600
-                    elif any(s in sec_lower for s in ["drug_interactions", "cyp_interactions"]):
-                        topic_affinity_boost = -300
-                elif act_upper == "STOP" or "egfr" in reas_lower or "mala" in reas_lower or "lactic" in reas_lower:
-                    if any(s in sec_lower for s in ["contraindications", "boxed_warning", "warnings_and_precautions", "warnings", "renal_impairment"]):
-                        topic_affinity_boost = 600
-                    elif any(s in sec_lower for s in ["dosage_and_administration", "renal_dose", "dose_adjustment"]):
-                        topic_affinity_boost = 400
-                elif act_upper == "REDUCE DOSE" or "renal clearance" in reas_lower or "dose reduction" in reas_lower:
-                    if any(s in sec_lower for s in ["dosage_and_administration", "dose_adjustment", "renal_impairment", "renal_dose", "warnings_and_precautions", "precautions"]):
-                        topic_affinity_boost = 600
-                elif act_upper == "HOLD" or "washout" in reas_lower or "interaction" in reas_lower or "p-gp" in reas_lower:
-                    if any(s in sec_lower for s in ["drug_interactions", "cyp_interactions", "coadministration", "contraindications", "warnings_and_precautions", "warnings"]):
-                        topic_affinity_boost = 600
+                        topic_affinity_boost = 1000
+                    elif "drug_interactions" in sec_lower:
+                        topic_affinity_boost = -500
+
+                # General claim topic affinities
+                if topic_affinity_boost == 0:
+                    if act_upper == "CONTINUE" or "gdmt" in reas_lower or "indication" in reas_lower or "rhythm control" in reas_lower:
+                        if any(s in sec_lower for s in ["indications", "clinical_pharmacology", "mechanism_of_action", "dosage_and_administration"]):
+                            topic_affinity_boost = 600
+                        elif any(s in sec_lower for s in ["drug_interactions", "cyp_interactions"]):
+                            topic_affinity_boost = -300
+                    elif act_upper == "STOP" or "egfr" in reas_lower or "mala" in reas_lower or "lactic" in reas_lower:
+                        if any(s in sec_lower for s in ["contraindications", "boxed_warning", "warnings_and_precautions", "warnings", "renal_impairment"]):
+                            topic_affinity_boost = 600
+                        elif any(s in sec_lower for s in ["dosage_and_administration", "renal_dose", "dose_adjustment"]):
+                            topic_affinity_boost = 400
+                    elif act_upper == "REDUCE DOSE" or "renal clearance" in reas_lower or "dose reduction" in reas_lower:
+                        if any(s in sec_lower for s in ["dosage_and_administration", "dose_adjustment", "renal_impairment", "renal_dose", "warnings_and_precautions", "precautions"]):
+                            topic_affinity_boost = 600
+                    elif act_upper == "HOLD" or "washout" in reas_lower or "interaction" in reas_lower or "p-gp" in reas_lower:
+                        if any(s in sec_lower for s in ["drug_interactions", "cyp_interactions", "coadministration", "contraindications", "warnings_and_precautions", "warnings"]):
+                            topic_affinity_boost = 600
 
                 if is_primary_drug:
                     return base_score + 500 + topic_affinity_boost
@@ -1664,14 +1685,17 @@ CRITICAL RULES:
                             if pt in drug_citation_map:
                                 return f"[{drug_citation_map[pt]}]"
 
-            # Multi-Drug DDI Chunk Search: Check all retrieved chunks for mentions of this drug in DDI / guidelines context
+            # Multi-Drug DDI & Guideline Chunk Search: Check all retrieved chunks for mentions of this drug
             for cid, entry in citation_map.entries.items():
                 e_text = (entry.text or "").lower()
                 sec_lower = (entry.section or "").lower()
-                inappropriate_sections = ["pediatric_use", "pediatric", "pregnancy", "lactation", "clinical_studies", "how_supplied"]
+                src_lower = (entry.source or "").lower()
+                inappropriate_sections = ["pediatric_use", "pediatric", "pregnancy", "lactation", "clinical_studies", "how_supplied", "overdosage", "overdose", "poisoning"]
                 if any(bad_sec in sec_lower for bad_sec in inappropriate_sections):
                     continue
-                if any(tok in e_text for tok in tokens) and ("interaction" in sec_lower or "sepsis" in (entry.source or "").lower() or "alert" in e_text or "dosing" in sec_lower or "renal" in sec_lower):
+                if any(phrase in e_text for phrase in ["when pregnancy is detected", "discontinue entresto as soon as possible", "spinal/epidural hematoma"]):
+                    continue
+                if any(tok in e_text or tok in src_lower for tok in tokens):
                     return f"[{cid}]"
 
             # Primary chunk fallback: check if any clean primary chunk in citation_map mentions this drug
@@ -1679,8 +1703,10 @@ CRITICAL RULES:
                 e_text = (entry.text or "").lower()
                 e_drug = (entry.drug or "").strip().lower()
                 sec_lower = (entry.section or "").lower()
-                inappropriate_sections = ["pediatric_use", "pediatric", "pregnancy", "lactation", "clinical_studies", "how_supplied"]
+                inappropriate_sections = ["pediatric_use", "pediatric", "pregnancy", "lactation", "clinical_studies", "how_supplied", "overdosage", "overdose", "poisoning"]
                 if any(bad_sec in sec_lower for bad_sec in inappropriate_sections):
+                    continue
+                if any(phrase in e_text for phrase in ["when pregnancy is detected", "discontinue entresto as soon as possible", "spinal/epidural hematoma"]):
                     continue
                 if any(tok in e_drug or tok in e_text for tok in tokens):
                     return f"[{cid}]"
