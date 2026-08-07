@@ -1994,12 +1994,29 @@ CRITICAL RULES:
             # Update bibliography citations
             for old_id in cited_ids_in_order:
                 new_id = remapping[old_id]
-                c = next((cit for cit in citations if cit.document_id == old_id), None)
+                entry = citation_map.entries.get(old_id)
+                c = next((cit for cit in citations if cit.document_id == old_id or cit.uuid == (entry.uuid if entry else "")), None)
+                if not c and entry:
+                    doc_auth = "DailyMed"
+                    if any(g in (entry.source or "").upper() for g in ["KDIGO", "ADA", "ACC", "AHA", "ESC"]):
+                        doc_auth = "KDIGO 2024"
+                    c = Citation(
+                        document_id=new_id,
+                        source=f"{entry.source} – {entry.drug} – {entry.section}",
+                        snippet=entry.text,
+                        uuid=entry.uuid,
+                        drug=entry.drug,
+                        section=entry.section,
+                        authority=doc_auth,
+                        similarity=entry.similarity or 0.0,
+                        count=counts.get(new_id, 1),
+                        citation_confidence="HIGH"
+                    )
                 if c:
                     c_copy = c.model_copy()
                     c_copy.document_id = new_id
                     c_copy.citation_number = int(new_id)
-                    c_copy.count = counts[new_id]
+                    c_copy.count = counts.get(new_id, 1)
                     final_citations.append(c_copy)
                     
         # Run 5-Layer Propositional Grounding Validator
@@ -2481,10 +2498,6 @@ CRITICAL RULES:
                 documents=[d.id for d in documents]
             )
             
-            # Check citation coverage BEFORE post-processing
-            coverage = self._compute_citation_coverage(answer_text)
-            logger.info("citation_coverage_check", attempt=attempt, coverage=round(coverage, 2))
-            
             # Apply deterministic post-processing sanitizer for patient scenarios FIRST
             sanitized_answer = self._sanitize_clinical_markdown_response(
                 answer_text=answer_text,
@@ -2493,6 +2506,10 @@ CRITICAL RULES:
                 citations=citations,
                 question_text=query.question
             )
+
+            # Check citation coverage on sanitized answer
+            coverage = self._compute_citation_coverage(sanitized_answer)
+            logger.info("citation_coverage_check", attempt=attempt, coverage=round(coverage, 2))
 
             # Post-process & validate on the sanitized answer
             citations_copy = [c.model_copy() for c in citations]
