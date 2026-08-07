@@ -2485,10 +2485,19 @@ CRITICAL RULES:
             coverage = self._compute_citation_coverage(answer_text)
             logger.info("citation_coverage_check", attempt=attempt, coverage=round(coverage, 2))
             
-            # Post-process & validate
+            # Apply deterministic post-processing sanitizer for patient scenarios FIRST
+            sanitized_answer = self._sanitize_clinical_markdown_response(
+                answer_text=answer_text,
+                rule_decisions=rule_decisions,
+                citation_map=citation_map,
+                citations=citations,
+                question_text=query.question
+            )
+
+            # Post-process & validate on the sanitized answer
             citations_copy = [c.model_copy() for c in citations]
             processed_answer, processed_citations, remapping, validation_errors = self._post_process_and_validate(
-                answer_text, citations_copy, citation_map, drug_aliases_map=drug_aliases_map, question_text=query.question, rule_decisions=rule_decisions
+                sanitized_answer, citations_copy, citation_map, drug_aliases_map=drug_aliases_map, question_text=query.question, rule_decisions=rule_decisions
             )
             
             # Programmatic Post-Generation Medication Completeness Validation
