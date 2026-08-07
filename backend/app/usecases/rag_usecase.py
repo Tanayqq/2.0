@@ -276,6 +276,13 @@ SEMANTIC_MIN_SCORE: float = 0.35
 def _get_section_score(section: str) -> int:
     """Returns numeric priority score for a clinical section."""
     s = (section or "").lower().replace(" ", "_")
+    if any(k in s for k in ["overdose", "overdosage", "toxicity", "poisoning"]):
+        return 10
+    if any(k in s for k in ["pregnancy", "lactation", "nursing", "pediatric", "children"]):
+        return 5
+    if any(k in s for k in ["spinal", "epidural", "hematoma"]):
+        return 5
+
     if s in SECTION_PRIORITY_SCORES:
         return SECTION_PRIORITY_SCORES[s]
     for key, score in SECTION_PRIORITY_SCORES.items():
@@ -1537,47 +1544,74 @@ CRITICAL RULES:
         drug_citation_map: Dict[str, str] = {}
 
         if citation_map and citation_map.entries:
-            def get_entry_score(entry, target_drug: str) -> int:
+            def get_entry_score(entry, target_drug: str, action: str = "", reason: str = "") -> int:
                 sec_lower = (entry.section or "").lower()
+                e_text = (entry.text or "").lower()
+
                 # Hard negative penalty (-2000) for inappropriate sections in adult clinical recommendations
-                inappropriate_sections = ["pediatric_use", "pediatric", "pregnancy", "lactation", "clinical_studies", "how_supplied"]
+                inappropriate_sections = ["pediatric_use", "pediatric", "pregnancy", "lactation", "clinical_studies", "how_supplied", "overdose", "overdosage", "toxicity", "poisoning"]
                 if any(bad_sec in sec_lower for bad_sec in inappropriate_sections):
+                    return -2000
+
+                if "spinal" in sec_lower or "epidural" in sec_lower or "spinal" in e_text:
                     return -2000
 
                 base_score = _get_section_score(entry.section)
                 e_drug = (entry.drug or "").lower().strip()
                 if e_drug in ("", "general clinical evidence"):
                     return -1000
-                e_text = (entry.text or "").lower()
-                # Primary drug match gets massive +500 boost
-                if e_drug and (e_drug == target_drug or e_drug in target_drug or target_drug in e_drug):
-                    return base_score + 500
-                # Co-mentioned drug in DDI / coadministration section gets smaller boost (+100)
+
+                is_primary_drug = e_drug and (e_drug == target_drug or e_drug in target_drug or target_drug in e_drug)
+
+                # Claim-to-Section Topic Affinity Scoring
+                topic_affinity_boost = 0
+                act_upper = (action or "").upper()
+                reas_lower = (reason or "").lower()
+
+                if act_upper == "CONTINUE" or "gdmt" in reas_lower or "indication" in reas_lower or "rhythm control" in reas_lower:
+                    if any(s in sec_lower for s in ["indications", "clinical_pharmacology", "mechanism_of_action", "dosage_and_administration"]):
+                        topic_affinity_boost = 600
+                    elif any(s in sec_lower for s in ["drug_interactions", "cyp_interactions"]):
+                        topic_affinity_boost = -300
+                elif act_upper == "STOP" or "egfr" in reas_lower or "mala" in reas_lower or "lactic" in reas_lower:
+                    if any(s in sec_lower for s in ["contraindications", "boxed_warning", "warnings_and_precautions", "warnings", "renal_impairment"]):
+                        topic_affinity_boost = 600
+                    elif any(s in sec_lower for s in ["dosage_and_administration", "renal_dose", "dose_adjustment"]):
+                        topic_affinity_boost = 400
+                elif act_upper == "REDUCE DOSE" or "renal clearance" in reas_lower or "dose reduction" in reas_lower:
+                    if any(s in sec_lower for s in ["dosage_and_administration", "dose_adjustment", "renal_impairment", "renal_dose", "warnings_and_precautions", "precautions"]):
+                        topic_affinity_boost = 600
+                elif act_upper == "HOLD" or "washout" in reas_lower or "interaction" in reas_lower or "p-gp" in reas_lower:
+                    if any(s in sec_lower for s in ["drug_interactions", "cyp_interactions", "coadministration", "contraindications", "warnings_and_precautions", "warnings"]):
+                        topic_affinity_boost = 600
+
+                if is_primary_drug:
+                    return base_score + 500 + topic_affinity_boost
+                
                 if any(sec in sec_lower for sec in ["interaction", "coadministration", "cyp"]):
                     aliases = DRUG_ALIASES.get(target_drug, [])
                     if target_drug in e_text or any(a in e_text for a in aliases):
-                        return base_score + 100
-                # Passing mention in non-interaction section -> reject
+                        return base_score + 100 + topic_affinity_boost
+
                 return -500
 
-            # Collect all target drug tokens from decisions_map and question_text
-            all_target_tokens = set()
-            for d in (list(decisions_map.keys()) + list(DRUG_ALIASES.keys())):
-                clean_d = regex.sub(r'[\(\)\[\]/\-]', ' ', d).strip().lower()
-                for tok in clean_d.split():
-                    if len(tok) >= 3 and tok not in ["tablets", "capsules", "extended", "release", "solution"]:
-                        all_target_tokens.add(tok)
-
-            for target_d in all_target_tokens:
-                best_cid = None
-                best_score = 0  # Must be > 0 to be accepted
-                for cid, entry in citation_map.entries.items():
-                    score = get_entry_score(entry, target_d)
-                    if score > best_score:
-                        best_score = score
-                        best_cid = cid
-                if best_cid:
-                    drug_citation_map[target_d] = best_cid
+            # Collect target-driven decisions map entries
+            for d_name, d_info in decisions_map.items():
+                d_act = d_info.get("action", "")
+                d_reas = d_info.get("reason", "")
+                clean_d = regex.sub(r'[\(\)\[\]/\-]', ' ', d_name).strip().lower()
+                tokens = [t for t in clean_d.split() if len(t) >= 3 and t not in ["tablets", "capsules", "extended", "release", "solution"]]
+                
+                for target_d in tokens:
+                    best_cid = None
+                    best_score = 0
+                    for cid, entry in citation_map.entries.items():
+                        score = get_entry_score(entry, target_d, action=d_act, reason=d_reas)
+                        if score > best_score:
+                            best_score = score
+                            best_cid = cid
+                    if best_cid:
+                        drug_citation_map[target_d] = best_cid
 
         def get_citation_for_drug(drug_name: str) -> str:
             if not drug_name or not citation_map or not citation_map.entries:

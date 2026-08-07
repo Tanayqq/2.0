@@ -227,7 +227,7 @@ class ClinicalRuleEngine:
             if has_drug("colchicine"):
                 med_decisions["Fluconazole"] = {
                     "action": "HOLD",
-                    "reason": "Strong P-gp/CYP3A4 inhibitor causing life-threatening colchicine toxicity in CKD. Switch antifungal to topical Nystatin or Echinocandin."
+                    "reason": "Strong P-gp/CYP3A4 inhibitor causing colchicine accumulation in CKD. Consider alternative antifungal (e.g. Echinocandin or Nystatin) to prevent severe toxicity."
                 }
             else:
                 med_decisions["Fluconazole"] = {
@@ -366,7 +366,7 @@ class ClinicalRuleEngine:
             if has_drug("vancomycin"):
                 med_decisions["Piperacillin/Tazobactam"] = {
                     "action": "HOLD",
-                    "reason": "Synergistic nephrotoxicity with Vancomycin causing acute kidney injury. Switch to Cefepime or Meropenem for renal protection."
+                    "reason": "Synergistic AKI risk with Vancomycin. Evaluate culture clearance; consider de-escalation to Cefepime or Meropenem for renal protection during Vancomycin co-therapy."
                 }
             elif egfr < 50:
                 med_decisions["Piperacillin/Tazobactam"] = {
