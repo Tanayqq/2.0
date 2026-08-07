@@ -28,12 +28,12 @@ class ClinicalRuleEngine:
         # Extract lab values from prompt if not explicitly provided
         labs = patient_labs or {}
         if "egfr" not in labs:
-            egfr_match = regex.search(r'egfr\s*(?:[=:]|\s+is\s+)?\s*([0-9]+(?:\.[0-9]+)?)', q_lower)
+            egfr_match = regex.search(r'(?:egfr|gfr)(?:\s*\([^\)]*\))?\s*(?:[=:|]|is|level|of)?\s*([0-9]+(?:\.[0-9]+)?)', q_lower)
             if egfr_match:
                 labs["egfr"] = float(egfr_match.group(1))
                 
         if "potassium" not in labs and "k" not in labs:
-            k_match = regex.search(r'(?:potassium|k\+?)\s*(?:[=:]|\s+is\s+)?\s*([0-9]+(?:\.[0-9]+)?)', q_lower)
+            k_match = regex.search(r'(?:potassium|k\+?)(?:\s*\([^\)]*\))?\s*(?:[=:|]|is|level|of)?\s*([0-9]+(?:\.[0-9]+)?)', q_lower)
             if k_match:
                 labs["potassium"] = float(k_match.group(1))
                 
@@ -49,14 +49,19 @@ class ClinicalRuleEngine:
         has_drug = lambda name: any(name in d.lower() for d in detected_drugs) or (name in q_lower)
 
         # ----------------------------------------------------
-        # 1. IMMEDIATE LIFE-THREATENING HAZARDS
+        # 1. IMMEDIATE LIFE-THREATENING HAZARDS (Independent checks)
         # ----------------------------------------------------
         if potassium >= 6.0:
             immediate_dangers.append(
                 f"CRITICAL HYPERKALEMIA (K+ = {potassium} mEq/L): Severe risk of fatal cardiac arrhythmias / AV block. "
                 "Stat ECG required; administer IV Calcium Gluconate, Insulin + Dextrose, and immediately HOLD all potassium-retaining agents."
             )
-        elif egfr < 30 and has_drug("metformin"):
+        elif potassium >= 5.5:
+            immediate_dangers.append(
+                f"HYPERKALEMIA (K+ = {potassium} mEq/L): High risk of cardiac arrhythmias. Hold Spironolactone and all potassium-retaining agents."
+            )
+            
+        if egfr < 30 and has_drug("metformin"):
             immediate_dangers.append(
                 f"CONTRAINDICATED METFORMIN IN STAGE 4/5 CKD (eGFR = {egfr} mL/min): Severe risk of fatal Metformin-Associated Lactic Acidosis (MALA). Stop Metformin immediately."
             )
@@ -435,13 +440,15 @@ class ClinicalRuleEngine:
         if has_drug("atorvastatin") or has_drug("simvastatin") or has_drug("clarithromycin") or has_drug("fluconazole"):
             mandatory_monitoring.append("Creatine Kinase (CK): Baseline and immediate recheck if muscle pain, weakness, or dark urine develops (Statin + CYP3A4 inhibitor DDI).")
 
-        # Amiodarone / Statin LFT monitoring
-        if has_drug("amiodarone") or has_drug("atorvastatin") or has_drug("simvastatin"):
-            mandatory_monitoring.append("Liver Function Tests (AST/ALT, Bilirubin): Check baseline, at 1 month, and q6 months for Amiodarone and Statin therapy.")
+        # LFT monitoring
+        lft_drugs = [d.title() for d in ["amiodarone", "atorvastatin", "simvastatin", "rosuvastatin"] if has_drug(d)]
+        if lft_drugs:
+            mandatory_monitoring.append(f"Liver Function Tests (AST/ALT, Bilirubin): Check baseline, at 1 month, and q6 months for {', '.join(lft_drugs)} therapy.")
 
         # QTc / ECG monitoring
-        if has_drug("amiodarone") or has_drug("clarithromycin") or has_drug("digoxin") or has_drug("linezolid") or has_drug("fluconazole"):
-            mandatory_monitoring.append("12-Lead ECG: Monitor QTc interval (Amiodarone/Macrolide/Linezolid risk), PR interval/AV conduction (Digoxin/Beta-blocker), and T-wave morphology.")
+        ecg_drugs = [d.title() for d in ["amiodarone", "clarithromycin", "linezolid", "fluconazole", "digoxin", "metoprolol"] if has_drug(d)]
+        if ecg_drugs:
+            mandatory_monitoring.append(f"12-Lead ECG: Monitor QTc interval and PR interval/AV conduction for {', '.join(ecg_drugs)} therapy.")
 
         # Heart rate / BP monitoring for cardiac drugs
         if has_drug("metoprolol") or has_drug("amiodarone") or has_drug("digoxin"):

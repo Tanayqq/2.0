@@ -271,8 +271,8 @@ def test_scenario_6_multi_drug_citation_binding_and_guideline_separation():
     # 3. Sacubitril/Valsartan row MUST cite [4] (token match for Sacubitril)
     assert "| Sacubitril/Valsartan | REDUCE DOSE | eGFR 23 | [4] |" in sanitized
 
-    # 4. Metoprolol row MUST have empty citation | | (NEVER fall back to [1])
-    assert "| Metoprolol | CONTINUE | HFrEF Class 1A GDMT |  |" in sanitized
+    # 4. Metoprolol row MUST be labeled Evidence Unavailable (NEVER fall back to [1])
+    assert "| Metoprolol | CONTINUE | HFrEF Class 1A GDMT | Evidence Unavailable |" in sanitized
 
     # 5. Section 6 Guideline Recommendations MUST cite KDIGO chunk [1]
     assert "**6. Guideline Recommendations**\nClass 1A GDMT recommendations apply for HFrEF/CKD cardiorenal management per ACC/AHA 2024 & KDIGO 2024. [1]" in sanitized
