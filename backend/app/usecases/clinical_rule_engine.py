@@ -334,6 +334,65 @@ class ClinicalRuleEngine:
                     "reason": "Acute migraine therapy. Use PRN; limit to max 200mg/24 hours."
                 }
 
+        # Aceclofenac / NSAIDs
+        if has_drug("aceclofenac") or has_drug("ibuprofen") or has_drug("naproxen") or has_drug("ketorolac") or has_drug("diclofenac"):
+            nsaid_name = "Aceclofenac" if has_drug("aceclofenac") else ("Ibuprofen" if has_drug("ibuprofen") else "NSAID")
+            if egfr < 30 or (potassium >= 5.5 and (has_drug("enalapril") or has_drug("lisinopril") or has_drug("losartan"))):
+                med_decisions[nsaid_name] = {
+                    "action": "STOP",
+                    "reason": f"Contraindicated in severe AKI/CKD (eGFR {egfr} mL/min) and Triple Whammy DDI with RAASi/Diuretics (severe afferent vasoconstriction AKI)."
+                }
+            else:
+                med_decisions[nsaid_name] = {
+                    "action": "REDUCE DOSE",
+                    "reason": "Use lowest effective dose for shortest duration due to renal and GI risks."
+                }
+
+        # Vancomycin
+        if has_drug("vancomycin"):
+            if egfr < 30 or has_drug("tazobactam") or has_drug("zosyn") or has_drug("piperacillin"):
+                med_decisions["Vancomycin"] = {
+                    "action": "REDUCE DOSE",
+                    "reason": f"Renal impairment (eGFR {egfr} mL/min) and synergistic AKI risk with Pip-Tazo. Dose per AUC/MIC (target 400-600) and monitor trough levels."
+                }
+            else:
+                med_decisions["Vancomycin"] = {
+                    "action": "CONTINUE",
+                    "reason": "Glycopeptide antibacterial. Monitor serum trough concentrations and renal function."
+                }
+
+        # Piperacillin/Tazobactam (Zosyn)
+        if has_drug("tazobactam") or has_drug("zosyn") or has_drug("piperacillin"):
+            if has_drug("vancomycin"):
+                med_decisions["Piperacillin/Tazobactam"] = {
+                    "action": "HOLD",
+                    "reason": "Synergistic nephrotoxicity with Vancomycin causing acute kidney injury. Switch to Cefepime or Meropenem for renal protection."
+                }
+            elif egfr < 50:
+                med_decisions["Piperacillin/Tazobactam"] = {
+                    "action": "REDUCE DOSE",
+                    "reason": f"Renal impairment (eGFR {egfr} mL/min). Dose adjustment required (2.25g q6h or 3.375g q6h)."
+                }
+            else:
+                med_decisions["Piperacillin/Tazobactam"] = {
+                    "action": "CONTINUE",
+                    "reason": "Extended-spectrum antipseudomonal penicillin. Adjust dose for renal clearance."
+                }
+
+        # Furosemide
+        if has_drug("furosemide") or has_drug("torsemide") or has_drug("bumetanide"):
+            diuretic_name = "Furosemide" if has_drug("furosemide") else "Loop Diuretic"
+            if egfr < 30:
+                med_decisions[diuretic_name] = {
+                    "action": "CONTINUE",
+                    "reason": "Loop diuretic for volume management in CKD/AKI; monitor fluid status, K+, and serum creatinine."
+                }
+            else:
+                med_decisions[diuretic_name] = {
+                    "action": "CONTINUE",
+                    "reason": "Loop diuretic for edema management. Monitor volume status and electrolytes."
+                }
+
         # Tramadol
         if has_drug("tramadol"):
             if has_drug("linezolid") or has_drug("fluoxetine"):
@@ -415,6 +474,18 @@ class ClinicalRuleEngine:
                 "pair": "Linezolid ↔ Tramadol",
                 "severity": "HIGH",
                 "mechanism": "Dual serotonergic stimulation and MAO inhibition increases risks of Serotonin Syndrome and severe seizure activity."
+            })
+        if (has_drug("aceclofenac") or has_drug("ibuprofen") or has_drug("naproxen")) and (has_drug("enalapril") or has_drug("lisinopril") or has_drug("losartan")) and (has_drug("furosemide") or has_drug("torsemide")):
+            major_interactions.append({
+                "pair": "Aceclofenac ↔ Enalapril ↔ Furosemide",
+                "severity": "CRITICAL",
+                "mechanism": "Triple Whammy DDI: NSAID afferent arteriolar constriction + ACEi efferent arteriolar vasodilation + Diuretic volume depletion causes severe acute kidney injury (AKI Stage 3)."
+            })
+        if has_drug("vancomycin") and (has_drug("tazobactam") or has_drug("zosyn") or has_drug("piperacillin")):
+            major_interactions.append({
+                "pair": "Vancomycin ↔ Piperacillin/Tazobactam",
+                "severity": "HIGH",
+                "mechanism": "Synergistic nephrotoxicity: Combined administration induces acute tubular injury and interstitial nephritis, causing rapid elevation in serum creatinine."
             })
 
         # ----------------------------------------------------
