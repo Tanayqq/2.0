@@ -2202,7 +2202,12 @@ CRITICAL RULES:
                 if profile:
                     data = profile.get("data", {})
                     brand_names_list = data.get("brand_names", {}).get("value", [])
-                    brands_str = ", ".join(brand_names_list) if brand_names_list else "Not available"
+                    
+                    from app.usecases.drug_resolver import DrugNameResolver
+                    gen_clean = resolved_generic.split(":")[-1].lower()
+                    known_brands = [b.title() for b, g in DrugNameResolver.BRAND_TO_GENERIC.items() if g.lower() == gen_clean]
+                    all_brands = list(dict.fromkeys(brand_names_list + known_brands))
+                    brands_str = ", ".join(all_brands[:5]) if all_brands else "Not available"
                     
                     generic_name = data.get("generic_name", {}).get("value", resolved_generic.split(":")[-1].capitalize())
                     drug_class = data.get("drug_class", {}).get("value", "Not available")
@@ -2212,18 +2217,25 @@ CRITICAL RULES:
                     rxnorm = data.get("rxnorm_id", {}).get("value", "Not available")
                     unii = data.get("unii", {}).get("value", "Not available")
                     
-                    ans = f"""### {generic_name}
-
-Identity Profile (Grounded FDA Label Metadata):
-- **Generic Name**: {generic_name}
-- **Brand Names**: {brands_str}
-- **Drug Class**: {drug_class}
-- **Prescription Status**: {presc}
-- **Manufacturer**: {mfg}
-- **ATC Code**: {atc}
-- **RxNorm ID**: {rxnorm}
-- **UNII**: {unii}
-"""
+                    id_lines = [f"**{generic_name}**\n", "**Identity Profile (Grounded FDA Label Metadata):**"]
+                    if generic_name and generic_name != "Not available":
+                        id_lines.append(f"- **Generic Name**: {generic_name}")
+                    if brands_str and brands_str != "Not available":
+                        id_lines.append(f"- **Brand Names**: {brands_str}")
+                    if drug_class and drug_class != "Not available":
+                        id_lines.append(f"- **Drug Class**: {drug_class}")
+                    if presc and presc != "Not available":
+                        id_lines.append(f"- **Prescription Status**: {presc}")
+                    if mfg and mfg != "Not available":
+                        id_lines.append(f"- **Manufacturer**: {mfg}")
+                    if atc and atc != "Not available":
+                        id_lines.append(f"- **ATC Code**: {atc}")
+                    if rxnorm and rxnorm != "Not available":
+                        id_lines.append(f"- **RxNorm ID**: {rxnorm}")
+                    if unii and unii != "Not available":
+                        id_lines.append(f"- **UNII**: {unii}")
+                    
+                    ans = "\n".join(id_lines)
                     total_latency = time.time() - start_time
                     logger.info("identity_query_fast_path_routed", generic_name=generic_name)
                     return AnswerResponse(
@@ -2469,9 +2481,15 @@ Identity Profile (Grounded FDA Label Metadata):
             if profile:
                 data = profile.get("data", {})
                 brand_names_list = data.get("brand_names", {}).get("value", [])
-                brands_str = ", ".join(brand_names_list) if brand_names_list else "Not available"
                 
-                generic_name = data.get("generic_name", {}).get("value", resolved_generic.capitalize())
+                # Enrich brand names with DrugNameResolver
+                from app.usecases.drug_resolver import DrugNameResolver
+                gen_clean = resolved_generic.split(":")[-1].lower()
+                known_brands = [b.title() for b, g in DrugNameResolver.BRAND_TO_GENERIC.items() if g.lower() == gen_clean]
+                all_brands = list(dict.fromkeys(brand_names_list + known_brands))
+                brands_str = ", ".join(all_brands[:5]) if all_brands else "Not available"
+                
+                generic_name = data.get("generic_name", {}).get("value", resolved_generic.split(":")[-1].capitalize())
                 drug_class = data.get("drug_class", {}).get("value", "Not available")
                 presc = data.get("prescription_status", {}).get("value", "Not available")
                 mfg = data.get("manufacturer", {}).get("value", "Not available")
@@ -2479,15 +2497,25 @@ Identity Profile (Grounded FDA Label Metadata):
                 rxnorm = data.get("rxnorm_id", {}).get("value", "Not available")
                 unii = data.get("unii", {}).get("value", "Not available")
                 
-                id_md = f"""Identity Profile (Grounded FDA Label Metadata):
-- **Generic Name**: {generic_name}
-- **Brand Names**: {brands_str}
-- **Drug Class**: {drug_class}
-- **Prescription Status**: {presc}
-- **Manufacturer**: {mfg}
-- **ATC Code**: {atc}
-- **RxNorm ID**: {rxnorm}
-- **UNII**: {unii}"""
+                id_lines = ["**Identity Profile (Grounded FDA Label Metadata):**"]
+                if generic_name and generic_name != "Not available":
+                    id_lines.append(f"- **Generic Name**: {generic_name}")
+                if brands_str and brands_str != "Not available":
+                    id_lines.append(f"- **Brand Names**: {brands_str}")
+                if drug_class and drug_class != "Not available":
+                    id_lines.append(f"- **Drug Class**: {drug_class}")
+                if presc and presc != "Not available":
+                    id_lines.append(f"- **Prescription Status**: {presc}")
+                if mfg and mfg != "Not available":
+                    id_lines.append(f"- **Manufacturer**: {mfg}")
+                if atc and atc != "Not available":
+                    id_lines.append(f"- **ATC Code**: {atc}")
+                if rxnorm and rxnorm != "Not available":
+                    id_lines.append(f"- **RxNorm ID**: {rxnorm}")
+                if unii and unii != "Not available":
+                    id_lines.append(f"- **UNII**: {unii}")
+                
+                id_md = "\n".join(id_lines)
                 
                 # Match ### or #### Clinical Profile Overview
                 header_pattern = re.compile(r'(#{3,4}\s*Clinical Profile Overview)', re.IGNORECASE)
