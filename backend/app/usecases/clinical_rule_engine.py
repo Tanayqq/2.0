@@ -111,7 +111,7 @@ class ClinicalRuleEngine:
             if has_drug("enalapril") or has_drug("lisinopril") or has_drug("ramipril"):
                 med_decisions["Sacubitril/Valsartan"] = {
                     "action": "HOLD",
-                    "reason": "Mandatory 36-hour washout required after last ACEi dose to prevent life-threatening angioedema."
+                    "reason": "CONTRAINDICATED COMBINATION: Mandatory 36-hour washout required between ACEi (Enalapril/Lisinopril) and Sacubitril/Valsartan to prevent life-threatening angioedema."
                 }
             elif egfr < 30:
                 med_decisions["Sacubitril/Valsartan"] = {

@@ -451,8 +451,10 @@ class ProcessClinicalQueryUseCase:
             resolved_drug[0] if isinstance(resolved_drug, list) and len(resolved_drug) == 1 else None
         )
         
-        # Always include REQUIRED_UI_SECTIONS so all 4 UI cards receive evidence chunks for the drug
-        sections_to_fetch = list(dict.fromkeys(detected_sections + REQUIRED_UI_SECTIONS)) if detected_sections else REQUIRED_UI_SECTIONS
+        # Always include REQUIRED_UI_SECTIONS + high-priority clinical sections so all cards receive evidence chunks
+        sections_to_fetch = list(dict.fromkeys((detected_sections or []) + REQUIRED_UI_SECTIONS + [
+            "contraindications", "boxed_warning", "warnings_and_precautions", "warnings", "renal_impairment", "dosage_and_administration", "drug_interactions", "indications"
+        ]))
             
         drugs_to_fetch = [single_resolved] if single_resolved else (resolved_drug if isinstance(resolved_drug, list) else [])
         
@@ -1536,6 +1538,12 @@ CRITICAL RULES:
 
         if citation_map and citation_map.entries:
             def get_entry_score(entry, target_drug: str) -> int:
+                sec_lower = (entry.section or "").lower()
+                # Hard negative penalty (-2000) for inappropriate sections in adult clinical recommendations
+                inappropriate_sections = ["pediatric_use", "pediatric", "pregnancy", "lactation", "clinical_studies", "how_supplied"]
+                if any(bad_sec in sec_lower for bad_sec in inappropriate_sections):
+                    return -2000
+
                 base_score = _get_section_score(entry.section)
                 e_drug = (entry.drug or "").lower().strip()
                 if e_drug in ("", "general clinical evidence"):
@@ -1545,7 +1553,6 @@ CRITICAL RULES:
                 if e_drug and (e_drug == target_drug or e_drug in target_drug or target_drug in e_drug):
                     return base_score + 500
                 # Co-mentioned drug in DDI / coadministration section gets smaller boost (+100)
-                sec_lower = (entry.section or "").lower()
                 if any(sec in sec_lower for sec in ["interaction", "coadministration", "cyp"]):
                     aliases = DRUG_ALIASES.get(target_drug, [])
                     if target_drug in e_text or any(a in e_text for a in aliases):
@@ -1622,7 +1629,28 @@ CRITICAL RULES:
                         for pt in partner_tokens:
                             if pt in drug_citation_map:
                                 return f"[{drug_citation_map[pt]}]"
-            # Strict policy: NEVER fall back to [1]. Return empty string if no matching drug chunk.
+
+            # Multi-Drug DDI Chunk Search: Check all retrieved chunks for mentions of this drug in DDI / guidelines context
+            for cid, entry in citation_map.entries.items():
+                e_text = (entry.text or "").lower()
+                sec_lower = (entry.section or "").lower()
+                inappropriate_sections = ["pediatric_use", "pediatric", "pregnancy", "lactation", "clinical_studies", "how_supplied"]
+                if any(bad_sec in sec_lower for bad_sec in inappropriate_sections):
+                    continue
+                if any(tok in e_text for tok in tokens) and ("interaction" in sec_lower or "sepsis" in (entry.source or "").lower() or "alert" in e_text or "dosing" in sec_lower or "renal" in sec_lower):
+                    return f"[{cid}]"
+
+            # Primary chunk fallback: check if any clean primary chunk in citation_map mentions this drug
+            for cid, entry in citation_map.entries.items():
+                e_text = (entry.text or "").lower()
+                e_drug = (entry.drug or "").strip().lower()
+                sec_lower = (entry.section or "").lower()
+                inappropriate_sections = ["pediatric_use", "pediatric", "pregnancy", "lactation", "clinical_studies", "how_supplied"]
+                if any(bad_sec in sec_lower for bad_sec in inappropriate_sections):
+                    continue
+                if any(tok in e_drug or tok in e_text for tok in tokens):
+                    return f"[{cid}]"
+
             return ""
 
         # In patient scenarios, ALWAYS format the 8 sections even if the rule engine found no drugs
