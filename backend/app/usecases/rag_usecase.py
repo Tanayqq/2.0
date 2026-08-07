@@ -1578,16 +1578,13 @@ CRITICAL RULES:
             _egfr = (rule_decisions or {}).get("labs", {}).get("egfr", 23.0)
             _k    = (rule_decisions or {}).get("labs", {}).get("potassium", 6.2)
 
-            # SECTION 1: Immediate Life-Threatening Problems — built from rule_decisions, not LLM output
+            # SECTION 1: Immediate Life-Threatening Problems — built from rule_decisions
             sec1_bullets = []
             if rule_decisions:
                 for danger in rule_decisions.get("immediate_dangers", []):
                     sec1_bullets.append(f"- {danger}")
             if not sec1_bullets:
-                sec1_bullets.append(
-                    f"- ⚠️ CRITICAL HYPERKALEMIA (K+ = {_k} mEq/L): Stat ECG; administer IV Calcium Gluconate, Insulin+Dextrose; HOLD all K+ retaining agents.\n"
-                    f"- ⚠️ CONTRAINDICATED METFORMIN IN CKD (eGFR = {_egfr} mL/min): Risk of fatal lactic acidosis (MALA). Stop Metformin immediately."
-                )
+                sec1_bullets.append("- No immediate life-threatening metabolic or medication hazards identified.")
             sec1_text = f"### 1. Immediate Life-Threatening Problems\n" + "\n".join(sec1_bullets) + "\n\n"
 
             # SECTION 2: Medication-by-Medication Review Table — built from rule_decisions
@@ -1599,7 +1596,7 @@ CRITICAL RULES:
                     reason_escaped = r_info['reason'].replace('|', '/')
                     table_rows.append(f"| {r_key} | {r_info['action']} | {reason_escaped} | {cit} |")
             else:
-                table_rows.append("| No specific high-risk medications detected | N/A | Provide general clinical review based on labs. | [1] |")
+                table_rows.append("| No specific high-risk medications detected | N/A | Provide general clinical review based on labs. | |")
             sec2_text = table_header + "\n".join(table_rows) + "\n\n"
 
             # SECTION 3: Major Drug Interactions — built from rule_decisions
@@ -1621,11 +1618,7 @@ CRITICAL RULES:
                         kw in r_info['reason'].lower() for kw in ["egfr", "renal", "ckd", "creatinine"]
                     ):
                         renal_rows.append(f"- **{r_key}**: {r_info['action']} — {r_info['reason']}")
-            sec4_body = "\n".join(renal_rows) if renal_rows else (
-                f"- Metformin XR: STOP (eGFR {_egfr} mL/min < 30 mL/min threshold).\n"
-                f"- Sacubitril/Valsartan: REDUCE DOSE to 24/26mg BID (eGFR {_egfr} mL/min).\n"
-                f"- Spironolactone: Hold if K+ > 5.5 mEq/L."
-            )
+            sec4_body = "\n".join(renal_rows) if renal_rows else "- No specific renal dose adjustments required based on current eGFR."
             sec4_text = f"### 4. Renal Dosing Issues\n{sec4_body}\n\n"
 
             # SECTION 5: Electrolyte Issues — derived from labs
@@ -1634,9 +1627,10 @@ CRITICAL RULES:
                 elec_bullets.append(f"- **Severe Hyperkalemia** (K+ = {_k} mEq/L): Hold all potassium-retaining agents. Target K+ < 5.0 mEq/L before restarting MRAs.")
             elif _k >= 5.5:
                 elec_bullets.append(f"- **Hyperkalemia** (K+ = {_k} mEq/L): Reduce K+ burden by holding Spironolactone. Recheck daily.")
+            elif _k < 3.5:
+                elec_bullets.append(f"- **Hypokalemia** (K+ = {_k} mEq/L): Monitor potassium levels closely and evaluate for potassium supplementation.")
             else:
-                elec_bullets.append(f"- Serum K+ = {_k} mEq/L: Monitor closely given RAAS/MRA co-therapy.")
-            elec_bullets.append("- Maintain Mg²⁺ > 2.0 mEq/L to prevent Digoxin toxicity and QTc prolongation.")
+                elec_bullets.append(f"- Serum K+ = {_k} mEq/L (Normal range: 3.5 - 5.0 mEq/L).")
             sec5_text = f"### 5. Electrolyte Issues\n" + "\n".join(elec_bullets) + "\n\n"
 
             # SECTION 6: Guideline Recommendations — target actual guideline chunks (KDIGO/ADA/ACC/AHA)
