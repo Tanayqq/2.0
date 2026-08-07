@@ -944,6 +944,52 @@ class ProcessClinicalQueryUseCase:
         else:
             max_char_limit = 7500   # ~1800 tokens context headroom
 
+        # Pre-register ALL retrieved final_docs into citation_map and citations list
+        # This guarantees 100% citation binding for all retrieved evidence, even when LLM prompt context is truncated for token limits.
+        for doc in final_docs:
+            cleaned_content = clean_chunk_content(doc.content)
+            if "no specific instructions, data, or warnings" in cleaned_content.lower() or "no information provided" in cleaned_content.lower() or len(cleaned_content.strip()) < 40:
+                continue
+
+            if doc.id not in uuid_to_citation_id:
+                citation_counter += 1
+                citation_id = str(citation_counter)
+                uuid_to_citation_id[doc.id] = citation_id
+                
+                doc_drug = (doc.metadata.get("drug_name") or doc.metadata.get("drug") or "").strip().lower()
+                section_raw = doc.metadata.get('section', doc.metadata.get('category', ''))
+
+                citation_map.add_entry(
+                    uuid=doc.id,
+                    citation_number=citation_id,
+                    source=doc.source,
+                    drug=doc_drug,
+                    section=section_raw,
+                    text=cleaned_content,
+                    similarity=round(doc.score or 0.0, 4)
+                )
+
+                doc_auth = (doc.metadata.get("authority") or "DailyMed").upper()
+                if any(g in doc_auth for g in ["KDIGO", "ADA", "ACC", "AHA", "ESC", "SURVIVING SEPSIS"]):
+                    cit_conf = "HIGH"
+                elif any(l in doc_auth for l in ["FDA", "DAILYMED", "CDSCO", "NFI", "ASHP"]):
+                    cit_conf = "MEDIUM"
+                else:
+                    cit_conf = "LOW"
+
+                citations.append(Citation(
+                    document_id=citation_id,
+                    source=f"{doc.source} – {doc_drug} – {section_raw}",
+                    snippet=cleaned_content,
+                    uuid=doc.id,
+                    drug=doc_drug,
+                    section=section_raw,
+                    authority=doc.metadata.get("authority", "DailyMed"),
+                    similarity=round(doc.score or 0.0, 4),
+                    count=0,
+                    citation_confidence=cit_conf
+                ))
+
         for drug in drug_order:
             if len(drug_context_str) >= max_char_limit:
                 break
@@ -978,15 +1024,7 @@ class ProcessClinicalQueryUseCase:
                     if "no specific instructions, data, or warnings" in cleaned_content.lower() or "no information provided" in cleaned_content.lower() or len(cleaned_content.strip()) < 40:
                         continue
 
-                    if doc.id in uuid_to_citation_id:
-                        citation_id = uuid_to_citation_id[doc.id]
-                        is_new_citation = False
-                    else:
-                        citation_counter += 1
-                        citation_id = str(citation_counter)
-                        uuid_to_citation_id[doc.id] = citation_id
-                        is_new_citation = True
-
+                    citation_id = uuid_to_citation_id.get(doc.id, "1")
                     section_raw = doc.metadata.get('section', doc.metadata.get('category', ''))
 
                     doc_str = ""
@@ -1001,38 +1039,6 @@ class ProcessClinicalQueryUseCase:
                     doc_str += f"\n"
 
                     cat_str += doc_str
-
-                    if is_new_citation:
-                        citation_map.add_entry(
-                            uuid=doc.id,
-                            citation_number=citation_id,
-                            source=doc.source,
-                            drug=drug,
-                            section=section_raw,
-                            text=cleaned_content,
-                            similarity=round(doc.score or 0.0, 4)
-                        )
-
-                        doc_auth = (doc.metadata.get("authority") or "DailyMed").upper()
-                        if any(g in doc_auth for g in ["KDIGO", "ADA", "ACC", "AHA", "ESC", "SURVIVING SEPSIS"]):
-                            cit_conf = "HIGH"
-                        elif any(l in doc_auth for l in ["FDA", "DAILYMED", "CDSCO", "NFI", "ASHP"]):
-                            cit_conf = "MEDIUM"
-                        else:
-                            cit_conf = "LOW"
-
-                        citations.append(Citation(
-                            document_id=citation_id,
-                            source=f"{doc.source} – {drug} – {section_raw}",
-                            snippet=cleaned_content,
-                            uuid=doc.id,
-                            drug=drug,
-                            section=section_raw,
-                            authority=doc.metadata.get("authority", "DailyMed"),
-                            similarity=round(doc.score or 0.0, 4),
-                            count=0,
-                            citation_confidence=cit_conf
-                        ))
 
                 d_str += cat_str
 
