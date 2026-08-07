@@ -838,6 +838,9 @@ class ProcessClinicalQueryUseCase:
         citation_counter = 0
         uuid_to_citation_id = {}
         
+        # Sort final_docs by section priority score descending so high-priority clinical sections outrank patient_counseling
+        final_docs.sort(key=lambda d: _get_section_score(d.metadata.get("section", "")), reverse=True)
+
         # Organize docs by (drug, clinical_category)
         from app.section_utils import get_clinical_category
         
@@ -852,14 +855,16 @@ class ProcessClinicalQueryUseCase:
                 docs_by_drug_category[drug][clinical_cat] = []
             docs_by_drug_category[drug][clinical_cat].append(doc)
 
-        
-        # Determine the list of drugs (preserve order from resolved_drug or from docs)
-        if resolved_drug and isinstance(resolved_drug, list):
-            drug_order = resolved_drug
-        elif resolved_drug:
-            drug_order = [resolved_drug]
-        else:
-            drug_order = list(docs_by_drug_category.keys())
+        # Determine complete drug rendering order (resolved_drug first, followed by all remaining fetched drugs)
+        drug_order = []
+        if resolved_drug:
+            res_list = resolved_drug if isinstance(resolved_drug, list) else [resolved_drug]
+            for rd in res_list:
+                if rd and rd.lower().strip() not in drug_order:
+                    drug_order.append(rd.lower().strip())
+        for d in docs_by_drug_category.keys():
+            if d and d.lower().strip() not in drug_order:
+                drug_order.append(d.lower().strip())
         
         # Log per-drug per-category chunk counts
         coverage_log = {}
@@ -2187,6 +2192,19 @@ CRITICAL RULES:
             doc_id = (getattr(doc, "id", "") or "").strip()
             mode = doc.metadata.get("retrieval_mode", "")
 
+            # Reject chunks where content header specifies a different drug than stamped metadata
+            # e.g., metadata says 'fluconazole' but text header starts with 'Drug: Micafungin'
+            import re as _re
+            header_match = _re.match(r'drug:\s*([a-z0-9_\-\s]+)\s*\|', content.lower())
+            header_aligned = True
+            if header_match:
+                header_drug = header_match.group(1).strip()
+                clean_drug = drug.lower().strip()
+                if clean_drug and header_drug and clean_drug not in header_drug and header_drug not in clean_drug:
+                    header_aligned = False
+                    logger.warning("evidence_integrity_check_failed_header_mismatch",
+                                   stamped_drug=drug, header_drug=header_drug, doc_id=doc_id)
+
             checks = {
                 "has_drug_or_general": bool(drug),
                 "has_section": bool(section),
@@ -2194,6 +2212,7 @@ CRITICAL RULES:
                 "has_source": bool(source),
                 "has_uuid": bool(doc_id),
                 "score_ok": score >= MIN_SIMILARITY or mode in ("EXACT_SECTION", "MULTI_COLLECTION_RAG"),
+                "header_aligned": header_aligned,
             }
 
             if all(checks.values()):
