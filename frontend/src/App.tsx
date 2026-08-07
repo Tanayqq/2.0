@@ -666,7 +666,11 @@ export default function App() {
   // Filter citations for the active drug
   const isPatientScenario = activeItem?.a.metadata?.retrieval_diagnostics?.intent === "PATIENT_SCENARIO" ||
                             activeItem?.a.metadata?.intent === "PATIENT_SCENARIO" ||
-                            (activeItem?.a.answer && activeItem.a.answer.includes("**1. Immediate"));
+                            (activeItem?.a.answer && (
+                              /[*#]*1\.\s*Immediate/i.test(activeItem.a.answer) ||
+                              /Medication-by-Medication/i.test(activeItem.a.answer) ||
+                              /Clinical Assessment & Action Plan/i.test(activeItem.a.answer)
+                            ));
 
   const drugCitations = activeCitations.filter((c, idx) => {
     const num = c.citation_number ?? (idx + 1);
@@ -691,7 +695,7 @@ export default function App() {
     return isCited && matchesDrug;
   });
 
-  const finalCitationsToRender = drugCitations.length > 0 ? drugCitations : activeCitations;
+  const finalCitationsToRender = isPatientScenario ? activeCitations : (drugCitations.length > 0 ? drugCitations : activeCitations);
 
   return (
     <div className="flex h-screen w-screen bg-[#060b13] text-[#e2e8f0] overflow-hidden font-sans select-text">
