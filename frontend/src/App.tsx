@@ -664,12 +664,16 @@ export default function App() {
   }
 
   // Filter citations for the active drug
+  const isPatientScenario = activeItem?.a.metadata?.retrieval_diagnostics?.intent === "PATIENT_SCENARIO" ||
+                            activeItem?.a.metadata?.intent === "PATIENT_SCENARIO" ||
+                            (activeItem?.a.answer && activeItem.a.answer.includes("**1. Immediate"));
+
   const drugCitations = activeCitations.filter((c, idx) => {
     const num = c.citation_number ?? (idx + 1);
     const isCited = referencedNums.size === 0 || referencedNums.has(num);
     
-    // For single drug results, display all citations referenced in the text
-    if (parsedDrugs.length <= 1) {
+    // For single drug results or PATIENT_SCENARIO reports, display ALL citations referenced in the text!
+    if (parsedDrugs.length <= 1 || isPatientScenario) {
       return isCited;
     }
 
