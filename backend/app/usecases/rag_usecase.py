@@ -258,6 +258,8 @@ SECTION_PRIORITY_SCORES: Dict[str, int] = {
     "indications": 50,
     "adverse_reactions": 45,
     "monitoring": 44,
+    "pregnancy": 10,
+    "lactation": 10,
     "description": 10,
     "clinical_trials": 10,
     "geriatric_use": 5,
@@ -596,8 +598,10 @@ class ProcessClinicalQueryUseCase:
             def _fetch_docs_for_drug(drug: str) -> List[Any]:
                 drug_docs = []
                 exact_docs = []
-                if hasattr(self.vector_db, 'scroll_by_drug_all'):
-                    exact_docs = self.vector_db.scroll_by_drug_all(drug, limit=8)
+                if hasattr(self.vector_db, 'scroll_by_drug_sections'):
+                    exact_docs = self.vector_db.scroll_by_drug_sections(drug, sections_to_fetch, limit_per_section=2)
+                if not exact_docs and hasattr(self.vector_db, 'scroll_by_drug_all'):
+                    exact_docs = self.vector_db.scroll_by_drug_all(drug, limit=12)
 
                 if exact_docs:
                     for doc in exact_docs:
@@ -1015,6 +1019,8 @@ class ProcessClinicalQueryUseCase:
 
                 if not cat_docs:
                     continue
+
+                cat_docs.sort(key=lambda d: _get_section_score(d.metadata.get("section", "")), reverse=True)
 
                 for doc in cat_docs:
                     if len(drug_context_str) + len(d_str) + len(cat_str) >= max_char_limit:
@@ -2040,15 +2046,32 @@ CRITICAL RULES:
             "biotin", "sitagliptin", "losartan", "telmisartan", "apixaban", "rivaroxaban"
         ]
         
+        canonical_map = {
+            "zosyn": "piperacillin",
+            "tazobactam": "piperacillin",
+            "piperacillin": "piperacillin",
+            "glucophage": "metformin",
+            "fortamet": "metformin",
+            "vasotec": "enalapril",
+            "aldactone": "spironolactone",
+            "eliquis": "apixaban",
+            "lasix": "furosemide",
+            "entresto": "sacubitril",
+            "valsartan": "sacubitril"
+        }
+        
         q_lower = question_text.lower()
         patient_drugs = [d for d in known_drugs if d in q_lower]
         
         a_lower = answer_text.lower()
         output_drugs = [d for d in known_drugs if d in a_lower]
         
-        missing = [d for d in patient_drugs if d not in output_drugs]
+        patient_canonicals = set(canonical_map.get(d, d) for d in patient_drugs)
+        output_canonicals = set(canonical_map.get(d, d) for d in output_drugs)
         
-        whitelist = {"paracetamol", "acetaminophen", "sacubitril", "valsartan", "entresto"}
+        missing = [d for d in patient_canonicals if d not in output_canonicals]
+        
+        whitelist = {"paracetamol", "acetaminophen", "sacubitril", "valsartan", "entresto", "piperacillin", "tazobactam", "zosyn"}
         extra = [d for d in output_drugs if d not in patient_drugs and d not in whitelist]
         
         is_complete = len(missing) == 0
