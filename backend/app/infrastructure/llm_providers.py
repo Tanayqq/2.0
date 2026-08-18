@@ -36,8 +36,8 @@ class GroqProvider(LLMProviderProtocol):
         pipeline_res: PipelineResult = ConversationPipeline.process(messages, provider="groq", session_id=session_id)
         sanitized_messages = pipeline_res.processed_messages
 
-        # Model cascade order for rate limit & deprecation failover
-        models_to_try = [self.model_name, "llama-3.3-70b-versatile", "llama-3.1-8b-instant", "llama3-8b-8192"]
+        # Model cascade order for rate limit & deprecation failover (using only active Groq models)
+        models_to_try = [self.model_name, "llama-3.3-70b-versatile", "llama-3.1-8b-instant"]
         models_to_try = list(dict.fromkeys(models_to_try))
 
         last_exception = None
@@ -88,23 +88,19 @@ class GroqProvider(LLMProviderProtocol):
                     last_exception = e
                     msg = str(e)
                     is_token_limit = any(k in msg.lower() for k in ["rate limit", "429", "413", "rate_limit_exceeded", "too large", "tpm"])
-                    is_model_unavailable = any(k in msg.lower() for k in ["404", "not_found", "does not exist", "decommissioned", "no longer supported"])
                     
-                    if is_token_limit:
-                        if ("413" in msg or "too large" in msg.lower() or "limit" in msg.lower()) and retries == 0:
-                            print(f"\n[Token Limit Exceeded] Compressing payload for model '{model_choice}' after exception...")
-                            for m in current_messages:
-                                if len(m.get("content", "")) > 4000:
-                                    m["content"] = m["content"][:4000] + "\n...[Context compressed to comply with Groq TPM token limits]..."
-                            retries += 1
-                            time.sleep(0.5)
-                            continue
-                        break
-                    elif is_model_unavailable:
-                        print(f"\n[Model Unavailable] Groq model '{model_choice}' decommissioned/unavailable. Cascading to next model...")
-                        break
-                    else:
-                        break
+                    if is_token_limit and retries == 0:
+                        print(f"\n[Token Limit Exceeded] Compressing payload for model '{model_choice}' after exception...")
+                        for m in current_messages:
+                            if len(m.get("content", "")) > 4000:
+                                m["content"] = m["content"][:4000] + "\n...[Context compressed to comply with Groq TPM token limits]..."
+                        retries += 1
+                        time.sleep(0.5)
+                        continue
+                    
+                    # For any decommissioned, 400, 404, or unhandled exception, cascade to next model
+                    print(f"\n[Model Failover] Model '{model_choice}' error ({msg[:60]}). Cascading to next model...")
+                    break
 
         # If all Groq models exhausted, attempt Gemini failover if key exists
         import os

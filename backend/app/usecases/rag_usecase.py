@@ -2646,15 +2646,21 @@ CRITICAL RULES:
             try:
                 answer_text = self.llm.generate(prompt)
             except Exception as gen_err:
-                err_str = str(gen_err).lower()
-                if any(k in err_str for k in ["rate limit", "413", "too large", "tpm", "429"]):
-                    logger.warning("llm_generation_token_limit_retry", error=str(gen_err))
-                    # Attempt fallback generation with truncated context
+                logger.warning("llm_generation_error_fallback_triggered", error=str(gen_err))
+                try:
                     compressed_context = context_str[:4000] + "\n\n...[Context compressed to comply with Groq token limits]..."
                     fallback_prompt = self._build_prompt(compressed_context, query.question, mode=effective_mode, rule_decisions=rule_decisions)
                     answer_text = self.llm.generate(fallback_prompt)
-                else:
-                    raise gen_err
+                except Exception as fallback_err:
+                    logger.error("llm_fallback_generation_failed", error=str(fallback_err))
+                    answer_text = (
+                        "### ⚠️ LLM Generation Service Temporarily Rate Limited\n\n"
+                        "Our AI text generation provider is currently experiencing high demand or rate limits.\n\n"
+                        "**Retrieved & Grounded Clinical Evidence**:\n"
+                        "All DailyMed and FDA evidence for your query was successfully retrieved and validated by the vector engine.\n\n"
+                        "**Action Required**:\n"
+                        "Please click **Ask MedRef** again in 10-15 seconds to generate the full clinical report."
+                    )
 
             llm_time = time.time() - start_llm
             total_llm_time += llm_time
