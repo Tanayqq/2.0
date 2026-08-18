@@ -181,6 +181,7 @@ class StructuredProfileStore:
         Retrieves all brand aliases from Qdrant and caches them in memory.
         """
         logger.info("loading_aliases_cache")
+        self._aliases_loaded = True
         try:
             self.aliases_cache.clear()
             limit = 1000
@@ -207,14 +208,14 @@ class StructuredProfileStore:
                 
             logger.info("aliases_cache_loaded", total_aliases=len(self.aliases_cache))
         except Exception as e:
-            logger.error("failed_loading_aliases_cache", error=str(e))
+            logger.warning("failed_loading_aliases_cache_fallback_mode", error=str(e))
             
     def get_entity_by_alias(self, name: str) -> Optional[str]:
         """
         Resolve a query name to its entity_id.
         If cache is empty, we load it first.
         """
-        if not self.aliases_cache:
+        if not self._aliases_loaded:
             self.load_aliases_cache()
         
         # Check direct lowercase generic/alias matches

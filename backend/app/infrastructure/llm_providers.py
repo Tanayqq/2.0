@@ -16,7 +16,7 @@ class GroqProvider(LLMProviderProtocol):
     Implementation of the LLMProviderProtocol using Groq API.
     Optimized for speed during development.
     """
-    def __init__(self, api_key: str, model_name: str = "llama-3.1-8b-instant"):
+    def __init__(self, api_key: str, model_name: str = "llama-3.3-70b-versatile"):
         self.client = Groq(api_key=api_key)
         self.model_name = model_name
 
@@ -36,8 +36,8 @@ class GroqProvider(LLMProviderProtocol):
         pipeline_res: PipelineResult = ConversationPipeline.process(messages, provider="groq", session_id=session_id)
         sanitized_messages = pipeline_res.processed_messages
 
-        # Model cascade order for rate limit failover
-        models_to_try = [self.model_name, "llama-3.1-8b-instant", "llama-3.3-70b-versatile", "llama3-8b-8192"]
+        # Model cascade order for rate limit & deprecation failover
+        models_to_try = [self.model_name, "llama-3.3-70b-versatile", "llama3-8b-8192", "llama-3.1-70b-versatile", "gemma2-9b-it"]
         models_to_try = list(dict.fromkeys(models_to_try))
 
         last_exception = None
@@ -88,6 +88,8 @@ class GroqProvider(LLMProviderProtocol):
                     last_exception = e
                     msg = str(e)
                     is_token_limit = any(k in msg.lower() for k in ["rate limit", "429", "413", "rate_limit_exceeded", "too large", "tpm"])
+                    is_model_not_found = "404" in msg or "not_found" in msg.lower() or "does not exist" in msg.lower()
+                    
                     if is_token_limit:
                         if ("413" in msg or "too large" in msg.lower() or "limit" in msg.lower()) and retries == 0:
                             print(f"\n[Token Limit Exceeded] Compressing payload for model '{model_choice}' after exception...")
@@ -98,8 +100,11 @@ class GroqProvider(LLMProviderProtocol):
                             time.sleep(0.5)
                             continue
                         break
+                    elif is_model_not_found:
+                        print(f"\n[Model Not Found] Groq model '{model_choice}' not found/deprecated. Cascading to next model...")
+                        break
                     else:
-                        raise e
+                        break
 
         # If all Groq models exhausted, attempt Gemini failover if key exists
         import os
