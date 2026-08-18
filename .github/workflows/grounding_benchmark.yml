@@ -1,0 +1,28 @@
+name: MedRef v4.0 Zero-False-Citation Grounding Benchmark
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+
+jobs:
+  grounding-benchmark:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.12"
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pytest pydantic structlog
+
+    - name: Run MedRef v4.0 57-Test Grounding & Adversarial Benchmark
+      run: |
+        python -m pytest backend/tests/test_citation_pipeline.py backend/tests/test_retrieval_benchmark.py backend/tests/test_adversarial_evidence.py backend/tests/test_v37_benchmark_harness.py backend/tests/test_complex_patients.py backend/tests/test_v4_adversarial_suite.py -v
