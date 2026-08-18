@@ -37,7 +37,7 @@ class GroqProvider(LLMProviderProtocol):
         sanitized_messages = pipeline_res.processed_messages
 
         # Model cascade order for rate limit & deprecation failover
-        models_to_try = [self.model_name, "llama-3.3-70b-versatile", "llama3-8b-8192", "llama-3.1-70b-versatile", "gemma2-9b-it"]
+        models_to_try = [self.model_name, "llama-3.3-70b-versatile", "llama-3.1-8b-instant", "llama3-8b-8192", "llama3-70b-8192"]
         models_to_try = list(dict.fromkeys(models_to_try))
 
         last_exception = None
