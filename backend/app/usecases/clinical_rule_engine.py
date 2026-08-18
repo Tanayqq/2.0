@@ -48,9 +48,18 @@ class ClinicalRuleEngine:
         # Track active drugs
         has_drug = lambda name: any(name in d.lower() for d in detected_drugs) or (name in q_lower)
 
+        is_pregnant = any(w in q_lower for w in ["pregnant", "pregnancy", "gestation"])
+
         # ----------------------------------------------------
         # 1. IMMEDIATE LIFE-THREATENING HAZARDS (Independent checks)
         # ----------------------------------------------------
+        if is_pregnant and (has_drug("enalapril") or has_drug("lisinopril") or has_drug("ramipril") or has_drug("losartan") or has_drug("valsartan")):
+            ace_name = "Enalapril" if has_drug("enalapril") else ("Lisinopril" if has_drug("lisinopril") else "ACE inhibitor/ARB")
+            immediate_dangers.append(
+                f"BOXED WARNING - FETAL TOXICITY IN PREGNANCY ({ace_name}): Discontinue immediately when pregnancy is detected. "
+                "Causes severe fetal renal dysgenesis, oligohydramnios, skull hypoplasia, and fetal death."
+            )
+
         if potassium >= 6.0:
             immediate_dangers.append(
                 f"CRITICAL HYPERKALEMIA (K+ = {potassium} mEq/L): Severe risk of fatal cardiac arrhythmias / AV block. "
@@ -72,7 +81,12 @@ class ClinicalRuleEngine:
         # Spironolactone / Finerenone
         if has_drug("spironolactone") or has_drug("finerenone") or has_drug("eplerenone"):
             mra_name = "Spironolactone" if has_drug("spironolactone") else ("Finerenone" if has_drug("finerenone") else "Eplerenone")
-            if potassium >= 5.5:
+            if is_pregnant:
+                med_decisions[mra_name] = {
+                    "action": "STOP",
+                    "reason": "CONTRAINDICATED IN PREGNANCY & HYPERKALEMIA: Antiandrogenic effects risk feminization of male fetus; high risk of severe hyperkalemia."
+                }
+            elif potassium >= 5.5:
                 med_decisions[mra_name] = {
                     "action": "HOLD",
                     "reason": f"Severe hyperkalemia (K+ {potassium} mEq/L > 5.5 mEq/L safety cut-off). Hold drug now; reassess after K+ drops < 5.0 mEq/L."
@@ -199,10 +213,16 @@ class ClinicalRuleEngine:
         # Empagliflozin / Dapagliflozin
         if has_drug("empagliflozin") or has_drug("dapagliflozin") or has_drug("canagliflozin"):
             sglt2_name = "Empagliflozin" if has_drug("empagliflozin") else ("Dapagliflozin" if has_drug("dapagliflozin") else "Canagliflozin")
-            med_decisions[sglt2_name] = {
-                "action": "CONTINUE",
-                "reason": "GDMT Class 1A cardiorenal protection in HFrEF and CKD (indicated down to eGFR 20 mL/min)."
-            }
+            if is_pregnant:
+                med_decisions[sglt2_name] = {
+                    "action": "STOP",
+                    "reason": "CONTRAINDICATED IN PREGNANCY (2nd/3rd Trimester). Discontinue SGLT2 inhibitors due to risk of adverse renal pelvic and tubule dilatation in fetus."
+                }
+            else:
+                med_decisions[sglt2_name] = {
+                    "action": "CONTINUE",
+                    "reason": "GDMT Class 1A cardiorenal protection in HFrEF and CKD (indicated down to eGFR 20 mL/min)."
+                }
 
         # Colchicine
         if has_drug("colchicine"):
@@ -284,7 +304,12 @@ class ClinicalRuleEngine:
         # Lisinopril / Enalapril / Losartan
         if has_drug("lisinopril") or has_drug("enalapril") or has_drug("losartan"):
             acei_name = "Lisinopril" if has_drug("lisinopril") else ("Enalapril" if has_drug("enalapril") else "Losartan")
-            if potassium >= 5.5:
+            if is_pregnant:
+                med_decisions[acei_name] = {
+                    "action": "STOP",
+                    "reason": "CONTRAINDICATED IN PREGNANCY (FDA Boxed Warning: Fetal Toxicity). Discontinue immediately when pregnancy is detected to prevent severe fetal renal dysgenesis, oligohydramnios, skull hypoplasia, and fetal death."
+                }
+            elif potassium >= 5.5:
                 med_decisions[acei_name] = {
                     "action": "REDUCE DOSE",
                     "reason": f"Moderate hyperkalemia (K+ {potassium} mEq/L). Reduce dose by 50% and monitor serum potassium closely."

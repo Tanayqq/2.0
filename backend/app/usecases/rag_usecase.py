@@ -1561,13 +1561,13 @@ CRITICAL RULES:
 
                 # Stage 1: Fast Lexical Gate
                 inappropriate_sections = [
-                    "pediatric_use", "pediatric", "pregnancy", "lactation", "clinical_studies", "how_supplied", 
+                    "pediatric_use", "pediatric", "clinical_studies", "how_supplied", 
                     "overdosage", "overdose", "poisoning"
                 ]
+                if not any(k in reas_lower or k in question_text.lower() for k in ["pregnant", "pregnancy", "lactation"]):
+                    inappropriate_sections.extend(["pregnancy", "lactation"])
+                    
                 if any(bad_sec in sec_lower for bad_sec in inappropriate_sections):
-                    return False
-
-                if any(phrase in e_text for phrase in ["when pregnancy is detected", "discontinue entresto as soon as possible", "spinal/epidural hematoma", "spinal hematoma"]):
                     return False
 
                 aliases = DRUG_ALIASES.get(t_drug, [])
@@ -1748,10 +1748,10 @@ CRITICAL RULES:
                 e_text = (entry.text or "").lower()
                 sec_lower = (entry.section or "").lower()
                 src_lower = (entry.source or "").lower()
-                inappropriate_sections = ["pediatric_use", "pediatric", "pregnancy", "lactation", "clinical_studies", "how_supplied", "overdosage", "overdose", "poisoning"]
+                inappropriate_sections = ["pediatric_use", "pediatric", "clinical_studies", "how_supplied", "overdosage", "overdose", "poisoning"]
+                if not any(k in question_text.lower() for k in ["pregnant", "pregnancy", "lactation"]):
+                    inappropriate_sections.extend(["pregnancy", "lactation"])
                 if any(bad_sec in sec_lower for bad_sec in inappropriate_sections):
-                    continue
-                if any(phrase in e_text for phrase in ["when pregnancy is detected", "discontinue entresto as soon as possible", "spinal/epidural hematoma"]):
                     continue
                 if any(tok in e_text or tok in src_lower for tok in tokens):
                     return f"[{cid}]"
@@ -1761,10 +1761,10 @@ CRITICAL RULES:
                 e_text = (entry.text or "").lower()
                 e_drug = (entry.drug or "").strip().lower()
                 sec_lower = (entry.section or "").lower()
-                inappropriate_sections = ["pediatric_use", "pediatric", "pregnancy", "lactation", "clinical_studies", "how_supplied", "overdosage", "overdose", "poisoning"]
+                inappropriate_sections = ["pediatric_use", "pediatric", "clinical_studies", "how_supplied", "overdosage", "overdose", "poisoning"]
+                if not any(k in question_text.lower() for k in ["pregnant", "pregnancy", "lactation"]):
+                    inappropriate_sections.extend(["pregnancy", "lactation"])
                 if any(bad_sec in sec_lower for bad_sec in inappropriate_sections):
-                    continue
-                if any(phrase in e_text for phrase in ["when pregnancy is detected", "discontinue entresto as soon as possible", "spinal/epidural hematoma"]):
                     continue
                 if any(tok in e_drug or tok in e_text for tok in tokens):
                     return f"[{cid}]"

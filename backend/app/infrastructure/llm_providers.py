@@ -122,7 +122,7 @@ class GeminiProvider(LLMProviderProtocol):
     Production-grade Google Gemini LLM Provider integration.
     Fully compliant with Google Gemini API turn discipline (strictly ending with a 'user' turn).
     """
-    def __init__(self, api_key: str, model_name: str = "gemini-1.5-pro"):
+    def __init__(self, api_key: str, model_name: str = "gemini-2.0-flash"):
         self.api_key = api_key
         self.model_name = model_name
         self._model = None
