@@ -1579,6 +1579,37 @@ CRITICAL RULES:
                     return False
 
                 # Stage 2: Semantic Relationship Entailment Verification
+
+                # A. Pregnancy Claim Verification
+                if any(k in reas_lower for k in ["pregnant", "pregnancy", "fetal", "teratogen", "gestation", "boxed warning"]):
+                    preg_predicates = ["pregnant", "pregnancy", "fetus", "fetal", "teratogen", "embryo", "gestation", "boxed warning", "discontinue when pregnancy", "fetal toxicity"]
+                    if not any(pred in e_text or pred in sec_lower for pred in preg_predicates):
+                        return False
+                    return True
+
+                # B. Specific Renal / eGFR Claim Verification
+                is_renal_claim = any(k in reas_lower for k in ["egfr", "gfr", "ckd", "renal", "creatinine", "30 ml/min", "mala"])
+                if is_renal_claim:
+                    # Disqualify pure overdose chunks that lack explicit renal impairment / eGFR context
+                    is_pure_overdose = ("overdose" in sec_lower or "overdosage" in sec_lower or "poison" in sec_lower or "overdose" in e_text)
+                    has_explicit_renal = any(k in e_text or k in sec_lower for k in ["egfr", "gfr", "renal impairment", "renal disease", "severe renal", "creatinine clearance", "ckd", "kidney"])
+                    if is_pure_overdose and not has_explicit_renal:
+                        return False
+                    
+                    renal_predicates = ["renal", "kidney", "egfr", "creatinine", "lactic acidosis", "contraindicated", "impairment", "clearance", "dialysis"]
+                    if not any(pred in e_text or pred in sec_lower for pred in renal_predicates):
+                        return False
+                    return True
+
+                # C. Hyperkalemia Claim Verification
+                is_k_claim = any(k in reas_lower for k in ["hyperkalemia", "potassium", "k+", "5.9", "5.5"])
+                if is_k_claim:
+                    k_predicates = ["potassium", "hyperkalemia", "k+", "potassium-sparing", "aldactone warning"]
+                    if not any(pred in e_text or pred in sec_lower for pred in k_predicates):
+                        return False
+                    return True
+
+                # D. Drug-Drug Interaction Verification
                 if "washout" in reas_lower or "interaction" in reas_lower or "p-gp" in reas_lower or "cyp3a4" in reas_lower or "synergistic" in reas_lower:
                     ddi_predicates = ["interaction", "inhibit", "increase", "concentration", "level", "coadministration", "concomitant", "washout", "contraindicated", "synergistic", "toxic", "clearance"]
                     if not any(pred in e_text or pred in sec_lower for pred in ddi_predicates):
@@ -1591,13 +1622,13 @@ CRITICAL RULES:
                             return False
                     return True
 
-                if act_upper == "STOP" or "egfr" in reas_lower or "mala" in reas_lower or "lactic" in reas_lower or "renal failure" in reas_lower:
+                if act_upper == "STOP" or "renal failure" in reas_lower:
                     renal_predicates = ["renal", "kidney", "egfr", "creatinine", "lactic acidosis", "contraindicated", "impairment", "clearance", "dialysis", "precautions"]
                     if not any(pred in e_text or pred in sec_lower for pred in renal_predicates):
                         return False
                     return True
 
-                if act_upper == "REDUCE DOSE" or "renal clearance" in reas_lower or "dose reduction" in reas_lower or "hyperkalemia" in reas_lower:
+                if act_upper == "REDUCE DOSE" or "renal clearance" in reas_lower or "dose reduction" in reas_lower:
                     dosing_predicates = ["dose", "dosage", "reduction", "reduce", "titrate", "mg", "renal", "impairment", "clearance", "potassium", "hyperkalemia"]
                     if not any(pred in e_text or pred in sec_lower for pred in dosing_predicates):
                         return False
