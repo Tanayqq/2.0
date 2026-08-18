@@ -1731,11 +1731,10 @@ CRITICAL RULES:
             clean_name = regex.sub(r'[\(\)\[\]/\-]', ' ', drug_name).strip().lower()
             tokens = [t for t in clean_name.split() if len(t) >= 3 and t not in ["tablets", "capsules", "extended", "release", "solution"]]
 
-            # Try full clean_name
+            # Direct match in verified drug_citation_map
             if clean_name in drug_citation_map:
                 return f"[{drug_citation_map[clean_name]}]"
 
-            # Try individual drug tokens (e.g. "sacubitril", "valsartan" from "Sacubitril/Valsartan")
             found_cids = []
             for t in tokens:
                 if t in drug_citation_map:
@@ -1746,60 +1745,32 @@ CRITICAL RULES:
             if found_cids:
                 return "".join(f"[{cid}]" for cid in found_cids)
 
-
-            # DDI Partner Fallback: if this drug appears in a known DDI pair but has no direct
-            # label chunk, cite the interaction partner's chunk that documents the DDI.
-            # Example: Fluoxetine -> cite Linezolid label (which documents MAOI/SSRI DDI).
+            # Strict DDI Partner Fallback: ONLY for major interaction claims if partner's chunk passes entailment
             interactions = (rule_decisions or {}).get("major_interactions", [])
             for ix in interactions:
                 pair_str = ix.get("pair", "")
                 if "↔" not in pair_str:
                     continue
                 parts = [p.strip().lower() for p in pair_str.split("↔")]
-                # Check if current drug appears in any part of the pair
-                drug_in_pair = any(
-                    clean_name in p or any(tok in p for tok in tokens)
-                    for p in parts
-                )
+                drug_in_pair = any(clean_name in p or any(tok in p for tok in tokens) for p in parts)
                 if not drug_in_pair:
                     continue
-                # Find the partner drug (the other side of the DDI) and use its citation
                 for partner in parts:
                     is_self = (clean_name in partner or any(tok in partner for tok in tokens))
                     if not is_self:
                         partner_tokens = [t for t in partner.split() if len(t) >= 3]
-                        if partner in drug_citation_map:
-                            return f"[{drug_citation_map[partner]}]"
                         for pt in partner_tokens:
                             if pt in drug_citation_map:
-                                return f"[{drug_citation_map[pt]}]"
+                                cid = drug_citation_map[pt]
+                                entry = citation_map.entries.get(cid)
+                                # Strict check: partner's chunk MUST mention current drug AND be an interaction chunk
+                                if entry and hasattr(entry, 'text') and entry.text:
+                                    e_text = entry.text.lower()
+                                    sec_lower = (entry.section or "").lower()
+                                    if any(tok in e_text for tok in tokens) and any(sec in sec_lower for sec in ["interaction", "cyp", "coadministration"]):
+                                        return f"[{cid}]"
 
-            # Multi-Drug DDI & Guideline Chunk Search: Check all retrieved chunks for mentions of this drug
-            for cid, entry in citation_map.entries.items():
-                e_text = (entry.text or "").lower()
-                sec_lower = (entry.section or "").lower()
-                src_lower = (entry.source or "").lower()
-                inappropriate_sections = ["pediatric_use", "pediatric", "clinical_studies", "how_supplied", "overdosage", "overdose", "poisoning"]
-                if not any(k in question_text.lower() for k in ["pregnant", "pregnancy", "lactation"]):
-                    inappropriate_sections.extend(["pregnancy", "lactation"])
-                if any(bad_sec in sec_lower for bad_sec in inappropriate_sections):
-                    continue
-                if any(tok in e_text or tok in src_lower for tok in tokens):
-                    return f"[{cid}]"
-
-            # Primary chunk fallback: check if any clean primary chunk in citation_map mentions this drug
-            for cid, entry in citation_map.entries.items():
-                e_text = (entry.text or "").lower()
-                e_drug = (entry.drug or "").strip().lower()
-                sec_lower = (entry.section or "").lower()
-                inappropriate_sections = ["pediatric_use", "pediatric", "clinical_studies", "how_supplied", "overdosage", "overdose", "poisoning"]
-                if not any(k in question_text.lower() for k in ["pregnant", "pregnancy", "lactation"]):
-                    inappropriate_sections.extend(["pregnancy", "lactation"])
-                if any(bad_sec in sec_lower for bad_sec in inappropriate_sections):
-                    continue
-                if any(tok in e_drug or tok in e_text for tok in tokens):
-                    return f"[{cid}]"
-
+            # Strict No-Fallback Policy: If no verified chunk passed entailment for this drug & claim, return empty string (Evidence Unavailable)
             return ""
 
         # In patient scenarios, ALWAYS format the 8 sections even if the rule engine found no drugs

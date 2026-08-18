@@ -25,10 +25,18 @@ class QdrantAdapter(VectorDatabaseProtocol):
 
         if client:
             self.client = client
+        elif mode == "local":
+            self.client = QdrantClient(path=path)
         else:
-            final_url = url if ("cloud.qdrant.io" in (url or "")) else CLOUD_URL
-            final_key = api_key if api_key else CLOUD_KEY
-            self.client = QdrantClient(url=final_url, api_key=final_key, prefer_grpc=False, timeout=60.0)
+            try:
+                final_url = url if ("cloud.qdrant.io" in (url or "")) else CLOUD_URL
+                final_key = api_key if api_key else CLOUD_KEY
+                c_test = QdrantClient(url=final_url, api_key=final_key, prefer_grpc=False, timeout=5.0)
+                c_test.get_collections()
+                self.client = c_test
+            except Exception as e:
+                logger.warning("Qdrant cloud connection failed or 404, falling back to local Qdrant storage", error=str(e), path=path)
+                self.client = QdrantClient(path=path)
         
         self.collection_name = collection_name
         
