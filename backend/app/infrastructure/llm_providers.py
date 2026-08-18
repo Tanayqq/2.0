@@ -37,7 +37,7 @@ class GroqProvider(LLMProviderProtocol):
         sanitized_messages = pipeline_res.processed_messages
 
         # Model cascade order for rate limit & deprecation failover
-        models_to_try = [self.model_name, "llama-3.3-70b-versatile", "llama-3.1-8b-instant", "llama3-8b-8192", "llama3-70b-8192"]
+        models_to_try = [self.model_name, "llama-3.3-70b-versatile", "llama-3.1-8b-instant", "llama3-8b-8192"]
         models_to_try = list(dict.fromkeys(models_to_try))
 
         last_exception = None
@@ -88,7 +88,7 @@ class GroqProvider(LLMProviderProtocol):
                     last_exception = e
                     msg = str(e)
                     is_token_limit = any(k in msg.lower() for k in ["rate limit", "429", "413", "rate_limit_exceeded", "too large", "tpm"])
-                    is_model_not_found = "404" in msg or "not_found" in msg.lower() or "does not exist" in msg.lower()
+                    is_model_unavailable = any(k in msg.lower() for k in ["404", "not_found", "does not exist", "decommissioned", "no longer supported"])
                     
                     if is_token_limit:
                         if ("413" in msg or "too large" in msg.lower() or "limit" in msg.lower()) and retries == 0:
@@ -100,8 +100,8 @@ class GroqProvider(LLMProviderProtocol):
                             time.sleep(0.5)
                             continue
                         break
-                    elif is_model_not_found:
-                        print(f"\n[Model Not Found] Groq model '{model_choice}' not found/deprecated. Cascading to next model...")
+                    elif is_model_unavailable:
+                        print(f"\n[Model Unavailable] Groq model '{model_choice}' decommissioned/unavailable. Cascading to next model...")
                         break
                     else:
                         break
