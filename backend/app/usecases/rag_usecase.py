@@ -1544,22 +1544,80 @@ CRITICAL RULES:
         drug_citation_map: Dict[str, str] = {}
 
         if citation_map and citation_map.entries:
-            def get_entry_score(entry, target_drug: str, action: str = "", reason: str = "") -> int:
+            def _verify_claim_entailment(claim_action: str, claim_reason: str, target_drug: str, entry: Any) -> bool:
+                """
+                Two-Stage Claim-Evidence Verification Gate:
+                Stage 1: Fast Lexical Gate (Entity & Section Pre-Filter)
+                Stage 2: Semantic Relationship Entailment Verification
+                """
+                if not entry or not hasattr(entry, 'text') or not entry.text:
+                    return False
+
                 sec_lower = (entry.section or "").lower()
                 e_text = (entry.text or "").lower()
+                t_drug = target_drug.lower().strip()
+                act_upper = (claim_action or "").upper()
+                reas_lower = (claim_reason or "").lower()
 
-                # Section-level negative filters
+                # Stage 1: Fast Lexical Gate
                 inappropriate_sections = [
                     "pediatric_use", "pediatric", "pregnancy", "lactation", "clinical_studies", "how_supplied", 
                     "overdosage", "overdose", "poisoning"
                 ]
                 if any(bad_sec in sec_lower for bad_sec in inappropriate_sections):
-                    return -2000
+                    return False
 
-                # Specific phrase-level negative filters (pregnancy black box / spinal hematoma boxed warning)
                 if any(phrase in e_text for phrase in ["when pregnancy is detected", "discontinue entresto as soon as possible", "spinal/epidural hematoma", "spinal hematoma"]):
+                    return False
+
+                aliases = DRUG_ALIASES.get(t_drug, [])
+                has_drug_mention = (t_drug in e_text) or any(a in e_text for a in aliases)
+                e_drug = (entry.drug or "").lower().strip()
+                is_primary_label = e_drug and (e_drug == t_drug or e_drug in t_drug or t_drug in e_drug)
+
+                if not has_drug_mention and not is_primary_label:
+                    return False
+
+                # Stage 2: Semantic Relationship Entailment Verification
+                if "washout" in reas_lower or "interaction" in reas_lower or "p-gp" in reas_lower or "cyp3a4" in reas_lower or "synergistic" in reas_lower:
+                    ddi_predicates = ["interaction", "inhibit", "increase", "concentration", "level", "coadministration", "concomitant", "washout", "contraindicated", "synergistic", "toxic", "clearance"]
+                    if not any(pred in e_text or pred in sec_lower for pred in ddi_predicates):
+                        return False
+                    if "amiodarone" in reas_lower and "digoxin" in reas_lower:
+                        if not ("amiodarone" in e_text or "digoxin" in e_text):
+                            return False
+                    if "colchicine" in reas_lower and "fluconazole" in reas_lower:
+                        if not ("colchicine" in e_text or "fluconazole" in e_text or "cyp3a4" in e_text or "p-gp" in e_text):
+                            return False
+                    return True
+
+                if act_upper == "STOP" or "egfr" in reas_lower or "mala" in reas_lower or "lactic" in reas_lower or "renal failure" in reas_lower:
+                    renal_predicates = ["renal", "kidney", "egfr", "creatinine", "lactic acidosis", "contraindicated", "impairment", "clearance", "dialysis", "precautions"]
+                    if not any(pred in e_text or pred in sec_lower for pred in renal_predicates):
+                        return False
+                    return True
+
+                if act_upper == "REDUCE DOSE" or "renal clearance" in reas_lower or "dose reduction" in reas_lower or "hyperkalemia" in reas_lower:
+                    dosing_predicates = ["dose", "dosage", "reduction", "reduce", "titrate", "mg", "renal", "impairment", "clearance", "potassium", "hyperkalemia"]
+                    if not any(pred in e_text or pred in sec_lower for pred in dosing_predicates):
+                        return False
+                    return True
+
+                if act_upper == "CONTINUE" or "gdmt" in reas_lower or "indication" in reas_lower:
+                    indication_predicates = ["indicated", "indication", "treatment", "therapy", "management", "risk", "reduction", "heart failure", "hfref", "ckd", "diuretic", "statin", "hypertension", "precautions", "pharmacology"]
+                    if not any(pred in e_text or pred in sec_lower for pred in indication_predicates):
+                        return False
+                    return True
+
+                return True
+
+            def get_entry_score(entry, target_drug: str, action: str = "", reason: str = "") -> int:
+                # Run Two-Stage Claim-Evidence Verification Gate
+                if not _verify_claim_entailment(action, reason, target_drug, entry):
                     return -2000
 
+                sec_lower = (entry.section or "").lower()
+                e_text = (entry.text or "").lower()
                 base_score = _get_section_score(entry.section)
                 e_drug = (entry.drug or "").lower().strip()
                 if e_drug in ("", "general clinical evidence"):
@@ -1574,7 +1632,7 @@ CRITICAL RULES:
 
                 # Drug-specific section affinities
                 if target_drug == "metformin" and act_upper == "STOP":
-                    if any(s in sec_lower for s in ["contraindications", "boxed_warning", "renal_impairment", "warnings_and_precautions"]):
+                    if any(s in sec_lower for s in ["contraindications", "boxed_warning", "renal_impairment", "warnings_and_precautions", "precautions"]):
                         topic_affinity_boost = 1000
                     elif "drug_interactions" in sec_lower:
                         topic_affinity_boost = -500
@@ -1595,7 +1653,7 @@ CRITICAL RULES:
                         elif any(s in sec_lower for s in ["drug_interactions", "cyp_interactions"]):
                             topic_affinity_boost = -300
                     elif act_upper == "STOP" or "egfr" in reas_lower or "mala" in reas_lower or "lactic" in reas_lower:
-                        if any(s in sec_lower for s in ["contraindications", "boxed_warning", "warnings_and_precautions", "warnings", "renal_impairment"]):
+                        if any(s in sec_lower for s in ["contraindications", "boxed_warning", "warnings_and_precautions", "warnings", "renal_impairment", "precautions"]):
                             topic_affinity_boost = 600
                         elif any(s in sec_lower for s in ["dosage_and_administration", "renal_dose", "dose_adjustment"]):
                             topic_affinity_boost = 400
