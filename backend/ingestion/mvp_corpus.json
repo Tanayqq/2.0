@@ -68,5 +68,33 @@
     "source": "openFDA - Ibuprofen Label",
     "category": "Indications and Usage",
     "drug": "Ibuprofen"
+  },
+  {
+    "id": "doc_011",
+    "content": "WARNING: FETAL TOXICITY — When pregnancy is detected, discontinue enalapril as soon as possible. Drugs that act directly on the renin-angiotensin system can cause injury and death to the developing fetus, including fetal renal dysgenesis, oligohydramnios, skull hypoplasia, and fetal death.",
+    "source": "DailyMed - Enalapril Boxed Warning",
+    "category": "Boxed Warning",
+    "drug": "Enalapril"
+  },
+  {
+    "id": "doc_012",
+    "content": "Spironolactone is contraindicated in patients with hyperkalemia (serum potassium > 5.0 mEq/L) and during pregnancy due to antiandrogenic effects that risk feminization of the male fetus. Monitor serum potassium closely during therapy.",
+    "source": "DailyMed - Spironolactone Contraindications",
+    "category": "Contraindications",
+    "drug": "Spironolactone"
+  },
+  {
+    "id": "doc_013",
+    "content": "Metformin is contraindicated in patients with severe renal impairment (eGFR below 30 mL/min/1.73m2) due to the risk of severe and fatal metformin-associated lactic acidosis (MALA). Discontinue immediately if eGFR falls below 30 mL/min/1.73m2.",
+    "source": "DailyMed - Metformin Contraindications",
+    "category": "Contraindications",
+    "drug": "Metformin"
+  },
+  {
+    "id": "doc_014",
+    "content": "Empagliflozin is contraindicated during the second and third trimesters of pregnancy. Discontinue SGLT2 inhibitors when pregnancy is detected due to the risk of adverse renal pelvic and tubule dilatation in the fetus.",
+    "source": "DailyMed - Empagliflozin Use in Specific Populations",
+    "category": "Pregnancy and Special Populations",
+    "drug": "Empagliflozin"
   }
 ]

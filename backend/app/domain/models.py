@@ -68,3 +68,4 @@ class AnswerResponse(BaseModel):
     citations: List[Citation]
     disclaimer: str = "Clinical judgment remains with the treating physician. MedRef is an evidence-grounded decision engine."
     metadata: dict = {}
+    citation_ledgers: Optional[List[Dict[str, Any]]] = Field(default_factory=list)
