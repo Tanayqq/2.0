@@ -3,6 +3,8 @@ import time
 import re
 from app.domain.models import MedicalQuery, AnswerResponse, Citation, ReferenceDocument
 from app.domain.interfaces import LLMProviderProtocol, VectorDatabaseProtocol, EmbeddingModelProtocol, CrossEncoderProtocol
+from app.domain.claim_contract import ClaimContract, EvidenceEntry, VerificationResult, CitationLedger, CandidateAudit
+from app.usecases.claim_verifier import verify_claim_evidence, entity_match, topic_match, predicate_match, patient_factor_supported, contradiction_check
 from app.usecases.query_expansion import LayeredQueryExpander
 from app.citation_map import CitationMap
 from app.core.config import settings
@@ -1610,8 +1612,8 @@ CRITICAL RULES:
                     return True
 
                 # D. Drug-Drug Interaction Verification
-                if "washout" in reas_lower or "interaction" in reas_lower or "p-gp" in reas_lower or "cyp3a4" in reas_lower or "synergistic" in reas_lower:
-                    ddi_predicates = ["interaction", "inhibit", "increase", "concentration", "level", "coadministration", "concomitant", "washout", "contraindicated", "synergistic", "toxic", "clearance"]
+                if "ddi" in reas_lower or "washout" in reas_lower or "interaction" in reas_lower or "p-gp" in reas_lower or "cyp3a4" in reas_lower or "synergistic" in reas_lower:
+                    ddi_predicates = ["interaction", "inhibit", "increase", "concentration", "level", "coadministration", "concomitant", "washout", "contraindicated", "synergistic", "toxic", "clearance", "exposure", "p-gp"]
                     if not any(pred in e_text or pred in sec_lower for pred in ddi_predicates):
                         return False
                     if "amiodarone" in reas_lower and "digoxin" in reas_lower:
@@ -1629,7 +1631,7 @@ CRITICAL RULES:
                     return True
 
                 if act_upper == "REDUCE DOSE" or "renal clearance" in reas_lower or "dose reduction" in reas_lower:
-                    dosing_predicates = ["dose", "dosage", "reduction", "reduce", "titrate", "mg", "renal", "impairment", "clearance", "potassium", "hyperkalemia"]
+                    dosing_predicates = ["dose", "dosage", "reduction", "reduce", "titrate", "mg", "renal", "impairment", "clearance", "potassium", "hyperkalemia", "exposure", "p-gp"]
                     if not any(pred in e_text or pred in sec_lower for pred in dosing_predicates):
                         return False
                     return True
@@ -1705,7 +1707,9 @@ CRITICAL RULES:
 
                 return -500
 
-            # Collect target-driven decisions map entries
+            # Phase 1 & 3: Target-Driven ClaimContract Assembly & Citation Ledger
+            citation_ledgers = []
+
             for d_name, d_info in decisions_map.items():
                 d_act = d_info.get("action", "")
                 d_reas = d_info.get("reason", "")
@@ -1713,15 +1717,80 @@ CRITICAL RULES:
                 tokens = [t for t in clean_d.split() if len(t) >= 3 and t not in ["tablets", "capsules", "extended", "release", "solution"]]
                 
                 for target_d in tokens:
+                    c_type = "INDICATION_GDMT"
+                    if "pregnant" in d_reas.lower() or "pregnancy" in d_reas.lower():
+                        c_type = "PREGNANCY_CONTRAINDICATION"
+                    elif "egfr" in d_reas.lower() or "renal" in d_reas.lower() or "mala" in d_reas.lower():
+                        c_type = "RENAL_DOSING"
+                    elif "hyperkalemia" in d_reas.lower() or "potassium" in d_reas.lower():
+                        c_type = "HYPERKALEMIA_SAFETY"
+                    elif "ddi" in d_reas.lower() or "interaction" in d_reas.lower() or "p-gp" in d_reas.lower() or "cyp" in d_reas.lower():
+                        c_type = "DDI_INTERACTION"
+
+                    contract = ClaimContract(
+                        drug=target_d,
+                        action=d_act,
+                        claim_type=c_type,
+                        patient_factors={"is_pregnant": True if "pregnant" in question_text.lower() else False},
+                        required_entities=[target_d],
+                        required_topics=[c_type.lower()]
+                    )
+
+                    ledger = CitationLedger(
+                        claim_id=f"claim_{target_d}",
+                        drug=target_d,
+                        action=d_act,
+                        claim_type=c_type
+                    )
+
                     best_cid = None
                     best_score = 0
+
                     for cid, entry in citation_map.entries.items():
-                        score = get_entry_score(entry, target_d, action=d_act, reason=d_reas)
-                        if score > best_score:
-                            best_score = score
-                            best_cid = cid
+                        ev = EvidenceEntry(
+                            entry_id=cid,
+                            drug=(entry.drug or "").strip().lower(),
+                            section=(entry.section or "").strip().lower(),
+                            text=(entry.text or ""),
+                            entities=[(entry.drug or "").strip().lower()],
+                            topics=[(entry.section or "").strip().lower()]
+                        )
+
+                        v_res = verify_claim_evidence(contract, ev)
+                        ent_res = entity_match(contract, ev)
+                        top_res = topic_match(contract, ev)
+                        pred_res = predicate_match(contract, ev)
+                        fact_res = patient_factor_supported(contract, ev)
+                        con_res = contradiction_check(contract, ev)
+
+                        audit = CandidateAudit(
+                            citation_id=cid,
+                            drug=ev.drug,
+                            section=ev.section,
+                            entity_match=ent_res.passed,
+                            topic_match=top_res.passed,
+                            predicate_match=pred_res.passed,
+                            patient_factor_match=fact_res.passed,
+                            contradiction=not con_res.passed,
+                            verified=v_res.passed,
+                            failure_reason=v_res.reason
+                        )
+                        ledger.candidates.append(audit)
+
+                        if v_res.passed:
+                            score = get_entry_score(entry, target_d, action=d_act, reason=d_reas)
+                            if score > best_score:
+                                best_score = score
+                                best_cid = cid
+
                     if best_cid:
                         drug_citation_map[target_d] = best_cid
+                        ledger.final_status = "VERIFIED"
+                        ledger.citation_id = best_cid
+                    else:
+                        ledger.final_status = "EVIDENCE_UNAVAILABLE"
+
+                    citation_ledgers.append(ledger)
 
         def get_citation_for_drug(drug_name: str) -> str:
             if not drug_name or not citation_map or not citation_map.entries:
