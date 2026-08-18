@@ -241,3 +241,26 @@ def test_empagliflozin_pregnancy_rejects_metformin_kdigo():
     result = verify_claim_evidence(claim, evidence)
     assert result.passed is False
     assert result.reason in ["ENTITY_MISMATCH", "TOPIC_MISMATCH"]
+
+def test_amiodarone_continuation_rejects_pure_toxicity_warning_chunk():
+    """Test 10: Amiodarone continuation claim rejects pure toxicity warning chunk lacking indication text."""
+    claim = ClaimContract(
+        drug="amiodarone",
+        action="CONTINUE",
+        claim_type="INDICATION_GDMT",
+        required_entities=["amiodarone"],
+        required_topics=["indication_gdmt"],
+        required_predicates=["amiodarone"]
+    )
+    evidence = EvidenceEntry(
+        entry_id="chunk_amiodarone_warning_10",
+        drug="amiodarone",
+        section="warnings",
+        text="Amiodarone hydrochloride can cause pulmonary toxicity and hepatoxicity which can be fatal.",
+        entities=["amiodarone"],
+        topics=["warnings"],
+        predicates=["toxicity"]
+    )
+    result = verify_claim_evidence(claim, evidence)
+    assert result.passed is False
+    assert result.reason == "TOPIC_MISMATCH"

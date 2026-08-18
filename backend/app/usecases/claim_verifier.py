@@ -101,7 +101,18 @@ def topic_match(claim: ClaimContract, evidence: EvidenceEntry) -> VerificationRe
                 details="Hyperkalemia safety claim requires explicit potassium/hyperkalemia evidence."
             )
 
-    # Topic rule 4: Required topics validation if specified
+    # Topic rule 4: INDICATION_GDMT claims
+    if claim.claim_type == "INDICATION_GDMT":
+        is_warning_or_toxicity = any(w in sec_lower for w in ["warnings", "adverse_reactions", "boxed_warning", "toxicity", "overdosage"])
+        has_explicit_indication = any(i in e_text or i in sec_lower for i in ["indicated", "indication", "treatment of", "approved for", "management of", "rhythm control", "afib", "arrhythmia", "heart failure", "hfref", "ckd", "hypertension"])
+        if is_warning_or_toxicity and not has_explicit_indication:
+            return VerificationResult(
+                passed=False,
+                reason="TOPIC_MISMATCH",
+                details="Indication/GDMT claim cannot cite pure warning/toxicity evidence."
+            )
+
+    # Topic rule 5: Required topics validation if specified
     TOPIC_SYNONYMS = {
         "renal_dosing": ["renal", "egfr", "gfr", "kidney", "creatinine", "ckd", "contraindications", "warnings", "dosing", "dosage", "renal_dosing"],
         "pregnancy_contraindication": ["pregnancy", "pregnant", "lactation", "fetal", "fetus", "teratogen", "boxed warning", "warnings", "contraindications", "pregnancy_contraindication"],
