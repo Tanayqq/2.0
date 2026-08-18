@@ -74,6 +74,9 @@ class QdrantAdapter(VectorDatabaseProtocol):
             )
             return self._map_results(search_result.points)
         except Exception as e:
+            if "404" in str(e) or "not found" in str(e).lower():
+                logger.warning("Qdrant collection 404 not found during vector search", collection=self.collection_name)
+                return []
             if "Index required" in str(e) or "400" in str(e):
                 try:
                     self.client.create_payload_index(
@@ -90,15 +93,18 @@ class QdrantAdapter(VectorDatabaseProtocol):
                     )
                     return self._map_results(search_result.points)
                 except Exception:
-                    # Fallback to unfiltered search if index creation fails
-                    search_result = self.client.query_points(
-                        collection_name=self.collection_name,
-                        query=query_vector,
-                        using="dense",
-                        limit=top_k
-                    )
-                    return self._map_results(search_result.points)
-            raise e
+                    try:
+                        search_result = self.client.query_points(
+                            collection_name=self.collection_name,
+                            query=query_vector,
+                            using="dense",
+                            limit=top_k
+                        )
+                        return self._map_results(search_result.points)
+                    except Exception:
+                        return []
+            logger.warning("Vector search encountered error, returning empty list", error=str(e))
+            return []
 
     def hybrid_search(self, dense_vector: List[float], sparse_vector: Dict[int, float], top_k: int = 20, filters: Optional[Dict[str, Any]] = None) -> List[ReferenceDocument]:
         """
@@ -136,6 +142,9 @@ class QdrantAdapter(VectorDatabaseProtocol):
             search_result = _execute(qdrant_filter)
             return self._map_results(search_result.points)
         except Exception as e:
+            if "404" in str(e) or "not found" in str(e).lower():
+                logger.warning("Qdrant collection 404 not found during hybrid search", collection=self.collection_name)
+                return []
             if "Index required" in str(e) or "400" in str(e):
                 try:
                     self.client.create_payload_index(
@@ -146,9 +155,13 @@ class QdrantAdapter(VectorDatabaseProtocol):
                     search_result = _execute(qdrant_filter)
                     return self._map_results(search_result.points)
                 except Exception:
-                    search_result = _execute(None)
-                    return self._map_results(search_result.points)
-            raise e
+                    try:
+                        search_result = _execute(None)
+                        return self._map_results(search_result.points)
+                    except Exception:
+                        return []
+            logger.warning("Hybrid search encountered error, returning empty list", error=str(e))
+            return []
 
     def scroll_by_drug_sections(self, drug_name: str, canonical_sections: List[str], limit_per_section: int = 3) -> List[ReferenceDocument]:
         """
