@@ -1718,6 +1718,7 @@ CRITICAL RULES:
                 
                 for target_d in tokens:
                     c_type = "INDICATION_GDMT"
+                    req_ents = [target_d]
                     if "pregnant" in d_reas.lower() or "pregnancy" in d_reas.lower():
                         c_type = "PREGNANCY_CONTRAINDICATION"
                     elif "egfr" in d_reas.lower() or "renal" in d_reas.lower() or "mala" in d_reas.lower():
@@ -1726,13 +1727,28 @@ CRITICAL RULES:
                         c_type = "HYPERKALEMIA_SAFETY"
                     elif "ddi" in d_reas.lower() or "interaction" in d_reas.lower() or "p-gp" in d_reas.lower() or "cyp" in d_reas.lower():
                         c_type = "DDI_INTERACTION"
+                        # Expand DDI required entities to include BOTH interaction partner drugs
+                        interactions = (rule_decisions or {}).get("major_interactions", [])
+                        for ix in interactions:
+                            pair_str = ix.get("pair", "")
+                            if "↔" in pair_str:
+                                p_drugs = [p.strip().lower() for p in pair_str.split("↔")]
+                                if target_d in p_drugs or any(target_d in p for p in p_drugs):
+                                    req_ents = p_drugs
+
+                    p_facts = {
+                        "is_pregnant": True if "pregnant" in question_text.lower() else False,
+                        "has_afib": True if any(w in question_text.lower() for w in ["afib", "atrial fibrillation", "arrhythmia", "rhythm"]) else False,
+                        "egfr": (rule_decisions or {}).get("labs", {}).get("egfr", 30.0),
+                        "potassium": (rule_decisions or {}).get("labs", {}).get("potassium", 4.0)
+                    }
 
                     contract = ClaimContract(
                         drug=target_d,
                         action=d_act,
                         claim_type=c_type,
-                        patient_factors={"is_pregnant": True if "pregnant" in question_text.lower() else False},
-                        required_entities=[target_d],
+                        patient_factors=p_facts,
+                        required_entities=req_ents,
                         required_topics=[c_type.lower()]
                     )
 
@@ -1814,32 +1830,7 @@ CRITICAL RULES:
             if found_cids:
                 return "".join(f"[{cid}]" for cid in found_cids)
 
-            # Strict DDI Partner Fallback: ONLY for major interaction claims if partner's chunk passes entailment
-            interactions = (rule_decisions or {}).get("major_interactions", [])
-            for ix in interactions:
-                pair_str = ix.get("pair", "")
-                if "↔" not in pair_str:
-                    continue
-                parts = [p.strip().lower() for p in pair_str.split("↔")]
-                drug_in_pair = any(clean_name in p or any(tok in p for tok in tokens) for p in parts)
-                if not drug_in_pair:
-                    continue
-                for partner in parts:
-                    is_self = (clean_name in partner or any(tok in partner for tok in tokens))
-                    if not is_self:
-                        partner_tokens = [t for t in partner.split() if len(t) >= 3]
-                        for pt in partner_tokens:
-                            if pt in drug_citation_map:
-                                cid = drug_citation_map[pt]
-                                entry = citation_map.entries.get(cid)
-                                # Strict check: partner's chunk MUST mention current drug AND be an interaction chunk
-                                if entry and hasattr(entry, 'text') and entry.text:
-                                    e_text = entry.text.lower()
-                                    sec_lower = (entry.section or "").lower()
-                                    if any(tok in e_text for tok in tokens) and any(sec in sec_lower for sec in ["interaction", "cyp", "coadministration"]):
-                                        return f"[{cid}]"
-
-            # Strict No-Fallback Policy: If no verified chunk passed entailment for this drug & claim, return empty string (Evidence Unavailable)
+            # Strict No-Fallback Policy: If no verified chunk passed ClaimContract verification for this drug, return empty string (Evidence Unavailable)
             return ""
 
         # In patient scenarios, ALWAYS format the 8 sections even if the rule engine found no drugs
@@ -1910,13 +1901,13 @@ CRITICAL RULES:
                 elec_bullets.append(f"- Serum K+ = {_k} mEq/L (Normal range: 3.5 - 5.0 mEq/L).")
             sec5_text = f"**5. Electrolyte Issues**\n" + "\n".join(elec_bullets) + "\n\n"
 
-            # SECTION 6: Guideline Recommendations — target actual guideline chunks (KDIGO/ADA/ACC/AHA)
+            # SECTION 6: Guideline Recommendations — target actual guideline chunks (General Clinical Evidence)
             guideline_cid = None
             if citation_map and citation_map.entries:
                 for cid, entry in citation_map.entries.items():
                     e_drug = (entry.drug or "").strip()
-                    e_auth = (getattr(entry, "authority", "") or "").upper()
-                    if e_drug == "General Clinical Evidence" or any(g in e_auth for g in ["KDIGO", "ADA", "ACC", "AHA", "ESC"]):
+                    e_sec = (entry.section or "").strip().lower()
+                    if e_drug == "General Clinical Evidence" and ("guideline" in e_sec or e_sec == "guideline recommendations"):
                         guideline_cid = cid
                         break
             guide_cit = f"[{guideline_cid}]" if guideline_cid else ""

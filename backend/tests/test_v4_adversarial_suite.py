@@ -271,7 +271,7 @@ def test_full_amiodarone_complex_patient_scenario_v4_ledger():
     Enalapril, Spironolactone, Metformin, Empagliflozin.
     Validates end-to-end ClaimContract assembly, 5-step Boolean verification, and CitationLedger generation.
     """
-    patient_factors = {"egfr": 22.0, "k_level": 6.1, "is_pregnant": True}
+    patient_factors = {"egfr": 22.0, "k_level": 6.1, "is_pregnant": True, "has_afib": True}
 
     # 1. Enalapril Boxed Warning Claim
     enal_contract = ClaimContract(
@@ -382,4 +382,75 @@ def test_full_amiodarone_complex_patient_scenario_v4_ledger():
     )
     assert verify_claim_evidence(ami_contract, ami_good_chunk).passed is True
     assert verify_claim_evidence(ami_contract, ami_bad_warning_chunk).passed is False
+
+def test_v4_never_binds_wrong_citation_to_claim():
+    """Regression Test 12: Enalapril potassium-sparing chunk rejected for Digoxin + Amiodarone DDI claim."""
+    claim = ClaimContract(
+        drug="digoxin",
+        action="REDUCE DOSE",
+        claim_type="DDI_INTERACTION",
+        required_entities=["digoxin", "amiodarone"],
+        required_topics=["ddi_interaction"],
+        required_predicates=["increase", "concentration", "dose", "reduce"]
+    )
+    wrong_entry = EvidenceEntry(
+        entry_id="chunk_wrong_enal",
+        drug="enalapril",
+        section="drug_interactions",
+        text="Potassium-sparing diuretics such as spironolactone may increase serum potassium when used with enalapril.",
+        entities=["enalapril", "spironolactone"],
+        topics=["drug_interactions"],
+        predicates=["increase"]
+    )
+    result = verify_claim_evidence(claim, wrong_entry)
+    assert result.passed is False
+    assert result.reason in ["ENTITY_MISMATCH", "MISSING_DDI_ENTITY"]
+
+def test_v4_does_not_use_amiodarone_warning_for_digoxin_ddi():
+    """Regression Test 13: Pure Amiodarone pulmonary/hepatotoxicity warning chunk rejected for Digoxin DDI claim."""
+    claim = ClaimContract(
+        drug="digoxin",
+        action="REDUCE DOSE",
+        claim_type="DDI_INTERACTION",
+        required_entities=["digoxin", "amiodarone"],
+        required_topics=["ddi_interaction"],
+        required_predicates=["increase", "concentration", "reduce"]
+    )
+    entry = EvidenceEntry(
+        entry_id="chunk_ami_warning",
+        drug="amiodarone",
+        section="warnings",
+        text="Amiodarone may cause pulmonary toxicity and hepatotoxicity.",
+        entities=["amiodarone"],
+        topics=["warnings"],
+        predicates=["toxicity"]
+    )
+    result = verify_claim_evidence(claim, entry)
+    assert result.passed is False
+    assert result.reason in ["MISSING_DDI_ENTITY", "TOPIC_MISMATCH"]
+
+def test_v4_replaces_failed_citation_with_evidence_unavailable():
+    """Regression Test 14: Failed candidate evaluations result in Evidence Unavailable output tag."""
+    from app.citation_map import CitationMap
+    from app.usecases.rag_usecase import ProcessClinicalQueryUseCase
+    cmap = CitationMap()
+    cmap.add_entry(uuid="u1", citation_number="1", source="DailyMed", drug="Enalapril", section="Drug Interactions", text="NSAIDs decrease effect.")
+    
+    rule_decisions = {
+        "decisions": {
+            "Digoxin": {"action": "REDUCE DOSE", "reason": "Amiodarone DDI"}
+        }
+    }
+    
+    sanitized = ProcessClinicalQueryUseCase._sanitize_clinical_markdown_response(
+        answer_text="raw text",
+        rule_decisions=rule_decisions,
+        citation_map=cmap,
+        citations=[],
+        question_text="patient query"
+    )
+    
+    # Digoxin claim MUST show Evidence Unavailable (NEVER cite Enalapril [1])
+    assert "| Digoxin | REDUCE DOSE | Amiodarone DDI | Evidence Unavailable |" in sanitized
+
 

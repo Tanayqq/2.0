@@ -171,6 +171,27 @@ def patient_factor_supported(claim: ClaimContract, evidence: EvidenceEntry) -> V
     bounds = evidence.patient_factor_bounds or {}
     factors = claim.patient_factors or {}
 
+    # Amiodarone continuation indication check (Point 7)
+    if claim.drug == "amiodarone" and claim.action == "CONTINUE":
+        has_indication = factors.get("has_afib") or factors.get("has_arrhythmia") or "afib" in str(factors).lower() or "arrhythmia" in str(factors).lower()
+        if not has_indication:
+            return VerificationResult(
+                passed=False,
+                reason="PATIENT_FACTOR_MISMATCH",
+                details="Amiodarone continuation requires explicit patient indication (AFib/ventricular arrhythmia) in profile."
+            )
+
+    # Anticoagulants (Apixaban) dosing requirements check (Point 8)
+    if claim.drug in ("apixaban", "rivaroxaban", "dabigatran") and claim.claim_type == "RENAL_DOSING":
+        req_factors = ["egfr", "age", "weight", "creatinine"]
+        missing = [f for f in req_factors if f not in factors and f not in str(factors).lower()]
+        if len(missing) >= 3:
+            return VerificationResult(
+                passed=False,
+                reason="PATIENT_FACTOR_MISMATCH",
+                details=f"Anticoagulant renal dosing requires complete patient factors (age, weight, sCr, eGFR). Missing: {missing}"
+            )
+
     # Check eGFR threshold bounds
     if "egfr" in factors:
         p_egfr = float(factors["egfr"])
